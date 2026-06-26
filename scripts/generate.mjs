@@ -152,12 +152,12 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
   <header class="site-header">
     <a class="brand" href="/" aria-label="${SITE.name} home"><img class="brand-logo" src="/assets/logo.svg" alt="">${SITE.name}</a>
     <nav class="nav" aria-label="Main navigation">
+      <a href="/">Home</a>
       <a href="/chinese-zodiac-calculator/">Calculator</a>
       <a href="/chinese-zodiac-years/">Years</a>
       <a href="/chinese-zodiac-animals/">Animals</a>
       <a href="/chinese-zodiac-elements/">Elements</a>
       <a href="/chinese-zodiac-compatibility/">Compatibility</a>
-      <a href="/year-of-the-horse-2026/">2026 Horse</a>
     </nav>
   </header>
   <main>
