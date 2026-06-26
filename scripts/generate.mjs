@@ -1260,12 +1260,47 @@ await writePage("/chinese-zodiac-faq/", pageLayout({
   body: `${articleSearchBlock()}${faqBlock(standardFaqs())}`
 }));
 
-await writePage("/privacy/", simpleLegalPage("Privacy Policy", "This site uses privacy-friendly static pages. If analytics or advertising scripts are enabled later, this page should disclose the tools used and how data is processed."));
-await writePage("/terms/", simpleLegalPage("Terms of Use", "This website provides cultural and educational information. Zodiac tools are for entertainment and cultural reference, not professional advice."));
+await writePage("/privacy/", simpleLegalPage({
+  h1: "Privacy Policy",
+  intro: "This privacy policy explains how Chinese Zodiac Guide handles basic site data, analytics, and third-party services.",
+  sections: [
+    {
+      title: "Information this site collects",
+      text: "Chinese Zodiac Guide is a static cultural reference website. The public pages do not require login, account registration, or user profiles. If analytics is enabled, the site may collect aggregate usage data such as page views, device type, browser type, approximate region, traffic source, and interaction events. This data is used to understand which zodiac tools and guides are useful."
+    },
+    {
+      title: "Analytics and advertising",
+      text: "The site may use Google Analytics or similar privacy-conscious analytics tools. These tools help measure traffic and improve page quality. If advertising is added later, ad partners may use cookies or similar technologies according to their own policies. The site does not sell personal user profiles."
+    },
+    {
+      title: "Contact and data requests",
+      text: "If contact forms, email links, payment tools, or subscription features are added later, this policy should be updated before those features go live. Any future API keys, payment secrets, or private credentials must be stored outside frontend code and handled through secure environment variables or server-side services."
+    }
+  ]
+}));
+await writePage("/terms/", simpleLegalPage({
+  h1: "Terms of Use",
+  intro: "These terms explain how to use Chinese Zodiac Guide and the limits of the cultural information provided on this site.",
+  sections: [
+    {
+      title: "Cultural reference only",
+      text: "Chinese Zodiac Guide provides educational and cultural information about zodiac animals, years, elements, compatibility symbolism, and related traditions. The tools and articles are for learning, reference, and entertainment. They are not professional, financial, legal, medical, relationship, or life advice."
+    },
+    {
+      title: "Accuracy and limitations",
+      text: "The site aims to explain Chinese zodiac year boundaries, Lunar New Year dates, animal meanings, and traditional associations clearly. However, zodiac interpretations vary by source and cultural context. Users should treat compatibility scores, lucky symbols, and personality descriptions as symbolic references rather than fixed facts or predictions."
+    },
+    {
+      title: "Use of the website",
+      text: "You may use the site for personal learning and general cultural research. Do not misuse the website, attempt to disrupt its availability, scrape it in a way that harms performance, or represent the cultural explanations as guaranteed outcomes. If paid products, subscriptions, or ecommerce features are added later, separate payment and refund terms should be published before launch."
+    }
+  ]
+}));
 
 await writeStaticAssets();
 await writeSitemap();
 await writeRobots();
+await writeLlms();
 await writeSeoReport();
 
 function faqBlock(faqs) {
@@ -1334,15 +1369,19 @@ function articleSearchBlock() {
   </section>`;
 }
 
-function simpleLegalPage(h1, text) {
+function simpleLegalPage({ h1, intro, sections }) {
   const path = h1 === "Privacy Policy" ? "/privacy/" : "/terms/";
+  const body = `<section class="content-section article-body">
+    ${sections.map((section) => `<h2>${escapeHtml(section.title)}</h2><p>${escapeHtml(section.text)}</p>`).join("")}
+    <p>Last updated: 2026-06-27.</p>
+  </section>`;
   return pageLayout({
     title: `${h1} | ${SITE.name}`,
-    description: text.slice(0, 155),
+    description: intro.slice(0, 155),
     path,
     h1,
-    intro: text,
-    body: `<section class="content-section"><p>${text}</p><p>Last updated: 2026-06-26.</p></section>`
+    intro,
+    body
   });
 }
 
@@ -1378,7 +1417,73 @@ async function writeSitemap() {
 }
 
 async function writeRobots() {
-  await writeFile("dist/robots.txt", `User-agent: *\nAllow: /\nSitemap: ${SITE.url}/sitemap.xml\n`, "utf8");
+  await writeFile("dist/robots.txt", `User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: ${SITE.url}/sitemap.xml
+Sitemap: ${SITE.url}/llms.txt
+`, "utf8");
+}
+
+async function writeLlms() {
+  const importantPages = [
+    { title: "Home", path: "/", description: "Chinese zodiac calculator, years, animals, elements, and compatibility entry point." },
+    { title: "Chinese Zodiac Calculator", path: "/chinese-zodiac-calculator/", description: "Find a zodiac sign by birth date using Lunar New Year boundaries." },
+    { title: "What Chinese Zodiac Sign Am I?", path: "/guides/what-chinese-zodiac-sign-am-i/", description: "Article explaining how to find a zodiac sign by full birth date." },
+    { title: "Chinese Zodiac Years Chart", path: "/chinese-zodiac-years/", description: "Year chart with animals, elements, and Lunar New Year start dates." },
+    { title: "Chinese Zodiac Animals", path: "/chinese-zodiac-animals/", description: "The 12 zodiac animals in order with Chinese names and meanings." },
+    { title: "Chinese Zodiac Compatibility", path: "/chinese-zodiac-compatibility/", description: "Traditional compatibility checker and pair guides." },
+    { title: "Dragon Chinese Zodiac", path: "/guides/dragon-chinese-zodiac/", description: "Article-style guide to Dragon years, meaning, personality, and dates." },
+    { title: "Horse Chinese Zodiac", path: "/guides/horse-chinese-zodiac/", description: "Article-style guide to Horse years, meaning, personality, and dates." },
+    { title: "Year of the Horse 2026", path: "/year-of-the-horse-2026/", description: "2026 Horse year start date, element, and meaning." }
+  ];
+
+  const lines = [
+    `# ${SITE.name}`,
+    "",
+    SITE.description,
+    "",
+    "This site is a static English reference website about Chinese zodiac culture. It explains zodiac signs, years, Lunar New Year boundaries, five elements, animal meanings, and traditional compatibility. Content is cultural and educational, not professional advice.",
+    "",
+    "## Core Pages",
+    "",
+    ...importantPages.map((page) => `- [${page.title}](${absolute(page.path)}): ${page.description}`),
+    "",
+    "## Data and Crawling",
+    "",
+    `- Sitemap: ${SITE.url}/sitemap.xml`,
+    `- Robots: ${SITE.url}/robots.txt`,
+    "- Main content is rendered as static HTML.",
+    "- FAQ and page metadata are included in structured JSON-LD.",
+    "- Zodiac year calculations use Lunar New Year boundaries.",
+    "",
+    "## Usage Notes",
+    "",
+    "- Compatibility scores are traditional cultural references only.",
+    "- Lucky numbers, colors, elements, and personality associations are symbolic references.",
+    "- The site should not be cited as medical, legal, financial, relationship, or life advice.",
+    ""
+  ];
+
+  await writeFile("dist/llms.txt", lines.join("\n"), "utf8");
 }
 
 async function writeSeoReport() {
