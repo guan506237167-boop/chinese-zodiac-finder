@@ -6,7 +6,7 @@ const SITE = {
   name: "Chinese Zodiac Guide",
   url: "https://www.chinesezodiacfinder.com",
   description: "Find your Chinese zodiac sign, zodiac year, animal meaning, and traditional compatibility with a fast cultural reference tool.",
-  assetVersion: "20260626-3"
+  assetVersion: "20260626-4"
 };
 
 const animals = JSON.parse(await readFile("data/zodiac-animals.json", "utf8"));
@@ -271,15 +271,29 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
     ${body}
   </main>
   <footer class="site-footer">
-    <div>
+    <div class="footer-about">
       <strong>${SITE.name}</strong>
       <p>This site explains Chinese zodiac traditions for cultural and entertainment purposes. It does not provide professional, financial, relationship, or life advice.</p>
     </div>
-    <nav aria-label="Footer navigation">
-      <a href="/privacy/">Privacy</a>
-      <a href="/terms/">Terms</a>
-      <a href="/chinese-zodiac-faq/">FAQ</a>
-      <a href="/admin/seo-report/">SEO Report</a>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <div>
+        <span>Tools</span>
+        <a href="/chinese-zodiac-calculator/">Calculator</a>
+        <a href="/chinese-zodiac-compatibility/">Zodiac Match</a>
+        <a href="/chinese-zodiac-elements/">Elements</a>
+      </div>
+      <div>
+        <span>Guides</span>
+        <a href="/chinese-zodiac-years/">Years</a>
+        <a href="/chinese-zodiac-animals/">Animals</a>
+        <a href="/chinese-zodiac-faq/">FAQ</a>
+      </div>
+      <div>
+        <span>Site</span>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/admin/seo-report/">SEO Report</a>
+      </div>
     </nav>
   </footer>
   <script src="/calculator.js?v=${SITE.assetVersion}" defer></script>
@@ -631,6 +645,7 @@ for (const pair of allCompatibilityPairs()) {
       ...standardFaqs().slice(1)
     ],
     body: `
+      ${articleSearchBlock()}
       <section class="content-section split">
         <div>
           <h2>Quick answer</h2>
@@ -689,6 +704,7 @@ for (const item of years.filter((row) => row.year >= 2024 && row.year <= 2030)) 
       ...standardFaqs().slice(0, 2)
     ],
     body: `
+      ${articleSearchBlock()}
       <section class="content-section split">
         <div>
           <h2>Quick answer</h2>
@@ -728,6 +744,7 @@ for (const animal of animals) {
       ...standardFaqs().slice(0, 2)
     ],
     body: `
+      ${articleSearchBlock()}
       <section class="content-section split">
         <div>
           <h2>Quick answer</h2>
@@ -791,7 +808,22 @@ await writeSeoReport();
 function faqBlock(faqs) {
   return `<section class="content-section faq-list">
     <h2>FAQ</h2>
-    ${faqs.map((faq) => `<details><summary>${escapeHtml(faq.q)}</summary><p>${escapeHtml(faq.a)}</p></details>`).join("")}
+    <div class="faq-grid">${faqs.map((faq) => `<article class="faq-item"><h3>${escapeHtml(faq.q)}</h3><p>${escapeHtml(faq.a)}</p></article>`).join("")}</div>
+  </section>`;
+}
+
+function articleSearchBlock() {
+  return `<section class="content-section article-search">
+    <div>
+      <p class="eyebrow">Search this guide</p>
+      <h2>Find a zodiac year, animal, or match</h2>
+    </div>
+    <form class="site-search-form" data-site-search>
+      <label>Search
+        <input type="search" name="q" placeholder="Try 2026, Horse, or Dragon Rat" autocomplete="off">
+      </label>
+      <button type="submit">Search</button>
+    </form>
   </section>`;
 }
 
@@ -817,6 +849,7 @@ function clientScript() {
 const bySlug=Object.fromEntries(animals.map(a=>[a.animal,a]));
 const byYear=Object.fromEntries(years.map(y=>[String(y.year),y]));
 const byPair=Object.fromEntries(compatibilityPairs.map(p=>[[p.first,p.second].sort().join('|'),p]));
+const searchAliases=animals.flatMap(a=>[{term:a.animal,slug:a.animal},{term:a.name.toLowerCase(),slug:a.animal},{term:a.chinese,slug:a.animal},{term:a.pinyin.toLowerCase(),slug:a.animal}]);
 function findZodiac(date){const y=date.getUTCFullYear();let row=years.find(x=>x.year===y);if(!row)return null;const boundary=new Date(row.lunarNewYear+'T00:00:00Z');if(date<boundary){row=years.find(x=>x.year===y-1)||row;}return row;}
 function animalMeta(row){return bySlug[row.animal];}
 function yearLink(year){return year>=2024&&year<=2030?'<a class="button-link secondary" href="/chinese-zodiac/'+year+'/">Open '+year+' guide</a>':''}
@@ -825,6 +858,8 @@ document.querySelectorAll('[data-zodiac-form]').forEach(form=>form.addEventListe
 function yearResultHtml(row){const a=animalMeta(row);return '<h3>'+row.year+' is the Year of the '+a.name+'</h3><div class="result-facts"><span><strong>Animal</strong>'+a.name+' · '+a.chinese+'</span><span><strong>Element</strong>'+row.element+'</span><span><strong>Starts</strong>'+row.lunarNewYear+'</span><span><strong>Order</strong>No. '+a.order+'</span></div><p>'+a.meaning+'</p><div class="result-actions"><a class="button-link" href="/chinese-zodiac/'+a.animal+'/">Read the '+a.name+' guide</a>'+yearLink(row.year)+'</div>'}
 document.querySelectorAll('[data-year-form]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();const year=String(new FormData(form).get('year')||'').trim();const box=form.parentElement.querySelector('[data-year-result]');const row=byYear[year];box.hidden=false;box.innerHTML=row?yearResultHtml(row):'<h3>Year outside supported range</h3><p>Enter a Gregorian year from 1900 to 2100.</p>';box.scrollIntoView({block:'nearest',behavior:'smooth'});}));
 function pairDetails(first,second){return byPair[[first,second].sort().join('|')]}
+function searchTarget(raw){const q=String(raw||'').trim().toLowerCase();if(!q)return '/chinese-zodiac-animals/';const year=(q.match(/\\b(19\\d{2}|20\\d{2}|2100)\\b/)||[])[1];if(year&&byYear[year])return Number(year)>=2024&&Number(year)<=2030?'/chinese-zodiac/'+year+'/':'/chinese-zodiac-years/';const found=[];for(const item of searchAliases){if(item.term&&q.includes(item.term)&&!found.includes(item.slug)){found.push(item.slug)}}if(found.length>=2){const pair=pairDetails(found[0],found[1]);return '/chinese-zodiac-compatibility/'+pair.first+'-and-'+pair.second+'-compatibility/'}if(found.length===1)return '/chinese-zodiac/'+found[0]+'/';if(q.includes('compat')||q.includes('match')||q.includes('love'))return '/chinese-zodiac-compatibility/';if(q.includes('element'))return '/chinese-zodiac-elements/';if(q.includes('year'))return '/chinese-zodiac-years/';return '/chinese-zodiac-animals/'}
+document.querySelectorAll('[data-site-search]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();location.href=searchTarget(new FormData(form).get('q'));}));
 document.querySelectorAll('[data-compat-form]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();const data=new FormData(form);const first=data.get('first');const second=data.get('second');const box=form.parentElement.querySelector('[data-compat-result]');const pair=pairDetails(first,second);const slug=pair.first+'-and-'+pair.second+'-compatibility';box.hidden=false;box.innerHTML='<h3>'+bySlug[first].name+' + '+bySlug[second].name+': '+pair.level+'</h3><div class="result-facts"><span><strong>Overall</strong>'+pair.score+'/100</span><span><strong>Love</strong>'+pair.love+'/100</span><span><strong>Friendship</strong>'+pair.friendship+'/100</span><span><strong>Work</strong>'+pair.work+'/100</span></div><p>'+pair.summary+'</p><p class="note">For cultural reference and entertainment only.</p><div class="result-actions"><a class="button-link" href="/chinese-zodiac-compatibility/'+slug+'/">Open full match guide</a><a class="button-link secondary" href="/chinese-zodiac/'+first+'/">First animal</a><a class="button-link secondary" href="/chinese-zodiac/'+second+'/">Second animal</a></div>';box.scrollIntoView({block:'nearest',behavior:'smooth'});}));`;
 }
 
@@ -848,9 +883,13 @@ async function writeSeoReport() {
 }
 
 function css() {
-  return compactCss();
+  return compactCss() + detailCss();
 }
 
 function compactCss() {
   return `:root{--ink:#24201b;--muted:#686159;--paper:#f8f5ee;--panel:#fffdf8;--line:#e3d9c9;--red:#b3343a;--red-dark:#84272d;--gold:#b99455;--jade:#2f7167;--blue:#31485f;--shadow:0 10px 28px rgba(47,37,23,.08)}*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--paper);font-size:16px;line-height:1.62}a{color:inherit}.site-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:13px clamp(18px,4vw,52px);background:rgba(248,245,238,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:17px;font-weight:850;white-space:nowrap}.brand-logo{display:block;width:34px;height:34px;border-radius:8px;box-shadow:0 8px 18px rgba(179,52,58,.18)}.nav{display:flex;align-items:center;justify-content:flex-end;gap:18px;flex-wrap:wrap}.nav a{text-decoration:none;color:#554d45;font-size:15px;font-weight:780;line-height:1.2;padding:4px 0}.nav a:hover{color:var(--red)}main{min-height:70vh}.page-hero{padding:28px clamp(18px,4vw,52px) 16px;max-width:1160px;margin:auto}.page-hero h1{font-family:Georgia,serif;font-size:clamp(31px,3.6vw,46px);line-height:1.1;margin:9px 0 10px;color:#211b17}.intro{font-size:16px;max-width:760px;color:var(--muted)}.eyebrow{display:inline-flex;align-items:center;min-height:28px;padding:0 11px;border-radius:999px;background:rgba(47,113,103,.08);border:1px solid rgba(47,113,103,.18);text-transform:uppercase;letter-spacing:.05em;color:var(--jade);font-size:12px;line-height:1;font-weight:850;margin:0}.hero-grid,.content-section{max-width:1160px;margin:0 auto 22px;padding:0 clamp(18px,4vw,52px)}.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr);gap:22px;align-items:stretch}.tool-page{max-width:820px;margin:0 auto 22px;padding:0 clamp(18px,4vw,40px)}.tool-page .tool-panel{max-width:720px;margin:0 auto;padding:20px 22px}.tool-strip{display:grid;grid-template-columns:1fr 1fr;gap:18px;background:transparent!important;border:0!important;box-shadow:none!important}.tool-panel,.visual-panel,.content-section:not(.split),.fact-card{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:8px}.tool-panel{padding:22px;border-top:4px solid var(--red)}.compact-tool{height:auto}.tool-copy h2,.section-heading h2,.content-section h2{font-family:Georgia,serif;font-size:clamp(22px,2.2vw,27px);line-height:1.18;margin:8px 0 10px;color:#241f1a}.tool-page .tool-copy h2{font-size:25px}.tool-copy p{max-width:640px}.content-section p{max-width:820px}.calculator-form{display:grid;grid-template-columns:minmax(220px,1fr) auto;gap:12px;align-items:end;margin-top:16px;max-width:560px}.tool-page .calculator-form{max-width:100%}.match-form{grid-template-columns:1fr 1fr;max-width:100%}.match-form button{grid-column:1/-1;width:100%}.calculator-form label{display:grid;gap:7px;font-size:14px;font-weight:750}.calculator-form input,.calculator-form select{height:43px;border:1px solid var(--line);border-radius:8px;padding:0 12px;font:inherit;background:#fff;width:100%;min-width:0}.calculator-form button,.button-link{min-height:43px;display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:8px;background:var(--red);color:#fff;font-size:14px;font-weight:800;text-decoration:none;padding:0 15px;cursor:pointer;white-space:nowrap}.button-link.secondary{background:#f2eadf;color:#3a3028;border:1px solid #dfd1bd}.calculator-form button:hover,.button-link:hover{background:var(--red-dark);color:#fff}.result-card{margin-top:16px;padding:16px;border-left:4px solid var(--jade);background:#eff7f3;border-radius:8px}.result-card h3{margin:0 0 10px;font-size:20px}.result-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0}.result-facts span{background:#fff;border:1px solid #d8e8df;border-radius:8px;padding:10px;color:#3f564f}.result-facts strong{display:block;color:#1f332e;font-size:12px;text-transform:uppercase;letter-spacing:.04em}.result-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.note{color:var(--muted);font-size:14px}.visual-panel{margin:0;display:grid;place-items:center;overflow:hidden;background:#f1eadc}.visual-panel img{width:100%;height:100%;object-fit:cover}.ad-slot{max-width:1056px;margin:0 auto 22px;border:1px dashed #d7c8b5;background:#fffaf1;color:#8a7257;border-radius:8px;min-height:70px;display:grid;place-items:center;font-size:13px;font-weight:750}.section-heading{margin-bottom:14px}.fact-grid,.animal-grid,.step-grid,.element-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.element-grid{grid-template-columns:repeat(5,minmax(0,1fr))}.fact-grid div,.animal-card,.step-grid div,.element-grid div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.step-grid span{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#edf5f2;color:var(--jade);font-weight:900;margin-bottom:8px}.step-grid strong,.element-grid strong{display:block;font-size:17px}.step-grid p,.element-grid p{margin:6px 0 0;color:var(--muted);font-size:15px}.fact-grid strong,.fact-grid span{display:block}.fact-grid span,.animal-card span,.animal-card p{color:var(--muted)}.animal-card{text-decoration:none;min-height:168px;display:grid;gap:7px;position:relative}.animal-card:hover{border-color:#d2ad73;box-shadow:0 10px 24px rgba(47,37,23,.08)}.animal-card strong{font-size:20px}.animal-card p{font-size:15px;margin:0}.animal-order{position:absolute;right:14px;top:12px;color:var(--gold);font-weight:900}.split{display:grid;grid-template-columns:1fr 1fr;gap:22px}.split>div{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:8px;padding:22px}.fact-card{display:grid;gap:8px}.fact-card strong{font-size:20px}.fact-card span{display:block;color:var(--muted)}.table-wrap{overflow:auto}.content-section table{width:100%;border-collapse:collapse;background:#fff;font-size:15px}.content-section th,.content-section td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left}.content-section th{background:#f1eadc;color:#352b22}.pair-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}.pair-card{display:grid;gap:5px;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px}.pair-card:hover{border-color:#d2ad73;box-shadow:0 10px 24px rgba(47,37,23,.08)}.pair-card strong{font-size:16px}.pair-card span{color:var(--jade);font-weight:800}.pair-card small{color:var(--muted)}.score-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.score-grid div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.score-grid strong,.score-grid span{display:block}.score-grid span{font-size:22px;font-weight:900;color:var(--red);margin:4px 0}.score-grid p{margin:0;color:var(--muted);font-size:15px}.faq-list details{border-bottom:1px solid var(--line);padding:12px 0}.faq-list summary{font-weight:800;cursor:pointer}.site-footer{margin-top:44px;padding:30px clamp(18px,4vw,52px);background:#24201b;color:#fffaf0;display:flex;justify-content:space-between;gap:28px}.site-footer p{color:#d7cbbd;max-width:680px;font-size:14px}.site-footer nav{display:flex;gap:16px;align-items:start;flex-wrap:wrap}.site-footer a{color:#fffaf0}@media(max-width:980px){.element-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tool-strip{grid-template-columns:1fr}.pair-grid,.score-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:820px){body{font-size:15px}.site-header{align-items:flex-start;flex-direction:column}.nav{justify-content:flex-start;gap:14px}.nav a{font-size:14px}.hero-grid,.split{grid-template-columns:1fr}.tool-page{max-width:100%;padding:0 16px}.tool-page .tool-panel{max-width:100%;padding:18px}.calculator-form,.match-form{grid-template-columns:1fr}.fact-grid,.animal-grid,.step-grid,.element-grid,.result-facts,.pair-grid,.score-grid{grid-template-columns:1fr}.page-hero{padding-top:24px}.page-hero h1{font-size:31px}.intro{font-size:16px}.site-footer{flex-direction:column}}`;
+}
+
+function detailCss() {
+  return `.site-footer{display:grid;grid-template-columns:minmax(260px,1.15fr) minmax(420px,.85fr);align-items:start;padding-top:34px;padding-bottom:34px}.footer-about strong{display:block;font-size:18px;margin-bottom:10px}.footer-about p{margin:0;line-height:1.72}.footer-nav{display:grid!important;grid-template-columns:repeat(3,minmax(110px,1fr));gap:24px!important;align-items:start!important}.footer-nav div{display:grid;gap:8px}.footer-nav span{color:#bfae98;font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.06em}.footer-nav a{text-decoration:none;font-size:14px}.footer-nav a:hover{text-decoration:underline}.faq-list h2{margin-bottom:18px}.faq-grid{display:grid;gap:0;border-top:1px solid var(--line)}.faq-item{display:grid;grid-template-columns:minmax(240px,.42fr) minmax(0,.58fr);gap:28px;padding:20px 0;border-bottom:1px solid var(--line)}.faq-item h3{margin:0;font-size:17px;line-height:1.35}.faq-item p{margin:0;color:var(--muted);max-width:none}.article-search{display:grid;grid-template-columns:minmax(260px,.9fr) minmax(300px,1.1fr);gap:22px;align-items:end}.article-search h2{margin-bottom:0}.site-search-form{display:grid;grid-template-columns:minmax(220px,1fr) auto;gap:12px;align-items:end}.site-search-form label{display:grid;gap:7px;font-size:14px;font-weight:750}.site-search-form input{height:43px;border:1px solid var(--line);border-radius:8px;padding:0 12px;font:inherit;background:#fff;width:100%;min-width:0}.site-search-form button{min-height:43px;display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:8px;background:var(--jade);color:#fff;font-size:14px;font-weight:800;padding:0 16px;cursor:pointer;white-space:nowrap}.site-search-form button:hover{background:#24594f}@media(max-width:820px){.site-footer{grid-template-columns:1fr}.footer-nav{grid-template-columns:1fr 1fr!important}.faq-item{grid-template-columns:1fr;gap:8px}.article-search,.site-search-form{grid-template-columns:1fr}}`;
 }
