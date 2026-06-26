@@ -6,9 +6,9 @@ const SITE = {
   name: "Chinese Zodiac Guide",
   url: "https://www.chinesezodiacfinder.com",
   description: "Find your Chinese zodiac sign, zodiac year, animal meaning, and traditional compatibility with a fast cultural reference tool.",
-  assetVersion: "20260627-1"
+  assetVersion: "20260627-2"
 };
-const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || "";
+const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || "G-VB9E7T2VCF";
 
 const animals = JSON.parse(await readFile("data/zodiac-animals.json", "utf8"));
 const seedYears = JSON.parse(await readFile("data/zodiac-years.json", "utf8"));
