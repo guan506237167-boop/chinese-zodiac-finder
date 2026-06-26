@@ -6,6 +6,7 @@ Static Chinese zodiac guide and calculator site for `www.chinesezodiacfinder.com
 
 This site is generated from source files, not edited directly in `dist/`.
 
+- Follow `docs/publishing-standard.md` before adding or updating articles.
 - Update fixed knowledge data in `data/*.json`.
 - Update page templates, tools, navigation, and SEO layout in `scripts/generate.mjs`.
 - Run `npm run build` to regenerate `dist/`.

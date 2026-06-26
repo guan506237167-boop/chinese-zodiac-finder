@@ -6,7 +6,7 @@ const SITE = {
   name: "Chinese Zodiac Guide",
   url: "https://www.chinesezodiacfinder.com",
   description: "Find your Chinese zodiac sign, zodiac year, animal meaning, and traditional compatibility with a fast cultural reference tool.",
-  assetVersion: "20260626-5"
+  assetVersion: "20260626-6"
 };
 
 const animals = JSON.parse(await readFile("data/zodiac-animals.json", "utf8"));
@@ -14,6 +14,20 @@ const seedYears = JSON.parse(await readFile("data/zodiac-years.json", "utf8"));
 const years = buildZodiacYears(1900, 2100, seedYears);
 const compatibility = JSON.parse(await readFile("data/compatibility.json", "utf8"));
 const animalBySlug = Object.fromEntries(animals.map((animal) => [animal.animal, animal]));
+const animalVisuals = {
+  rat: { mark: "鼠", accent: "#b63b45", soft: "#fff0f0" },
+  ox: { mark: "牛", accent: "#9a6734", soft: "#fff4e7" },
+  tiger: { mark: "虎", accent: "#c05d2b", soft: "#fff2e8" },
+  rabbit: { mark: "兔", accent: "#b84c75", soft: "#fff0f6" },
+  dragon: { mark: "龙", accent: "#b58a21", soft: "#fff7d8" },
+  snake: { mark: "蛇", accent: "#5f7c3c", soft: "#f1f7e7" },
+  horse: { mark: "马", accent: "#ba4d2d", soft: "#fff0e7" },
+  goat: { mark: "羊", accent: "#8f6a3c", soft: "#fbf3e6" },
+  monkey: { mark: "猴", accent: "#b77723", soft: "#fff5df" },
+  rooster: { mark: "鸡", accent: "#9d3d63", soft: "#fff0f5" },
+  dog: { mark: "狗", accent: "#586e9d", soft: "#eef3ff" },
+  pig: { mark: "猪", accent: "#a45a74", soft: "#fff1f5" }
+};
 const bestPairKeys = new Set(compatibility.best.map(([first, second]) => pairKey(first, second)));
 const challengingPairKeys = new Set(compatibility.challenging.map(([first, second]) => pairKey(first, second)));
 const elementInfo = {
@@ -47,6 +61,12 @@ await copyFile("public/google1c43509ea14adc51.html", "dist/google1c43509ea14adc5
 
 const pages = [];
 const guides = [
+  {
+    title: "Horse Chinese Zodiac: Years and Meaning",
+    path: "/guides/horse-chinese-zodiac/",
+    category: "Animal Guides",
+    description: "A full article-style guide to Horse years, meaning, personality associations, and Lunar New Year boundaries."
+  },
   {
     title: "Year of the Horse 2026",
     path: "/year-of-the-horse-2026/",
@@ -350,12 +370,20 @@ function pageClass(path) {
 }
 
 function animalCard(animal) {
+  const visual = animalVisuals[animal.animal];
   return `<a class="animal-card" href="/chinese-zodiac/${animal.animal}/">
+    <span class="animal-seal" style="--animal-accent:${visual.accent};--animal-soft:${visual.soft};">${visual.mark}</span>
     <span class="animal-order">${animal.order}</span>
     <strong>${animal.name}</strong>
     <span>${animal.chinese} &middot; ${animal.pinyin} &middot; ${animal.alsoKnownAs}</span>
     <p>${animal.summary}</p>
   </a>`;
+}
+
+function animalSeal(slug, label = "") {
+  const visual = animalVisuals[slug];
+  const animal = animalBySlug[slug];
+  return `<span class="mini-seal" style="--animal-accent:${visual.accent};--animal-soft:${visual.soft};" aria-label="${escapeHtml(label || animal.name)}">${visual.mark}</span>`;
 }
 
 function guideCard(guide) {
@@ -571,6 +599,102 @@ await writePage("/guides/", pageLayout({
     </section>`
 }));
 
+await writePage("/guides/horse-chinese-zodiac/", pageLayout({
+  title: "Horse Chinese Zodiac: Years, Meaning, Personality, and Dates",
+  description: "Learn the Horse Chinese zodiac years, traditional meaning, personality associations, lucky symbols, compatibility notes, and Lunar New Year boundary.",
+  path: "/guides/horse-chinese-zodiac/",
+  h1: "Horse Chinese Zodiac: Years, Meaning, and Personality",
+  intro: "The Horse is the seventh animal in the Chinese zodiac cycle, traditionally linked with movement, freedom, independence, and an active spirit.",
+  faqs: [
+    { q: "What years are the Horse in Chinese zodiac?", a: "Recent Horse years include 1978, 1990, 2002, 2014, and 2026. The exact sign depends on the Lunar New Year boundary in each year." },
+    { q: "Is 2026 the Year of the Horse?", a: "Yes. 2026 is the Year of the Horse, and it begins on February 17, 2026, the Lunar New Year date for that year." },
+    { q: "What does the Horse mean in Chinese zodiac culture?", a: "The Horse is traditionally associated with movement, freedom, energy, independence, and an active spirit." },
+    { q: "Are Horse zodiac personality traits scientific?", a: "No. Horse traits are cultural personality associations, not scientific claims or fixed judgments about a person." }
+  ],
+  body: `
+    ${articleSearchBlock()}
+    <section class="content-section article-body">
+      <p class="lead-answer">The Horse is the seventh animal in the Chinese zodiac cycle. It is traditionally associated with movement, independence, confidence, and an active social spirit. If you are checking whether you are a Horse, do not use January 1 as the only boundary. Chinese zodiac years follow Lunar New Year, so a birthday in January or early February may still belong to the previous zodiac year.</p>
+      <p>That boundary matters because most people search for their zodiac sign by Gregorian year, while the traditional zodiac calendar changes on Lunar New Year.</p>
+    </section>
+    <section class="content-section split">
+      <div>
+        <p class="eyebrow">Short Answer</p>
+        <h2>What does the Horse mean?</h2>
+        <p>In Chinese zodiac culture, the Horse represents energy, freedom, speed, and forward movement. Horse years include 1978, 1990, 2002, 2014, and 2026, but the exact sign depends on the Lunar New Year date in the birth year.</p>
+      </div>
+      <div class="fact-card">
+        <strong>Horse facts</strong>
+        <span>Chinese: 马</span>
+        <span>Pinyin: ma</span>
+        <span>Cycle order: No. 7</span>
+        <span>Yin/Yang: Yang</span>
+      </div>
+    </section>
+    <section class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">Years and Elements</p>
+        <h2>Horse years and Lunar New Year starts</h2>
+      </div>
+      <p>The Horse repeats every 12 years. Each Horse year also connects with one of the five traditional elements: Wood, Fire, Earth, Metal, or Water.</p>
+      ${yearsTable(years.filter((row) => row.animal === "horse" && row.year >= 1978 && row.year <= 2026))}
+      <p>Once the animal is clear, the element adds another layer to the traditional reading. For example, 2026 is often described as a Fire Horse year, while 1990 is a Metal Horse year.</p>
+    </section>
+    <section class="content-section">
+      <h2>Horse meaning in Chinese zodiac culture</h2>
+      <p>The Horse often represents speed, freedom, endurance, and visible action. In older cultural symbolism, the horse is connected with travel, military movement, communication, and the ability to cover distance. That is why modern zodiac explanations often describe the Horse as energetic, independent, and eager to move toward new situations.</p>
+      <p>This meaning should be read as cultural symbolism. It does not mean every Horse person has the same personality, and it should not be used to make serious decisions about relationships, work, health, or money.</p>
+    </section>
+    <section class="content-section">
+      <h2>Horse personality associations</h2>
+      <p>Traditional Horse descriptions usually focus on movement and openness. Common associations include:</p>
+      <ul class="article-list">
+        <li>Lively and expressive.</li>
+        <li>Independent and freedom-seeking.</li>
+        <li>Comfortable with change and activity.</li>
+        <li>Drawn to new experiences.</li>
+        <li>Sometimes impatient with slow routines.</li>
+      </ul>
+      <p>The useful way to read these traits is not "this is exactly who you are." A better reading is: Chinese zodiac culture uses the Horse to describe a type of energetic, outward-moving temperament.</p>
+    </section>
+    <section class="content-section">
+      <h2>Lucky numbers and colors</h2>
+      <p>Lucky symbols are another part of traditional zodiac reading. They are symbolic references, not guaranteed outcomes.</p>
+      <div class="fact-grid">
+        <div><strong>Lucky numbers</strong><span>2, 3, 7</span></div>
+        <div><strong>Lucky colors</strong><span>Green, red, purple</span></div>
+        <div><strong>Also known as</strong><span>Wu Horse</span></div>
+      </div>
+    </section>
+    <section class="content-section">
+      <h2>Horse compatibility</h2>
+      <p>Horse compatibility is usually read through traditional animal relationships. Some pairings are described as smoother, while others are described as more challenging. The result is best used as a cultural guide rather than relationship advice.</p>
+      <p>If a pair looks challenging in zodiac symbolism, that does not mean the real relationship is bad. Communication, values, timing, and real-life behavior matter more than a zodiac label.</p>
+      <a class="button-link" href="/chinese-zodiac-compatibility/">Open compatibility checker</a>
+    </section>
+    <section class="content-section">
+      <h2>Common mistakes</h2>
+      <p>The biggest mistake is assuming a zodiac year starts on January 1. It does not. Chinese zodiac years start on Lunar New Year, and that date changes each Gregorian year.</p>
+      <p>Another common mistake is reading zodiac personality as a fixed truth. On this site, zodiac meanings are explained as traditional cultural associations. They can be interesting, useful for learning, and helpful for symbolic content, but they are not scientific personality tests.</p>
+    </section>
+    ${relatedGuidesBlock("Related Horse and zodiac guides", [
+      { title: "Horse Chinese Zodiac", path: "/chinese-zodiac/horse/", category: "Animal Guides", description: "Horse years, quick facts, and traditional associations." },
+      guides.find((guide) => guide.path === "/chinese-zodiac-years/"),
+      guides.find((guide) => guide.path === "/chinese-zodiac-elements/"),
+      guides.find((guide) => guide.path === "/chinese-zodiac-compatibility/")
+    ].filter(Boolean))}
+    ${faqBlock([
+      { q: "What years are the Horse in Chinese zodiac?", a: "Recent Horse years include 1978, 1990, 2002, 2014, and 2026. The exact sign depends on the Lunar New Year boundary in each year." },
+      { q: "Is 2026 the Year of the Horse?", a: "Yes. 2026 is the Year of the Horse, and it begins on February 17, 2026, the Lunar New Year date for that year." },
+      { q: "What does the Horse mean in Chinese zodiac culture?", a: "The Horse is traditionally associated with movement, freedom, energy, independence, and an active spirit." },
+      { q: "Are Horse zodiac personality traits scientific?", a: "No. Horse traits are cultural personality associations, not scientific claims or fixed judgments about a person." }
+    ])}
+    <section class="content-section article-body">
+      <h2>Final note</h2>
+      <p>The main point is simple: the Horse sign is useful only after you check the Lunar New Year boundary for the birth year. Once the sign is confirmed, you can read the Horse meaning, compare compatibility, or use the zodiac calculator to check another birthday. Treat the result as a cultural guide, not a fixed rule about personality or relationships.</p>
+    </section>`
+}));
+
 await writePage("/chinese-zodiac-calculator/", pageLayout({
   title: "Chinese Zodiac Calculator: Find Your Zodiac Animal by Birth Date",
   description: "Find your Chinese zodiac sign by birth date with a calculator that respects Lunar New Year boundaries.",
@@ -749,7 +873,12 @@ await writePage("/chinese-zodiac-compatibility/", pageLayout({
       <div class="pair-grid">${allCompatibilityPairs().map((pair) => {
         const firstAnimal = animalBySlug[pair.first];
         const secondAnimal = animalBySlug[pair.second];
-        return `<a class="pair-card" href="/chinese-zodiac-compatibility/${pairSlug(pair.first, pair.second)}/"><strong>${firstAnimal.name} + ${secondAnimal.name}</strong><span>${pair.level}</span><small>${pair.score}/100 match score</small></a>`;
+        return `<a class="pair-card" href="/chinese-zodiac-compatibility/${pairSlug(pair.first, pair.second)}/">
+          <span class="pair-icons">${animalSeal(pair.first, firstAnimal.name)}${animalSeal(pair.second, secondAnimal.name)}</span>
+          <strong>${firstAnimal.name} + ${secondAnimal.name}</strong>
+          <span class="match-label">${pair.level}</span>
+          <small>${pair.score}/100 match score</small>
+        </a>`;
       }).join("")}</div>
     </section>
     <section class="content-section">
@@ -1064,17 +1193,128 @@ async function writeRobots() {
 }
 
 async function writeSeoReport() {
-  const rows = pages.map((page) => {
-    const titleOk = page.title.length >= 35 && page.title.length <= 70;
-    const descOk = page.description.length >= 90 && page.description.length <= 165;
-    const score = [titleOk, descOk, page.h1, page.faqs > 0].filter(Boolean).length;
-    return `<tr><td><a href="${page.path}">${page.path}</a></td><td>${page.title.length}</td><td>${page.description.length}</td><td>${page.faqs}</td><td>${score}/4</td></tr>`;
-  }).join("");
-  await writePage("/admin/seo-report/", `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>SEO Report</title><link rel="stylesheet" href="/styles.css?v=${SITE.assetVersion}"></head><body><main class="content-section"><h1>SEO Report</h1><p>Prototype build report for title, description, FAQ, and basic page coverage.</p><div class="table-wrap"><table><thead><tr><th>URL</th><th>Title length</th><th>Description length</th><th>FAQ</th><th>Score</th></tr></thead><tbody>${rows}</tbody></table></div></main></body></html>`);
+  const sitemap = await readFile("dist/sitemap.xml", "utf8");
+  const reports = [];
+  for (const page of pages) {
+    const file = page.path === "/" ? join("dist", "index.html") : join("dist", page.path, "index.html");
+    const html = await readFile(file, "utf8");
+    reports.push(auditPage(page, html, sitemap));
+  }
+  const totals = {
+    pages: reports.length,
+    pass: reports.filter((item) => item.grade === "Pass").length,
+    review: reports.filter((item) => item.grade === "Review").length,
+    fix: reports.filter((item) => item.grade === "Fix").length,
+    average: Math.round(reports.reduce((sum, item) => sum + item.score, 0) / reports.length)
+  };
+  const rows = reports.map((item) => `<tr class="${item.grade.toLowerCase()}">
+    <td><a href="${item.path}">${item.path}</a></td>
+    <td><strong>${item.score}/100</strong><span>${item.grade}</span></td>
+    <td>${item.metrics.titleLength}</td>
+    <td>${item.metrics.descriptionLength}</td>
+    <td>${item.metrics.wordCount}</td>
+    <td>${item.metrics.h1Count}/${item.metrics.h2Count}</td>
+    <td>${item.metrics.faqCount}</td>
+    <td>${item.issues.length ? item.issues.map((issue) => `<span>${escapeHtml(issue)}</span>`).join("") : "<span>OK</span>"}</td>
+  </tr>`).join("");
+  const json = JSON.stringify({ generatedAt: "2026-06-26", totals, reports }, null, 2);
+  await mkdir("dist/admin", { recursive: true });
+  await writeFile("dist/admin/seo-report.json", json, "utf8");
+  await writePage("/admin/seo-report/", `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Pre-Publish SEO Check</title><link rel="stylesheet" href="/styles.css?v=${SITE.assetVersion}"></head><body><main class="seo-report-page"><section class="content-section report-hero"><p class="eyebrow">Publishing QA</p><h1>Pre-Publish SEO Check</h1><p>Internal publishing checks for title, description, headings, FAQ, canonical, schema, sitemap, internal links, images, and content depth. This is not a user behavior or tool usage report.</p><div class="report-summary"><div><strong>${totals.average}</strong><span>Average score</span></div><div><strong>${totals.pages}</strong><span>Pages</span></div><div><strong>${totals.pass}</strong><span>Pass</span></div><div><strong>${totals.review}</strong><span>Review</span></div><div><strong>${totals.fix}</strong><span>Fix</span></div></div></section><section class="content-section report-rules"><h2>Publishing Gate</h2><p>Before pushing new articles, fix pages below 80, review warnings, then rebuild. The JSON version is available at <a href="/admin/seo-report.json">/admin/seo-report.json</a>.</p></section><section class="content-section"><div class="table-wrap"><table class="seo-table"><thead><tr><th>URL</th><th>Score</th><th>Title</th><th>Description</th><th>Words</th><th>H1/H2</th><th>FAQ</th><th>Issues</th></tr></thead><tbody>${rows}</tbody></table></div></section></main></body></html>`);
+}
+
+function auditPage(page, html, sitemap) {
+  const title = getMatch(html, /<title>([\s\S]*?)<\/title>/i);
+  const description = getMatch(html, /<meta name="description" content="([^"]*)"/i);
+  const canonical = getMatch(html, /<link rel="canonical" href="([^"]*)"/i);
+  const mainHtml = getMatch(html, /<main>([\s\S]*?)<\/main>/i);
+  const text = htmlToText(mainHtml);
+  const wordCount = text.split(/\s+/).filter(Boolean).length;
+  const h1Count = countMatches(mainHtml, /<h1[\s>]/gi);
+  const h2Count = countMatches(mainHtml, /<h2[\s>]/gi);
+  const schemaCount = countMatches(html, /application\/ld\+json/gi);
+  const internalLinks = [...html.matchAll(/<a\s+[^>]*href="([^"]+)"/gi)].map((item) => item[1]).filter((href) => href.startsWith("/") && !href.startsWith("//"));
+  const images = [...html.matchAll(/<img\s+[^>]*>/gi)].map((item) => item[0]);
+  const imagesMissingAlt = images.filter((img) => !/\salt="[^"]*"/i.test(img)).length;
+  const checks = [
+    checkRange("SEO title length should be 35-70 characters", title.length, 35, 70),
+    checkRange("Meta description should be 90-165 characters", description.length, 90, 165),
+    checkExact("Page should have exactly one H1", h1Count, 1),
+    checkMinimum("Page should include at least one H2", h2Count, 1),
+    checkMinimum("Page should have at least 180 visible words", wordCount, 180),
+    checkMinimum("Page should include JSON-LD schema", schemaCount, 1),
+    checkBoolean("Canonical should match page URL", canonical === absolute(page.path)),
+    checkBoolean("Page should appear in sitemap", sitemap.includes(`<loc>${absolute(page.path)}</loc>`)),
+    checkMinimum("Page should include at least 3 internal links", internalLinks.length, 3),
+    checkBoolean("Images should have alt text", imagesMissingAlt === 0),
+    checkBoolean("Guide detail pages should expose FAQ when assigned", page.faqs > 0 || !needsFaqGate(page.path))
+  ];
+  const score = Math.round((checks.filter((item) => item.ok).length / checks.length) * 100);
+  return {
+    path: page.path,
+    score,
+    grade: score >= 90 ? "Pass" : score >= 80 ? "Review" : "Fix",
+    metrics: {
+      titleLength: title.length,
+      descriptionLength: description.length,
+      wordCount,
+      h1Count,
+      h2Count,
+      faqCount: page.faqs,
+      schemaCount,
+      internalLinks: internalLinks.length,
+      images: images.length,
+      imagesMissingAlt
+    },
+    issues: checks.filter((item) => !item.ok).map((item) => item.message)
+  };
+}
+
+function getMatch(text, regex) {
+  const match = text.match(regex);
+  return match ? decodeHtml(match[1]).trim() : "";
+}
+
+function countMatches(text, regex) {
+  return (text.match(regex) || []).length;
+}
+
+function htmlToText(html) {
+  return decodeHtml(html.replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ").replace(/<[^>]+>/g, " "));
+}
+
+function decodeHtml(text) {
+  return String(text)
+    .replaceAll("&amp;", "&")
+    .replaceAll("&lt;", "<")
+    .replaceAll("&gt;", ">")
+    .replaceAll("&quot;", '"')
+    .replaceAll("&#39;", "'")
+    .replace(/\s+/g, " ");
+}
+
+function checkRange(message, value, min, max) {
+  return { ok: value >= min && value <= max, message };
+}
+
+function checkExact(message, value, expected) {
+  return { ok: value === expected, message };
+}
+
+function checkMinimum(message, value, min) {
+  return { ok: value >= min, message };
+}
+
+function checkBoolean(message, ok) {
+  return { ok, message };
+}
+
+function needsFaqGate(path) {
+  return path.includes("/chinese-zodiac/") || path.includes("/year-of-");
 }
 
 function css() {
-  return compactCss() + detailCss() + faqHelpCss() + guideCss() + polishCss();
+  return compactCss() + detailCss() + faqHelpCss() + guideCss() + polishCss() + culturalVisualCss() + seoReportCss();
 }
 
 function compactCss() {
@@ -1094,5 +1334,13 @@ function guideCss() {
 }
 
 function polishCss() {
-  return `.split>div{display:grid;grid-template-rows:auto auto 1fr auto;align-content:start}.split>div>.button-link{justify-self:start;margin-top:auto}.split>div p:last-of-type{margin-bottom:18px}`;
+  return `.split>div{display:grid;grid-template-rows:auto auto 1fr auto;align-content:start}.split>div>.button-link{justify-self:start;margin-top:auto}.split>div p:last-of-type{margin-bottom:18px}.page-guides .content-section{padding:26px clamp(18px,4vw,52px);margin-bottom:28px}.page-guides .article-search{grid-template-columns:minmax(620px,1fr) minmax(420px,620px);align-items:center;margin-bottom:32px}.page-guides .site-search-form{max-width:620px;justify-self:end}.page-guides .article-search h2,.page-guides .section-heading h2{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:clamp(22px,1.75vw,27px);font-weight:760;line-height:1.25;letter-spacing:0}.page-guides .article-search h2{max-width:720px}.page-guides .section-heading{margin-bottom:20px}.page-guides .guide-grid{margin-top:2px}.page-guides .guide-next{padding-top:24px;padding-bottom:24px}.article-body{max-width:920px}.article-body .lead-answer{font-size:18px;line-height:1.72;color:#2f2922}.article-list{margin:12px 0 0;padding-left:20px;color:#463f38}.article-list li{margin:6px 0}.page-guides-horse-chinese-zodiac .page-hero h1{font-size:clamp(34px,4vw,50px)}.page-guides-horse-chinese-zodiac .content-section{margin-bottom:24px}@media(max-width:1180px){.page-guides .article-search{grid-template-columns:1fr}.page-guides .site-search-form{max-width:100%;justify-self:stretch}}`;
+}
+
+function culturalVisualCss() {
+  return `body{background-color:#f7f2e8;background-image:radial-gradient(circle at 18px 18px,rgba(179,52,58,.035) 0 2px,transparent 2.5px),linear-gradient(135deg,rgba(185,148,85,.05) 25%,transparent 25%),linear-gradient(225deg,rgba(47,113,103,.04) 25%,transparent 25%);background-size:36px 36px,48px 48px,48px 48px}.site-header{box-shadow:0 8px 26px rgba(60,45,26,.04)}.brand,.nav a,.calculator-form button,.button-link,.site-search-form button{font-weight:720}.eyebrow{font-weight:760}.page-hero h1{font-weight:700}.tool-copy h2,.section-heading h2,.content-section h2{font-weight:720}.tool-copy p,.content-section p,.pair-card small,.guide-card p,.animal-card p{color:#463f38}.visual-panel{position:relative;background:linear-gradient(145deg,#fffaf0,#f1eadb);padding:18px}.visual-panel::before{content:"";position:absolute;inset:14px;border:1px solid rgba(179,52,58,.14);border-radius:8px;background:repeating-radial-gradient(circle at 50% 50%,rgba(185,148,85,.12) 0 1px,transparent 1px 22px);pointer-events:none}.visual-panel img{position:relative;width:92%;height:92%;object-fit:contain;filter:drop-shadow(0 18px 28px rgba(80,50,25,.12))}.animal-card{display:grid;grid-template-columns:44px minmax(0,1fr);grid-template-rows:auto auto 1fr;column-gap:16px;row-gap:6px;min-height:168px;padding:20px 22px;overflow:hidden;isolation:isolate}.animal-card::after{content:"";position:absolute;right:-42px;bottom:-46px;z-index:0;width:90px;height:90px;border-radius:50%;background:var(--animal-soft,#fff2e8);opacity:.22}.animal-card strong,.animal-card p,.animal-card>span{position:relative;z-index:1}.animal-seal{position:relative!important;left:auto;top:auto;grid-column:1;grid-row:1/3;align-self:start;display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--animal-soft,#fff0e7);border:1px solid color-mix(in srgb,var(--animal-accent,#b3343a) 36%,#fff);color:var(--animal-accent,#b3343a);font-family:Georgia,serif;font-size:24px;font-weight:850;line-height:1;box-shadow:0 8px 16px rgba(60,40,20,.08)}.animal-card strong{grid-column:2;grid-row:1;padding-right:34px;margin-top:1px;color:#12100e;font-size:18px;font-weight:760}.animal-card>span:not(.animal-order):not(.animal-seal){grid-column:2;grid-row:2;color:#4d463f;font-size:14px}.animal-card p{grid-column:2;grid-row:3;margin-top:8px}.animal-order{position:absolute!important;right:18px;top:18px;z-index:2;color:#4f463d;font-size:13px;font-weight:780}.fact-grid div,.step-grid div,.element-grid div,.guide-card,.pair-card,.score-grid div{background:linear-gradient(180deg,#fffefa,#fffaf2)}.fact-grid strong,.step-grid strong,.element-grid strong,.guide-card strong,.pair-card strong,.score-grid strong{font-weight:720}.pair-card{position:relative;grid-template-columns:auto 1fr auto;align-items:center;gap:8px 12px;padding:16px 16px 15px;min-height:122px;overflow:hidden;isolation:isolate}.pair-card::after{content:"";position:absolute;right:-40px;bottom:-46px;z-index:0;width:116px;height:116px;border-radius:50%;background:rgba(185,148,85,.06)}.pair-icons{grid-row:1/4;display:flex;flex-direction:column;gap:5px;z-index:1}.mini-seal{display:grid;place-items:center;width:29px;height:29px;border-radius:9px;background:var(--animal-soft,#fff0e7);border:1px solid color-mix(in srgb,var(--animal-accent,#b3343a) 34%,#fff);color:var(--animal-accent,#b3343a);font-family:Georgia,serif;font-size:17px;font-weight:800;line-height:1}.pair-card strong{z-index:1;font-size:16px}.pair-card .match-label{z-index:1;justify-self:start;display:inline-flex;align-items:center;min-height:27px;padding:0 10px;border-radius:999px;background:#edf5f2;color:#28665d;font-size:13px;font-weight:680}.pair-card small{z-index:1;grid-column:2/4;font-size:13px}.score-grid span{font-size:20px;font-weight:760}.result-card h3{font-weight:720}.result-facts strong{font-weight:720}.guide-card span{font-weight:760}.guide-card strong{font-size:17px}.content-section:not(.split),.tool-panel,.visual-panel,.fact-card{box-shadow:0 12px 30px rgba(60,45,26,.065)}@media(max-width:820px){.animal-card{grid-template-columns:42px minmax(0,1fr);padding:18px}.animal-seal{width:42px;height:42px}.pair-card{grid-template-columns:auto 1fr}.pair-card small{grid-column:2}.visual-panel img{width:100%;height:100%}}`;
+}
+
+function seoReportCss() {
+  return `.seo-report-page{padding:36px 0}.report-hero h1{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:34px;line-height:1.12;margin:12px 0 10px}.report-summary{display:grid;grid-template-columns:repeat(5,minmax(120px,1fr));gap:12px;margin-top:22px}.report-summary div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.report-summary strong{display:block;font-size:28px;line-height:1;color:#1d1814}.report-summary span{display:block;margin-top:8px;color:var(--muted);font-size:13px;font-weight:720}.report-rules p{margin:0}.seo-table td:nth-child(2){white-space:nowrap}.seo-table td:nth-child(2) strong{display:block;font-size:18px}.seo-table td:nth-child(2) span{display:inline-flex;margin-top:4px;padding:2px 8px;border-radius:999px;background:#eee;color:#4a4038;font-size:12px;font-weight:760}.seo-table tr.pass td:nth-child(2) span{background:#e8f5ee;color:#236349}.seo-table tr.review td:nth-child(2) span{background:#fff3d8;color:#8a5a16}.seo-table tr.fix td:nth-child(2) span{background:#fde8e8;color:#a42b2b}.seo-table td:last-child span{display:block;margin:3px 0;font-size:13px;color:#5c534b}@media(max-width:820px){.report-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}`;
 }
