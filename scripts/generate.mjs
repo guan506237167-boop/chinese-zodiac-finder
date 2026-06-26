@@ -5,7 +5,8 @@ import { dirname, join } from "node:path";
 const SITE = {
   name: "Chinese Zodiac Guide",
   url: "https://www.chinesezodiacfinder.com",
-  description: "Find your Chinese zodiac sign, zodiac year, animal meaning, and traditional compatibility with a fast cultural reference tool."
+  description: "Find your Chinese zodiac sign, zodiac year, animal meaning, and traditional compatibility with a fast cultural reference tool.",
+  assetVersion: "20260626-2"
 };
 
 const animals = JSON.parse(await readFile("data/zodiac-animals.json", "utf8"));
@@ -244,7 +245,7 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
   <meta property="og:url" content="${canonical}">
   <meta property="og:image" content="${SITE.url}/assets/zodiac-wheel.svg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles.css?v=${SITE.assetVersion}">
   ${schema}
 </head>
 <body>
@@ -281,7 +282,7 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
       <a href="/admin/seo-report/">SEO Report</a>
     </nav>
   </footer>
-  <script src="/calculator.js" defer></script>
+  <script src="/calculator.js?v=${SITE.assetVersion}" defer></script>
 </body>
 </html>`;
 }
@@ -843,7 +844,7 @@ async function writeSeoReport() {
     const score = [titleOk, descOk, page.h1, page.faqs > 0].filter(Boolean).length;
     return `<tr><td><a href="${page.path}">${page.path}</a></td><td>${page.title.length}</td><td>${page.description.length}</td><td>${page.faqs}</td><td>${score}/4</td></tr>`;
   }).join("");
-  await writePage("/admin/seo-report/", `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>SEO Report</title><link rel="stylesheet" href="/styles.css"></head><body><main class="content-section"><h1>SEO Report</h1><p>Prototype build report for title, description, FAQ, and basic page coverage.</p><div class="table-wrap"><table><thead><tr><th>URL</th><th>Title length</th><th>Description length</th><th>FAQ</th><th>Score</th></tr></thead><tbody>${rows}</tbody></table></div></main></body></html>`);
+  await writePage("/admin/seo-report/", `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>SEO Report</title><link rel="stylesheet" href="/styles.css?v=${SITE.assetVersion}"></head><body><main class="content-section"><h1>SEO Report</h1><p>Prototype build report for title, description, FAQ, and basic page coverage.</p><div class="table-wrap"><table><thead><tr><th>URL</th><th>Title length</th><th>Description length</th><th>FAQ</th><th>Score</th></tr></thead><tbody>${rows}</tbody></table></div></main></body></html>`);
 }
 
 function css() {
