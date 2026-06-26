@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-labelledby="title desc">
+  <title id="title">Chinese zodiac wheel</title>
+  <desc id="desc">A decorative wheel showing the twelve Chinese zodiac animals.</desc>
+  <rect width="900" height="600" fill="#f7f3ea"/>
+  <circle cx="450" cy="300" r="238" fill="#fffaf0" stroke="#9d1f2f" stroke-width="8"/>
+  <circle cx="450" cy="300" r="132" fill="#9d1f2f"/>
+  <text x="450" y="284" text-anchor="middle" font-size="34" font-family="Georgia, serif" fill="#fffaf0">Chinese</text>
+  <text x="450" y="326" text-anchor="middle" font-size="42" font-family="Georgia, serif" fill="#fffaf0">Zodiac</text>
+  <g font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#2e2a24">
+    <text x="450" y="88" text-anchor="middle">Rat</text>
+    <text x="558" y="118" text-anchor="middle">Ox</text>
+    <text x="650" y="205" text-anchor="middle">Tiger</text>
+    <text x="682" y="308" text-anchor="middle">Rabbit</text>
+    <text x="650" y="420" text-anchor="middle">Dragon</text>
+    <text x="558" y="492" text-anchor="middle">Snake</text>
+    <text x="450" y="526" text-anchor="middle">Horse</text>
+    <text x="342" y="492" text-anchor="middle">Goat</text>
+    <text x="250" y="420" text-anchor="middle">Monkey</text>
+    <text x="218" y="308" text-anchor="middle">Rooster</text>
+    <text x="250" y="205" text-anchor="middle">Dog</text>
+    <text x="342" y="118" text-anchor="middle">Pig</text>
+  </g>
+  <g stroke="#c9a45c" stroke-width="3">
+    <line x1="450" y1="156" x2="450" y2="110"/>
+    <line x1="522" y1="176" x2="548" y2="132"/>
+    <line x1="574" y1="228" x2="626" y2="198"/>
+    <line x1="594" y1="300" x2="658" y2="300"/>
+    <line x1="574" y1="372" x2="626" y2="404"/>
+    <line x1="522" y1="424" x2="548" y2="468"/>
+    <line x1="450" y1="444" x2="450" y2="500"/>
+    <line x1="378" y1="424" x2="352" y2="468"/>
+    <line x1="326" y1="372" x2="274" y2="404"/>
+    <line x1="306" y1="300" x2="242" y2="300"/>
+    <line x1="326" y1="228" x2="274" y2="198"/>
+    <line x1="378" y1="176" x2="352" y2="132"/>
+  </g>
+</svg>
+

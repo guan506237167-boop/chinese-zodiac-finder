@@ -1,0 +1,123 @@
+[
+  {
+    "animal": "rat",
+    "name": "Rat",
+    "chinese": "鼠",
+    "pinyin": "shu",
+    "order": 1,
+    "yinYang": "Yang",
+    "summary": "The Rat is traditionally associated with quick thinking, adaptability, and resourcefulness.",
+    "meaning": "In Chinese zodiac culture, the Rat is often linked with intelligence, alertness, and the ability to find opportunity in changing situations."
+  },
+  {
+    "animal": "ox",
+    "name": "Ox",
+    "chinese": "牛",
+    "pinyin": "niu",
+    "order": 2,
+    "yinYang": "Yin",
+    "summary": "The Ox is traditionally associated with patience, reliability, and steady effort.",
+    "meaning": "In Chinese culture, the Ox is connected with farming, endurance, and practical strength."
+  },
+  {
+    "animal": "tiger",
+    "name": "Tiger",
+    "chinese": "虎",
+    "pinyin": "hu",
+    "order": 3,
+    "yinYang": "Yang",
+    "summary": "The Tiger is traditionally associated with courage, vitality, and bold movement.",
+    "meaning": "The Tiger is a powerful cultural symbol of bravery and protection in Chinese tradition."
+  },
+  {
+    "animal": "rabbit",
+    "name": "Rabbit",
+    "chinese": "兔",
+    "pinyin": "tu",
+    "order": 4,
+    "yinYang": "Yin",
+    "summary": "The Rabbit is traditionally associated with gentleness, sensitivity, and careful judgment.",
+    "meaning": "In Chinese zodiac culture, the Rabbit often represents grace, peace, and thoughtful action."
+  },
+  {
+    "animal": "dragon",
+    "name": "Dragon",
+    "chinese": "龙",
+    "pinyin": "long",
+    "order": 5,
+    "yinYang": "Yang",
+    "summary": "The Dragon is traditionally associated with strength, charisma, and auspicious energy.",
+    "meaning": "The Dragon is one of the most important Chinese cultural symbols, often linked with power, prosperity, and imperial imagery."
+  },
+  {
+    "animal": "snake",
+    "name": "Snake",
+    "chinese": "蛇",
+    "pinyin": "she",
+    "order": 6,
+    "yinYang": "Yin",
+    "summary": "The Snake is traditionally associated with wisdom, intuition, and quiet observation.",
+    "meaning": "In Chinese zodiac interpretation, the Snake often suggests insight, elegance, and strategic thinking."
+  },
+  {
+    "animal": "horse",
+    "name": "Horse",
+    "chinese": "马",
+    "pinyin": "ma",
+    "order": 7,
+    "yinYang": "Yang",
+    "summary": "The Horse is traditionally associated with energy, independence, and forward movement.",
+    "meaning": "The Horse often represents speed, freedom, endurance, and an active spirit in Chinese culture."
+  },
+  {
+    "animal": "goat",
+    "name": "Goat",
+    "chinese": "羊",
+    "pinyin": "yang",
+    "order": 8,
+    "yinYang": "Yin",
+    "summary": "The Goat is traditionally associated with harmony, creativity, and a gentle temperament.",
+    "meaning": "The Goat, also translated as Sheep or Ram, is linked with beauty, kindness, and peaceful living."
+  },
+  {
+    "animal": "monkey",
+    "name": "Monkey",
+    "chinese": "猴",
+    "pinyin": "hou",
+    "order": 9,
+    "yinYang": "Yang",
+    "summary": "The Monkey is traditionally associated with cleverness, curiosity, and playfulness.",
+    "meaning": "In Chinese stories and zodiac culture, the Monkey often represents wit, learning, and flexible problem-solving."
+  },
+  {
+    "animal": "rooster",
+    "name": "Rooster",
+    "chinese": "鸡",
+    "pinyin": "ji",
+    "order": 10,
+    "yinYang": "Yin",
+    "summary": "The Rooster is traditionally associated with confidence, punctuality, and a clear voice.",
+    "meaning": "The Rooster is connected with dawn, order, and alertness in Chinese cultural symbolism."
+  },
+  {
+    "animal": "dog",
+    "name": "Dog",
+    "chinese": "狗",
+    "pinyin": "gou",
+    "order": 11,
+    "yinYang": "Yang",
+    "summary": "The Dog is traditionally associated with loyalty, honesty, and protection.",
+    "meaning": "In Chinese zodiac culture, the Dog often represents trust, sincerity, and dependable companionship."
+  },
+  {
+    "animal": "pig",
+    "name": "Pig",
+    "chinese": "猪",
+    "pinyin": "zhu",
+    "order": 12,
+    "yinYang": "Yin",
+    "summary": "The Pig is traditionally associated with generosity, comfort, and good-natured living.",
+    "meaning": "The Pig is linked with abundance, warmth, and enjoyment of family life in Chinese tradition."
+  }
+]
+

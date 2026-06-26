@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Chinese Zodiac Guide logo</title>
+  <desc id="desc">A red seal-style zodiac wheel logo.</desc>
+  <rect width="128" height="128" rx="28" fill="#b3343a"/>
+  <circle cx="64" cy="64" r="39" fill="none" stroke="#fff7e8" stroke-width="6"/>
+  <circle cx="64" cy="64" r="17" fill="#fff7e8"/>
+  <g fill="#fff7e8" font-family="Georgia, serif" font-weight="700" font-size="10" text-anchor="middle">
+    <text x="64" y="27">Rat</text>
+    <text x="93" y="44">Ox</text>
+    <text x="100" y="75">Tiger</text>
+    <text x="64" y="107">Horse</text>
+    <text x="28" y="75">Rabbit</text>
+    <text x="35" y="44">Dragon</text>
+  </g>
+  <text x="64" y="70" text-anchor="middle" font-family="Georgia, serif" font-weight="800" font-size="18" fill="#b3343a">12</text>
+</svg>
+

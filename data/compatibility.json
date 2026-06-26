@@ -1,0 +1,29 @@
+{
+  "best": [
+    ["rat", "dragon"],
+    ["rat", "monkey"],
+    ["ox", "snake"],
+    ["ox", "rooster"],
+    ["tiger", "horse"],
+    ["tiger", "dog"],
+    ["rabbit", "goat"],
+    ["rabbit", "pig"],
+    ["dragon", "rooster"],
+    ["snake", "ox"],
+    ["horse", "tiger"],
+    ["goat", "rabbit"],
+    ["monkey", "rat"],
+    ["rooster", "dragon"],
+    ["dog", "tiger"],
+    ["pig", "rabbit"]
+  ],
+  "challenging": [
+    ["rat", "horse"],
+    ["ox", "goat"],
+    ["tiger", "monkey"],
+    ["rabbit", "rooster"],
+    ["dragon", "dog"],
+    ["snake", "pig"]
+  ]
+}
+
