@@ -9,7 +9,8 @@ const SITE = {
 };
 
 const animals = JSON.parse(await readFile("data/zodiac-animals.json", "utf8"));
-const years = JSON.parse(await readFile("data/zodiac-years.json", "utf8"));
+const seedYears = JSON.parse(await readFile("data/zodiac-years.json", "utf8"));
+const years = buildZodiacYears(1900, 2100, seedYears);
 const compatibility = JSON.parse(await readFile("data/compatibility.json", "utf8"));
 const animalBySlug = Object.fromEntries(animals.map((animal) => [animal.animal, animal]));
 
@@ -20,6 +21,46 @@ await copyFile("public/assets/logo.svg", "dist/assets/logo.svg");
 await copyFile("public/google1c43509ea14adc51.html", "dist/google1c43509ea14adc51.html");
 
 const pages = [];
+
+function buildZodiacYears(start, end, seed) {
+  const knownDates = new Map(seed.map((item) => [item.year, item.lunarNewYear]));
+  const zodiacCycle = ["rat", "ox", "tiger", "rabbit", "dragon", "snake", "horse", "goat", "monkey", "rooster", "dog", "pig"];
+  const elementCycle = ["Metal", "Metal", "Water", "Water", "Wood", "Wood", "Fire", "Fire", "Earth", "Earth"];
+  return Array.from({ length: end - start + 1 }, (_, index) => {
+    const year = start + index;
+    return {
+      year,
+      animal: zodiacCycle[mod(year - 2020, 12)],
+      element: elementCycle[mod(year - 2020, 10)],
+      lunarNewYear: knownDates.get(year) || findLunarNewYear(year)
+    };
+  });
+}
+
+function mod(value, base) {
+  return ((value % base) + base) % base;
+}
+
+function findLunarNewYear(year) {
+  const formatter = new Intl.DateTimeFormat("en-u-ca-chinese", {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+    timeZone: "UTC"
+  });
+  for (let month = 0; month <= 1; month += 1) {
+    const first = month === 0 ? 21 : 1;
+    const last = month === 0 ? 31 : 21;
+    for (let day = first; day <= last; day += 1) {
+      const date = new Date(Date.UTC(year, month, day));
+      const parts = Object.fromEntries(formatter.formatToParts(date).map((part) => [part.type, part.value]));
+      if (parts.month === "1" && parts.day === "1" && Number(parts.relatedYear) === year) {
+        return date.toISOString().slice(0, 10);
+      }
+    }
+  }
+  return `${year}-02-01`;
+}
 
 function escapeHtml(value) {
   return String(value)
@@ -116,7 +157,7 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
       <a href="/chinese-zodiac-animals/">Animals</a>
       <a href="/chinese-zodiac-elements/">Elements</a>
       <a href="/chinese-zodiac-compatibility/">Compatibility</a>
-      <a href="/year-of-the-horse-2026/">Year of the Horse</a>
+      <a href="/year-of-the-horse-2026/">2026 Horse</a>
     </nav>
   </header>
   <main>
@@ -147,14 +188,14 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
 }
 
 function adSlot(position) {
-  return `<aside class="ad-slot" data-ad-position="${position}">Ad placement reserved for display ads</aside>`;
+  return `<aside class="ad-slot" data-ad-position="${position}" aria-label="Advertisement area">Advertisement</aside>`;
 }
 
 function animalCard(animal) {
   return `<a class="animal-card" href="/chinese-zodiac/${animal.animal}/">
     <span class="animal-order">${animal.order}</span>
     <strong>${animal.name}</strong>
-    <span>${animal.chinese} · ${animal.pinyin}</span>
+    <span>${animal.chinese} &middot; ${animal.pinyin} &middot; ${animal.alsoKnownAs}</span>
     <p>${animal.summary}</p>
   </a>`;
 }
@@ -213,6 +254,23 @@ function yearsTable(items = years) {
   </table></div>`;
 }
 
+function yearSearchBlock() {
+  return `<section class="tool-panel compact-tool" id="year-search">
+    <div class="tool-copy">
+      <p class="eyebrow">Year lookup</p>
+      <h2>Look up a Chinese zodiac year</h2>
+      <p>Enter any year from 1900 to 2100 to get the zodiac animal, element, and Lunar New Year start date.</p>
+    </div>
+    <form class="calculator-form" data-year-form>
+      <label>Gregorian year
+        <input type="number" name="year" min="1900" max="2100" inputmode="numeric" placeholder="2026" required>
+      </label>
+      <button type="submit">Find year</button>
+    </form>
+    <div class="result-card" data-year-result hidden></div>
+  </section>`;
+}
+
 function standardFaqs() {
   return [
     {
@@ -248,6 +306,10 @@ await writePage("/", pageLayout({
     <section class="hero-grid">
       ${zodiacCalculatorBlock()}
       <figure class="visual-panel"><img src="/assets/zodiac-wheel.svg" alt="Chinese zodiac wheel with twelve animals"></figure>
+    </section>
+    <section class="content-section tool-strip">
+      ${yearSearchBlock()}
+      ${compatibilityBlock()}
     </section>
     ${adSlot("after-calculator")}
     <section class="content-section">
@@ -329,6 +391,7 @@ await writePage("/chinese-zodiac-years/", pageLayout({
   intro: "Use this chart to compare Gregorian years with Chinese zodiac animals, elements, and Lunar New Year start dates.",
   faqs: standardFaqs(),
   body: `
+    ${yearSearchBlock()}
     <section class="content-section">
       <h2>Chinese zodiac years</h2>
       ${yearsTable()}
@@ -493,7 +556,19 @@ for (const animal of animals) {
           <strong>${animal.name} facts</strong>
           <span>Chinese: ${animal.chinese}</span>
           <span>Pinyin: ${animal.pinyin}</span>
+          <span>Also known as: ${animal.alsoKnownAs}</span>
           <span>Yin/Yang: ${animal.yinYang}</span>
+        </div>
+      </section>
+      <section class="content-section">
+        <div class="section-heading">
+          <p class="eyebrow">Reference</p>
+          <h2>${animal.name} zodiac quick facts</h2>
+        </div>
+        <div class="fact-grid">
+          <div><strong>Lucky numbers</strong><span>${animal.luckyNumbers}</span></div>
+          <div><strong>Lucky colors</strong><span>${animal.luckyColors}</span></div>
+          <div><strong>Cycle order</strong><span>No. ${animal.order} in the 12-animal cycle</span></div>
         </div>
       </section>
       <section class="content-section">
@@ -503,6 +578,7 @@ for (const animal of animals) {
       <section class="content-section">
         <h2>Cultural meaning</h2>
         <p>${animal.meaning}</p>
+        <p>${animal.personality}</p>
         <p>These descriptions are traditional associations, not scientific personality claims.</p>
       </section>
       ${adSlot(`animal-${animal.animal}`)}
@@ -523,7 +599,7 @@ await writePage("/chinese-zodiac-faq/", pageLayout({
   body: faqBlock(standardFaqs())
 }));
 
-await writePage("/privacy/", simpleLegalPage("Privacy Policy", "This prototype uses privacy-friendly static pages. If analytics or advertising scripts are enabled later, this page should disclose the tools used and how data is processed."));
+await writePage("/privacy/", simpleLegalPage("Privacy Policy", "This site uses privacy-friendly static pages. If analytics or advertising scripts are enabled later, this page should disclose the tools used and how data is processed."));
 await writePage("/terms/", simpleLegalPage("Terms of Use", "This website provides cultural and educational information. Zodiac tools are for entertainment and cultural reference, not professional advice."));
 
 await writeStaticAssets();
@@ -551,14 +627,23 @@ function simpleLegalPage(h1, text) {
 }
 
 async function writeStaticAssets() {
-  await writeFile("dist/calculator.js", `const years=${JSON.stringify(years)};const animals=${JSON.stringify(animals)};const compatibility=${JSON.stringify(compatibility)};
-const bySlug=Object.fromEntries(animals.map(a=>[a.animal,a]));
-function findZodiac(date){const y=date.getUTCFullYear();let row=years.find(x=>x.year===y);if(!row)return null;const boundary=new Date(row.lunarNewYear+'T00:00:00Z');if(date<boundary){row=years.find(x=>x.year===y-1)||row;}return row;}
-function resultHtml(row){const a=bySlug[row.animal];return '<h3>Your Chinese zodiac sign is '+a.name+'</h3><p><strong>'+a.chinese+' · '+a.pinyin+'</strong> · '+row.element+' · '+a.yinYang+'</p><p>'+a.summary+'</p><p class="note">Lunar New Year for '+row.year+' began on '+row.lunarNewYear+'. Early-year birthdays may belong to the previous zodiac year.</p><a class="button-link" href="/chinese-zodiac/'+a.animal+'/">Read the '+a.name+' guide</a>'}
-document.querySelectorAll('[data-zodiac-form]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();const raw=new FormData(form).get('birthdate');const box=form.parentElement.querySelector('[data-zodiac-result]');if(!raw){return}const row=findZodiac(new Date(raw+'T00:00:00Z'));box.hidden=false;box.innerHTML=row?resultHtml(row):'<h3>Date outside prototype range</h3><p>This prototype currently covers 1970-2035. The production site should cover 1900-2100.</p>';}));
-function pairStatus(a,b){const same=a===b;if(same)return ['Same sign','Two people with the same zodiac animal may share similar traditional associations.'];const key=[a,b].join('|');const rev=[b,a].join('|');if(compatibility.best.some(p=>p.join('|')===key||p.join('|')===rev))return ['Traditionally harmonious','This pair is often described as harmonious in traditional zodiac compatibility.'];if(compatibility.challenging.some(p=>p.join('|')===key||p.join('|')===rev))return ['Traditionally challenging','This pair is sometimes described as needing more patience and understanding in traditional zodiac compatibility.'];return ['Balanced or neutral','This pair has a balanced traditional reading. Context and real relationships matter more than zodiac folklore.'];}
-document.querySelectorAll('[data-compat-form]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();const data=new FormData(form);const first=data.get('first');const second=data.get('second');const box=form.parentElement.querySelector('[data-compat-result]');const [label,text]=pairStatus(first,second);box.hidden=false;box.innerHTML='<h3>'+bySlug[first].name+' + '+bySlug[second].name+': '+label+'</h3><p>'+text+'</p><p class="note">For cultural reference and entertainment only.</p>';}));`, "utf8");
+  await writeFile("dist/calculator.js", clientScript(), "utf8");
   await writeFile("dist/styles.css", css(), "utf8");
+}
+
+function clientScript() {
+  return `const years=${JSON.stringify(years)};const animals=${JSON.stringify(animals)};const compatibility=${JSON.stringify(compatibility)};
+const bySlug=Object.fromEntries(animals.map(a=>[a.animal,a]));
+const byYear=Object.fromEntries(years.map(y=>[String(y.year),y]));
+function findZodiac(date){const y=date.getUTCFullYear();let row=years.find(x=>x.year===y);if(!row)return null;const boundary=new Date(row.lunarNewYear+'T00:00:00Z');if(date<boundary){row=years.find(x=>x.year===y-1)||row;}return row;}
+function animalMeta(row){return bySlug[row.animal];}
+function yearLink(year){return year>=2024&&year<=2030?'<a class="button-link secondary" href="/chinese-zodiac/'+year+'/">Open '+year+' guide</a>':''}
+function resultHtml(row){const a=animalMeta(row);return '<h3>Your Chinese zodiac sign is '+a.name+'</h3><div class="result-facts"><span><strong>Chinese</strong>'+a.chinese+' · '+a.pinyin+'</span><span><strong>Element</strong>'+row.element+'</span><span><strong>Yin/Yang</strong>'+a.yinYang+'</span><span><strong>Lunar New Year</strong>'+row.lunarNewYear+'</span></div><p>'+a.summary+'</p><p>'+a.personality+'</p><p class="note">If your birthday is before Lunar New Year, the traditional zodiac year belongs to the previous Gregorian year. This calculator already applies that boundary.</p><div class="result-actions"><a class="button-link" href="/chinese-zodiac/'+a.animal+'/">Read the '+a.name+' guide</a>'+yearLink(row.year)+'</div>'}
+document.querySelectorAll('[data-zodiac-form]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();const raw=new FormData(form).get('birthdate');const box=form.parentElement.querySelector('[data-zodiac-result]');if(!raw){return}const row=findZodiac(new Date(raw+'T00:00:00Z'));box.hidden=false;box.innerHTML=row?resultHtml(row):'<h3>Date outside supported range</h3><p>This calculator currently supports birth dates from 1900 to 2100.</p>';box.scrollIntoView({block:'nearest',behavior:'smooth'});}));
+function yearResultHtml(row){const a=animalMeta(row);return '<h3>'+row.year+' is the Year of the '+a.name+'</h3><div class="result-facts"><span><strong>Animal</strong>'+a.name+' · '+a.chinese+'</span><span><strong>Element</strong>'+row.element+'</span><span><strong>Starts</strong>'+row.lunarNewYear+'</span><span><strong>Order</strong>No. '+a.order+'</span></div><p>'+a.meaning+'</p><div class="result-actions"><a class="button-link" href="/chinese-zodiac/'+a.animal+'/">Read the '+a.name+' guide</a>'+yearLink(row.year)+'</div>'}
+document.querySelectorAll('[data-year-form]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();const year=String(new FormData(form).get('year')||'').trim();const box=form.parentElement.querySelector('[data-year-result]');const row=byYear[year];box.hidden=false;box.innerHTML=row?yearResultHtml(row):'<h3>Year outside supported range</h3><p>Enter a Gregorian year from 1900 to 2100.</p>';box.scrollIntoView({block:'nearest',behavior:'smooth'});}));
+function pairStatus(a,b){const same=a===b;if(same)return ['Same sign','Two people with the same zodiac animal may share similar traditional associations.'];const key=[a,b].join('|');const rev=[b,a].join('|');if(compatibility.best.some(p=>p.join('|')===key||p.join('|')===rev))return ['Traditionally harmonious','This pair is often described as harmonious in traditional zodiac compatibility.'];if(compatibility.challenging.some(p=>p.join('|')===key||p.join('|')===rev))return ['Traditionally challenging','This pair is sometimes described as needing more patience and understanding in traditional zodiac compatibility.'];return ['Balanced or neutral','This pair has a balanced traditional reading. Context and real relationships matter more than zodiac folklore.'];}
+document.querySelectorAll('[data-compat-form]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();const data=new FormData(form);const first=data.get('first');const second=data.get('second');const box=form.parentElement.querySelector('[data-compat-result]');const [label,text]=pairStatus(first,second);box.hidden=false;box.innerHTML='<h3>'+bySlug[first].name+' + '+bySlug[second].name+': '+label+'</h3><p>'+text+'</p><p class="note">For cultural reference and entertainment only.</p><div class="result-actions"><a class="button-link secondary" href="/chinese-zodiac/'+first+'/">First animal</a><a class="button-link secondary" href="/chinese-zodiac/'+second+'/">Second animal</a></div>';box.scrollIntoView({block:'nearest',behavior:'smooth'});}));`;
 }
 
 async function writeSitemap() {
@@ -581,5 +666,5 @@ async function writeSeoReport() {
 }
 
 function css() {
-  return `:root{--ink:#24201b;--muted:#6c665e;--paper:#f8f5ee;--panel:#fffdf8;--line:#e3d9c9;--red:#b3343a;--red-dark:#84272d;--gold:#b99455;--jade:#2f7167;--blue:#31485f;--shadow:0 14px 34px rgba(47,37,23,.09)}*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--paper);font-size:16px;line-height:1.62}a{color:inherit}.site-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:28px;padding:14px clamp(18px,4vw,52px);background:rgba(248,245,238,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:17px;font-weight:850;white-space:nowrap}.brand-logo{display:block;width:34px;height:34px;border-radius:8px;box-shadow:0 8px 18px rgba(179,52,58,.18)}.nav{display:flex;align-items:center;justify-content:flex-end;gap:18px;flex-wrap:wrap}.nav a{text-decoration:none;color:var(--muted);font-size:15px;font-weight:760;line-height:1.2;padding:4px 0}.nav a:hover{color:var(--red)}main{min-height:70vh}.page-hero{padding:38px clamp(18px,4vw,52px) 20px;max-width:1160px;margin:auto}.page-hero h1{font-family:Georgia,serif;font-size:clamp(34px,4.4vw,54px);line-height:1.08;margin:10px 0 14px;letter-spacing:0;color:#211b17}.intro{font-size:17px;max-width:760px;color:var(--muted)}.eyebrow{display:inline-flex;align-items:center;min-height:34px;padding:0 14px;border-radius:999px;background:rgba(47,113,103,.08);border:1px solid rgba(47,113,103,.18);text-transform:uppercase;letter-spacing:.05em;color:var(--jade);font-size:13px;line-height:1;font-weight:850;margin:0}.hero-grid,.content-section{max-width:1160px;margin:0 auto 24px;padding:0 clamp(18px,4vw,52px)}.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr);gap:24px;align-items:stretch}.tool-panel,.visual-panel,.content-section:not(.split),.fact-card{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:8px}.tool-panel{padding:24px;border-top:4px solid var(--red)}.tool-copy h2,.section-heading h2,.content-section h2{font-family:Georgia,serif;font-size:clamp(25px,2.7vw,30px);line-height:1.18;margin:8px 0 12px;color:#241f1a}.calculator-form{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:end;margin-top:18px}.calculator-form label{display:grid;gap:7px;font-size:15px;font-weight:750}.calculator-form input,.calculator-form select{height:44px;border:1px solid var(--line);border-radius:8px;padding:0 12px;font:inherit;background:#fff}.calculator-form button,.button-link{height:44px;display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:8px;background:var(--red);color:#fff;font-size:15px;font-weight:800;text-decoration:none;padding:0 16px;cursor:pointer}.calculator-form button:hover,.button-link:hover{background:var(--red-dark)}.result-card{margin-top:18px;padding:16px;border-left:4px solid var(--jade);background:#eff7f3;border-radius:8px}.result-card h3{margin:0 0 6px;font-size:21px}.note{color:var(--muted);font-size:14px}.visual-panel{margin:0;display:grid;place-items:center;overflow:hidden;background:#f1eadc}.visual-panel img{width:100%;height:100%;object-fit:cover}.ad-slot{max-width:1056px;margin:0 auto 24px;border:1px dashed #d2c3ae;background:#fff9ee;color:#8a7257;border-radius:8px;min-height:78px;display:grid;place-items:center;font-size:14px;font-weight:750}.section-heading{margin-bottom:16px}.fact-grid,.animal-grid,.step-grid,.element-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.element-grid{grid-template-columns:repeat(5,minmax(0,1fr))}.fact-grid div,.animal-card,.step-grid div,.element-grid div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.step-grid span{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#edf5f2;color:var(--jade);font-weight:900;margin-bottom:8px}.step-grid strong,.element-grid strong{display:block;font-size:18px}.step-grid p,.element-grid p{margin:6px 0 0;color:var(--muted);font-size:15px}.fact-grid strong,.fact-grid span{display:block}.fact-grid span,.animal-card span,.animal-card p{color:var(--muted)}.animal-card{text-decoration:none;min-height:166px;display:grid;gap:7px;position:relative}.animal-card:hover{border-color:#d2ad73;box-shadow:0 10px 24px rgba(47,37,23,.08)}.animal-card strong{font-size:21px}.animal-card p{font-size:15px;margin:0}.animal-order{position:absolute;right:14px;top:12px;color:var(--gold);font-weight:900}.split{display:grid;grid-template-columns:1fr 1fr;gap:22px}.split>div{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:8px;padding:22px}.fact-card{display:grid;gap:8px}.fact-card strong{font-size:20px}.fact-card span{display:block;color:var(--muted)}.table-wrap{overflow:auto}.content-section table{width:100%;border-collapse:collapse;background:#fff;font-size:15px}.content-section th,.content-section td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left}.content-section th{background:#f1eadc;color:#352b22}.faq-list details{border-bottom:1px solid var(--line);padding:12px 0}.faq-list summary{font-weight:800;cursor:pointer}.site-footer{margin-top:48px;padding:30px clamp(18px,4vw,52px);background:#24201b;color:#fffaf0;display:flex;justify-content:space-between;gap:28px}.site-footer p{color:#d7cbbd;max-width:680px;font-size:14px}.site-footer nav{display:flex;gap:16px;align-items:start;flex-wrap:wrap}.site-footer a{color:#fffaf0}@media(max-width:980px){.element-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:820px){body{font-size:15px}.site-header{align-items:flex-start;flex-direction:column}.nav{justify-content:flex-start;gap:14px}.nav a{font-size:14px}.hero-grid,.split{grid-template-columns:1fr}.calculator-form{grid-template-columns:1fr}.fact-grid,.animal-grid,.step-grid,.element-grid{grid-template-columns:1fr}.page-hero{padding-top:32px}.page-hero h1{font-size:34px}.intro{font-size:16px}.site-footer{flex-direction:column}}`;
+  return `:root{--ink:#24201b;--muted:#686159;--paper:#f8f5ee;--panel:#fffdf8;--line:#e3d9c9;--red:#b3343a;--red-dark:#84272d;--gold:#b99455;--jade:#2f7167;--blue:#31485f;--shadow:0 10px 28px rgba(47,37,23,.08)}*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--paper);font-size:16px;line-height:1.62}a{color:inherit}.site-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:13px clamp(18px,4vw,52px);background:rgba(248,245,238,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:17px;font-weight:850;white-space:nowrap}.brand-logo{display:block;width:34px;height:34px;border-radius:8px;box-shadow:0 8px 18px rgba(179,52,58,.18)}.nav{display:flex;align-items:center;justify-content:flex-end;gap:18px;flex-wrap:wrap}.nav a{text-decoration:none;color:#554d45;font-size:15px;font-weight:780;line-height:1.2;padding:4px 0}.nav a:hover{color:var(--red)}main{min-height:70vh}.page-hero{padding:32px clamp(18px,4vw,52px) 18px;max-width:1160px;margin:auto}.page-hero h1{font-family:Georgia,serif;font-size:clamp(32px,4vw,48px);line-height:1.1;margin:10px 0 12px;letter-spacing:0;color:#211b17}.intro{font-size:16px;max-width:760px;color:var(--muted)}.eyebrow{display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border-radius:999px;background:rgba(47,113,103,.08);border:1px solid rgba(47,113,103,.18);text-transform:uppercase;letter-spacing:.05em;color:var(--jade);font-size:12px;line-height:1;font-weight:850;margin:0}.hero-grid,.content-section{max-width:1160px;margin:0 auto 22px;padding:0 clamp(18px,4vw,52px)}.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr);gap:22px;align-items:stretch}.tool-strip{display:grid;grid-template-columns:1fr 1fr;gap:18px;background:transparent!important;border:0!important;box-shadow:none!important}.tool-panel,.visual-panel,.content-section:not(.split),.fact-card{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:8px}.tool-panel{padding:22px;border-top:4px solid var(--red)}.compact-tool{height:100%}.tool-copy h2,.section-heading h2,.content-section h2{font-family:Georgia,serif;font-size:clamp(23px,2.4vw,28px);line-height:1.18;margin:8px 0 10px;color:#241f1a}.content-section p{max-width:820px}.calculator-form{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:end;margin-top:16px}.calculator-form label{display:grid;gap:7px;font-size:14px;font-weight:750}.calculator-form input,.calculator-form select{height:43px;border:1px solid var(--line);border-radius:8px;padding:0 12px;font:inherit;background:#fff}.calculator-form button,.button-link{min-height:43px;display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:8px;background:var(--red);color:#fff;font-size:14px;font-weight:800;text-decoration:none;padding:0 15px;cursor:pointer;white-space:nowrap}.button-link.secondary{background:#f2eadf;color:#3a3028;border:1px solid #dfd1bd}.calculator-form button:hover,.button-link:hover{background:var(--red-dark);color:#fff}.result-card{margin-top:16px;padding:16px;border-left:4px solid var(--jade);background:#eff7f3;border-radius:8px}.result-card h3{margin:0 0 10px;font-size:20px}.result-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0}.result-facts span{background:#fff;border:1px solid #d8e8df;border-radius:8px;padding:10px;color:#3f564f}.result-facts strong{display:block;color:#1f332e;font-size:12px;text-transform:uppercase;letter-spacing:.04em}.result-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.note{color:var(--muted);font-size:14px}.visual-panel{margin:0;display:grid;place-items:center;overflow:hidden;background:#f1eadc}.visual-panel img{width:100%;height:100%;object-fit:cover}.ad-slot{max-width:1056px;margin:0 auto 22px;border:1px dashed #d7c8b5;background:#fffaf1;color:#8a7257;border-radius:8px;min-height:70px;display:grid;place-items:center;font-size:13px;font-weight:750}.section-heading{margin-bottom:14px}.fact-grid,.animal-grid,.step-grid,.element-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.element-grid{grid-template-columns:repeat(5,minmax(0,1fr))}.fact-grid div,.animal-card,.step-grid div,.element-grid div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.step-grid span{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#edf5f2;color:var(--jade);font-weight:900;margin-bottom:8px}.step-grid strong,.element-grid strong{display:block;font-size:17px}.step-grid p,.element-grid p{margin:6px 0 0;color:var(--muted);font-size:15px}.fact-grid strong,.fact-grid span{display:block}.fact-grid span,.animal-card span,.animal-card p{color:var(--muted)}.animal-card{text-decoration:none;min-height:168px;display:grid;gap:7px;position:relative}.animal-card:hover{border-color:#d2ad73;box-shadow:0 10px 24px rgba(47,37,23,.08)}.animal-card strong{font-size:20px}.animal-card p{font-size:15px;margin:0}.animal-order{position:absolute;right:14px;top:12px;color:var(--gold);font-weight:900}.split{display:grid;grid-template-columns:1fr 1fr;gap:22px}.split>div{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:8px;padding:22px}.fact-card{display:grid;gap:8px}.fact-card strong{font-size:20px}.fact-card span{display:block;color:var(--muted)}.table-wrap{overflow:auto}.content-section table{width:100%;border-collapse:collapse;background:#fff;font-size:15px}.content-section th,.content-section td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left}.content-section th{background:#f1eadc;color:#352b22}.faq-list details{border-bottom:1px solid var(--line);padding:12px 0}.faq-list summary{font-weight:800;cursor:pointer}.site-footer{margin-top:44px;padding:30px clamp(18px,4vw,52px);background:#24201b;color:#fffaf0;display:flex;justify-content:space-between;gap:28px}.site-footer p{color:#d7cbbd;max-width:680px;font-size:14px}.site-footer nav{display:flex;gap:16px;align-items:start;flex-wrap:wrap}.site-footer a{color:#fffaf0}@media(max-width:980px){.element-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tool-strip{grid-template-columns:1fr}}@media(max-width:820px){body{font-size:15px}.site-header{align-items:flex-start;flex-direction:column}.nav{justify-content:flex-start;gap:14px}.nav a{font-size:14px}.hero-grid,.split{grid-template-columns:1fr}.calculator-form{grid-template-columns:1fr}.fact-grid,.animal-grid,.step-grid,.element-grid,.result-facts{grid-template-columns:1fr}.page-hero{padding-top:28px}.page-hero h1{font-size:32px}.intro{font-size:16px}.site-footer{flex-direction:column}}`;
 }

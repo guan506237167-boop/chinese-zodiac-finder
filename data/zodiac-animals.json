@@ -4,120 +4,167 @@
     "name": "Rat",
     "chinese": "鼠",
     "pinyin": "shu",
+    "alsoKnownAs": "Zi Rat",
     "order": 1,
     "yinYang": "Yang",
+    "luckyNumbers": "2, 3",
+    "luckyColors": "blue, gold, green",
     "summary": "The Rat is traditionally associated with quick thinking, adaptability, and resourcefulness.",
-    "meaning": "In Chinese zodiac culture, the Rat is often linked with intelligence, alertness, and the ability to find opportunity in changing situations."
+    "meaning": "In Chinese zodiac culture, the Rat is often linked with intelligence, alertness, and the ability to find opportunity in changing situations.",
+    "personality": "Rat symbolism is commonly described as observant, practical, social, and quick to respond. These are cultural associations rather than scientific personality claims."
   },
   {
     "animal": "ox",
     "name": "Ox",
     "chinese": "牛",
     "pinyin": "niu",
+    "alsoKnownAs": "Chou Ox",
     "order": 2,
     "yinYang": "Yin",
+    "luckyNumbers": "1, 4",
+    "luckyColors": "white, yellow, green",
     "summary": "The Ox is traditionally associated with patience, reliability, and steady effort.",
-    "meaning": "In Chinese culture, the Ox is connected with farming, endurance, and practical strength."
+    "meaning": "In Chinese culture, the Ox is connected with farming, endurance, and practical strength.",
+    "personality": "Ox symbolism is often described as dependable, calm, disciplined, and persistent, with an emphasis on long-term effort."
   },
   {
     "animal": "tiger",
     "name": "Tiger",
     "chinese": "虎",
     "pinyin": "hu",
+    "alsoKnownAs": "Yin Tiger",
     "order": 3,
     "yinYang": "Yang",
+    "luckyNumbers": "1, 3, 4",
+    "luckyColors": "blue, gray, orange",
     "summary": "The Tiger is traditionally associated with courage, vitality, and bold movement.",
-    "meaning": "The Tiger is a powerful cultural symbol of bravery and protection in Chinese tradition."
+    "meaning": "The Tiger is a powerful cultural symbol of bravery and protection in Chinese tradition.",
+    "personality": "Tiger symbolism is often read as energetic, direct, protective, and willing to take action when the moment calls for it."
   },
   {
     "animal": "rabbit",
     "name": "Rabbit",
     "chinese": "兔",
     "pinyin": "tu",
+    "alsoKnownAs": "Mao Rabbit",
     "order": 4,
     "yinYang": "Yin",
+    "luckyNumbers": "3, 4, 6",
+    "luckyColors": "pink, red, purple, blue",
     "summary": "The Rabbit is traditionally associated with gentleness, sensitivity, and careful judgment.",
-    "meaning": "In Chinese zodiac culture, the Rabbit often represents grace, peace, and thoughtful action."
+    "meaning": "In Chinese zodiac culture, the Rabbit often represents grace, peace, and thoughtful action.",
+    "personality": "Rabbit symbolism is commonly described as considerate, diplomatic, artistic, and attentive to atmosphere."
   },
   {
     "animal": "dragon",
     "name": "Dragon",
     "chinese": "龙",
     "pinyin": "long",
+    "alsoKnownAs": "Chen Dragon",
     "order": 5,
     "yinYang": "Yang",
+    "luckyNumbers": "1, 6, 7",
+    "luckyColors": "gold, silver, gray",
     "summary": "The Dragon is traditionally associated with strength, charisma, and auspicious energy.",
-    "meaning": "The Dragon is one of the most important Chinese cultural symbols, often linked with power, prosperity, and imperial imagery."
+    "meaning": "The Dragon is one of the most important Chinese cultural symbols, often linked with power, prosperity, and imperial imagery.",
+    "personality": "Dragon symbolism is often described as confident, ambitious, expressive, and strongly associated with auspicious momentum."
   },
   {
     "animal": "snake",
     "name": "Snake",
     "chinese": "蛇",
     "pinyin": "she",
+    "alsoKnownAs": "Si Snake",
     "order": 6,
     "yinYang": "Yin",
+    "luckyNumbers": "2, 8, 9",
+    "luckyColors": "black, red, yellow",
     "summary": "The Snake is traditionally associated with wisdom, intuition, and quiet observation.",
-    "meaning": "In Chinese zodiac interpretation, the Snake often suggests insight, elegance, and strategic thinking."
+    "meaning": "In Chinese zodiac interpretation, the Snake often suggests insight, elegance, and strategic thinking.",
+    "personality": "Snake symbolism is commonly read as thoughtful, private, analytical, and patient before making decisions."
   },
   {
     "animal": "horse",
     "name": "Horse",
     "chinese": "马",
     "pinyin": "ma",
+    "alsoKnownAs": "Wu Horse",
     "order": 7,
     "yinYang": "Yang",
+    "luckyNumbers": "2, 3, 7",
+    "luckyColors": "green, red, purple",
     "summary": "The Horse is traditionally associated with energy, independence, and forward movement.",
-    "meaning": "The Horse often represents speed, freedom, endurance, and an active spirit in Chinese culture."
+    "meaning": "The Horse often represents speed, freedom, endurance, and an active spirit in Chinese culture.",
+    "personality": "Horse symbolism is often described as lively, open, independent, and motivated by movement and new experiences."
   },
   {
     "animal": "goat",
     "name": "Goat",
     "chinese": "羊",
     "pinyin": "yang",
+    "alsoKnownAs": "Sheep or Ram",
     "order": 8,
     "yinYang": "Yin",
+    "luckyNumbers": "2, 7",
+    "luckyColors": "brown, red, purple",
     "summary": "The Goat is traditionally associated with harmony, creativity, and a gentle temperament.",
-    "meaning": "The Goat, also translated as Sheep or Ram, is linked with beauty, kindness, and peaceful living."
+    "meaning": "The Goat, also translated as Sheep or Ram, is linked with beauty, kindness, and peaceful living.",
+    "personality": "Goat symbolism is commonly described as gentle, imaginative, cooperative, and appreciative of beauty and comfort."
   },
   {
     "animal": "monkey",
     "name": "Monkey",
     "chinese": "猴",
     "pinyin": "hou",
+    "alsoKnownAs": "Shen Monkey",
     "order": 9,
     "yinYang": "Yang",
+    "luckyNumbers": "4, 9",
+    "luckyColors": "white, blue, gold",
     "summary": "The Monkey is traditionally associated with cleverness, curiosity, and playfulness.",
-    "meaning": "In Chinese stories and zodiac culture, the Monkey often represents wit, learning, and flexible problem-solving."
+    "meaning": "In Chinese stories and zodiac culture, the Monkey often represents wit, learning, and flexible problem-solving.",
+    "personality": "Monkey symbolism is often read as curious, inventive, humorous, and quick to test new possibilities."
   },
   {
     "animal": "rooster",
     "name": "Rooster",
     "chinese": "鸡",
     "pinyin": "ji",
+    "alsoKnownAs": "You Rooster",
     "order": 10,
     "yinYang": "Yin",
+    "luckyNumbers": "5, 7, 8",
+    "luckyColors": "gold, brown, yellow",
     "summary": "The Rooster is traditionally associated with confidence, punctuality, and a clear voice.",
-    "meaning": "The Rooster is connected with dawn, order, and alertness in Chinese cultural symbolism."
+    "meaning": "The Rooster is connected with dawn, order, and alertness in Chinese cultural symbolism.",
+    "personality": "Rooster symbolism is commonly described as organized, direct, observant, and proud of doing things properly."
   },
   {
     "animal": "dog",
     "name": "Dog",
     "chinese": "狗",
     "pinyin": "gou",
+    "alsoKnownAs": "Xu Dog",
     "order": 11,
     "yinYang": "Yang",
+    "luckyNumbers": "3, 4, 9",
+    "luckyColors": "red, green, purple",
     "summary": "The Dog is traditionally associated with loyalty, honesty, and protection.",
-    "meaning": "In Chinese zodiac culture, the Dog often represents trust, sincerity, and dependable companionship."
+    "meaning": "In Chinese zodiac culture, the Dog often represents trust, sincerity, and dependable companionship.",
+    "personality": "Dog symbolism is often described as loyal, cautious, fair-minded, and protective of people and principles."
   },
   {
     "animal": "pig",
     "name": "Pig",
     "chinese": "猪",
     "pinyin": "zhu",
+    "alsoKnownAs": "Hai Pig",
     "order": 12,
     "yinYang": "Yin",
+    "luckyNumbers": "2, 5, 8",
+    "luckyColors": "yellow, gray, brown, gold",
     "summary": "The Pig is traditionally associated with generosity, comfort, and good-natured living.",
-    "meaning": "The Pig is linked with abundance, warmth, and enjoyment of family life in Chinese tradition."
+    "meaning": "The Pig is linked with abundance, warmth, and enjoyment of family life in Chinese tradition.",
+    "personality": "Pig symbolism is commonly described as warm, sincere, patient, and appreciative of simple pleasures."
   }
 ]
-
