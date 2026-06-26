@@ -6,7 +6,7 @@ const SITE = {
   name: "Chinese Zodiac Guide",
   url: "https://www.chinesezodiacfinder.com",
   description: "Find your Chinese zodiac sign, zodiac year, animal meaning, and traditional compatibility with a fast cultural reference tool.",
-  assetVersion: "20260626-4"
+  assetVersion: "20260626-5"
 };
 
 const animals = JSON.parse(await readFile("data/zodiac-animals.json", "utf8"));
@@ -46,6 +46,44 @@ await copyFile("public/assets/logo.svg", "dist/assets/logo.svg");
 await copyFile("public/google1c43509ea14adc51.html", "dist/google1c43509ea14adc51.html");
 
 const pages = [];
+const guides = [
+  {
+    title: "Year of the Horse 2026",
+    path: "/year-of-the-horse-2026/",
+    category: "Year Guides",
+    description: "Dates, Fire element, and traditional meaning for the 2026 Horse year."
+  },
+  {
+    title: "Chinese Zodiac Years Chart",
+    path: "/chinese-zodiac-years/",
+    category: "Year Guides",
+    description: "Browse zodiac years, animals, elements, and Lunar New Year start dates."
+  },
+  {
+    title: "Chinese Zodiac Animals in Order",
+    path: "/chinese-zodiac-animals/",
+    category: "Animal Guides",
+    description: "Learn the twelve animals in order with short cultural meanings."
+  },
+  {
+    title: "Chinese Zodiac Elements",
+    path: "/chinese-zodiac-elements/",
+    category: "Element Guides",
+    description: "Understand Wood, Fire, Earth, Metal, and Water in zodiac years."
+  },
+  {
+    title: "Chinese Zodiac Compatibility",
+    path: "/chinese-zodiac-compatibility/",
+    category: "Compatibility Guides",
+    description: "Start with pair matching and traditional compatibility notes."
+  },
+  {
+    title: "Horse Chinese Zodiac",
+    path: "/chinese-zodiac/horse/",
+    category: "Animal Guides",
+    description: "Horse years, meaning, personality associations, and cultural notes."
+  }
+];
 
 function buildZodiacYears(start, end, seed) {
   const knownDates = new Map(seed.map((item) => [item.year, item.lunarNewYear]));
@@ -248,7 +286,7 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
   <link rel="stylesheet" href="/styles.css?v=${SITE.assetVersion}">
   ${schema}
 </head>
-<body>
+<body class="${pageClass(path)}">
   <header class="site-header">
     <a class="brand" href="/" aria-label="${SITE.name} home"><img class="brand-logo" src="/assets/logo.svg" alt="">${SITE.name}</a>
     <nav class="nav" aria-label="Main navigation">
@@ -256,6 +294,7 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
       <a href="/chinese-zodiac-calculator/">Calculator</a>
       <a href="/chinese-zodiac-years/">Years</a>
       <a href="/chinese-zodiac-animals/">Animals</a>
+      <a href="/guides/">Guides</a>
       <a href="/chinese-zodiac-elements/">Elements</a>
       <a href="/chinese-zodiac-compatibility/">Zodiac Match</a>
     </nav>
@@ -305,6 +344,11 @@ function adSlot(position) {
   return `<aside class="ad-slot" data-ad-position="${position}" aria-label="Advertisement area">Advertisement</aside>`;
 }
 
+function pageClass(path) {
+  if (path === "/") return "page-home";
+  return `page-${path.replace(/^\/|\/$/g, "").replace(/[^a-z0-9]+/gi, "-").toLowerCase()}`;
+}
+
 function animalCard(animal) {
   return `<a class="animal-card" href="/chinese-zodiac/${animal.animal}/">
     <span class="animal-order">${animal.order}</span>
@@ -312,6 +356,35 @@ function animalCard(animal) {
     <span>${animal.chinese} &middot; ${animal.pinyin} &middot; ${animal.alsoKnownAs}</span>
     <p>${animal.summary}</p>
   </a>`;
+}
+
+function guideCard(guide) {
+  return `<a class="guide-card" href="${guide.path}">
+    <span>${escapeHtml(guide.category)}</span>
+    <strong>${escapeHtml(guide.title)}</strong>
+    <p>${escapeHtml(guide.description)}</p>
+  </a>`;
+}
+
+function latestGuidesBlock(items = guides.slice(0, 6)) {
+  return `<section class="content-section latest-guides">
+    <div class="section-heading">
+      <p class="eyebrow">Latest Guides</p>
+      <h2>Latest Chinese zodiac guides</h2>
+    </div>
+    <div class="guide-grid">${items.map(guideCard).join("")}</div>
+    <div class="section-action"><a class="button-link secondary" href="/guides/">Browse all guides</a></div>
+  </section>`;
+}
+
+function relatedGuidesBlock(title, items) {
+  return `<section class="content-section related-guides">
+    <div class="section-heading">
+      <p class="eyebrow">Related Guides</p>
+      <h2>${escapeHtml(title)}</h2>
+    </div>
+    <div class="guide-grid compact">${items.map(guideCard).join("")}</div>
+  </section>`;
 }
 
 async function writePage(path, html) {
@@ -455,6 +528,7 @@ await writePage("/", pageLayout({
       </div>
       <div class="animal-grid">${animals.map(animalCard).join("")}</div>
     </section>
+    ${latestGuidesBlock()}
     ${adSlot("mid-home")}
     <section class="content-section split">
       <div>
@@ -472,13 +546,47 @@ await writePage("/", pageLayout({
     </section>`
 }));
 
+await writePage("/guides/", pageLayout({
+  title: "Chinese Zodiac Guides: Years, Animals, Elements, and Compatibility",
+  description: "Browse Chinese zodiac guides about zodiac years, animals, elements, compatibility, and traditional meanings.",
+  path: "/guides/",
+  h1: "Chinese Zodiac Guides",
+  intro: "Browse the full guide library for Chinese zodiac years, animals, elements, and compatibility topics.",
+  body: `
+    ${articleSearchBlock()}
+    <section class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">Guide Library</p>
+        <h2>All Chinese zodiac guides</h2>
+      </div>
+      <div class="guide-grid">${guides.map(guideCard).join("")}</div>
+    </section>
+    <section class="content-section guide-next">
+      <div>
+        <p class="eyebrow">Start Here</p>
+        <h2>Not sure where to begin?</h2>
+        <p>Use the calculator first, then open the years chart, animal guide, and elements guide for context.</p>
+      </div>
+      <a class="button-link" href="/chinese-zodiac-calculator/">Open calculator</a>
+    </section>`
+}));
+
 await writePage("/chinese-zodiac-calculator/", pageLayout({
   title: "Chinese Zodiac Calculator: Find Your Zodiac Animal by Birth Date",
   description: "Find your Chinese zodiac sign by birth date with a calculator that respects Lunar New Year boundaries.",
   path: "/chinese-zodiac-calculator/",
   h1: "Chinese Zodiac Calculator",
   intro: "Use your birth date to find your Chinese zodiac animal, element, and Lunar New Year boundary note.",
-  faqs: standardFaqs(),
+  faqs: [
+    {
+      q: "Why does the calculator ask for a full birth date?",
+      a: "The full birth date is needed because Chinese zodiac years start at Lunar New Year, not January 1."
+    },
+    {
+      q: "Can early January or February birthdays use the previous zodiac sign?",
+      a: "Yes. If the birthday is before Lunar New Year, the traditional zodiac sign belongs to the previous zodiac year."
+    }
+  ],
   extraSchema: jsonLd({
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -494,7 +602,10 @@ await writePage("/chinese-zodiac-calculator/", pageLayout({
       <p>The Chinese zodiac is tied to the Lunar New Year, not January 1. If your birthday is before Lunar New Year in your birth year, the calculator uses the previous zodiac year.</p>
       ${yearsTable(years.slice(-16))}
     </section>
-    ${faqBlock(standardFaqs())}`
+    ${faqBlock([
+      { q: "Why does the calculator ask for a full birth date?", a: "The full birth date is needed because Chinese zodiac years start at Lunar New Year, not January 1." },
+      { q: "Can early January or February birthdays use the previous zodiac sign?", a: "Yes. If the birthday is before Lunar New Year, the traditional zodiac sign belongs to the previous zodiac year." }
+    ])}`
 }));
 
 await writePage("/chinese-zodiac-years/", pageLayout({
@@ -503,14 +614,26 @@ await writePage("/chinese-zodiac-years/", pageLayout({
   path: "/chinese-zodiac-years/",
   h1: "Chinese Zodiac Years Chart",
   intro: "Use this chart to compare Gregorian years with Chinese zodiac animals, elements, and Lunar New Year start dates.",
-  faqs: standardFaqs(),
+  faqs: [
+    {
+      q: "Does each Chinese zodiac year start on January 1?",
+      a: "No. Each zodiac year starts at Lunar New Year, so the start date changes by Gregorian year."
+    },
+    {
+      q: "What does the element column mean?",
+      a: "The element column shows the traditional five-element cycle paired with each zodiac animal year."
+    }
+  ],
   body: `
     <section class="tool-page">${yearSearchBlock()}</section>
     <section class="content-section">
       <h2>Chinese zodiac years</h2>
       ${yearsTable()}
     </section>
-    ${faqBlock(standardFaqs())}`
+    ${faqBlock([
+      { q: "Does each Chinese zodiac year start on January 1?", a: "No. Each zodiac year starts at Lunar New Year, so the start date changes by Gregorian year." },
+      { q: "What does the element column mean?", a: "The element column shows the traditional five-element cycle paired with each zodiac animal year." }
+    ])}`
 }));
 
 await writePage("/chinese-zodiac-animals/", pageLayout({
@@ -533,8 +656,7 @@ await writePage("/chinese-zodiac-elements/", pageLayout({
   intro: "Chinese zodiac years combine the twelve animals with the five elements: Wood, Fire, Earth, Metal, and Water.",
   faqs: [
     { q: "What are the five Chinese zodiac elements?", a: "The five elements are Wood, Fire, Earth, Metal, and Water. They rotate through zodiac years." },
-    { q: "What does Fire Horse mean?", a: "Fire Horse combines the Horse zodiac animal with the Fire element, a traditional pairing associated with energy and movement." },
-    ...standardFaqs().slice(0, 2)
+    { q: "What does Fire Horse mean?", a: "Fire Horse combines the Horse zodiac animal with the Fire element, a traditional pairing associated with energy and movement." }
   ],
   body: `
     <section class="tool-page">${yearSearchBlock()}</section>
@@ -574,8 +696,7 @@ await writePage("/year-of-the-horse-2026/", pageLayout({
   intro: "2026 is traditionally the Year of the Horse, beginning on February 17, 2026 and associated with the Fire element.",
   faqs: [
     { q: "When does the Year of the Horse 2026 start?", a: "It starts on February 17, 2026, the Lunar New Year date for that year." },
-    { q: "What element is the 2026 Horse year?", a: "2026 is traditionally associated with the Fire element." },
-    ...standardFaqs().slice(1)
+    { q: "What element is the 2026 Horse year?", a: "2026 is traditionally associated with the Fire element." }
   ],
   body: `
     <section class="content-section split">
@@ -607,7 +728,16 @@ await writePage("/chinese-zodiac-compatibility/", pageLayout({
   path: "/chinese-zodiac-compatibility/",
   h1: "Chinese Zodiac Compatibility",
   intro: "Choose two zodiac animals to see a traditional compatibility note. This is a cultural reference, not relationship advice.",
-  faqs: standardFaqs(),
+  faqs: [
+    {
+      q: "What does the compatibility checker compare?",
+      a: "It compares two zodiac animals across traditional love, friendship, and work symbolism."
+    },
+    {
+      q: "Is the compatibility score scientific?",
+      a: "No. The score is a cultural and entertainment reference, not relationship advice."
+    }
+  ],
   body: `
     <section class="tool-page">${compatibilityBlock()}</section>
     <section class="content-section">
@@ -626,7 +756,10 @@ await writePage("/chinese-zodiac-compatibility/", pageLayout({
       <h2>How to read zodiac compatibility</h2>
       <p>Chinese zodiac compatibility is traditionally explained through animal relationships, element cycles, and cultural symbolism. It should be read as folklore and entertainment, not as relationship advice.</p>
     </section>
-    ${faqBlock(standardFaqs())}`
+    ${faqBlock([
+      { q: "What does the compatibility checker compare?", a: "It compares two zodiac animals across traditional love, friendship, and work symbolism." },
+      { q: "Is the compatibility score scientific?", a: "No. The score is a cultural and entertainment reference, not relationship advice." }
+    ])}`
 }));
 
 for (const pair of allCompatibilityPairs()) {
@@ -641,8 +774,7 @@ for (const pair of allCompatibilityPairs()) {
     intro: `${pair.summary} This guide explains the pair as a cultural reference, not as relationship advice.`,
     faqs: [
       { q: `Are ${firstAnimal.name} and ${secondAnimal.name} compatible in Chinese zodiac?`, a: pair.summary },
-      { q: `What is the match score for ${firstAnimal.name} and ${secondAnimal.name}?`, a: `This cultural reference gives the pair a ${pair.score}/100 symbolic match score.` },
-      ...standardFaqs().slice(1)
+      { q: `What is the match score for ${firstAnimal.name} and ${secondAnimal.name}?`, a: `This cultural reference gives the pair a ${pair.score}/100 symbolic match score.` }
     ],
     body: `
       ${articleSearchBlock()}
@@ -683,6 +815,11 @@ for (const pair of allCompatibilityPairs()) {
           <a class="button-link secondary" href="/chinese-zodiac/${secondAnimal.animal}/">Open ${secondAnimal.name} guide</a>
         </div>
       </section>
+      ${relatedGuidesBlock("Compatibility guides", [
+        guides.find((guide) => guide.path === "/chinese-zodiac-compatibility/"),
+        { title: `${firstAnimal.name} Chinese Zodiac`, path: `/chinese-zodiac/${firstAnimal.animal}/`, category: "Animal Guides", description: `${firstAnimal.name} years, meaning, and cultural associations.` },
+        { title: `${secondAnimal.name} Chinese Zodiac`, path: `/chinese-zodiac/${secondAnimal.animal}/`, category: "Animal Guides", description: `${secondAnimal.name} years, meaning, and cultural associations.` }
+      ].filter(Boolean))}
       ${faqBlock([
         { q: `Are ${firstAnimal.name} and ${secondAnimal.name} compatible?`, a: pair.summary },
         { q: "Is zodiac compatibility scientific?", a: "No. It is a traditional cultural interpretation for reference and entertainment." }
@@ -700,8 +837,7 @@ for (const item of years.filter((row) => row.year >= 2024 && row.year <= 2030)) 
     intro: `${item.year} is traditionally the Year of the ${animal.name}, beginning on ${item.lunarNewYear}.`,
     faqs: [
       { q: `What is the Chinese zodiac for ${item.year}?`, a: `${item.year} is the Year of the ${animal.name} in the Chinese zodiac.` },
-      { q: `When does the ${item.year} Chinese zodiac year start?`, a: `It starts on ${item.lunarNewYear}, the Lunar New Year date for ${item.year}.` },
-      ...standardFaqs().slice(0, 2)
+      { q: `When does the ${item.year} Chinese zodiac year start?`, a: `It starts on ${item.lunarNewYear}, the Lunar New Year date for ${item.year}.` }
     ],
     body: `
       ${articleSearchBlock()}
@@ -723,6 +859,11 @@ for (const item of years.filter((row) => row.year >= 2024 && row.year <= 2030)) 
         <p>${animal.meaning}</p>
         <p>The ${item.element} element adds another layer of traditional interpretation. These associations are cultural references, not predictions.</p>
       </section>
+      ${relatedGuidesBlock("Related zodiac guides", [
+        { title: `${animal.name} Chinese Zodiac`, path: `/chinese-zodiac/${animal.animal}/`, category: "Animal Guides", description: `${animal.name} years, meaning, and cultural associations.` },
+        guides.find((guide) => guide.path === "/chinese-zodiac-years/"),
+        guides.find((guide) => guide.path === "/chinese-zodiac-elements/")
+      ].filter(Boolean))}
       ${faqBlock([
         { q: `What is the Chinese zodiac for ${item.year}?`, a: `${item.year} is the Year of the ${animal.name}.` },
         { q: `Does ${item.year} start as a zodiac year on January 1?`, a: `No. It starts on ${item.lunarNewYear}, the Lunar New Year date.` }
@@ -740,8 +881,7 @@ for (const animal of animals) {
     intro: `${animal.summary} This guide explains years, cultural meaning, and traditional associations.`,
     faqs: [
       { q: `What years are the ${animal.name} zodiac?`, a: `${animal.name} years repeat every 12 years. Use the years table on this page and check Lunar New Year boundaries for early-year birthdays.` },
-      { q: `What does the ${animal.name} mean in Chinese zodiac culture?`, a: animal.meaning },
-      ...standardFaqs().slice(0, 2)
+      { q: `What does the ${animal.name} mean in Chinese zodiac culture?`, a: animal.meaning }
     ],
     body: `
       ${articleSearchBlock()}
@@ -779,6 +919,11 @@ for (const animal of animals) {
         <p>${animal.personality}</p>
         <p>These descriptions are traditional associations, not scientific personality claims.</p>
       </section>
+      ${relatedGuidesBlock("Related zodiac guides", [
+        guides.find((guide) => guide.path === "/chinese-zodiac-animals/"),
+        guides.find((guide) => guide.path === "/chinese-zodiac-years/"),
+        guides.find((guide) => guide.path === "/chinese-zodiac-compatibility/")
+      ].filter(Boolean))}
       ${adSlot(`animal-${animal.animal}`)}
       ${faqBlock([
         { q: `What years are the ${animal.name} zodiac?`, a: `${animal.name} years repeat every 12 years. Check Lunar New Year boundaries for early-year birthdays.` },
@@ -794,7 +939,7 @@ await writePage("/chinese-zodiac-faq/", pageLayout({
   h1: "Chinese Zodiac FAQ",
   intro: "Clear answers to common Chinese zodiac questions.",
   faqs: standardFaqs(),
-  body: faqBlock(standardFaqs())
+  body: `${articleSearchBlock()}${faqBlock(standardFaqs())}`
 }));
 
 await writePage("/privacy/", simpleLegalPage("Privacy Policy", "This site uses privacy-friendly static pages. If analytics or advertising scripts are enabled later, this page should disclose the tools used and how data is processed."));
@@ -806,17 +951,61 @@ await writeRobots();
 await writeSeoReport();
 
 function faqBlock(faqs) {
+  const groups = faqGroups(faqs);
   return `<section class="content-section faq-list">
     <h2>FAQ</h2>
-    <div class="faq-grid">${faqs.map((faq) => `<article class="faq-item"><h3>${escapeHtml(faq.q)}</h3><p>${escapeHtml(faq.a)}</p></article>`).join("")}</div>
+    <div class="faq-layout" data-faq-layout>
+      <aside class="faq-sidebar" aria-label="FAQ categories">
+        ${groups.map((group, index) => `<section class="faq-menu-group${index === 0 ? " is-open" : ""}">
+          <button type="button" class="faq-menu-head" data-faq-toggle aria-expanded="${index === 0 ? "true" : "false"}">
+            <span>${escapeHtml(group.title)}</span>
+            <span class="faq-arrow" aria-hidden="true">⌄</span>
+          </button>
+          <div class="faq-menu-list" data-faq-panel>
+            ${group.items.map((faq, itemIndex) => `<a href="#faq-${index}-${itemIndex}">${escapeHtml(faq.q)}</a>`).join("")}
+          </div>
+        </section>`).join("")}
+      </aside>
+      <div class="faq-content">
+        ${groups.map((group, index) => `<section class="faq-content-group">
+          <div class="section-heading">
+            <p class="eyebrow">${escapeHtml(group.title)}</p>
+            <h3>${escapeHtml(group.title)}</h3>
+          </div>
+          <div class="faq-card-grid">${group.items.map((faq, itemIndex) => `<article class="faq-answer-card" id="faq-${index}-${itemIndex}"><h4>${escapeHtml(faq.q)}</h4><p>${escapeHtml(faq.a)}</p></article>`).join("")}</div>
+        </section>`).join("")}
+      </div>
+    </div>
   </section>`;
+}
+
+function faqGroups(faqs) {
+  const groups = [
+    { title: "Years and Lunar New Year", items: [] },
+    { title: "Animals and Meanings", items: [] },
+    { title: "Compatibility", items: [] },
+    { title: "Using This Guide", items: [] }
+  ];
+  for (const faq of faqs) {
+    const text = `${faq.q} ${faq.a}`.toLowerCase();
+    if (text.includes("compatib") || text.includes("match") || text.includes("relationship")) {
+      groups[2].items.push(faq);
+    } else if (text.includes("animal") || text.includes("mean") || text.includes("personality") || text.includes("zodiac?")) {
+      groups[1].items.push(faq);
+    } else if (text.includes("year") || text.includes("lunar") || text.includes("january") || text.includes("birthday")) {
+      groups[0].items.push(faq);
+    } else {
+      groups[3].items.push(faq);
+    }
+  }
+  return groups.filter((group) => group.items.length);
 }
 
 function articleSearchBlock() {
   return `<section class="content-section article-search">
     <div>
-      <p class="eyebrow">Search this guide</p>
-      <h2>Find a zodiac year, animal, or match</h2>
+      <p class="eyebrow">Search Guides</p>
+      <h2>Find a zodiac year, animal, match, or guide</h2>
     </div>
     <form class="site-search-form" data-site-search>
       <label>Search
@@ -860,6 +1049,8 @@ document.querySelectorAll('[data-year-form]').forEach(form=>form.addEventListene
 function pairDetails(first,second){return byPair[[first,second].sort().join('|')]}
 function searchTarget(raw){const q=String(raw||'').trim().toLowerCase();if(!q)return '/chinese-zodiac-animals/';const year=(q.match(/\\b(19\\d{2}|20\\d{2}|2100)\\b/)||[])[1];if(year&&byYear[year])return Number(year)>=2024&&Number(year)<=2030?'/chinese-zodiac/'+year+'/':'/chinese-zodiac-years/';const found=[];for(const item of searchAliases){if(item.term&&q.includes(item.term)&&!found.includes(item.slug)){found.push(item.slug)}}if(found.length>=2){const pair=pairDetails(found[0],found[1]);return '/chinese-zodiac-compatibility/'+pair.first+'-and-'+pair.second+'-compatibility/'}if(found.length===1)return '/chinese-zodiac/'+found[0]+'/';if(q.includes('compat')||q.includes('match')||q.includes('love'))return '/chinese-zodiac-compatibility/';if(q.includes('element'))return '/chinese-zodiac-elements/';if(q.includes('year'))return '/chinese-zodiac-years/';return '/chinese-zodiac-animals/'}
 document.querySelectorAll('[data-site-search]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();location.href=searchTarget(new FormData(form).get('q'));}));
+document.querySelectorAll('[data-faq-toggle]').forEach(button=>button.addEventListener('click',()=>{const group=button.closest('.faq-menu-group');const panel=group.querySelector('[data-faq-panel]');const open=group.classList.toggle('is-open');button.setAttribute('aria-expanded',String(open));panel.style.maxHeight=open?panel.scrollHeight+'px':'0px';}));
+document.querySelectorAll('.faq-menu-group.is-open [data-faq-panel]').forEach(panel=>{panel.style.maxHeight=panel.scrollHeight+'px';});
 document.querySelectorAll('[data-compat-form]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();const data=new FormData(form);const first=data.get('first');const second=data.get('second');const box=form.parentElement.querySelector('[data-compat-result]');const pair=pairDetails(first,second);const slug=pair.first+'-and-'+pair.second+'-compatibility';box.hidden=false;box.innerHTML='<h3>'+bySlug[first].name+' + '+bySlug[second].name+': '+pair.level+'</h3><div class="result-facts"><span><strong>Overall</strong>'+pair.score+'/100</span><span><strong>Love</strong>'+pair.love+'/100</span><span><strong>Friendship</strong>'+pair.friendship+'/100</span><span><strong>Work</strong>'+pair.work+'/100</span></div><p>'+pair.summary+'</p><p class="note">For cultural reference and entertainment only.</p><div class="result-actions"><a class="button-link" href="/chinese-zodiac-compatibility/'+slug+'/">Open full match guide</a><a class="button-link secondary" href="/chinese-zodiac/'+first+'/">First animal</a><a class="button-link secondary" href="/chinese-zodiac/'+second+'/">Second animal</a></div>';box.scrollIntoView({block:'nearest',behavior:'smooth'});}));`;
 }
 
@@ -883,7 +1074,7 @@ async function writeSeoReport() {
 }
 
 function css() {
-  return compactCss() + detailCss();
+  return compactCss() + detailCss() + faqHelpCss() + guideCss() + polishCss();
 }
 
 function compactCss() {
@@ -891,5 +1082,17 @@ function compactCss() {
 }
 
 function detailCss() {
-  return `.site-footer{display:grid;grid-template-columns:minmax(260px,1.15fr) minmax(420px,.85fr);align-items:start;padding-top:34px;padding-bottom:34px}.footer-about strong{display:block;font-size:18px;margin-bottom:10px}.footer-about p{margin:0;line-height:1.72}.footer-nav{display:grid!important;grid-template-columns:repeat(3,minmax(110px,1fr));gap:24px!important;align-items:start!important}.footer-nav div{display:grid;gap:8px}.footer-nav span{color:#bfae98;font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.06em}.footer-nav a{text-decoration:none;font-size:14px}.footer-nav a:hover{text-decoration:underline}.faq-list h2{margin-bottom:18px}.faq-grid{display:grid;gap:0;border-top:1px solid var(--line)}.faq-item{display:grid;grid-template-columns:minmax(240px,.42fr) minmax(0,.58fr);gap:28px;padding:20px 0;border-bottom:1px solid var(--line)}.faq-item h3{margin:0;font-size:17px;line-height:1.35}.faq-item p{margin:0;color:var(--muted);max-width:none}.article-search{display:grid;grid-template-columns:minmax(260px,.9fr) minmax(300px,1.1fr);gap:22px;align-items:end}.article-search h2{margin-bottom:0}.site-search-form{display:grid;grid-template-columns:minmax(220px,1fr) auto;gap:12px;align-items:end}.site-search-form label{display:grid;gap:7px;font-size:14px;font-weight:750}.site-search-form input{height:43px;border:1px solid var(--line);border-radius:8px;padding:0 12px;font:inherit;background:#fff;width:100%;min-width:0}.site-search-form button{min-height:43px;display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:8px;background:var(--jade);color:#fff;font-size:14px;font-weight:800;padding:0 16px;cursor:pointer;white-space:nowrap}.site-search-form button:hover{background:#24594f}@media(max-width:820px){.site-footer{grid-template-columns:1fr}.footer-nav{grid-template-columns:1fr 1fr!important}.faq-item{grid-template-columns:1fr;gap:8px}.article-search,.site-search-form{grid-template-columns:1fr}}`;
+  return `.site-footer{display:grid;grid-template-columns:minmax(260px,1.15fr) minmax(420px,.85fr);align-items:start;padding-top:34px;padding-bottom:34px}.footer-about strong{display:block;font-size:18px;margin-bottom:10px}.footer-about p{margin:0;line-height:1.72}.footer-nav{display:grid!important;grid-template-columns:repeat(3,minmax(110px,1fr));gap:24px!important;align-items:start!important}.footer-nav div{display:grid;gap:8px}.footer-nav span{color:#bfae98;font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.06em}.footer-nav a{text-decoration:none;font-size:14px}.footer-nav a:hover{text-decoration:underline}.page-chinese-zodiac-calculator{--tool-bg:#fff7ec;--tool-line:#ead2ae;--tool-accent:#b85b2a}.page-chinese-zodiac-years{--tool-bg:#eef7f4;--tool-line:#c7ded6;--tool-accent:#2f7167}.page-chinese-zodiac-elements{--tool-bg:#f3f0fb;--tool-line:#d8d0eb;--tool-accent:#69549a}.page-chinese-zodiac-compatibility{--tool-bg:#fff1f3;--tool-line:#eccbd1;--tool-accent:#b33458}.page-year-of-the-horse-2026{--tool-bg:#f5f6ea;--tool-line:#d9ddba;--tool-accent:#7a7835}body[class*="page-chinese-zodiac-"] .tool-page .tool-panel,.page-year-of-the-horse-2026 .tool-page .tool-panel{background:var(--tool-bg,var(--panel));border-color:var(--tool-line,var(--line));border-top-color:var(--tool-accent,var(--red))}body[class*="page-chinese-zodiac-"] .tool-page .eyebrow,.page-year-of-the-horse-2026 .tool-page .eyebrow{color:var(--tool-accent,var(--jade));background:color-mix(in srgb,var(--tool-accent,var(--jade)) 10%,#fff);border-color:color-mix(in srgb,var(--tool-accent,var(--jade)) 24%,#fff)}body[class*="page-chinese-zodiac-"] .tool-page .calculator-form button,.page-year-of-the-horse-2026 .tool-page .calculator-form button{background:var(--tool-accent,var(--red))}.faq-list h2{margin-bottom:18px}.faq-categories{display:grid;gap:12px}.faq-category{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}.faq-category summary{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:15px 18px;cursor:pointer;font-weight:850;color:#2f2922;background:#fbf7ef}.faq-category summary::marker{color:var(--jade)}.faq-category summary small{color:var(--muted);font-size:13px;font-weight:750;white-space:nowrap}.faq-grid{display:grid;gap:12px;border-top:1px solid var(--line);padding:16px 18px 18px;background:#fffdf9}.faq-item{display:grid;grid-template-columns:minmax(260px,.36fr) minmax(0,.64fr);gap:0;overflow:hidden;border:1px solid #e6dac8;border-radius:8px;background:#fff;box-shadow:0 6px 16px rgba(47,37,23,.04)}.faq-item:last-child{border-bottom:1px solid #e6dac8}.faq-item h3{display:flex;align-items:center;margin:0;padding:18px 20px;background:#f5efe5;border-right:1px solid #e2d4c0;font-size:16px;line-height:1.38;color:#211b17}.faq-item p{margin:0;padding:18px 20px;color:var(--muted);max-width:none;border-left:4px solid rgba(47,113,103,.2);background:#fff}.article-search{display:grid;grid-template-columns:minmax(260px,.9fr) minmax(300px,1.1fr);gap:22px;align-items:end}.article-search h2{margin-bottom:0}.site-search-form{display:grid;grid-template-columns:minmax(220px,1fr) auto;gap:12px;align-items:end}.site-search-form label{display:grid;gap:7px;font-size:14px;font-weight:750}.site-search-form input{height:43px;border:1px solid var(--line);border-radius:8px;padding:0 12px;font:inherit;background:#fff;width:100%;min-width:0}.site-search-form button{min-height:43px;display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:8px;background:var(--jade);color:#fff;font-size:14px;font-weight:800;padding:0 16px;cursor:pointer;white-space:nowrap}.site-search-form button:hover{background:#24594f}@media(max-width:820px){.site-footer{grid-template-columns:1fr}.footer-nav{grid-template-columns:1fr 1fr!important}.faq-category summary{align-items:flex-start;flex-direction:column;gap:4px}.faq-grid{padding:12px}.faq-item{grid-template-columns:1fr}.faq-item h3{border-right:0;border-bottom:1px solid #e2d4c0}.faq-item p{border-left:0;border-top:4px solid rgba(47,113,103,.16)}.article-search,.site-search-form{grid-template-columns:1fr}}`;
+}
+
+function faqHelpCss() {
+  return `.page-chinese-zodiac-faq .page-hero h1{font-size:clamp(34px,3.2vw,46px)}.faq-layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:42px;align-items:start}.faq-sidebar{position:sticky;top:88px;border-right:1px solid var(--line);padding-right:16px}.faq-menu-group{border-bottom:1px solid #eadfcc}.faq-menu-head{width:100%;height:54px;display:flex;align-items:center;justify-content:space-between;gap:14px;border:0;background:transparent;color:#2b251f;font:inherit;font-size:16px;font-weight:850;text-align:left;cursor:pointer;padding:0 10px;transition:background-color .18s ease,color .18s ease}.faq-menu-head:hover{color:var(--jade);background:#f0f7f3}.faq-menu-head:hover .faq-arrow{background:#dcebe5;color:var(--jade)}.faq-menu-group.is-open .faq-menu-head{color:var(--jade);background:#eef5f1}.faq-arrow{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;color:#2b251f;font-size:18px;line-height:1;transition:transform .22s ease,background-color .22s ease,color .22s ease}.faq-menu-group.is-open .faq-arrow{transform:rotate(180deg);background:#dcebe5;color:var(--jade)}.faq-menu-list{display:grid;gap:0;max-height:0;overflow:hidden;transition:max-height .24s ease}.faq-menu-list a{display:block;padding:10px 10px 10px 18px;color:var(--muted);text-decoration:none;font-size:14px;line-height:1.45;border-left:2px solid transparent}.faq-menu-list a:hover{color:var(--jade);border-left-color:var(--jade);background:#f6faf8}.faq-content{display:grid;gap:28px}.faq-content-group{scroll-margin-top:92px}.faq-content-group .section-heading{margin-bottom:12px}.faq-content-group h3{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:clamp(22px,1.8vw,26px);font-weight:850;line-height:1.18;margin:7px 0 0;letter-spacing:0}.faq-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.faq-answer-card{display:grid;align-content:start;min-height:138px;border:1px solid var(--line);background:#fff;border-radius:4px;padding:20px;box-shadow:0 8px 20px rgba(47,37,23,.04)}.faq-answer-card h4{margin:0 0 10px;font-size:17px;line-height:1.35}.faq-answer-card p{margin:0;color:var(--muted);max-width:none}.faq-categories,.faq-category,.faq-grid,.faq-item{display:initial}@media(max-width:980px){.page-chinese-zodiac-faq .page-hero h1{font-size:32px}.faq-layout{grid-template-columns:1fr;gap:24px}.faq-sidebar{position:static;border-right:0;border-bottom:1px solid var(--line);padding-right:0;padding-bottom:12px}.faq-card-grid{grid-template-columns:1fr}}`;
+}
+
+function guideCss() {
+  return `.guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.guide-grid.compact{grid-template-columns:repeat(3,minmax(0,1fr))}.guide-card{display:grid;align-content:start;min-height:154px;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:8px;padding:17px;box-shadow:0 8px 22px rgba(47,37,23,.045);transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}.guide-card:hover{transform:translateY(-2px);border-color:#d2ad73;box-shadow:0 14px 28px rgba(47,37,23,.08)}.guide-card span{color:var(--jade);font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.05em}.guide-card strong{display:block;margin-top:8px;font-size:18px;line-height:1.3;color:#251f1a}.guide-card p{margin:8px 0 0;color:var(--muted);font-size:14px;line-height:1.55}.section-action{margin-top:16px}.latest-guides{background:#fffdf8}.related-guides .guide-card{min-height:132px}.guide-next{display:flex;align-items:center;justify-content:space-between;gap:24px}.guide-next h2{margin-bottom:8px}.guide-next p{margin:0;color:var(--muted)}.guide-next .button-link{flex:0 0 auto}@media(max-width:980px){.guide-grid,.guide-grid.compact{grid-template-columns:repeat(2,minmax(0,1fr))}.guide-next{align-items:flex-start;flex-direction:column}}@media(max-width:640px){.guide-grid,.guide-grid.compact{grid-template-columns:1fr}}`;
+}
+
+function polishCss() {
+  return `.split>div{display:grid;grid-template-rows:auto auto 1fr auto;align-content:start}.split>div>.button-link{justify-self:start;margin-top:auto}.split>div p:last-of-type{margin-bottom:18px}`;
 }
