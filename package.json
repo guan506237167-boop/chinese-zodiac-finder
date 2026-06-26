@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/generate.mjs",
+    "audit": "node scripts/audit-links.mjs",
+    "test:tools": "node scripts/test-tools.mjs",
     "dev": "node scripts/serve.mjs",
     "start": "node scripts/serve.mjs"
   }
 }
-

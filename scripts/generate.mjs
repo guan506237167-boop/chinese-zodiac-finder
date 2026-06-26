@@ -6,8 +6,9 @@ const SITE = {
   name: "Chinese Zodiac Guide",
   url: "https://www.chinesezodiacfinder.com",
   description: "Find your Chinese zodiac sign, zodiac year, animal meaning, and traditional compatibility with a fast cultural reference tool.",
-  assetVersion: "20260626-6"
+  assetVersion: "20260627-1"
 };
+const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || "";
 
 const animals = JSON.parse(await readFile("data/zodiac-animals.json", "utf8"));
 const seedYears = JSON.parse(await readFile("data/zodiac-years.json", "utf8"));
@@ -61,6 +62,18 @@ await copyFile("public/google1c43509ea14adc51.html", "dist/google1c43509ea14adc5
 
 const pages = [];
 const guides = [
+  {
+    title: "What Chinese Zodiac Sign Am I?",
+    path: "/guides/what-chinese-zodiac-sign-am-i/",
+    category: "Calculator Guides",
+    description: "Learn how to find your Chinese zodiac sign by birth date and Lunar New Year boundary."
+  },
+  {
+    title: "Dragon Chinese Zodiac: Years and Meaning",
+    path: "/guides/dragon-chinese-zodiac/",
+    category: "Animal Guides",
+    description: "A full article-style guide to Dragon years, meaning, personality associations, and cultural notes."
+  },
   {
     title: "Horse Chinese Zodiac: Years and Meaning",
     path: "/guides/horse-chinese-zodiac/",
@@ -304,6 +317,7 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
   <meta property="og:image" content="${SITE.url}/assets/zodiac-wheel.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="/styles.css?v=${SITE.assetVersion}">
+  ${analyticsSnippet()}
   ${schema}
 </head>
 <body class="${pageClass(path)}">
@@ -358,6 +372,18 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
   <script src="/calculator.js?v=${SITE.assetVersion}" defer></script>
 </body>
 </html>`;
+}
+
+function analyticsSnippet() {
+  if (!GA_MEASUREMENT_ID) return "";
+  const id = escapeHtml(GA_MEASUREMENT_ID);
+  return `<script async src="https://www.googletagmanager.com/gtag/js?id=${id}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '${id}');
+  </script>`;
 }
 
 function adSlot(position) {
@@ -692,6 +718,169 @@ await writePage("/guides/horse-chinese-zodiac/", pageLayout({
     <section class="content-section article-body">
       <h2>Final note</h2>
       <p>The main point is simple: the Horse sign is useful only after you check the Lunar New Year boundary for the birth year. Once the sign is confirmed, you can read the Horse meaning, compare compatibility, or use the zodiac calculator to check another birthday. Treat the result as a cultural guide, not a fixed rule about personality or relationships.</p>
+    </section>`
+}));
+
+await writePage("/guides/dragon-chinese-zodiac/", pageLayout({
+  title: "Dragon Chinese Zodiac: Years, Meaning, Personality, and Dates",
+  description: "Learn the Dragon Chinese zodiac years, traditional meaning, personality associations, lucky symbols, elements, and Lunar New Year boundary.",
+  path: "/guides/dragon-chinese-zodiac/",
+  h1: "Dragon Chinese Zodiac: Years, Meaning, and Personality",
+  intro: "The Dragon is the fifth animal in the Chinese zodiac cycle and one of the strongest auspicious symbols in Chinese culture.",
+  faqs: [
+    { q: "What years are the Dragon in Chinese zodiac?", a: "Recent Dragon years include 1976, 1988, 2000, 2012, and 2024. The exact sign depends on the Lunar New Year boundary in each year." },
+    { q: "Is 2024 the Year of the Dragon?", a: "Yes. 2024 is the Year of the Dragon, and it begins on February 10, 2024, the Lunar New Year date for that year." },
+    { q: "What does the Dragon mean in Chinese zodiac culture?", a: "The Dragon is traditionally associated with strength, charisma, auspicious energy, ambition, and visible momentum." },
+    { q: "Are Dragon zodiac traits scientific?", a: "No. Dragon traits are cultural personality associations, not scientific claims or fixed judgments about a person." }
+  ],
+  body: `
+    ${articleSearchBlock()}
+    <section class="content-section article-body">
+      <p class="lead-answer">The Dragon is the fifth animal in the Chinese zodiac cycle. It is traditionally associated with strength, charisma, confidence, and auspicious energy. If you are checking whether you are a Dragon, use the Lunar New Year boundary instead of January 1. A birthday in January or early February can still belong to the previous zodiac year.</p>
+      <p>This matters because Dragon years are popular search topics, but the traditional zodiac year follows the lunar calendar rather than the Gregorian calendar.</p>
+    </section>
+    <section class="content-section split">
+      <div>
+        <p class="eyebrow">Short Answer</p>
+        <h2>What does the Dragon mean?</h2>
+        <p>In Chinese zodiac culture, the Dragon represents auspicious power, ambition, leadership, and visible momentum. Dragon years include 1976, 1988, 2000, 2012, and 2024, but the exact sign depends on the Lunar New Year date in the birth year.</p>
+      </div>
+      <div class="fact-card">
+        <strong>Dragon facts</strong>
+        <span>Chinese: 龙</span>
+        <span>Pinyin: long</span>
+        <span>Cycle order: No. 5</span>
+        <span>Yin/Yang: Yang</span>
+      </div>
+    </section>
+    <section class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">Years and Elements</p>
+        <h2>Dragon years and Lunar New Year starts</h2>
+      </div>
+      <p>The Dragon repeats every 12 years. Each Dragon year also connects with one of the five traditional elements: Wood, Fire, Earth, Metal, or Water.</p>
+      ${yearsTable(years.filter((row) => row.animal === "dragon" && row.year >= 1976 && row.year <= 2024))}
+      <p>Once the animal is clear, the element gives a more specific traditional reading. For example, 2024 is a Wood Dragon year, while 2000 is a Metal Dragon year.</p>
+    </section>
+    <section class="content-section">
+      <h2>Dragon meaning in Chinese zodiac culture</h2>
+      <p>The Dragon is one of the most important cultural symbols in Chinese tradition. It is often linked with power, prosperity, imperial imagery, and auspicious movement. In zodiac writing, this is why the Dragon is usually described as confident, expressive, ambitious, and strongly associated with momentum.</p>
+      <p>This meaning should be read as cultural symbolism. It does not mean every Dragon person has the same personality, and it should not be used to make serious decisions about relationships, work, health, or money.</p>
+    </section>
+    <section class="content-section">
+      <h2>Dragon personality associations</h2>
+      <p>Traditional Dragon descriptions usually focus on confidence and visible energy. Common associations include:</p>
+      <ul class="article-list">
+        <li>Confident and expressive.</li>
+        <li>Ambitious and goal-oriented.</li>
+        <li>Drawn to leadership or visible roles.</li>
+        <li>Energetic when pursuing a clear direction.</li>
+        <li>Sometimes impatient with slow progress.</li>
+      </ul>
+      <p>A practical way to read these traits is not as a fixed label, but as a cultural image of strong outward momentum.</p>
+    </section>
+    <section class="content-section">
+      <h2>Lucky numbers and colors</h2>
+      <p>Lucky symbols are part of traditional zodiac reading. They are symbolic references, not guaranteed outcomes.</p>
+      <div class="fact-grid">
+        <div><strong>Lucky numbers</strong><span>1, 6, 7</span></div>
+        <div><strong>Lucky colors</strong><span>Gold, silver, gray</span></div>
+        <div><strong>Also known as</strong><span>Chen Dragon</span></div>
+      </div>
+    </section>
+    <section class="content-section">
+      <h2>Common mistakes</h2>
+      <p>The biggest mistake is assuming a Dragon year starts on January 1. Chinese zodiac years begin at Lunar New Year, so the start date changes each Gregorian year.</p>
+      <p>Another mistake is treating Dragon symbolism as prediction. On this site, Dragon meanings are explained as traditional cultural associations, not scientific personality tests.</p>
+    </section>
+    ${relatedGuidesBlock("Related Dragon and zodiac guides", [
+      { title: "Dragon Chinese Zodiac", path: "/chinese-zodiac/dragon/", category: "Animal Guides", description: "Dragon years, quick facts, and traditional associations." },
+      guides.find((guide) => guide.path === "/chinese-zodiac-years/"),
+      guides.find((guide) => guide.path === "/chinese-zodiac-elements/"),
+      guides.find((guide) => guide.path === "/chinese-zodiac-compatibility/")
+    ].filter(Boolean))}
+    ${faqBlock([
+      { q: "What years are the Dragon in Chinese zodiac?", a: "Recent Dragon years include 1976, 1988, 2000, 2012, and 2024. The exact sign depends on the Lunar New Year boundary in each year." },
+      { q: "Is 2024 the Year of the Dragon?", a: "Yes. 2024 is the Year of the Dragon, and it begins on February 10, 2024, the Lunar New Year date for that year." },
+      { q: "What does the Dragon mean in Chinese zodiac culture?", a: "The Dragon is traditionally associated with strength, charisma, auspicious energy, ambition, and visible momentum." },
+      { q: "Are Dragon zodiac traits scientific?", a: "No. Dragon traits are cultural personality associations, not scientific claims or fixed judgments about a person." }
+    ])}
+    <section class="content-section article-body">
+      <h2>Final note</h2>
+      <p>The main point is simple: the Dragon sign is useful only after you check the Lunar New Year boundary for the birth year. Once the sign is confirmed, you can read the Dragon meaning, compare compatibility, or use the zodiac calculator to check another birthday.</p>
+    </section>`
+}));
+
+await writePage("/guides/what-chinese-zodiac-sign-am-i/", pageLayout({
+  title: "What Chinese Zodiac Sign Am I? Find Your Sign by Birth Date",
+  description: "Find your Chinese zodiac sign by birth date, learn why Lunar New Year matters, and use a calculator to avoid early-year birthday mistakes.",
+  path: "/guides/what-chinese-zodiac-sign-am-i/",
+  h1: "What Chinese Zodiac Sign Am I?",
+  intro: "Your Chinese zodiac sign depends on your birth date and the Lunar New Year start date for your birth year.",
+  faqs: [
+    { q: "How do I find my Chinese zodiac sign?", a: "Use your full birth date and compare it with the Lunar New Year date for that year. If your birthday is before Lunar New Year, use the previous zodiac year." },
+    { q: "Does Chinese zodiac start on January 1?", a: "No. Chinese zodiac years start at Lunar New Year, so the start date changes each Gregorian year." },
+    { q: "Why do January and February birthdays need checking?", a: "Because many Lunar New Year dates fall in January or February, so early-year birthdays can belong to the previous zodiac sign." },
+    { q: "Can I use a calculator to find my Chinese zodiac sign?", a: "Yes. A Lunar New Year-aware calculator is the safest way to check the correct sign." }
+  ],
+  extraSchema: jsonLd({
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to find your Chinese zodiac sign",
+    step: [
+      { "@type": "HowToStep", name: "Enter your full birth date" },
+      { "@type": "HowToStep", name: "Check the Lunar New Year boundary" },
+      { "@type": "HowToStep", name: "Use the zodiac animal and element for that year" }
+    ]
+  }),
+  body: `
+    <section class="tool-page">${zodiacCalculatorBlock()}</section>
+    <section class="content-section article-body">
+      <p class="lead-answer">To find your Chinese zodiac sign, use your full birth date, not only your birth year. Chinese zodiac years start at Lunar New Year, not January 1. If your birthday is before Lunar New Year in your birth year, your traditional zodiac sign belongs to the previous zodiac year.</p>
+      <p>This is the reason a person born in January or early February may get a different result from someone born later in the same Gregorian year.</p>
+    </section>
+    <section class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">Short Answer</p>
+        <h2>How to check your sign</h2>
+      </div>
+      <ol class="article-list">
+        <li>Find your full birth date.</li>
+        <li>Check the Lunar New Year date for your birth year.</li>
+        <li>If your birthday is before Lunar New Year, use the previous zodiac year.</li>
+        <li>Read the animal and element for that year.</li>
+      </ol>
+    </section>
+    <section class="content-section">
+      <h2>Why birth year alone can be wrong</h2>
+      <p>Many quick zodiac charts assign an animal by Gregorian year. That works for many birthdays, but it can be wrong for people born before Lunar New Year. Traditional Chinese zodiac years follow the lunar calendar, so the exact start date changes each year.</p>
+      <p>For example, 2026 is the Year of the Horse, but it begins on February 17, 2026. A birthday before that date still belongs to the previous zodiac year.</p>
+    </section>
+    <section class="content-section">
+      <h2>Quick reference chart</h2>
+      <p>Use this chart for recent years, then use the calculator above if your birthday is near January or February.</p>
+      ${yearsTable(years.filter((row) => row.year >= 2020 && row.year <= 2030))}
+    </section>
+    <section class="content-section">
+      <h2>What the result means</h2>
+      <p>Your zodiac result gives the traditional animal, element, and cultural associations for that birth year. It can be useful for learning Chinese culture, checking compatibility symbolism, or exploring lucky numbers and colors.</p>
+      <p>It should not be treated as a scientific personality test or a fixed rule for relationships, work, health, or money.</p>
+    </section>
+    ${relatedGuidesBlock("Related zodiac lookup guides", [
+      guides.find((guide) => guide.path === "/chinese-zodiac-years/"),
+      guides.find((guide) => guide.path === "/chinese-zodiac-animals/"),
+      guides.find((guide) => guide.path === "/chinese-zodiac-elements/"),
+      guides.find((guide) => guide.path === "/chinese-zodiac-compatibility/")
+    ].filter(Boolean))}
+    ${faqBlock([
+      { q: "How do I find my Chinese zodiac sign?", a: "Use your full birth date and compare it with the Lunar New Year date for that year. If your birthday is before Lunar New Year, use the previous zodiac year." },
+      { q: "Does Chinese zodiac start on January 1?", a: "No. Chinese zodiac years start at Lunar New Year, so the start date changes each Gregorian year." },
+      { q: "Why do January and February birthdays need checking?", a: "Because many Lunar New Year dates fall in January or February, so early-year birthdays can belong to the previous zodiac sign." },
+      { q: "Can I use a calculator to find my Chinese zodiac sign?", a: "Yes. A Lunar New Year-aware calculator is the safest way to check the correct sign." }
+    ])}
+    <section class="content-section article-body">
+      <h2>Final note</h2>
+      <p>The safest answer to "what Chinese zodiac sign am I?" comes from a full birth date and the Lunar New Year boundary. Use the calculator first, then open the animal guide to read the traditional meaning and cultural notes for your sign.</p>
     </section>`
 }));
 
