@@ -6,7 +6,7 @@ const SITE = {
   name: "Chinese Zodiac Guide",
   url: "https://www.chinesezodiacfinder.com",
   description: "Find your Chinese zodiac sign, zodiac year, animal meaning, and traditional compatibility with a fast cultural reference tool.",
-  assetVersion: "20260627-6"
+  assetVersion: "20260627-7"
 };
 const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || "G-VB9E7T2VCF";
 
@@ -975,6 +975,11 @@ await writePage("/chinese-zodiac-animals/", pageLayout({
   intro: "The twelve Chinese zodiac animals repeat in a fixed cycle from Rat to Pig.",
   body: `
     <section class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">Animal Order</p>
+        <h2>12 Chinese zodiac animals</h2>
+      </div>
+      <p>The Chinese zodiac animal cycle has a fixed order: Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Goat, Monkey, Rooster, Dog, and Pig. Each animal page explains recent years, Chinese name, pinyin, element cycle, and traditional cultural meaning.</p>
       <div class="animal-grid">${animals.map(animalCard).join("")}</div>
     </section>`
 }));
@@ -1045,6 +1050,8 @@ await writePage("/year-of-the-horse-2026/", pageLayout({
     <section class="content-section">
       <h2>What does the Horse mean?</h2>
       <p>${animalBySlug.horse.meaning}</p>
+      <p>The Fire element gives the 2026 Horse year a more active traditional reading. In cultural references, Fire is linked with visibility, warmth, expression, and forward motion. Combined with the Horse, the year is often described through themes of movement, initiative, travel, independence, and social energy.</p>
+      <p>These meanings are educational and symbolic. They are useful for understanding Chinese zodiac language, seasonal content, and cultural references, but they should not be treated as personal predictions or professional advice.</p>
       <a class="button-link" href="/chinese-zodiac/horse/">Open the Horse zodiac guide</a>
     </section>
     ${faqBlock([
@@ -1275,7 +1282,14 @@ await writePage("/chinese-zodiac-faq/", pageLayout({
   h1: "Chinese Zodiac FAQ",
   intro: "Clear answers to common Chinese zodiac questions.",
   faqs: standardFaqs(),
-  body: `${articleSearchBlock()}${faqBlock(standardFaqs())}`
+  body: `${articleSearchBlock()}
+    <section class="content-section article-body">
+      <h2>How to use this FAQ</h2>
+      <p>This FAQ collects the most common Chinese zodiac questions about signs, years, Lunar New Year boundaries, animals, elements, and compatibility. Start with birth date questions if you want to find your own sign, then use the animal and compatibility sections for traditional cultural meanings.</p>
+      <p>The answers are written for quick reference. Chinese zodiac years do not always match January 1, so questions about January and February birthdays should always be checked against the Lunar New Year date for the birth year.</p>
+      <p>Compatibility and personality descriptions on this site are cultural explanations, not scientific tests or fixed predictions. They are best used as learning material for Chinese zodiac symbolism.</p>
+    </section>
+    ${faqBlock(standardFaqs())}`
 }));
 
 await writePage("/privacy/", simpleLegalPage({
