@@ -58,6 +58,10 @@ const animalSlugs = [
 ];
 
 const elementWords = ["wood", "fire", "earth", "metal", "water"];
+const publishedArticleTopicUrls = new Map([
+  ["element-fire-horse", "/guides/fire-horse-zodiac/"],
+  ["tool-birth-sign", "/guides/chinese-birth-signs/"]
+]);
 const westernZodiac = /\b(aries|taurus|gemini|cancer|leo|virgo|libra|scorpio|sagittarius|capricorn|aquarius|pisces|synastry|birth chart|natal chart|astrology chart|horoscope today)\b/;
 const chineseContext = /\b(chinese|asian|eastern|oriental|lunar|zodiac animal|year of the|shengxiao)\b/;
 const intentRules = [
@@ -200,10 +204,17 @@ function volumeLabel(volume) {
 }
 
 function statusLabel(row) {
+  if (publishedUrlFor(row)) return "✅ 已发布";
   if (row.urlAction?.startsWith("Expand ")) return "✅ 已有页面";
   if (row.notes?.includes("Irrelevant")) return "🚫 排除";
   if (row.notes?.includes("Commercial")) return "⏳ 后期";
   return "🟡 待发布";
+}
+
+function publishedUrlFor(row) {
+  if (row.notes?.startsWith("Irrelevant") || row.notes?.startsWith("Commercial")) return "";
+  const key = row.key || topicKey(row);
+  return publishedArticleTopicUrls.get(key) || "";
 }
 
 function keywordListTable(items, options = {}) {
@@ -305,6 +316,8 @@ function topicTitle(key, items) {
 function topicUrl(items) {
   const covered = items.find((row) => row.urlAction.startsWith("Expand existing "))?.urlAction.replace("Expand existing ", "");
   if (covered) return `Expand ${covered}`;
+  const publishedUrl = publishedUrlFor(items[0]);
+  if (publishedUrl) return publishedUrl;
   return items[0].urlAction;
 }
 
@@ -380,7 +393,7 @@ const rows = readRows()
     const coveredPath = coveredByExisting(row.keyword, intent);
     const url = proposedUrl(row.keyword, intent);
     const score = opportunityScore(row, row.keyword, intent, coveredPath);
-    return {
+    const item = {
       keyword: row.keyword,
       search_volume: row.search_volume || 0,
       competition: row.competition || "",
@@ -394,6 +407,12 @@ const rows = readRows()
       score,
       notes: isIrrelevant(row.keyword) ? "Irrelevant to Chinese zodiac; exclude from publishing queue." : articleStop.test(row.keyword) ? "Commercial/media intent; use later or avoid for ads-first stage." : coveredPath ? "Already has a matching page; use for page expansion or supporting paragraph." : "New article candidate."
     };
+    const publishedUrl = publishedUrlFor(item);
+    if (publishedUrl) {
+      item.urlAction = publishedUrl;
+      item.notes = "Published article; use for internal linking and future expansion.";
+    }
+    return item;
   })
   .sort((a, b) => b.score - a.score || b.search_volume - a.search_volume);
 
@@ -498,7 +517,7 @@ ${clusterSummary.map((item) => `| ${item.cluster} | ${item.count} | ${item.maxVo
 
 fs.writeFileSync(path.join(outDir, "chinese-zodiac-keyword-library.md"), markdown, "utf8");
 const obsidianListMarkdown = obsidianKeywordList({ testArticles, publishingQueue, expansionBatch, laterBatch });
-const publishedArticleUsedCount = 0;
+const publishedArticleUsedCount = publishedArticleTopicUrls.size;
 const coveredByExistingPageCount = rows.filter((row) => row.notes.startsWith("Already has")).length;
 const excludedCount = rows.filter((row) => row.notes.startsWith("Irrelevant") || row.notes.startsWith("Commercial")).length;
 const pendingCount = rows.length - coveredByExistingPageCount - excludedCount;

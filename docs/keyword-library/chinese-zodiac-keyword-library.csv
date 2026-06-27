@@ -1,20 +1,20 @@
 priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,page_type,url_action,score,notes
-1,fire horse zodiac,33100,LOW,12,0.49,element,Horse / 2026,element article,/guides/fire-horse-zodiac/,118,New article candidate.
-2,fire horse chinese zodiac,9900,LOW,9,0.91,element,Horse / 2026,element article,/guides/fire-horse-chinese-zodiac/,115.1,New article candidate.
+1,fire horse zodiac,33100,LOW,12,0.49,element,Horse / 2026,element article,/guides/fire-horse-zodiac/,118,Published article; use for internal linking and future expansion.
+2,fire horse chinese zodiac,9900,LOW,9,0.91,element,Horse / 2026,element article,/guides/fire-horse-zodiac/,115.1,Published article; use for internal linking and future expansion.
 3,the year of the horse,110000,LOW,5,1.25,year,Horse / 2026,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,114.7,Already has a matching page; use for page expansion or supporting paragraph.
-4,chinese birth signs,49500,LOW,25,0.06,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,110.9,New article candidate.
+4,chinese birth signs,49500,LOW,25,0.06,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,110.9,Published article; use for internal linking and future expansion.
 5,horse zodiac,110000,LOW,5,1.25,animal,Horse / 2026,supporting article or existing-page expansion,Expand existing /chinese-zodiac/horse/,109.7,Already has a matching page; use for page expansion or supporting paragraph.
 6,1990 year of the chinese zodiac,22200,LOW,0,0.01,year,Years,year guide,/guides/1990-year-of-the-chinese-zodiac/,109.4,New article candidate.
 7,1989 in chinese zodiac,22200,LOW,0,,year,General,year guide,/guides/1989-in-chinese-zodiac/,109.3,New article candidate.
 8,1989 year of the chinese zodiac,22200,LOW,0,,year,Years,year guide,/guides/1989-year-of-the-chinese-zodiac/,109.3,New article candidate.
 9,1996 year of the chinese zodiac,22200,LOW,0,,year,Years,year guide,/guides/1996-year-of-the-chinese-zodiac/,109.3,New article candidate.
 10,2003 year of the chinese zodiac,22200,LOW,0,,year,Years,year guide,/guides/2003-year-of-the-chinese-zodiac/,109.3,New article candidate.
-11,chinese calendar birthday,8100,LOW,9,1.29,calculator,Calculator / Birthday,tool-support article,/guides/chinese-calendar-birthday/,109.1,New article candidate.
+11,chinese calendar birthday,8100,LOW,9,1.29,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,109.1,Published article; use for internal linking and future expansion.
 12,1985 year of the chinese zodiac,18100,LOW,0,,year,Years,year guide,/guides/1985-year-of-the-chinese-zodiac/,107.2,New article candidate.
 13,1986 year of the chinese zodiac,18100,LOW,0,,year,Years,year guide,/guides/1986-year-of-the-chinese-zodiac/,107.2,New article candidate.
 14,chinese sign for 1985,18100,LOW,0,,year,General,year guide,/guides/chinese-sign-for-1985/,107.2,New article candidate.
 15,chinese sign for 1988,18100,LOW,0,,year,General,year guide,/guides/chinese-sign-for-1988/,107.2,New article candidate.
-16,calculate my chinese zodiac,12100,LOW,0,0.5,general,General,guide article,/guides/calculate-my-chinese-zodiac/,107,New article candidate.
+16,calculate my chinese zodiac,12100,LOW,0,0.5,general,General,guide article,/guides/chinese-birth-signs/,107,Published article; use for internal linking and future expansion.
 17,1994 chinese sign,22200,LOW,0,0.16,year,General,year guide,/guides/1994-chinese-sign/,105.6,New article candidate.
 18,1994 chinese zodiac,22200,LOW,0,0.16,year,General,year guide,/guides/1994-chinese-zodiac/,105.6,New article candidate.
 19,1994 zodiac animal,22200,LOW,0,0.16,year,General,year guide,/guides/1994-zodiac-animal/,105.6,New article candidate.
@@ -60,7 +60,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 59,chinese sign for 1982,12100,LOW,0,,year,General,year guide,/guides/chinese-sign-for-1982/,103,New article candidate.
 60,chinese zodiac in 2010,12100,LOW,0,,year,General,year guide,/guides/chinese-zodiac-in-2010/,103,New article candidate.
 61,chinese zodiac of 2010,12100,LOW,0,,year,General,year guide,/guides/chinese-zodiac-of-2010/,103,New article candidate.
-62,year of the fire horse,40500,LOW,13,2.46,year,Horse / 2026,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,102.7,Already has a matching page; use for page expansion or supporting paragraph.
+62,year of the fire horse,40500,LOW,13,2.46,year,Horse / 2026,supporting article or existing-page expansion,/guides/fire-horse-zodiac/,102.7,Published article; use for internal linking and future expansion.
 63,2020 chinese zodiac,9900,LOW,0,0.85,year,General,year guide,/guides/2020-chinese-zodiac/,102.7,New article candidate.
 64,1991 chinese zodiac,18100,LOW,0,0.01,year,General,year guide,/guides/1991-chinese-zodiac/,102.3,New article candidate.
 65,1991 zodiac animal,18100,LOW,0,0.01,year,General,year guide,/guides/1991-zodiac-animal/,102.3,New article candidate.
@@ -83,7 +83,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 82,chinese sign 2001,18100,LOW,0,,year,General,year guide,/guides/chinese-sign-2001/,102.2,New article candidate.
 83,chinese year 1985,18100,LOW,0,,year,Years,year guide,/guides/chinese-year-1985/,102.2,New article candidate.
 84,zodiac 1988,18100,LOW,0,,year,General,year guide,/guides/zodiac-1988/,102.2,New article candidate.
-85,calculate chinese sign,12100,LOW,0,0.5,general,General,guide article,/guides/calculate-chinese-sign/,102,New article candidate.
+85,calculate chinese sign,12100,LOW,0,0.5,general,General,guide article,/guides/chinese-birth-signs/,102,Published article; use for internal linking and future expansion.
 86,chinese zodiac calc,12100,LOW,0,0.5,general,General,guide article,/guides/chinese-zodiac-calc/,102,New article candidate.
 87,chinese zodiac metal horse,2900,LOW,2,0.41,element,Horse / 2026,element article,/guides/chinese-zodiac-metal-horse/,101.5,New article candidate.
 88,1973 year of the chinese zodiac,9900,LOW,0,,year,Years,year guide,/guides/1973-year-of-the-chinese-zodiac/,100.9,New article candidate.
@@ -105,17 +105,17 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 104,79 chinese zodiac,14800,LOW,0,,general,General,guide article,/guides/79-chinese-zodiac/,100.1,New article candidate.
 105,chinese sign 1979,14800,LOW,0,,year,General,year guide,/guides/chinese-sign-1979/,100.1,New article candidate.
 106,chinese sign 2007,14800,LOW,0,,year,General,year guide,/guides/chinese-sign-2007/,100.1,New article candidate.
-107,chinese calendar birth prediction,4400,LOW,27,1.22,calculator,Calculator / Birthday,tool-support article,/guides/chinese-calendar-birth-prediction/,99.1,New article candidate.
+107,chinese calendar birth prediction,4400,LOW,27,1.22,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,99.1,Published article; use for internal linking and future expansion.
 108,chinese lunar calendar,4400,LOW,1,1.62,festival,General,guide article,/guides/chinese-lunar-calendar/,99,New article candidate.
 109,chinese year dragon,40500,LOW,0,4.41,year,Dragon / 2024,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,98.6,Already has a matching page; use for page expansion or supporting paragraph.
 110,dragon year,40500,LOW,0,4.41,year,Dragon / 2024,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,98.6,Already has a matching page; use for page expansion or supporting paragraph.
 111,dragon zodiac,40500,LOW,0,4.41,animal,Dragon / 2024,supporting article or existing-page expansion,Expand existing /chinese-zodiac/dragon/,98.6,Already has a matching page; use for page expansion or supporting paragraph.
 112,dragon zodiac year,40500,LOW,0,4.41,year,Dragon / 2024,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,98.6,Already has a matching page; use for page expansion or supporting paragraph.
-113,chinese zodiac birthday chart,5400,LOW,13,0.09,calculator,Calculator / Birthday,tool-support article,/guides/chinese-zodiac-birthday-chart/,98.5,New article candidate.
+113,chinese zodiac birthday chart,5400,LOW,13,0.09,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,98.5,Published article; use for internal linking and future expansion.
 114,1955 year of the chinese zodiac,5400,LOW,0,0.47,year,Years,year guide,/guides/1955-year-of-the-chinese-zodiac/,98.4,New article candidate.
 115,chinese sign for 1955,5400,LOW,0,0.47,year,General,year guide,/guides/chinese-sign-for-1955/,98.4,New article candidate.
 116,chinese zodiac water horse,2400,LOW,0,0.13,element,Horse / 2026,element article,/guides/chinese-zodiac-water-horse/,98.2,New article candidate.
-117,birth year chinese zodiac,90500,LOW,25,0.05,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,98.1,Already has a matching page; use for page expansion or supporting paragraph.
+117,birth year chinese zodiac,90500,LOW,25,0.05,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,98.1,Published article; use for internal linking and future expansion.
 118,1980 chinese sign,12100,LOW,0,0.01,year,General,year guide,/guides/1980-chinese-sign/,98.1,New article candidate.
 119,1980 chinese zodiac,12100,LOW,0,0.01,year,General,year guide,/guides/1980-chinese-zodiac/,98.1,New article candidate.
 120,1974 chinese zodiac,12100,LOW,0,,year,General,year guide,/guides/1974-chinese-zodiac/,98,New article candidate.
@@ -188,10 +188,10 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 187,1952 year of the chinese zodiac,4400,LOW,0,,year,Years,year guide,/guides/1952-year-of-the-chinese-zodiac/,92.5,New article candidate.
 188,1953 year of the chinese zodiac,4400,LOW,0,,year,Years,year guide,/guides/1953-year-of-the-chinese-zodiac/,92.5,New article candidate.
 189,1965 chinese zodiac,6600,LOW,0,0.05,year,General,year guide,/guides/1965-chinese-zodiac/,92.1,New article candidate.
-190,chinese zodiac sign calculator,12100,LOW,0,0.5,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,92,Already has a matching page; use for page expansion or supporting paragraph.
-191,chinese birth sign calculator,12100,LOW,0,0.5,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,92,Already has a matching page; use for page expansion or supporting paragraph.
-192,chinese zodiac chart calculator,12100,LOW,0,0.5,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,92,Already has a matching page; use for page expansion or supporting paragraph.
-193,star sign chinese calculator,12100,LOW,0,0.5,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,92,Already has a matching page; use for page expansion or supporting paragraph.
+190,chinese zodiac sign calculator,12100,LOW,0,0.5,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,92,Published article; use for internal linking and future expansion.
+191,chinese birth sign calculator,12100,LOW,0,0.5,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,92,Published article; use for internal linking and future expansion.
+192,chinese zodiac chart calculator,12100,LOW,0,0.5,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,92,Published article; use for internal linking and future expansion.
+193,star sign chinese calculator,12100,LOW,0,0.5,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,92,Published article; use for internal linking and future expansion.
 194,chinese zodiac and astrology,12100,LOW,27,0.13,general,General,guide article,/guides/chinese-zodiac-and-astrology/,91.9,New article candidate.
 195,1959 chinese zodiac,6600,LOW,0,0.03,year,General,year guide,/guides/1959-chinese-zodiac/,91.9,New article candidate.
 196,chinese sign 1959,6600,LOW,0,0.03,year,General,year guide,/guides/chinese-sign-1959/,91.9,New article candidate.
@@ -208,7 +208,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 207,chinese sign 1962,6600,LOW,0,,year,General,year guide,/guides/chinese-sign-1962/,91.7,New article candidate.
 208,lunar zodiac sign,2400,LOW,4,1.46,festival,General,guide article,/guides/lunar-zodiac-sign/,91,New article candidate.
 209,1951 year of the chinese zodiac,3600,LOW,0,,year,Years,year guide,/guides/1951-year-of-the-chinese-zodiac/,90.4,New article candidate.
-210,chinese birth year animal,40500,LOW,24,0.05,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,90.2,Already has a matching page; use for page expansion or supporting paragraph.
+210,chinese birth year animal,40500,LOW,24,0.05,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,90.2,Published article; use for internal linking and future expansion.
 211,1956 chinese zodiac,5400,LOW,0,0.06,year,General,year guide,/guides/1956-chinese-zodiac/,90.1,New article candidate.
 212,2019 chinese zodiac,5400,LOW,0,0.01,year,General,year guide,/guides/2019-chinese-zodiac/,89.7,New article candidate.
 213,chinese zodiac earth snake,1900,LOW,0,,element,Snake / 2025,element article,/guides/chinese-zodiac-earth-snake/,89.7,New article candidate.
@@ -257,9 +257,9 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 256,1953 chinese zodiac,4400,LOW,0,,year,General,year guide,/guides/1953-chinese-zodiac/,87.5,New article candidate.
 257,chinese year 1953,4400,LOW,0,,year,Years,year guide,/guides/chinese-year-1953/,87.5,New article candidate.
 258,chinese zodiac horse years,8100,LOW,5,1.19,year,Horse / 2026,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,87.1,Already has a matching page; use for page expansion or supporting paragraph.
-259,chinese zodiac calculator,12100,LOW,0,0.5,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,87,Already has a matching page; use for page expansion or supporting paragraph.
-260,chinese horoscope calculator,12100,LOW,0,0.5,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,87,Already has a matching page; use for page expansion or supporting paragraph.
-261,eastern zodiac calculator,12100,LOW,0,0.5,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,87,Already has a matching page; use for page expansion or supporting paragraph.
+259,chinese zodiac calculator,12100,LOW,0,0.5,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,87,Published article; use for internal linking and future expansion.
+260,chinese horoscope calculator,12100,LOW,0,0.5,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,87,Published article; use for internal linking and future expansion.
+261,eastern zodiac calculator,12100,LOW,0,0.5,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,87,Published article; use for internal linking and future expansion.
 262,earth horse chinese zodiac,880,LOW,0,,element,Horse / 2026,element article,/guides/earth-horse-chinese-zodiac/,86.8,New article candidate.
 263,year of the tiger,22200,LOW,0,0.11,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,86.2,Already has a matching page; use for page expansion or supporting paragraph.
 264,tiger in the year of the tiger,22200,LOW,0,0.11,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,86.2,Already has a matching page; use for page expansion or supporting paragraph.
@@ -353,8 +353,8 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 352,the year of the goat,14800,LOW,0,0.13,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,82.1,Already has a matching page; use for page expansion or supporting paragraph.
 353,chinese calendar horse,8100,LOW,5,1.19,animal,Horse / 2026,supporting article or existing-page expansion,Expand existing /chinese-zodiac/horse/,82.1,Already has a matching page; use for page expansion or supporting paragraph.
 354,chinese year horse,8100,LOW,5,1.19,year,Horse / 2026,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,82.1,Already has a matching page; use for page expansion or supporting paragraph.
-355,chinese birth animal,1300,LOW,5,0.07,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-animal/,82.1,New article candidate.
-356,chinese birthday animal,1300,LOW,5,0.07,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birthday-animal/,82.1,New article candidate.
+355,chinese birth animal,1300,LOW,5,0.07,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,82.1,Published article; use for internal linking and future expansion.
+356,chinese birthday animal,1300,LOW,5,0.07,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,82.1,Published article; use for internal linking and future expansion.
 357,2002 year of the horse,1000,LOW,0,,year,Horse / 2026,year guide,/guides/2002-year-of-the-horse/,82.1,New article candidate.
 358,1939 year of the chinese zodiac,1600,LOW,0,,year,Years,year guide,/guides/1939-year-of-the-chinese-zodiac/,82,New article candidate.
 359,1975 year of the chinese zodiac,1600,LOW,0,,year,Years,year guide,/guides/1975-year-of-the-chinese-zodiac/,82,New article candidate.
@@ -489,7 +489,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 488,chinese year 1980,1900,LOW,0,,year,Years,year guide,/guides/chinese-year-1980/,78.7,New article candidate.
 489,rabbit zodiac year,18100,LOW,0,0.05,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,78.6,Already has a matching page; use for page expansion or supporting paragraph.
 490,year of snake meaning,3600,LOW,0,3.94,year,Snake / 2025,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,78.4,Already has a matching page; use for page expansion or supporting paragraph.
-491,fire horse chinese zodiac personality,390,LOW,0,,element,Horse / 2026,element article,/guides/fire-horse-chinese-zodiac-personality/,78.4,New article candidate.
+491,fire horse chinese zodiac personality,390,LOW,0,,element,Horse / 2026,element article,/guides/fire-horse-zodiac/,78.4,Published article; use for internal linking and future expansion.
 492,1991 chinese astrology,18100,LOW,0,0.01,year,General,supporting article or existing-page expansion,Expand existing /,78.3,Already has a matching page; use for page expansion or supporting paragraph.
 493,1991 chinese horoscope,18100,LOW,0,0.01,year,General,supporting article or existing-page expansion,Expand existing /,78.3,Already has a matching page; use for page expansion or supporting paragraph.
 494,chinese zodiac 2025,18100,LOW,0,,year,Snake / 2025,supporting article or existing-page expansion,Expand existing /chinese-zodiac/2025/,78.2,Already has a matching page; use for page expansion or supporting paragraph.
@@ -502,8 +502,8 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 501,chinese horoscope 1993,18100,LOW,0,,year,General,supporting article or existing-page expansion,Expand existing /,78.2,Already has a matching page; use for page expansion or supporting paragraph.
 502,chinese horoscope 2001,18100,LOW,0,,year,General,supporting article or existing-page expansion,Expand existing /,78.2,Already has a matching page; use for page expansion or supporting paragraph.
 503,find chinese zodiac,720,LOW,1,0.1,calculator,General,tool-support article,/guides/find-chinese-zodiac/,78.1,New article candidate.
-504,birth chinese calendar,390,LOW,10,1.39,calculator,Calculator / Birthday,tool-support article,/guides/birth-chinese-calendar/,78.1,New article candidate.
-505,calculate chinese astrology,12100,LOW,0,0.5,general,General,supporting article or existing-page expansion,Expand existing /,78,Already has a matching page; use for page expansion or supporting paragraph.
+504,birth chinese calendar,390,LOW,10,1.39,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,78.1,Published article; use for internal linking and future expansion.
+505,calculate chinese astrology,12100,LOW,0,0.5,general,General,supporting article or existing-page expansion,/guides/chinese-birth-signs/,78,Published article; use for internal linking and future expansion.
 506,chinese zodiac signs,49500,LOW,25,0.06,general,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,77.9,Already has a matching page; use for page expansion or supporting paragraph.
 507,asian zodiac signs,49500,LOW,25,0.06,general,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,77.9,Already has a matching page; use for page expansion or supporting paragraph.
 508,chinese astrological signs,49500,LOW,25,0.06,general,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,77.9,Already has a matching page; use for page expansion or supporting paragraph.
@@ -610,9 +610,9 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 609,chinese zodiac for ox,8100,LOW,0,0.02,animal,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac/ox/,75,Already has a matching page; use for page expansion or supporting paragraph.
 610,chinese zodiac ox sign,8100,LOW,0,0.02,animal,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac/ox/,75,Already has a matching page; use for page expansion or supporting paragraph.
 611,year ox chinese zodiac,8100,LOW,0,0.02,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,75,Already has a matching page; use for page expansion or supporting paragraph.
-612,chinese zodiac compatibility calculator,1300,LOW,0,1.26,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,74.9,Already has a matching page; use for page expansion or supporting paragraph.
-613,chinese horoscope compatibility calculator,1300,LOW,0,1.26,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /,74.9,Already has a matching page; use for page expansion or supporting paragraph.
-614,chinese sign compatibility calculator,1300,LOW,0,1.26,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,74.9,Already has a matching page; use for page expansion or supporting paragraph.
+612,chinese zodiac compatibility calculator,1300,LOW,0,1.26,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,74.9,Published article; use for internal linking and future expansion.
+613,chinese horoscope compatibility calculator,1300,LOW,0,1.26,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,74.9,Published article; use for internal linking and future expansion.
+614,chinese sign compatibility calculator,1300,LOW,0,1.26,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,74.9,Published article; use for internal linking and future expansion.
 615,2014 year of the horse,590,LOW,4,,year,Horse / 2026,year guide,/guides/2014-year-of-the-horse/,74.9,New article candidate.
 616,chinese year of the rabbit,8100,LOW,0,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,74.8,Already has a matching page; use for page expansion or supporting paragraph.
 617,2013 chinese zodiac sign,8100,LOW,0,,year,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,74.8,Already has a matching page; use for page expansion or supporting paragraph.
@@ -633,7 +633,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 632,chinese zodiac sign dog,3600,LOW,0,1.01,animal,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,74.5,Already has a matching page; use for page expansion or supporting paragraph.
 633,1996 year of the rat,720,LOW,1,0.15,year,Years,year guide,/guides/1996-year-of-the-rat/,74.5,New article candidate.
 634,chinese zodiac sign 1955,5400,LOW,0,0.47,year,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,74.4,Already has a matching page; use for page expansion or supporting paragraph.
-635,chinese birth sign chart,2400,MEDIUM,47,0.05,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-sign-chart/,74.4,New article candidate.
+635,chinese birth sign chart,2400,MEDIUM,47,0.05,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,74.4,Published article; use for internal linking and future expansion.
 636,chinese astrology year of the dragon,6600,LOW,0,0.2,year,Dragon / 2024,supporting article or existing-page expansion,Expand existing /,74.3,Already has a matching page; use for page expansion or supporting paragraph.
 637,chinese zodiac sign dragon,6600,LOW,0,0.2,animal,Dragon / 2024,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,74.3,Already has a matching page; use for page expansion or supporting paragraph.
 638,dragon chinese zodiac symbol,6600,LOW,0,0.2,animal,Dragon / 2024,supporting article or existing-page expansion,Expand existing /chinese-zodiac/dragon/,74.3,Already has a matching page; use for page expansion or supporting paragraph.
@@ -674,20 +674,20 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 673,traits of tiger chinese zodiac,720,LOW,0,,animal,Meaning / Lucky Symbols,animal guide,/guides/traits-of-tiger-chinese-zodiac/,73.7,New article candidate.
 674,water ox chinese zodiac,390,LOW,0,,element,Elements,element article,/guides/water-ox-chinese-zodiac/,73.4,New article candidate.
 675,1998 the year of the tiger,720,LOW,1,0.01,year,Years,year guide,/guides/1998-the-year-of-the-tiger/,73.3,New article candidate.
-676,chinese horoscope if today is your birthday,1900,LOW,0,0.55,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,73.1,Already has a matching page; use for page expansion or supporting paragraph.
+676,chinese horoscope if today is your birthday,1900,LOW,0,0.55,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,73.1,Published article; use for internal linking and future expansion.
 677,lunar horoscope,390,LOW,3,1.9,festival,General,guide article,/guides/lunar-horoscope/,73.1,New article candidate.
 678,chinese zodiac sign animals,27100,MEDIUM,33,0.05,general,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,72.9,Already has a matching page; use for page expansion or supporting paragraph.
 679,chinese zodiac sign 1959,6600,LOW,0,0.03,year,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,72.9,Already has a matching page; use for page expansion or supporting paragraph.
 680,chinese zodiac sign 1958,6600,LOW,0,,year,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,72.7,Already has a matching page; use for page expansion or supporting paragraph.
 681,earth ox zodiac,590,LOW,0,,element,Elements,element article,/guides/earth-ox-zodiac/,72.7,New article candidate.
-682,birthday chinese zodiac,480,LOW,3,0.03,calculator,Calculator / Birthday,tool-support article,/guides/birthday-chinese-zodiac/,72.5,New article candidate.
-683,chinese birth horoscope,480,LOW,3,0.03,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-horoscope/,72.5,New article candidate.
+682,birthday chinese zodiac,480,LOW,3,0.03,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,72.5,Published article; use for internal linking and future expansion.
+683,chinese birth horoscope,480,LOW,3,0.03,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,72.5,Published article; use for internal linking and future expansion.
 684,chinese calendar predictions,1000,LOW,22,1.28,festival,General,guide article,/guides/chinese-calendar-predictions/,72.4,New article candidate.
 685,chinese zodiac elements,9900,LOW,0,0.05,general,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-elements/,72.3,Already has a matching page; use for page expansion or supporting paragraph.
 686,chinese astrology elements,9900,LOW,0,0.05,general,Elements,supporting article or existing-page expansion,Expand existing /,72.3,Already has a matching page; use for page expansion or supporting paragraph.
 687,chinese horoscope elements,9900,LOW,0,0.05,general,Elements,supporting article or existing-page expansion,Expand existing /,72.3,Already has a matching page; use for page expansion or supporting paragraph.
-688,chinese zodiac calculator year month day hour,880,LOW,1,2.2,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,72.3,Already has a matching page; use for page expansion or supporting paragraph.
-689,chinese zodiac year month day hour calculator,880,LOW,1,2.2,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,72.3,Already has a matching page; use for page expansion or supporting paragraph.
+688,chinese zodiac calculator year month day hour,880,LOW,1,2.2,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,72.3,Published article; use for internal linking and future expansion.
+689,chinese zodiac year month day hour calculator,880,LOW,1,2.2,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,72.3,Published article; use for internal linking and future expansion.
 690,chinese horoscope 1975,9900,LOW,0,0.02,year,General,supporting article or existing-page expansion,Expand existing /,72.1,Already has a matching page; use for page expansion or supporting paragraph.
 691,chinese zodiac calendar,5400,MEDIUM,40,0.06,festival,General,guide article,/guides/chinese-zodiac-calendar/,72.1,New article candidate.
 692,chinese calendar horoscope,5400,MEDIUM,40,0.06,festival,General,guide article,/guides/chinese-calendar-horoscope/,72.1,New article candidate.
@@ -1072,12 +1072,12 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 1071,year of the monkey 2004,260,LOW,0,,year,Years,year guide,/guides/year-of-the-monkey-2004/,63.4,New article candidate.
 1072,year of the rat 2008,260,LOW,0,,year,Years,year guide,/guides/year-of-the-rat-2008/,63.4,New article candidate.
 1073,zodiac sign of 1985,260,LOW,0,,year,General,year guide,/guides/zodiac-sign-of-1985/,63.4,New article candidate.
-1074,chinese birth calendar animal,260,LOW,27,0.39,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-calendar-animal/,63.3,New article candidate.
-1075,chinese birth symbol chart,320,LOW,26,0.06,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-symbol-chart/,63.2,New article candidate.
+1074,chinese birth calendar animal,260,LOW,27,0.39,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,63.3,Published article; use for internal linking and future expansion.
+1075,chinese birth symbol chart,320,LOW,26,0.06,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,63.2,Published article; use for internal linking and future expansion.
 1076,water dog chinese zodiac personality,140,LOW,0,,element,Elements,element article,/guides/water-dog-chinese-zodiac-personality/,63.2,New article candidate.
 1077,water dragon chinese zodiac personality,140,LOW,0,,element,Dragon / 2024,element article,/guides/water-dragon-chinese-zodiac-personality/,63.2,New article candidate.
 1078,water snake chinese zodiac personality,140,LOW,0,,element,Snake / 2025,element article,/guides/water-snake-chinese-zodiac-personality/,63.2,New article candidate.
-1079,chinese horoscope by birth date and time,390,LOW,3,1.51,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,63.1,Already has a matching page; use for page expansion or supporting paragraph.
+1079,chinese horoscope by birth date and time,390,LOW,3,1.51,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,63.1,Published article; use for internal linking and future expansion.
 1080,dragon year 1976,390,LOW,1,0.13,year,Dragon / 2024,year guide,/guides/dragon-year-1976/,63,New article candidate.
 1081,chinese astrology,12100,LOW,27,0.13,general,General,supporting article or existing-page expansion,Expand existing /,62.9,Already has a matching page; use for page expansion or supporting paragraph.
 1082,12 chinese zodiac,1300,LOW,27,0.03,general,General,guide article,/guides/12-chinese-zodiac/,62.9,New article candidate.
@@ -1143,12 +1143,12 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 1142,chinese zodiac dragon year,2400,LOW,1,0.05,year,Dragon / 2024,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,62.1,Already has a matching page; use for page expansion or supporting paragraph.
 1143,1964 year of the dragon,260,LOW,3,,year,Dragon / 2024,year guide,/guides/1964-year-of-the-dragon/,62,New article candidate.
 1144,dog zodiac sign personality,260,LOW,7,0.21,animal,Meaning / Lucky Symbols,animal guide,/guides/dog-zodiac-sign-personality/,61.9,New article candidate.
-1145,chinese astrology element calculator,1000,LOW,1,,calculator,Elements,supporting article or existing-page expansion,Expand existing /,61.7,Already has a matching page; use for page expansion or supporting paragraph.
-1146,chinese zodiac and element calculator,1000,LOW,1,,calculator,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,61.7,Already has a matching page; use for page expansion or supporting paragraph.
-1147,chinese zodiac calculator element,1000,LOW,1,,calculator,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,61.7,Already has a matching page; use for page expansion or supporting paragraph.
-1148,chinese zodiac with elements calculator,1000,LOW,1,,calculator,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,61.7,Already has a matching page; use for page expansion or supporting paragraph.
+1145,chinese astrology element calculator,1000,LOW,1,,calculator,Elements,supporting article or existing-page expansion,/guides/chinese-birth-signs/,61.7,Published article; use for internal linking and future expansion.
+1146,chinese zodiac and element calculator,1000,LOW,1,,calculator,Elements,supporting article or existing-page expansion,/guides/chinese-birth-signs/,61.7,Published article; use for internal linking and future expansion.
+1147,chinese zodiac calculator element,1000,LOW,1,,calculator,Elements,supporting article or existing-page expansion,/guides/chinese-birth-signs/,61.7,Published article; use for internal linking and future expansion.
+1148,chinese zodiac with elements calculator,1000,LOW,1,,calculator,Elements,supporting article or existing-page expansion,/guides/chinese-birth-signs/,61.7,Published article; use for internal linking and future expansion.
 1149,year of the tiger 2022,210,LOW,4,0.27,year,Years,year guide,/guides/year-of-the-tiger-2022/,61.6,New article candidate.
-1150,chinese animal birthday chart,170,LOW,15,0.03,calculator,Calculator / Birthday,tool-support article,/guides/chinese-animal-birthday-chart/,61.6,New article candidate.
+1150,chinese animal birthday chart,170,LOW,15,0.03,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,61.6,Published article; use for internal linking and future expansion.
 1151,1949 chinese astrology,3600,LOW,0,,year,General,supporting article or existing-page expansion,Expand existing /,61.4,Already has a matching page; use for page expansion or supporting paragraph.
 1152,chinese horoscope 1948,3600,LOW,0,,year,General,supporting article or existing-page expansion,Expand existing /,61.4,Already has a matching page; use for page expansion or supporting paragraph.
 1153,chinese zodiac list,320,LOW,5,0.4,general,General,guide article,/guides/chinese-zodiac-list/,61.4,New article candidate.
@@ -1181,7 +1181,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 1180,january 1997 chinese zodiac,210,LOW,0,,year,General,year guide,/guides/january-1997-chinese-zodiac/,61.2,New article candidate.
 1181,lucky number for snake,210,LOW,0,,animal,Snake / 2025,animal guide,/guides/lucky-number-for-snake/,61.2,New article candidate.
 1182,year of ox 2009,210,LOW,0,,year,Years,year guide,/guides/year-of-ox-2009/,61.2,New article candidate.
-1183,chinese birth month animal,110,LOW,7,0.02,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-month-animal/,60.9,New article candidate.
+1183,chinese birth month animal,110,LOW,7,0.02,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,60.9,Published article; use for internal linking and future expansion.
 1184,fire dog chinese zodiac personality,110,LOW,0,,element,Elements,element article,/guides/fire-dog-chinese-zodiac-personality/,60.9,New article candidate.
 1185,wood monkey chinese zodiac personality,110,LOW,0,,element,Elements,element article,/guides/wood-monkey-chinese-zodiac-personality/,60.9,New article candidate.
 1186,wood rat chinese zodiac personality,110,LOW,0,,element,Elements,element article,/guides/wood-rat-chinese-zodiac-personality/,60.9,New article candidate.
@@ -1232,7 +1232,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 1231,earth rabbit personality,170,LOW,0,,element,Elements,element article,/guides/earth-rabbit-personality/,60.1,New article candidate.
 1232,wood dog zodiac,170,LOW,0,,element,Elements,element article,/guides/wood-dog-zodiac/,60.1,New article candidate.
 1233,chinese sign of the tiger,1900,LOW,0,0.03,animal,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac/tiger/,60,Already has a matching page; use for page expansion or supporting paragraph.
-1234,chinese zodiac compatibility calculator for marriage,260,LOW,1,9.36,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,59.9,Already has a matching page; use for page expansion or supporting paragraph.
+1234,chinese zodiac compatibility calculator for marriage,260,LOW,1,9.36,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,59.9,Published article; use for internal linking and future expansion.
 1235,2027 year of the chinese zodiac,1900,LOW,0,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac/2027/,59.7,Already has a matching page; use for page expansion or supporting paragraph.
 1236,chinese calendar year of the ox,1900,LOW,0,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,59.7,Already has a matching page; use for page expansion or supporting paragraph.
 1237,chinese year animal ox,1900,LOW,0,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,59.7,Already has a matching page; use for page expansion or supporting paragraph.
@@ -1241,7 +1241,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 1240,year of ox chinese,1900,LOW,0,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,59.7,Already has a matching page; use for page expansion or supporting paragraph.
 1241,my chinese zodiac sign,1600,LOW,2,0.33,general,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,59.7,Already has a matching page; use for page expansion or supporting paragraph.
 1242,chinese calendar for twins,90,LOW,12,2.17,festival,General,guide article,/guides/chinese-calendar-for-twins/,59.6,New article candidate.
-1243,birth year chinese calendar,1000,LOW,8,0.08,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,59.1,Already has a matching page; use for page expansion or supporting paragraph.
+1243,birth year chinese calendar,1000,LOW,8,0.08,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,59.1,Published article; use for internal linking and future expansion.
 1244,find your chinese zodiac sign,720,LOW,1,0.1,calculator,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,59.1,Already has a matching page; use for page expansion or supporting paragraph.
 1245,find chinese astrology sign,720,LOW,1,0.1,calculator,General,supporting article or existing-page expansion,Expand existing /,59.1,Already has a matching page; use for page expansion or supporting paragraph.
 1246,find my chinese astrology sign,720,LOW,1,0.1,calculator,General,supporting article or existing-page expansion,Expand existing /,59.1,Already has a matching page; use for page expansion or supporting paragraph.
@@ -1324,7 +1324,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 1323,zodiac 1962,260,LOW,0,,year,General,year guide,/guides/zodiac-1962/,58.4,New article candidate.
 1324,zodiac sign 1983,260,LOW,0,,year,General,year guide,/guides/zodiac-sign-1983/,58.4,New article candidate.
 1325,zodiac sign 2017,260,LOW,0,,year,General,year guide,/guides/zodiac-sign-2017/,58.4,New article candidate.
-1326,chinese birth symbols,170,LOW,12,0.09,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-symbols/,58.4,New article candidate.
+1326,chinese birth symbols,170,LOW,12,0.09,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,58.4,Published article; use for internal linking and future expansion.
 1327,2004 chinese year animal,170,LOW,2,,year,Years,year guide,/guides/2004-chinese-year-animal/,58.2,New article candidate.
 1328,metal dragon personality,140,LOW,0,,element,Dragon / 2024,element article,/guides/metal-dragon-personality/,58.2,New article candidate.
 1329,metal snake zodiac,140,LOW,0,,element,Snake / 2025,element article,/guides/metal-snake-zodiac/,58.2,New article candidate.
@@ -1338,9 +1338,9 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 1337,year of the monkey personality,1600,LOW,0,,year,Meaning / Lucky Symbols,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,58,Already has a matching page; use for page expansion or supporting paragraph.
 1338,year of the rat traits,1600,LOW,0,,year,Meaning / Lucky Symbols,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,58,Already has a matching page; use for page expansion or supporting paragraph.
 1339,water tiger chinese astrology,880,LOW,0,0.02,element,Elements,supporting article or existing-page expansion,Expand existing /,57.9,Already has a matching page; use for page expansion or supporting paragraph.
-1340,complete chinese zodiac calculator,210,LOW,1,2.2,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,57.8,Already has a matching page; use for page expansion or supporting paragraph.
-1341,full chinese horoscope calculator,210,LOW,1,2.2,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,57.8,Already has a matching page; use for page expansion or supporting paragraph.
-1342,full chinese zodiac calculator,210,LOW,1,2.2,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,57.8,Already has a matching page; use for page expansion or supporting paragraph.
+1340,complete chinese zodiac calculator,210,LOW,1,2.2,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,57.8,Published article; use for internal linking and future expansion.
+1341,full chinese horoscope calculator,210,LOW,1,2.2,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,57.8,Published article; use for internal linking and future expansion.
+1342,full chinese zodiac calculator,210,LOW,1,2.2,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,57.8,Published article; use for internal linking and future expansion.
 1343,chinese animal year calendar,12100,MEDIUM,49,0.06,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,57.4,Already has a matching page; use for page expansion or supporting paragraph.
 1344,chinese zodiac,246000,MEDIUM,41,0.05,general,General,supporting article or existing-page expansion,Expand existing /,57.3,Already has a matching page; use for page expansion or supporting paragraph.
 1345,asian zodiac,246000,MEDIUM,41,0.05,general,General,supporting article or existing-page expansion,Expand existing /,57.3,Already has a matching page; use for page expansion or supporting paragraph.
@@ -1384,9 +1384,9 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 1383,earth snake chinese zodiac personality,70,LOW,0,,element,Snake / 2025,element article,/guides/earth-snake-chinese-zodiac-personality/,56.7,New article candidate.
 1384,fire rat chinese zodiac personality,70,LOW,0,,element,Elements,element article,/guides/fire-rat-chinese-zodiac-personality/,56.7,New article candidate.
 1385,fire rooster chinese zodiac personality,70,LOW,0,,element,Elements,element article,/guides/fire-rooster-chinese-zodiac-personality/,56.7,New article candidate.
-1386,chinese zodiac birth time,50,LOW,0,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-zodiac-birth-time/,56.7,New article candidate.
+1386,chinese zodiac birth time,50,LOW,0,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,56.7,Published article; use for internal linking and future expansion.
 1387,tiger year 2022,210,LOW,4,0.27,year,Years,year guide,/guides/tiger-year-2022/,56.6,New article candidate.
-1388,chinese birth date,90,LOW,1,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-date/,56.6,New article candidate.
+1388,chinese birth date,90,LOW,1,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,56.6,Published article; use for internal linking and future expansion.
 1389,my chinese horoscope,1000,LOW,2,1.13,general,General,supporting article or existing-page expansion,Expand existing /,56.2,Already has a matching page; use for page expansion or supporting paragraph.
 1390,my chinese astrology,1000,LOW,2,1.13,general,General,supporting article or existing-page expansion,Expand existing /,56.2,Already has a matching page; use for page expansion or supporting paragraph.
 1391,1879 chinese zodiac,210,LOW,0,,general,General,guide article,/guides/1879-chinese-zodiac/,56.2,New article candidate.
@@ -1482,7 +1482,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 1481,rabbit zodiac,1900,LOW,0,,animal,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac/rabbit/,54.7,Already has a matching page; use for page expansion or supporting paragraph.
 1482,asian astrology,140,LOW,1,0.34,general,General,guide article,/guides/asian-astrology/,54.5,New article candidate.
 1483,aquarius in chinese zodiac,110,LOW,1,,general,General,guide article,/guides/aquarius-in-chinese-zodiac/,54.5,New article candidate.
-1484,chinese birth year,1000,LOW,8,0.08,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,54.1,Already has a matching page; use for page expansion or supporting paragraph.
+1484,chinese birth year,1000,LOW,8,0.08,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,54.1,Published article; use for internal linking and future expansion.
 1485,1947 chinese year,170,LOW,0,,year,Years,year guide,/guides/1947-chinese-year/,54.1,New article candidate.
 1486,1958 zodiac animal,170,LOW,0,,year,General,year guide,/guides/1958-zodiac-animal/,54.1,New article candidate.
 1487,1959 zodiac animal,170,LOW,0,,year,General,year guide,/guides/1959-zodiac-animal/,54.1,New article candidate.
@@ -1524,7 +1524,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 1523,fire dog zodiac,90,LOW,0,,element,Elements,element article,/guides/fire-dog-zodiac/,54,New article candidate.
 1524,metal ox personality,90,LOW,0,,element,Elements,element article,/guides/metal-ox-personality/,54,New article candidate.
 1525,water goat zodiac,90,LOW,0,,element,Elements,element article,/guides/water-goat-zodiac/,54,New article candidate.
-1526,chinese birth year chart,1300,LOW,25,0.03,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,53.8,Already has a matching page; use for page expansion or supporting paragraph.
+1526,chinese birth year chart,1300,LOW,25,0.03,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,53.8,Published article; use for internal linking and future expansion.
 1527,1950 chinese year,170,LOW,1,,year,Years,year guide,/guides/1950-chinese-year/,53.7,New article candidate.
 1528,1965 chinese year,170,LOW,1,,year,Years,year guide,/guides/1965-chinese-year/,53.7,New article candidate.
 1529,chinese zodiac descriptions,170,LOW,1,,general,General,guide article,/guides/chinese-zodiac-descriptions/,53.7,New article candidate.
@@ -1658,8 +1658,8 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 1657,zodiac sign 1967,140,LOW,0,,year,General,year guide,/guides/zodiac-sign-1967/,52.2,New article candidate.
 1658,zodiac year 1990,140,LOW,0,,year,Years,year guide,/guides/zodiac-year-1990/,52.2,New article candidate.
 1659,chinese zodiac golden dragon,720,LOW,2,0.4,animal,Dragon / 2024,supporting article or existing-page expansion,Expand existing /chinese-zodiac/dragon/,52,Already has a matching page; use for page expansion or supporting paragraph.
-1660,chinese sign by date of birth,30,LOW,1,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-sign-by-date-of-birth/,52,New article candidate.
-1661,chinese zodiac by date of birth,30,LOW,1,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-zodiac-by-date-of-birth/,52,New article candidate.
+1660,chinese sign by date of birth,30,LOW,1,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,52,Published article; use for internal linking and future expansion.
+1661,chinese zodiac by date of birth,30,LOW,1,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,52,Published article; use for internal linking and future expansion.
 1662,tiger chinese,880,LOW,1,0.69,animal,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac/tiger/,51.9,Already has a matching page; use for page expansion or supporting paragraph.
 1663,lunar new year zodiac,1000,LOW,3,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,51.8,Already has a matching page; use for page expansion or supporting paragraph.
 1664,chinese zodiac dog compatibility,880,LOW,0,,animal,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,51.8,Already has a matching page; use for page expansion or supporting paragraph.
@@ -1761,7 +1761,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 1760,year of 2019 chinese zodiac,70,LOW,0,,year,Years,year guide,/guides/year-of-2019-chinese-zodiac/,50.7,New article candidate.
 1761,zodiac sign for 1961,70,LOW,0,,year,General,year guide,/guides/zodiac-sign-for-1961/,50.7,New article candidate.
 1762,january zodiac animal,140,LOW,4,0.02,general,General,guide article,/guides/january-zodiac-animal/,50.6,New article candidate.
-1763,year of the dragon birth years,320,LOW,0,,calculator,Dragon / 2024,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,50.4,Already has a matching page; use for page expansion or supporting paragraph.
+1763,year of the dragon birth years,320,LOW,0,,calculator,Dragon / 2024,supporting article or existing-page expansion,/guides/chinese-birth-signs/,50.4,Published article; use for internal linking and future expansion.
 1764,know your chinese zodiac sign,720,LOW,1,0.1,general,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,50.1,Already has a matching page; use for page expansion or supporting paragraph.
 1765,2023 zodiac sign,110,LOW,0,,year,General,year guide,/guides/2023-zodiac-sign/,49.9,New article candidate.
 1766,1948 zodiac,110,LOW,0,,year,General,year guide,/guides/1948-zodiac/,49.9,New article candidate.
@@ -1788,7 +1788,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 1787,zodiac of 2010,110,LOW,0,,year,General,year guide,/guides/zodiac-of-2010/,49.9,New article candidate.
 1788,zodiac sign 1969,110,LOW,0,,year,General,year guide,/guides/zodiac-sign-1969/,49.9,New article candidate.
 1789,zodiac year 1989,110,LOW,0,,year,Years,year guide,/guides/zodiac-year-1989/,49.9,New article candidate.
-1790,chinese birthday chart,50,LOW,4,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birthday-chart/,49.9,New article candidate.
+1790,chinese birthday chart,50,LOW,4,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,49.9,Published article; use for internal linking and future expansion.
 1791,march chinese zodiac sign,720,LOW,0,0.01,general,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,49.8,Already has a matching page; use for page expansion or supporting paragraph.
 1792,chinese year animal 1994,70,LOW,2,,year,Years,year guide,/guides/chinese-year-animal-1994/,49.8,New article candidate.
 1793,lunar new year of the rabbit,720,LOW,0,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,49.7,Already has a matching page; use for page expansion or supporting paragraph.
@@ -1810,8 +1810,8 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 1809,year of snake chinese zodiac,720,LOW,1,,year,Snake / 2025,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,49.3,Already has a matching page; use for page expansion or supporting paragraph.
 1810,chinese horoscope by month,320,LOW,0,0.98,general,General,supporting article or existing-page expansion,Expand existing /,49.3,Already has a matching page; use for page expansion or supporting paragraph.
 1811,asian horoscope,110,LOW,2,0.03,general,General,guide article,/guides/asian-horoscope/,49.2,New article candidate.
-1812,chinese birth date calendar,20,LOW,1,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-date-calendar/,49,New article candidate.
-1813,chinese calendar by date of birth,20,LOW,1,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-calendar-by-date-of-birth/,49,New article candidate.
+1812,chinese birth date calendar,20,LOW,1,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,49,Published article; use for internal linking and future expansion.
+1813,chinese calendar by date of birth,20,LOW,1,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,49,Published article; use for internal linking and future expansion.
 1814,chinese zodiac animals months,210,LOW,28,0.02,general,General,guide article,/guides/chinese-zodiac-animals-months/,48.8,New article candidate.
 1815,metal rat personality,50,LOW,0,,element,Elements,element article,/guides/metal-rat-personality/,48.7,New article candidate.
 1816,wood rat personality,50,LOW,0,,element,Elements,element article,/guides/wood-rat-personality/,48.7,New article candidate.
@@ -1851,10 +1851,10 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 1850,zodiac year 2003,90,LOW,0,,year,Years,year guide,/guides/zodiac-year-2003/,48,New article candidate.
 1851,zodiac year 2010,90,LOW,0,,year,Years,year guide,/guides/zodiac-year-2010/,48,New article candidate.
 1852,zodiac year 2015,90,LOW,0,,year,Years,year guide,/guides/zodiac-year-2015/,48,New article candidate.
-1853,chinese astrology according to date of birth,260,LOW,1,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,47.9,Already has a matching page; use for page expansion or supporting paragraph.
-1854,chinese astrology birth date,260,LOW,1,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,47.9,Already has a matching page; use for page expansion or supporting paragraph.
-1855,chinese horoscope according to date of birth,260,LOW,1,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,47.9,Already has a matching page; use for page expansion or supporting paragraph.
-1856,chinese horoscope birth date,260,LOW,1,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,47.9,Already has a matching page; use for page expansion or supporting paragraph.
+1853,chinese astrology according to date of birth,260,LOW,1,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,47.9,Published article; use for internal linking and future expansion.
+1854,chinese astrology birth date,260,LOW,1,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,47.9,Published article; use for internal linking and future expansion.
+1855,chinese horoscope according to date of birth,260,LOW,1,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,47.9,Published article; use for internal linking and future expansion.
+1856,chinese horoscope birth date,260,LOW,1,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,47.9,Published article; use for internal linking and future expansion.
 1857,1982 chinese zodiac compatibility,590,LOW,0,,year,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,47.7,Already has a matching page; use for page expansion or supporting paragraph.
 1858,2025 chinese zodiac element,590,LOW,0,,year,Snake / 2025,supporting article or existing-page expansion,Expand existing /chinese-zodiac/2025/,47.7,Already has a matching page; use for page expansion or supporting paragraph.
 1859,chinese zodiac monkey compatibility,590,LOW,0,,animal,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,47.7,Already has a matching page; use for page expansion or supporting paragraph.
@@ -2048,16 +2048,16 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 2047,lunar animal calendar,480,MEDIUM,46,0.18,festival,General,guide article,/guides/lunar-animal-calendar/,45.3,New article candidate.
 2048,dog zodiac signs,880,LOW,10,0.37,animal,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac/dog/,45.2,Already has a matching page; use for page expansion or supporting paragraph.
 2049,libra chinese animal,70,LOW,1,,general,General,guide article,/guides/libra-chinese-animal/,45.2,New article candidate.
-2050,birth time chinese zodiac,10,LOW,0,,calculator,Calculator / Birthday,tool-support article,/guides/birth-time-chinese-zodiac/,45.2,New article candidate.
-2051,chinese birth animals chart,10,,,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-animals-chart/,45.2,New article candidate.
-2052,chinese birth time chart,10,LOW,0,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-time-chart/,45.2,New article candidate.
+2050,birth time chinese zodiac,10,LOW,0,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,45.2,Published article; use for internal linking and future expansion.
+2051,chinese birth animals chart,10,,,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,45.2,Published article; use for internal linking and future expansion.
+2052,chinese birth time chart,10,LOW,0,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,45.2,Published article; use for internal linking and future expansion.
 2053,chinese birth year animal 2012,10,LOW,0,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-year-animal-2012/,45.2,New article candidate.
-2054,chinese future prediction by date of birth and time,10,,,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-future-prediction-by-date-of-birth-and-time/,45.2,New article candidate.
-2055,chinese life prediction by date of birth,10,LOW,0,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-life-prediction-by-date-of-birth/,45.2,New article candidate.
+2054,chinese future prediction by date of birth and time,10,,,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,45.2,Published article; use for internal linking and future expansion.
+2055,chinese life prediction by date of birth,10,LOW,0,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,45.2,Published article; use for internal linking and future expansion.
 2056,chinese zodiac birth year 1948,10,LOW,0,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-zodiac-birth-year-1948/,45.2,New article candidate.
-2057,chinese zodiac by date of birth and time,10,,,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-zodiac-by-date-of-birth-and-time/,45.2,New article candidate.
+2057,chinese zodiac by date of birth and time,10,,,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,45.2,Published article; use for internal linking and future expansion.
 2058,chinese zodiac find my sign,10,LOW,0,,calculator,General,tool-support article,/guides/chinese-zodiac-find-my-sign/,45.2,New article candidate.
-2059,chinese zodiac time and date of birth,10,LOW,0,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-zodiac-time-and-date-of-birth/,45.2,New article candidate.
+2059,chinese zodiac time and date of birth,10,LOW,0,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,45.2,Published article; use for internal linking and future expansion.
 2060,chinese year born,1000,LOW,8,0.08,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,45.1,Already has a matching page; use for page expansion or supporting paragraph.
 2061,year of the ox sign,480,LOW,1,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,45.1,Already has a matching page; use for page expansion or supporting paragraph.
 2062,year of the ox zodiac sign,480,LOW,1,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,45.1,Already has a matching page; use for page expansion or supporting paragraph.
@@ -2070,8 +2070,8 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 2069,metal ox zodiac,30,LOW,0,,element,Elements,element article,/guides/metal-ox-zodiac/,44.4,New article candidate.
 2070,water rat personality,30,LOW,0,,element,Elements,element article,/guides/water-rat-personality/,44.4,New article candidate.
 2071,chinese snake year,720,LOW,1,,year,Snake / 2025,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,44.3,Already has a matching page; use for page expansion or supporting paragraph.
-2072,year of the rat birth years,170,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,44.1,Already has a matching page; use for page expansion or supporting paragraph.
-2073,year of the snake birth years,170,LOW,0,,calculator,Snake / 2025,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,44.1,Already has a matching page; use for page expansion or supporting paragraph.
+2072,year of the rat birth years,170,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,44.1,Published article; use for internal linking and future expansion.
+2073,year of the snake birth years,170,LOW,0,,calculator,Snake / 2025,supporting article or existing-page expansion,/guides/chinese-birth-signs/,44.1,Published article; use for internal linking and future expansion.
 2074,twelve chinese zodiac signs,1300,LOW,27,0.03,general,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,43.9,Already has a matching page; use for page expansion or supporting paragraph.
 2075,chinese gender zodiac,50,LOW,16,1.03,general,General,guide article,/guides/chinese-gender-zodiac/,43.7,New article candidate.
 2076,year of the ox 2021,50,LOW,9,,year,Years,year guide,/guides/year-of-the-ox-2021/,43.6,New article candidate.
@@ -2199,7 +2199,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 2198,water tiger in chinese,10,LOW,0,,element,Elements,element article,/guides/water-tiger-in-chinese/,42.2,New article candidate.
 2199,water tiger zodiac meaning,10,,,,element,Elements,element article,/guides/water-tiger-zodiac-meaning/,42.2,New article candidate.
 2200,water tiger zodiac sign,10,LOW,0,,element,Elements,element article,/guides/water-tiger-zodiac-sign/,42.2,New article candidate.
-2201,birth date chinese calendar,10,LOW,7,,calculator,Calculator / Birthday,tool-support article,/guides/birth-date-chinese-calendar/,42.1,New article candidate.
+2201,birth date chinese calendar,10,LOW,7,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,42.1,Published article; use for internal linking and future expansion.
 2202,lunar new year chart,720,LOW,18,0.05,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,42,Already has a matching page; use for page expansion or supporting paragraph.
 2203,all chinese zodiac animals,260,MEDIUM,49,0.07,general,General,guide article,/guides/all-chinese-zodiac-animals/,41.9,New article candidate.
 2204,chinese zodiac symbols,1000,HIGH,69,0.08,general,General,guide article,/guides/chinese-zodiac-symbols/,41.7,New article candidate.
@@ -2220,7 +2220,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 2219,rooster chinese zodiac years,320,LOW,0,,year,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,41.4,Already has a matching page; use for page expansion or supporting paragraph.
 2220,year of the cat chinese zodiac,320,LOW,0,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,41.4,Already has a matching page; use for page expansion or supporting paragraph.
 2221,year of the sheep compatibility,320,LOW,0,,year,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,41.4,Already has a matching page; use for page expansion or supporting paragraph.
-2222,chinese year calculator,210,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,41.2,Already has a matching page; use for page expansion or supporting paragraph.
+2222,chinese year calculator,210,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,41.2,Published article; use for internal linking and future expansion.
 2223,2023 year of the horse,10,LOW,0,,year,Horse / 2026,year guide,/guides/2023-year-of-the-horse/,41.2,New article candidate.
 2224,2023 year of the rabbit for horse,10,,,,year,Horse / 2026,year guide,/guides/2023-year-of-the-rabbit-for-horse/,41.2,New article candidate.
 2225,chinese horse horoscope 2023,10,,,,year,Horse / 2026,year guide,/guides/chinese-horse-horoscope-2023/,41.2,New article candidate.
@@ -2342,7 +2342,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 2341,daily chinese horoscope horse,170,LOW,0,,animal,Horse / 2026,supporting article or existing-page expansion,Expand existing /,40.1,Already has a matching page; use for page expansion or supporting paragraph.
 2342,goat sign zodiac,480,LOW,2,0.04,animal,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac/goat/,40,Already has a matching page; use for page expansion or supporting paragraph.
 2343,chinese good luck animals,20,LOW,1,,general,General,guide article,/guides/chinese-good-luck-animals/,40,New article candidate.
-2344,chinese zodiac year calculator,110,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,39.9,Already has a matching page; use for page expansion or supporting paragraph.
+2344,chinese zodiac year calculator,110,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,39.9,Published article; use for internal linking and future expansion.
 2345,according to chinese zodiac which animal are you,20,LOW,2,,general,General,guide article,/guides/according-to-chinese-zodiac-which-animal-are-you/,39.6,New article candidate.
 2346,1964 chinese zodiac compatibility,260,LOW,0,,year,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,39.4,Already has a matching page; use for page expansion or supporting paragraph.
 2347,1965 chinese zodiac compatibility,260,LOW,0,,year,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,39.4,Already has a matching page; use for page expansion or supporting paragraph.
@@ -2368,9 +2368,9 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 2367,earth sheep chinese zodiac,140,LOW,0,,element,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-elements/,39.2,Already has a matching page; use for page expansion or supporting paragraph.
 2368,fire sheep chinese zodiac,140,LOW,0,,element,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-elements/,39.2,Already has a matching page; use for page expansion or supporting paragraph.
 2369,personality chinese zodiac signs,140,LOW,0,,meaning,Meaning / Lucky Symbols,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,39.2,Already has a matching page; use for page expansion or supporting paragraph.
-2370,4 pillars chinese astrology calculator,110,LOW,6,0.25,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,39.2,Already has a matching page; use for page expansion or supporting paragraph.
-2371,chinese zodiac four pillars calculator,110,LOW,6,0.25,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,39.2,Already has a matching page; use for page expansion or supporting paragraph.
-2372,ox birth year,170,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,39.1,Already has a matching page; use for page expansion or supporting paragraph.
+2370,4 pillars chinese astrology calculator,110,LOW,6,0.25,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,39.2,Published article; use for internal linking and future expansion.
+2371,chinese zodiac four pillars calculator,110,LOW,6,0.25,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,39.2,Published article; use for internal linking and future expansion.
+2372,ox birth year,170,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,39.1,Published article; use for internal linking and future expansion.
 2373,1966 chinese zodiac compatibility,260,LOW,1,,year,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,38.9,Already has a matching page; use for page expansion or supporting paragraph.
 2374,free chinese astrology chart,90,LOW,4,1.46,general,General,supporting article or existing-page expansion,Expand existing /,38.9,Already has a matching page; use for page expansion or supporting paragraph.
 2375,chinese goat,390,LOW,0,,animal,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac/goat/,38.4,Already has a matching page; use for page expansion or supporting paragraph.
@@ -2448,7 +2448,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 2447,2025 zodiac sign,320,LOW,0,,year,Snake / 2025,supporting article or existing-page expansion,Expand existing /chinese-zodiac/2025/,36.4,Already has a matching page; use for page expansion or supporting paragraph.
 2448,rooster zodiac sign,320,LOW,0,,animal,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac/rooster/,36.4,Already has a matching page; use for page expansion or supporting paragraph.
 2449,sheep zodiac compatibility,320,LOW,0,,animal,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,36.4,Already has a matching page; use for page expansion or supporting paragraph.
-2450,chinese zodiac pillars calculator,70,LOW,4,0.31,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,36.4,Already has a matching page; use for page expansion or supporting paragraph.
+2450,chinese zodiac pillars calculator,70,LOW,4,0.31,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,36.4,Published article; use for internal linking and future expansion.
 2451,year of the rabbit 2023 lucky color,10,,,,year,Meaning / Lucky Symbols,year guide,/guides/year-of-the-rabbit-2023-lucky-color/,36.2,New article candidate.
 2452,2023 year of the rabbit lucky color,10,LOW,0,,year,Meaning / Lucky Symbols,year guide,/guides/2023-year-of-the-rabbit-lucky-color/,36.2,New article candidate.
 2453,the year of the rabbit 2023,10,LOW,0,,year,Years,year guide,/guides/the-year-of-the-rabbit-2023/,36.2,New article candidate.
@@ -2680,8 +2680,8 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 2679,born in the year of the tiger 1974,10,LOW,0,,year,Years,year guide,/guides/born-in-the-year-of-the-tiger-1974/,36.2,New article candidate.
 2680,born in the year of the tiger 1986,10,,,,year,Years,year guide,/guides/born-in-the-year-of-the-tiger-1986/,36.2,New article candidate.
 2681,born in the year of the tiger 2022,10,,,,year,Years,year guide,/guides/born-in-the-year-of-the-tiger-2022/,36.2,New article candidate.
-2682,calculate my chinese animal sign,10,,,,general,General,guide article,/guides/calculate-my-chinese-animal-sign/,36.2,New article candidate.
-2683,calculate your chinese zodiac,10,LOW,0,,general,General,guide article,/guides/calculate-your-chinese-zodiac/,36.2,New article candidate.
+2682,calculate my chinese animal sign,10,,,,general,General,guide article,/guides/chinese-birth-signs/,36.2,Published article; use for internal linking and future expansion.
+2683,calculate your chinese zodiac,10,LOW,0,,general,General,guide article,/guides/chinese-birth-signs/,36.2,Published article; use for internal linking and future expansion.
 2684,chinese animal sign 1973,10,LOW,0,,year,General,year guide,/guides/chinese-animal-sign-1973/,36.2,New article candidate.
 2685,chinese animal sign 1976,10,,,,year,General,year guide,/guides/chinese-animal-sign-1976/,36.2,New article candidate.
 2686,chinese animal sign 1983,10,LOW,0,,year,General,year guide,/guides/chinese-animal-sign-1983/,36.2,New article candidate.
@@ -3206,8 +3206,8 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 3205,chinese zodiac 1974 year of the tiger,10,LOW,1,,year,Years,year guide,/guides/chinese-zodiac-1974-year-of-the-tiger/,35.8,New article candidate.
 3206,chinese zodiac friendship compatibility,70,LOW,0,,compatibility,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,35.7,Already has a matching page; use for page expansion or supporting paragraph.
 3207,chinese zodiac friendship compatibility chart,70,LOW,0,,compatibility,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,35.7,Already has a matching page; use for page expansion or supporting paragraph.
-3208,year of the ox birth years,70,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,35.7,Already has a matching page; use for page expansion or supporting paragraph.
-3209,year of the tiger birth years,70,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,35.7,Already has a matching page; use for page expansion or supporting paragraph.
+3208,year of the ox birth years,70,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,35.7,Published article; use for internal linking and future expansion.
+3209,year of the tiger birth years,70,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,35.7,Published article; use for internal linking and future expansion.
 3210,pisces and virgo relationship,18100,LOW,5,0.19,compatibility,General,compatibility article,/guides/pisces-and-virgo-relationship/,35.5,Irrelevant to Chinese zodiac; exclude from publishing queue.
 3211,1986 lunar year,20,LOW,0,,year,Years,year guide,/guides/1986-lunar-year/,35.5,New article candidate.
 3212,1997 ox year,20,LOW,0,,year,Years,year guide,/guides/1997-ox-year/,35.5,New article candidate.
@@ -3252,14 +3252,14 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 3251,year of the dog compatibility,170,LOW,0,,year,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,35.1,Already has a matching page; use for page expansion or supporting paragraph.
 3252,libra and pisces relationship,18100,LOW,6,0.19,compatibility,General,compatibility article,/guides/libra-and-pisces-relationship/,35,Irrelevant to Chinese zodiac; exclude from publishing queue.
 3253,asian horoscope today,20,LOW,1,,general,General,guide article,/guides/asian-horoscope-today/,35,New article candidate.
-3254,tiger birth year,110,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,34.9,Already has a matching page; use for page expansion or supporting paragraph.
+3254,tiger birth year,110,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,34.9,Published article; use for internal linking and future expansion.
 3255,animal from chinese zodiac,10,LOW,3,,general,General,guide article,/guides/animal-from-chinese-zodiac/,34.9,New article candidate.
 3256,fish astrology sign,49500,LOW,3,0.44,general,General,guide article,/guides/fish-astrology-sign/,34.8,Irrelevant to Chinese zodiac; exclude from publishing queue.
 3257,aries and sagittarius relationship,12100,LOW,4,0.56,compatibility,General,compatibility article,/guides/aries-and-sagittarius-relationship/,34.7,Irrelevant to Chinese zodiac; exclude from publishing queue.
 3258,lunar new year animals years,170,LOW,1,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,34.7,Already has a matching page; use for page expansion or supporting paragraph.
 3259,chinese animal new year chart,1300,MEDIUM,48,0.03,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,34.5,Already has a matching page; use for page expansion or supporting paragraph.
 3260,chinese calendar zodiac sign,170,MEDIUM,55,0.01,festival,General,guide article,/guides/chinese-calendar-zodiac-sign/,34.5,New article candidate.
-3261,chinese compatibility calculator,110,LOW,1,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,34.5,Already has a matching page; use for page expansion or supporting paragraph.
+3261,chinese compatibility calculator,110,LOW,1,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,34.5,Published article; use for internal linking and future expansion.
 3262,love horoscope gemini,8100,LOW,1,3.9,compatibility,Compatibility,compatibility article,/guides/love-horoscope-gemini/,34.4,Irrelevant to Chinese zodiac; exclude from publishing queue.
 3263,2025 zodiac year,260,LOW,0,,year,Snake / 2025,supporting article or existing-page expansion,Expand existing /chinese-zodiac/2025/,34.4,Already has a matching page; use for page expansion or supporting paragraph.
 3264,chinese calendar rooster,260,LOW,0,,animal,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac/rooster/,34.4,Already has a matching page; use for page expansion or supporting paragraph.
@@ -3324,16 +3324,16 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 3323,chinese zodiac years meaning,140,LOW,1,,year,Meaning / Lucky Symbols,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,32.8,Already has a matching page; use for page expansion or supporting paragraph.
 3324,year of the tiger what years,140,LOW,1,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,32.8,Already has a matching page; use for page expansion or supporting paragraph.
 3325,lucky chinese zodiac signs,70,LOW,0,,meaning,Meaning / Lucky Symbols,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,32.7,Already has a matching page; use for page expansion or supporting paragraph.
-3326,chinese astrology birth time,50,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,32.7,Already has a matching page; use for page expansion or supporting paragraph.
-3327,chinese calendar zodiac calculator,50,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,32.7,Already has a matching page; use for page expansion or supporting paragraph.
-3328,chinese zodiac love calculator,50,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,32.7,Already has a matching page; use for page expansion or supporting paragraph.
-3329,year of the dog birth years,50,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,32.7,Already has a matching page; use for page expansion or supporting paragraph.
-3330,year of the rabbit birth years,50,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,32.7,Already has a matching page; use for page expansion or supporting paragraph.
+3326,chinese astrology birth time,50,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,32.7,Published article; use for internal linking and future expansion.
+3327,chinese calendar zodiac calculator,50,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,32.7,Published article; use for internal linking and future expansion.
+3328,chinese zodiac love calculator,50,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,32.7,Published article; use for internal linking and future expansion.
+3329,year of the dog birth years,50,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,32.7,Published article; use for internal linking and future expansion.
+3330,year of the rabbit birth years,50,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,32.7,Published article; use for internal linking and future expansion.
 3331,aries and cancer relationship,18100,LOW,10,0.11,compatibility,General,compatibility article,/guides/aries-and-cancer-relationship/,32.6,Irrelevant to Chinese zodiac; exclude from publishing queue.
 3332,1986 year of the fire tiger,10,LOW,8,,year,Elements,year guide,/guides/1986-year-of-the-fire-tiger/,32.6,New article candidate.
 3333,gold rabbit chinese zodiac,170,LOW,6,,animal,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac/rabbit/,32.4,Already has a matching page; use for page expansion or supporting paragraph.
 3334,lunar new year animals by year,140,LOW,2,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,32.3,Already has a matching page; use for page expansion or supporting paragraph.
-3335,birthday compatibility chinese zodiac,10,LOW,2,1.81,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,32.3,Already has a matching page; use for page expansion or supporting paragraph.
+3335,birthday compatibility chinese zodiac,10,LOW,2,1.81,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,32.3,Published article; use for internal linking and future expansion.
 3336,chinese destiny chart,10,LOW,14,0.92,general,General,guide article,/guides/chinese-destiny-chart/,32.3,New article candidate.
 3337,aries horoscope love,6600,LOW,1,11.4,compatibility,Compatibility,compatibility article,/guides/aries-horoscope-love/,32.2,Irrelevant to Chinese zodiac; exclude from publishing queue.
 3338,love horoscope libra,6600,LOW,1,2.34,compatibility,Compatibility,compatibility article,/guides/love-horoscope-libra/,32.2,Irrelevant to Chinese zodiac; exclude from publishing queue.
@@ -3343,11 +3343,11 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 3342,ox zodiac compatibility,210,LOW,0,,animal,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,32.2,Already has a matching page; use for page expansion or supporting paragraph.
 3343,rat zodiac compatibility,210,LOW,0,,animal,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,32.2,Already has a matching page; use for page expansion or supporting paragraph.
 3344,rat zodiac meaning,210,LOW,0,,animal,Meaning / Lucky Symbols,supporting article or existing-page expansion,Expand existing /chinese-zodiac/rat/,32.2,Already has a matching page; use for page expansion or supporting paragraph.
-3345,chinese horoscope sign calculator,50,LOW,1,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,32.2,Already has a matching page; use for page expansion or supporting paragraph.
-3346,chinese zodiac birthday calculator,50,LOW,1,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,32.2,Already has a matching page; use for page expansion or supporting paragraph.
-3347,eastern zodiac sign calculator,50,LOW,1,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,32.2,Already has a matching page; use for page expansion or supporting paragraph.
+3345,chinese horoscope sign calculator,50,LOW,1,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,32.2,Published article; use for internal linking and future expansion.
+3346,chinese zodiac birthday calculator,50,LOW,1,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,32.2,Published article; use for internal linking and future expansion.
+3347,eastern zodiac sign calculator,50,LOW,1,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,32.2,Published article; use for internal linking and future expansion.
 3348,chinese zodiac 1960 year of the dog,10,LOW,9,,year,Years,year guide,/guides/chinese-zodiac-1960-year-of-the-dog/,32.2,New article candidate.
-3349,calculate chinese element,110,LOW,0,,element,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-elements/,31.9,Already has a matching page; use for page expansion or supporting paragraph.
+3349,calculate chinese element,110,LOW,0,,element,Elements,supporting article or existing-page expansion,/guides/chinese-birth-signs/,31.9,Published article; use for internal linking and future expansion.
 3350,your chinese astrology,210,LOW,1,,general,General,supporting article or existing-page expansion,Expand existing /,31.8,Already has a matching page; use for page expansion or supporting paragraph.
 3351,scorpio cancer relationship,18100,LOW,3,0.23,compatibility,General,compatibility article,/guides/scorpio-cancer-relationship/,31.7,Irrelevant to Chinese zodiac; exclude from publishing queue.
 3352,12 chinese zodiac signs,590,MEDIUM,36,0.03,general,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,31.7,Already has a matching page; use for page expansion or supporting paragraph.
@@ -3528,7 +3528,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 3527,year of the sheep meaning,110,LOW,0,,year,Meaning / Lucky Symbols,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,30.9,Already has a matching page; use for page expansion or supporting paragraph.
 3528,year of the water tiger,110,LOW,0,,year,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,30.9,Already has a matching page; use for page expansion or supporting paragraph.
 3529,zodiac year of tiger,110,LOW,0,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,30.9,Already has a matching page; use for page expansion or supporting paragraph.
-3530,chinese zodiac animal calculator,40,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,30.8,Already has a matching page; use for page expansion or supporting paragraph.
+3530,chinese zodiac animal calculator,40,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,30.8,Published article; use for internal linking and future expansion.
 3531,chinese love compatibility,70,LOW,0,,compatibility,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,30.7,Already has a matching page; use for page expansion or supporting paragraph.
 3532,aquarius chinese zodiac sign,110,LOW,1,,general,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,30.5,Already has a matching page; use for page expansion or supporting paragraph.
 3533,chinese horoscope and astrology,110,LOW,1,,general,General,supporting article or existing-page expansion,Expand existing /,30.5,Already has a matching page; use for page expansion or supporting paragraph.
@@ -3547,7 +3547,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 3546,gold tiger chinese zodiac,110,LOW,4,0.09,animal,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac/tiger/,29.8,Already has a matching page; use for page expansion or supporting paragraph.
 3547,horse astrology,110000,LOW,5,1.25,animal,Horse / 2026,supporting article or existing-page expansion,Expand existing /chinese-zodiac/horse/,29.7,Irrelevant to Chinese zodiac; exclude from publishing queue.
 3548,chinese lunar year animal,210,LOW,18,0.07,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,29.7,Already has a matching page; use for page expansion or supporting paragraph.
-3549,my chinese zodiac sign by date of birth,40,LOW,3,0.03,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,29.7,Already has a matching page; use for page expansion or supporting paragraph.
+3549,my chinese zodiac sign by date of birth,40,LOW,3,0.03,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,29.7,Published article; use for internal linking and future expansion.
 3550,lunar new year animal chart,480,MEDIUM,37,0.07,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,29.5,Already has a matching page; use for page expansion or supporting paragraph.
 3551,1988 chinese zodiac sign,90,LOW,0,0.06,year,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,29.5,Already has a matching page; use for page expansion or supporting paragraph.
 3552,1959 chinese zodiac compatibility,90,LOW,0,,year,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,29,Already has a matching page; use for page expansion or supporting paragraph.
@@ -3637,7 +3637,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 3636,2023 year of the rabbit lucky zodiac sign,0,,,,year,Meaning / Lucky Symbols,year guide,/guides/2023-year-of-the-rabbit-lucky-zodiac-sign/,29,New article candidate.
 3637,about year of the tiger 2022,0,,,,year,Years,year guide,/guides/about-year-of-the-tiger-2022/,29,New article candidate.
 3638,born year of the tiger 2022,0,,,,year,Years,year guide,/guides/born-year-of-the-tiger-2022/,29,New article candidate.
-3639,calculate my zodiac animal,0,,,,general,General,guide article,/guides/calculate-my-zodiac-animal/,29,New article candidate.
+3639,calculate my zodiac animal,0,,,,general,General,guide article,/guides/chinese-birth-signs/,29,Published article; use for internal linking and future expansion.
 3640,chinese 12 zodiac 2022,0,,,,year,General,year guide,/guides/chinese-12-zodiac-2022/,29,New article candidate.
 3641,chinese calendar 1962 year of the tiger,0,,,,year,Years,year guide,/guides/chinese-calendar-1962-year-of-the-tiger/,29,New article candidate.
 3642,chinese calendar 2022 year of the tiger,0,,,,year,Years,year guide,/guides/chinese-calendar-2022-year-of-the-tiger/,29,New article candidate.
@@ -3960,22 +3960,22 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 3959,horse and tiger chinese zodiac compatibility,50,LOW,0,,animal,Horse / 2026,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,28.7,Already has a matching page; use for page expansion or supporting paragraph.
 3960,sagittarius chinese zodiac sign,90,LOW,1,,general,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,28.6,Already has a matching page; use for page expansion or supporting paragraph.
 3961,love horoscope aquarius,4400,LOW,0,2.01,compatibility,Compatibility,compatibility article,/guides/love-horoscope-aquarius/,28.5,Irrelevant to Chinese zodiac; exclude from publishing queue.
-3962,chinese zodiac animal and element calculator,30,LOW,0,,calculator,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,28.4,Already has a matching page; use for page expansion or supporting paragraph.
-3963,chinese zodiac calculator year month day,30,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,28.4,Already has a matching page; use for page expansion or supporting paragraph.
+3962,chinese zodiac animal and element calculator,30,LOW,0,,calculator,Elements,supporting article or existing-page expansion,/guides/chinese-birth-signs/,28.4,Published article; use for internal linking and future expansion.
+3963,chinese zodiac calculator year month day,30,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,28.4,Published article; use for internal linking and future expansion.
 3964,chinese zodiac marriage compatibility,30,LOW,0,,compatibility,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,28.4,Already has a matching page; use for page expansion or supporting paragraph.
-3965,chinese zodiac sign and element calculator,30,LOW,0,,calculator,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,28.4,Already has a matching page; use for page expansion or supporting paragraph.
-3966,lunar new year birthday chart,30,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,28.4,Already has a matching page; use for page expansion or supporting paragraph.
+3965,chinese zodiac sign and element calculator,30,LOW,0,,calculator,Elements,supporting article or existing-page expansion,/guides/chinese-birth-signs/,28.4,Published article; use for internal linking and future expansion.
+3966,lunar new year birthday chart,30,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,28.4,Published article; use for internal linking and future expansion.
 3967,chinese symbol for dog,90,LOW,2,,animal,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac/dog/,28.1,Already has a matching page; use for page expansion or supporting paragraph.
 3968,sagittarius love horoscope,4400,LOW,1,2.99,compatibility,Compatibility,compatibility article,/guides/sagittarius-love-horoscope/,28,Irrelevant to Chinese zodiac; exclude from publishing queue.
 3969,dog zodiac compatibility,140,LOW,1,,animal,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,27.8,Already has a matching page; use for page expansion or supporting paragraph.
-3970,chinese animal calculator,50,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,27.7,Already has a matching page; use for page expansion or supporting paragraph.
-3971,dragon birth year,50,LOW,0,,calculator,Dragon / 2024,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,27.7,Already has a matching page; use for page expansion or supporting paragraph.
-3972,chinese element zodiac calculator,30,LOW,2,,calculator,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,27.5,Already has a matching page; use for page expansion or supporting paragraph.
-3973,chinese zodiac sign by date of birth,30,LOW,2,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,27.5,Already has a matching page; use for page expansion or supporting paragraph.
+3970,chinese animal calculator,50,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,27.7,Published article; use for internal linking and future expansion.
+3971,dragon birth year,50,LOW,0,,calculator,Dragon / 2024,supporting article or existing-page expansion,/guides/chinese-birth-signs/,27.7,Published article; use for internal linking and future expansion.
+3972,chinese element zodiac calculator,30,LOW,2,,calculator,Elements,supporting article or existing-page expansion,/guides/chinese-birth-signs/,27.5,Published article; use for internal linking and future expansion.
+3973,chinese zodiac sign by date of birth,30,LOW,2,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,27.5,Published article; use for internal linking and future expansion.
 3974,chinese dog dragon,390,LOW,28,0.16,animal,Dragon / 2024,supporting article or existing-page expansion,Expand existing /chinese-zodiac/dragon/,27.1,Already has a matching page; use for page expansion or supporting paragraph.
 3975,year of horse compatibility,40,LOW,0,,year,Horse / 2026,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,26.8,Already has a matching page; use for page expansion or supporting paragraph.
-3976,chinese horoscope calculator birth time,20,LOW,0,0.17,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,26.8,Already has a matching page; use for page expansion or supporting paragraph.
-3977,chinese zodiac calculator time of birth,20,LOW,0,0.17,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,26.8,Already has a matching page; use for page expansion or supporting paragraph.
+3976,chinese horoscope calculator birth time,20,LOW,0,0.17,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,26.8,Published article; use for internal linking and future expansion.
+3977,chinese zodiac calculator time of birth,20,LOW,0,0.17,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,26.8,Published article; use for internal linking and future expansion.
 3978,year of the rabbit symbol,70,LOW,0,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,26.7,Already has a matching page; use for page expansion or supporting paragraph.
 3979,1952 chinese zodiac compatibility,70,LOW,0,,year,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,26.7,Already has a matching page; use for page expansion or supporting paragraph.
 3980,1952 chinese zodiac sign,70,LOW,0,,year,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,26.7,Already has a matching page; use for page expansion or supporting paragraph.
@@ -4024,31 +4024,31 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 4023,chinese calendar monkey,110,LOW,0,,animal,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac/monkey/,25.9,Already has a matching page; use for page expansion or supporting paragraph.
 4024,chinese dog horoscope,110,LOW,0,,animal,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac/dog/,25.9,Already has a matching page; use for page expansion or supporting paragraph.
 4025,tiger year zodiac,110,LOW,0,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,25.9,Already has a matching page; use for page expansion or supporting paragraph.
-4026,chinese birth month calendar,10,MEDIUM,43,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-month-calendar/,25.9,New article candidate.
+4026,chinese birth month calendar,10,MEDIUM,43,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,25.9,Published article; use for internal linking and future expansion.
 4027,my chinese zodiac animal,70,LOW,2,,general,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,25.8,Already has a matching page; use for page expansion or supporting paragraph.
 4028,chinese signs of the zodiac chart,20,MEDIUM,33,0.02,general,General,guide article,/guides/chinese-signs-of-the-zodiac-chart/,25.8,New article candidate.
-4029,my chinese zodiac sign calculator,20,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,25.5,Already has a matching page; use for page expansion or supporting paragraph.
-4030,chinese and western zodiac calculator,20,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,25.5,Already has a matching page; use for page expansion or supporting paragraph.
-4031,chinese and western zodiac compatibility calculator,20,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,25.5,Already has a matching page; use for page expansion or supporting paragraph.
-4032,chinese animal and element calculator,20,LOW,0,,calculator,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,25.5,Already has a matching page; use for page expansion or supporting paragraph.
-4033,chinese animal year calculator,20,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,25.5,Already has a matching page; use for page expansion or supporting paragraph.
-4034,chinese horoscope love compatibility calculator,20,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /,25.5,Already has a matching page; use for page expansion or supporting paragraph.
-4035,chinese sign and element calculator,20,LOW,0,,calculator,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,25.5,Already has a matching page; use for page expansion or supporting paragraph.
-4036,chinese year of birth calculator,20,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,25.5,Already has a matching page; use for page expansion or supporting paragraph.
-4037,chinese zodiac 60 year cycle calculator,20,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,25.5,Already has a matching page; use for page expansion or supporting paragraph.
-4038,chinese zodiac animals calculator,20,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,25.5,Already has a matching page; use for page expansion or supporting paragraph.
-4039,chinese zodiac day calculator,20,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,25.5,Already has a matching page; use for page expansion or supporting paragraph.
-4040,chinese zodiac hour calculator,20,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,25.5,Already has a matching page; use for page expansion or supporting paragraph.
-4041,chinese zodiac love compatibility calculator,20,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,25.5,Already has a matching page; use for page expansion or supporting paragraph.
-4042,element chinese zodiac calculator,20,LOW,0,,calculator,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,25.5,Already has a matching page; use for page expansion or supporting paragraph.
+4029,my chinese zodiac sign calculator,20,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,25.5,Published article; use for internal linking and future expansion.
+4030,chinese and western zodiac calculator,20,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,25.5,Published article; use for internal linking and future expansion.
+4031,chinese and western zodiac compatibility calculator,20,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,25.5,Published article; use for internal linking and future expansion.
+4032,chinese animal and element calculator,20,LOW,0,,calculator,Elements,supporting article or existing-page expansion,/guides/chinese-birth-signs/,25.5,Published article; use for internal linking and future expansion.
+4033,chinese animal year calculator,20,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,25.5,Published article; use for internal linking and future expansion.
+4034,chinese horoscope love compatibility calculator,20,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,25.5,Published article; use for internal linking and future expansion.
+4035,chinese sign and element calculator,20,LOW,0,,calculator,Elements,supporting article or existing-page expansion,/guides/chinese-birth-signs/,25.5,Published article; use for internal linking and future expansion.
+4036,chinese year of birth calculator,20,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,25.5,Published article; use for internal linking and future expansion.
+4037,chinese zodiac 60 year cycle calculator,20,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,25.5,Published article; use for internal linking and future expansion.
+4038,chinese zodiac animals calculator,20,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,25.5,Published article; use for internal linking and future expansion.
+4039,chinese zodiac day calculator,20,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,25.5,Published article; use for internal linking and future expansion.
+4040,chinese zodiac hour calculator,20,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,25.5,Published article; use for internal linking and future expansion.
+4041,chinese zodiac love compatibility calculator,20,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,25.5,Published article; use for internal linking and future expansion.
+4042,element chinese zodiac calculator,20,LOW,0,,calculator,Elements,supporting article or existing-page expansion,/guides/chinese-birth-signs/,25.5,Published article; use for internal linking and future expansion.
 4043,fast match chinese astrology,20,LOW,0,,compatibility,Compatibility,supporting article or existing-page expansion,Expand existing /,25.5,Already has a matching page; use for page expansion or supporting paragraph.
-4044,chinese birthday compatibility,40,LOW,1,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,25.3,Already has a matching page; use for page expansion or supporting paragraph.
-4045,chinese animal signs calculator,20,LOW,1,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,25,Already has a matching page; use for page expansion or supporting paragraph.
+4044,chinese birthday compatibility,40,LOW,1,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,25.3,Published article; use for internal linking and future expansion.
+4045,chinese animal signs calculator,20,LOW,1,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,25,Published article; use for internal linking and future expansion.
 4046,chinese calendar year 2022,20,MEDIUM,35,,year,Years,year guide,/guides/chinese-calendar-year-2022/,24.7,New article candidate.
-4047,four pillars chinese zodiac calculator,20,LOW,2,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,24.6,Already has a matching page; use for page expansion or supporting paragraph.
+4047,four pillars chinese zodiac calculator,20,LOW,2,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,24.6,Published article; use for internal linking and future expansion.
 4048,date of birth matching,2400,LOW,6,1.55,calculator,Compatibility,tool-support article,/guides/date-of-birth-matching/,24.5,Irrelevant to Chinese zodiac; exclude from publishing queue.
 4049,year of the rabbit for horse,30,LOW,0,,year,Horse / 2026,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,24.4,Already has a matching page; use for page expansion or supporting paragraph.
-4050,free chinese horoscope by date of birth,20,LOW,3,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,24.1,Already has a matching page; use for page expansion or supporting paragraph.
+4050,free chinese horoscope by date of birth,20,LOW,3,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,24.1,Published article; use for internal linking and future expansion.
 4051,chinese horoscope 1970,90,LOW,0,,year,General,supporting article or existing-page expansion,Expand existing /,24,Already has a matching page; use for page expansion or supporting paragraph.
 4052,chinese horoscope 2015,90,LOW,0,,year,General,supporting article or existing-page expansion,Expand existing /,24,Already has a matching page; use for page expansion or supporting paragraph.
 4053,chinese year compatibility,90,LOW,0,,year,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,24,Already has a matching page; use for page expansion or supporting paragraph.
@@ -4096,12 +4096,12 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 4095,year of the wooden tiger,50,LOW,0,,year,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,23.7,Already has a matching page; use for page expansion or supporting paragraph.
 4096,chinese animal years list,170,LOW,26,0.02,year,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,23.6,Already has a matching page; use for page expansion or supporting paragraph.
 4097,chinese zodiac years chart with elements,70,LOW,7,,year,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-elements/,23.5,Already has a matching page; use for page expansion or supporting paragraph.
-4098,chinese love calculator,30,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,23.4,Already has a matching page; use for page expansion or supporting paragraph.
-4099,lunar zodiac calculator,30,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,23.4,Already has a matching page; use for page expansion or supporting paragraph.
+4098,chinese love calculator,30,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,23.4,Published article; use for internal linking and future expansion.
+4099,lunar zodiac calculator,30,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,23.4,Published article; use for internal linking and future expansion.
 4100,list of chinese zodiac signs,70,LOW,8,0.03,general,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,23.3,Already has a matching page; use for page expansion or supporting paragraph.
 4101,chinese horoscope compatibility by birthdate,10,LOW,2,1.81,general,Compatibility,supporting article or existing-page expansion,Expand existing /,23.3,Already has a matching page; use for page expansion or supporting paragraph.
 4102,capricorn and leo love compatibility,18100,LOW,1,1.43,compatibility,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,23.2,Irrelevant to Chinese zodiac; exclude from publishing queue.
-4103,calculate my chinese zodiac sign,50,LOW,1,,general,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,23.2,Already has a matching page; use for page expansion or supporting paragraph.
+4103,calculate my chinese zodiac sign,50,LOW,1,,general,General,supporting article or existing-page expansion,/guides/chinese-birth-signs/,23.2,Published article; use for internal linking and future expansion.
 4104,chinese zodiac tiger symbol,50,LOW,1,,animal,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac/tiger/,23.2,Already has a matching page; use for page expansion or supporting paragraph.
 4105,determine chinese zodiac sign,50,LOW,1,,general,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,23.2,Already has a matching page; use for page expansion or supporting paragraph.
 4106,lunar new year animals in order,50,LOW,1,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,23.2,Already has a matching page; use for page expansion or supporting paragraph.
@@ -4157,99 +4157,99 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 4156,snake zodiac meaning,70,LOW,0,,animal,Snake / 2025,supporting article or existing-page expansion,Expand existing /chinese-zodiac/snake/,21.7,Already has a matching page; use for page expansion or supporting paragraph.
 4157,chinese zodiac sign finder,40,LOW,1,,general,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,21.3,Already has a matching page; use for page expansion or supporting paragraph.
 4158,next chinese year,70,LOW,1,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4159,accurate chinese zodiac calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4160,birth year according to chinese calendar,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4161,birth year in chinese calendar,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4162,birth year lunar calendar,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4163,birthday year of the tiger,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4164,chinese animal zodiac calculator,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4165,chinese astrology as per date of birth,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4166,chinese astrology compatibility by date of birth,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4167,chinese astrology future prediction by date of birth,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4168,chinese astrology marriage compatibility calculator,10,,,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4169,chinese birth animal calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4170,chinese birth date compatibility,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4171,chinese birth element calculator,10,LOW,0,,calculator,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4172,chinese birth element chart,10,,,,calculator,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-elements/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4173,chinese birth signs calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4174,chinese birthday compatibility calculator,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4175,chinese compatibility by date of birth,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4176,chinese compatibility calculator birthday,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4177,chinese compatibility calculator for marriage,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4178,chinese date of birth compatibility,10,,,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4179,chinese horoscope and element calculator,10,LOW,0,,calculator,Elements,supporting article or existing-page expansion,Expand existing /,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4180,chinese horoscope as per date of birth,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4181,chinese horoscope birth time,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4182,chinese horoscope by date of birth and time free,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4183,chinese horoscope calculator element,10,LOW,0,,calculator,Elements,supporting article or existing-page expansion,Expand existing /,21.2,Already has a matching page; use for page expansion or supporting paragraph.
+4159,accurate chinese zodiac calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4160,birth year according to chinese calendar,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4161,birth year in chinese calendar,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4162,birth year lunar calendar,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4163,birthday year of the tiger,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4164,chinese animal zodiac calculator,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4165,chinese astrology as per date of birth,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4166,chinese astrology compatibility by date of birth,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4167,chinese astrology future prediction by date of birth,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4168,chinese astrology marriage compatibility calculator,10,,,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4169,chinese birth animal calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4170,chinese birth date compatibility,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4171,chinese birth element calculator,10,LOW,0,,calculator,Elements,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4172,chinese birth element chart,10,,,,calculator,Elements,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4173,chinese birth signs calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4174,chinese birthday compatibility calculator,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4175,chinese compatibility by date of birth,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4176,chinese compatibility calculator birthday,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4177,chinese compatibility calculator for marriage,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4178,chinese date of birth compatibility,10,,,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4179,chinese horoscope and element calculator,10,LOW,0,,calculator,Elements,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4180,chinese horoscope as per date of birth,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4181,chinese horoscope birth time,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4182,chinese horoscope by date of birth and time free,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4183,chinese horoscope calculator element,10,LOW,0,,calculator,Elements,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
 4184,chinese horoscope find my sign,10,,,,calculator,General,supporting article or existing-page expansion,Expand existing /,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4185,chinese horoscope match calculator,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4186,chinese horoscope prediction by date of birth,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4187,chinese horoscope signs calculator,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,21.2,Already has a matching page; use for page expansion or supporting paragraph.
+4185,chinese horoscope match calculator,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4186,chinese horoscope prediction by date of birth,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4187,chinese horoscope signs calculator,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
 4188,chinese love compatibility test,10,LOW,0,,compatibility,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4189,chinese love match calculator,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4190,chinese lunar zodiac calculator,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4191,chinese year animal calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4192,chinese year of the rat birth years,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4193,chinese year signs calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4194,chinese zodiac ascendant calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4195,chinese zodiac birth date calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4196,chinese zodiac birth hour calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4197,chinese zodiac birth time calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
+4189,chinese love match calculator,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4190,chinese lunar zodiac calculator,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4191,chinese year animal calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4192,chinese year of the rat birth years,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4193,chinese year signs calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4194,chinese zodiac ascendant calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4195,chinese zodiac birth date calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4196,chinese zodiac birth hour calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4197,chinese zodiac birth time calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
 4198,chinese zodiac calculator 2022,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
 4199,chinese zodiac calculator 2023,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4200,chinese zodiac calculator detailed,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4201,chinese zodiac compatibility birthday,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4202,chinese zodiac compatibility chart love calculator,10,,,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4203,chinese zodiac day animal calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4204,chinese zodiac day sign calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4205,chinese zodiac five elements calculator,10,LOW,0,,calculator,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4206,chinese zodiac inner animal calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
+4200,chinese zodiac calculator detailed,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4201,chinese zodiac compatibility birthday,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4202,chinese zodiac compatibility chart love calculator,10,,,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4203,chinese zodiac day animal calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4204,chinese zodiac day sign calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4205,chinese zodiac five elements calculator,10,LOW,0,,calculator,Elements,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4206,chinese zodiac inner animal calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
 4207,chinese zodiac marriage match chart,10,,,,compatibility,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4208,chinese zodiac match calculator,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
+4208,chinese zodiac match calculator,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
 4209,chinese zodiac match chart,10,LOW,0,,compatibility,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4210,chinese zodiac secret animal calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4211,chinese zodiac sign calculator date birth,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4212,chinese zodiac sign calculator with elements,10,LOW,0,,calculator,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4213,chinese zodiac sign compatibility calculator,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4214,chinese zodiac sign date of birth,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4215,chinese zodiac sign element calculator,10,LOW,0,,calculator,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4216,chinese zodiac signs compatibility calculator,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4217,chinese zodiac yin yang element calculator,10,LOW,0,,calculator,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4218,compatibility calculator chinese zodiac,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4219,detailed chinese zodiac calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4220,find my chinese zodiac calculator,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
+4210,chinese zodiac secret animal calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4211,chinese zodiac sign calculator date birth,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4212,chinese zodiac sign calculator with elements,10,LOW,0,,calculator,Elements,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4213,chinese zodiac sign compatibility calculator,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4214,chinese zodiac sign date of birth,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4215,chinese zodiac sign element calculator,10,LOW,0,,calculator,Elements,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4216,chinese zodiac signs compatibility calculator,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4217,chinese zodiac yin yang element calculator,10,LOW,0,,calculator,Elements,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4218,compatibility calculator chinese zodiac,10,LOW,0,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4219,detailed chinese zodiac calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4220,find my chinese zodiac calculator,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
 4221,find your lunar new year sign,10,,,,calculator,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4222,free chinese zodiac calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4223,if today is your birthday chinese horoscope,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4224,inner animal chinese zodiac calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4225,lunar calendar zodiac calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4226,my chinese birth year,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4227,my chinese horoscope by date of birth,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4228,my chinese sign calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4229,my chinese zodiac animal calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4230,my chinese zodiac calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4231,online chinese astrology compatibility calculator,10,,,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4232,secret animal chinese zodiac calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4233,year of the dragon birth dates,10,LOW,0,,calculator,Dragon / 2024,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4234,year of the ox birthday,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4235,year of the rabbit birth dates,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4236,year of the rat birth dates,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4237,year of the tiger birthday,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
+4222,free chinese zodiac calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4223,if today is your birthday chinese horoscope,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4224,inner animal chinese zodiac calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4225,lunar calendar zodiac calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4226,my chinese birth year,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4227,my chinese horoscope by date of birth,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4228,my chinese sign calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4229,my chinese zodiac animal calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4230,my chinese zodiac calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4231,online chinese astrology compatibility calculator,10,,,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4232,secret animal chinese zodiac calculator,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4233,year of the dragon birth dates,10,LOW,0,,calculator,Dragon / 2024,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4234,year of the ox birthday,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4235,year of the rabbit birth dates,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4236,year of the rat birth dates,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4237,year of the tiger birthday,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
 4238,year of the tiger love,10,LOW,0,,compatibility,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4239,year of the tiger years of birth,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4240,year of tiger birth years,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4241,year of tiger birthday,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
-4242,zodiac sign chinese calculator,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,21.2,Already has a matching page; use for page expansion or supporting paragraph.
+4239,year of the tiger years of birth,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4240,year of tiger birth years,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4241,year of tiger birthday,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
+4242,zodiac sign chinese calculator,10,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,21.2,Published article; use for internal linking and future expansion.
 4243,past chinese new year animals,40,LOW,2,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,20.9,Already has a matching page; use for page expansion or supporting paragraph.
-4244,chinese animal birth year chart,30,LOW,17,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,20.8,Already has a matching page; use for page expansion or supporting paragraph.
+4244,chinese animal birth year chart,30,LOW,17,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,20.8,Published article; use for internal linking and future expansion.
 4245,eastern zodiac chart,20,MEDIUM,33,0.02,general,General,guide article,/guides/eastern-zodiac-chart/,20.8,New article candidate.
-4246,birthday chinese zodiac calculator,10,LOW,1,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,20.8,Already has a matching page; use for page expansion or supporting paragraph.
+4246,birthday chinese zodiac calculator,10,LOW,1,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,20.8,Published article; use for internal linking and future expansion.
 4247,chinese year chart,480,MEDIUM,45,0.03,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,20.6,Already has a matching page; use for page expansion or supporting paragraph.
-4248,zodiac animal calculator,20,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,20.5,Already has a matching page; use for page expansion or supporting paragraph.
+4248,zodiac animal calculator,20,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,20.5,Published article; use for internal linking and future expansion.
 4249,chinese animal month chart,10,MEDIUM,35,,general,General,guide article,/guides/chinese-animal-month-chart/,20.5,New article candidate.
 4250,12 chinese zodiac signs in order,40,LOW,3,,general,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,20.4,Already has a matching page; use for page expansion or supporting paragraph.
-4251,chinese love compatibility calculator,10,LOW,2,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,20.3,Already has a matching page; use for page expansion or supporting paragraph.
+4251,chinese love compatibility calculator,10,LOW,2,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,20.3,Published article; use for internal linking and future expansion.
 4252,chinese element and animal chart,20,LOW,5,,element,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-elements/,20.2,Already has a matching page; use for page expansion or supporting paragraph.
 4253,asian new year animals,40,LOW,4,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,20,Already has a matching page; use for page expansion or supporting paragraph.
 4254,zodiac chinese new year,70,LOW,16,0.01,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,19.6,Already has a matching page; use for page expansion or supporting paragraph.
@@ -4309,15 +4309,15 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 4308,gold snake zodiac,50,LOW,1,,animal,Snake / 2025,supporting article or existing-page expansion,Expand existing /chinese-zodiac/snake/,18.2,Already has a matching page; use for page expansion or supporting paragraph.
 4309,lunar year zodiac,50,LOW,1,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,18.2,Already has a matching page; use for page expansion or supporting paragraph.
 4310,wood tiger year,50,LOW,1,,year,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,18.2,Already has a matching page; use for page expansion or supporting paragraph.
-4311,calculate chinese zodiac element,10,LOW,0,,element,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-elements/,18.2,Already has a matching page; use for page expansion or supporting paragraph.
-4312,calculate my chinese zodiac sign and element,10,LOW,0,,element,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,18.2,Already has a matching page; use for page expansion or supporting paragraph.
+4311,calculate chinese zodiac element,10,LOW,0,,element,Elements,supporting article or existing-page expansion,/guides/chinese-birth-signs/,18.2,Published article; use for internal linking and future expansion.
+4312,calculate my chinese zodiac sign and element,10,LOW,0,,element,Elements,supporting article or existing-page expansion,/guides/chinese-birth-signs/,18.2,Published article; use for internal linking and future expansion.
 4313,chinese zodiac finder with element,10,LOW,0,,element,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-elements/,18.2,Already has a matching page; use for page expansion or supporting paragraph.
 4314,chinese zodiac signs water tiger,10,,,,element,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,18.2,Already has a matching page; use for page expansion or supporting paragraph.
 4315,the water tiger in chinese astrology,10,LOW,0,,element,Elements,supporting article or existing-page expansion,Expand existing /,18.2,Already has a matching page; use for page expansion or supporting paragraph.
 4316,libra and taurus friendship,1000,LOW,0,2.47,compatibility,General,compatibility article,/guides/libra-and-taurus-friendship/,18.1,Irrelevant to Chinese zodiac; exclude from publishing queue.
-4317,chinese fortune telling calculator,10,LOW,7,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,18.1,Already has a matching page; use for page expansion or supporting paragraph.
-4318,chinese zodiac true animal calculator,10,LOW,7,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,18.1,Already has a matching page; use for page expansion or supporting paragraph.
-4319,free chinese astrology predictions by date of birth,10,LOW,7,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,18.1,Already has a matching page; use for page expansion or supporting paragraph.
+4317,chinese fortune telling calculator,10,LOW,7,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,18.1,Published article; use for internal linking and future expansion.
+4318,chinese zodiac true animal calculator,10,LOW,7,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,18.1,Published article; use for internal linking and future expansion.
+4319,free chinese astrology predictions by date of birth,10,LOW,7,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,18.1,Published article; use for internal linking and future expansion.
 4320,zodiac animal signs by month,50,HIGH,72,0.32,general,General,guide article,/guides/zodiac-animal-signs-by-month/,17.8,New article candidate.
 4321,birth chart compatibility,22200,LOW,8,1.86,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,17.7,Irrelevant to Chinese zodiac; exclude from publishing queue.
 4322,chinese horoscope 2022 horse,10,,,,year,Horse / 2026,supporting article or existing-page expansion,Expand existing /,17.2,Already has a matching page; use for page expansion or supporting paragraph.
@@ -4330,7 +4330,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 4329,metal tiger year,40,LOW,0,,year,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,16.8,Already has a matching page; use for page expansion or supporting paragraph.
 4330,ox zodiac animal,40,LOW,0,,animal,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac/ox/,16.8,Already has a matching page; use for page expansion or supporting paragraph.
 4331,water ox year,40,LOW,0,,year,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,16.8,Already has a matching page; use for page expansion or supporting paragraph.
-4332,chinese zodiac bazi calculator,10,LOW,10,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,16.7,Already has a matching page; use for page expansion or supporting paragraph.
+4332,chinese zodiac bazi calculator,10,LOW,10,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,16.7,Published article; use for internal linking and future expansion.
 4333,year of the animals list,50,LOW,16,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,16.5,Already has a matching page; use for page expansion or supporting paragraph.
 4334,animal from chinese horoscope,20,LOW,0,,general,General,supporting article or existing-page expansion,Expand existing /,16.5,Already has a matching page; use for page expansion or supporting paragraph.
 4335,animals from chinese horoscope,20,LOW,0,,general,General,supporting article or existing-page expansion,Expand existing /,16.5,Already has a matching page; use for page expansion or supporting paragraph.
@@ -4367,12 +4367,12 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 4366,year of the rabbit predictions,20,LOW,0,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,16.5,Already has a matching page; use for page expansion or supporting paragraph.
 4367,year of the tiger ages,20,LOW,0,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,16.5,Already has a matching page; use for page expansion or supporting paragraph.
 4368,year of the tiger list,20,LOW,0,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,16.5,Already has a matching page; use for page expansion or supporting paragraph.
-4369,tiger year birthday,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,16.2,Already has a matching page; use for page expansion or supporting paragraph.
+4369,tiger year birthday,10,LOW,0,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,16.2,Published article; use for internal linking and future expansion.
 4370,gemini and taurus love compatibility,14800,LOW,2,0.85,compatibility,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,16,Irrelevant to Chinese zodiac; exclude from publishing queue.
 4371,tiger eye zodiac,50,LOW,6,,animal,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac/tiger/,16,Already has a matching page; use for page expansion or supporting paragraph.
 4372,year of the tiger compatible signs,20,LOW,1,,year,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,16,Already has a matching page; use for page expansion or supporting paragraph.
-4373,chinese zodiac birth year chart,30,LOW,29,0.01,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,15.5,Already has a matching page; use for page expansion or supporting paragraph.
-4374,chinese zodiac birth years chart,30,LOW,29,0.01,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,15.5,Already has a matching page; use for page expansion or supporting paragraph.
+4373,chinese zodiac birth year chart,30,LOW,29,0.01,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,15.5,Published article; use for internal linking and future expansion.
+4374,chinese zodiac birth years chart,30,LOW,29,0.01,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,15.5,Published article; use for internal linking and future expansion.
 4375,pisces and taurus love compatibility,14800,LOW,2,0.76,compatibility,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,15.3,Irrelevant to Chinese zodiac; exclude from publishing queue.
 4376,male pisces,12100,LOW,8,0.06,general,General,guide article,/guides/male-pisces/,14.9,Irrelevant to Chinese zodiac; exclude from publishing queue.
 4377,horoscope matches,4400,LOW,6,1.23,general,Compatibility,guide article,/guides/horoscope-matches/,14.6,Irrelevant to Chinese zodiac; exclude from publishing queue.
@@ -4390,11 +4390,11 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 4389,taurus and scorpio match,18100,LOW,2,0.38,compatibility,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,14.3,Irrelevant to Chinese zodiac; exclude from publishing queue.
 4390,leo and capricorn compatibility,18100,LOW,1,1.43,general,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,14.2,Irrelevant to Chinese zodiac; exclude from publishing queue.
 4391,capricorn compatibility with leo,18100,LOW,1,1.43,general,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,14.2,Irrelevant to Chinese zodiac; exclude from publishing queue.
-4392,chinese and western astrology compatibility calculator,0,,,,calculator,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-calculator/,14,Already has a matching page; use for page expansion or supporting paragraph.
+4392,chinese and western astrology compatibility calculator,0,,,,calculator,Compatibility,supporting article or existing-page expansion,/guides/chinese-birth-signs/,14,Published article; use for internal linking and future expansion.
 4393,chinese horoscope 2022 calculator,0,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,14,Already has a matching page; use for page expansion or supporting paragraph.
 4394,chinese horoscope 2023 calculator,0,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,14,Already has a matching page; use for page expansion or supporting paragraph.
 4395,find my chinese zodiac day month year,0,,,,calculator,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,14,Already has a matching page; use for page expansion or supporting paragraph.
-4396,free chinese astrology by date of birth and time,0,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /,14,Already has a matching page; use for page expansion or supporting paragraph.
+4396,free chinese astrology by date of birth and time,0,,,,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,14,Published article; use for internal linking and future expansion.
 4397,aries and scorpio,8100,LOW,2,0.11,general,General,guide article,/guides/aries-and-scorpio/,13.8,Irrelevant to Chinese zodiac; exclude from publishing queue.
 4398,aries scorpio,8100,LOW,2,0.11,general,General,guide article,/guides/aries-scorpio/,13.8,Irrelevant to Chinese zodiac; exclude from publishing queue.
 4399,taurus lucky number today,2400,LOW,0,0.21,meaning,Meaning / Lucky Symbols,animal guide,/guides/taurus-lucky-number-today/,13.8,Irrelevant to Chinese zodiac; exclude from publishing queue.
@@ -4453,7 +4453,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 4452,born in the year of the water tiger,10,,,,year,Elements,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,12.2,Already has a matching page; use for page expansion or supporting paragraph.
 4453,born on the year of the tiger,10,LOW,0,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,12.2,Already has a matching page; use for page expansion or supporting paragraph.
 4454,born under year of the tiger,10,,,,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,12.2,Already has a matching page; use for page expansion or supporting paragraph.
-4455,calculate your chinese zodiac sign,10,,,,general,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,12.2,Already has a matching page; use for page expansion or supporting paragraph.
+4455,calculate your chinese zodiac sign,10,,,,general,General,supporting article or existing-page expansion,/guides/chinese-birth-signs/,12.2,Published article; use for internal linking and future expansion.
 4456,chart for chinese animal years,10,,,,year,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,12.2,Already has a matching page; use for page expansion or supporting paragraph.
 4457,chinese and western astrology compatibility chart,10,LOW,0,,general,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,12.2,Already has a matching page; use for page expansion or supporting paragraph.
 4458,chinese astrology 2022 ox,10,,,,year,General,supporting article or existing-page expansion,Expand existing /,12.2,Already has a matching page; use for page expansion or supporting paragraph.
@@ -5110,7 +5110,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 5109,aquarius cancer,5400,LOW,4,0.19,general,General,guide article,/guides/aquarius-cancer/,9.3,Irrelevant to Chinese zodiac; exclude from publishing queue.
 5110,libra scorpio,5400,LOW,2,0.08,general,General,guide article,/guides/libra-scorpio/,9.3,Irrelevant to Chinese zodiac; exclude from publishing queue.
 5111,cancer and leo love compatibility,14800,LOW,4,0.11,compatibility,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,9.2,Irrelevant to Chinese zodiac; exclude from publishing queue.
-5112,chinese animal birth calendar,10,HIGH,80,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-animal-birth-calendar/,9.2,New article candidate.
+5112,chinese animal birth calendar,10,HIGH,80,,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,9.2,Published article; use for internal linking and future expansion.
 5113,gemini and aries,5400,LOW,2,0.05,general,General,guide article,/guides/gemini-and-aries/,9.1,Irrelevant to Chinese zodiac; exclude from publishing queue.
 5114,virgo and cancer,5400,LOW,2,0.05,general,General,guide article,/guides/virgo-and-cancer/,9.1,Irrelevant to Chinese zodiac; exclude from publishing queue.
 5115,gemini aries,5400,LOW,2,0.05,general,General,guide article,/guides/gemini-aries/,9.1,Irrelevant to Chinese zodiac; exclude from publishing queue.
@@ -5147,7 +5147,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 5146,capricorn and pisces,4400,LOW,3,0.28,general,General,guide article,/guides/capricorn-and-pisces/,8.4,Irrelevant to Chinese zodiac; exclude from publishing queue.
 5147,libra and capricorn,4400,LOW,2,0.23,general,General,guide article,/guides/libra-and-capricorn/,8.4,Irrelevant to Chinese zodiac; exclude from publishing queue.
 5148,capricorn libra,4400,LOW,2,0.23,general,General,guide article,/guides/capricorn-libra/,8.4,Irrelevant to Chinese zodiac; exclude from publishing queue.
-5149,chinese birth year signs chart,10,LOW,29,0.03,calculator,Calculator / Birthday,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,8.4,Already has a matching page; use for page expansion or supporting paragraph.
+5149,chinese birth year signs chart,10,LOW,29,0.03,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,8.4,Published article; use for internal linking and future expansion.
 5150,pisces and leo match,14800,LOW,6,0.11,compatibility,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,8.3,Irrelevant to Chinese zodiac; exclude from publishing queue.
 5151,show me the chinese zodiac,70,HIGH,97,0.16,general,General,guide article,/guides/show-me-the-chinese-zodiac/,8.3,New article candidate.
 5152,gemini soulmate,1900,LOW,1,1.2,general,General,guide article,/guides/gemini-soulmate/,7.9,Irrelevant to Chinese zodiac; exclude from publishing queue.

@@ -6,7 +6,7 @@ const SITE = {
   name: "Chinese Zodiac Guide",
   url: "https://www.chinesezodiacfinder.com",
   description: "Find your Chinese zodiac sign, zodiac year, animal meaning, and traditional compatibility with a fast cultural reference tool.",
-  assetVersion: "20260627-16"
+  assetVersion: "20260627-17"
 };
 const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || "G-VB9E7T2VCF";
 
@@ -68,6 +68,18 @@ const guides = [
     path: "/guides/what-chinese-zodiac-sign-am-i/",
     category: "Calculator Guides",
     description: "Learn how to find your Chinese zodiac sign by birth date and Lunar New Year boundary."
+  },
+  {
+    title: "Fire Horse Chinese Zodiac",
+    path: "/guides/fire-horse-zodiac/",
+    category: "Element Guides",
+    description: "Fire Horse years, 2026 context, traditional meaning, personality associations, and Lunar New Year boundaries."
+  },
+  {
+    title: "Chinese Birth Signs by Birthday",
+    path: "/guides/chinese-birth-signs/",
+    category: "Calculator Guides",
+    description: "Learn how Chinese birth signs work by birthday and why Lunar New Year matters for January and February births."
   },
   {
     title: "Dragon Chinese Zodiac: Years and Meaning",
@@ -678,6 +690,177 @@ await writePage("/guides/", pageLayout({
       </div>
       <a class="button-link" href="/chinese-zodiac-calculator/">Open calculator</a>
     </section>`
+}));
+
+await writePage("/guides/fire-horse-zodiac/", pageLayout({
+  title: "Fire Horse Chinese Zodiac: Years, Meaning, Personality, and 2026",
+  description: "Learn what Fire Horse means in Chinese zodiac culture, including Fire Horse years, 2026 context, personality associations, and Lunar New Year boundaries.",
+  path: "/guides/fire-horse-zodiac/",
+  h1: "Fire Horse Chinese Zodiac",
+  intro: "The Fire Horse combines the Horse zodiac animal with the Fire element, a traditional pairing linked with energy, movement, visibility, and independence.",
+  faqs: [
+    { q: "What is a Fire Horse in Chinese zodiac?", a: "A Fire Horse is a Horse year paired with the Fire element in the 60-year Chinese zodiac cycle. It is traditionally associated with movement, expression, energy, and independence." },
+    { q: "Is 2026 a Fire Horse year?", a: "Yes. 2026 is a Fire Horse year, and it begins on February 17, 2026, the Lunar New Year date for that year." },
+    { q: "What years are Fire Horse years?", a: "Modern Fire Horse years include 1966 and 2026. The next Fire Horse year after 2026 will be 2086." },
+    { q: "Is Fire Horse personality scientific?", a: "No. Fire Horse personality descriptions are cultural associations, not scientific personality tests or fixed predictions." }
+  ],
+  articleSidebar: true,
+  body: `
+    ${articleSearchBlock()}
+    <section class="content-section article-body">
+      <p class="lead-answer">A Fire Horse is a Horse year combined with the Fire element in the traditional 60-year Chinese zodiac cycle. Modern Fire Horse years include 1966 and 2026. The 2026 Fire Horse year begins on February 17, 2026, so a person born before that Lunar New Year date still belongs to the previous zodiac year.</p>
+      <p>The Fire Horse topic is popular because it combines two vivid symbols. Horse is associated with movement, freedom, speed, and social energy. Fire is associated with warmth, expression, visibility, and active momentum. Together, Fire Horse is usually described as one of the more energetic element-animal combinations in Chinese zodiac culture.</p>
+    </section>
+    <section class="content-section split">
+      <div>
+        <p class="eyebrow">Short Answer</p>
+        <h2>What does Fire Horse mean?</h2>
+        <p>Fire Horse means the Horse zodiac animal is paired with the Fire element. In cultural explanations, this pairing emphasizes independence, forward motion, expression, and visible action. It should be read as symbolic tradition, not as a prediction about a person's future.</p>
+      </div>
+      <div class="fact-card">
+        <strong>Fire Horse facts</strong>
+        <span>Recent years: 1966, 2026</span>
+        <span>2026 starts: February 17, 2026</span>
+        <span>Animal: Horse</span>
+        <span>Element: Fire</span>
+      </div>
+    </section>
+    <section class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">Years</p>
+        <h2>Fire Horse years and calendar boundaries</h2>
+      </div>
+      <p>The Chinese zodiac uses a 12-animal cycle and a 5-element cycle. When the animal and element are combined, the full cycle repeats every 60 years. That is why 1966 and 2026 are both Fire Horse years.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Fire Horse year</th><th>Lunar New Year start</th><th>Traditional reading</th></tr></thead>
+          <tbody>
+            <tr><td>1966</td><td>January 21, 1966</td><td>Fire Horse in the modern 60-year cycle.</td></tr>
+            <tr><td>2026</td><td>February 17, 2026</td><td>Fire Horse year for the current cycle.</td></tr>
+            <tr><td>2086</td><td>Future cycle</td><td>The next Fire Horse year after 2026.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>If a birthday falls in January or early February, check the exact Lunar New Year date before assigning the sign. This is the most common mistake in Fire Horse searches.</p>
+    </section>
+    <section class="content-section">
+      <h2>Fire Horse personality associations</h2>
+      <p>Fire Horse descriptions usually combine the active image of the Horse with the expressive image of Fire. Common cultural associations include:</p>
+      <ul class="article-list">
+        <li>Energetic, active, and quick to move toward new situations.</li>
+        <li>Independent and uncomfortable with overly narrow routines.</li>
+        <li>Expressive, visible, and often socially noticeable.</li>
+        <li>Warm, enthusiastic, and direct in style.</li>
+        <li>Sometimes impatient when progress feels slow.</li>
+      </ul>
+      <p>These are not scientific claims. A useful reading is that Fire Horse symbolism describes a lively, outward-moving image within Chinese zodiac tradition. Real personality depends on upbringing, choices, context, and lived experience.</p>
+    </section>
+    <section class="content-section">
+      <h2>Why 2026 is often called a Fire Horse year</h2>
+      <p>In the 2026 zodiac year, the animal is Horse and the element is Fire. On this site, 2026 is treated as a Fire Horse year from February 17, 2026, through the day before the next Lunar New Year in 2027.</p>
+      <p>This distinction matters for both searchers and content planning. Someone born on February 10, 2026 is not yet in the Fire Horse year, while someone born on February 20, 2026 is. The zodiac calculator is the safest way to check an individual birthday.</p>
+      <a class="button-link" href="/chinese-zodiac-calculator/">Check a birth date</a>
+    </section>
+    <section class="content-section">
+      <h2>Fire Horse compared with other Horse elements</h2>
+      <p>Every Horse year has the same animal base, but the element changes the traditional wording. Fire Horse tends to emphasize expression and visible movement. Metal Horse may be described with more structure and resolve. Water Horse may be described with more adaptability. Wood Horse often emphasizes growth and flexibility, while Earth Horse emphasizes stability and practical support.</p>
+      <p>The element is best used as a cultural layer on top of the animal, not as a separate fortune-telling result.</p>
+    </section>
+    ${relatedGuidesBlock("Related Fire Horse guides", [
+      guides.find((guide) => guide.path === "/year-of-the-horse-2026/"),
+      guides.find((guide) => guide.path === "/guides/horse-chinese-zodiac/"),
+      guides.find((guide) => guide.path === "/chinese-zodiac/horse/"),
+      guides.find((guide) => guide.path === "/chinese-zodiac-elements/")
+    ].filter(Boolean))}
+    ${faqBlock([
+      { q: "What is a Fire Horse in Chinese zodiac?", a: "A Fire Horse is a Horse year paired with the Fire element in the 60-year Chinese zodiac cycle. It is traditionally associated with movement, expression, energy, and independence." },
+      { q: "Is 2026 a Fire Horse year?", a: "Yes. 2026 is a Fire Horse year, and it begins on February 17, 2026, the Lunar New Year date for that year." },
+      { q: "What years are Fire Horse years?", a: "Modern Fire Horse years include 1966 and 2026. The next Fire Horse year after 2026 will be 2086." },
+      { q: "Is Fire Horse personality scientific?", a: "No. Fire Horse personality descriptions are cultural associations, not scientific personality tests or fixed predictions." }
+    ])}`
+}));
+
+await writePage("/guides/chinese-birth-signs/", pageLayout({
+  title: "Chinese Birth Signs by Birthday: Find Your Zodiac Animal Correctly",
+  description: "Learn how Chinese birth signs work by birthday, why Lunar New Year matters, and how to avoid the common January and February zodiac mistake.",
+  path: "/guides/chinese-birth-signs/",
+  h1: "Chinese Birth Signs by Birthday",
+  intro: "Chinese birth signs are based on your birth date and the Lunar New Year boundary, not simply the January-to-December Gregorian year.",
+  faqs: [
+    { q: "How do I find my Chinese birth sign?", a: "Use your full birth date and compare it with the Lunar New Year date for that year. If your birthday is before Lunar New Year, use the previous zodiac year." },
+    { q: "Does Chinese zodiac use birthday or birth year?", a: "It uses the birth year, but the year changes at Lunar New Year. That means the full birthday is needed for January and February births." },
+    { q: "Why are January and February birthdays different?", a: "Many Lunar New Year dates fall in January or February, so early-year birthdays can belong to the previous Chinese zodiac year." },
+    { q: "Can I use a calculator for Chinese birth signs?", a: "Yes. A Lunar New Year-aware calculator is the easiest way to avoid assigning the wrong zodiac sign." }
+  ],
+  articleSidebar: true,
+  body: `
+    ${articleSearchBlock()}
+    <section class="tool-page">${zodiacCalculatorBlock()}</section>
+    <section class="content-section article-body">
+      <p class="lead-answer">To find Chinese birth signs correctly, use the full birthday. Chinese zodiac signs are based on zodiac years, but those years begin at Lunar New Year, not January 1. If your birthday is before Lunar New Year in your birth year, your Chinese birth sign belongs to the previous zodiac year.</p>
+      <p>This is why a person born in January or early February can have a different Chinese zodiac sign from someone born later in the same Gregorian year.</p>
+    </section>
+    <section class="content-section split">
+      <div>
+        <p class="eyebrow">Short Answer</p>
+        <h2>How do Chinese birth signs work?</h2>
+        <p>Chinese birth signs use the zodiac animal for the lunar year of birth. The correct sign depends on whether the birthday falls before or after that year's Lunar New Year. For most birthdays after Lunar New Year, the Gregorian year is enough; for early-year birthdays, the exact date matters.</p>
+      </div>
+      <div class="fact-card">
+        <strong>Birth sign rule</strong>
+        <span>Use full birth date</span>
+        <span>Check Lunar New Year</span>
+        <span>Before Lunar New Year: previous sign</span>
+        <span>After Lunar New Year: current sign</span>
+      </div>
+    </section>
+    <section class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">Method</p>
+        <h2>How to find your Chinese birth sign</h2>
+      </div>
+      <ol class="article-list">
+        <li>Write down the full birth date: year, month, and day.</li>
+        <li>Look up the Lunar New Year date for that Gregorian year.</li>
+        <li>If the birthday is before Lunar New Year, use the previous zodiac year.</li>
+        <li>If the birthday is on or after Lunar New Year, use the zodiac year that begins on that date.</li>
+        <li>Read the animal first, then add the element if you need a more specific traditional description.</li>
+      </ol>
+      <p>This date check is more reliable than guessing from the birth year alone.</p>
+    </section>
+    <section class="content-section">
+      <h2>Why January and February birthdays need extra checking</h2>
+      <p>The Lunar New Year date changes each year. It usually falls between late January and mid-February. Because of that, birthdays in this period can be confusing. A January 1990 birthday, for example, may still belong to the previous zodiac year, while a March 1990 birthday belongs to the zodiac year that started in 1990.</p>
+      <p>For users, the practical rule is simple: if the birthday is in January or February, check the calendar boundary. If the birthday is from March through December, the Gregorian year usually matches the Chinese zodiac year for practical lookup.</p>
+    </section>
+    <section class="content-section">
+      <h2>Birth sign, zodiac animal, and element</h2>
+      <p>The birth sign usually means the zodiac animal: Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Goat, Monkey, Rooster, Dog, or Pig. Each year also has an element: Wood, Fire, Earth, Metal, or Water. Together, the animal and element form a more specific 60-year cycle label, such as Fire Horse, Wood Dragon, or Metal Snake.</p>
+      <p>For most visitors, the first step is finding the correct animal. The element can be added after the date boundary is clear.</p>
+      <div class="fact-grid">
+        <div><strong>Animal cycle</strong><span>12 signs</span></div>
+        <div><strong>Element cycle</strong><span>5 elements</span></div>
+        <div><strong>Full cycle</strong><span>60 years</span></div>
+      </div>
+    </section>
+    <section class="content-section">
+      <h2>Common mistakes when checking Chinese birth signs</h2>
+      <p>The first mistake is using January 1 as the zodiac boundary. The second mistake is using only a birth year for a January or February birthday. The third mistake is treating zodiac personality notes as fixed facts. Chinese birth signs are part of cultural tradition and symbolic learning; they are not scientific personality tests or life predictions.</p>
+      <p>Use the result for cultural context, learning, naming inspiration, or entertainment. Do not use it as professional advice about relationships, career, health, money, or major life decisions.</p>
+    </section>
+    ${relatedGuidesBlock("Related birth sign guides", [
+      guides.find((guide) => guide.path === "/chinese-zodiac-calculator/"),
+      guides.find((guide) => guide.path === "/guides/what-chinese-zodiac-sign-am-i/"),
+      guides.find((guide) => guide.path === "/chinese-zodiac-years/"),
+      guides.find((guide) => guide.path === "/chinese-zodiac-animals/"),
+      guides.find((guide) => guide.path === "/chinese-zodiac-elements/")
+    ].filter(Boolean))}
+    ${faqBlock([
+      { q: "How do I find my Chinese birth sign?", a: "Use your full birth date and compare it with the Lunar New Year date for that year. If your birthday is before Lunar New Year, use the previous zodiac year." },
+      { q: "Does Chinese zodiac use birthday or birth year?", a: "It uses the birth year, but the year changes at Lunar New Year. That means the full birthday is needed for January and February births." },
+      { q: "Why are January and February birthdays different?", a: "Many Lunar New Year dates fall in January or February, so early-year birthdays can belong to the previous Chinese zodiac year." },
+      { q: "Can I use a calculator for Chinese birth signs?", a: "Yes. A Lunar New Year-aware calculator is the easiest way to avoid assigning the wrong zodiac sign." }
+    ])}`
 }));
 
 await writePage("/guides/horse-chinese-zodiac/", pageLayout({

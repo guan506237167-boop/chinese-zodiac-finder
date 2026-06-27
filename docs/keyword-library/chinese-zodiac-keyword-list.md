@@ -8,9 +8,9 @@
 - **行业:** Chinese Zodiac / Chinese Culture Tool
 - **最后更新:** 2026-06-27 13:35:00
 - **总关键词数:** 8531
-- **已发布文章使用:** 0
-- **现有页面覆盖:** 2041
-- **待使用:** 3125
+- **已发布文章使用:** 2
+- **现有页面覆盖:** 1859
+- **待使用:** 3307
 - **暂不发布 / 排除:** 3365
 
 # 关键词列表
@@ -19,14 +19,14 @@
 
 | 关键词 | 状态 | 搜索量 | 分类 |
 |---|---|---|---|
-| fire horse zodiac | 🟡 待发布 | very high | first-batch |
-| chinese birth signs | 🟡 待发布 | very high | first-batch |
 | fire rat chinese zodiac | 🟡 待发布 | medium | first-batch |
 | chinese zodiac earth tiger | 🟡 待发布 | medium | first-batch |
 | chinese zodiac fire rabbit | 🟡 待发布 | low | first-batch |
 | chinese zodiac water dragon | 🟡 待发布 | low | first-batch |
 | chinese zodiac water horse | 🟡 待发布 | low | first-batch |
 | fire dragon chinese zodiac | 🟡 待发布 | low | first-batch |
+| chinese zodiac fire ox | 🟡 待发布 | low | first-batch |
+| chinese zodiac earth snake | 🟡 待发布 | low | first-batch |
 
 ## 🗓 年份类关键词（适合批量模板页）
 
@@ -45,12 +45,12 @@
 | 1940 chinese zodiac | 🟡 待发布 | low | year |
 | 1933 chinese zodiac | 🟡 待发布 | low | year |
 | chinese zodiac 2031 | 🟡 待发布 | low | year |
-| chinese zodiac 2032 | 🟡 待发布 | low | year |
 
 ## 🧩 元素组合关键词（适合专题文章）
 
 | 关键词 | 状态 | 搜索量 | 分类 |
 |---|---|---|---|
+| year of the fire horse | ✅ 已发布 | very high | element |
 | chinese zodiac metal dragon | 🟡 待发布 | medium | element |
 | chinese zodiac metal horse | 🟡 待发布 | medium | element |
 | chinese zodiac water dragon | 🟡 待发布 | low | element |
@@ -70,12 +70,12 @@
 | fire dog chinese zodiac | 🟡 待发布 | low | element |
 | chinese zodiac water dog | 🟡 待发布 | low | element |
 | water ox zodiac | 🟡 待发布 | low | element |
-| fire snake chinese zodiac | 🟡 待发布 | low | element |
 
 ## 📌 泛主题关键词（需先看 SERP）
 
 | 关键词 | 状态 | 搜索量 | 分类 |
 |---|---|---|---|
+| birth year chinese zodiac | ✅ 已发布 | very high | general |
 
 ## ✅ 已有页面扩展词
 
@@ -84,12 +84,10 @@
 | the year of the horse | ✅ 已有页面 | very high | existing-page |
 | horse zodiac | ✅ 已有页面 | very high | existing-page |
 | year of dragon years | ✅ 已有页面 | very high | existing-page |
-| year of the fire horse | ✅ 已有页面 | very high | existing-page |
 | chinese year dragon | ✅ 已有页面 | very high | existing-page |
 | dragon year | ✅ 已有页面 | very high | existing-page |
 | dragon zodiac | ✅ 已有页面 | very high | existing-page |
 | dragon zodiac year | ✅ 已有页面 | very high | existing-page |
-| birth year chinese zodiac | ✅ 已有页面 | very high | existing-page |
 | year of the horse meaning | ✅ 已有页面 | high | existing-page |
 | year of the rat | ✅ 已有页面 | high | existing-page |
 | year of the rat years | ✅ 已有页面 | high | existing-page |
@@ -99,13 +97,15 @@
 | chinese zodiac love compatibility | ✅ 已有页面 | medium | existing-page |
 | horse zodiac meaning | ✅ 已有页面 | high | existing-page |
 | rat zodiac | ✅ 已有页面 | high | existing-page |
-| chinese zodiac sign calculator | ✅ 已有页面 | high | existing-page |
-| chinese birth sign calculator | ✅ 已有页面 | high | existing-page |
-| chinese zodiac chart calculator | ✅ 已有页面 | high | existing-page |
-| star sign chinese calculator | ✅ 已有页面 | high | existing-page |
-| chinese birth year animal | ✅ 已有页面 | very high | existing-page |
 | chinese signs by year | ✅ 已有页面 | very high | existing-page |
 | chinese astrology signs by year | ✅ 已有页面 | very high | existing-page |
+| chinese zodiac calendar years | ✅ 已有页面 | very high | existing-page |
+| chinese zodiac sign year | ✅ 已有页面 | very high | existing-page |
+| chinese zodiac signs and years | ✅ 已有页面 | very high | existing-page |
+| snake year | ✅ 已有页面 | very high | existing-page |
+| snake zodiac | ✅ 已有页面 | very high | existing-page |
+| chinese zodiac sign snake | ✅ 已有页面 | medium | existing-page |
+| chinese zodiac snake years | ✅ 已有页面 | medium | existing-page |
 
 ## 🚫 暂不发布 / 排除词
 
@@ -143,22 +143,22 @@
 
 | 关键词 | 状态 | 搜索量 | 搜索量级 | 分类 | 竞争度 |
 |---|---|---:|---|---|---:|
-| fire horse zodiac | 🟡 待发布 | 33100 | very high | Horse / 2026 | 12 |
-| fire horse chinese zodiac | 🟡 待发布 | 9900 | medium | Horse / 2026 | 9 |
+| fire horse zodiac | ✅ 已发布 | 33100 | very high | Horse / 2026 | 12 |
+| fire horse chinese zodiac | ✅ 已发布 | 9900 | medium | Horse / 2026 | 9 |
 | the year of the horse | ✅ 已有页面 | 110000 | very high | Horse / 2026 | 5 |
-| chinese birth signs | 🟡 待发布 | 49500 | very high | Calculator / Birthday | 25 |
+| chinese birth signs | ✅ 已发布 | 49500 | very high | Calculator / Birthday | 25 |
 | horse zodiac | ✅ 已有页面 | 110000 | very high | Horse / 2026 | 5 |
 | 1990 year of the chinese zodiac | 🟡 待发布 | 22200 | high | Years | 0 |
 | 1989 in chinese zodiac | 🟡 待发布 | 22200 | high | General | 0 |
 | 1989 year of the chinese zodiac | 🟡 待发布 | 22200 | high | Years | 0 |
 | 1996 year of the chinese zodiac | 🟡 待发布 | 22200 | high | Years | 0 |
 | 2003 year of the chinese zodiac | 🟡 待发布 | 22200 | high | Years | 0 |
-| chinese calendar birthday | 🟡 待发布 | 8100 | medium | Calculator / Birthday | 9 |
+| chinese calendar birthday | ✅ 已发布 | 8100 | medium | Calculator / Birthday | 9 |
 | 1985 year of the chinese zodiac | 🟡 待发布 | 18100 | high | Years | 0 |
 | 1986 year of the chinese zodiac | 🟡 待发布 | 18100 | high | Years | 0 |
 | chinese sign for 1985 | 🟡 待发布 | 18100 | high | General | 0 |
 | chinese sign for 1988 | 🟡 待发布 | 18100 | high | General | 0 |
-| calculate my chinese zodiac | 🟡 待发布 | 12100 | high | General | 0 |
+| calculate my chinese zodiac | ✅ 已发布 | 12100 | high | General | 0 |
 | 1994 chinese sign | 🟡 待发布 | 22200 | high | General | 0 |
 | 1994 chinese zodiac | 🟡 待发布 | 22200 | high | General | 0 |
 | 1994 zodiac animal | 🟡 待发布 | 22200 | high | General | 0 |
@@ -204,7 +204,7 @@
 | chinese sign for 1982 | 🟡 待发布 | 12100 | high | General | 0 |
 | chinese zodiac in 2010 | 🟡 待发布 | 12100 | high | General | 0 |
 | chinese zodiac of 2010 | 🟡 待发布 | 12100 | high | General | 0 |
-| year of the fire horse | ✅ 已有页面 | 40500 | very high | Horse / 2026 | 13 |
+| year of the fire horse | ✅ 已发布 | 40500 | very high | Horse / 2026 | 13 |
 | 2020 chinese zodiac | 🟡 待发布 | 9900 | medium | General | 0 |
 | 1991 chinese zodiac | 🟡 待发布 | 18100 | high | General | 0 |
 | 1991 zodiac animal | 🟡 待发布 | 18100 | high | General | 0 |
@@ -227,7 +227,7 @@
 | chinese sign 2001 | 🟡 待发布 | 18100 | high | General | 0 |
 | chinese year 1985 | 🟡 待发布 | 18100 | high | Years | 0 |
 | zodiac 1988 | 🟡 待发布 | 18100 | high | General | 0 |
-| calculate chinese sign | 🟡 待发布 | 12100 | high | General | 0 |
+| calculate chinese sign | ✅ 已发布 | 12100 | high | General | 0 |
 | chinese zodiac calc | 🟡 待发布 | 12100 | high | General | 0 |
 | chinese zodiac metal horse | 🟡 待发布 | 2900 | low | Horse / 2026 | 2 |
 | 1973 year of the chinese zodiac | 🟡 待发布 | 9900 | medium | Years | 0 |
@@ -249,17 +249,17 @@
 | 79 chinese zodiac | 🟡 待发布 | 14800 | high | General | 0 |
 | chinese sign 1979 | 🟡 待发布 | 14800 | high | General | 0 |
 | chinese sign 2007 | 🟡 待发布 | 14800 | high | General | 0 |
-| chinese calendar birth prediction | 🟡 待发布 | 4400 | medium | Calculator / Birthday | 27 |
+| chinese calendar birth prediction | ✅ 已发布 | 4400 | medium | Calculator / Birthday | 27 |
 | chinese lunar calendar | 🟡 待发布 | 4400 | medium | General | 1 |
 | chinese year dragon | ✅ 已有页面 | 40500 | very high | Dragon / 2024 | 0 |
 | dragon year | ✅ 已有页面 | 40500 | very high | Dragon / 2024 | 0 |
 | dragon zodiac | ✅ 已有页面 | 40500 | very high | Dragon / 2024 | 0 |
 | dragon zodiac year | ✅ 已有页面 | 40500 | very high | Dragon / 2024 | 0 |
-| chinese zodiac birthday chart | 🟡 待发布 | 5400 | medium | Calculator / Birthday | 13 |
+| chinese zodiac birthday chart | ✅ 已发布 | 5400 | medium | Calculator / Birthday | 13 |
 | 1955 year of the chinese zodiac | 🟡 待发布 | 5400 | medium | Years | 0 |
 | chinese sign for 1955 | 🟡 待发布 | 5400 | medium | General | 0 |
 | chinese zodiac water horse | 🟡 待发布 | 2400 | low | Horse / 2026 | 0 |
-| birth year chinese zodiac | ✅ 已有页面 | 90500 | very high | Calculator / Birthday | 25 |
+| birth year chinese zodiac | ✅ 已发布 | 90500 | very high | Calculator / Birthday | 25 |
 | 1980 chinese sign | 🟡 待发布 | 12100 | high | General | 0 |
 | 1980 chinese zodiac | 🟡 待发布 | 12100 | high | General | 0 |
 | 1974 chinese zodiac | 🟡 待发布 | 12100 | high | General | 0 |
@@ -332,10 +332,10 @@
 | 1952 year of the chinese zodiac | 🟡 待发布 | 4400 | medium | Years | 0 |
 | 1953 year of the chinese zodiac | 🟡 待发布 | 4400 | medium | Years | 0 |
 | 1965 chinese zodiac | 🟡 待发布 | 6600 | medium | General | 0 |
-| chinese zodiac sign calculator | ✅ 已有页面 | 12100 | high | Calculator / Birthday | 0 |
-| chinese birth sign calculator | ✅ 已有页面 | 12100 | high | Calculator / Birthday | 0 |
-| chinese zodiac chart calculator | ✅ 已有页面 | 12100 | high | Calculator / Birthday | 0 |
-| star sign chinese calculator | ✅ 已有页面 | 12100 | high | Calculator / Birthday | 0 |
+| chinese zodiac sign calculator | ✅ 已发布 | 12100 | high | Calculator / Birthday | 0 |
+| chinese birth sign calculator | ✅ 已发布 | 12100 | high | Calculator / Birthday | 0 |
+| chinese zodiac chart calculator | ✅ 已发布 | 12100 | high | Calculator / Birthday | 0 |
+| star sign chinese calculator | ✅ 已发布 | 12100 | high | Calculator / Birthday | 0 |
 | chinese zodiac and astrology | 🟡 待发布 | 12100 | high | General | 27 |
 | 1959 chinese zodiac | 🟡 待发布 | 6600 | medium | General | 0 |
 | chinese sign 1959 | 🟡 待发布 | 6600 | medium | General | 0 |
@@ -352,7 +352,7 @@
 | chinese sign 1962 | 🟡 待发布 | 6600 | medium | General | 0 |
 | lunar zodiac sign | 🟡 待发布 | 2400 | low | General | 4 |
 | 1951 year of the chinese zodiac | 🟡 待发布 | 3600 | medium | Years | 0 |
-| chinese birth year animal | ✅ 已有页面 | 40500 | very high | Calculator / Birthday | 24 |
+| chinese birth year animal | ✅ 已发布 | 40500 | very high | Calculator / Birthday | 24 |
 | 1956 chinese zodiac | 🟡 待发布 | 5400 | medium | General | 0 |
 | 2019 chinese zodiac | 🟡 待发布 | 5400 | medium | General | 0 |
 | chinese zodiac earth snake | 🟡 待发布 | 1900 | low | Snake / 2025 | 0 |
@@ -401,9 +401,9 @@
 | 1953 chinese zodiac | 🟡 待发布 | 4400 | medium | General | 0 |
 | chinese year 1953 | 🟡 待发布 | 4400 | medium | Years | 0 |
 | chinese zodiac horse years | ✅ 已有页面 | 8100 | medium | Horse / 2026 | 5 |
-| chinese zodiac calculator | ✅ 已有页面 | 12100 | high | Calculator / Birthday | 0 |
-| chinese horoscope calculator | ✅ 已有页面 | 12100 | high | Calculator / Birthday | 0 |
-| eastern zodiac calculator | ✅ 已有页面 | 12100 | high | Calculator / Birthday | 0 |
+| chinese zodiac calculator | ✅ 已发布 | 12100 | high | Calculator / Birthday | 0 |
+| chinese horoscope calculator | ✅ 已发布 | 12100 | high | Calculator / Birthday | 0 |
+| eastern zodiac calculator | ✅ 已发布 | 12100 | high | Calculator / Birthday | 0 |
 | earth horse chinese zodiac | 🟡 待发布 | 880 | low | Horse / 2026 | 0 |
 | year of the tiger | ✅ 已有页面 | 22200 | high | Years | 0 |
 | tiger in the year of the tiger | ✅ 已有页面 | 22200 | high | Years | 0 |
@@ -497,8 +497,8 @@
 | the year of the goat | ✅ 已有页面 | 14800 | high | Years | 0 |
 | chinese calendar horse | ✅ 已有页面 | 8100 | medium | Horse / 2026 | 5 |
 | chinese year horse | ✅ 已有页面 | 8100 | medium | Horse / 2026 | 5 |
-| chinese birth animal | 🟡 待发布 | 1300 | low | Calculator / Birthday | 5 |
-| chinese birthday animal | 🟡 待发布 | 1300 | low | Calculator / Birthday | 5 |
+| chinese birth animal | ✅ 已发布 | 1300 | low | Calculator / Birthday | 5 |
+| chinese birthday animal | ✅ 已发布 | 1300 | low | Calculator / Birthday | 5 |
 | 2002 year of the horse | 🟡 待发布 | 1000 | low | Horse / 2026 | 0 |
 | 1939 year of the chinese zodiac | 🟡 待发布 | 1600 | low | Years | 0 |
 | 1975 year of the chinese zodiac | 🟡 待发布 | 1600 | low | Years | 0 |
@@ -633,7 +633,7 @@
 | chinese year 1980 | 🟡 待发布 | 1900 | low | Years | 0 |
 | rabbit zodiac year | ✅ 已有页面 | 18100 | high | Years | 0 |
 | year of snake meaning | ✅ 已有页面 | 3600 | medium | Snake / 2025 | 0 |
-| fire horse chinese zodiac personality | 🟡 待发布 | 390 | low | Horse / 2026 | 0 |
+| fire horse chinese zodiac personality | ✅ 已发布 | 390 | low | Horse / 2026 | 0 |
 | 1991 chinese astrology | ✅ 已有页面 | 18100 | high | General | 0 |
 | 1991 chinese horoscope | ✅ 已有页面 | 18100 | high | General | 0 |
 | chinese zodiac 2025 | ✅ 已有页面 | 18100 | high | Snake / 2025 | 0 |
@@ -646,8 +646,8 @@
 | chinese horoscope 1993 | ✅ 已有页面 | 18100 | high | General | 0 |
 | chinese horoscope 2001 | ✅ 已有页面 | 18100 | high | General | 0 |
 | find chinese zodiac | 🟡 待发布 | 720 | low | General | 1 |
-| birth chinese calendar | 🟡 待发布 | 390 | low | Calculator / Birthday | 10 |
-| calculate chinese astrology | ✅ 已有页面 | 12100 | high | General | 0 |
+| birth chinese calendar | ✅ 已发布 | 390 | low | Calculator / Birthday | 10 |
+| calculate chinese astrology | ✅ 已发布 | 12100 | high | General | 0 |
 | chinese zodiac signs | ✅ 已有页面 | 49500 | very high | General | 25 |
 | asian zodiac signs | ✅ 已有页面 | 49500 | very high | General | 25 |
 | chinese astrological signs | ✅ 已有页面 | 49500 | very high | General | 25 |
@@ -754,9 +754,9 @@
 | chinese zodiac for ox | ✅ 已有页面 | 8100 | medium | General | 0 |
 | chinese zodiac ox sign | ✅ 已有页面 | 8100 | medium | General | 0 |
 | year ox chinese zodiac | ✅ 已有页面 | 8100 | medium | Years | 0 |
-| chinese zodiac compatibility calculator | ✅ 已有页面 | 1300 | low | Compatibility | 0 |
-| chinese horoscope compatibility calculator | ✅ 已有页面 | 1300 | low | Compatibility | 0 |
-| chinese sign compatibility calculator | ✅ 已有页面 | 1300 | low | Compatibility | 0 |
+| chinese zodiac compatibility calculator | ✅ 已发布 | 1300 | low | Compatibility | 0 |
+| chinese horoscope compatibility calculator | ✅ 已发布 | 1300 | low | Compatibility | 0 |
+| chinese sign compatibility calculator | ✅ 已发布 | 1300 | low | Compatibility | 0 |
 | 2014 year of the horse | 🟡 待发布 | 590 | low | Horse / 2026 | 4 |
 | chinese year of the rabbit | ✅ 已有页面 | 8100 | medium | Years | 0 |
 | 2013 chinese zodiac sign | ✅ 已有页面 | 8100 | medium | General | 0 |
@@ -777,7 +777,7 @@
 | chinese zodiac sign dog | ✅ 已有页面 | 3600 | medium | General | 0 |
 | 1996 year of the rat | 🟡 待发布 | 720 | low | Years | 1 |
 | chinese zodiac sign 1955 | ✅ 已有页面 | 5400 | medium | General | 0 |
-| chinese birth sign chart | 🟡 待发布 | 2400 | low | Calculator / Birthday | 47 |
+| chinese birth sign chart | ✅ 已发布 | 2400 | low | Calculator / Birthday | 47 |
 | chinese astrology year of the dragon | ✅ 已有页面 | 6600 | medium | Dragon / 2024 | 0 |
 | chinese zodiac sign dragon | ✅ 已有页面 | 6600 | medium | Dragon / 2024 | 0 |
 | dragon chinese zodiac symbol | ✅ 已有页面 | 6600 | medium | Dragon / 2024 | 0 |
@@ -818,20 +818,20 @@
 | traits of tiger chinese zodiac | 🟡 待发布 | 720 | low | Meaning / Lucky Symbols | 0 |
 | water ox chinese zodiac | 🟡 待发布 | 390 | low | Elements | 0 |
 | 1998 the year of the tiger | 🟡 待发布 | 720 | low | Years | 1 |
-| chinese horoscope if today is your birthday | ✅ 已有页面 | 1900 | low | Calculator / Birthday | 0 |
+| chinese horoscope if today is your birthday | ✅ 已发布 | 1900 | low | Calculator / Birthday | 0 |
 | lunar horoscope | 🟡 待发布 | 390 | low | General | 3 |
 | chinese zodiac sign animals | ✅ 已有页面 | 27100 | high | General | 33 |
 | chinese zodiac sign 1959 | ✅ 已有页面 | 6600 | medium | General | 0 |
 | chinese zodiac sign 1958 | ✅ 已有页面 | 6600 | medium | General | 0 |
 | earth ox zodiac | 🟡 待发布 | 590 | low | Elements | 0 |
-| birthday chinese zodiac | 🟡 待发布 | 480 | low | Calculator / Birthday | 3 |
-| chinese birth horoscope | 🟡 待发布 | 480 | low | Calculator / Birthday | 3 |
+| birthday chinese zodiac | ✅ 已发布 | 480 | low | Calculator / Birthday | 3 |
+| chinese birth horoscope | ✅ 已发布 | 480 | low | Calculator / Birthday | 3 |
 | chinese calendar predictions | 🟡 待发布 | 1000 | low | General | 22 |
 | chinese zodiac elements | ✅ 已有页面 | 9900 | medium | Elements | 0 |
 | chinese astrology elements | ✅ 已有页面 | 9900 | medium | Elements | 0 |
 | chinese horoscope elements | ✅ 已有页面 | 9900 | medium | Elements | 0 |
-| chinese zodiac calculator year month day hour | ✅ 已有页面 | 880 | low | Calculator / Birthday | 1 |
-| chinese zodiac year month day hour calculator | ✅ 已有页面 | 880 | low | Calculator / Birthday | 1 |
+| chinese zodiac calculator year month day hour | ✅ 已发布 | 880 | low | Calculator / Birthday | 1 |
+| chinese zodiac year month day hour calculator | ✅ 已发布 | 880 | low | Calculator / Birthday | 1 |
 | chinese horoscope 1975 | ✅ 已有页面 | 9900 | medium | General | 0 |
 | chinese zodiac calendar | 🟡 待发布 | 5400 | medium | General | 40 |
 | chinese calendar horoscope | 🟡 待发布 | 5400 | medium | General | 40 |
@@ -1216,12 +1216,12 @@
 | year of the monkey 2004 | 🟡 待发布 | 260 | low | Years | 0 |
 | year of the rat 2008 | 🟡 待发布 | 260 | low | Years | 0 |
 | zodiac sign of 1985 | 🟡 待发布 | 260 | low | General | 0 |
-| chinese birth calendar animal | 🟡 待发布 | 260 | low | Calculator / Birthday | 27 |
-| chinese birth symbol chart | 🟡 待发布 | 320 | low | Calculator / Birthday | 26 |
+| chinese birth calendar animal | ✅ 已发布 | 260 | low | Calculator / Birthday | 27 |
+| chinese birth symbol chart | ✅ 已发布 | 320 | low | Calculator / Birthday | 26 |
 | water dog chinese zodiac personality | 🟡 待发布 | 140 | low | Elements | 0 |
 | water dragon chinese zodiac personality | 🟡 待发布 | 140 | low | Dragon / 2024 | 0 |
 | water snake chinese zodiac personality | 🟡 待发布 | 140 | low | Snake / 2025 | 0 |
-| chinese horoscope by birth date and time | ✅ 已有页面 | 390 | low | Calculator / Birthday | 3 |
+| chinese horoscope by birth date and time | ✅ 已发布 | 390 | low | Calculator / Birthday | 3 |
 | dragon year 1976 | 🟡 待发布 | 390 | low | Dragon / 2024 | 1 |
 | chinese astrology | ✅ 已有页面 | 12100 | high | General | 27 |
 | 12 chinese zodiac | 🟡 待发布 | 1300 | low | General | 27 |
@@ -1287,12 +1287,12 @@
 | chinese zodiac dragon year | ✅ 已有页面 | 2400 | low | Dragon / 2024 | 1 |
 | 1964 year of the dragon | 🟡 待发布 | 260 | low | Dragon / 2024 | 3 |
 | dog zodiac sign personality | 🟡 待发布 | 260 | low | Meaning / Lucky Symbols | 7 |
-| chinese astrology element calculator | ✅ 已有页面 | 1000 | low | Elements | 1 |
-| chinese zodiac and element calculator | ✅ 已有页面 | 1000 | low | Elements | 1 |
-| chinese zodiac calculator element | ✅ 已有页面 | 1000 | low | Elements | 1 |
-| chinese zodiac with elements calculator | ✅ 已有页面 | 1000 | low | Elements | 1 |
+| chinese astrology element calculator | ✅ 已发布 | 1000 | low | Elements | 1 |
+| chinese zodiac and element calculator | ✅ 已发布 | 1000 | low | Elements | 1 |
+| chinese zodiac calculator element | ✅ 已发布 | 1000 | low | Elements | 1 |
+| chinese zodiac with elements calculator | ✅ 已发布 | 1000 | low | Elements | 1 |
 | year of the tiger 2022 | 🟡 待发布 | 210 | low | Years | 4 |
-| chinese animal birthday chart | 🟡 待发布 | 170 | low | Calculator / Birthday | 15 |
+| chinese animal birthday chart | ✅ 已发布 | 170 | low | Calculator / Birthday | 15 |
 | 1949 chinese astrology | ✅ 已有页面 | 3600 | medium | General | 0 |
 | chinese horoscope 1948 | ✅ 已有页面 | 3600 | medium | General | 0 |
 | chinese zodiac list | 🟡 待发布 | 320 | low | General | 5 |
@@ -1325,7 +1325,7 @@
 | january 1997 chinese zodiac | 🟡 待发布 | 210 | low | General | 0 |
 | lucky number for snake | 🟡 待发布 | 210 | low | Snake / 2025 | 0 |
 | year of ox 2009 | 🟡 待发布 | 210 | low | Years | 0 |
-| chinese birth month animal | 🟡 待发布 | 110 | low | Calculator / Birthday | 7 |
+| chinese birth month animal | ✅ 已发布 | 110 | low | Calculator / Birthday | 7 |
 | fire dog chinese zodiac personality | 🟡 待发布 | 110 | low | Elements | 0 |
 | wood monkey chinese zodiac personality | 🟡 待发布 | 110 | low | Elements | 0 |
 | wood rat chinese zodiac personality | 🟡 待发布 | 110 | low | Elements | 0 |
@@ -1376,7 +1376,7 @@
 | earth rabbit personality | 🟡 待发布 | 170 | low | Elements | 0 |
 | wood dog zodiac | 🟡 待发布 | 170 | low | Elements | 0 |
 | chinese sign of the tiger | ✅ 已有页面 | 1900 | low | General | 0 |
-| chinese zodiac compatibility calculator for marriage | ✅ 已有页面 | 260 | low | Compatibility | 1 |
+| chinese zodiac compatibility calculator for marriage | ✅ 已发布 | 260 | low | Compatibility | 1 |
 | 2027 year of the chinese zodiac | ✅ 已有页面 | 1900 | low | Years | 0 |
 | chinese calendar year of the ox | ✅ 已有页面 | 1900 | low | Years | 0 |
 | chinese year animal ox | ✅ 已有页面 | 1900 | low | Years | 0 |
@@ -1385,7 +1385,7 @@
 | year of ox chinese | ✅ 已有页面 | 1900 | low | Years | 0 |
 | my chinese zodiac sign | ✅ 已有页面 | 1600 | low | General | 2 |
 | chinese calendar for twins | 🟡 待发布 | 90 | low | General | 12 |
-| birth year chinese calendar | ✅ 已有页面 | 1000 | low | Calculator / Birthday | 8 |
+| birth year chinese calendar | ✅ 已发布 | 1000 | low | Calculator / Birthday | 8 |
 | find your chinese zodiac sign | ✅ 已有页面 | 720 | low | General | 1 |
 | find chinese astrology sign | ✅ 已有页面 | 720 | low | General | 1 |
 | find my chinese astrology sign | ✅ 已有页面 | 720 | low | General | 1 |
@@ -1468,7 +1468,7 @@
 | zodiac 1962 | 🟡 待发布 | 260 | low | General | 0 |
 | zodiac sign 1983 | 🟡 待发布 | 260 | low | General | 0 |
 | zodiac sign 2017 | 🟡 待发布 | 260 | low | General | 0 |
-| chinese birth symbols | 🟡 待发布 | 170 | low | Calculator / Birthday | 12 |
+| chinese birth symbols | ✅ 已发布 | 170 | low | Calculator / Birthday | 12 |
 | 2004 chinese year animal | 🟡 待发布 | 170 | low | Years | 2 |
 | metal dragon personality | 🟡 待发布 | 140 | low | Dragon / 2024 | 0 |
 | metal snake zodiac | 🟡 待发布 | 140 | low | Snake / 2025 | 0 |
@@ -1482,9 +1482,9 @@
 | year of the monkey personality | ✅ 已有页面 | 1600 | low | Meaning / Lucky Symbols | 0 |
 | year of the rat traits | ✅ 已有页面 | 1600 | low | Meaning / Lucky Symbols | 0 |
 | water tiger chinese astrology | ✅ 已有页面 | 880 | low | Elements | 0 |
-| complete chinese zodiac calculator | ✅ 已有页面 | 210 | low | Calculator / Birthday | 1 |
-| full chinese horoscope calculator | ✅ 已有页面 | 210 | low | Calculator / Birthday | 1 |
-| full chinese zodiac calculator | ✅ 已有页面 | 210 | low | Calculator / Birthday | 1 |
+| complete chinese zodiac calculator | ✅ 已发布 | 210 | low | Calculator / Birthday | 1 |
+| full chinese horoscope calculator | ✅ 已发布 | 210 | low | Calculator / Birthday | 1 |
+| full chinese zodiac calculator | ✅ 已发布 | 210 | low | Calculator / Birthday | 1 |
 | chinese animal year calendar | ✅ 已有页面 | 12100 | high | Years | 49 |
 | chinese zodiac | ✅ 已有页面 | 246000 | very high | General | 41 |
 | asian zodiac | ✅ 已有页面 | 246000 | very high | General | 41 |
@@ -1528,9 +1528,9 @@
 | earth snake chinese zodiac personality | 🟡 待发布 | 70 | low | Snake / 2025 | 0 |
 | fire rat chinese zodiac personality | 🟡 待发布 | 70 | low | Elements | 0 |
 | fire rooster chinese zodiac personality | 🟡 待发布 | 70 | low | Elements | 0 |
-| chinese zodiac birth time | 🟡 待发布 | 50 | low | Calculator / Birthday | 0 |
+| chinese zodiac birth time | ✅ 已发布 | 50 | low | Calculator / Birthday | 0 |
 | tiger year 2022 | 🟡 待发布 | 210 | low | Years | 4 |
-| chinese birth date | 🟡 待发布 | 90 | low | Calculator / Birthday | 1 |
+| chinese birth date | ✅ 已发布 | 90 | low | Calculator / Birthday | 1 |
 | my chinese horoscope | ✅ 已有页面 | 1000 | low | General | 2 |
 | my chinese astrology | ✅ 已有页面 | 1000 | low | General | 2 |
 | 1879 chinese zodiac | 🟡 待发布 | 210 | low | General | 0 |
@@ -1626,7 +1626,7 @@
 | rabbit zodiac | ✅ 已有页面 | 1900 | low | General | 0 |
 | asian astrology | 🟡 待发布 | 140 | low | General | 1 |
 | aquarius in chinese zodiac | 🟡 待发布 | 110 | low | General | 1 |
-| chinese birth year | ✅ 已有页面 | 1000 | low | Calculator / Birthday | 8 |
+| chinese birth year | ✅ 已发布 | 1000 | low | Calculator / Birthday | 8 |
 | 1947 chinese year | 🟡 待发布 | 170 | low | Years | 0 |
 | 1958 zodiac animal | 🟡 待发布 | 170 | low | General | 0 |
 | 1959 zodiac animal | 🟡 待发布 | 170 | low | General | 0 |
@@ -1668,7 +1668,7 @@
 | fire dog zodiac | 🟡 待发布 | 90 | low | Elements | 0 |
 | metal ox personality | 🟡 待发布 | 90 | low | Elements | 0 |
 | water goat zodiac | 🟡 待发布 | 90 | low | Elements | 0 |
-| chinese birth year chart | ✅ 已有页面 | 1300 | low | Calculator / Birthday | 25 |
+| chinese birth year chart | ✅ 已发布 | 1300 | low | Calculator / Birthday | 25 |
 | 1950 chinese year | 🟡 待发布 | 170 | low | Years | 1 |
 | 1965 chinese year | 🟡 待发布 | 170 | low | Years | 1 |
 | chinese zodiac descriptions | 🟡 待发布 | 170 | low | General | 1 |
@@ -1802,8 +1802,8 @@
 | zodiac sign 1967 | 🟡 待发布 | 140 | low | General | 0 |
 | zodiac year 1990 | 🟡 待发布 | 140 | low | Years | 0 |
 | chinese zodiac golden dragon | ✅ 已有页面 | 720 | low | Dragon / 2024 | 2 |
-| chinese sign by date of birth | 🟡 待发布 | 30 | low | Calculator / Birthday | 1 |
-| chinese zodiac by date of birth | 🟡 待发布 | 30 | low | Calculator / Birthday | 1 |
+| chinese sign by date of birth | ✅ 已发布 | 30 | low | Calculator / Birthday | 1 |
+| chinese zodiac by date of birth | ✅ 已发布 | 30 | low | Calculator / Birthday | 1 |
 | tiger chinese | ✅ 已有页面 | 880 | low | General | 1 |
 | lunar new year zodiac | ✅ 已有页面 | 1000 | low | Years | 3 |
 | chinese zodiac dog compatibility | ✅ 已有页面 | 880 | low | Compatibility | 0 |
@@ -1905,7 +1905,7 @@
 | year of 2019 chinese zodiac | 🟡 待发布 | 70 | low | Years | 0 |
 | zodiac sign for 1961 | 🟡 待发布 | 70 | low | General | 0 |
 | january zodiac animal | 🟡 待发布 | 140 | low | General | 4 |
-| year of the dragon birth years | ✅ 已有页面 | 320 | low | Dragon / 2024 | 0 |
+| year of the dragon birth years | ✅ 已发布 | 320 | low | Dragon / 2024 | 0 |
 | know your chinese zodiac sign | ✅ 已有页面 | 720 | low | General | 1 |
 | 2023 zodiac sign | 🟡 待发布 | 110 | low | General | 0 |
 | 1948 zodiac | 🟡 待发布 | 110 | low | General | 0 |
@@ -1932,7 +1932,7 @@
 | zodiac of 2010 | 🟡 待发布 | 110 | low | General | 0 |
 | zodiac sign 1969 | 🟡 待发布 | 110 | low | General | 0 |
 | zodiac year 1989 | 🟡 待发布 | 110 | low | Years | 0 |
-| chinese birthday chart | 🟡 待发布 | 50 | low | Calculator / Birthday | 4 |
+| chinese birthday chart | ✅ 已发布 | 50 | low | Calculator / Birthday | 4 |
 | march chinese zodiac sign | ✅ 已有页面 | 720 | low | General | 0 |
 | chinese year animal 1994 | 🟡 待发布 | 70 | low | Years | 2 |
 | lunar new year of the rabbit | ✅ 已有页面 | 720 | low | Years | 0 |
@@ -1954,8 +1954,8 @@
 | year of snake chinese zodiac | ✅ 已有页面 | 720 | low | Snake / 2025 | 1 |
 | chinese horoscope by month | ✅ 已有页面 | 320 | low | General | 0 |
 | asian horoscope | 🟡 待发布 | 110 | low | General | 2 |
-| chinese birth date calendar | 🟡 待发布 | 20 | low | Calculator / Birthday | 1 |
-| chinese calendar by date of birth | 🟡 待发布 | 20 | low | Calculator / Birthday | 1 |
+| chinese birth date calendar | ✅ 已发布 | 20 | low | Calculator / Birthday | 1 |
+| chinese calendar by date of birth | ✅ 已发布 | 20 | low | Calculator / Birthday | 1 |
 | chinese zodiac animals months | 🟡 待发布 | 210 | low | General | 28 |
 | metal rat personality | 🟡 待发布 | 50 | low | Elements | 0 |
 | wood rat personality | 🟡 待发布 | 50 | low | Elements | 0 |
@@ -1995,10 +1995,10 @@
 | zodiac year 2003 | 🟡 待发布 | 90 | low | Years | 0 |
 | zodiac year 2010 | 🟡 待发布 | 90 | low | Years | 0 |
 | zodiac year 2015 | 🟡 待发布 | 90 | low | Years | 0 |
-| chinese astrology according to date of birth | ✅ 已有页面 | 260 | low | Calculator / Birthday | 1 |
-| chinese astrology birth date | ✅ 已有页面 | 260 | low | Calculator / Birthday | 1 |
-| chinese horoscope according to date of birth | ✅ 已有页面 | 260 | low | Calculator / Birthday | 1 |
-| chinese horoscope birth date | ✅ 已有页面 | 260 | low | Calculator / Birthday | 1 |
+| chinese astrology according to date of birth | ✅ 已发布 | 260 | low | Calculator / Birthday | 1 |
+| chinese astrology birth date | ✅ 已发布 | 260 | low | Calculator / Birthday | 1 |
+| chinese horoscope according to date of birth | ✅ 已发布 | 260 | low | Calculator / Birthday | 1 |
+| chinese horoscope birth date | ✅ 已发布 | 260 | low | Calculator / Birthday | 1 |
 | 1982 chinese zodiac compatibility | ✅ 已有页面 | 590 | low | Compatibility | 0 |
 | 2025 chinese zodiac element | ✅ 已有页面 | 590 | low | Snake / 2025 | 0 |
 | chinese zodiac monkey compatibility | ✅ 已有页面 | 590 | low | Compatibility | 0 |
@@ -2192,16 +2192,16 @@
 | lunar animal calendar | 🟡 待发布 | 480 | low | General | 46 |
 | dog zodiac signs | ✅ 已有页面 | 880 | low | General | 10 |
 | libra chinese animal | 🟡 待发布 | 70 | low | General | 1 |
-| birth time chinese zodiac | 🟡 待发布 | 10 | low | Calculator / Birthday | 0 |
-| chinese birth animals chart | 🟡 待发布 | 10 | low | Calculator / Birthday |  |
-| chinese birth time chart | 🟡 待发布 | 10 | low | Calculator / Birthday | 0 |
+| birth time chinese zodiac | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| chinese birth animals chart | ✅ 已发布 | 10 | low | Calculator / Birthday |  |
+| chinese birth time chart | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
 | chinese birth year animal 2012 | 🟡 待发布 | 10 | low | Calculator / Birthday | 0 |
-| chinese future prediction by date of birth and time | 🟡 待发布 | 10 | low | Calculator / Birthday |  |
-| chinese life prediction by date of birth | 🟡 待发布 | 10 | low | Calculator / Birthday | 0 |
+| chinese future prediction by date of birth and time | ✅ 已发布 | 10 | low | Calculator / Birthday |  |
+| chinese life prediction by date of birth | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
 | chinese zodiac birth year 1948 | 🟡 待发布 | 10 | low | Calculator / Birthday | 0 |
-| chinese zodiac by date of birth and time | 🟡 待发布 | 10 | low | Calculator / Birthday |  |
+| chinese zodiac by date of birth and time | ✅ 已发布 | 10 | low | Calculator / Birthday |  |
 | chinese zodiac find my sign | 🟡 待发布 | 10 | low | General | 0 |
-| chinese zodiac time and date of birth | 🟡 待发布 | 10 | low | Calculator / Birthday | 0 |
+| chinese zodiac time and date of birth | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
 | chinese year born | ✅ 已有页面 | 1000 | low | Years | 8 |
 | year of the ox sign | ✅ 已有页面 | 480 | low | Years | 1 |
 | year of the ox zodiac sign | ✅ 已有页面 | 480 | low | Years | 1 |
@@ -2214,8 +2214,8 @@
 | metal ox zodiac | 🟡 待发布 | 30 | low | Elements | 0 |
 | water rat personality | 🟡 待发布 | 30 | low | Elements | 0 |
 | chinese snake year | ✅ 已有页面 | 720 | low | Snake / 2025 | 1 |
-| year of the rat birth years | ✅ 已有页面 | 170 | low | Calculator / Birthday | 0 |
-| year of the snake birth years | ✅ 已有页面 | 170 | low | Snake / 2025 | 0 |
+| year of the rat birth years | ✅ 已发布 | 170 | low | Calculator / Birthday | 0 |
+| year of the snake birth years | ✅ 已发布 | 170 | low | Snake / 2025 | 0 |
 | twelve chinese zodiac signs | ✅ 已有页面 | 1300 | low | General | 27 |
 | chinese gender zodiac | 🟡 待发布 | 50 | low | General | 16 |
 | year of the ox 2021 | 🟡 待发布 | 50 | low | Years | 9 |
@@ -2343,7 +2343,7 @@
 | water tiger in chinese | 🟡 待发布 | 10 | low | Elements | 0 |
 | water tiger zodiac meaning | 🟡 待发布 | 10 | low | Elements |  |
 | water tiger zodiac sign | 🟡 待发布 | 10 | low | Elements | 0 |
-| birth date chinese calendar | 🟡 待发布 | 10 | low | Calculator / Birthday | 7 |
+| birth date chinese calendar | ✅ 已发布 | 10 | low | Calculator / Birthday | 7 |
 | lunar new year chart | ✅ 已有页面 | 720 | low | Years | 18 |
 | all chinese zodiac animals | 🟡 待发布 | 260 | low | General | 49 |
 | chinese zodiac symbols | 🟡 待发布 | 1000 | low | General | 69 |
@@ -2364,7 +2364,7 @@
 | rooster chinese zodiac years | ✅ 已有页面 | 320 | low | General | 0 |
 | year of the cat chinese zodiac | ✅ 已有页面 | 320 | low | Years | 0 |
 | year of the sheep compatibility | ✅ 已有页面 | 320 | low | Compatibility | 0 |
-| chinese year calculator | ✅ 已有页面 | 210 | low | Calculator / Birthday | 0 |
+| chinese year calculator | ✅ 已发布 | 210 | low | Calculator / Birthday | 0 |
 | 2023 year of the horse | 🟡 待发布 | 10 | low | Horse / 2026 | 0 |
 | 2023 year of the rabbit for horse | 🟡 待发布 | 10 | low | Horse / 2026 |  |
 | chinese horse horoscope 2023 | 🟡 待发布 | 10 | low | Horse / 2026 |  |
@@ -2486,7 +2486,7 @@
 | daily chinese horoscope horse | ✅ 已有页面 | 170 | low | Horse / 2026 | 0 |
 | goat sign zodiac | ✅ 已有页面 | 480 | low | General | 2 |
 | chinese good luck animals | 🟡 待发布 | 20 | low | General | 1 |
-| chinese zodiac year calculator | ✅ 已有页面 | 110 | low | Calculator / Birthday | 0 |
+| chinese zodiac year calculator | ✅ 已发布 | 110 | low | Calculator / Birthday | 0 |
 | according to chinese zodiac which animal are you | 🟡 待发布 | 20 | low | General | 2 |
 | 1964 chinese zodiac compatibility | ✅ 已有页面 | 260 | low | Compatibility | 0 |
 | 1965 chinese zodiac compatibility | ✅ 已有页面 | 260 | low | Compatibility | 0 |
@@ -2512,9 +2512,9 @@
 | earth sheep chinese zodiac | ✅ 已有页面 | 140 | low | Elements | 0 |
 | fire sheep chinese zodiac | ✅ 已有页面 | 140 | low | Elements | 0 |
 | personality chinese zodiac signs | ✅ 已有页面 | 140 | low | Meaning / Lucky Symbols | 0 |
-| 4 pillars chinese astrology calculator | ✅ 已有页面 | 110 | low | Calculator / Birthday | 6 |
-| chinese zodiac four pillars calculator | ✅ 已有页面 | 110 | low | Calculator / Birthday | 6 |
-| ox birth year | ✅ 已有页面 | 170 | low | Calculator / Birthday | 0 |
+| 4 pillars chinese astrology calculator | ✅ 已发布 | 110 | low | Calculator / Birthday | 6 |
+| chinese zodiac four pillars calculator | ✅ 已发布 | 110 | low | Calculator / Birthday | 6 |
+| ox birth year | ✅ 已发布 | 170 | low | Calculator / Birthday | 0 |
 | 1966 chinese zodiac compatibility | ✅ 已有页面 | 260 | low | Compatibility | 1 |
 | free chinese astrology chart | ✅ 已有页面 | 90 | low | General | 4 |
 | chinese goat | ✅ 已有页面 | 390 | low | General | 0 |
@@ -2592,7 +2592,7 @@
 | 2025 zodiac sign | ✅ 已有页面 | 320 | low | Snake / 2025 | 0 |
 | rooster zodiac sign | ✅ 已有页面 | 320 | low | General | 0 |
 | sheep zodiac compatibility | ✅ 已有页面 | 320 | low | Compatibility | 0 |
-| chinese zodiac pillars calculator | ✅ 已有页面 | 70 | low | Calculator / Birthday | 4 |
+| chinese zodiac pillars calculator | ✅ 已发布 | 70 | low | Calculator / Birthday | 4 |
 | year of the rabbit 2023 lucky color | 🟡 待发布 | 10 | low | Meaning / Lucky Symbols |  |
 | 2023 year of the rabbit lucky color | 🟡 待发布 | 10 | low | Meaning / Lucky Symbols | 0 |
 | the year of the rabbit 2023 | 🟡 待发布 | 10 | low | Years | 0 |
@@ -2824,8 +2824,8 @@
 | born in the year of the tiger 1974 | 🟡 待发布 | 10 | low | Years | 0 |
 | born in the year of the tiger 1986 | 🟡 待发布 | 10 | low | Years |  |
 | born in the year of the tiger 2022 | 🟡 待发布 | 10 | low | Years |  |
-| calculate my chinese animal sign | 🟡 待发布 | 10 | low | General |  |
-| calculate your chinese zodiac | 🟡 待发布 | 10 | low | General | 0 |
+| calculate my chinese animal sign | ✅ 已发布 | 10 | low | General |  |
+| calculate your chinese zodiac | ✅ 已发布 | 10 | low | General | 0 |
 | chinese animal sign 1973 | 🟡 待发布 | 10 | low | General | 0 |
 | chinese animal sign 1976 | 🟡 待发布 | 10 | low | General |  |
 | chinese animal sign 1983 | 🟡 待发布 | 10 | low | General | 0 |
@@ -3350,8 +3350,8 @@
 | chinese zodiac 1974 year of the tiger | 🟡 待发布 | 10 | low | Years | 1 |
 | chinese zodiac friendship compatibility | ✅ 已有页面 | 70 | low | Compatibility | 0 |
 | chinese zodiac friendship compatibility chart | ✅ 已有页面 | 70 | low | Compatibility | 0 |
-| year of the ox birth years | ✅ 已有页面 | 70 | low | Calculator / Birthday | 0 |
-| year of the tiger birth years | ✅ 已有页面 | 70 | low | Calculator / Birthday | 0 |
+| year of the ox birth years | ✅ 已发布 | 70 | low | Calculator / Birthday | 0 |
+| year of the tiger birth years | ✅ 已发布 | 70 | low | Calculator / Birthday | 0 |
 | pisces and virgo relationship | 🚫 排除 | 18100 | high | General | 5 |
 | 1986 lunar year | 🟡 待发布 | 20 | low | Years | 0 |
 | 1997 ox year | 🟡 待发布 | 20 | low | Years | 0 |
@@ -3396,14 +3396,14 @@
 | year of the dog compatibility | ✅ 已有页面 | 170 | low | Compatibility | 0 |
 | libra and pisces relationship | 🚫 排除 | 18100 | high | General | 6 |
 | asian horoscope today | 🟡 待发布 | 20 | low | General | 1 |
-| tiger birth year | ✅ 已有页面 | 110 | low | Calculator / Birthday | 0 |
+| tiger birth year | ✅ 已发布 | 110 | low | Calculator / Birthday | 0 |
 | animal from chinese zodiac | 🟡 待发布 | 10 | low | General | 3 |
 | fish astrology sign | 🚫 排除 | 49500 | very high | General | 3 |
 | aries and sagittarius relationship | 🚫 排除 | 12100 | high | General | 4 |
 | lunar new year animals years | ✅ 已有页面 | 170 | low | Years | 1 |
 | chinese animal new year chart | ✅ 已有页面 | 1300 | low | Years | 48 |
 | chinese calendar zodiac sign | 🟡 待发布 | 170 | low | General | 55 |
-| chinese compatibility calculator | ✅ 已有页面 | 110 | low | Compatibility | 1 |
+| chinese compatibility calculator | ✅ 已发布 | 110 | low | Compatibility | 1 |
 | love horoscope gemini | 🚫 排除 | 8100 | medium | Compatibility | 1 |
 | 2025 zodiac year | ✅ 已有页面 | 260 | low | Snake / 2025 | 0 |
 | chinese calendar rooster | ✅ 已有页面 | 260 | low | General | 0 |
@@ -3468,16 +3468,16 @@
 | chinese zodiac years meaning | ✅ 已有页面 | 140 | low | Meaning / Lucky Symbols | 1 |
 | year of the tiger what years | ✅ 已有页面 | 140 | low | Years | 1 |
 | lucky chinese zodiac signs | ✅ 已有页面 | 70 | low | Meaning / Lucky Symbols | 0 |
-| chinese astrology birth time | ✅ 已有页面 | 50 | low | Calculator / Birthday | 0 |
-| chinese calendar zodiac calculator | ✅ 已有页面 | 50 | low | Calculator / Birthday | 0 |
-| chinese zodiac love calculator | ✅ 已有页面 | 50 | low | Compatibility | 0 |
-| year of the dog birth years | ✅ 已有页面 | 50 | low | Calculator / Birthday | 0 |
-| year of the rabbit birth years | ✅ 已有页面 | 50 | low | Calculator / Birthday | 0 |
+| chinese astrology birth time | ✅ 已发布 | 50 | low | Calculator / Birthday | 0 |
+| chinese calendar zodiac calculator | ✅ 已发布 | 50 | low | Calculator / Birthday | 0 |
+| chinese zodiac love calculator | ✅ 已发布 | 50 | low | Compatibility | 0 |
+| year of the dog birth years | ✅ 已发布 | 50 | low | Calculator / Birthday | 0 |
+| year of the rabbit birth years | ✅ 已发布 | 50 | low | Calculator / Birthday | 0 |
 | aries and cancer relationship | 🚫 排除 | 18100 | high | General | 10 |
 | 1986 year of the fire tiger | 🟡 待发布 | 10 | low | Elements | 8 |
 | gold rabbit chinese zodiac | ✅ 已有页面 | 170 | low | General | 6 |
 | lunar new year animals by year | ✅ 已有页面 | 140 | low | Years | 2 |
-| birthday compatibility chinese zodiac | ✅ 已有页面 | 10 | low | Compatibility | 2 |
+| birthday compatibility chinese zodiac | ✅ 已发布 | 10 | low | Compatibility | 2 |
 | chinese destiny chart | 🟡 待发布 | 10 | low | General | 14 |
 | aries horoscope love | 🚫 排除 | 6600 | medium | Compatibility | 1 |
 | love horoscope libra | 🚫 排除 | 6600 | medium | Compatibility | 1 |
@@ -3487,11 +3487,11 @@
 | ox zodiac compatibility | ✅ 已有页面 | 210 | low | Compatibility | 0 |
 | rat zodiac compatibility | ✅ 已有页面 | 210 | low | Compatibility | 0 |
 | rat zodiac meaning | ✅ 已有页面 | 210 | low | Meaning / Lucky Symbols | 0 |
-| chinese horoscope sign calculator | ✅ 已有页面 | 50 | low | Calculator / Birthday | 1 |
-| chinese zodiac birthday calculator | ✅ 已有页面 | 50 | low | Calculator / Birthday | 1 |
-| eastern zodiac sign calculator | ✅ 已有页面 | 50 | low | Calculator / Birthday | 1 |
+| chinese horoscope sign calculator | ✅ 已发布 | 50 | low | Calculator / Birthday | 1 |
+| chinese zodiac birthday calculator | ✅ 已发布 | 50 | low | Calculator / Birthday | 1 |
+| eastern zodiac sign calculator | ✅ 已发布 | 50 | low | Calculator / Birthday | 1 |
 | chinese zodiac 1960 year of the dog | 🟡 待发布 | 10 | low | Years | 9 |
-| calculate chinese element | ✅ 已有页面 | 110 | low | Elements | 0 |
+| calculate chinese element | ✅ 已发布 | 110 | low | Elements | 0 |
 | your chinese astrology | ✅ 已有页面 | 210 | low | General | 1 |
 | scorpio cancer relationship | 🚫 排除 | 18100 | high | General | 3 |
 | 12 chinese zodiac signs | ✅ 已有页面 | 590 | low | General | 36 |
@@ -3672,7 +3672,7 @@
 | year of the sheep meaning | ✅ 已有页面 | 110 | low | Meaning / Lucky Symbols | 0 |
 | year of the water tiger | ✅ 已有页面 | 110 | low | Elements | 0 |
 | zodiac year of tiger | ✅ 已有页面 | 110 | low | Years | 0 |
-| chinese zodiac animal calculator | ✅ 已有页面 | 40 | low | Calculator / Birthday | 0 |
+| chinese zodiac animal calculator | ✅ 已发布 | 40 | low | Calculator / Birthday | 0 |
 | chinese love compatibility | ✅ 已有页面 | 70 | low | Compatibility | 0 |
 | aquarius chinese zodiac sign | ✅ 已有页面 | 110 | low | General | 1 |
 | chinese horoscope and astrology | ✅ 已有页面 | 110 | low | General | 1 |
@@ -3691,7 +3691,7 @@
 | gold tiger chinese zodiac | ✅ 已有页面 | 110 | low | General | 4 |
 | horse astrology | ✅ 已有页面 | 110000 | very high | Horse / 2026 | 5 |
 | chinese lunar year animal | ✅ 已有页面 | 210 | low | Years | 18 |
-| my chinese zodiac sign by date of birth | ✅ 已有页面 | 40 | low | Calculator / Birthday | 3 |
+| my chinese zodiac sign by date of birth | ✅ 已发布 | 40 | low | Calculator / Birthday | 3 |
 | lunar new year animal chart | ✅ 已有页面 | 480 | low | Years | 37 |
 | 1988 chinese zodiac sign | ✅ 已有页面 | 90 | low | General | 0 |
 | 1959 chinese zodiac compatibility | ✅ 已有页面 | 90 | low | Compatibility | 0 |
@@ -3781,7 +3781,7 @@
 | 2023 year of the rabbit lucky zodiac sign | 🟡 待发布 | 0 | low | Meaning / Lucky Symbols |  |
 | about year of the tiger 2022 | 🟡 待发布 | 0 | low | Years |  |
 | born year of the tiger 2022 | 🟡 待发布 | 0 | low | Years |  |
-| calculate my zodiac animal | 🟡 待发布 | 0 | low | General |  |
+| calculate my zodiac animal | ✅ 已发布 | 0 | low | General |  |
 | chinese 12 zodiac 2022 | 🟡 待发布 | 0 | low | General |  |
 | chinese calendar 1962 year of the tiger | 🟡 待发布 | 0 | low | Years |  |
 | chinese calendar 2022 year of the tiger | 🟡 待发布 | 0 | low | Years |  |
@@ -4104,22 +4104,22 @@
 | horse and tiger chinese zodiac compatibility | ✅ 已有页面 | 50 | low | Horse / 2026 | 0 |
 | sagittarius chinese zodiac sign | ✅ 已有页面 | 90 | low | General | 1 |
 | love horoscope aquarius | 🚫 排除 | 4400 | medium | Compatibility | 0 |
-| chinese zodiac animal and element calculator | ✅ 已有页面 | 30 | low | Elements | 0 |
-| chinese zodiac calculator year month day | ✅ 已有页面 | 30 | low | Calculator / Birthday | 0 |
+| chinese zodiac animal and element calculator | ✅ 已发布 | 30 | low | Elements | 0 |
+| chinese zodiac calculator year month day | ✅ 已发布 | 30 | low | Calculator / Birthday | 0 |
 | chinese zodiac marriage compatibility | ✅ 已有页面 | 30 | low | Compatibility | 0 |
-| chinese zodiac sign and element calculator | ✅ 已有页面 | 30 | low | Elements | 0 |
-| lunar new year birthday chart | ✅ 已有页面 | 30 | low | Calculator / Birthday | 0 |
+| chinese zodiac sign and element calculator | ✅ 已发布 | 30 | low | Elements | 0 |
+| lunar new year birthday chart | ✅ 已发布 | 30 | low | Calculator / Birthday | 0 |
 | chinese symbol for dog | ✅ 已有页面 | 90 | low | General | 2 |
 | sagittarius love horoscope | 🚫 排除 | 4400 | medium | Compatibility | 1 |
 | dog zodiac compatibility | ✅ 已有页面 | 140 | low | Compatibility | 1 |
-| chinese animal calculator | ✅ 已有页面 | 50 | low | Calculator / Birthday | 0 |
-| dragon birth year | ✅ 已有页面 | 50 | low | Dragon / 2024 | 0 |
-| chinese element zodiac calculator | ✅ 已有页面 | 30 | low | Elements | 2 |
-| chinese zodiac sign by date of birth | ✅ 已有页面 | 30 | low | Calculator / Birthday | 2 |
+| chinese animal calculator | ✅ 已发布 | 50 | low | Calculator / Birthday | 0 |
+| dragon birth year | ✅ 已发布 | 50 | low | Dragon / 2024 | 0 |
+| chinese element zodiac calculator | ✅ 已发布 | 30 | low | Elements | 2 |
+| chinese zodiac sign by date of birth | ✅ 已发布 | 30 | low | Calculator / Birthday | 2 |
 | chinese dog dragon | ✅ 已有页面 | 390 | low | Dragon / 2024 | 28 |
 | year of horse compatibility | ✅ 已有页面 | 40 | low | Horse / 2026 | 0 |
-| chinese horoscope calculator birth time | ✅ 已有页面 | 20 | low | Calculator / Birthday | 0 |
-| chinese zodiac calculator time of birth | ✅ 已有页面 | 20 | low | Calculator / Birthday | 0 |
+| chinese horoscope calculator birth time | ✅ 已发布 | 20 | low | Calculator / Birthday | 0 |
+| chinese zodiac calculator time of birth | ✅ 已发布 | 20 | low | Calculator / Birthday | 0 |
 | year of the rabbit symbol | ✅ 已有页面 | 70 | low | Years | 0 |
 | 1952 chinese zodiac compatibility | ✅ 已有页面 | 70 | low | Compatibility | 0 |
 | 1952 chinese zodiac sign | ✅ 已有页面 | 70 | low | General | 0 |
@@ -4168,31 +4168,31 @@
 | chinese calendar monkey | ✅ 已有页面 | 110 | low | General | 0 |
 | chinese dog horoscope | ✅ 已有页面 | 110 | low | General | 0 |
 | tiger year zodiac | ✅ 已有页面 | 110 | low | Years | 0 |
-| chinese birth month calendar | 🟡 待发布 | 10 | low | Calculator / Birthday | 43 |
+| chinese birth month calendar | ✅ 已发布 | 10 | low | Calculator / Birthday | 43 |
 | my chinese zodiac animal | ✅ 已有页面 | 70 | low | General | 2 |
 | chinese signs of the zodiac chart | 🟡 待发布 | 20 | low | General | 33 |
-| my chinese zodiac sign calculator | ✅ 已有页面 | 20 | low | Calculator / Birthday | 0 |
-| chinese and western zodiac calculator | ✅ 已有页面 | 20 | low | Calculator / Birthday | 0 |
-| chinese and western zodiac compatibility calculator | ✅ 已有页面 | 20 | low | Compatibility | 0 |
-| chinese animal and element calculator | ✅ 已有页面 | 20 | low | Elements | 0 |
-| chinese animal year calculator | ✅ 已有页面 | 20 | low | Calculator / Birthday | 0 |
-| chinese horoscope love compatibility calculator | ✅ 已有页面 | 20 | low | Compatibility | 0 |
-| chinese sign and element calculator | ✅ 已有页面 | 20 | low | Elements | 0 |
-| chinese year of birth calculator | ✅ 已有页面 | 20 | low | Calculator / Birthday | 0 |
-| chinese zodiac 60 year cycle calculator | ✅ 已有页面 | 20 | low | Calculator / Birthday | 0 |
-| chinese zodiac animals calculator | ✅ 已有页面 | 20 | low | Calculator / Birthday | 0 |
-| chinese zodiac day calculator | ✅ 已有页面 | 20 | low | Calculator / Birthday | 0 |
-| chinese zodiac hour calculator | ✅ 已有页面 | 20 | low | Calculator / Birthday | 0 |
-| chinese zodiac love compatibility calculator | ✅ 已有页面 | 20 | low | Compatibility | 0 |
-| element chinese zodiac calculator | ✅ 已有页面 | 20 | low | Elements | 0 |
+| my chinese zodiac sign calculator | ✅ 已发布 | 20 | low | Calculator / Birthday | 0 |
+| chinese and western zodiac calculator | ✅ 已发布 | 20 | low | Calculator / Birthday | 0 |
+| chinese and western zodiac compatibility calculator | ✅ 已发布 | 20 | low | Compatibility | 0 |
+| chinese animal and element calculator | ✅ 已发布 | 20 | low | Elements | 0 |
+| chinese animal year calculator | ✅ 已发布 | 20 | low | Calculator / Birthday | 0 |
+| chinese horoscope love compatibility calculator | ✅ 已发布 | 20 | low | Compatibility | 0 |
+| chinese sign and element calculator | ✅ 已发布 | 20 | low | Elements | 0 |
+| chinese year of birth calculator | ✅ 已发布 | 20 | low | Calculator / Birthday | 0 |
+| chinese zodiac 60 year cycle calculator | ✅ 已发布 | 20 | low | Calculator / Birthday | 0 |
+| chinese zodiac animals calculator | ✅ 已发布 | 20 | low | Calculator / Birthday | 0 |
+| chinese zodiac day calculator | ✅ 已发布 | 20 | low | Calculator / Birthday | 0 |
+| chinese zodiac hour calculator | ✅ 已发布 | 20 | low | Calculator / Birthday | 0 |
+| chinese zodiac love compatibility calculator | ✅ 已发布 | 20 | low | Compatibility | 0 |
+| element chinese zodiac calculator | ✅ 已发布 | 20 | low | Elements | 0 |
 | fast match chinese astrology | ✅ 已有页面 | 20 | low | Compatibility | 0 |
-| chinese birthday compatibility | ✅ 已有页面 | 40 | low | Compatibility | 1 |
-| chinese animal signs calculator | ✅ 已有页面 | 20 | low | Calculator / Birthday | 1 |
+| chinese birthday compatibility | ✅ 已发布 | 40 | low | Compatibility | 1 |
+| chinese animal signs calculator | ✅ 已发布 | 20 | low | Calculator / Birthday | 1 |
 | chinese calendar year 2022 | 🟡 待发布 | 20 | low | Years | 35 |
-| four pillars chinese zodiac calculator | ✅ 已有页面 | 20 | low | Calculator / Birthday | 2 |
+| four pillars chinese zodiac calculator | ✅ 已发布 | 20 | low | Calculator / Birthday | 2 |
 | date of birth matching | 🚫 排除 | 2400 | low | Compatibility | 6 |
 | year of the rabbit for horse | ✅ 已有页面 | 30 | low | Horse / 2026 | 0 |
-| free chinese horoscope by date of birth | ✅ 已有页面 | 20 | low | Calculator / Birthday | 3 |
+| free chinese horoscope by date of birth | ✅ 已发布 | 20 | low | Calculator / Birthday | 3 |
 | chinese horoscope 1970 | ✅ 已有页面 | 90 | low | General | 0 |
 | chinese horoscope 2015 | ✅ 已有页面 | 90 | low | General | 0 |
 | chinese year compatibility | ✅ 已有页面 | 90 | low | Compatibility | 0 |
@@ -4240,12 +4240,12 @@
 | year of the wooden tiger | ✅ 已有页面 | 50 | low | Elements | 0 |
 | chinese animal years list | ✅ 已有页面 | 170 | low | General | 26 |
 | chinese zodiac years chart with elements | ✅ 已有页面 | 70 | low | Elements | 7 |
-| chinese love calculator | ✅ 已有页面 | 30 | low | Compatibility | 0 |
-| lunar zodiac calculator | ✅ 已有页面 | 30 | low | Calculator / Birthday | 0 |
+| chinese love calculator | ✅ 已发布 | 30 | low | Compatibility | 0 |
+| lunar zodiac calculator | ✅ 已发布 | 30 | low | Calculator / Birthday | 0 |
 | list of chinese zodiac signs | ✅ 已有页面 | 70 | low | General | 8 |
 | chinese horoscope compatibility by birthdate | ✅ 已有页面 | 10 | low | Compatibility | 2 |
 | capricorn and leo love compatibility | ✅ 已有页面 | 18100 | high | Compatibility | 1 |
-| calculate my chinese zodiac sign | ✅ 已有页面 | 50 | low | General | 1 |
+| calculate my chinese zodiac sign | ✅ 已发布 | 50 | low | General | 1 |
 | chinese zodiac tiger symbol | ✅ 已有页面 | 50 | low | General | 1 |
 | determine chinese zodiac sign | ✅ 已有页面 | 50 | low | General | 1 |
 | lunar new year animals in order | ✅ 已有页面 | 50 | low | Years | 1 |
@@ -4301,99 +4301,99 @@
 | snake zodiac meaning | ✅ 已有页面 | 70 | low | Snake / 2025 | 0 |
 | chinese zodiac sign finder | ✅ 已有页面 | 40 | low | General | 1 |
 | next chinese year | ✅ 已有页面 | 70 | low | Years | 1 |
-| accurate chinese zodiac calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| birth year according to chinese calendar | ✅ 已有页面 | 10 | low | Calculator / Birthday |  |
-| birth year in chinese calendar | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| birth year lunar calendar | ✅ 已有页面 | 10 | low | Calculator / Birthday |  |
-| birthday year of the tiger | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| chinese animal zodiac calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday |  |
-| chinese astrology as per date of birth | ✅ 已有页面 | 10 | low | Calculator / Birthday |  |
-| chinese astrology compatibility by date of birth | ✅ 已有页面 | 10 | low | Compatibility | 0 |
-| chinese astrology future prediction by date of birth | ✅ 已有页面 | 10 | low | Calculator / Birthday |  |
-| chinese astrology marriage compatibility calculator | ✅ 已有页面 | 10 | low | Compatibility |  |
-| chinese birth animal calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| chinese birth date compatibility | ✅ 已有页面 | 10 | low | Compatibility | 0 |
-| chinese birth element calculator | ✅ 已有页面 | 10 | low | Elements | 0 |
-| chinese birth element chart | ✅ 已有页面 | 10 | low | Elements |  |
-| chinese birth signs calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| chinese birthday compatibility calculator | ✅ 已有页面 | 10 | low | Compatibility | 0 |
-| chinese compatibility by date of birth | ✅ 已有页面 | 10 | low | Compatibility | 0 |
-| chinese compatibility calculator birthday | ✅ 已有页面 | 10 | low | Compatibility | 0 |
-| chinese compatibility calculator for marriage | ✅ 已有页面 | 10 | low | Compatibility | 0 |
-| chinese date of birth compatibility | ✅ 已有页面 | 10 | low | Compatibility |  |
-| chinese horoscope and element calculator | ✅ 已有页面 | 10 | low | Elements | 0 |
-| chinese horoscope as per date of birth | ✅ 已有页面 | 10 | low | Calculator / Birthday |  |
-| chinese horoscope birth time | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| chinese horoscope by date of birth and time free | ✅ 已有页面 | 10 | low | Calculator / Birthday |  |
-| chinese horoscope calculator element | ✅ 已有页面 | 10 | low | Elements | 0 |
+| accurate chinese zodiac calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| birth year according to chinese calendar | ✅ 已发布 | 10 | low | Calculator / Birthday |  |
+| birth year in chinese calendar | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| birth year lunar calendar | ✅ 已发布 | 10 | low | Calculator / Birthday |  |
+| birthday year of the tiger | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| chinese animal zodiac calculator | ✅ 已发布 | 10 | low | Calculator / Birthday |  |
+| chinese astrology as per date of birth | ✅ 已发布 | 10 | low | Calculator / Birthday |  |
+| chinese astrology compatibility by date of birth | ✅ 已发布 | 10 | low | Compatibility | 0 |
+| chinese astrology future prediction by date of birth | ✅ 已发布 | 10 | low | Calculator / Birthday |  |
+| chinese astrology marriage compatibility calculator | ✅ 已发布 | 10 | low | Compatibility |  |
+| chinese birth animal calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| chinese birth date compatibility | ✅ 已发布 | 10 | low | Compatibility | 0 |
+| chinese birth element calculator | ✅ 已发布 | 10 | low | Elements | 0 |
+| chinese birth element chart | ✅ 已发布 | 10 | low | Elements |  |
+| chinese birth signs calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| chinese birthday compatibility calculator | ✅ 已发布 | 10 | low | Compatibility | 0 |
+| chinese compatibility by date of birth | ✅ 已发布 | 10 | low | Compatibility | 0 |
+| chinese compatibility calculator birthday | ✅ 已发布 | 10 | low | Compatibility | 0 |
+| chinese compatibility calculator for marriage | ✅ 已发布 | 10 | low | Compatibility | 0 |
+| chinese date of birth compatibility | ✅ 已发布 | 10 | low | Compatibility |  |
+| chinese horoscope and element calculator | ✅ 已发布 | 10 | low | Elements | 0 |
+| chinese horoscope as per date of birth | ✅ 已发布 | 10 | low | Calculator / Birthday |  |
+| chinese horoscope birth time | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| chinese horoscope by date of birth and time free | ✅ 已发布 | 10 | low | Calculator / Birthday |  |
+| chinese horoscope calculator element | ✅ 已发布 | 10 | low | Elements | 0 |
 | chinese horoscope find my sign | ✅ 已有页面 | 10 | low | General |  |
-| chinese horoscope match calculator | ✅ 已有页面 | 10 | low | Compatibility | 0 |
-| chinese horoscope prediction by date of birth | ✅ 已有页面 | 10 | low | Calculator / Birthday |  |
-| chinese horoscope signs calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday |  |
+| chinese horoscope match calculator | ✅ 已发布 | 10 | low | Compatibility | 0 |
+| chinese horoscope prediction by date of birth | ✅ 已发布 | 10 | low | Calculator / Birthday |  |
+| chinese horoscope signs calculator | ✅ 已发布 | 10 | low | Calculator / Birthday |  |
 | chinese love compatibility test | ✅ 已有页面 | 10 | low | Compatibility | 0 |
-| chinese love match calculator | ✅ 已有页面 | 10 | low | Compatibility | 0 |
-| chinese lunar zodiac calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday |  |
-| chinese year animal calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| chinese year of the rat birth years | ✅ 已有页面 | 10 | low | Calculator / Birthday |  |
-| chinese year signs calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| chinese zodiac ascendant calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| chinese zodiac birth date calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| chinese zodiac birth hour calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| chinese zodiac birth time calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
+| chinese love match calculator | ✅ 已发布 | 10 | low | Compatibility | 0 |
+| chinese lunar zodiac calculator | ✅ 已发布 | 10 | low | Calculator / Birthday |  |
+| chinese year animal calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| chinese year of the rat birth years | ✅ 已发布 | 10 | low | Calculator / Birthday |  |
+| chinese year signs calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| chinese zodiac ascendant calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| chinese zodiac birth date calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| chinese zodiac birth hour calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| chinese zodiac birth time calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
 | chinese zodiac calculator 2022 | ✅ 已有页面 | 10 | low | Calculator / Birthday |  |
 | chinese zodiac calculator 2023 | ✅ 已有页面 | 10 | low | Calculator / Birthday |  |
-| chinese zodiac calculator detailed | ✅ 已有页面 | 10 | low | Calculator / Birthday |  |
-| chinese zodiac compatibility birthday | ✅ 已有页面 | 10 | low | Compatibility | 0 |
-| chinese zodiac compatibility chart love calculator | ✅ 已有页面 | 10 | low | Compatibility |  |
-| chinese zodiac day animal calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| chinese zodiac day sign calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| chinese zodiac five elements calculator | ✅ 已有页面 | 10 | low | Elements | 0 |
-| chinese zodiac inner animal calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
+| chinese zodiac calculator detailed | ✅ 已发布 | 10 | low | Calculator / Birthday |  |
+| chinese zodiac compatibility birthday | ✅ 已发布 | 10 | low | Compatibility | 0 |
+| chinese zodiac compatibility chart love calculator | ✅ 已发布 | 10 | low | Compatibility |  |
+| chinese zodiac day animal calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| chinese zodiac day sign calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| chinese zodiac five elements calculator | ✅ 已发布 | 10 | low | Elements | 0 |
+| chinese zodiac inner animal calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
 | chinese zodiac marriage match chart | ✅ 已有页面 | 10 | low | Compatibility |  |
-| chinese zodiac match calculator | ✅ 已有页面 | 10 | low | Compatibility | 0 |
+| chinese zodiac match calculator | ✅ 已发布 | 10 | low | Compatibility | 0 |
 | chinese zodiac match chart | ✅ 已有页面 | 10 | low | Compatibility | 0 |
-| chinese zodiac secret animal calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| chinese zodiac sign calculator date birth | ✅ 已有页面 | 10 | low | Calculator / Birthday |  |
-| chinese zodiac sign calculator with elements | ✅ 已有页面 | 10 | low | Elements | 0 |
-| chinese zodiac sign compatibility calculator | ✅ 已有页面 | 10 | low | Compatibility | 0 |
-| chinese zodiac sign date of birth | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| chinese zodiac sign element calculator | ✅ 已有页面 | 10 | low | Elements | 0 |
-| chinese zodiac signs compatibility calculator | ✅ 已有页面 | 10 | low | Compatibility | 0 |
-| chinese zodiac yin yang element calculator | ✅ 已有页面 | 10 | low | Elements | 0 |
-| compatibility calculator chinese zodiac | ✅ 已有页面 | 10 | low | Compatibility | 0 |
-| detailed chinese zodiac calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| find my chinese zodiac calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday |  |
+| chinese zodiac secret animal calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| chinese zodiac sign calculator date birth | ✅ 已发布 | 10 | low | Calculator / Birthday |  |
+| chinese zodiac sign calculator with elements | ✅ 已发布 | 10 | low | Elements | 0 |
+| chinese zodiac sign compatibility calculator | ✅ 已发布 | 10 | low | Compatibility | 0 |
+| chinese zodiac sign date of birth | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| chinese zodiac sign element calculator | ✅ 已发布 | 10 | low | Elements | 0 |
+| chinese zodiac signs compatibility calculator | ✅ 已发布 | 10 | low | Compatibility | 0 |
+| chinese zodiac yin yang element calculator | ✅ 已发布 | 10 | low | Elements | 0 |
+| compatibility calculator chinese zodiac | ✅ 已发布 | 10 | low | Compatibility | 0 |
+| detailed chinese zodiac calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| find my chinese zodiac calculator | ✅ 已发布 | 10 | low | Calculator / Birthday |  |
 | find your lunar new year sign | ✅ 已有页面 | 10 | low | Years |  |
-| free chinese zodiac calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| if today is your birthday chinese horoscope | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| inner animal chinese zodiac calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| lunar calendar zodiac calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| my chinese birth year | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| my chinese horoscope by date of birth | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| my chinese sign calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| my chinese zodiac animal calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| my chinese zodiac calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| online chinese astrology compatibility calculator | ✅ 已有页面 | 10 | low | Compatibility |  |
-| secret animal chinese zodiac calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| year of the dragon birth dates | ✅ 已有页面 | 10 | low | Dragon / 2024 | 0 |
-| year of the ox birthday | ✅ 已有页面 | 10 | low | Calculator / Birthday |  |
-| year of the rabbit birth dates | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| year of the rat birth dates | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| year of the tiger birthday | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
+| free chinese zodiac calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| if today is your birthday chinese horoscope | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| inner animal chinese zodiac calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| lunar calendar zodiac calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| my chinese birth year | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| my chinese horoscope by date of birth | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| my chinese sign calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| my chinese zodiac animal calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| my chinese zodiac calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| online chinese astrology compatibility calculator | ✅ 已发布 | 10 | low | Compatibility |  |
+| secret animal chinese zodiac calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| year of the dragon birth dates | ✅ 已发布 | 10 | low | Dragon / 2024 | 0 |
+| year of the ox birthday | ✅ 已发布 | 10 | low | Calculator / Birthday |  |
+| year of the rabbit birth dates | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| year of the rat birth dates | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| year of the tiger birthday | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
 | year of the tiger love | ✅ 已有页面 | 10 | low | Compatibility | 0 |
-| year of the tiger years of birth | ✅ 已有页面 | 10 | low | Calculator / Birthday |  |
-| year of tiger birth years | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| year of tiger birthday | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
-| zodiac sign chinese calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday |  |
+| year of the tiger years of birth | ✅ 已发布 | 10 | low | Calculator / Birthday |  |
+| year of tiger birth years | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| year of tiger birthday | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
+| zodiac sign chinese calculator | ✅ 已发布 | 10 | low | Calculator / Birthday |  |
 | past chinese new year animals | ✅ 已有页面 | 40 | low | Years | 2 |
-| chinese animal birth year chart | ✅ 已有页面 | 30 | low | Calculator / Birthday | 17 |
+| chinese animal birth year chart | ✅ 已发布 | 30 | low | Calculator / Birthday | 17 |
 | eastern zodiac chart | 🟡 待发布 | 20 | low | General | 33 |
-| birthday chinese zodiac calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 1 |
+| birthday chinese zodiac calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 1 |
 | chinese year chart | ✅ 已有页面 | 480 | low | Years | 45 |
-| zodiac animal calculator | ✅ 已有页面 | 20 | low | Calculator / Birthday | 0 |
+| zodiac animal calculator | ✅ 已发布 | 20 | low | Calculator / Birthday | 0 |
 | chinese animal month chart | 🟡 待发布 | 10 | low | General | 35 |
 | 12 chinese zodiac signs in order | ✅ 已有页面 | 40 | low | General | 3 |
-| chinese love compatibility calculator | ✅ 已有页面 | 10 | low | Compatibility | 2 |
+| chinese love compatibility calculator | ✅ 已发布 | 10 | low | Compatibility | 2 |
 | chinese element and animal chart | ✅ 已有页面 | 20 | low | Elements | 5 |
 | asian new year animals | ✅ 已有页面 | 40 | low | Years | 4 |
 | zodiac chinese new year | ✅ 已有页面 | 70 | low | Years | 16 |
@@ -4453,15 +4453,15 @@
 | gold snake zodiac | ✅ 已有页面 | 50 | low | Snake / 2025 | 1 |
 | lunar year zodiac | ✅ 已有页面 | 50 | low | Years | 1 |
 | wood tiger year | ✅ 已有页面 | 50 | low | Elements | 1 |
-| calculate chinese zodiac element | ✅ 已有页面 | 10 | low | Elements | 0 |
-| calculate my chinese zodiac sign and element | ✅ 已有页面 | 10 | low | Elements | 0 |
+| calculate chinese zodiac element | ✅ 已发布 | 10 | low | Elements | 0 |
+| calculate my chinese zodiac sign and element | ✅ 已发布 | 10 | low | Elements | 0 |
 | chinese zodiac finder with element | ✅ 已有页面 | 10 | low | Elements | 0 |
 | chinese zodiac signs water tiger | ✅ 已有页面 | 10 | low | Elements |  |
 | the water tiger in chinese astrology | ✅ 已有页面 | 10 | low | Elements | 0 |
 | libra and taurus friendship | 🚫 排除 | 1000 | low | General | 0 |
-| chinese fortune telling calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 7 |
-| chinese zodiac true animal calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 7 |
-| free chinese astrology predictions by date of birth | ✅ 已有页面 | 10 | low | Calculator / Birthday | 7 |
+| chinese fortune telling calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 7 |
+| chinese zodiac true animal calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 7 |
+| free chinese astrology predictions by date of birth | ✅ 已发布 | 10 | low | Calculator / Birthday | 7 |
 | zodiac animal signs by month | 🟡 待发布 | 50 | low | General | 72 |
 | birth chart compatibility | ✅ 已有页面 | 22200 | high | Compatibility | 8 |
 | chinese horoscope 2022 horse | ✅ 已有页面 | 10 | low | Horse / 2026 |  |
@@ -4474,7 +4474,7 @@
 | metal tiger year | ✅ 已有页面 | 40 | low | Elements | 0 |
 | ox zodiac animal | ✅ 已有页面 | 40 | low | General | 0 |
 | water ox year | ✅ 已有页面 | 40 | low | Elements | 0 |
-| chinese zodiac bazi calculator | ✅ 已有页面 | 10 | low | Calculator / Birthday | 10 |
+| chinese zodiac bazi calculator | ✅ 已发布 | 10 | low | Calculator / Birthday | 10 |
 | year of the animals list | ✅ 已有页面 | 50 | low | Years | 16 |
 | animal from chinese horoscope | ✅ 已有页面 | 20 | low | General | 0 |
 | animals from chinese horoscope | ✅ 已有页面 | 20 | low | General | 0 |
@@ -4511,12 +4511,12 @@
 | year of the rabbit predictions | ✅ 已有页面 | 20 | low | Years | 0 |
 | year of the tiger ages | ✅ 已有页面 | 20 | low | Years | 0 |
 | year of the tiger list | ✅ 已有页面 | 20 | low | Years | 0 |
-| tiger year birthday | ✅ 已有页面 | 10 | low | Calculator / Birthday | 0 |
+| tiger year birthday | ✅ 已发布 | 10 | low | Calculator / Birthday | 0 |
 | gemini and taurus love compatibility | ✅ 已有页面 | 14800 | high | Compatibility | 2 |
 | tiger eye zodiac | ✅ 已有页面 | 50 | low | General | 6 |
 | year of the tiger compatible signs | ✅ 已有页面 | 20 | low | Compatibility | 1 |
-| chinese zodiac birth year chart | ✅ 已有页面 | 30 | low | Calculator / Birthday | 29 |
-| chinese zodiac birth years chart | ✅ 已有页面 | 30 | low | Calculator / Birthday | 29 |
+| chinese zodiac birth year chart | ✅ 已发布 | 30 | low | Calculator / Birthday | 29 |
+| chinese zodiac birth years chart | ✅ 已发布 | 30 | low | Calculator / Birthday | 29 |
 | pisces and taurus love compatibility | ✅ 已有页面 | 14800 | high | Compatibility | 2 |
 | male pisces | 🚫 排除 | 12100 | high | General | 8 |
 | horoscope matches | 🚫 排除 | 4400 | medium | Compatibility | 6 |
@@ -4534,11 +4534,11 @@
 | taurus and scorpio match | ✅ 已有页面 | 18100 | high | Compatibility | 2 |
 | leo and capricorn compatibility | ✅ 已有页面 | 18100 | high | Compatibility | 1 |
 | capricorn compatibility with leo | ✅ 已有页面 | 18100 | high | Compatibility | 1 |
-| chinese and western astrology compatibility calculator | ✅ 已有页面 | 0 | low | Compatibility |  |
+| chinese and western astrology compatibility calculator | ✅ 已发布 | 0 | low | Compatibility |  |
 | chinese horoscope 2022 calculator | ✅ 已有页面 | 0 | low | Calculator / Birthday |  |
 | chinese horoscope 2023 calculator | ✅ 已有页面 | 0 | low | Calculator / Birthday |  |
 | find my chinese zodiac day month year | ✅ 已有页面 | 0 | low | Years |  |
-| free chinese astrology by date of birth and time | ✅ 已有页面 | 0 | low | Calculator / Birthday |  |
+| free chinese astrology by date of birth and time | ✅ 已发布 | 0 | low | Calculator / Birthday |  |
 | aries and scorpio | 🚫 排除 | 8100 | medium | General | 2 |
 | aries scorpio | 🚫 排除 | 8100 | medium | General | 2 |
 | taurus lucky number today | 🚫 排除 | 2400 | low | Meaning / Lucky Symbols | 0 |
@@ -4597,7 +4597,7 @@
 | born in the year of the water tiger | ✅ 已有页面 | 10 | low | Elements |  |
 | born on the year of the tiger | ✅ 已有页面 | 10 | low | Years | 0 |
 | born under year of the tiger | ✅ 已有页面 | 10 | low | Years |  |
-| calculate your chinese zodiac sign | ✅ 已有页面 | 10 | low | General |  |
+| calculate your chinese zodiac sign | ✅ 已发布 | 10 | low | General |  |
 | chart for chinese animal years | ✅ 已有页面 | 10 | low | General |  |
 | chinese and western astrology compatibility chart | ✅ 已有页面 | 10 | low | Compatibility | 0 |
 | chinese astrology 2022 ox | ✅ 已有页面 | 10 | low | General |  |
@@ -5254,7 +5254,7 @@
 | aquarius cancer | 🚫 排除 | 5400 | medium | General | 4 |
 | libra scorpio | 🚫 排除 | 5400 | medium | General | 2 |
 | cancer and leo love compatibility | ✅ 已有页面 | 14800 | high | Compatibility | 4 |
-| chinese animal birth calendar | 🟡 待发布 | 10 | low | Calculator / Birthday | 80 |
+| chinese animal birth calendar | ✅ 已发布 | 10 | low | Calculator / Birthday | 80 |
 | gemini and aries | 🚫 排除 | 5400 | medium | General | 2 |
 | virgo and cancer | 🚫 排除 | 5400 | medium | General | 2 |
 | gemini aries | 🚫 排除 | 5400 | medium | General | 2 |
@@ -5291,7 +5291,7 @@
 | capricorn and pisces | 🚫 排除 | 4400 | medium | General | 3 |
 | libra and capricorn | 🚫 排除 | 4400 | medium | General | 2 |
 | capricorn libra | 🚫 排除 | 4400 | medium | General | 2 |
-| chinese birth year signs chart | ✅ 已有页面 | 10 | low | Calculator / Birthday | 29 |
+| chinese birth year signs chart | ✅ 已发布 | 10 | low | Calculator / Birthday | 29 |
 | pisces and leo match | ✅ 已有页面 | 14800 | high | Compatibility | 6 |
 | show me the chinese zodiac | 🟡 待发布 | 70 | low | General | 97 |
 | gemini soulmate | 🚫 排除 | 1900 | low | General | 1 |
