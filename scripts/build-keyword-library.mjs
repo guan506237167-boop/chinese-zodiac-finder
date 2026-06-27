@@ -191,6 +191,71 @@ function topicTable(rows) {
   return [header, ...rows.map((row, index) => `| ${index + 1} | ${row.title} | ${row.primary} | ${row.supporting || "-"} | ${row.totalVolume} | ${row.avgCompetition} | ${row.intent} | ${row.urlAction} | ${row.notes} |`)].join("\n");
 }
 
+function volumeLabel(volume) {
+  const value = Number(volume || 0);
+  if (value >= 30000) return "very high";
+  if (value >= 10000) return "high";
+  if (value >= 3000) return "medium";
+  return "low";
+}
+
+function statusLabel(row) {
+  if (row.urlAction?.startsWith("Expand ")) return "✅ 已有页面";
+  if (row.notes?.includes("Irrelevant")) return "🚫 排除";
+  if (row.notes?.includes("Commercial")) return "⏳ 后期";
+  return "🟡 待发布";
+}
+
+function keywordListTable(items, options = {}) {
+  const rows = items.map((item) => {
+    const keyword = item.primary || item.keyword;
+    const volume = item.totalVolume || item.search_volume;
+    const category = options.category || item.intent || item.cluster || "general";
+    const status = options.status || statusLabel(item);
+    return `| ${keyword} | ${status} | ${volumeLabel(volume)} | ${category} |`;
+  });
+  return ["| 关键词 | 状态 | 搜索量 | 分类 |", "|---|---|---|---|", ...rows].join("\n");
+}
+
+function obsidianKeywordList({ testArticles, publishingQueue, expansionBatch, laterBatch }) {
+  const yearTopics = publishingQueue.filter((row) => /^year-\d{4}$/.test(row.key)).slice(0, 20);
+  const elementTopics = publishingQueue.filter((row) => row.key.startsWith("element-")).slice(0, 20);
+  const generalTopics = publishingQueue.filter((row) => !/^year-\d{4}$/.test(row.key) && !row.key.startsWith("element-")).slice(0, 20);
+  return `# 关键词列表
+
+## 🔥 高优先级关键词（首批测试文章）
+
+${keywordListTable(testArticles, { category: "first-batch" })}
+
+## 🗓 年份类关键词（适合批量模板页）
+
+${keywordListTable(yearTopics, { category: "year" })}
+
+## 🧩 元素组合关键词（适合专题文章）
+
+${keywordListTable(elementTopics, { category: "element" })}
+
+## 📌 泛主题关键词（需先看 SERP）
+
+${keywordListTable(generalTopics, { category: "general" })}
+
+## ✅ 已有页面扩展词
+
+${keywordListTable(expansionBatch, { category: "existing-page" })}
+
+## 🚫 暂不发布 / 排除词
+
+${keywordListTable(laterBatch, { category: "excluded" })}
+
+## 说明
+
+- 状态为“待发布”的词，可以进入文章生成流程。
+- 状态为“已有页面”的词，优先补到现有页面，不建议单独开薄文章。
+- 年份类关键词数量多，后续适合批量模板化生成。
+- “暂不发布 / 排除词”主要是西方星座、每日运势、怀孕预测、商品素材类，不适合当前生肖工具站广告联盟阶段。
+`;
+}
+
 function clusterName(row) {
   if (/\bhorse|2026\b/.test(row.keyword)) return "Horse / 2026";
   if (/\bdragon|2024\b/.test(row.keyword)) return "Dragon / 2024";
@@ -429,6 +494,8 @@ ${clusterSummary.map((item) => `| ${item.cluster} | ${item.count} | ${item.maxVo
 `;
 
 fs.writeFileSync(path.join(outDir, "chinese-zodiac-keyword-library.md"), markdown, "utf8");
+const obsidianListMarkdown = obsidianKeywordList({ testArticles, publishingQueue, expansionBatch, laterBatch });
+fs.writeFileSync(path.join(outDir, "chinese-zodiac-keyword-list.md"), obsidianListMarkdown, "utf8");
 if (obsidianDir) {
   fs.writeFileSync(path.join(obsidianDir, "生肖站关键词库.md"), markdown, "utf8");
   fs.writeFileSync(path.join(obsidianDir, "生肖站关键词库.csv"), csv, "utf8");
