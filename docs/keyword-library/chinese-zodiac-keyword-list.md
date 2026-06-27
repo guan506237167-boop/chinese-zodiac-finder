@@ -1,3 +1,17 @@
+# Chinese Zodiac Finder 关键词库
+
+# ChineseZodiacFinder.com 关键词库
+
+## 统计信息
+
+- **网站:** chinesezodiacfinder.com
+- **行业:** Chinese Zodiac / Chinese Culture Tool
+- **最后更新:** 2026-06-27 13:35:00
+- **总关键词数:** 4818
+- **已使用:** 908
+- **待使用:** 1460
+- **暂不发布 / 排除:** 2450
+
 # 关键词列表
 
 ## 🔥 高优先级关键词（首批测试文章）

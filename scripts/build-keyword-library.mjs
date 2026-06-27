@@ -495,6 +495,24 @@ ${clusterSummary.map((item) => `| ${item.cluster} | ${item.count} | ${item.maxVo
 
 fs.writeFileSync(path.join(outDir, "chinese-zodiac-keyword-library.md"), markdown, "utf8");
 const obsidianListMarkdown = obsidianKeywordList({ testArticles, publishingQueue, expansionBatch, laterBatch });
+const usedCount = rows.filter((row) => row.notes.startsWith("Already has")).length;
+const excludedCount = rows.filter((row) => row.notes.startsWith("Irrelevant") || row.notes.startsWith("Commercial")).length;
+const pendingCount = rows.length - usedCount - excludedCount;
+const statsHeader = `# Chinese Zodiac Finder 关键词库
+
+# ChineseZodiacFinder.com 关键词库
+
+## 统计信息
+
+- **网站:** chinesezodiacfinder.com
+- **行业:** Chinese Zodiac / Chinese Culture Tool
+- **最后更新:** 2026-06-27 13:35:00
+- **总关键词数:** ${rows.length}
+- **已使用:** ${usedCount}
+- **待使用:** ${pendingCount}
+- **暂不发布 / 排除:** ${excludedCount}
+
+`;
 const fullKeywordDetails = [
   "",
   `## 完整关键词明细（${rows.length} 个）`,
@@ -503,9 +521,9 @@ const fullKeywordDetails = [
   "|---|---|---:|---|---|---:|",
   ...rows.map((row) => `| ${row.keyword} | ${statusLabel(row)} | ${row.search_volume} | ${volumeLabel(row.search_volume)} | ${row.cluster || row.intent || "general"} | ${row.competition_index} |`)
 ].join("\n");
-fs.writeFileSync(path.join(outDir, "chinese-zodiac-keyword-list.md"), obsidianListMarkdown + fullKeywordDetails, "utf8");
+fs.writeFileSync(path.join(outDir, "chinese-zodiac-keyword-list.md"), statsHeader + obsidianListMarkdown + fullKeywordDetails, "utf8");
 if (obsidianDir) {
-  fs.writeFileSync(path.join(obsidianDir, "生肖站关键词库.md"), markdown, "utf8");
+  fs.writeFileSync(path.join(obsidianDir, "生肖站关键词库.md"), statsHeader + obsidianListMarkdown + fullKeywordDetails, "utf8");
   fs.writeFileSync(path.join(obsidianDir, "生肖站关键词库.csv"), csv, "utf8");
 }
 
