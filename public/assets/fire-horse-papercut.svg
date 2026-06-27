@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">Fire Horse papercut illustration</title>
+  <desc id="desc">Original red and gold papercut style horse for a Fire Horse Chinese zodiac guide.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff9ed"/>
+      <stop offset="1" stop-color="#f6e3c4"/>
+    </linearGradient>
+    <linearGradient id="horse" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#cb3c35"/>
+      <stop offset="1" stop-color="#8e2529"/>
+    </linearGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="7" cy="7" r="2" fill="#cfa45e" opacity=".35"/>
+    </pattern>
+  </defs>
+  <rect width="720" height="420" rx="34" fill="url(#bg)"/>
+  <rect x="28" y="28" width="664" height="364" rx="24" fill="url(#dots)" opacity=".55"/>
+  <path d="M90 210c58-76 141-118 248-125 101-7 193 26 272 94-86-31-173-37-258-18-97 22-184 71-262 146 13-32 13-64 0-97z" fill="#f4d28d" opacity=".75"/>
+  <path d="M242 258c-35-9-60-29-76-61 35 13 66 13 91 1 30-15 54-38 72-69 40 6 75 19 105 39 22-24 50-37 84-40-19 21-27 43-24 66 38 18 68 42 89 72-52-16-98-22-138-17-37 5-71 17-101 38-27 18-62 29-102 31-20 2-40 12-60 32 2-38 22-68 60-92z" fill="url(#horse)"/>
+  <path d="M343 128c-4 45-21 85-52 118m79-92c-18 47-45 83-83 108m166-94c-27 20-44 45-52 75" fill="none" stroke="#ffdca0" stroke-width="10" stroke-linecap="round" opacity=".8"/>
+  <path d="M504 144c41-20 81-17 118 10-35 5-62 20-82 45-13-17-25-35-36-55z" fill="#a62b2c"/>
+  <circle cx="512" cy="174" r="8" fill="#fff1c6"/>
+  <path d="M281 270c-12 34-32 61-60 81m118-61c-6 30-19 57-39 81m84-87c15 30 35 55 60 74m47-86c26 20 50 43 72 70" fill="none" stroke="#8e2529" stroke-width="21" stroke-linecap="round"/>
+  <path d="M138 100h54m-27-27v54m395 199h54m-27-27v54" stroke="#cfa45e" stroke-width="10" stroke-linecap="round" opacity=".75"/>
+  <circle cx="132" cy="322" r="34" fill="none" stroke="#cfa45e" stroke-width="8" opacity=".58"/>
+  <circle cx="620" cy="86" r="42" fill="none" stroke="#b3343a" stroke-width="8" opacity=".2"/>
+</svg>

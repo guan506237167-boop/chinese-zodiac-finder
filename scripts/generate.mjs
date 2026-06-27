@@ -1,12 +1,11 @@
 import { mkdir, readFile, rm, writeFile, copyFile, readdir } from "node:fs/promises";
-import { existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 
 const SITE = {
   name: "Chinese Zodiac Guide",
   url: "https://www.chinesezodiacfinder.com",
   description: "Find your Chinese zodiac sign, zodiac year, animal meaning, and traditional compatibility with a fast cultural reference tool.",
-  assetVersion: "20260627-22"
+  assetVersion: "20260627-23"
 };
 const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || "G-VB9E7T2VCF";
 
@@ -56,8 +55,9 @@ const elementInfo = {
 
 await rm("dist", { recursive: true, force: true });
 await mkdir("dist/assets", { recursive: true });
-await copyFile("public/assets/zodiac-wheel.svg", "dist/assets/zodiac-wheel.svg");
-await copyFile("public/assets/logo.svg", "dist/assets/logo.svg");
+for (const asset of await readdir("public/assets")) {
+  await copyFile(join("public/assets", asset), join("dist/assets", asset));
+}
 await copyFile("public/google1c43509ea14adc51.html", "dist/google1c43509ea14adc51.html");
 await copyFile("public/_headers", "dist/_headers");
 
@@ -434,6 +434,16 @@ function guideCard(guide) {
   </a>`;
 }
 
+function articleFigure({ src, alt, title, text }) {
+  return `<figure class="content-section article-figure">
+    <img src="${src}" alt="${escapeHtml(alt)}" loading="lazy">
+    <figcaption>
+      <strong>${escapeHtml(title)}</strong>
+      <span>${escapeHtml(text)}</span>
+    </figcaption>
+  </figure>`;
+}
+
 function slugify(value) {
   return String(value).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 }
@@ -727,6 +737,12 @@ await writePage("/guides/fire-horse-zodiac/", pageLayout({
       <p class="lead-answer">A Fire Horse is a Horse year combined with the Fire element in the traditional 60-year Chinese zodiac cycle. Modern Fire Horse years include 1966 and 2026. The 2026 Fire Horse year begins on February 17, 2026, so a person born before that Lunar New Year date still belongs to the previous zodiac year.</p>
       <p>The Fire Horse topic is popular because it combines two vivid symbols. Horse is associated with movement, freedom, speed, and social energy. Fire is associated with warmth, expression, visibility, and active momentum. Together, Fire Horse is usually described as one of the more energetic element-animal combinations in Chinese zodiac culture.</p>
     </section>
+    ${articleFigure({
+      src: "/assets/fire-horse-papercut.svg",
+      alt: "Red and gold papercut style Fire Horse Chinese zodiac illustration",
+      title: "Fire Horse visual note",
+      text: "An original papercut-style illustration using red, gold, and horse movement to support the article without relying on copyrighted images."
+    })}
     <section class="content-section split">
       <div>
         <p class="eyebrow">Short Answer</p>
@@ -816,6 +832,12 @@ await writePage("/guides/chinese-birth-signs/", pageLayout({
       <p class="lead-answer">To find Chinese birth signs correctly, use the full birthday. Chinese zodiac signs are based on zodiac years, but those years begin at Lunar New Year, not January 1. If your birthday is before Lunar New Year in your birth year, your Chinese birth sign belongs to the previous zodiac year.</p>
       <p>This is why a person born in January or early February can have a different Chinese zodiac sign from someone born later in the same Gregorian year.</p>
     </section>
+    ${articleFigure({
+      src: "/assets/birth-signs-calendar.svg",
+      alt: "Calendar and zodiac wheel illustration for Chinese birth signs",
+      title: "Birth sign visual note",
+      text: "An original calendar-and-zodiac-wheel illustration showing why birthday lookup depends on the Lunar New Year boundary."
+    })}
     <section class="content-section split">
       <div>
         <p class="eyebrow">Short Answer</p>
@@ -1970,7 +1992,7 @@ function guideCss() {
 }
 
 function polishCss() {
-  return `.site-header{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center}.brand{min-width:0}.nav{min-width:0;max-width:100%;justify-content:flex-end;column-gap:clamp(12px,1.2vw,18px);row-gap:8px}.split{padding:0}.split>div{align-content:start}.split>div>.button-link{justify-self:start;margin-top:12px}.split>div p:last-of-type{margin-bottom:10px}.split .fact-card{align-self:start}.content-section:not(.split){padding-top:24px;padding-bottom:24px}body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-body,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section{max-width:980px}.article-shell .animal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tool-page{padding:0 clamp(18px,4vw,52px)}.tool-page .tool-panel{max-width:none}.article-search{padding-top:18px!important;padding-bottom:18px!important;grid-template-columns:minmax(220px,.62fr) minmax(360px,1fr);align-items:center;gap:22px}.article-search>div{display:grid;gap:8px}.article-search h2{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:clamp(18px,1.35vw,22px);font-weight:680;line-height:1.24;margin:0;letter-spacing:0;max-width:360px}.article-search .eyebrow{width:max-content}.site-search-form{align-items:end;max-width:560px;justify-self:end;width:100%;padding:14px;background:#fffaf3;border:1px solid #eadfcc;border-radius:8px}.site-search-form label{font-size:13px;font-weight:680;color:#312a23}.site-search-form input{height:41px}.site-search-form button{min-height:41px;font-weight:720}.article-body{padding-top:28px!important;padding-bottom:28px!important}.article-body h2{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:clamp(23px,1.9vw,30px);font-weight:700;line-height:1.22;margin:8px 0 14px}.article-body .eyebrow{margin-bottom:8px}.article-body .lead-answer{font-size:17px;line-height:1.72;color:#2f2922}.article-list{margin:12px 0 0;padding-left:20px;color:#463f38}.article-list li{margin:6px 0}.page-home .content-section,.page-guides .content-section{padding:26px clamp(18px,4vw,52px);margin-bottom:28px}.page-home .tool-strip{padding:0;margin-bottom:28px}.page-home .tool-strip .tool-panel{min-height:100%}.page-home .ad-slot{max-width:1160px}.page-guides .article-search{max-width:1160px;grid-template-columns:minmax(640px,1fr) minmax(320px,480px);align-items:center;margin-bottom:32px}.page-guides .site-search-form{max-width:480px;justify-self:end}.page-guides .article-search h2,.page-guides .section-heading h2{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:clamp(22px,1.65vw,26px);font-weight:700;line-height:1.25;letter-spacing:0}.page-guides .article-search h2{max-width:760px;white-space:nowrap}.page-guides .section-heading{margin-bottom:20px}.page-guides .guide-grid{margin-top:2px}.page-guides .guide-next{padding-top:24px;padding-bottom:24px}.page-guides-horse-chinese-zodiac .page-hero h1{font-size:clamp(34px,4vw,50px)}.page-guides-horse-chinese-zodiac .content-section{margin-bottom:24px}@media(max-width:1120px){.nav a{font-size:14px}.brand{font-size:16px}.site-header{gap:18px}}@media(max-width:900px){.site-header{grid-template-columns:1fr;align-items:flex-start}.nav{justify-content:flex-start;width:100%}}@media(max-width:1180px){.article-search,.page-guides .article-search{grid-template-columns:1fr}.article-search h2{max-width:720px}.page-guides .article-search h2{white-space:normal}.site-search-form,.page-guides .site-search-form{max-width:100%;justify-self:stretch}}@media(max-width:640px){.site-search-form{grid-template-columns:1fr;padding:12px}.article-search{gap:16px}.article-shell .animal-grid{grid-template-columns:1fr}}`;
+  return `.site-header{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center}.brand{min-width:0}.nav{min-width:0;max-width:100%;justify-content:flex-end;column-gap:clamp(12px,1.2vw,18px);row-gap:8px}.split{padding:0}.split>div{align-content:start}.split>div>.button-link{justify-self:start;margin-top:12px}.split>div p:last-of-type{margin-bottom:10px}.split .fact-card{align-self:start}.content-section:not(.split){padding-top:24px;padding-bottom:24px}body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-body,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section{max-width:980px}.article-shell .animal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tool-page{padding:0 clamp(18px,4vw,52px)}.tool-page .tool-panel{max-width:none}.article-search{padding-top:18px!important;padding-bottom:18px!important;grid-template-columns:minmax(220px,.62fr) minmax(360px,1fr);align-items:center;gap:22px}.article-search>div{display:grid;gap:8px}.article-search h2{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:clamp(18px,1.35vw,22px);font-weight:680;line-height:1.24;margin:0;letter-spacing:0;max-width:360px}.article-search .eyebrow{width:max-content}.site-search-form{align-items:end;max-width:560px;justify-self:end;width:100%;padding:14px;background:#fffaf3;border:1px solid #eadfcc;border-radius:8px}.site-search-form label{font-size:13px;font-weight:680;color:#312a23}.site-search-form input{height:41px}.site-search-form button{min-height:41px;font-weight:720}.article-body{padding-top:28px!important;padding-bottom:28px!important}.article-body h2{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:clamp(23px,1.9vw,30px);font-weight:700;line-height:1.22;margin:8px 0 14px}.article-body .eyebrow{margin-bottom:8px}.article-body .lead-answer{font-size:17px;line-height:1.72;color:#2f2922}.article-figure{display:grid;grid-template-columns:minmax(260px,.58fr) minmax(220px,.42fr);align-items:center;gap:20px;padding:18px!important;background:#fffdf8!important}.article-figure img{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;border-radius:8px;background:#f7efe1;border:1px solid #eadfcc}.article-figure figcaption{display:grid;gap:8px;margin:0;color:#51483f}.article-figure figcaption strong{font-size:18px;line-height:1.25;color:#211b17}.article-figure figcaption span{font-size:14px;line-height:1.6;color:var(--muted)}.article-list{margin:12px 0 0;padding-left:20px;color:#463f38}.article-list li{margin:6px 0}.page-home .content-section,.page-guides .content-section{padding:26px clamp(18px,4vw,52px);margin-bottom:28px}.page-home .tool-strip{padding:0;margin-bottom:28px}.page-home .tool-strip .tool-panel{min-height:100%}.page-home .ad-slot{max-width:1160px}.page-guides .article-search{max-width:1160px;grid-template-columns:minmax(640px,1fr) minmax(320px,480px);align-items:center;margin-bottom:32px}.page-guides .site-search-form{max-width:480px;justify-self:end}.page-guides .article-search h2,.page-guides .section-heading h2{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:clamp(22px,1.65vw,26px);font-weight:700;line-height:1.25;letter-spacing:0}.page-guides .article-search h2{max-width:760px;white-space:nowrap}.page-guides .section-heading{margin-bottom:20px}.page-guides .guide-grid{margin-top:2px}.page-guides .guide-next{padding-top:24px;padding-bottom:24px}.page-guides-horse-chinese-zodiac .page-hero h1{font-size:clamp(34px,4vw,50px)}.page-guides-horse-chinese-zodiac .content-section{margin-bottom:24px}@media(max-width:1120px){.nav a{font-size:14px}.brand{font-size:16px}.site-header{gap:18px}}@media(max-width:900px){.site-header{grid-template-columns:1fr;align-items:flex-start}.nav{justify-content:flex-start;width:100%}}@media(max-width:1180px){.article-search,.page-guides .article-search{grid-template-columns:1fr}.article-search h2{max-width:720px}.page-guides .article-search h2{white-space:normal}.site-search-form,.page-guides .site-search-form{max-width:100%;justify-self:stretch}}@media(max-width:720px){.article-figure{grid-template-columns:1fr;gap:14px}.article-figure img{max-height:260px}}@media(max-width:640px){.site-search-form{grid-template-columns:1fr;padding:12px}.article-search{gap:16px}.article-shell .animal-grid{grid-template-columns:1fr}}`;
 }
 
 function culturalVisualCss() {
