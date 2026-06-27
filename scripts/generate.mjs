@@ -6,7 +6,7 @@ const SITE = {
   name: "Chinese Zodiac Guide",
   url: "https://www.chinesezodiacfinder.com",
   description: "Find your Chinese zodiac sign, zodiac year, animal meaning, and traditional compatibility with a fast cultural reference tool.",
-  assetVersion: "20260627-21"
+  assetVersion: "20260627-22"
 };
 const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || "G-VB9E7T2VCF";
 
@@ -376,6 +376,8 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
       </div>
       <div>
         <span>Site</span>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
         <a href="/privacy/">Privacy</a>
         <a href="/terms/">Terms</a>
       </div>
@@ -1534,6 +1536,56 @@ await writePage("/chinese-zodiac-faq/", pageLayout({
     ${faqBlock(standardFaqs())}`
 }));
 
+await writePage("/about/", simpleInfoPage({
+  path: "/about/",
+  h1: "About Chinese Zodiac Guide",
+  title: "About Chinese Zodiac Guide",
+  intro: "Chinese Zodiac Guide is an English reference site for learning Chinese zodiac signs, years, animals, elements, and compatibility traditions.",
+  sections: [
+    {
+      title: "What this site provides",
+      text: "Chinese Zodiac Guide explains Chinese zodiac culture in a practical, easy-to-read format. The site includes a birth date calculator, zodiac year chart, animal guides, five element explanations, compatibility references, and article-style guides for common search questions."
+    },
+    {
+      title: "How the content is written",
+      text: "The content is built around clear definitions, Lunar New Year boundaries, traditional symbolism, and internal cross-references. The goal is to help readers understand Chinese zodiac topics without treating folklore as fixed prediction or professional advice."
+    },
+    {
+      title: "Cultural and educational purpose",
+      text: "Chinese zodiac meanings, lucky symbols, elements, and compatibility notes are presented as cultural references. They are suitable for learning, comparison, and entertainment, but they should not be used as medical, legal, financial, relationship, or life advice."
+    },
+    {
+      title: "Corrections and updates",
+      text: "If you notice an unclear explanation, a date that should be checked, or a topic that needs better cultural context, you can contact the site owner by email."
+    }
+  ]
+}));
+
+await writePage("/contact/", simpleInfoPage({
+  path: "/contact/",
+  h1: "Contact Chinese Zodiac Guide",
+  title: "Contact Chinese Zodiac Guide",
+  intro: "Use this page for questions, corrections, feedback, and business contact related to Chinese Zodiac Guide.",
+  sections: [
+    {
+      title: "Email contact",
+      text: "For site feedback, correction requests, partnership questions, or general business contact, email guan@shanyuegroup.com."
+    },
+    {
+      title: "Content corrections",
+      text: "If you contact us about a zodiac year, Lunar New Year boundary, animal meaning, element explanation, or compatibility page, please include the page URL and the specific sentence or date you want us to review."
+    },
+    {
+      title: "Advertising and business inquiries",
+      text: "Advertising, sponsorship, affiliate, ecommerce, and product collaboration inquiries can also be sent to guan@shanyuegroup.com. We do not accept requests that would make cultural reference content misleading or unsafe."
+    },
+    {
+      title: "Response expectations",
+      text: "This is a small independent website, so response times may vary. The site does not provide personal fortune-telling, professional advice, or individual life decision guidance by email."
+    }
+  ]
+}));
+
 await writePage("/privacy/", simpleLegalPage({
   h1: "Privacy Policy",
   intro: "This privacy policy explains how Chinese Zodiac Guide handles basic site data, analytics, and third-party services.",
@@ -1651,6 +1703,21 @@ function simpleLegalPage({ h1, intro, sections }) {
   </section>`;
   return pageLayout({
     title: `${h1} | ${SITE.name}`,
+    description: intro.slice(0, 155),
+    path,
+    h1,
+    intro,
+    body
+  });
+}
+
+function simpleInfoPage({ path, h1, title, intro, sections }) {
+  const body = `<section class="content-section article-body">
+    ${sections.map((section) => `<h2>${escapeHtml(section.title)}</h2><p>${escapeHtml(section.text)}</p>`).join("")}
+    <p>Last updated: 2026-06-27.</p>
+  </section>`;
+  return pageLayout({
+    title: `${title} | ${SITE.name}`,
     description: intro.slice(0, 155),
     path,
     h1,
