@@ -6,7 +6,7 @@ const SITE = {
   name: "Chinese Zodiac Guide",
   url: "https://www.chinesezodiacfinder.com",
   description: "Find your Chinese zodiac sign, zodiac year, animal meaning, and traditional compatibility with a fast cultural reference tool.",
-  assetVersion: "20260627-5"
+  assetVersion: "20260627-6"
 };
 const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || "G-VB9E7T2VCF";
 
@@ -430,6 +430,23 @@ function latestGuidesBlock(items = guides.slice(0, 6)) {
   </section>`;
 }
 
+function yearCardsBlock(title = "Recent and upcoming zodiac years", items = years.filter((row) => row.year >= 2024 && row.year <= 2030)) {
+  return `<section class="content-section year-links">
+    <div class="section-heading">
+      <p class="eyebrow">Year Guides</p>
+      <h2>${escapeHtml(title)}</h2>
+    </div>
+    <div class="year-link-grid">${items.map((item) => {
+      const animal = animalBySlug[item.animal];
+      return `<a class="year-link-card" href="/chinese-zodiac/${item.year}/">
+        <strong>${item.year}</strong>
+        <span>Year of the ${animal.name}</span>
+        <small>${item.element} &middot; starts ${item.lunarNewYear}</small>
+      </a>`;
+    }).join("")}</div>
+  </section>`;
+}
+
 function relatedGuidesBlock(title, items) {
   return `<section class="content-section related-guides">
     <div class="section-heading">
@@ -581,6 +598,7 @@ await writePage("/", pageLayout({
       </div>
       <div class="animal-grid">${animals.map(animalCard).join("")}</div>
     </section>
+    ${yearCardsBlock()}
     ${latestGuidesBlock()}
     ${adSlot("mid-home")}
     <section class="content-section split">
@@ -942,6 +960,7 @@ await writePage("/chinese-zodiac-years/", pageLayout({
       <h2>Chinese zodiac years</h2>
       ${yearsTable()}
     </section>
+    ${yearCardsBlock("Featured yearly zodiac guides")}
     ${faqBlock([
       { q: "Does each Chinese zodiac year start on January 1?", a: "No. Each zodiac year starts at Lunar New Year, so the start date changes by Gregorian year." },
       { q: "What does the element column mean?", a: "The element column shows the traditional five-element cycle paired with each zodiac animal year." }
@@ -1622,7 +1641,7 @@ function faqHelpCss() {
 }
 
 function guideCss() {
-  return `.guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.guide-grid.compact{grid-template-columns:repeat(3,minmax(0,1fr))}.guide-card{display:grid;align-content:start;min-height:154px;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:8px;padding:17px;box-shadow:0 8px 22px rgba(47,37,23,.045);transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}.guide-card:hover{transform:translateY(-2px);border-color:#d2ad73;box-shadow:0 14px 28px rgba(47,37,23,.08)}.guide-card span{color:var(--jade);font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.05em}.guide-card strong{display:block;margin-top:8px;font-size:18px;line-height:1.3;color:#251f1a}.guide-card p{margin:8px 0 0;color:var(--muted);font-size:14px;line-height:1.55}.section-action{margin-top:16px}.latest-guides{background:#fffdf8}.related-guides .guide-card{min-height:132px}.guide-next{display:flex;align-items:center;justify-content:space-between;gap:24px}.guide-next h2{margin-bottom:8px}.guide-next p{margin:0;color:var(--muted)}.guide-next .button-link{flex:0 0 auto}@media(max-width:980px){.guide-grid,.guide-grid.compact{grid-template-columns:repeat(2,minmax(0,1fr))}.guide-next{align-items:flex-start;flex-direction:column}}@media(max-width:640px){.guide-grid,.guide-grid.compact{grid-template-columns:1fr}}`;
+  return `.guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.guide-grid.compact{grid-template-columns:repeat(3,minmax(0,1fr))}.guide-card{display:grid;align-content:start;min-height:154px;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:8px;padding:17px;box-shadow:0 8px 22px rgba(47,37,23,.045);transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}.guide-card:hover{transform:translateY(-2px);border-color:#d2ad73;box-shadow:0 14px 28px rgba(47,37,23,.08)}.guide-card span{color:var(--jade);font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.05em}.guide-card strong{display:block;margin-top:8px;font-size:18px;line-height:1.3;color:#251f1a}.guide-card p{margin:8px 0 0;color:var(--muted);font-size:14px;line-height:1.55}.year-link-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.year-link-card{display:grid;gap:4px;text-decoration:none;background:linear-gradient(180deg,#fffefa,#fff8ee);border:1px solid var(--line);border-radius:8px;padding:14px 15px;min-height:104px;box-shadow:0 8px 20px rgba(47,37,23,.04)}.year-link-card:hover{border-color:#d2ad73;box-shadow:0 14px 26px rgba(47,37,23,.075)}.year-link-card strong{font-size:22px;line-height:1;color:#231d18}.year-link-card span{font-size:15px;font-weight:720;color:#2f2922}.year-link-card small{font-size:13px;line-height:1.45;color:var(--muted)}.section-action{margin-top:16px}.latest-guides{background:#fffdf8}.related-guides .guide-card{min-height:132px}.guide-next{display:flex;align-items:center;justify-content:space-between;gap:24px}.guide-next h2{margin-bottom:8px}.guide-next p{margin:0;color:var(--muted)}.guide-next .button-link{flex:0 0 auto}@media(max-width:980px){.guide-grid,.guide-grid.compact{grid-template-columns:repeat(2,minmax(0,1fr))}.year-link-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.guide-next{align-items:flex-start;flex-direction:column}}@media(max-width:640px){.guide-grid,.guide-grid.compact,.year-link-grid{grid-template-columns:1fr}}`;
 }
 
 function polishCss() {

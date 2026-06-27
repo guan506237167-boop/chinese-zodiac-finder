@@ -6,6 +6,7 @@ const distDir = "dist";
 const htmlFiles = await listHtmlFiles(distDir);
 const missing = [];
 const htmlIssues = [];
+const internalInlinks = new Map();
 
 for (const file of htmlFiles) {
   const html = await readFile(file, "utf8");
@@ -31,8 +32,22 @@ for (const file of htmlFiles) {
     .filter(Boolean);
 
   for (const link of links) {
+    internalInlinks.set(link, (internalInlinks.get(link) || 0) + 1);
     if (!localTargetExists(link)) {
       missing.push({ file, link });
+    }
+  }
+}
+
+const sitemapFile = join(distDir, "sitemap.xml");
+if (existsSync(sitemapFile)) {
+  const sitemap = await readFile(sitemapFile, "utf8");
+  const sitemapPaths = [...sitemap.matchAll(/<loc>https?:\/\/www\.chinesezodiacfinder\.com([^<]+)<\/loc>/gi)]
+    .map((match) => match[1])
+    .filter((pathname) => pathname !== "/");
+  for (const pathname of sitemapPaths) {
+    if (!internalInlinks.has(pathname)) {
+      htmlIssues.push(`${pathname} -> sitemap page has no internal href inlinks`);
     }
   }
 }
