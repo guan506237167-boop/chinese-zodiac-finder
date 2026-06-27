@@ -495,7 +495,15 @@ ${clusterSummary.map((item) => `| ${item.cluster} | ${item.count} | ${item.maxVo
 
 fs.writeFileSync(path.join(outDir, "chinese-zodiac-keyword-library.md"), markdown, "utf8");
 const obsidianListMarkdown = obsidianKeywordList({ testArticles, publishingQueue, expansionBatch, laterBatch });
-fs.writeFileSync(path.join(outDir, "chinese-zodiac-keyword-list.md"), obsidianListMarkdown, "utf8");
+const fullKeywordDetails = [
+  "",
+  `## 完整关键词明细（${rows.length} 个）`,
+  "",
+  "| 关键词 | 状态 | 搜索量 | 搜索量级 | 分类 | 竞争度 |",
+  "|---|---|---:|---|---|---:|",
+  ...rows.map((row) => `| ${row.keyword} | ${statusLabel(row)} | ${row.search_volume} | ${volumeLabel(row.search_volume)} | ${row.cluster || row.intent || "general"} | ${row.competition_index} |`)
+].join("\n");
+fs.writeFileSync(path.join(outDir, "chinese-zodiac-keyword-list.md"), obsidianListMarkdown + fullKeywordDetails, "utf8");
 if (obsidianDir) {
   fs.writeFileSync(path.join(obsidianDir, "生肖站关键词库.md"), markdown, "utf8");
   fs.writeFileSync(path.join(obsidianDir, "生肖站关键词库.csv"), csv, "utf8");
