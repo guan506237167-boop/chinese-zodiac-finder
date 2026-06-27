@@ -495,9 +495,10 @@ ${clusterSummary.map((item) => `| ${item.cluster} | ${item.count} | ${item.maxVo
 
 fs.writeFileSync(path.join(outDir, "chinese-zodiac-keyword-library.md"), markdown, "utf8");
 const obsidianListMarkdown = obsidianKeywordList({ testArticles, publishingQueue, expansionBatch, laterBatch });
-const usedCount = rows.filter((row) => row.notes.startsWith("Already has")).length;
+const publishedArticleUsedCount = 0;
+const coveredByExistingPageCount = rows.filter((row) => row.notes.startsWith("Already has")).length;
 const excludedCount = rows.filter((row) => row.notes.startsWith("Irrelevant") || row.notes.startsWith("Commercial")).length;
-const pendingCount = rows.length - usedCount - excludedCount;
+const pendingCount = rows.length - coveredByExistingPageCount - excludedCount;
 const statsHeader = `# Chinese Zodiac Finder 关键词库
 
 # ChineseZodiacFinder.com 关键词库
@@ -508,7 +509,8 @@ const statsHeader = `# Chinese Zodiac Finder 关键词库
 - **行业:** Chinese Zodiac / Chinese Culture Tool
 - **最后更新:** 2026-06-27 13:35:00
 - **总关键词数:** ${rows.length}
-- **已使用:** ${usedCount}
+- **已发布文章使用:** ${publishedArticleUsedCount}
+- **现有页面覆盖:** ${coveredByExistingPageCount}
 - **待使用:** ${pendingCount}
 - **暂不发布 / 排除:** ${excludedCount}
 
