@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 const animals = JSON.parse(await readFile("data/zodiac-animals.json", "utf8"));
 const seedYears = JSON.parse(await readFile("data/zodiac-years.json", "utf8"));
 const compatibility = JSON.parse(await readFile("data/compatibility.json", "utf8"));
-const years = seedYears;
+const years = buildZodiacYears(1900, 2100, seedYears);
 const byYear = Object.fromEntries(years.map((year) => [String(year.year), year]));
 const bySlug = Object.fromEntries(animals.map((animal) => [animal.animal, animal]));
 
@@ -11,6 +11,8 @@ assert(findZodiac(new Date("2026-02-16T00:00:00Z")).animal === "snake", "2026-02
 assert(findZodiac(new Date("2026-02-17T00:00:00Z")).animal === "horse", "2026-02-17 should be Horse");
 assert(findZodiac(new Date("1990-01-26T00:00:00Z")).animal === "snake", "1990-01-26 should still be Snake");
 assert(findZodiac(new Date("1990-01-27T00:00:00Z")).animal === "horse", "1990-01-27 should be Horse");
+assert(findZodiac(new Date("1900-01-30T00:00:00Z")) === null, "1900-01-30 should be outside supported zodiac boundary");
+assert(findZodiac(new Date("1900-01-31T00:00:00Z")).animal === "rat", "1900-01-31 should be Rat");
 
 assert(byYear["2026"].animal === "horse", "2026 year lookup should be Horse");
 assert(byYear["2024"].animal === "dragon", "2024 year lookup should be Dragon");
@@ -32,9 +34,51 @@ function findZodiac(date) {
   if (!row) return null;
   const boundary = new Date(`${row.lunarNewYear}T00:00:00Z`);
   if (date < boundary) {
-    row = years.find((item) => item.year === y - 1) || row;
+    const previous = years.find((item) => item.year === y - 1);
+    if (!previous) return null;
+    row = previous;
   }
   return row;
+}
+
+function buildZodiacYears(start, end, seed) {
+  const knownDates = new Map(seed.map((item) => [item.year, item.lunarNewYear]));
+  const zodiacCycle = ["rat", "ox", "tiger", "rabbit", "dragon", "snake", "horse", "goat", "monkey", "rooster", "dog", "pig"];
+  const elementCycle = ["Metal", "Metal", "Water", "Water", "Wood", "Wood", "Fire", "Fire", "Earth", "Earth"];
+  return Array.from({ length: end - start + 1 }, (_, index) => {
+    const year = start + index;
+    return {
+      year,
+      animal: zodiacCycle[mod(year - 2020, 12)],
+      element: elementCycle[mod(year - 2020, 10)],
+      lunarNewYear: knownDates.get(year) || findLunarNewYear(year)
+    };
+  });
+}
+
+function findLunarNewYear(year) {
+  const formatter = new Intl.DateTimeFormat("en-u-ca-chinese", {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+    timeZone: "UTC"
+  });
+  for (let month = 0; month <= 1; month += 1) {
+    const first = month === 0 ? 21 : 1;
+    const last = month === 0 ? 31 : 21;
+    for (let day = first; day <= last; day += 1) {
+      const date = new Date(Date.UTC(year, month, day));
+      const parts = Object.fromEntries(formatter.formatToParts(date).map((part) => [part.type, part.value]));
+      if (parts.month === "1" && parts.day === "1" && Number(parts.relatedYear) === year) {
+        return date.toISOString().slice(0, 10);
+      }
+    }
+  }
+  return `${year}-02-01`;
+}
+
+function mod(value, base) {
+  return ((value % base) + base) % base;
 }
 
 function pairKey(first, second) {
