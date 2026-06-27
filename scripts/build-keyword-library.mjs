@@ -373,7 +373,7 @@ function recommendedTestArticles(sourceRows) {
 
 const rows = readRows()
   .map((row) => ({ ...row, keyword: normalizeKeyword(row.keyword) }))
-  .filter((row) => row.keyword && Number(row.search_volume || 0) >= 70)
+  .filter((row) => row.keyword)
   .filter((row, index, arr) => arr.findIndex((item) => item.keyword === row.keyword) === index)
   .map((row) => {
     const intent = primaryIntent(row.keyword);
@@ -399,18 +399,19 @@ const rows = readRows()
 
 for (const row of rows) row.cluster = clusterName(row);
 
-const newCandidates = rows.filter((row) => row.notes === "New article candidate.");
-const expansionCandidates = rows.filter((row) => row.notes.startsWith("Already has"));
+const priorityRows = rows.filter((row) => Number(row.search_volume || 0) >= 70);
+const newCandidates = priorityRows.filter((row) => row.notes === "New article candidate.");
+const expansionCandidates = priorityRows.filter((row) => row.notes.startsWith("Already has"));
 const laterCandidates = rows.filter((row) => row.notes.startsWith("Commercial") || row.notes.startsWith("Irrelevant")).slice(0, 40);
 
 const firstBatch = newCandidates.slice(0, 30);
 const expansionBatch = expansionCandidates.slice(0, 25);
 const laterBatch = laterCandidates.slice(0, 20);
-const publishingQueue = topicQueue(rows.filter((row) => !row.notes.startsWith("Irrelevant") && !row.notes.startsWith("Commercial")), 35);
-const testArticles = recommendedTestArticles(rows.filter((row) => row.notes === "New article candidate."));
+const publishingQueue = topicQueue(priorityRows.filter((row) => !row.notes.startsWith("Irrelevant") && !row.notes.startsWith("Commercial")), 35);
+const testArticles = recommendedTestArticles(priorityRows.filter((row) => row.notes === "New article candidate."));
 
 const byCluster = new Map();
-for (const row of rows.slice(0, 500)) {
+for (const row of priorityRows.slice(0, 500)) {
   if (!byCluster.has(row.cluster)) byCluster.set(row.cluster, []);
   byCluster.get(row.cluster).push(row);
 }
@@ -442,6 +443,7 @@ Source: \`${sourcePath}\`
 Generated: 2026-06-27
 
 Rows parsed: ${rows.length}
+Priority rows used for publishing queues: ${priorityRows.length}
 
 ## Sorting Logic
 
@@ -450,6 +452,7 @@ Priority is based on search volume, competition index, CPC, search intent, exist
 - Higher priority: clear informational intent, tool-support intent, compatibility intent, element/meaning intent, and long-tail queries that can become article pages.
 - Lower priority: broad head terms already covered by existing pages, commercial product/media queries, tattoo/image/printable terms, or terms likely to be dominated by ecommerce.
 - Existing page coverage is not discarded. Those keywords are marked as expansion opportunities for current pages.
+- The complete library keeps low-volume long-tail keywords. The publishing queue uses search volume >= 70 only to avoid letting tiny long-tail variants dominate the first batch.
 
 ## Deduplicated Publishing Topic Queue
 

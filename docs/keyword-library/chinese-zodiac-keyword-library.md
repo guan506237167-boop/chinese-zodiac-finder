@@ -4,7 +4,8 @@ Source: `C:/Users/Lenovo/Desktop/新站/生肖.txt`
 
 Generated: 2026-06-27
 
-Rows parsed: 4818
+Rows parsed: 8531
+Priority rows used for publishing queues: 4818
 
 ## Sorting Logic
 
@@ -13,6 +14,7 @@ Priority is based on search volume, competition index, CPC, search intent, exist
 - Higher priority: clear informational intent, tool-support intent, compatibility intent, element/meaning intent, and long-tail queries that can become article pages.
 - Lower priority: broad head terms already covered by existing pages, commercial product/media queries, tattoo/image/printable terms, or terms likely to be dominated by ecommerce.
 - Existing page coverage is not discarded. Those keywords are marked as expansion opportunities for current pages.
+- The complete library keeps low-volume long-tail keywords. The publishing queue uses search volume >= 70 only to avoid letting tiny long-tail variants dominate the first batch.
 
 ## Deduplicated Publishing Topic Queue
 
