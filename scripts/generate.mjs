@@ -6,7 +6,7 @@ const SITE = {
   name: "Chinese Zodiac Guide",
   url: "https://www.chinesezodiacfinder.com",
   description: "Find your Chinese zodiac sign, zodiac year, animal meaning, and traditional compatibility with a fast cultural reference tool.",
-  assetVersion: "20260627-19"
+  assetVersion: "20260627-20"
 };
 const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || "G-VB9E7T2VCF";
 
@@ -432,6 +432,10 @@ function guideCard(guide) {
   </a>`;
 }
 
+function slugify(value) {
+  return String(value).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+}
+
 function latestGuidesBlock(items = guides.slice(0, 6)) {
   return `<section class="content-section latest-guides">
     <div class="section-heading">
@@ -440,6 +444,41 @@ function latestGuidesBlock(items = guides.slice(0, 6)) {
     </div>
     <div class="guide-grid">${items.map(guideCard).join("")}</div>
     <div class="section-action"><a class="button-link secondary" href="/guides/">Browse all guides</a></div>
+  </section>`;
+}
+
+function guideCategorySectionsBlock() {
+  const categories = [
+    { title: "Calculator Guides", intro: "Birth date, sign lookup, and tool-support articles." },
+    { title: "Element Guides", intro: "Five element combinations such as Fire Horse and Metal Dragon." },
+    { title: "Animal Guides", intro: "Animal meanings, years, personality associations, and cultural notes." },
+    { title: "Year Guides", intro: "Specific year pages and Lunar New Year boundary topics." },
+    { title: "Compatibility Guides", intro: "Relationship and pairing topics based on traditional animal matching." }
+  ];
+  const nav = categories
+    .map((category) => `<a href="#${slugify(category.title)}">${escapeHtml(category.title.replace(" Guides", ""))}</a>`)
+    .join("");
+  const sections = categories
+    .map((category) => {
+      const items = guides.filter((guide) => guide.category === category.title);
+      if (!items.length) return "";
+      return `<section class="guide-category-section" id="${slugify(category.title)}">
+        <div class="section-heading">
+          <p class="eyebrow">${escapeHtml(category.title)}</p>
+          <h2>${escapeHtml(category.title)}</h2>
+          <p>${escapeHtml(category.intro)}</p>
+        </div>
+        <div class="guide-grid compact">${items.map(guideCard).join("")}</div>
+      </section>`;
+    })
+    .join("");
+  return `<section class="content-section guide-categories">
+    <div class="section-heading">
+      <p class="eyebrow">Browse by Type</p>
+      <h2>Choose a guide category</h2>
+    </div>
+    <nav class="guide-filter-nav" aria-label="Guide categories">${nav}</nav>
+    <div class="guide-category-list">${sections}</div>
   </section>`;
 }
 
@@ -675,10 +714,13 @@ await writePage("/guides/", pageLayout({
   intro: "Browse the full guide library for Chinese zodiac years, animals, elements, and compatibility topics.",
   body: `
     ${articleSearchBlock()}
+    ${latestGuidesBlock(guides.slice(0, 6))}
+    ${guideCategorySectionsBlock()}
     <section class="content-section">
       <div class="section-heading">
-        <p class="eyebrow">Guide Library</p>
+        <p class="eyebrow">All Guides</p>
         <h2>All Chinese zodiac guides</h2>
+        <p>Every article appears here, including calculator, element, animal, year, and compatibility guides.</p>
       </div>
       <div class="guide-grid">${guides.map(guideCard).join("")}</div>
     </section>
@@ -1884,7 +1926,7 @@ function faqHelpCss() {
 }
 
 function guideCss() {
-  return `.guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.guide-grid.compact{grid-template-columns:repeat(3,minmax(0,1fr))}.guide-card{display:grid;align-content:start;min-height:154px;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:8px;padding:17px;box-shadow:0 8px 22px rgba(47,37,23,.045);transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}.guide-card:hover{transform:translateY(-2px);border-color:#d2ad73;box-shadow:0 14px 28px rgba(47,37,23,.08)}.guide-card span{color:var(--jade);font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.05em}.guide-card strong{display:block;margin-top:8px;font-size:18px;line-height:1.3;color:#251f1a}.guide-card p{margin:8px 0 0;color:var(--muted);font-size:14px;line-height:1.55}.year-link-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.year-link-card{display:grid;gap:4px;text-decoration:none;background:linear-gradient(180deg,#fffefa,#fff8ee);border:1px solid var(--line);border-radius:8px;padding:14px 15px;min-height:104px;box-shadow:0 8px 20px rgba(47,37,23,.04)}.year-link-card:hover{border-color:#d2ad73;box-shadow:0 14px 26px rgba(47,37,23,.075)}.year-link-card strong{font-size:22px;line-height:1;color:#231d18}.year-link-card span{font-size:15px;font-weight:720;color:#2f2922}.year-link-card small{font-size:13px;line-height:1.45;color:var(--muted)}.section-action{margin-top:16px}.latest-guides{background:#fffdf8}.related-guides .guide-card{min-height:132px}.guide-next{display:flex;align-items:center;justify-content:space-between;gap:24px}.guide-next h2{margin-bottom:8px}.guide-next p{margin:0;color:var(--muted)}.guide-next .button-link{flex:0 0 auto}.article-shell{max-width:1220px;margin:0 auto 28px;padding:0 clamp(18px,4vw,52px);display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:24px;align-items:start}.article-shell .content-section,.article-shell .tool-page,.article-shell .article-search{max-width:none!important}.article-shell .tool-page{padding-left:0!important;padding-right:0!important}.article-shell .article-search{padding-left:24px!important;padding-right:24px!important}.article-sidebar{position:sticky;top:92px;display:grid;gap:14px}.sidebar-card{background:#fffdf8;border:1px solid var(--line);border-radius:8px;padding:18px 20px;box-shadow:0 10px 24px rgba(47,37,23,.055)}.sidebar-card h2{margin:9px 0 12px;font-family:Inter,Segoe UI,Arial,sans-serif;font-size:18px;line-height:1.25}.sidebar-link-list{display:grid;gap:8px}.sidebar-link-list a{display:grid;gap:5px;text-decoration:none;padding:12px 0;border-top:1px solid #eadfcc}.sidebar-link-list a:first-child{border-top:0}.sidebar-link-list strong{font-size:14px;line-height:1.35;color:#241f1a}.sidebar-link-list span{font-size:13px;line-height:1.5;color:var(--muted)}.sidebar-card.compact{display:grid;gap:10px}.sidebar-card.compact .button-link{width:100%}@media(max-width:1080px){.article-shell{grid-template-columns:1fr}.article-sidebar{position:static}}@media(max-width:980px){.guide-grid,.guide-grid.compact{grid-template-columns:repeat(2,minmax(0,1fr))}.year-link-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.guide-next{align-items:flex-start;flex-direction:column}}@media(max-width:640px){.guide-grid,.guide-grid.compact,.year-link-grid{grid-template-columns:1fr}}`;
+  return `.guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.guide-grid.compact{grid-template-columns:repeat(3,minmax(0,1fr))}.guide-card{display:grid;align-content:start;min-height:154px;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:8px;padding:17px;box-shadow:0 8px 22px rgba(47,37,23,.045);transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}.guide-card:hover{transform:translateY(-2px);border-color:#d2ad73;box-shadow:0 14px 28px rgba(47,37,23,.08)}.guide-card span{color:var(--jade);font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.05em}.guide-card strong{display:block;margin-top:8px;font-size:18px;line-height:1.3;color:#251f1a}.guide-card p{margin:8px 0 0;color:var(--muted);font-size:14px;line-height:1.55}.guide-filter-nav{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 24px}.guide-filter-nav a{display:inline-flex;align-items:center;min-height:38px;padding:0 14px;border:1px solid #d8c9b5;border-radius:999px;background:#fffaf3;color:#2d5f57;text-decoration:none;font-size:14px;font-weight:760}.guide-filter-nav a:hover{border-color:var(--jade);background:#eef7f3}.guide-category-list{display:grid;gap:28px}.guide-category-section{scroll-margin-top:96px}.guide-category-section .section-heading{margin-bottom:12px}.guide-category-section .section-heading p:last-child{margin:6px 0 0;color:var(--muted);max-width:760px}.year-link-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.year-link-card{display:grid;gap:4px;text-decoration:none;background:linear-gradient(180deg,#fffefa,#fff8ee);border:1px solid var(--line);border-radius:8px;padding:14px 15px;min-height:104px;box-shadow:0 8px 20px rgba(47,37,23,.04)}.year-link-card:hover{border-color:#d2ad73;box-shadow:0 14px 26px rgba(47,37,23,.075)}.year-link-card strong{font-size:22px;line-height:1;color:#231d18}.year-link-card span{font-size:15px;font-weight:720;color:#2f2922}.year-link-card small{font-size:13px;line-height:1.45;color:var(--muted)}.section-action{margin-top:16px}.latest-guides{background:#fffdf8}.guide-categories{background:#fffdf8}.related-guides .guide-card{min-height:132px}.guide-next{display:flex;align-items:center;justify-content:space-between;gap:24px}.guide-next h2{margin-bottom:8px}.guide-next p{margin:0;color:var(--muted)}.guide-next .button-link{flex:0 0 auto}.article-shell{max-width:1220px;margin:0 auto 28px;padding:0 clamp(18px,4vw,52px);display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:24px;align-items:start}.article-shell .content-section,.article-shell .tool-page,.article-shell .article-search{max-width:none!important}.article-shell .tool-page{padding-left:0!important;padding-right:0!important}.article-shell .article-search{padding-left:24px!important;padding-right:24px!important}.article-sidebar{position:sticky;top:92px;display:grid;gap:14px}.sidebar-card{background:#fffdf8;border:1px solid var(--line);border-radius:8px;padding:18px 20px;box-shadow:0 10px 24px rgba(47,37,23,.055)}.sidebar-card h2{margin:9px 0 12px;font-family:Inter,Segoe UI,Arial,sans-serif;font-size:18px;line-height:1.25}.sidebar-link-list{display:grid;gap:8px}.sidebar-link-list a{display:grid;gap:5px;text-decoration:none;padding:12px 0;border-top:1px solid #eadfcc}.sidebar-link-list a:first-child{border-top:0}.sidebar-link-list strong{font-size:14px;line-height:1.35;color:#241f1a}.sidebar-link-list span{font-size:13px;line-height:1.5;color:var(--muted)}.sidebar-card.compact{display:grid;gap:10px}.sidebar-card.compact .button-link{width:100%}@media(max-width:1080px){.article-shell{grid-template-columns:1fr}.article-sidebar{position:static}}@media(max-width:980px){.guide-grid,.guide-grid.compact{grid-template-columns:repeat(2,minmax(0,1fr))}.year-link-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.guide-next{align-items:flex-start;flex-direction:column}}@media(max-width:640px){.guide-grid,.guide-grid.compact,.year-link-grid{grid-template-columns:1fr}.guide-filter-nav a{flex:1 1 calc(50% - 10px);justify-content:center}}`;
 }
 
 function polishCss() {
