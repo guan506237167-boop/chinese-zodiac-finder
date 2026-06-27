@@ -59,6 +59,7 @@ await mkdir("dist/assets", { recursive: true });
 await copyFile("public/assets/zodiac-wheel.svg", "dist/assets/zodiac-wheel.svg");
 await copyFile("public/assets/logo.svg", "dist/assets/logo.svg");
 await copyFile("public/google1c43509ea14adc51.html", "dist/google1c43509ea14adc51.html");
+await copyFile("public/_headers", "dist/_headers");
 
 const pages = [];
 const guides = [
