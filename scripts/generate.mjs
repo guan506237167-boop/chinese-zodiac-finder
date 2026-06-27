@@ -322,7 +322,7 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
 </head>
 <body class="${pageClass(path)}">
   <header class="site-header">
-    <a class="brand" href="/" aria-label="${SITE.name} home"><img class="brand-logo" src="/assets/logo.svg" alt="">${SITE.name}</a>
+    <a class="brand" href="/" aria-label="${SITE.name} home"><img class="brand-logo" src="/assets/logo.svg" alt="${SITE.name} logo">${SITE.name}</a>
     <nav class="nav" aria-label="Main navigation">
       <a href="/">Home</a>
       <a href="/chinese-zodiac-calculator/">Calculator</a>
@@ -365,7 +365,6 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
         <span>Site</span>
         <a href="/privacy/">Privacy</a>
         <a href="/terms/">Terms</a>
-        <a href="/admin/seo-report/">SEO Report</a>
       </div>
     </nav>
   </footer>
@@ -1439,7 +1438,6 @@ User-agent: PerplexityBot
 Allow: /
 
 Sitemap: ${SITE.url}/sitemap.xml
-Sitemap: ${SITE.url}/llms.txt
 `, "utf8");
 }
 
@@ -1514,7 +1512,7 @@ async function writeSeoReport() {
   const json = JSON.stringify({ generatedAt: "2026-06-26", totals, reports }, null, 2);
   await mkdir("dist/admin", { recursive: true });
   await writeFile("dist/admin/seo-report.json", json, "utf8");
-  await writePage("/admin/seo-report/", `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Pre-Publish SEO Check</title><link rel="stylesheet" href="/styles.css?v=${SITE.assetVersion}"></head><body><main class="seo-report-page"><section class="content-section report-hero"><p class="eyebrow">Publishing QA</p><h1>Pre-Publish SEO Check</h1><p>Internal publishing checks for title, description, headings, FAQ, canonical, schema, sitemap, internal links, images, and content depth. This is not a user behavior or tool usage report.</p><div class="report-summary"><div><strong>${totals.average}</strong><span>Average score</span></div><div><strong>${totals.pages}</strong><span>Pages</span></div><div><strong>${totals.pass}</strong><span>Pass</span></div><div><strong>${totals.review}</strong><span>Review</span></div><div><strong>${totals.fix}</strong><span>Fix</span></div></div></section><section class="content-section report-rules"><h2>Publishing Gate</h2><p>Before pushing new articles, fix pages below 80, review warnings, then rebuild. The JSON version is available at <a href="/admin/seo-report.json">/admin/seo-report.json</a>.</p></section><section class="content-section"><div class="table-wrap"><table class="seo-table"><thead><tr><th>URL</th><th>Score</th><th>Title</th><th>Description</th><th>Words</th><th>H1/H2</th><th>FAQ</th><th>Issues</th></tr></thead><tbody>${rows}</tbody></table></div></section></main></body></html>`);
+  await writePage("/admin/seo-report/", `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Pre-Publish SEO Check</title><meta name="robots" content="noindex,nofollow"><meta name="description" content="Internal publishing QA report for Chinese Zodiac Guide pages."><link rel="canonical" href="${absolute("/admin/seo-report/")}"><link rel="stylesheet" href="/styles.css?v=${SITE.assetVersion}"></head><body><main class="seo-report-page"><section class="content-section report-hero"><p class="eyebrow">Publishing QA</p><h1>Pre-Publish SEO Check</h1><p>Internal publishing checks for title, description, headings, FAQ, canonical, schema, sitemap, internal links, images, and content depth. This is not a user behavior or tool usage report.</p><div class="report-summary"><div><strong>${totals.average}</strong><span>Average score</span></div><div><strong>${totals.pages}</strong><span>Pages</span></div><div><strong>${totals.pass}</strong><span>Pass</span></div><div><strong>${totals.review}</strong><span>Review</span></div><div><strong>${totals.fix}</strong><span>Fix</span></div></div></section><section class="content-section report-rules"><h2>Publishing Gate</h2><p>Before pushing new articles, fix pages below 80, review warnings, then rebuild. The JSON version is available at <a href="/admin/seo-report.json">/admin/seo-report.json</a>.</p></section><section class="content-section"><div class="table-wrap"><table class="seo-table"><thead><tr><th>URL</th><th>Score</th><th>Title</th><th>Description</th><th>Words</th><th>H1/H2</th><th>FAQ</th><th>Issues</th></tr></thead><tbody>${rows}</tbody></table></div></section></main></body></html>`);
 }
 
 function auditPage(page, html, sitemap) {
