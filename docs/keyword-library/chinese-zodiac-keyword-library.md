@@ -79,9 +79,9 @@ This table is keyword-level priority. Use it for keyword coverage inside a topic
 
 | Priority | Keyword | Volume | Competition | Intent | Page Type | URL / Action | Notes |
 |---:|---|---:|---|---|---|---|---|
-| 1 | 1990 year of the chinese zodiac | 22200 | Low (0) | year | year guide | /guides/1990-year-of-the-chinese-zodiac/ | New article candidate. |
-| 2 | 1989 in chinese zodiac | 22200 | Low (0) | year | year guide | /guides/1989-in-chinese-zodiac/ | New article candidate. |
-| 3 | 1989 year of the chinese zodiac | 22200 | Low (0) | year | year guide | /guides/1989-year-of-the-chinese-zodiac/ | New article candidate. |
+| 1 | 1990 year of the chinese zodiac | 22200 | Low (0) | year | published article | /guides/1990-year-of-the-chinese-zodiac/ | Published on 2026-06-30; do not republish as a separate article. |
+| 2 | 1989 in chinese zodiac | 22200 | Low (0) | year | existing-page coverage | /guides/1989-year-of-the-chinese-zodiac/ | Covered by published 1989 year guide; use only for on-page expansion/internal linking. |
+| 3 | 1989 year of the chinese zodiac | 22200 | Low (0) | year | published article | /guides/1989-year-of-the-chinese-zodiac/ | Published on 2026-06-30; do not republish as a separate article. |
 | 4 | 1996 year of the chinese zodiac | 22200 | Low (0) | year | year guide | /guides/1996-year-of-the-chinese-zodiac/ | New article candidate. |
 | 5 | 2003 year of the chinese zodiac | 22200 | Low (0) | year | year guide | /guides/2003-year-of-the-chinese-zodiac/ | New article candidate. |
 | 6 | 1985 year of the chinese zodiac | 18100 | Low (0) | year | year guide | /guides/1985-year-of-the-chinese-zodiac/ | New article candidate. |
@@ -98,12 +98,12 @@ This table is keyword-level priority. Use it for keyword coverage inside a topic
 | 17 | 1987 chinese zodiac | 18100 | Low (0) | year | year guide | /guides/1987-chinese-zodiac/ | New article candidate. |
 | 18 | 87 chinese zodiac | 18100 | Low (0) | general | guide article | /guides/87-chinese-zodiac/ | New article candidate. |
 | 19 | zodiac sign 1987 | 18100 | Low (0) | year | year guide | /guides/zodiac-sign-1987/ | New article candidate. |
-| 20 | 1990 chinese sign | 22200 | Low (0) | year | year guide | /guides/1990-chinese-sign/ | New article candidate. |
-| 21 | 1990 chinese zodiac | 22200 | Low (0) | year | year guide | /guides/1990-chinese-zodiac/ | New article candidate. |
-| 22 | 1990 zodiac | 22200 | Low (0) | year | year guide | /guides/1990-zodiac/ | New article candidate. |
-| 23 | 1990 zodiac animal | 22200 | Low (0) | year | year guide | /guides/1990-zodiac-animal/ | New article candidate. |
-| 24 | 1989 chinese sign | 22200 | Low (0) | year | year guide | /guides/1989-chinese-sign/ | New article candidate. |
-| 25 | 1989 chinese zodiac | 22200 | Low (0) | year | year guide | /guides/1989-chinese-zodiac/ | New article candidate. |
+| 20 | 1990 chinese sign | 22200 | Low (0) | year | existing-page coverage | /guides/1990-year-of-the-chinese-zodiac/ | Covered by published 1990 year guide; use only for on-page expansion/internal linking. |
+| 21 | 1990 chinese zodiac | 22200 | Low (0) | year | existing-page coverage | /guides/1990-year-of-the-chinese-zodiac/ | Covered by published 1990 year guide; use only for on-page expansion/internal linking. |
+| 22 | 1990 zodiac | 22200 | Low (0) | year | existing-page coverage | /guides/1990-year-of-the-chinese-zodiac/ | Covered by published 1990 year guide; use only for on-page expansion/internal linking. |
+| 23 | 1990 zodiac animal | 22200 | Low (0) | year | existing-page coverage | /guides/1990-year-of-the-chinese-zodiac/ | Covered by published 1990 year guide; use only for on-page expansion/internal linking. |
+| 24 | 1989 chinese sign | 22200 | Low (0) | year | existing-page coverage | /guides/1989-year-of-the-chinese-zodiac/ | Covered by published 1989 year guide; use only for on-page expansion/internal linking. |
+| 25 | 1989 chinese zodiac | 22200 | Low (0) | year | existing-page coverage | /guides/1989-year-of-the-chinese-zodiac/ | Covered by published 1989 year guide; use only for on-page expansion/internal linking. |
 | 26 | 1995 chinese sign | 22200 | Low (0) | year | year guide | /guides/1995-chinese-sign/ | New article candidate. |
 | 27 | 1995 chinese year | 22200 | Low (0) | year | year guide | /guides/1995-chinese-year/ | New article candidate. |
 | 28 | 1995 chinese zodiac | 22200 | Low (0) | year | year guide | /guides/1995-chinese-zodiac/ | New article candidate. |

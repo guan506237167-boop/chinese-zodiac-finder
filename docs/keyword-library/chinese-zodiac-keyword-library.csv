@@ -4,9 +4,9 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 3,the year of the horse,110000,LOW,5,1.25,year,Horse / 2026,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,114.7,Already has a matching page; use for page expansion or supporting paragraph.
 4,chinese birth signs,49500,LOW,25,0.06,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,110.9,Published article; use for internal linking and future expansion.
 5,horse zodiac,110000,LOW,5,1.25,animal,Horse / 2026,supporting article or existing-page expansion,Expand existing /chinese-zodiac/horse/,109.7,Already has a matching page; use for page expansion or supporting paragraph.
-6,1990 year of the chinese zodiac,22200,LOW,0,0.01,year,Years,year guide,/guides/1990-year-of-the-chinese-zodiac/,109.4,New article candidate.
-7,1989 in chinese zodiac,22200,LOW,0,,year,General,year guide,/guides/1989-in-chinese-zodiac/,109.3,New article candidate.
-8,1989 year of the chinese zodiac,22200,LOW,0,,year,Years,year guide,/guides/1989-year-of-the-chinese-zodiac/,109.3,New article candidate.
+6,1990 year of the chinese zodiac,22200,LOW,0,0.01,year,Years,published article,/guides/1990-year-of-the-chinese-zodiac/,109.4,Published on 2026-06-30; do not republish as a separate article.
+7,1989 in chinese zodiac,22200,LOW,0,,year,General,existing-page coverage,/guides/1989-year-of-the-chinese-zodiac/,109.3,Covered by published 1989 year guide; use only for on-page expansion/internal linking.
+8,1989 year of the chinese zodiac,22200,LOW,0,,year,Years,published article,/guides/1989-year-of-the-chinese-zodiac/,109.3,Published on 2026-06-30; do not republish as a separate article.
 9,1996 year of the chinese zodiac,22200,LOW,0,,year,Years,year guide,/guides/1996-year-of-the-chinese-zodiac/,109.3,New article candidate.
 10,2003 year of the chinese zodiac,22200,LOW,0,,year,Years,year guide,/guides/2003-year-of-the-chinese-zodiac/,109.3,New article candidate.
 11,chinese calendar birthday,8100,LOW,9,1.29,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,109.1,Published article; use for internal linking and future expansion.
@@ -25,12 +25,12 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 24,1987 chinese zodiac,18100,LOW,0,0.3,year,General,year guide,/guides/1987-chinese-zodiac/,104.6,New article candidate.
 25,87 chinese zodiac,18100,LOW,0,0.3,general,General,guide article,/guides/87-chinese-zodiac/,104.6,New article candidate.
 26,zodiac sign 1987,18100,LOW,0,0.3,year,General,year guide,/guides/zodiac-sign-1987/,104.6,New article candidate.
-27,1990 chinese sign,22200,LOW,0,0.01,year,General,year guide,/guides/1990-chinese-sign/,104.4,New article candidate.
-28,1990 chinese zodiac,22200,LOW,0,0.01,year,General,year guide,/guides/1990-chinese-zodiac/,104.4,New article candidate.
-29,1990 zodiac,22200,LOW,0,0.01,year,General,year guide,/guides/1990-zodiac/,104.4,New article candidate.
-30,1990 zodiac animal,22200,LOW,0,0.01,year,General,year guide,/guides/1990-zodiac-animal/,104.4,New article candidate.
-31,1989 chinese sign,22200,LOW,0,,year,General,year guide,/guides/1989-chinese-sign/,104.3,New article candidate.
-32,1989 chinese zodiac,22200,LOW,0,,year,General,year guide,/guides/1989-chinese-zodiac/,104.3,New article candidate.
+27,1990 chinese sign,22200,LOW,0,0.01,year,General,existing-page coverage,/guides/1990-year-of-the-chinese-zodiac/,104.4,Covered by published 1990 year guide; use only for on-page expansion/internal linking.
+28,1990 chinese zodiac,22200,LOW,0,0.01,year,General,existing-page coverage,/guides/1990-year-of-the-chinese-zodiac/,104.4,Covered by published 1990 year guide; use only for on-page expansion/internal linking.
+29,1990 zodiac,22200,LOW,0,0.01,year,General,existing-page coverage,/guides/1990-year-of-the-chinese-zodiac/,104.4,Covered by published 1990 year guide; use only for on-page expansion/internal linking.
+30,1990 zodiac animal,22200,LOW,0,0.01,year,General,existing-page coverage,/guides/1990-year-of-the-chinese-zodiac/,104.4,Covered by published 1990 year guide; use only for on-page expansion/internal linking.
+31,1989 chinese sign,22200,LOW,0,,year,General,existing-page coverage,/guides/1989-year-of-the-chinese-zodiac/,104.3,Covered by published 1989 year guide; use only for on-page expansion/internal linking.
+32,1989 chinese zodiac,22200,LOW,0,,year,General,existing-page coverage,/guides/1989-year-of-the-chinese-zodiac/,104.3,Covered by published 1989 year guide; use only for on-page expansion/internal linking.
 33,1995 chinese sign,22200,LOW,0,,year,General,year guide,/guides/1995-chinese-sign/,104.3,New article candidate.
 34,1995 chinese year,22200,LOW,0,,year,Years,year guide,/guides/1995-chinese-year/,104.3,New article candidate.
 35,1995 chinese zodiac,22200,LOW,0,,year,General,year guide,/guides/1995-chinese-zodiac/,104.3,New article candidate.

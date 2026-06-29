@@ -148,9 +148,9 @@
 | the year of the horse | ✅ 已有页面 | 110000 | very high | Horse / 2026 | 5 |
 | chinese birth signs | ✅ 已发布 | 49500 | very high | Calculator / Birthday | 25 |
 | horse zodiac | ✅ 已有页面 | 110000 | very high | Horse / 2026 | 5 |
-| 1990 year of the chinese zodiac | 🟡 待发布 | 22200 | high | Years | 0 |
-| 1989 in chinese zodiac | 🟡 待发布 | 22200 | high | General | 0 |
-| 1989 year of the chinese zodiac | 🟡 待发布 | 22200 | high | Years | 0 |
+| 1990 year of the chinese zodiac | ✅ 已发布 | 22200 | high | Years | 0 |
+| 1989 in chinese zodiac | ✅ 已覆盖 | 22200 | high | General | 0 |
+| 1989 year of the chinese zodiac | ✅ 已发布 | 22200 | high | Years | 0 |
 | 1996 year of the chinese zodiac | 🟡 待发布 | 22200 | high | Years | 0 |
 | 2003 year of the chinese zodiac | 🟡 待发布 | 22200 | high | Years | 0 |
 | chinese calendar birthday | ✅ 已发布 | 8100 | medium | Calculator / Birthday | 9 |
@@ -169,12 +169,12 @@
 | 1987 chinese zodiac | 🟡 待发布 | 18100 | high | General | 0 |
 | 87 chinese zodiac | 🟡 待发布 | 18100 | high | General | 0 |
 | zodiac sign 1987 | 🟡 待发布 | 18100 | high | General | 0 |
-| 1990 chinese sign | 🟡 待发布 | 22200 | high | General | 0 |
-| 1990 chinese zodiac | 🟡 待发布 | 22200 | high | General | 0 |
-| 1990 zodiac | 🟡 待发布 | 22200 | high | General | 0 |
-| 1990 zodiac animal | 🟡 待发布 | 22200 | high | General | 0 |
-| 1989 chinese sign | 🟡 待发布 | 22200 | high | General | 0 |
-| 1989 chinese zodiac | 🟡 待发布 | 22200 | high | General | 0 |
+| 1990 chinese sign | ✅ 已覆盖 | 22200 | high | General | 0 |
+| 1990 chinese zodiac | ✅ 已覆盖 | 22200 | high | General | 0 |
+| 1990 zodiac | ✅ 已覆盖 | 22200 | high | General | 0 |
+| 1990 zodiac animal | ✅ 已覆盖 | 22200 | high | General | 0 |
+| 1989 chinese sign | ✅ 已覆盖 | 22200 | high | General | 0 |
+| 1989 chinese zodiac | ✅ 已覆盖 | 22200 | high | General | 0 |
 | 1995 chinese sign | 🟡 待发布 | 22200 | high | General | 0 |
 | 1995 chinese year | 🟡 待发布 | 22200 | high | Years | 0 |
 | 1995 chinese zodiac | 🟡 待发布 | 22200 | high | General | 0 |
