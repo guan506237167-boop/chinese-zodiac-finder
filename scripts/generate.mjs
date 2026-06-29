@@ -88,6 +88,18 @@ const guides = [
     description: "Earth Tiger years, traditional meaning, personality associations, and how the Earth element changes the Tiger reading."
   },
   {
+    title: "1990 Year of the Chinese Zodiac",
+    path: "/guides/1990-year-of-the-chinese-zodiac/",
+    category: "Year Guides",
+    description: "1990 Chinese zodiac sign, Metal Horse meaning, Lunar New Year boundary, and related lookup notes."
+  },
+  {
+    title: "1989 Year of the Chinese Zodiac",
+    path: "/guides/1989-year-of-the-chinese-zodiac/",
+    category: "Year Guides",
+    description: "1989 Chinese zodiac sign, Earth Snake meaning, Lunar New Year boundary, and related lookup notes."
+  },
+  {
     title: "Chinese Birth Signs by Birthday",
     path: "/guides/chinese-birth-signs/",
     category: "Calculator Guides",
@@ -702,6 +714,91 @@ function elementAnimalArticle({
   }));
 }
 
+function yearGuideArticle({ year, title, description, path, h1, primaryKeyword, supportingKeywords }) {
+  const row = years.find((item) => item.year === year);
+  const animal = animalBySlug[row.animal];
+  const element = elementInfo[row.element];
+  const previousYear = year - 1;
+  const nextSameAnimalYear = year + 12;
+  const faqs = [
+    { q: `What Chinese zodiac sign is ${year}?`, a: `${year} is the Year of the ${animal.name} in Chinese zodiac, with the ${row.element} element. The zodiac year begins on ${row.lunarNewYear}.` },
+    { q: `What element is ${year} in Chinese zodiac?`, a: `${year} is a ${row.element} ${animal.name} year. The ${row.element} element adds themes such as ${element.keywords}.` },
+    { q: `Does the ${year} Chinese zodiac year start on January 1?`, a: `No. The ${year} Chinese zodiac year starts on Lunar New Year, ${row.lunarNewYear}. Birthdays before that date belong to the previous zodiac year.` },
+    { q: `Is ${year} Chinese zodiac personality scientific?`, a: "No. Chinese zodiac personality descriptions are traditional cultural associations, not scientific personality tests or fixed predictions." }
+  ];
+  return writePage(path, pageLayout({
+    title,
+    description,
+    path,
+    h1,
+    intro: `${year} is traditionally read as a ${row.element} ${animal.name} year in the Chinese zodiac cycle, but the exact sign depends on the Lunar New Year boundary.`,
+    faqs,
+    articleSidebar: true,
+    body: `
+      ${articleSearchBlock()}
+      <section class="content-section article-body">
+        <p class="lead-answer">${primaryKeyword} is the ${row.element} ${animal.name}. The key detail is the start date: the ${year} Chinese zodiac year begins on ${row.lunarNewYear}, not January 1. If someone was born before that Lunar New Year date, their traditional zodiac sign belongs to ${previousYear} instead.</p>
+        <p>This guide explains the ${year} zodiac animal, element, meaning, personality associations, compatibility context, and the most common lookup mistake for early-year birthdays.</p>
+      </section>
+      ${articleFigure({
+        src: "/assets/zodiac-wheel.svg",
+        alt: `Chinese zodiac wheel illustration for ${year} ${animal.name} zodiac guide`,
+        title: `${year} ${animal.name} visual note`,
+        text: `The ${year} year combines the ${animal.name} animal with the ${row.element} element in the 60-year Chinese zodiac cycle.`
+      })}
+      <section class="content-section split">
+        <div>
+          <p class="eyebrow">Short Answer</p>
+          <h2>What is the Chinese zodiac sign for ${year}?</h2>
+          <p>The Chinese zodiac sign for ${year} is the ${animal.name}. The element is ${row.element}, so the fuller traditional label is ${row.element} ${animal.name}. For accurate lookup, compare the birthday with ${row.lunarNewYear}.</p>
+        </div>
+        <div class="fact-card">
+          <strong>${year} zodiac facts</strong>
+          <span>Animal: ${animal.name}</span>
+          <span>Element: ${row.element}</span>
+          <span>Lunar New Year: ${row.lunarNewYear}</span>
+          <span>Next ${animal.name} year: ${nextSameAnimalYear}</span>
+        </div>
+      </section>
+      <section class="content-section">
+        <div class="section-heading">
+          <p class="eyebrow">Boundary</p>
+          <h2>Why the Lunar New Year date matters</h2>
+        </div>
+        <p>Many people search by Gregorian year, but Chinese zodiac years do not follow January 1. The ${year} zodiac year starts on ${row.lunarNewYear}. A birthday from January 1 to the day before that date is still counted under the previous Chinese zodiac year.</p>
+        <p>For example, a birthday before ${row.lunarNewYear} belongs to the previous zodiac cycle. A birthday on or after ${row.lunarNewYear} belongs to the ${row.element} ${animal.name} year.</p>
+        <a class="button-link" href="/chinese-zodiac-calculator/">Check a full birth date</a>
+      </section>
+      <section class="content-section">
+        <h2>${row.element} ${animal.name} meaning and personality associations</h2>
+        <p>${animal.meaning}</p>
+        <p>${animal.personality}</p>
+        <p>The ${row.element} element adds a second symbolic layer. ${element.meaning} Combined with the ${animal.name}, this creates a traditional cultural reading of ${row.element.toLowerCase()} qualities expressed through ${animal.name} symbolism.</p>
+      </section>
+      <section class="content-section">
+        <h2>${year} zodiac compatibility context</h2>
+        <p>Compatibility is usually read through the animal first, then the element as a secondary tone. For a ${row.element} ${animal.name}, start with the ${animal.name} compatibility pattern and then read the ${row.element} element as cultural color.</p>
+        <p>Use compatibility as a traditional reference only. Real relationships depend on communication, values, behavior, and timing more than any zodiac label.</p>
+        <a class="button-link" href="/chinese-zodiac-compatibility/">Open compatibility checker</a>
+      </section>
+      <section class="content-section">
+        <h2>Common searches this guide answers</h2>
+        <p>This guide covers related searches such as ${supportingKeywords.map((keyword) => `<strong>${escapeHtml(keyword)}</strong>`).join(", ")}. These searches usually ask the same practical question: what animal and element belong to ${year}, and how should early-year birthdays be handled?</p>
+      </section>
+      ${relatedGuidesBlock(`Related ${year} and ${animal.name} guides`, [
+        { title: `${animal.name} Chinese Zodiac`, path: `/chinese-zodiac/${animal.animal}/`, category: "Animal Guides", description: `${animal.name} years, meaning, personality associations, and cultural notes.` },
+        guides.find((guide) => guide.path === "/chinese-zodiac-years/"),
+        guides.find((guide) => guide.path === "/chinese-zodiac-elements/"),
+        guides.find((guide) => guide.path === "/guides/chinese-birth-signs/")
+      ].filter(Boolean))}
+      ${faqBlock(faqs)}
+      <section class="content-section article-body">
+        <h2>Summary</h2>
+        <p>The main point is simple: ${year} is a ${row.element} ${animal.name} year, but the zodiac year starts on ${row.lunarNewYear}. Check the full birth date before assigning the sign, then use the animal and element meanings as cultural symbolism rather than fixed personality rules.</p>
+      </section>`
+  }));
+}
+
 function yearSearchBlock() {
   return `<section class="tool-panel compact-tool" id="year-search">
     <div class="tool-copy">
@@ -990,6 +1087,26 @@ await elementAnimalArticle({
     { q: "What does Earth Tiger personality mean?", a: "Earth Tiger personality descriptions combine Tiger symbolism, such as courage and vitality, with Earth symbolism, such as stability and practical support." },
     { q: "Does an Earth Tiger year start on January 1?", a: "No. An Earth Tiger year starts at Lunar New Year, so early January or February birthdays may belong to the previous zodiac year." }
   ]
+});
+
+await yearGuideArticle({
+  year: 1990,
+  title: "1990 Year of the Chinese Zodiac: Metal Horse Meaning",
+  description: "Learn the 1990 Chinese zodiac sign, Metal Horse meaning, Lunar New Year start date, personality associations, and compatibility context.",
+  path: "/guides/1990-year-of-the-chinese-zodiac/",
+  h1: "1990 Year of the Chinese Zodiac",
+  primaryKeyword: "1990 year of the Chinese zodiac",
+  supportingKeywords: ["1990 chinese zodiac", "1990 chinese sign", "1990 zodiac animal", "1990 zodiac"]
+});
+
+await yearGuideArticle({
+  year: 1989,
+  title: "1989 Year of the Chinese Zodiac: Earth Snake Meaning",
+  description: "Learn the 1989 Chinese zodiac sign, Earth Snake meaning, Lunar New Year start date, personality associations, and compatibility context.",
+  path: "/guides/1989-year-of-the-chinese-zodiac/",
+  h1: "1989 Year of the Chinese Zodiac",
+  primaryKeyword: "1989 year of the Chinese zodiac",
+  supportingKeywords: ["1989 chinese zodiac", "1989 chinese sign", "1989 in chinese zodiac", "1989 zodiac animal"]
 });
 
 await writePage("/guides/chinese-birth-signs/", pageLayout({
