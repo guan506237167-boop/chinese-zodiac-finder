@@ -76,6 +76,18 @@ const guides = [
     description: "Fire Horse years, 2026 context, traditional meaning, personality associations, and Lunar New Year boundaries."
   },
   {
+    title: "Fire Rat Chinese Zodiac",
+    path: "/guides/fire-rat-chinese-zodiac/",
+    category: "Element Guides",
+    description: "Fire Rat years, traditional meaning, personality associations, and how the Fire element changes the Rat reading."
+  },
+  {
+    title: "Earth Tiger Chinese Zodiac",
+    path: "/guides/chinese-zodiac-earth-tiger/",
+    category: "Element Guides",
+    description: "Earth Tiger years, traditional meaning, personality associations, and how the Earth element changes the Tiger reading."
+  },
+  {
     title: "Chinese Birth Signs by Birthday",
     path: "/guides/chinese-birth-signs/",
     category: "Calculator Guides",
@@ -603,6 +615,93 @@ function yearsTable(items = years) {
   </table></div>`;
 }
 
+function elementAnimalArticle({
+  path,
+  title,
+  description,
+  h1,
+  intro,
+  animalSlug,
+  elementName,
+  yearsRange,
+  primaryKeyword,
+  supportingKeywords,
+  faqs,
+  image
+}) {
+  const animal = animalBySlug[animalSlug];
+  const rows = years.filter((row) => row.animal === animalSlug && row.element === elementName && row.year >= yearsRange[0] && row.year <= yearsRange[1]);
+  const yearText = rows.map((row) => row.year).join(", ");
+  const element = elementInfo[elementName];
+  return writePage(path, pageLayout({
+    title,
+    description,
+    path,
+    h1,
+    intro,
+    faqs,
+    articleSidebar: true,
+    body: `
+      ${articleSearchBlock()}
+      <section class="content-section article-body">
+        <p class="lead-answer">${primaryKeyword} refers to a ${animal.name} zodiac year paired with the ${elementName} element in the 60-year Chinese zodiac cycle. Modern ${elementName} ${animal.name} years include ${yearText}. Always check the Lunar New Year start date before assigning the sign, because Chinese zodiac years do not begin on January 1.</p>
+        <p>This guide explains the animal, the element, recent years, personality associations, compatibility notes, and common lookup mistakes. It is written as a cultural reference, not fortune-telling or personal advice.</p>
+      </section>
+      ${articleFigure(image)}
+      <section class="content-section split">
+        <div>
+          <p class="eyebrow">Short Answer</p>
+          <h2>What does ${elementName} ${animal.name} mean?</h2>
+          <p>${elementName} ${animal.name} combines the ${animal.name} animal with the ${elementName} element. The ${animal.name} is traditionally associated with ${animal.summary.replace(/^The [A-Za-z]+ is traditionally associated with /, "").replace(/\.$/, "")}. The ${elementName} element adds the theme of ${element.keywords}. Read this as symbolism, not as a fixed personality result.</p>
+        </div>
+        <div class="fact-card">
+          <strong>${elementName} ${animal.name} facts</strong>
+          <span>Animal: ${animal.name}</span>
+          <span>Element: ${elementName}</span>
+          <span>Recent years: ${yearText}</span>
+          <span>Cycle: 60-year zodiac cycle</span>
+        </div>
+      </section>
+      <section class="content-section">
+        <div class="section-heading">
+          <p class="eyebrow">Years</p>
+          <h2>${elementName} ${animal.name} years and Lunar New Year dates</h2>
+        </div>
+        <p>The Chinese zodiac combines a 12-animal cycle with a 5-element cycle. Because each element appears with each animal once every 60 years, ${elementName} ${animal.name} years are separated by six decades.</p>
+        ${yearsTable(rows)}
+        <p>If a birthday falls before Lunar New Year in one of these Gregorian years, the person still belongs to the previous zodiac year. This boundary is the most important detail for accurate zodiac lookup.</p>
+      </section>
+      <section class="content-section">
+        <h2>${elementName} ${animal.name} personality associations</h2>
+        <p>Traditional personality descriptions combine the animal image with the element image. For ${elementName} ${animal.name}, common cultural associations include:</p>
+        <ul class="article-list">
+          <li>The ${animal.name} side: ${animal.personality}</li>
+          <li>The ${elementName} side: ${element.meaning}</li>
+          <li>A combined reading that emphasizes how ${elementName.toLowerCase()} qualities shape the ${animal.name} animal's traditional style.</li>
+          <li>A practical reminder that zodiac traits are cultural descriptions, not scientific personality tests.</li>
+        </ul>
+        <p>The safest interpretation is symbolic. A zodiac article can explain cultural language and traditional imagery, but it cannot define a real person's choices, character, or future.</p>
+      </section>
+      <section class="content-section">
+        <h2>${elementName} ${animal.name} compatibility and relationships</h2>
+        <p>${elementName} ${animal.name} compatibility is usually read by starting with the ${animal.name} animal, then adding element language as a secondary layer. The animal relationship explains the traditional match pattern; the element adds tone, style, or temperament in cultural descriptions.</p>
+        <p>Use compatibility pages as cultural reference only. Real relationships depend on communication, values, timing, and behavior more than zodiac labels.</p>
+        <a class="button-link" href="/chinese-zodiac-compatibility/">Open compatibility checker</a>
+      </section>
+      <section class="content-section">
+        <h2>Common search terms covered</h2>
+        <p>This page is written for searchers using terms such as ${supportingKeywords.map((keyword) => `<strong>${escapeHtml(keyword)}</strong>`).join(", ")}. These searches usually have the same intent: find the correct years, understand the symbolic meaning, and avoid the Lunar New Year boundary mistake.</p>
+      </section>
+      ${relatedGuidesBlock(`Related ${animal.name} and element guides`, [
+        { title: `${animal.name} Chinese Zodiac`, path: `/chinese-zodiac/${animal.animal}/`, category: "Animal Guides", description: `${animal.name} years, quick facts, and traditional associations.` },
+        guides.find((guide) => guide.path === "/chinese-zodiac-elements/"),
+        guides.find((guide) => guide.path === "/chinese-zodiac-years/"),
+        guides.find((guide) => guide.path === "/guides/chinese-birth-signs/")
+      ].filter(Boolean))}
+      ${faqBlock(faqs)}` 
+  }));
+}
+
 function yearSearchBlock() {
   return `<section class="tool-panel compact-tool" id="year-search">
     <div class="tool-copy">
@@ -842,6 +941,56 @@ await writePage("/guides/fire-horse-zodiac/", pageLayout({
       { q: "Is Fire Horse personality scientific?", a: "No. Fire Horse personality descriptions are cultural associations, not scientific personality tests or fixed predictions." }
     ])}`
 }));
+
+await elementAnimalArticle({
+  title: "Fire Rat Chinese Zodiac: Years, Meaning, Personality, and Elements",
+  description: "Learn what Fire Rat means in Chinese zodiac culture, including Fire Rat years, personality associations, element meaning, and Lunar New Year boundaries.",
+  path: "/guides/fire-rat-chinese-zodiac/",
+  h1: "Fire Rat Chinese Zodiac",
+  intro: "The Fire Rat combines the Rat zodiac animal with the Fire element, a traditional pairing linked with alertness, adaptability, visibility, and active expression.",
+  animalSlug: "rat",
+  elementName: "Fire",
+  yearsRange: [1936, 2060],
+  primaryKeyword: "Fire Rat Chinese Zodiac",
+  supportingKeywords: ["fire rat chinese zodiac", "fire rat zodiac", "fire rat chinese zodiac personality"],
+  image: {
+    src: "/assets/zodiac-wheel.svg",
+    alt: "Chinese zodiac wheel illustration for Fire Rat zodiac guide",
+    title: "Fire Rat visual note",
+    text: "The Rat belongs to the twelve-animal cycle, while Fire adds the element layer in the 60-year zodiac cycle."
+  },
+  faqs: [
+    { q: "What is a Fire Rat in Chinese zodiac?", a: "A Fire Rat is a Rat zodiac year paired with the Fire element in the 60-year Chinese zodiac cycle." },
+    { q: "What years are Fire Rat years?", a: "Modern Fire Rat years include 1936 and 1996. The next Fire Rat year after 1996 is 2056." },
+    { q: "What does Fire Rat personality mean?", a: "Fire Rat personality descriptions combine Rat symbolism, such as alertness and resourcefulness, with Fire symbolism, such as energy and expression." },
+    { q: "Does a Fire Rat year start on January 1?", a: "No. A Fire Rat year starts at Lunar New Year, so early January or February birthdays may belong to the previous zodiac year." }
+  ]
+});
+
+await elementAnimalArticle({
+  title: "Earth Tiger Chinese Zodiac: Years, Meaning, Personality, and Elements",
+  description: "Learn what Earth Tiger means in Chinese zodiac culture, including Earth Tiger years, personality associations, element meaning, and Lunar New Year boundaries.",
+  path: "/guides/chinese-zodiac-earth-tiger/",
+  h1: "Earth Tiger Chinese Zodiac",
+  intro: "The Earth Tiger combines the Tiger zodiac animal with the Earth element, a traditional pairing linked with courage, protection, stability, and grounded action.",
+  animalSlug: "tiger",
+  elementName: "Earth",
+  yearsRange: [1938, 2060],
+  primaryKeyword: "Chinese Zodiac Earth Tiger",
+  supportingKeywords: ["chinese zodiac earth tiger", "earth tiger zodiac", "earth tiger chinese zodiac personality"],
+  image: {
+    src: "/assets/zodiac-wheel.svg",
+    alt: "Chinese zodiac wheel illustration for Earth Tiger zodiac guide",
+    title: "Earth Tiger visual note",
+    text: "The Tiger belongs to the twelve-animal cycle, while Earth adds the element layer in the 60-year zodiac cycle."
+  },
+  faqs: [
+    { q: "What is an Earth Tiger in Chinese zodiac?", a: "An Earth Tiger is a Tiger zodiac year paired with the Earth element in the 60-year Chinese zodiac cycle." },
+    { q: "What years are Earth Tiger years?", a: "Modern Earth Tiger years include 1938 and 1998. The next Earth Tiger year after 1998 is 2058." },
+    { q: "What does Earth Tiger personality mean?", a: "Earth Tiger personality descriptions combine Tiger symbolism, such as courage and vitality, with Earth symbolism, such as stability and practical support." },
+    { q: "Does an Earth Tiger year start on January 1?", a: "No. An Earth Tiger year starts at Lunar New Year, so early January or February birthdays may belong to the previous zodiac year." }
+  ]
+});
 
 await writePage("/guides/chinese-birth-signs/", pageLayout({
   title: "Chinese Birth Signs by Birthday: Find Your Zodiac Animal Correctly",
