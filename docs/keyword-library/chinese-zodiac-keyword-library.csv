@@ -114,7 +114,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 113,chinese zodiac birthday chart,5400,LOW,13,0.09,calculator,Calculator / Birthday,tool-support article,/guides/chinese-birth-signs/,98.5,Published article; use for internal linking and future expansion.
 114,1955 year of the chinese zodiac,5400,LOW,0,0.47,year,Years,year guide,/guides/1955-year-of-the-chinese-zodiac/,98.4,New article candidate.
 115,chinese sign for 1955,5400,LOW,0,0.47,year,General,year guide,/guides/chinese-sign-for-1955/,98.4,New article candidate.
-116,chinese zodiac water horse,2400,LOW,0,0.13,element,Horse / 2026,element article,/guides/chinese-zodiac-water-horse/,98.2,New article candidate.
+116,chinese zodiac water horse,2400,LOW,0,0.13,element,Horse / 2026,published article,/guides/chinese-zodiac-water-horse/,98.2,Published on 2026-07-01; do not republish as a separate article.
 117,birth year chinese zodiac,90500,LOW,25,0.05,calculator,Calculator / Birthday,supporting article or existing-page expansion,/guides/chinese-birth-signs/,98.1,Published article; use for internal linking and future expansion.
 118,1980 chinese sign,12100,LOW,0,0.01,year,General,year guide,/guides/1980-chinese-sign/,98.1,New article candidate.
 119,1980 chinese zodiac,12100,LOW,0,0.01,year,General,year guide,/guides/1980-chinese-zodiac/,98.1,New article candidate.
@@ -248,7 +248,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 247,chinese zodiac earth tiger,1600,LOW,0,,element,Elements,element article,/guides/chinese-zodiac-earth-tiger/,88,New article candidate.
 248,chinese zodiac wood dog,1600,LOW,0,,element,Elements,element article,/guides/chinese-zodiac-wood-dog/,88,New article candidate.
 249,water monkey chinese zodiac,1600,LOW,0,,element,Elements,element article,/guides/water-monkey-chinese-zodiac/,88,New article candidate.
-250,fire dragon chinese zodiac,1300,LOW,0,0.26,element,Dragon / 2024,element article,/guides/fire-dragon-chinese-zodiac/,87.9,New article candidate.
+250,fire dragon chinese zodiac,1300,LOW,0,0.26,element,Dragon / 2024,published article,/guides/fire-dragon-chinese-zodiac/,87.9,Published on 2026-07-01; do not republish as a separate article.
 251,lunar new year animals,12100,LOW,7,3.45,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,87.8,Already has a matching page; use for page expansion or supporting paragraph.
 252,chinese animal,5400,LOW,5,0.06,general,General,guide article,/guides/chinese-animal/,87.8,New article candidate.
 253,1946 chinese zodiac,4400,LOW,0,,year,General,year guide,/guides/1946-chinese-zodiac/,87.5,New article candidate.
@@ -347,7 +347,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 346,earth tiger zodiac,1600,LOW,0,,element,Elements,element article,/guides/earth-tiger-zodiac/,83,New article candidate.
 347,fire rat zodiac,1600,LOW,0,,element,Elements,element article,/guides/fire-rat-zodiac/,83,New article candidate.
 348,chinese zodiac wood rabbit,590,LOW,0,0.66,element,Elements,element article,/guides/chinese-zodiac-wood-rabbit/,83,New article candidate.
-349,fire dragon zodiac,1300,LOW,0,0.26,element,Dragon / 2024,element article,/guides/fire-dragon-zodiac/,82.9,New article candidate.
+349,fire dragon zodiac,1300,LOW,0,0.26,element,Dragon / 2024,existing-page coverage,/guides/fire-dragon-chinese-zodiac/,82.9,Covered by published Fire Dragon guide; use only for on-page expansion/internal linking.
 350,chinese rabbits,1600,LOW,1,0.74,general,General,guide article,/guides/chinese-rabbits/,82.4,New article candidate.
 351,chinese zodiac metal goat,1000,LOW,3,0.07,element,Elements,element article,/guides/chinese-zodiac-metal-goat/,82.3,New article candidate.
 352,the year of the goat,14800,LOW,0,0.13,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,82.1,Already has a matching page; use for page expansion or supporting paragraph.
@@ -807,7 +807,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 806,chinese sign dog,3600,LOW,0,1.01,animal,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac/dog/,69.5,Already has a matching page; use for page expansion or supporting paragraph.
 807,chinese horoscope 1955,5400,LOW,0,0.47,year,General,supporting article or existing-page expansion,Expand existing /,69.4,Already has a matching page; use for page expansion or supporting paragraph.
 808,metal horse zodiac,260,LOW,0,,element,Horse / 2026,element article,/guides/metal-horse-zodiac/,69.4,New article candidate.
-809,water horse zodiac,260,LOW,0,,element,Horse / 2026,element article,/guides/water-horse-zodiac/,69.4,New article candidate.
+809,water horse zodiac,260,LOW,0,,element,Horse / 2026,existing-page coverage,/guides/chinese-zodiac-water-horse/,69.4,Covered by published Water Horse guide; use only for on-page expansion/internal linking.
 810,wood goat chinese zodiac,260,LOW,0,,element,Elements,element article,/guides/wood-goat-chinese-zodiac/,69.4,New article candidate.
 811,chinese calendar dragon,6600,LOW,0,0.2,animal,Dragon / 2024,supporting article or existing-page expansion,Expand existing /chinese-zodiac/dragon/,69.3,Already has a matching page; use for page expansion or supporting paragraph.
 812,chinese dragon horoscope,6600,LOW,0,0.2,animal,Dragon / 2024,supporting article or existing-page expansion,Expand existing /chinese-zodiac/dragon/,69.3,Already has a matching page; use for page expansion or supporting paragraph.
@@ -1272,7 +1272,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 1271,chinese zodiac year 2021,170,LOW,0,,year,Years,year guide,/guides/chinese-zodiac-year-2021/,59.1,New article candidate.
 1272,chinese zodiac year 2022,170,LOW,0,,year,Years,year guide,/guides/chinese-zodiac-year-2022/,59.1,New article candidate.
 1273,chinese zodiac year 2023,170,LOW,0,,year,Years,year guide,/guides/chinese-zodiac-year-2023/,59.1,New article candidate.
-1274,fire dragon chinese zodiac 1976,170,LOW,0,,year,Dragon / 2024,year guide,/guides/fire-dragon-chinese-zodiac-1976/,59.1,New article candidate.
+1274,fire dragon chinese zodiac 1976,170,LOW,0,,year,Dragon / 2024,existing-page coverage,/guides/fire-dragon-chinese-zodiac/,59.1,Covered by published Fire Dragon guide; use only for on-page expansion/internal linking.
 1275,jan 1998 chinese zodiac,170,LOW,0,,year,General,year guide,/guides/jan-1998-chinese-zodiac/,59.1,New article candidate.
 1276,january 1990 chinese zodiac,170,LOW,0,,year,General,year guide,/guides/january-1990-chinese-zodiac/,59.1,New article candidate.
 1277,lunar new year 1988,170,LOW,0,,year,Years,year guide,/guides/lunar-new-year-1988/,59.1,New article candidate.

@@ -100,6 +100,18 @@ const guides = [
     description: "Water Dragon years, traditional meaning, personality associations, and how the Water element changes the Dragon reading."
   },
   {
+    title: "Water Horse Chinese Zodiac",
+    path: "/guides/chinese-zodiac-water-horse/",
+    category: "Element Guides",
+    description: "Water Horse years, traditional meaning, personality associations, and how the Water element changes the Horse reading."
+  },
+  {
+    title: "Fire Dragon Chinese Zodiac",
+    path: "/guides/fire-dragon-chinese-zodiac/",
+    category: "Element Guides",
+    description: "Fire Dragon years, traditional meaning, personality associations, and how the Fire element changes the Dragon reading."
+  },
+  {
     title: "1990 Year of the Chinese Zodiac",
     path: "/guides/1990-year-of-the-chinese-zodiac/",
     category: "Year Guides",
@@ -1148,6 +1160,56 @@ await elementAnimalArticle({
     { q: "What years are Water Dragon years?", a: "Modern Water Dragon years include 1952 and 2012. The next Water Dragon year after 2012 is 2072." },
     { q: "What does Water Dragon personality mean?", a: "Water Dragon personality descriptions combine Dragon symbolism, such as strength and auspicious energy, with Water symbolism, such as adaptability and reflection." },
     { q: "Does a Water Dragon year start on January 1?", a: "No. A Water Dragon year starts at Lunar New Year, so early January or February birthdays may belong to the previous zodiac year." }
+  ]
+});
+
+await elementAnimalArticle({
+  title: "Water Horse Chinese Zodiac: Years, Meaning, Personality, and Elements",
+  description: "Learn what Water Horse means in Chinese zodiac culture, including Water Horse years, personality associations, element meaning, and Lunar New Year boundaries.",
+  path: "/guides/chinese-zodiac-water-horse/",
+  h1: "Water Horse Chinese Zodiac",
+  intro: "The Water Horse combines the Horse zodiac animal with the Water element, a traditional pairing linked with movement, independence, adaptability, and flexible social energy.",
+  animalSlug: "horse",
+  elementName: "Water",
+  yearsRange: [1942, 2062],
+  primaryKeyword: "Chinese Zodiac Water Horse",
+  supportingKeywords: ["chinese zodiac water horse", "water horse zodiac", "water horse chinese zodiac personality"],
+  image: {
+    src: "/assets/zodiac-wheel.svg",
+    alt: "Chinese zodiac wheel illustration for Water Horse zodiac guide",
+    title: "Water Horse visual note",
+    text: "The Horse belongs to the twelve-animal cycle, while Water adds the element layer in the 60-year zodiac cycle."
+  },
+  faqs: [
+    { q: "What is a Water Horse in Chinese zodiac?", a: "A Water Horse is a Horse zodiac year paired with the Water element in the 60-year Chinese zodiac cycle." },
+    { q: "What years are Water Horse years?", a: "Modern Water Horse years include 1942 and 2002. The next Water Horse year after 2002 is 2062." },
+    { q: "What does Water Horse personality mean?", a: "Water Horse personality descriptions combine Horse symbolism, such as energy and independence, with Water symbolism, such as adaptability and flow." },
+    { q: "Does a Water Horse year start on January 1?", a: "No. A Water Horse year starts at Lunar New Year, so early January or February birthdays may belong to the previous zodiac year." }
+  ]
+});
+
+await elementAnimalArticle({
+  title: "Fire Dragon Chinese Zodiac: Years, Meaning, Personality, and Elements",
+  description: "Learn what Fire Dragon means in Chinese zodiac culture, including Fire Dragon years, personality associations, element meaning, and Lunar New Year boundaries.",
+  path: "/guides/fire-dragon-chinese-zodiac/",
+  h1: "Fire Dragon Chinese Zodiac",
+  intro: "The Fire Dragon combines the Dragon zodiac animal with the Fire element, a traditional pairing linked with strength, charisma, visibility, and bold expression.",
+  animalSlug: "dragon",
+  elementName: "Fire",
+  yearsRange: [1916, 2036],
+  primaryKeyword: "Fire Dragon Chinese Zodiac",
+  supportingKeywords: ["fire dragon chinese zodiac", "fire dragon zodiac", "fire dragon chinese zodiac 1976"],
+  image: {
+    src: "/assets/zodiac-wheel.svg",
+    alt: "Chinese zodiac wheel illustration for Fire Dragon zodiac guide",
+    title: "Fire Dragon visual note",
+    text: "The Dragon belongs to the twelve-animal cycle, while Fire adds the element layer in the 60-year zodiac cycle."
+  },
+  faqs: [
+    { q: "What is a Fire Dragon in Chinese zodiac?", a: "A Fire Dragon is a Dragon zodiac year paired with the Fire element in the 60-year Chinese zodiac cycle." },
+    { q: "What years are Fire Dragon years?", a: "Modern Fire Dragon years include 1916 and 1976. The next Fire Dragon year after 1976 is 2036." },
+    { q: "What does Fire Dragon personality mean?", a: "Fire Dragon personality descriptions combine Dragon symbolism, such as auspicious strength and confidence, with Fire symbolism, such as energy and visible expression." },
+    { q: "Does a Fire Dragon year start on January 1?", a: "No. A Fire Dragon year starts at Lunar New Year, so early January or February birthdays may belong to the previous zodiac year." }
   ]
 });
 

@@ -8,9 +8,9 @@
 - **行业:** Chinese Zodiac / Chinese Culture Tool
 - **最后更新:** 2026-06-27 13:35:00
 - **总关键词数:** 8531
-- **已发布文章使用:** 4
+- **已发布文章使用:** 6
 - **现有页面覆盖:** 1859
-- **待使用:** 3305
+- **待使用:** 3303
 - **暂不发布 / 排除:** 3365
 
 # 关键词列表
@@ -23,8 +23,8 @@
 | chinese zodiac earth tiger | 🟡 待发布 | medium | first-batch |
 | chinese zodiac fire rabbit | ✅ 已发布 | low | first-batch |
 | chinese zodiac water dragon | ✅ 已发布 | low | first-batch |
-| chinese zodiac water horse | 🟡 待发布 | low | first-batch |
-| fire dragon chinese zodiac | 🟡 待发布 | low | first-batch |
+| chinese zodiac water horse | ✅ 已发布 | low | first-batch |
+| fire dragon chinese zodiac | ✅ 已发布 | low | first-batch |
 | chinese zodiac fire ox | 🟡 待发布 | low | first-batch |
 | chinese zodiac earth snake | 🟡 待发布 | low | first-batch |
 
@@ -54,8 +54,8 @@
 | chinese zodiac metal dragon | 🟡 待发布 | medium | element |
 | chinese zodiac metal horse | 🟡 待发布 | medium | element |
 | chinese zodiac water dragon | ✅ 已发布 | low | element |
-| chinese zodiac water horse | 🟡 待发布 | low | element |
-| fire dragon chinese zodiac | 🟡 待发布 | low | element |
+| chinese zodiac water horse | ✅ 已发布 | low | element |
+| fire dragon chinese zodiac | ✅ 已发布 | low | element |
 | chinese zodiac earth snake | 🟡 待发布 | low | element |
 | chinese zodiac metal snake | 🟡 待发布 | low | element |
 | wood snake chinese zodiac | 🟡 待发布 | low | element |
@@ -258,7 +258,7 @@
 | chinese zodiac birthday chart | ✅ 已发布 | 5400 | medium | Calculator / Birthday | 13 |
 | 1955 year of the chinese zodiac | 🟡 待发布 | 5400 | medium | Years | 0 |
 | chinese sign for 1955 | 🟡 待发布 | 5400 | medium | General | 0 |
-| chinese zodiac water horse | 🟡 待发布 | 2400 | low | Horse / 2026 | 0 |
+| chinese zodiac water horse | ✅ 已发布 | 2400 | low | Horse / 2026 | 0 |
 | birth year chinese zodiac | ✅ 已发布 | 90500 | very high | Calculator / Birthday | 25 |
 | 1980 chinese sign | 🟡 待发布 | 12100 | high | General | 0 |
 | 1980 chinese zodiac | 🟡 待发布 | 12100 | high | General | 0 |
@@ -392,7 +392,7 @@
 | chinese zodiac earth tiger | 🟡 待发布 | 1600 | low | Elements | 0 |
 | chinese zodiac wood dog | 🟡 待发布 | 1600 | low | Elements | 0 |
 | water monkey chinese zodiac | 🟡 待发布 | 1600 | low | Elements | 0 |
-| fire dragon chinese zodiac | 🟡 待发布 | 1300 | low | Dragon / 2024 | 0 |
+| fire dragon chinese zodiac | ✅ 已发布 | 1300 | low | Dragon / 2024 | 0 |
 | lunar new year animals | ✅ 已有页面 | 12100 | high | Years | 7 |
 | chinese animal | 🟡 待发布 | 5400 | medium | General | 5 |
 | 1946 chinese zodiac | 🟡 待发布 | 4400 | medium | General | 0 |
@@ -491,7 +491,7 @@
 | earth tiger zodiac | 🟡 待发布 | 1600 | low | Elements | 0 |
 | fire rat zodiac | 🟡 待发布 | 1600 | low | Elements | 0 |
 | chinese zodiac wood rabbit | 🟡 待发布 | 590 | low | Elements | 0 |
-| fire dragon zodiac | 🟡 待发布 | 1300 | low | Dragon / 2024 | 0 |
+| fire dragon zodiac | ✅ 已覆盖 | 1300 | low | Dragon / 2024 | 0 |
 | chinese rabbits | 🟡 待发布 | 1600 | low | General | 1 |
 | chinese zodiac metal goat | 🟡 待发布 | 1000 | low | Elements | 3 |
 | the year of the goat | ✅ 已有页面 | 14800 | high | Years | 0 |
@@ -951,7 +951,7 @@
 | chinese sign dog | ✅ 已有页面 | 3600 | medium | General | 0 |
 | chinese horoscope 1955 | ✅ 已有页面 | 5400 | medium | General | 0 |
 | metal horse zodiac | 🟡 待发布 | 260 | low | Horse / 2026 | 0 |
-| water horse zodiac | 🟡 待发布 | 260 | low | Horse / 2026 | 0 |
+| water horse zodiac | ✅ 已覆盖 | 260 | low | Horse / 2026 | 0 |
 | wood goat chinese zodiac | 🟡 待发布 | 260 | low | Elements | 0 |
 | chinese calendar dragon | ✅ 已有页面 | 6600 | medium | Dragon / 2024 | 0 |
 | chinese dragon horoscope | ✅ 已有页面 | 6600 | medium | Dragon / 2024 | 0 |
@@ -1416,7 +1416,7 @@
 | chinese zodiac year 2021 | 🟡 待发布 | 170 | low | Years | 0 |
 | chinese zodiac year 2022 | 🟡 待发布 | 170 | low | Years | 0 |
 | chinese zodiac year 2023 | 🟡 待发布 | 170 | low | Years | 0 |
-| fire dragon chinese zodiac 1976 | 🟡 待发布 | 170 | low | Dragon / 2024 | 0 |
+| fire dragon chinese zodiac 1976 | ✅ 已覆盖 | 170 | low | Dragon / 2024 | 0 |
 | jan 1998 chinese zodiac | 🟡 待发布 | 170 | low | General | 0 |
 | january 1990 chinese zodiac | 🟡 待发布 | 170 | low | General | 0 |
 | lunar new year 1988 | 🟡 待发布 | 170 | low | Years | 0 |
