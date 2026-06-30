@@ -88,6 +88,18 @@ const guides = [
     description: "Earth Tiger years, traditional meaning, personality associations, and how the Earth element changes the Tiger reading."
   },
   {
+    title: "Fire Rabbit Chinese Zodiac",
+    path: "/guides/chinese-zodiac-fire-rabbit/",
+    category: "Element Guides",
+    description: "Fire Rabbit years, traditional meaning, personality associations, and how the Fire element changes the Rabbit reading."
+  },
+  {
+    title: "Water Dragon Chinese Zodiac",
+    path: "/guides/chinese-zodiac-water-dragon/",
+    category: "Element Guides",
+    description: "Water Dragon years, traditional meaning, personality associations, and how the Water element changes the Dragon reading."
+  },
+  {
     title: "1990 Year of the Chinese Zodiac",
     path: "/guides/1990-year-of-the-chinese-zodiac/",
     category: "Year Guides",
@@ -1086,6 +1098,56 @@ await elementAnimalArticle({
     { q: "What years are Earth Tiger years?", a: "Modern Earth Tiger years include 1938 and 1998. The next Earth Tiger year after 1998 is 2058." },
     { q: "What does Earth Tiger personality mean?", a: "Earth Tiger personality descriptions combine Tiger symbolism, such as courage and vitality, with Earth symbolism, such as stability and practical support." },
     { q: "Does an Earth Tiger year start on January 1?", a: "No. An Earth Tiger year starts at Lunar New Year, so early January or February birthdays may belong to the previous zodiac year." }
+  ]
+});
+
+await elementAnimalArticle({
+  title: "Fire Rabbit Chinese Zodiac: Years, Meaning, Personality, and Elements",
+  description: "Learn what Fire Rabbit means in Chinese zodiac culture, including Fire Rabbit years, personality associations, element meaning, and Lunar New Year boundaries.",
+  path: "/guides/chinese-zodiac-fire-rabbit/",
+  h1: "Fire Rabbit Chinese Zodiac",
+  intro: "The Fire Rabbit combines the Rabbit zodiac animal with the Fire element, a traditional pairing linked with grace, social warmth, sensitivity, and visible creative expression.",
+  animalSlug: "rabbit",
+  elementName: "Fire",
+  yearsRange: [1927, 2047],
+  primaryKeyword: "Chinese Zodiac Fire Rabbit",
+  supportingKeywords: ["chinese zodiac fire rabbit", "fire rabbit zodiac", "fire rabbit chinese zodiac personality"],
+  image: {
+    src: "/assets/zodiac-wheel.svg",
+    alt: "Chinese zodiac wheel illustration for Fire Rabbit zodiac guide",
+    title: "Fire Rabbit visual note",
+    text: "The Rabbit belongs to the twelve-animal cycle, while Fire adds the element layer in the 60-year zodiac cycle."
+  },
+  faqs: [
+    { q: "What is a Fire Rabbit in Chinese zodiac?", a: "A Fire Rabbit is a Rabbit zodiac year paired with the Fire element in the 60-year Chinese zodiac cycle." },
+    { q: "What years are Fire Rabbit years?", a: "Modern Fire Rabbit years include 1927 and 1987. The next Fire Rabbit year after 1987 is 2047." },
+    { q: "What does Fire Rabbit personality mean?", a: "Fire Rabbit personality descriptions combine Rabbit symbolism, such as gentleness and careful judgment, with Fire symbolism, such as energy and visible expression." },
+    { q: "Does a Fire Rabbit year start on January 1?", a: "No. A Fire Rabbit year starts at Lunar New Year, so early January or February birthdays may belong to the previous zodiac year." }
+  ]
+});
+
+await elementAnimalArticle({
+  title: "Water Dragon Chinese Zodiac: Years, Meaning, Personality, and Elements",
+  description: "Learn what Water Dragon means in Chinese zodiac culture, including Water Dragon years, personality associations, element meaning, and Lunar New Year boundaries.",
+  path: "/guides/chinese-zodiac-water-dragon/",
+  h1: "Water Dragon Chinese Zodiac",
+  intro: "The Water Dragon combines the Dragon zodiac animal with the Water element, a traditional pairing linked with confidence, adaptability, imagination, and flowing momentum.",
+  animalSlug: "dragon",
+  elementName: "Water",
+  yearsRange: [1952, 2072],
+  primaryKeyword: "Chinese Zodiac Water Dragon",
+  supportingKeywords: ["chinese zodiac water dragon", "water dragon zodiac", "water dragon chinese zodiac personality", "water dragon chinese zodiac 2012"],
+  image: {
+    src: "/assets/zodiac-wheel.svg",
+    alt: "Chinese zodiac wheel illustration for Water Dragon zodiac guide",
+    title: "Water Dragon visual note",
+    text: "The Dragon belongs to the twelve-animal cycle, while Water adds the element layer in the 60-year zodiac cycle."
+  },
+  faqs: [
+    { q: "What is a Water Dragon in Chinese zodiac?", a: "A Water Dragon is a Dragon zodiac year paired with the Water element in the 60-year Chinese zodiac cycle." },
+    { q: "What years are Water Dragon years?", a: "Modern Water Dragon years include 1952 and 2012. The next Water Dragon year after 2012 is 2072." },
+    { q: "What does Water Dragon personality mean?", a: "Water Dragon personality descriptions combine Dragon symbolism, such as strength and auspicious energy, with Water symbolism, such as adaptability and reflection." },
+    { q: "Does a Water Dragon year start on January 1?", a: "No. A Water Dragon year starts at Lunar New Year, so early January or February birthdays may belong to the previous zodiac year." }
   ]
 });
 

@@ -8,9 +8,9 @@
 - **行业:** Chinese Zodiac / Chinese Culture Tool
 - **最后更新:** 2026-06-27 13:35:00
 - **总关键词数:** 8531
-- **已发布文章使用:** 2
+- **已发布文章使用:** 4
 - **现有页面覆盖:** 1859
-- **待使用:** 3307
+- **待使用:** 3305
 - **暂不发布 / 排除:** 3365
 
 # 关键词列表
@@ -21,8 +21,8 @@
 |---|---|---|---|
 | fire rat chinese zodiac | 🟡 待发布 | medium | first-batch |
 | chinese zodiac earth tiger | 🟡 待发布 | medium | first-batch |
-| chinese zodiac fire rabbit | 🟡 待发布 | low | first-batch |
-| chinese zodiac water dragon | 🟡 待发布 | low | first-batch |
+| chinese zodiac fire rabbit | ✅ 已发布 | low | first-batch |
+| chinese zodiac water dragon | ✅ 已发布 | low | first-batch |
 | chinese zodiac water horse | 🟡 待发布 | low | first-batch |
 | fire dragon chinese zodiac | 🟡 待发布 | low | first-batch |
 | chinese zodiac fire ox | 🟡 待发布 | low | first-batch |
@@ -53,7 +53,7 @@
 | year of the fire horse | ✅ 已发布 | very high | element |
 | chinese zodiac metal dragon | 🟡 待发布 | medium | element |
 | chinese zodiac metal horse | 🟡 待发布 | medium | element |
-| chinese zodiac water dragon | 🟡 待发布 | low | element |
+| chinese zodiac water dragon | ✅ 已发布 | low | element |
 | chinese zodiac water horse | 🟡 待发布 | low | element |
 | fire dragon chinese zodiac | 🟡 待发布 | low | element |
 | chinese zodiac earth snake | 🟡 待发布 | low | element |
@@ -371,7 +371,7 @@
 | chinese zodiac sign year | ✅ 已有页面 | 90500 | very high | Years | 25 |
 | chinese zodiac signs and years | ✅ 已有页面 | 90500 | very high | General | 25 |
 | metal dragon zodiac | 🟡 待发布 | 2400 | low | Dragon / 2024 | 1 |
-| chinese zodiac fire rabbit | 🟡 待发布 | 1600 | low | Elements | 0 |
+| chinese zodiac fire rabbit | ✅ 已发布 | 1600 | low | Elements | 0 |
 | snake year | ✅ 已有页面 | 49500 | very high | Snake / 2025 | 0 |
 | snake zodiac | ✅ 已有页面 | 49500 | very high | Snake / 2025 | 0 |
 | 1990 year of the horse | 🟡 待发布 | 1900 | low | Horse / 2026 | 0 |
@@ -419,7 +419,7 @@
 | rooster chinese zodiac personality | 🟡 待发布 | 2400 | low | Meaning / Lucky Symbols | 0 |
 | year of 2000 chinese zodiac | 🟡 待发布 | 2400 | low | Years | 0 |
 | chinese zodiac fire ox | 🟡 待发布 | 1300 | low | Elements | 0 |
-| chinese zodiac water dragon | 🟡 待发布 | 1300 | low | Dragon / 2024 | 0 |
+| chinese zodiac water dragon | ✅ 已发布 | 1300 | low | Dragon / 2024 | 0 |
 | chinese zodiac water rooster | 🟡 待发布 | 1300 | low | Elements | 0 |
 | earth rabbit chinese zodiac | 🟡 待发布 | 1300 | low | Elements | 0 |
 | fire dog chinese zodiac | 🟡 待发布 | 1300 | low | Elements | 0 |
@@ -551,8 +551,8 @@
 | chinese zodiac date | 🟡 待发布 | 2900 | low | General | 5 |
 | earth dragon zodiac | 🟡 待发布 | 1300 | low | Dragon / 2024 | 1 |
 | fire ox zodiac | 🟡 待发布 | 1300 | low | Elements | 0 |
-| fire rabbit zodiac | 🟡 待发布 | 1300 | low | Elements | 0 |
-| water dragon zodiac | 🟡 待发布 | 1300 | low | Dragon / 2024 | 0 |
+| fire rabbit zodiac | ✅ 已覆盖 | 1300 | low | Elements | 0 |
+| water dragon zodiac | ✅ 已覆盖 | 1300 | low | Dragon / 2024 | 0 |
 | chinese zodiac horse traits | 🟡 待发布 | 880 | low | Horse / 2026 | 0 |
 | chinese love compatibility chart | ✅ 已有页面 | 1900 | low | Compatibility | 0 |
 | chinese zodiac love compatibility chart | ✅ 已有页面 | 1900 | low | Compatibility | 0 |

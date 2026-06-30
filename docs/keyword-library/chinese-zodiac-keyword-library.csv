@@ -227,7 +227,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 226,chinese zodiac sign year,90500,LOW,25,0.05,year,Years,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,89.1,Already has a matching page; use for page expansion or supporting paragraph.
 227,chinese zodiac signs and years,90500,LOW,25,0.05,year,General,supporting article or existing-page expansion,Expand existing /chinese-zodiac-animals/,89.1,Already has a matching page; use for page expansion or supporting paragraph.
 228,metal dragon zodiac,2400,LOW,1,0.3,element,Dragon / 2024,element article,/guides/metal-dragon-zodiac/,89.1,New article candidate.
-229,chinese zodiac fire rabbit,1600,LOW,0,0.13,element,Elements,element article,/guides/chinese-zodiac-fire-rabbit/,89,New article candidate.
+229,chinese zodiac fire rabbit,1600,LOW,0,0.13,element,Elements,published article,/guides/chinese-zodiac-fire-rabbit/,89,Published on 2026-06-30; do not republish as a separate article.
 230,snake year,49500,LOW,0,,year,Snake / 2025,supporting article or existing-page expansion,Expand existing /chinese-zodiac-years/,88.7,Already has a matching page; use for page expansion or supporting paragraph.
 231,snake zodiac,49500,LOW,0,,animal,Snake / 2025,supporting article or existing-page expansion,Expand existing /chinese-zodiac/snake/,88.7,Already has a matching page; use for page expansion or supporting paragraph.
 232,1990 year of the horse,1900,LOW,0,,year,Horse / 2026,year guide,/guides/1990-year-of-the-horse/,88.7,New article candidate.
@@ -275,7 +275,7 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 274,rooster chinese zodiac personality,2400,LOW,0,,animal,Meaning / Lucky Symbols,animal guide,/guides/rooster-chinese-zodiac-personality/,86.2,New article candidate.
 275,year of 2000 chinese zodiac,2400,LOW,0,,year,Years,year guide,/guides/year-of-2000-chinese-zodiac/,86.2,New article candidate.
 276,chinese zodiac fire ox,1300,LOW,0,,element,Elements,element article,/guides/chinese-zodiac-fire-ox/,85.8,New article candidate.
-277,chinese zodiac water dragon,1300,LOW,0,,element,Dragon / 2024,element article,/guides/chinese-zodiac-water-dragon/,85.8,New article candidate.
+277,chinese zodiac water dragon,1300,LOW,0,,element,Dragon / 2024,published article,/guides/chinese-zodiac-water-dragon/,85.8,Published on 2026-06-30; do not republish as a separate article.
 278,chinese zodiac water rooster,1300,LOW,0,,element,Elements,element article,/guides/chinese-zodiac-water-rooster/,85.8,New article candidate.
 279,earth rabbit chinese zodiac,1300,LOW,0,,element,Elements,element article,/guides/earth-rabbit-chinese-zodiac/,85.8,New article candidate.
 280,fire dog chinese zodiac,1300,LOW,0,,element,Elements,element article,/guides/fire-dog-chinese-zodiac/,85.8,New article candidate.
@@ -407,8 +407,8 @@ priority,keyword,search_volume,competition,competition_index,cpc,intent,cluster,
 406,chinese zodiac date,2900,LOW,5,0.03,general,General,guide article,/guides/chinese-zodiac-date/,81.1,New article candidate.
 407,earth dragon zodiac,1300,LOW,1,0.08,element,Dragon / 2024,element article,/guides/earth-dragon-zodiac/,81,New article candidate.
 408,fire ox zodiac,1300,LOW,0,,element,Elements,element article,/guides/fire-ox-zodiac/,80.8,New article candidate.
-409,fire rabbit zodiac,1300,LOW,0,,element,Elements,element article,/guides/fire-rabbit-zodiac/,80.8,New article candidate.
-410,water dragon zodiac,1300,LOW,0,,element,Dragon / 2024,element article,/guides/water-dragon-zodiac/,80.8,New article candidate.
+409,fire rabbit zodiac,1300,LOW,0,,element,Elements,existing-page coverage,/guides/chinese-zodiac-fire-rabbit/,80.8,Covered by published Fire Rabbit guide; use only for on-page expansion/internal linking.
+410,water dragon zodiac,1300,LOW,0,,element,Dragon / 2024,existing-page coverage,/guides/chinese-zodiac-water-dragon/,80.8,Covered by published Water Dragon guide; use only for on-page expansion/internal linking.
 411,chinese zodiac horse traits,880,LOW,0,,animal,Horse / 2026,animal guide,/guides/chinese-zodiac-horse-traits/,80.8,New article candidate.
 412,chinese love compatibility chart,1900,LOW,0,2.71,compatibility,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,80.7,Already has a matching page; use for page expansion or supporting paragraph.
 413,chinese zodiac love compatibility chart,1900,LOW,0,2.71,compatibility,Compatibility,supporting article or existing-page expansion,Expand existing /chinese-zodiac-compatibility/,80.7,Already has a matching page; use for page expansion or supporting paragraph.
