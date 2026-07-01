@@ -112,6 +112,18 @@ const guides = [
     description: "Fire Dragon years, traditional meaning, personality associations, and how the Fire element changes the Dragon reading."
   },
   {
+    title: "Metal Horse Chinese Zodiac",
+    path: "/guides/chinese-zodiac-metal-horse/",
+    category: "Element Guides",
+    description: "Metal Horse years, traditional meaning, personality associations, and how the Metal element changes the Horse reading."
+  },
+  {
+    title: "Metal Snake Chinese Zodiac",
+    path: "/guides/chinese-zodiac-metal-snake/",
+    category: "Element Guides",
+    description: "Metal Snake years, traditional meaning, personality associations, and how the Metal element changes the Snake reading."
+  },
+  {
     title: "1990 Year of the Chinese Zodiac",
     path: "/guides/1990-year-of-the-chinese-zodiac/",
     category: "Year Guides",
@@ -1210,6 +1222,56 @@ await elementAnimalArticle({
     { q: "What years are Fire Dragon years?", a: "Modern Fire Dragon years include 1916 and 1976. The next Fire Dragon year after 1976 is 2036." },
     { q: "What does Fire Dragon personality mean?", a: "Fire Dragon personality descriptions combine Dragon symbolism, such as auspicious strength and confidence, with Fire symbolism, such as energy and visible expression." },
     { q: "Does a Fire Dragon year start on January 1?", a: "No. A Fire Dragon year starts at Lunar New Year, so early January or February birthdays may belong to the previous zodiac year." }
+  ]
+});
+
+await elementAnimalArticle({
+  title: "Metal Horse Chinese Zodiac: Years, Meaning, Personality, and Elements",
+  description: "Learn what Metal Horse means in Chinese zodiac culture, including Metal Horse years, personality associations, element meaning, and Lunar New Year boundaries.",
+  path: "/guides/chinese-zodiac-metal-horse/",
+  h1: "Metal Horse Chinese Zodiac",
+  intro: "The Metal Horse combines the Horse zodiac animal with the Metal element, a traditional pairing linked with movement, independence, structure, clarity, and endurance.",
+  animalSlug: "horse",
+  elementName: "Metal",
+  yearsRange: [1930, 2050],
+  primaryKeyword: "Chinese Zodiac Metal Horse",
+  supportingKeywords: ["chinese zodiac metal horse", "metal horse zodiac", "metal horse chinese zodiac"],
+  image: {
+    src: "/assets/zodiac-wheel.svg",
+    alt: "Chinese zodiac wheel illustration for Metal Horse zodiac guide",
+    title: "Metal Horse visual note",
+    text: "The Horse belongs to the twelve-animal cycle, while Metal adds the element layer in the 60-year zodiac cycle."
+  },
+  faqs: [
+    { q: "What is a Metal Horse in Chinese zodiac?", a: "A Metal Horse is a Horse zodiac year paired with the Metal element in the 60-year Chinese zodiac cycle." },
+    { q: "What years are Metal Horse years?", a: "Modern Metal Horse years include 1930 and 1990. The next Metal Horse year after 1990 is 2050." },
+    { q: "What does Metal Horse personality mean?", a: "Metal Horse personality descriptions combine Horse symbolism, such as independence and movement, with Metal symbolism, such as structure, clarity, and endurance." },
+    { q: "Does a Metal Horse year start on January 1?", a: "No. A Metal Horse year starts at Lunar New Year, so early January or February birthdays may belong to the previous zodiac year." }
+  ]
+});
+
+await elementAnimalArticle({
+  title: "Metal Snake Chinese Zodiac: Years, Meaning, Personality, and Elements",
+  description: "Learn what Metal Snake means in Chinese zodiac culture, including Metal Snake years, personality associations, element meaning, and Lunar New Year boundaries.",
+  path: "/guides/chinese-zodiac-metal-snake/",
+  h1: "Metal Snake Chinese Zodiac",
+  intro: "The Metal Snake combines the Snake zodiac animal with the Metal element, a traditional pairing linked with reflection, strategy, structure, clarity, and endurance.",
+  animalSlug: "snake",
+  elementName: "Metal",
+  yearsRange: [1941, 2061],
+  primaryKeyword: "Chinese Zodiac Metal Snake",
+  supportingKeywords: ["chinese zodiac metal snake", "metal snake zodiac", "metal snake chinese zodiac"],
+  image: {
+    src: "/assets/zodiac-wheel.svg",
+    alt: "Chinese zodiac wheel illustration for Metal Snake zodiac guide",
+    title: "Metal Snake visual note",
+    text: "The Snake belongs to the twelve-animal cycle, while Metal adds the element layer in the 60-year zodiac cycle."
+  },
+  faqs: [
+    { q: "What is a Metal Snake in Chinese zodiac?", a: "A Metal Snake is a Snake zodiac year paired with the Metal element in the 60-year Chinese zodiac cycle." },
+    { q: "What years are Metal Snake years?", a: "Modern Metal Snake years include 1941 and 2001. The next Metal Snake year after 2001 is 2061." },
+    { q: "What does Metal Snake personality mean?", a: "Metal Snake personality descriptions combine Snake symbolism, such as reflection and strategy, with Metal symbolism, such as structure, clarity, and endurance." },
+    { q: "Does a Metal Snake year start on January 1?", a: "No. A Metal Snake year starts at Lunar New Year, so early January or February birthdays may belong to the previous zodiac year." }
   ]
 });
 
