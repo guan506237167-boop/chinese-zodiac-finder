@@ -3,8 +3,19 @@ import { join } from "node:path";
 
 const minimumWords = 1000;
 const pages = [
+  "/guides/fire-horse-zodiac/",
+  "/guides/fire-rat-chinese-zodiac/",
+  "/guides/chinese-zodiac-earth-tiger/",
+  "/guides/chinese-zodiac-fire-rabbit/",
+  "/guides/chinese-zodiac-water-dragon/",
+  "/guides/chinese-zodiac-water-horse/",
+  "/guides/fire-dragon-chinese-zodiac/",
   "/guides/chinese-zodiac-metal-horse/",
-  "/guides/chinese-zodiac-metal-snake/"
+  "/guides/chinese-zodiac-metal-snake/",
+  "/guides/1990-year-of-the-chinese-zodiac/",
+  "/guides/1989-year-of-the-chinese-zodiac/",
+  "/guides/horse-chinese-zodiac/",
+  "/guides/dragon-chinese-zodiac/"
 ];
 
 const issues = [];

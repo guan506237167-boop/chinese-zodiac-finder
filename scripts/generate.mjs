@@ -744,6 +744,9 @@ function elementAnimalArticle({
         <h2>How to use this guide responsibly</h2>
         <p>The most useful way to read a ${elementName} ${animal.name} page is to separate factual lookup from symbolic interpretation. The factual layer includes the animal, element, 60-year cycle, and Lunar New Year boundary. Those details can be checked against a calendar. The symbolic layer includes personality language, compatibility tone, and cultural associations. Those are traditional references, not evidence-based judgments about a person.</p>
         <p>This distinction matters for readers who arrive from a birthday, a family question, or a compatibility search. Use the year table to confirm the sign first, then read the meaning as cultural context. If the birthday is near January or February, use the calculator before relying on the animal label. That keeps the page helpful without turning zodiac symbolism into a promise or prediction.</p>
+        <p>For content comparison, the animal alone gives the broad zodiac sign, while the element makes the reading more specific. A ${elementName} ${animal.name} page should therefore answer three separate questions: which years belong to this sign, what the animal traditionally represents, and what the element adds to the interpretation. Keeping those questions separate makes the page easier to verify and easier for readers to reuse as a reference.</p>
+        <p>If the page is used for personal lookup, write down the full birth date first and then confirm whether the birthday is before or after Lunar New Year. If the page is used for cultural learning, compare this element-animal guide with the general ${animal.name} page and the five elements page. Those two paths answer different needs, and mixing them together is the main reason many zodiac explanations become vague.</p>
+        <p>For older dates, the same rule still applies: check the calendar boundary first, then read the symbol. This is especially important when a chart lists only Gregorian years without showing Lunar New Year dates.</p>
       </section>
       ${relatedGuidesBlock(`Related ${animal.name} and element guides`, [
         { title: `${animal.name} Chinese Zodiac`, path: `/chinese-zodiac/${animal.animal}/`, category: "Animal Guides", description: `${animal.name} years, quick facts, and traditional associations.` },
@@ -821,6 +824,12 @@ function yearGuideArticle({ year, title, description, path, h1, primaryKeyword, 
         <p>Compatibility is usually read through the animal first, then the element as a secondary tone. For a ${row.element} ${animal.name}, start with the ${animal.name} compatibility pattern and then read the ${row.element} element as cultural color.</p>
         <p>Use compatibility as a traditional reference only. Real relationships depend on communication, values, behavior, and timing more than any zodiac label.</p>
         <a class="button-link" href="/chinese-zodiac-compatibility/">Open compatibility checker</a>
+      </section>
+      <section class="content-section">
+        <h2>How to use this ${year} zodiac guide</h2>
+        <p>Use this page first as a date-checking guide. The most important fact is whether the birthday happened before or after ${row.lunarNewYear}. Once that boundary is clear, the animal and element can be read as traditional cultural information. This prevents the common error of assigning every person born in ${year} to the same zodiac sign without checking the Lunar New Year date.</p>
+        <p>After the date is confirmed, compare the ${animal.name} animal guide, the ${row.element} element explanation, and the compatibility section if that is relevant to the user's question. The goal is not to turn a birth year into a fixed identity label. The goal is to give a clear cultural reference with enough context for readers to understand why the answer is different from a simple January 1 chart.</p>
+        <p>This page is also useful for checking family or gift questions. If someone asks what ${year} means in Chinese zodiac culture, the short answer is the ${row.element} ${animal.name}; the complete answer includes the Lunar New Year start date, the element layer, and the reminder that zodiac meaning is symbolic rather than predictive.</p>
       </section>
       <section class="content-section">
         <h2>Common searches this guide answers</h2>
@@ -1065,6 +1074,11 @@ await writePage("/guides/fire-horse-zodiac/", pageLayout({
       <h2>Fire Horse compared with other Horse elements</h2>
       <p>Every Horse year has the same animal base, but the element changes the traditional wording. Fire Horse tends to emphasize expression and visible movement. Metal Horse may be described with more structure and resolve. Water Horse may be described with more adaptability. Wood Horse often emphasizes growth and flexibility, while Earth Horse emphasizes stability and practical support.</p>
       <p>The element is best used as a cultural layer on top of the animal, not as a separate fortune-telling result.</p>
+    </section>
+    <section class="content-section">
+      <h2>How to use the Fire Horse guide responsibly</h2>
+      <p>Use this page first to confirm the calendar boundary, then use the meaning sections as cultural vocabulary. The Fire Horse label is useful for understanding traditional zodiac language, but it should not be treated as a fixed personality result or a prediction. If the question is about a specific person, the full birth date matters more than the Gregorian year alone.</p>
+      <p>For comparison, open the Horse animal page and the five elements page after reading this guide. That separates the Horse layer from the Fire layer and makes the interpretation clearer.</p>
     </section>
     ${relatedGuidesBlock("Related Fire Horse guides", [
       guides.find((guide) => guide.path === "/year-of-the-horse-2026/"),
@@ -1559,6 +1573,11 @@ await writePage("/guides/dragon-chinese-zodiac/", pageLayout({
       <p>The biggest mistake is assuming a Dragon year starts on January 1. Chinese zodiac years begin at Lunar New Year, so the start date changes each Gregorian year.</p>
       <p>Another mistake is treating Dragon symbolism as prediction. On this site, Dragon meanings are explained as traditional cultural associations, not scientific personality tests.</p>
     </section>
+    <section class="content-section">
+      <h2>How to use the Dragon guide</h2>
+      <p>Use this page as a reference for Dragon years, meanings, and symbolic vocabulary. If you are checking a birthday, start with the year table and Lunar New Year date. If you are comparing zodiac meanings, use the Dragon animal guide first, then move to element pages for more specific 60-year-cycle labels.</p>
+      <p>This separation keeps the answer accurate. The Dragon sign gives the animal layer, while Wood, Fire, Earth, Metal, or Water gives the element layer. Both can be useful, but neither should be used as a fixed judgment about a real person's future or character.</p>
+    </section>
     ${relatedGuidesBlock("Related Dragon and zodiac guides", [
       { title: "Dragon Chinese Zodiac", path: "/chinese-zodiac/dragon/", category: "Animal Guides", description: "Dragon years, quick facts, and traditional associations." },
       guides.find((guide) => guide.path === "/chinese-zodiac-years/"),
@@ -2015,6 +2034,13 @@ for (const animal of animals) {
         <p>${animal.meaning}</p>
         <p>${animal.personality}</p>
         <p>These descriptions are traditional associations, not scientific personality claims.</p>
+      </section>
+      <section class="content-section">
+        <h2>How to read the ${animal.name} sign accurately</h2>
+        <p>The ${animal.name} sign should be read with two checks. First, confirm the birth year against the Lunar New Year boundary, especially for January and February birthdays. Second, separate the animal sign from the element cycle. The animal repeats every 12 years, while the full animal-and-element combination repeats every 60 years.</p>
+        <p>This matters because two ${animal.name} years can have different element labels and different cultural wording. A Wood ${animal.name}, Fire ${animal.name}, Earth ${animal.name}, Metal ${animal.name}, and Water ${animal.name} all share the animal, but the element gives a second layer of traditional interpretation. For practical use, start with the year table, then move to element and compatibility pages only after the sign is confirmed.</p>
+        <p>When using the ${animal.name} page for quick reference, treat the lucky numbers, colors, and personality notes as cultural vocabulary. They can help explain how the sign is described in traditional writing, but they should not be used as instructions for decisions about work, relationships, health, or money.</p>
+        <p>If you need a more specific reading, move from this animal page to a year page or an element page. That gives the exact Gregorian year, Lunar New Year start date, and element label instead of relying on the animal sign alone.</p>
       </section>
       ${relatedGuidesBlock("Related zodiac guides", [
         guides.find((guide) => guide.path === "/chinese-zodiac-animals/"),
