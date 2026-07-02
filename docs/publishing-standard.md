@@ -228,6 +228,20 @@ Ending:
 
 ## 4. SEO/GEO 结构标准
 
+### 4.0 Content depth gate
+
+Do not publish a new zodiac guide as a short placeholder.
+
+| Page type | Minimum visible words | Target words |
+|---|---:|---:|
+| New zodiac guide article | 700 | 850-1200 |
+| Animal/year detail page | 700 | 850-1100 |
+| Compatibility hub page | 700 | 900-1200 |
+| Compatibility template detail | 400 | 500-800 |
+| Tool/list/FAQ support page | Not forced | Judge by task completeness |
+
+Every new article must include a direct answer block, Lunar New Year boundary where relevant, cultural-reference disclaimer, related guides, and page-specific FAQ. Existing short template pages should be treated as rewrite candidates, not as the quality benchmark.
+
 | 项目 | 标准 |
 |---|---|
 | H1 | 每页只能 1 个，和页面主题一致 |
