@@ -740,6 +740,11 @@ function elementAnimalArticle({
         <h2>Common search terms covered</h2>
         <p>This page is written for searchers using terms such as ${supportingKeywords.map((keyword) => `<strong>${escapeHtml(keyword)}</strong>`).join(", ")}. These searches usually have the same intent: find the correct years, understand the symbolic meaning, and avoid the Lunar New Year boundary mistake.</p>
       </section>
+      <section class="content-section">
+        <h2>How to use this guide responsibly</h2>
+        <p>The most useful way to read a ${elementName} ${animal.name} page is to separate factual lookup from symbolic interpretation. The factual layer includes the animal, element, 60-year cycle, and Lunar New Year boundary. Those details can be checked against a calendar. The symbolic layer includes personality language, compatibility tone, and cultural associations. Those are traditional references, not evidence-based judgments about a person.</p>
+        <p>This distinction matters for readers who arrive from a birthday, a family question, or a compatibility search. Use the year table to confirm the sign first, then read the meaning as cultural context. If the birthday is near January or February, use the calculator before relying on the animal label. That keeps the page helpful without turning zodiac symbolism into a promise or prediction.</p>
+      </section>
       ${relatedGuidesBlock(`Related ${animal.name} and element guides`, [
         { title: `${animal.name} Chinese Zodiac`, path: `/chinese-zodiac/${animal.animal}/`, category: "Animal Guides", description: `${animal.name} years, quick facts, and traditional associations.` },
         guides.find((guide) => guide.path === "/chinese-zodiac-elements/"),
@@ -2377,12 +2382,15 @@ function auditPage(page, html, sitemap) {
   const internalLinks = [...html.matchAll(/<a\s+[^>]*href="([^"]+)"/gi)].map((item) => item[1]).filter((href) => href.startsWith("/") && !href.startsWith("//"));
   const images = [...html.matchAll(/<img\s+[^>]*>/gi)].map((item) => item[0]);
   const imagesMissingAlt = images.filter((img) => !/\salt="[^"]*"/i.test(img)).length;
+  const requiresDepth = requiresFullArticleDepth(page.path);
   const checks = [
     checkRange("SEO title length should be 35-70 characters", title.length, 35, 70),
     checkRange("Meta description should be 90-165 characters", description.length, 90, 165),
     checkExact("Page should have exactly one H1", h1Count, 1),
     checkMinimum("Page should include at least one H2", h2Count, 1),
-    checkMinimum("Page should have at least 180 visible words", wordCount, 180),
+    requiresDepth
+      ? checkMinimum("Formal content page should have at least 1000 visible words", wordCount, 1000)
+      : checkMinimum("Support page should have at least 180 visible words", wordCount, 180),
     checkMinimum("Page should include JSON-LD schema", schemaCount, 1),
     checkBoolean("Canonical should match page URL", canonical === absolute(page.path)),
     checkBoolean("Page should appear in sitemap", sitemap.includes(`<loc>${absolute(page.path)}</loc>`)),
@@ -2390,7 +2398,8 @@ function auditPage(page, html, sitemap) {
     checkBoolean("Images should have alt text", imagesMissingAlt === 0),
     checkBoolean("Guide detail pages should expose FAQ when assigned", page.faqs > 0 || !needsFaqGate(page.path))
   ];
-  const score = Math.round((checks.filter((item) => item.ok).length / checks.length) * 100);
+  let score = Math.round((checks.filter((item) => item.ok).length / checks.length) * 100);
+  if (requiresDepth && wordCount < 1000) score = Math.min(score, 69);
   return {
     path: page.path,
     score,
@@ -2409,6 +2418,13 @@ function auditPage(page, html, sitemap) {
     },
     issues: checks.filter((item) => !item.ok).map((item) => item.message)
   };
+}
+
+function requiresFullArticleDepth(path) {
+  if (["/", "/about/", "/contact/", "/privacy/", "/terms/", "/guides/", "/chinese-zodiac-faq/"].includes(path)) return false;
+  if (path.startsWith("/admin/")) return false;
+  if (path === "/chinese-zodiac-calculator/" || path === "/chinese-zodiac-compatibility-calculator/") return false;
+  return true;
 }
 
 function getMatch(text, regex) {
