@@ -285,6 +285,160 @@ function allCompatibilityPairs() {
   return pairs;
 }
 
+function animalTraits(animal) {
+  const profiles = {
+    rat: {
+      strength: "quick adjustment, practical observation, and the ability to find an opening when a situation changes",
+      caution: "overthinking, impatience with slower rhythms, or reading too much into small signals",
+      work: "planning, research, communication, trade, and roles that reward fast comparison",
+      relationship: "clear expectations and honest timing help the Rat feel secure without becoming overly strategic"
+    },
+    ox: {
+      strength: "steady effort, patience, dependability, and the willingness to build slowly",
+      caution: "stubbornness, delayed emotional expression, or resistance to sudden change",
+      work: "operations, finance, farming symbolism, quality control, and long-term responsibilities",
+      relationship: "consistent routines and visible reliability usually matter more than dramatic gestures"
+    },
+    tiger: {
+      strength: "courage, protection, direct action, and strong personal presence",
+      caution: "restlessness, pride, or acting before the other side has time to respond",
+      work: "leadership, advocacy, sales, public-facing roles, and projects that need momentum",
+      relationship: "respect for independence is important, but warmth needs to be shown in practical ways"
+    },
+    rabbit: {
+      strength: "diplomacy, sensitivity, aesthetic judgment, and calm social awareness",
+      caution: "avoidance of hard conversations, indirect communication, or too much concern with atmosphere",
+      work: "design, education, hospitality, writing, coordination, and roles that require tact",
+      relationship: "gentle communication works well, but important decisions should not be postponed forever"
+    },
+    dragon: {
+      strength: "confidence, ambition, visibility, and the ability to inspire attention",
+      caution: "dominance, impatience with ordinary details, or expecting others to match the same intensity",
+      work: "branding, leadership, entrepreneurship, public projects, and high-visibility initiatives",
+      relationship: "admiration helps, but the relationship also needs humility, listening, and shared responsibility"
+    },
+    snake: {
+      strength: "insight, patience, strategy, and quiet evaluation before acting",
+      caution: "secrecy, suspicion, or keeping too much analysis private",
+      work: "research, planning, finance, design, negotiation, and work that rewards careful timing",
+      relationship: "trust grows when intentions are explained clearly instead of leaving the other side guessing"
+    },
+    horse: {
+      strength: "movement, independence, optimism, and social energy",
+      caution: "restlessness, inconsistency, or leaving practical follow-through to others",
+      work: "travel, media, events, sales, teaching, and work that benefits from momentum",
+      relationship: "space and movement matter, but promises need follow-through to feel reliable"
+    },
+    goat: {
+      strength: "harmony, imagination, kindness, and appreciation for comfort and beauty",
+      caution: "hesitation, sensitivity to criticism, or depending too much on the mood of the group",
+      work: "creative direction, care work, interiors, craft, education, and support roles",
+      relationship: "emotional safety is important, but practical decisions still need clear timing"
+    },
+    monkey: {
+      strength: "curiosity, invention, humor, and flexible problem-solving",
+      caution: "distraction, teasing at the wrong time, or changing plans too quickly",
+      work: "technology, marketing, research, entertainment, teaching, and experimental projects",
+      relationship: "mental stimulation helps, but trust depends on consistency as much as cleverness"
+    },
+    rooster: {
+      strength: "organization, precision, alertness, and the desire to do things properly",
+      caution: "criticism, perfectionism, or focusing on details before feelings are settled",
+      work: "administration, editing, design review, operations, scheduling, and quality standards",
+      relationship: "directness can be useful when it is balanced with appreciation and patience"
+    },
+    dog: {
+      strength: "loyalty, fairness, protection, and moral steadiness",
+      caution: "worry, defensiveness, or testing whether people are trustworthy for too long",
+      work: "service, law, safety, education, community work, and roles that require responsibility",
+      relationship: "trust and fairness matter most, and reassurance should be practical rather than vague"
+    },
+    pig: {
+      strength: "warmth, generosity, patience, and enjoyment of family or social comfort",
+      caution: "overgiving, avoiding conflict, or expecting goodwill to solve practical problems",
+      work: "hospitality, food, care, community roles, lifestyle products, and steady client relationships",
+      relationship: "kindness is the base, but boundaries and shared plans keep the connection balanced"
+    }
+  };
+  return profiles[animal.animal];
+}
+
+function compatibilityNarrative(pair, firstAnimal, secondAnimal) {
+  const first = animalTraits(firstAnimal);
+  const second = animalTraits(secondAnimal);
+  const tone = pair.score >= 80
+    ? "This is one of the easier traditional readings, so the page should explain why the symbols are said to support each other rather than only showing a high score."
+    : pair.score >= 60
+      ? "This is a mixed or balanced reading, which means the practical details matter more than a single score."
+      : "This is a challenging traditional reading, but it should not be treated as a warning or a fixed outcome.";
+  return `
+      <section class="content-section article-body">
+        <h2>What the ${firstAnimal.name} and ${secondAnimal.name} match means</h2>
+        <p>${tone} The ${firstAnimal.name} side brings ${first.strength}. The ${secondAnimal.name} side brings ${second.strength}. In a compatibility reading, the useful question is whether those traits create a natural rhythm or whether they ask both people to slow down and translate their expectations.</p>
+        <p>For love, this pair works best when symbolic attraction is supported by ordinary habits: listening, timing, respect, and follow-through. A high score does not replace communication, and a lower score does not mean a relationship cannot work. The zodiac language simply gives a cultural vocabulary for discussing pace, temperament, and likely friction.</p>
+        <p>For friendship, compare how both signs handle trust and shared activity. ${firstAnimal.name} energy may be shaped by ${first.caution}. ${secondAnimal.name} energy may be shaped by ${second.caution}. When those patterns are named clearly, the friendship has a better chance of staying warm instead of turning small differences into repeated misunderstandings.</p>
+      </section>
+      <section class="content-section article-body">
+        <h2>Strengths, friction points, and practical advice</h2>
+        <p>The strongest side of this match is the chance to combine ${firstAnimal.name} qualities such as ${first.strength} with ${secondAnimal.name} qualities such as ${second.strength}. That can be helpful in daily life when both people recognize the other's style instead of assuming that one rhythm is automatically better.</p>
+        <p>The main friction point is the contrast between ${first.caution} and ${second.caution}. In real relationships, this can appear as different speeds, different comfort zones, or different ways of showing care. The practical solution is to make expectations visible: what needs quick action, what needs patience, and what should not be decided only in an emotional moment.</p>
+        <p>For work or collaboration, ${firstAnimal.name} symbolism connects well with ${first.work}, while ${secondAnimal.name} symbolism connects well with ${second.work}. A good partnership defines roles early. One person may be better at momentum, another at review, support, planning, or social connection. The score becomes more useful when it points to role clarity instead of vague fortune-telling.</p>
+        <p>Read this page as cultural interpretation and entertainment. It is useful for learning Chinese zodiac symbolism, comparing traditional relationship language, and understanding why certain pairs are described as smooth or difficult. It should not be used as the only basis for dating, marriage, hiring, investment, health, or any serious personal decision.</p>
+        <p>When comparing this pair with another match, do not look only at the overall score. Check the love, friendship, and work dimensions separately. Some pairs are easier socially but need clearer work roles. Some pairs may feel intense in love but work better when both people protect personal space. This dimensional reading makes the page more useful than a simple ranking table.</p>
+        <p>If the two signs belong to people with birthdays near January or February, confirm both signs with the calculator before reading the match. A wrong animal label creates a wrong compatibility page. The most reliable path is full birth date first, animal confirmation second, and compatibility interpretation third.</p>
+      </section>
+      <section class="content-section article-body">
+        <h2>How this pair fits into the wider zodiac system</h2>
+        <p>${firstAnimal.name} and ${secondAnimal.name} compatibility is part of a larger symbolic system that includes animal order, five elements, Lunar New Year boundaries, and the 60-year cycle. The pair page focuses on animal relationship language, but the full reading can change in tone when the exact birth year and element are considered.</p>
+        <p>For example, two people may share the same animal signs but belong to different element years. One ${firstAnimal.name} may be a Wood, Fire, Earth, Metal, or Water ${firstAnimal.name}, and the same is true for ${secondAnimal.name}. The element does not erase the animal match, but it can add language about pace, communication style, or emotional tone.</p>
+        <p>The most responsible use of this page is as a starting point. Open each animal guide to understand the basic symbolism, then use the year chart if the exact birth year matters. If the question is only casual curiosity, the quick score is enough. If the question is about a real relationship, friendship, or work partnership, treat the zodiac reading as conversation material rather than a decision rule.</p>
+      </section>`;
+}
+
+function yearReferenceNarrative(item, animal) {
+  const traits = animalTraits(animal);
+  const element = elementInfo[item.element];
+  return `
+      <section class="content-section article-body">
+        <h2>How to read the ${item.year} ${animal.name} year</h2>
+        <p>The first rule is calendar accuracy. ${item.year} is a ${item.element} ${animal.name} year only after Lunar New Year begins on ${item.lunarNewYear}. A birthday before that date still belongs to the previous zodiac year. This is why a proper zodiac year page should always show the Lunar New Year boundary instead of using January 1 as the start.</p>
+        <p>The second rule is interpretation. The ${animal.name} animal is traditionally associated with ${traits.strength}. The ${item.element} element adds themes of ${element.keywords}. Together, the page describes a cultural label in the 60-year cycle, not a scientific personality category or a prediction about what will happen in the year.</p>
+        <p>For readers checking a birth year, the safest workflow is to confirm the exact birthday, compare it with the Lunar New Year date, then open the ${animal.name} animal guide and the elements guide for context. For readers checking annual meaning, the page can explain cultural language, seasonal content, and common search questions without turning symbolism into advice.</p>
+      </section>
+      <section class="content-section article-body">
+        <h2>Common mistakes with ${item.year} zodiac lookup</h2>
+        <p>The most common mistake is assigning every person born in ${item.year} to the ${animal.name}. That is wrong for January and early February birthdays before ${item.lunarNewYear}. Another mistake is ignoring the element. A ${item.element} ${animal.name} year shares the same animal with other ${animal.name} years, but the element gives a second layer of traditional wording.</p>
+        <p>A third mistake is treating lucky colors, numbers, personality notes, or compatibility comments as fixed rules. On this site, those details are presented as cultural references. They can help explain how Chinese zodiac language works, but they are not professional guidance for relationships, business, health, or money.</p>
+        <p>Use the related links to move from broad year lookup into more specific pages. The animal page explains the recurring 12-year sign. The year chart compares nearby years. The compatibility page explains relationship symbolism. This internal path gives readers a complete answer instead of leaving them with a short label.</p>
+        <p>If the reader is checking a child, family member, partner, or historical figure, the same method applies. Record the full date first, compare it with Lunar New Year, then read the animal and element. A year page is strongest when it answers both the quick question and the boundary question, because those are the two points that most often cause wrong zodiac answers.</p>
+        <p>For content planning or seasonal pages, ${item.year} can be described as a ${item.element} ${animal.name} year, but the article should still mention the actual start date. This keeps the page useful for searchers who want a short cultural answer and for readers who need an accurate birthday lookup.</p>
+      </section>
+      <section class="content-section article-body">
+        <h2>${item.year} next steps and related checks</h2>
+        <p>After confirming that ${item.year} is a ${item.element} ${animal.name} year, the next useful step depends on the reader's intent. If the question is personal birth-year lookup, use the calculator with the full birth date. If the question is cultural meaning, open the ${animal.name} animal page and the elements guide. If the question is a relationship comparison, confirm both people's signs before using compatibility pages.</p>
+        <p>For quick reference, remember the order: date boundary first, animal second, element third, interpretation last. This prevents the page from becoming a thin answer and gives readers a reliable path through the site. It also makes the year guide useful for education, family questions, content planning, and cultural curiosity without presenting zodiac symbolism as professional advice.</p>
+        <p>The ${item.element} ${animal.name} label is strongest when it is connected to verifiable details: the Gregorian year, the Lunar New Year start date, the animal order, and the five-element cycle. Those facts give the page a stable base, while personality, luck, and compatibility notes remain clearly marked as traditional symbolism.</p>
+        <p>For quick sharing, cite the complete label as ${item.year} ${item.element} ${animal.name}, then add the start date, element, animal, and early-birthday exception. That small habit prevents the most common misunderstanding and makes the answer useful even outside this page for quick reference checks, classroom notes, family questions, and cultural planning.</p>
+      </section>`;
+}
+
+function animalReferenceNarrative(animal) {
+  const traits = animalTraits(animal);
+  return `
+      <section class="content-section article-body">
+        <h2>${animal.name} personality and practical interpretation</h2>
+        <p>Traditional ${animal.name} symbolism emphasizes ${traits.strength}. This makes the sign useful as cultural vocabulary: it gives readers a way to understand how Chinese zodiac texts describe temperament, timing, and social style. It should not be used as a fixed personality test, because real people are shaped by family, education, choices, environment, and experience.</p>
+        <p>The positive side of the ${animal.name} sign is clearest when its strengths are used with awareness. In work or study, the sign is often connected with ${traits.work}. In relationships, ${traits.relationship}. These notes are practical interpretations of symbolism, not claims that every person born in a ${animal.name} year behaves the same way.</p>
+        <p>The caution side is also important. ${animal.name} symbolism can point to ${traits.caution}. A useful zodiac page should name that risk carefully because it helps readers understand the sign with balance. The goal is not to flatter the sign or make it sound unlucky; the goal is to explain both the appealing qualities and the habits that may need attention.</p>
+      </section>
+      <section class="content-section article-body">
+        <h2>How the ${animal.name} connects with years, elements, and compatibility</h2>
+        <p>The ${animal.name} repeats every 12 years, but the complete zodiac label also includes one of the five elements. That means a Wood ${animal.name}, Fire ${animal.name}, Earth ${animal.name}, Metal ${animal.name}, and Water ${animal.name} share the same animal base while using different element language. For accurate reference, always check the year table and the Lunar New Year start date.</p>
+        <p>Compatibility should be read in the same careful way. A pair page can explain traditional harmony or challenge, but it should not decide whether two people belong together. Real compatibility depends on communication, values, habits, timing, and mutual respect. The zodiac gives a cultural framework for comparison, not a final verdict.</p>
+        <p>If you are using this page for learning Chinese culture, start with the Chinese character, pinyin, order in the cycle, and year table. If you are using it for a birthday, use the calculator first. If you are using it for relationship symbolism, open the compatibility checker after confirming both signs. That sequence prevents the most common lookup errors.</p>
+      </section>`;
+}
+
 function findLunarNewYear(year) {
   const formatter = new Intl.DateTimeFormat("en-u-ca-chinese", {
     year: "numeric",
@@ -1637,6 +1791,12 @@ await writePage("/guides/what-chinese-zodiac-sign-am-i/", pageLayout({
         <li>Read the animal and element for that year.</li>
       </ol>
     </section>
+    <section class="content-section article-body">
+      <h2>How to avoid the most common lookup errors</h2>
+      <p>The most common error is using the Gregorian year alone. This works for many birthdays, but it can fail for people born before Lunar New Year. The second error is ignoring the element. The animal repeats every 12 years, while the full animal-and-element label repeats every 60 years. Both details matter if the reader wants a precise cultural reference.</p>
+      <p>The third error is treating the result as a fixed personality judgment. Chinese zodiac signs are traditional symbols. They can describe cultural themes, lucky colors, compatibility language, and annual labels, but they should not be used as proof about character, relationship outcome, career success, health, or money.</p>
+      <p>A better workflow is simple: enter the full birth date, confirm the animal and element, open the animal guide, then read compatibility or element pages only if that is relevant to the question. That keeps the answer accurate and prevents one short chart from becoming misleading.</p>
+    </section>
     <section class="content-section">
       <h2>Why birth year alone can be wrong</h2>
       <p>Many quick zodiac charts assign an animal by Gregorian year. That works for many birthdays, but it can be wrong for people born before Lunar New Year. Traditional Chinese zodiac years follow the lunar calendar, so the exact start date changes each year.</p>
@@ -1651,6 +1811,12 @@ await writePage("/guides/what-chinese-zodiac-sign-am-i/", pageLayout({
       <h2>What the result means</h2>
       <p>Your zodiac result gives the traditional animal, element, and cultural associations for that birth year. It can be useful for learning Chinese culture, checking compatibility symbolism, or exploring lucky numbers and colors.</p>
       <p>It should not be treated as a scientific personality test or a fixed rule for relationships, work, health, or money.</p>
+    </section>
+    <section class="content-section article-body">
+      <h2>What to read after finding your sign</h2>
+      <p>If you only need the animal, the calculator result is enough. If you want to understand the meaning, open the animal page for years, Chinese character, pinyin, lucky symbols, personality associations, and cultural notes. If you want the full year label, compare the result with the element guide.</p>
+      <p>If the question is about another person, check that person's full birth date separately. Do not assume two people born in the same Gregorian year have the same sign when one birthday is before Lunar New Year and the other is after it. For relationship questions, use the compatibility checker as a cultural reference, not as advice about what decision to make.</p>
+      <p>For learning Chinese culture, the best path is animal order first, then year chart, then element cycle, then compatibility. That sequence explains the system more clearly than jumping directly from a birthday to a personality description.</p>
     </section>
     ${relatedGuidesBlock("Related zodiac lookup guides", [
       guides.find((guide) => guide.path === "/chinese-zodiac-years/"),
@@ -1751,6 +1917,26 @@ await writePage("/chinese-zodiac-animals/", pageLayout({
       </div>
       <p>The Chinese zodiac animal cycle has a fixed order: Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Goat, Monkey, Rooster, Dog, and Pig. Each animal page explains recent years, Chinese name, pinyin, element cycle, and traditional cultural meaning.</p>
       <div class="animal-grid">${animals.map(animalCard).join("")}</div>
+    </section>
+    <section class="content-section article-body">
+      <h2>How to use the 12-animal order</h2>
+      <p>The animal order is useful because it connects several parts of Chinese zodiac lookup. A birth year gives an animal, the animal points to a repeating 12-year cycle, and the exact sign still depends on the Lunar New Year boundary for that year. This means the animal list should be used with the year chart or calculator, not as a standalone January 1 chart.</p>
+      <p>Each animal also carries a cultural vocabulary. Rat is often connected with resourcefulness, Ox with steady effort, Tiger with courage, Rabbit with diplomacy, Dragon with auspicious strength, Snake with insight, Horse with movement, Goat with harmony, Monkey with cleverness, Rooster with order, Dog with loyalty, and Pig with warmth. These meanings explain traditional symbolism; they are not scientific personality labels.</p>
+      <p>For practical use, start with the animal order, then open the animal detail page for years, Chinese character, pinyin, lucky symbols, element context, and compatibility links. If the birthday is in January or February, use the calculator before trusting the animal label.</p>
+      <p>The animal order also helps readers understand why signs repeat. After Pig, the cycle returns to Rat. This is why a person born twelve years apart from another person may share the same animal sign, while still having a different element. The animal list is therefore the entry point, but not the full system.</p>
+    </section>
+    <section class="content-section article-body">
+      <h2>Animal signs, elements, and compatibility</h2>
+      <p>The twelve animals are only one layer of the Chinese zodiac system. The five elements add a second layer, creating labels such as Wood Dragon, Fire Horse, Earth Tiger, Metal Snake, and Water Rabbit. Because the animal cycle and element cycle combine, the full animal-and-element pattern repeats every 60 years.</p>
+      <p>Compatibility pages use the animals as cultural symbols for relationship, friendship, and work comparisons. They can be interesting for learning traditional language, but they should not be treated as final relationship advice. A responsible reading checks the two animal signs, reads the cultural symbolism, and still gives more weight to communication, values, timing, and real behavior.</p>
+      <p>This page is therefore an index for deeper learning. Use it to choose an animal, then continue to the year chart, element guide, compatibility checker, or individual animal page depending on what question you are trying to answer.</p>
+      <p>For advertising and product planning, this page also works as a hub for future cultural gift guides, zodiac decor, printable charts, and educational content. Those pages should still connect back to accurate year lookup, because a beautiful zodiac product or article loses trust if the sign calculation is wrong.</p>
+    </section>
+    <section class="content-section article-body">
+      <h2>Why this page matters before reading detailed guides</h2>
+      <p>The animal list gives the structure behind the whole site. Without it, a reader may jump directly into a year page, compatibility page, or lucky-symbol article without understanding how the twelve signs repeat. The order also explains why the same animal appears across many different Gregorian years.</p>
+      <p>Use this page as the broad map. The year chart answers calendar questions, the animal pages answer meaning questions, the element guide answers 60-year-cycle questions, and the compatibility checker answers pair-comparison questions. Keeping those jobs separate makes the site easier to use and reduces the chance that a short zodiac label is mistaken for a complete explanation.</p>
+      <p>For users comparing several signs, the best next step is to open the animal pages one at a time instead of relying only on the card summaries. The cards are useful for orientation, but the detail pages include years, elements, compatibility links, and the Lunar New Year reminder that prevents wrong sign assignments.</p>
     </section>`
 }));
 
@@ -1776,6 +1962,26 @@ await writePage("/chinese-zodiac-elements/", pageLayout({
       <h2>Element cycle years</h2>
       <p>The element cycle repeats in pairs across the Chinese zodiac year sequence. Use the year lookup above for a specific year, or browse the chart below.</p>
       ${yearsTable(years.slice(-20))}
+    </section>
+    <section class="content-section article-body">
+      <h2>How the five elements change a zodiac reading</h2>
+      <p>The five elements do not replace the animal sign. They add tone to it. The animal gives the main symbol, while the element adds language about growth, action, stability, structure, or adaptability. That is why two people with the same animal sign can still have different full zodiac labels if they were born in different 60-year cycles.</p>
+      <p>Wood is often read through growth and flexibility. Fire is read through energy and visibility. Earth is read through stability and support. Metal is read through structure and clarity. Water is read through adaptability and reflection. These meanings are traditional associations, not scientific descriptions of personality or fate.</p>
+      <p>For accurate lookup, confirm the exact zodiac year first. The element belongs to the zodiac year, and the zodiac year begins at Lunar New Year. A January or early February birthday can belong to the previous animal and previous element, so the calculator or year table should be used before reading the element meaning.</p>
+      <p>This is especially important for popular combinations such as Fire Horse, Wood Dragon, Water Rabbit, Metal Snake, or Earth Tiger. Searchers often remember the animal name first, but the element is what turns a general animal year into a specific 60-year-cycle label.</p>
+    </section>
+    <section class="content-section article-body">
+      <h2>Common mistakes with Chinese zodiac elements</h2>
+      <p>The first mistake is reading the element without the animal. Fire alone is not a complete zodiac sign; Fire Horse, Fire Rabbit, and Fire Dragon all use Fire language differently because the animal layer is different. The second mistake is treating element language as a fixed prediction. On this site, element notes are cultural explanations for learning and reference.</p>
+      <p>The third mistake is ignoring the 60-year cycle. The same animal returns every 12 years, but the same animal-element combination returns every 60 years. A 2026 Fire Horse and a 1966 Fire Horse share the same full label, while a 2014 Horse has a different element. This is why element pages should always connect back to years, animal pages, and Lunar New Year dates.</p>
+      <p>If you are comparing two zodiac signs, use the element as a secondary detail. Start with the animal, confirm the date, then read the element for extra cultural context. That order keeps the interpretation clear and avoids turning a symbolic system into an unsupported prediction.</p>
+      <p>For a complete reference path, use the year lookup tool, open the animal page, then compare the element meaning. If the question is about two people, confirm both dates before opening compatibility pages. This keeps the site internally consistent and helps readers move from quick lookup to deeper cultural explanation.</p>
+    </section>
+    <section class="content-section article-body">
+      <h2>Element meanings are secondary, not standalone answers</h2>
+      <p>A common search pattern is to ask only for a phrase like Fire Horse, Wood Dragon, or Water Snake. The phrase is useful, but it is still built from two parts. The animal gives the primary zodiac symbol. The element gives the modifying tone. A good explanation should show both parts instead of treating the element as a separate horoscope.</p>
+      <p>This is why element pages should link back to year pages and animal pages. If a reader wants to know what Fire Horse means, they need the Horse animal, the Fire element, the year boundary, and the reminder that the meaning is cultural symbolism. If one of those pieces is missing, the answer becomes too thin for real reference use.</p>
+      <p>Use the full label.</p>
     </section>
     <section class="content-section">
       <div class="section-heading">
@@ -1823,6 +2029,28 @@ await writePage("/year-of-the-horse-2026/", pageLayout({
       <p>The Fire element gives the 2026 Horse year a more active traditional reading. In cultural references, Fire is linked with visibility, warmth, expression, and forward motion. Combined with the Horse, the year is often described through themes of movement, initiative, travel, independence, and social energy.</p>
       <p>These meanings are educational and symbolic. They are useful for understanding Chinese zodiac language, seasonal content, and cultural references, but they should not be treated as personal predictions or professional advice.</p>
       <a class="button-link" href="/chinese-zodiac/horse/">Open the Horse zodiac guide</a>
+    </section>
+    <section class="content-section article-body">
+      <h2>Why the 2026 Horse year does not start on January 1</h2>
+      <p>The 2026 Chinese zodiac year begins on February 17, 2026. That date matters because Chinese zodiac years follow Lunar New Year, not the Gregorian calendar. Someone born on February 10, 2026 is still counted under the previous zodiac year, while someone born on February 20, 2026 belongs to the 2026 Fire Horse year.</p>
+      <p>This boundary is the most important practical detail on the page. Many quick charts say 2026 is the Year of the Horse, which is broadly true, but the exact answer for a person depends on the full birth date. If the birthday is in January or February, use the zodiac calculator before assigning the sign.</p>
+      <p>The same rule applies to every Chinese zodiac year. A year label is useful for culture, holidays, content planning, and broad reference, but birth-date lookup needs the Lunar New Year date. This is why the site links year pages, animal pages, and the calculator together.</p>
+      <p>For 2026 content, the date boundary is also important because many people will search for Year of the Horse information before Lunar New Year arrives. The correct wording is that 2026 becomes the Fire Horse zodiac year on February 17, 2026, not automatically on January 1.</p>
+    </section>
+    <section class="content-section article-body">
+      <h2>How to read Fire Horse symbolism responsibly</h2>
+      <p>Fire Horse symbolism combines Horse themes with Fire themes. The Horse side points to movement, freedom, energy, and visible activity. The Fire side adds expression, warmth, action, and outward momentum. Together, the phrase Fire Horse is often used for a lively and high-energy cultural reading.</p>
+      <p>That does not mean every person born in the Fire Horse year has the same personality. It also does not mean the year guarantees a particular event. The stronger use of this page is educational: it explains the animal, the element, the date boundary, and the traditional wording people may see in Chinese zodiac articles.</p>
+      <p>For deeper reading, open the Horse guide to understand the animal sign, the elements guide to compare Fire with Wood, Earth, Metal, and Water, and the compatibility checker if the question is about symbolic relationship matching. Each step adds context without turning zodiac tradition into fixed advice.</p>
+      <p>This page can also support practical seasonal content such as Lunar New Year explanations, zodiac gift ideas, classroom references, and cultural calendar pages. Those uses are appropriate as long as the article keeps the distinction between factual date lookup and symbolic meaning clear.</p>
+    </section>
+    <section class="content-section article-body">
+      <h2>What to check before using the 2026 label</h2>
+      <p>Before using the Year of the Horse 2026 label for a person, confirm whether the birthday is before or after February 17, 2026. Before using it for a calendar article, explain that the zodiac year begins at Lunar New Year. Before using it for compatibility or lucky-symbol content, connect the reader back to the Horse page, element page, and calculator.</p>
+      <p>This extra context matters because 2026 will attract many short seasonal searches. A thin page might only say that 2026 is the Year of the Horse. A useful page explains the start date, Fire element, Horse symbolism, early-birthday exception, and next pages for deeper reading.</p>
+      <p>For readers planning Lunar New Year content, this page should be used as a date and meaning reference. The factual layer is February 17, 2026, Horse, and Fire. The symbolic layer is movement, energy, independence, and visible action. Keeping those layers separate makes the page useful for calendars, classroom notes, cultural articles, and product planning without overstating what zodiac symbolism can prove.</p>
+      <p>For readers checking a personal birthday, the practical action is different: enter the full date in the calculator, then read the Horse page only if the calculator confirms the Horse sign. That workflow matters because early-year birthdays are the main source of wrong answers.</p>
+      <p>The same distinction also matters for internal linking. A reader who wants the 2026 annual meaning should stay on this page, then open the Horse and Fire element references. A reader who wants their own sign should go to the calculator first. A reader who wants relationship symbolism should confirm both signs before opening compatibility pages. Those paths make the page more useful than a short seasonal note for real visitors and searchers.</p>
     </section>
     ${faqBlock([
       { q: "When does the Year of the Horse 2026 start?", a: "It starts on February 17, 2026, the Lunar New Year date for that year." },
@@ -1929,6 +2157,7 @@ for (const pair of allCompatibilityPairs()) {
           <a class="button-link secondary" href="/chinese-zodiac/${secondAnimal.animal}/">Open ${secondAnimal.name} guide</a>
         </div>
       </section>
+      ${compatibilityNarrative(pair, firstAnimal, secondAnimal)}
       ${relatedGuidesBlock("Compatibility guides", [
         guides.find((guide) => guide.path === "/chinese-zodiac-compatibility/"),
         { title: `${firstAnimal.name} Chinese Zodiac`, path: `/chinese-zodiac/${firstAnimal.animal}/`, category: "Animal Guides", description: `${firstAnimal.name} years, meaning, and cultural associations.` },
@@ -1974,6 +2203,7 @@ for (const item of years.filter((row) => row.year >= 2024 && row.year <= 2030)) 
         <p>${animal.meaning}</p>
         <p>The ${item.element} element adds another layer of traditional interpretation. These associations are cultural references, not predictions.</p>
       </section>
+      ${yearReferenceNarrative(item, animal)}
       ${relatedGuidesBlock("Related zodiac guides", [
         { title: `${animal.name} Chinese Zodiac`, path: `/chinese-zodiac/${animal.animal}/`, category: "Animal Guides", description: `${animal.name} years, meaning, and cultural associations.` },
         guides.find((guide) => guide.path === "/chinese-zodiac-years/"),
@@ -2042,6 +2272,7 @@ for (const animal of animals) {
         <p>When using the ${animal.name} page for quick reference, treat the lucky numbers, colors, and personality notes as cultural vocabulary. They can help explain how the sign is described in traditional writing, but they should not be used as instructions for decisions about work, relationships, health, or money.</p>
         <p>If you need a more specific reading, move from this animal page to a year page or an element page. That gives the exact Gregorian year, Lunar New Year start date, and element label instead of relying on the animal sign alone.</p>
       </section>
+      ${animalReferenceNarrative(animal)}
       ${relatedGuidesBlock("Related zodiac guides", [
         guides.find((guide) => guide.path === "/chinese-zodiac-animals/"),
         guides.find((guide) => guide.path === "/chinese-zodiac-years/"),

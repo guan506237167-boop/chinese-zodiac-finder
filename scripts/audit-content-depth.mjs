@@ -1,34 +1,62 @@
-import { readFile } from "node:fs/promises";
-import { join } from "node:path";
+import { readdir, readFile } from "node:fs/promises";
+import { join, relative, sep } from "node:path";
 
 const minimumWords = 1000;
-const pages = [
-  "/guides/fire-horse-zodiac/",
-  "/guides/fire-rat-chinese-zodiac/",
-  "/guides/chinese-zodiac-earth-tiger/",
-  "/guides/chinese-zodiac-fire-rabbit/",
-  "/guides/chinese-zodiac-water-dragon/",
-  "/guides/chinese-zodiac-water-horse/",
-  "/guides/fire-dragon-chinese-zodiac/",
-  "/guides/chinese-zodiac-metal-horse/",
-  "/guides/chinese-zodiac-metal-snake/",
-  "/guides/1990-year-of-the-chinese-zodiac/",
-  "/guides/1989-year-of-the-chinese-zodiac/",
-  "/guides/horse-chinese-zodiac/",
-  "/guides/dragon-chinese-zodiac/"
-];
+const excludedPages = new Set([
+  "/",
+  "/about/",
+  "/contact/",
+  "/privacy/",
+  "/terms/",
+  "/guides/",
+  "/chinese-zodiac-faq/",
+  "/chinese-zodiac-calculator/",
+  "/chinese-zodiac-compatibility/",
+  "/admin/seo-report/"
+]);
 
-const issues = [];
+async function walk(dir, files = []) {
+  for (const entry of await readdir(dir, { withFileTypes: true })) {
+    const fullPath = join(dir, entry.name);
+    if (entry.isDirectory()) {
+      await walk(fullPath, files);
+    } else if (entry.name === "index.html") {
+      files.push(fullPath);
+    }
+  }
+  return files;
+}
 
-for (const page of pages) {
-  const htmlPath = join("dist", page, "index.html");
-  const html = await readFile(htmlPath, "utf8");
+function pagePath(file) {
+  const parent = file.slice(0, -"/index.html".length);
+  const rel = relative("dist", parent).split(sep).join("/");
+  return rel ? `/${rel}/` : "/";
+}
+
+function requiresDepth(path) {
+  if (excludedPages.has(path)) return false;
+  if (path.startsWith("/admin/")) return false;
+  return true;
+}
+
+function visibleWordCount(html) {
   const text = html
     .replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, " ")
     .replace(/<[^>]+>/g, " ");
-  const words = text.match(/[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)?/g) || [];
-  if (words.length < minimumWords) {
-    issues.push(`${page} -> ${words.length} words, expected at least ${minimumWords}`);
+  return (text.match(/[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)?/g) || []).length;
+}
+
+const issues = [];
+let checked = 0;
+
+for (const file of await walk("dist")) {
+  const path = pagePath(file);
+  if (!requiresDepth(path)) continue;
+  checked += 1;
+  const html = await readFile(file, "utf8");
+  const words = visibleWordCount(html);
+  if (words < minimumWords) {
+    issues.push(`${path} -> ${words} words, expected at least ${minimumWords}`);
   }
 }
 
@@ -40,4 +68,4 @@ if (issues.length) {
   process.exit(1);
 }
 
-console.log(`Checked ${pages.length} published article pages. Content depth passed.`);
+console.log(`Checked ${checked} formal content pages. Content depth passed.`);
