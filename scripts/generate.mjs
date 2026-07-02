@@ -136,6 +136,12 @@ const guides = [
     description: "1989 Chinese zodiac sign, Earth Snake meaning, Lunar New Year boundary, and related lookup notes."
   },
   {
+    title: "1996 Year of the Chinese Zodiac",
+    path: "/guides/1996-year-of-the-chinese-zodiac/",
+    category: "Year Guides",
+    description: "1996 Chinese zodiac sign, Fire Rat meaning, Lunar New Year boundary, and related lookup notes."
+  },
+  {
     title: "Chinese Birth Signs by Birthday",
     path: "/guides/chinese-birth-signs/",
     category: "Calculator Guides",
@@ -1468,6 +1474,15 @@ await yearGuideArticle({
   supportingKeywords: ["1989 chinese zodiac", "1989 chinese sign", "1989 in chinese zodiac", "1989 zodiac animal"]
 });
 
+await yearGuideArticle({
+  year: 1996,
+  title: "1996 Year of the Chinese Zodiac: Fire Rat Meaning",
+  description: "Learn the 1996 Chinese zodiac sign, Fire Rat meaning, Lunar New Year start date, personality associations, and compatibility context.",
+  path: "/guides/1996-year-of-the-chinese-zodiac/",
+  h1: "1996 Year of the Chinese Zodiac",
+  primaryKeyword: "1996 year of the Chinese zodiac",
+  supportingKeywords: ["1996 chinese zodiac", "1996 chinese year", "1996 chinese sign", "1996 zodiac animal"]
+});
 await writePage("/guides/chinese-birth-signs/", pageLayout({
   title: "Chinese Birth Signs by Birthday: Find Your Zodiac Animal Correctly",
   description: "Learn how Chinese birth signs work by birthday, why Lunar New Year matters, and how to avoid the common January and February zodiac mistake.",
