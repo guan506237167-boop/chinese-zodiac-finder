@@ -148,6 +148,12 @@ const guides = [
     description: "1997 Chinese zodiac sign, Fire Ox meaning, Lunar New Year boundary, and related lookup notes."
   },
   {
+    title: "1998 Year of the Chinese Zodiac",
+    path: "/guides/1998-year-of-the-chinese-zodiac/",
+    category: "Year Guides",
+    description: "1998 Chinese zodiac sign, Earth Tiger meaning, Lunar New Year boundary, and related lookup notes."
+  },
+  {
     title: "Chinese Birth Signs by Birthday",
     path: "/guides/chinese-birth-signs/",
     category: "Calculator Guides",
@@ -1497,6 +1503,16 @@ await yearGuideArticle({
   h1: "1997 Year of the Chinese Zodiac: Fire Ox Meaning",
   primaryKeyword: "1997 year of the Chinese zodiac",
   supportingKeywords: ["1997 chinese zodiac", "1997 chinese year", "1997 chinese sign", "1997 zodiac animal"]
+});
+
+await yearGuideArticle({
+  year: 1998,
+  title: "1998 Year of the Chinese Zodiac: Earth Tiger Meaning",
+  description: "Learn the 1998 Chinese zodiac sign, Earth Tiger meaning, Lunar New Year start date, personality associations, and compatibility context.",
+  path: "/guides/1998-year-of-the-chinese-zodiac/",
+  h1: "1998 Year of the Chinese Zodiac: Earth Tiger Meaning",
+  primaryKeyword: "1998 year of the Chinese zodiac",
+  supportingKeywords: ["1998 chinese zodiac", "1998 chinese year", "1998 chinese sign", "1998 zodiac animal"]
 });
 
 await writePage("/guides/chinese-birth-signs/", pageLayout({
