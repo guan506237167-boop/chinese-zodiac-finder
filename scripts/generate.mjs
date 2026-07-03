@@ -1939,6 +1939,11 @@ await writePage("/chinese-zodiac-animals/", pageLayout({
   path: "/chinese-zodiac-animals/",
   h1: "Chinese Zodiac Animals in Order",
   intro: "The twelve Chinese zodiac animals repeat in a fixed cycle from Rat to Pig.",
+  faqs: [
+    { q: "What are the 12 Chinese zodiac animals in order?", a: "The order is Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Goat, Monkey, Rooster, Dog, and Pig." },
+    { q: "Do Chinese zodiac animals start on January 1?", a: "No. A Chinese zodiac year starts at Lunar New Year, so January and early February birthdays need a date check." },
+    { q: "Are zodiac animal meanings fixed personality facts?", a: "No. Animal meanings are traditional cultural symbols, not scientific personality labels or predictions." }
+  ],
   articleSidebar: true,
   body: `
     <section class="content-section">
@@ -1961,14 +1966,19 @@ await writePage("/chinese-zodiac-animals/", pageLayout({
       <p>The twelve animals are only one layer of the Chinese zodiac system. The five elements add a second layer, creating labels such as Wood Dragon, Fire Horse, Earth Tiger, Metal Snake, and Water Rabbit. Because the animal cycle and element cycle combine, the full animal-and-element pattern repeats every 60 years.</p>
       <p>Compatibility pages use the animals as cultural symbols for relationship, friendship, and work comparisons. They can be interesting for learning traditional language, but they should not be treated as final relationship advice. A responsible reading checks the two animal signs, reads the cultural symbolism, and still gives more weight to communication, values, timing, and real behavior.</p>
       <p>This page is therefore an index for deeper learning. Use it to choose an animal, then continue to the year chart, element guide, compatibility checker, or individual animal page depending on what question you are trying to answer.</p>
-      <p>For advertising and product planning, this page also works as a hub for future cultural gift guides, zodiac decor, printable charts, and educational content. Those pages should still connect back to accurate year lookup, because a beautiful zodiac product or article loses trust if the sign calculation is wrong.</p>
+      <p>For readers exploring cultural gifts, zodiac decor, printable charts, or classroom materials, the animal order is still the safest starting point. Any gift idea or learning resource should connect back to accurate year lookup, because a beautiful zodiac chart loses trust if the sign calculation is wrong.</p>
     </section>
     <section class="content-section article-body">
       <h2>Why this page matters before reading detailed guides</h2>
       <p>The animal list gives the structure behind the whole site. Without it, a reader may jump directly into a year page, compatibility page, or lucky-symbol article without understanding how the twelve signs repeat. The order also explains why the same animal appears across many different Gregorian years.</p>
       <p>Use this page as the broad map. The year chart answers calendar questions, the animal pages answer meaning questions, the element guide answers 60-year-cycle questions, and the compatibility checker answers pair-comparison questions. Keeping those jobs separate makes the site easier to use and reduces the chance that a short zodiac label is mistaken for a complete explanation.</p>
       <p>For users comparing several signs, the best next step is to open the animal pages one at a time instead of relying only on the card summaries. The cards are useful for orientation, but the detail pages include years, elements, compatibility links, and the Lunar New Year reminder that prevents wrong sign assignments.</p>
-    </section>`
+    </section>
+    ${faqBlock([
+      { q: "What are the 12 Chinese zodiac animals in order?", a: "The order is Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Goat, Monkey, Rooster, Dog, and Pig." },
+      { q: "Do Chinese zodiac animals start on January 1?", a: "No. A Chinese zodiac year starts at Lunar New Year, so January and early February birthdays need a date check." },
+      { q: "Are zodiac animal meanings fixed personality facts?", a: "No. Animal meanings are traditional cultural symbols, not scientific personality labels or predictions." }
+    ])}`
 }));
 
 await writePage("/chinese-zodiac-elements/", pageLayout({
@@ -2805,3 +2815,6 @@ function heroSpacingFixCss() {
 function contentWidthBalanceCss() {
   return `body:not(.page-home):not(.seo-report-page) .page-hero{max-width:1240px}body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search{max-width:1120px}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-shell{max-width:1220px}.page-guides .article-search,.page-guides .content-section{max-width:1120px}.page-guides .article-search{padding-left:34px!important;padding-right:34px!important}.tool-page .tool-panel{max-width:none}.content-section:not(.split){padding-left:clamp(22px,4vw,52px);padding-right:clamp(22px,4vw,52px)}@media(max-width:1180px){body:not(.page-home):not(.seo-report-page) .page-hero,body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search,.page-guides .article-search,.page-guides .content-section{max-width:calc(100% - 32px)}}@media(max-width:640px){body:not(.page-home):not(.seo-report-page) .page-hero,body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search,.page-guides .article-search,.page-guides .content-section{max-width:calc(100% - 20px)}.page-guides .article-search{padding-left:20px!important;padding-right:20px!important}}`;
 }
+
+
+
