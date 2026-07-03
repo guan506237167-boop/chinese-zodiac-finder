@@ -1,4 +1,4 @@
-import { mkdir, readFile, rm, writeFile, copyFile, readdir } from "node:fs/promises";
+﻿import { mkdir, readFile, rm, writeFile, copyFile, readdir } from "node:fs/promises";
 import { dirname, join } from "node:path";
 
 const SITE = {
@@ -1485,7 +1485,7 @@ await yearGuideArticle({
   title: "1996 Year of the Chinese Zodiac: Fire Rat Meaning",
   description: "Learn the 1996 Chinese zodiac sign, Fire Rat meaning, Lunar New Year start date, personality associations, and compatibility context.",
   path: "/guides/1996-year-of-the-chinese-zodiac/",
-  h1: "1996 Year of the Chinese Zodiac",
+  h1: "1996 Year of the Chinese Zodiac: Fire Rat Meaning",
   primaryKeyword: "1996 year of the Chinese zodiac",
   supportingKeywords: ["1996 chinese zodiac", "1996 chinese year", "1996 chinese sign", "1996 zodiac animal"]
 });
@@ -1494,7 +1494,7 @@ await yearGuideArticle({
   title: "1997 Year of the Chinese Zodiac: Fire Ox Meaning",
   description: "Learn the 1997 Chinese zodiac sign, Fire Ox meaning, Lunar New Year start date, personality associations, and compatibility context.",
   path: "/guides/1997-year-of-the-chinese-zodiac/",
-  h1: "1997 Year of the Chinese Zodiac",
+  h1: "1997 Year of the Chinese Zodiac: Fire Ox Meaning",
   primaryKeyword: "1997 year of the Chinese zodiac",
   supportingKeywords: ["1997 chinese zodiac", "1997 chinese year", "1997 chinese sign", "1997 zodiac animal"]
 });
