@@ -154,6 +154,12 @@ const guides = [
     description: "1998 Chinese zodiac sign, Earth Tiger meaning, Lunar New Year boundary, and related lookup notes."
   },
   {
+    title: "1999 Year of the Chinese Zodiac",
+    path: "/guides/1999-year-of-the-chinese-zodiac/",
+    category: "Year Guides",
+    description: "1999 Chinese zodiac sign, Earth Rabbit meaning, Lunar New Year boundary, and related lookup notes."
+  },
+  {
     title: "Chinese Birth Signs by Birthday",
     path: "/guides/chinese-birth-signs/",
     category: "Calculator Guides",
@@ -1513,6 +1519,16 @@ await yearGuideArticle({
   h1: "1998 Year of the Chinese Zodiac: Earth Tiger Meaning",
   primaryKeyword: "1998 year of the Chinese zodiac",
   supportingKeywords: ["1998 chinese zodiac", "1998 chinese year", "1998 chinese sign", "1998 zodiac animal"]
+});
+
+await yearGuideArticle({
+  year: 1999,
+  title: "1999 Year of the Chinese Zodiac: Earth Rabbit Meaning",
+  description: "Learn the 1999 Chinese zodiac sign, Earth Rabbit meaning, Lunar New Year start date, personality associations, and compatibility context.",
+  path: "/guides/1999-year-of-the-chinese-zodiac/",
+  h1: "1999 Year of the Chinese Zodiac: Earth Rabbit Meaning",
+  primaryKeyword: "1999 year of the Chinese zodiac",
+  supportingKeywords: ["1999 chinese zodiac", "1999 chinese year", "1999 chinese sign", "1999 zodiac animal"]
 });
 
 await writePage("/guides/chinese-birth-signs/", pageLayout({
