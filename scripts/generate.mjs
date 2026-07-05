@@ -218,7 +218,10 @@ const guides = [
     path: "/chinese-zodiac/horse/",
     category: "Animal Guides",
     description: "Horse years, meaning, personality associations, and cultural notes."
-  }
+  },
+
+  { title: 'Chinese Zodiac Compatibility Chart', path: '/guides/chinese-zodiac-compatibility-chart/', category: 'Compatibility Guides', description: 'Read animal matches with responsible limits.' },
+  { title: 'Chinese Zodiac Lucky Colors', path: '/guides/chinese-zodiac-lucky-colors/', category: 'Meaning Guides', description: 'Use zodiac colors for gifts and decor responsibly.' },
 ];
 
 function buildZodiacYears(start, end, seed) {
@@ -2479,6 +2482,291 @@ await writePage("/terms/", simpleLegalPage({
   ]
 }));
 
+
+const dailyArticles20260706 = [
+  {
+    "title": "Chinese Zodiac Compatibility Chart: Animal Matches and Reading Limits",
+    "path": "/guides/chinese-zodiac-compatibility-chart/",
+    "description": "Read a Chinese zodiac compatibility chart with animal matches, practical limits, and responsible relationship interpretation.",
+    "h1": "Chinese Zodiac Compatibility Chart: Animal Matches and Reading Limits",
+    "intro": "A Chinese zodiac compatibility chart is useful only when it is read as symbolic guidance, not as a relationship verdict.",
+    "answer": "A Chinese zodiac compatibility chart compares animal pairs as symbolic relationship patterns, but it should be used as cultural reference rather than proof that two people will succeed or fail together.",
+    "details": [
+      "For chinese zodiac compatibility chart, the useful answer starts with the reader's situation rather than a broad definition. Someone searching this phrase usually wants to make a decision, compare a few choices, or avoid a mistake before spending time or money. The safest reading is to treat animal matches and symbolic relationship reading as practical guidance with cultural context, not as a fixed rule that applies to every family, meal, product, or tradition. That matters for relationship comparison, dating curiosity, and cultural learning, because a short answer can be technically correct but still fail if it does not explain what the reader should check next.",
+      "A strong page should give the main answer early, then separate cultural meaning, practical judgment, common mistakes, and the next reader path. That structure helps a beginner get oriented quickly while still giving enough detail for search engines and answer engines to extract a clear explanation.",
+      "The key boundary is responsibility. Chinese Zodiac Compatibility Chart can be useful and interesting, but the page should not promise guaranteed luck, perfect compatibility, permanent results, or universal family history. It should show how to evaluate the topic and when to keep checking context."
+    ],
+    "sections": [
+      {
+        "title": "How to read the chart first",
+        "paragraphs": [
+          "The direct answer is this: A Chinese zodiac compatibility chart compares animal pairs as symbolic relationship patterns, but it should be used as cultural reference rather than proof that two people will succeed or fail together. The first decision is not whether the topic is important in theory, but whether it solves the reader's actual problem. If the reader is choosing a product, planning a gift, learning a technique, or researching a family name, the page should give a usable next step instead of only repeating background information.",
+          "A common scenario is a visitor who knows one phrase but not the surrounding context. They may know the English spelling, the product name, a symbolic color, or the tutorial label, yet still be unsure which detail matters. This is why the opening answer needs to define the topic and immediately explain how to use that definition in real life."
+        ]
+      },
+      {
+        "title": "Cultural meaning behind animal matches",
+        "paragraphs": [
+          "Cultural context gives the topic meaning, but it should not turn into decoration. The reader needs to know where the idea fits, why people care about it, and which claims should be treated carefully. For chinese zodiac compatibility chart, the strongest explanation connects tradition with a practical situation: choosing, learning, comparing, gifting, or researching.",
+          "The cautious approach is to describe symbolism as symbolism. A color can express a wish, a surname can point toward a lineage clue, a knot can represent connection, and a tool can support reflection. None of those meanings should be written as a guaranteed outcome. Clear boundaries make the page more trustworthy and more useful for long-term SEO."
+        ]
+      },
+      {
+        "title": "Practical checks before trusting a match",
+        "paragraphs": [
+          "The practical check is to compare the visible details. Look at material, spelling, source, date, use case, photo evidence, or the exact question the visitor is trying to answer. If those details are missing, the page should say so. A responsible guide gives the reader a checklist rather than pretending one short answer covers every case.",
+          "A good comparison also explains tradeoffs. A beginner may need ease before beauty. A gift buyer may need presentation before technical depth. A researcher may need primary records before a neat story. A culture-focused reader may need meaning and limitations together. Those tradeoffs are what make the article feel written for a person rather than generated for a keyword."
+        ]
+      },
+      {
+        "title": "Common mistakes in compatibility pages",
+        "paragraphs": [
+          "The most common mistake is overgeneralizing. Readers often want a single best answer, but chinese zodiac compatibility chart usually depends on context. The page should warn against vague product descriptions, missing character evidence, unclear tutorial steps, or symbolic claims that sound stronger than the tradition supports.",
+          "Another mistake is ignoring the next action. After reading, the visitor should know whether to compare related guides, use a tool, check a material list, review pronunciation, or look for a better product photo. A page that ends without a next step wastes attention and weakens internal linking."
+        ]
+      },
+      {
+        "title": "Reader paths for couples, learners, and writers",
+        "paragraphs": [
+          "Different readers need different paths. Beginners should start with the simplest working version. Buyers should check quality signals before style. Gift givers should match symbolism with the recipient and occasion. Researchers should verify spelling, source, and historical context before repeating a claim.",
+          "This reader-path section is also where internal links matter. The article should route people toward the closest guide instead of dumping every related page at the end. Natural routing helps visitors continue and helps search engines understand the topical cluster."
+        ]
+      },
+      {
+        "title": "Final judgment for responsible use",
+        "paragraphs": [
+          "The final decision rule is simple: use chinese zodiac compatibility chart as a structured reference, then check the detail that changes the answer. If the detail is material, inspect construction and care. If the detail is culture, keep the wording bounded. If the detail is family history, verify the character or source. If the detail is a learning task, practice the simplest version first.",
+          "This makes the page useful today and expandable later. Product blocks, paid reports, printable guides, or affiliate recommendations can be added only after the core explanation is strong enough to stand on its own. That is the standard these new pages should follow."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Quick decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Beginner",
+          "Start with the simplest safe version",
+          "It reduces confusion and makes the first result easier to judge"
+        ],
+        [
+          "Buyer or gift giver",
+          "Check material, size, photos, and explanation",
+          "Good presentation should not hide weak construction or vague claims"
+        ],
+        [
+          "Researcher",
+          "Verify source, spelling, date, or cultural context",
+          "A clean claim is not reliable unless the evidence behind it is clear"
+        ],
+        [
+          "Culture-focused reader",
+          "Read meaning and limitation together",
+          "Symbolic language is useful when it stays responsible"
+        ]
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What is the short answer about chinese zodiac compatibility chart?",
+        "a": "A Chinese zodiac compatibility chart compares animal pairs as symbolic relationship patterns, but it should be used as cultural reference rather than proof that two people will succeed or fail together."
+      },
+      {
+        "q": "What is the biggest mistake with chinese zodiac compatibility chart?",
+        "a": "The biggest mistake is treating one symbolic or practical rule as universal. The better approach is to check the use case, source, material, spelling, or learning context before making a decision."
+      },
+      {
+        "q": "Can chinese zodiac compatibility chart be used for buying or paid products later?",
+        "a": "Yes, but only after the free explanation is useful on its own. Product or report offers should support the reader's decision instead of replacing clear guidance."
+      },
+      {
+        "q": "How should a beginner use this chinese zodiac compatibility chart guide?",
+        "a": "A beginner should read the answer first, follow the checklist, avoid overclaiming, and then move to the most closely related guide for the next step."
+      }
+    ],
+    "related": [
+      {
+        "title": "Chinese Zodiac Compatibility",
+        "path": "/chinese-zodiac-compatibility/",
+        "category": "Compatibility",
+        "description": "Use the compatibility tool and pair notes."
+      },
+      {
+        "title": "Chinese Zodiac Animals",
+        "path": "/chinese-zodiac-animals/",
+        "category": "Animals",
+        "description": "Review the twelve animal meanings."
+      },
+      {
+        "title": "What Chinese Zodiac Sign Am I?",
+        "path": "/guides/what-chinese-zodiac-sign-am-i/",
+        "category": "Guide",
+        "description": "Check the correct animal before comparing."
+      }
+    ]
+  },
+  {
+    "title": "Chinese Zodiac Lucky Colors: Meanings, Uses, and Limits",
+    "path": "/guides/chinese-zodiac-lucky-colors/",
+    "description": "Understand Chinese zodiac lucky colors by animal symbolism, practical use, cultural limits, and responsible wording.",
+    "h1": "Chinese Zodiac Lucky Colors: Meanings, Uses, and Limits",
+    "intro": "Lucky colors are best treated as cultural symbols that can guide gifts, decor, and personal style, not as guaranteed outcomes.",
+    "answer": "Chinese zodiac lucky colors are symbolic color associations linked to animals, elements, seasons, and cultural taste; they can guide gifts or decor, but they should not be described as guaranteed luck.",
+    "details": [
+      "For chinese zodiac lucky colors, the useful answer starts with the reader's situation rather than a broad definition. Someone searching this phrase usually wants to make a decision, compare a few choices, or avoid a mistake before spending time or money. The safest reading is to treat color symbolism and practical cultural use as practical guidance with cultural context, not as a fixed rule that applies to every family, meal, product, or tradition. That matters for gift choices, decor ideas, and zodiac reference writing, because a short answer can be technically correct but still fail if it does not explain what the reader should check next.",
+      "A strong page should give the main answer early, then separate cultural meaning, practical judgment, common mistakes, and the next reader path. That structure helps a beginner get oriented quickly while still giving enough detail for search engines and answer engines to extract a clear explanation.",
+      "The key boundary is responsibility. Chinese Zodiac Lucky Colors can be useful and interesting, but the page should not promise guaranteed luck, perfect compatibility, permanent results, or universal family history. It should show how to evaluate the topic and when to keep checking context."
+    ],
+    "sections": [
+      {
+        "title": "What lucky colors mean in practice",
+        "paragraphs": [
+          "The direct answer is this: Chinese zodiac lucky colors are symbolic color associations linked to animals, elements, seasons, and cultural taste; they can guide gifts or decor, but they should not be described as guaranteed luck. The first decision is not whether the topic is important in theory, but whether it solves the reader's actual problem. If the reader is choosing a product, planning a gift, learning a technique, or researching a family name, the page should give a usable next step instead of only repeating background information.",
+          "A common scenario is a visitor who knows one phrase but not the surrounding context. They may know the English spelling, the product name, a symbolic color, or the tutorial label, yet still be unsure which detail matters. This is why the opening answer needs to define the topic and immediately explain how to use that definition in real life."
+        ]
+      },
+      {
+        "title": "Where zodiac color symbolism comes from",
+        "paragraphs": [
+          "Cultural context gives the topic meaning, but it should not turn into decoration. The reader needs to know where the idea fits, why people care about it, and which claims should be treated carefully. For chinese zodiac lucky colors, the strongest explanation connects tradition with a practical situation: choosing, learning, comparing, gifting, or researching.",
+          "The cautious approach is to describe symbolism as symbolism. A color can express a wish, a surname can point toward a lineage clue, a knot can represent connection, and a tool can support reflection. None of those meanings should be written as a guaranteed outcome. Clear boundaries make the page more trustworthy and more useful for long-term SEO."
+        ]
+      },
+      {
+        "title": "How to use colors for gifts and decor",
+        "paragraphs": [
+          "The practical check is to compare the visible details. Look at material, spelling, source, date, use case, photo evidence, or the exact question the visitor is trying to answer. If those details are missing, the page should say so. A responsible guide gives the reader a checklist rather than pretending one short answer covers every case.",
+          "A good comparison also explains tradeoffs. A beginner may need ease before beauty. A gift buyer may need presentation before technical depth. A researcher may need primary records before a neat story. A culture-focused reader may need meaning and limitations together. Those tradeoffs are what make the article feel written for a person rather than generated for a keyword."
+        ]
+      },
+      {
+        "title": "Mistakes to avoid with color claims",
+        "paragraphs": [
+          "The most common mistake is overgeneralizing. Readers often want a single best answer, but chinese zodiac lucky colors usually depends on context. The page should warn against vague product descriptions, missing character evidence, unclear tutorial steps, or symbolic claims that sound stronger than the tradition supports.",
+          "Another mistake is ignoring the next action. After reading, the visitor should know whether to compare related guides, use a tool, check a material list, review pronunciation, or look for a better product photo. A page that ends without a next step wastes attention and weakens internal linking."
+        ]
+      },
+      {
+        "title": "Reader paths by use case",
+        "paragraphs": [
+          "Different readers need different paths. Beginners should start with the simplest working version. Buyers should check quality signals before style. Gift givers should match symbolism with the recipient and occasion. Researchers should verify spelling, source, and historical context before repeating a claim.",
+          "This reader-path section is also where internal links matter. The article should route people toward the closest guide instead of dumping every related page at the end. Natural routing helps visitors continue and helps search engines understand the topical cluster."
+        ]
+      },
+      {
+        "title": "Final judgment for color guidance",
+        "paragraphs": [
+          "The final decision rule is simple: use chinese zodiac lucky colors as a structured reference, then check the detail that changes the answer. If the detail is material, inspect construction and care. If the detail is culture, keep the wording bounded. If the detail is family history, verify the character or source. If the detail is a learning task, practice the simplest version first.",
+          "This makes the page useful today and expandable later. Product blocks, paid reports, printable guides, or affiliate recommendations can be added only after the core explanation is strong enough to stand on its own. That is the standard these new pages should follow."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Quick decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Beginner",
+          "Start with the simplest safe version",
+          "It reduces confusion and makes the first result easier to judge"
+        ],
+        [
+          "Buyer or gift giver",
+          "Check material, size, photos, and explanation",
+          "Good presentation should not hide weak construction or vague claims"
+        ],
+        [
+          "Researcher",
+          "Verify source, spelling, date, or cultural context",
+          "A clean claim is not reliable unless the evidence behind it is clear"
+        ],
+        [
+          "Culture-focused reader",
+          "Read meaning and limitation together",
+          "Symbolic language is useful when it stays responsible"
+        ]
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What is the short answer about chinese zodiac lucky colors?",
+        "a": "Chinese zodiac lucky colors are symbolic color associations linked to animals, elements, seasons, and cultural taste; they can guide gifts or decor, but they should not be described as guaranteed luck."
+      },
+      {
+        "q": "What is the biggest mistake with chinese zodiac lucky colors?",
+        "a": "The biggest mistake is treating one symbolic or practical rule as universal. The better approach is to check the use case, source, material, spelling, or learning context before making a decision."
+      },
+      {
+        "q": "Can chinese zodiac lucky colors be used for buying or paid products later?",
+        "a": "Yes, but only after the free explanation is useful on its own. Product or report offers should support the reader's decision instead of replacing clear guidance."
+      },
+      {
+        "q": "How should a beginner use this chinese zodiac lucky colors guide?",
+        "a": "A beginner should read the answer first, follow the checklist, avoid overclaiming, and then move to the most closely related guide for the next step."
+      }
+    ],
+    "related": [
+      {
+        "title": "Chinese Zodiac Elements",
+        "path": "/chinese-zodiac-elements/",
+        "category": "Elements",
+        "description": "Read element context with colors."
+      },
+      {
+        "title": "Year of the Horse 2026",
+        "path": "/year-of-the-horse-2026/",
+        "category": "Year Guide",
+        "description": "See year-specific symbolic notes."
+      },
+      {
+        "title": "Chinese Zodiac Animals",
+        "path": "/chinese-zodiac-animals/",
+        "category": "Animals",
+        "description": "Compare animal meanings first."
+      }
+    ]
+  }
+];
+
+function dailyArticlePage20260706(article) {
+  const rows = article.table.rows.map((row) => `<tr>${row.map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}</tr>`).join("");
+  const body = `
+    ${articleSearchBlock()}
+    <section class="content-section article-body">
+      <p class="lead-answer">${escapeHtml(article.answer)}</p>
+      ${article.details.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+    </section>
+    ${article.sections.map((section) => `<section class="content-section article-body"><h2>${escapeHtml(section.title)}</h2>${section.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}</section>`).join("")}
+    <section class="content-section"><p class="eyebrow">Decision Table</p><h2>${escapeHtml(article.table.title)}</h2><div class="table-wrap"><table><thead><tr>${article.table.headers.map((header) => `<th>${escapeHtml(header)}</th>`).join("")}</tr></thead><tbody>${rows}</tbody></table></div></section>
+    ${relatedGuidesBlock("Related guides", article.related)}
+    ${faqBlock(article.faqs)}
+  `;
+  return pageLayout({
+    title: article.title,
+    description: article.description,
+    path: article.path,
+    h1: article.h1,
+    intro: article.intro,
+    faqs: article.faqs,
+    pageType: "Article",
+    articleSidebar: true,
+    heroLabel: "New guide",
+    body
+  });
+}
+
+for (const article of dailyArticles20260706) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
+
 await writeStaticAssets();
 await writeSitemap();
 await writeRobots();
@@ -2863,6 +3151,8 @@ function heroSpacingFixCss() {
 function contentWidthBalanceCss() {
   return `body:not(.page-home):not(.seo-report-page) .page-hero{max-width:1240px}body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search{max-width:1120px}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-shell{max-width:1220px}.page-guides .article-search,.page-guides .content-section{max-width:1120px}.page-guides .article-search{padding-left:34px!important;padding-right:34px!important}.tool-page .tool-panel{max-width:none}.content-section:not(.split){padding-left:clamp(22px,4vw,52px);padding-right:clamp(22px,4vw,52px)}@media(max-width:1180px){body:not(.page-home):not(.seo-report-page) .page-hero,body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search,.page-guides .article-search,.page-guides .content-section{max-width:calc(100% - 32px)}}@media(max-width:640px){body:not(.page-home):not(.seo-report-page) .page-hero,body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search,.page-guides .article-search,.page-guides .content-section{max-width:calc(100% - 20px)}.page-guides .article-search{padding-left:20px!important;padding-right:20px!important}}`;
 }
+
+
 
 
 
