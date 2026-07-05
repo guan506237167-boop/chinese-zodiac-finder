@@ -124,6 +124,12 @@ const guides = [
     description: "Metal Snake years, traditional meaning, personality associations, and how the Metal element changes the Snake reading."
   },
   {
+    title: "1988 Year of the Chinese Zodiac",
+    path: "/guides/1988-year-of-the-chinese-zodiac/",
+    category: "Year Guides",
+    description: "Learn the 1988 Chinese zodiac sign, Earth Dragon meaning, Lunar New Year start date, and date-boundary checks."
+  },
+  {
     title: "1990 Year of the Chinese Zodiac",
     path: "/guides/1990-year-of-the-chinese-zodiac/",
     category: "Year Guides",
@@ -1470,6 +1476,16 @@ await elementAnimalArticle({
     { q: "What does Metal Snake personality mean?", a: "Metal Snake personality descriptions combine Snake symbolism, such as reflection and strategy, with Metal symbolism, such as structure, clarity, and endurance." },
     { q: "Does a Metal Snake year start on January 1?", a: "No. A Metal Snake year starts at Lunar New Year, so early January or February birthdays may belong to the previous zodiac year." }
   ]
+});
+
+await yearGuideArticle({
+  year: 1988,
+  title: "1988 Year of the Chinese Zodiac: Earth Dragon Meaning",
+  description: "Learn the 1988 Chinese zodiac sign, Earth Dragon meaning, Lunar New Year start date, personality associations, and compatibility context.",
+  path: "/guides/1988-year-of-the-chinese-zodiac/",
+  h1: "1988 Year of the Chinese Zodiac: Earth Dragon Meaning",
+  primaryKeyword: "1988 year of the Chinese zodiac",
+  supportingKeywords: ["1988 chinese zodiac", "1988 chinese sign", "1988 zodiac animal", "1988 chinese year"]
 });
 
 await yearGuideArticle({
@@ -2847,6 +2863,7 @@ function heroSpacingFixCss() {
 function contentWidthBalanceCss() {
   return `body:not(.page-home):not(.seo-report-page) .page-hero{max-width:1240px}body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search{max-width:1120px}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-shell{max-width:1220px}.page-guides .article-search,.page-guides .content-section{max-width:1120px}.page-guides .article-search{padding-left:34px!important;padding-right:34px!important}.tool-page .tool-panel{max-width:none}.content-section:not(.split){padding-left:clamp(22px,4vw,52px);padding-right:clamp(22px,4vw,52px)}@media(max-width:1180px){body:not(.page-home):not(.seo-report-page) .page-hero,body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search,.page-guides .article-search,.page-guides .content-section{max-width:calc(100% - 32px)}}@media(max-width:640px){body:not(.page-home):not(.seo-report-page) .page-hero,body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search,.page-guides .article-search,.page-guides .content-section{max-width:calc(100% - 20px)}.page-guides .article-search{padding-left:20px!important;padding-right:20px!important}}`;
 }
+
 
 
 
