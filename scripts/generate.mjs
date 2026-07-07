@@ -2996,6 +2996,265 @@ for (const article of dailyArticles20260706) {
   await writePage(article.path, dailyArticlePage20260706(article));
 }
 
+const dailyArticles20260708 = [
+  {
+    "title": "1985 Year of the Chinese Zodiac: Wood Ox Meaning and Date Checks",
+    "path": "/guides/1985-year-of-the-chinese-zodiac/",
+    "description": "Check the 1985 year of the Chinese zodiac, Wood Ox meaning, Lunar New Year boundary, personality notes, and responsible use.",
+    "h1": "1985 Year of the Chinese Zodiac: Wood Ox Meaning and Date Checks",
+    "intro": "Most people born after the 1985 Lunar New Year belong to the Wood Ox year, but January and early February birthdays need a date check.",
+    "answer": "The 1985 year of the Chinese zodiac is Wood Ox for people born from February 20, 1985 to February 8, 1986; people born before February 20, 1985 are usually counted in the previous Wood Rat year.",
+    "details": [
+      "A 1985 Chinese zodiac lookup should start with the lunar boundary, not with January 1. That is the detail most quick charts miss. If the birthday falls in January or before February 20, the person should not automatically read Ox meanings without checking the previous zodiac year.",
+      "For birthdays on or after February 20, 1985, the traditional label is Wood Ox. Ox gives the animal layer, while Wood gives the element layer in the 60-year cycle. The combination is cultural symbolism, not a fixed test of personality or destiny.",
+      "This topic often matters for birthday notes, family records, compatibility questions, gift ideas, and cultural curiosity. The answer is strongest when it gives the date range first, then explains how to read the meaning responsibly.",
+      "When you use the 1985 result, keep fact and interpretation separate. The date range, animal, and element are reference facts. Personality, luck, compatibility, and color notes are traditional language that should be treated as symbolic."
+    ],
+    "sections": [
+      {
+        "title": "How the 1985 boundary works",
+        "paragraphs": [
+          "The 1985 Chinese zodiac year begins on February 20, 1985. A person born on March 1, 1985 can normally read the Wood Ox result. A person born on February 1, 1985 usually belongs to the previous Wood Rat year because Lunar New Year had not arrived yet.",
+          "This boundary is why full birth date matters. A Gregorian year alone is enough for many birthdays, but it is not enough for January and early February. The safest next step for early birthdays is to use the zodiac calculator or a year chart."
+        ]
+      },
+      {
+        "title": "What Wood Ox means",
+        "paragraphs": [
+          "Ox symbolism is often connected with steadiness, patience, reliability, practical work, and endurance. Wood adds language of growth, flexibility, development, and steady improvement. Together, Wood Ox is commonly read as grounded but growth-oriented.",
+          "That reading should stay cultural. It can be useful for understanding traditional vocabulary, writing a birthday note, or comparing zodiac-year labels. It should not be used to judge a real person's character, relationship future, career outcome, health, or money."
+        ]
+      },
+      {
+        "title": "Compatibility and relationship context",
+        "paragraphs": [
+          "In simplified compatibility charts, Ox is often compared favorably with Rat, Snake, and Rooster, while Goat is sometimes treated as more challenging. These pairings are symbolic patterns from zodiac tradition, not relationship evidence.",
+          "If a reader is comparing partners or friends, the better use is conversational. Confirm both birth dates, check the animals, read the compatibility page, then keep real communication and personal context ahead of any zodiac label."
+        ]
+      },
+      {
+        "title": "Lucky colors and gift use",
+        "paragraphs": [
+          "Wood Ox notes can support gift ideas, decor language, or cultural cards, but the wording should not promise luck. A color or symbol can express a wish. It cannot guarantee success. That boundary keeps the content respectful and trustworthy.",
+          "For a 1985 birthday gift, mention the exact label, Wood Ox, and the lunar date range if accuracy matters. If the recipient was born before February 20, check the previous year before printing a card, charm, or custom product."
+        ]
+      },
+      {
+        "title": "Common 1985 zodiac mistakes",
+        "paragraphs": [
+          "The first mistake is assigning Ox to every 1985 birthday. The second is dropping the Wood element and using only Ox. The third is mixing Western zodiac months with Chinese zodiac years and expecting one system to answer the other.",
+          "Another mistake is treating the reading as prediction. A Wood Ox description can be interesting cultural language, but it should not decide hiring, dating, investing, medical choices, or family decisions."
+        ]
+      },
+      {
+        "title": "Best next step",
+        "paragraphs": [
+          "If the birthday is near January or February, check the full date first. If the sign is confirmed, read the Ox animal page for the broad animal meaning and the elements page for the Wood layer. If the question is about a relationship, use compatibility only as a cultural reference.",
+          "For content planning, write the complete label as 1985 Wood Ox and include the start date. That small detail makes the answer more accurate than a simple year-to-animal chart."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Practical decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Birthday lookup",
+          "Full birth date and Lunar New Year boundary",
+          "January and early February can belong to the previous sign"
+        ],
+        [
+          "Culture reader",
+          "Animal plus element",
+          "Wood Ox is more specific than Ox alone"
+        ],
+        [
+          "Gift buyer",
+          "Date range before custom text",
+          "A wrong sign makes a personalized gift feel careless"
+        ],
+        [
+          "Compatibility reader",
+          "Both full birth dates",
+          "Pair readings need accurate signs first"
+        ]
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What Chinese zodiac animal is 1985?",
+        "a": "Most people born from February 20, 1985 to February 8, 1986 are Wood Ox in the Chinese zodiac."
+      },
+      {
+        "q": "Is everyone born in 1985 an Ox?",
+        "a": "No. People born before February 20, 1985 usually belong to the previous Wood Rat year."
+      },
+      {
+        "q": "What does Wood Ox mean?",
+        "a": "Wood Ox combines Ox symbolism such as steadiness and endurance with Wood symbolism such as growth and development."
+      },
+      {
+        "q": "Can 1985 Chinese zodiac predict personality?",
+        "a": "No. It is best read as cultural symbolism and reference language, not a fixed personality test or prediction."
+      }
+    ],
+    "related": [
+      {
+        "title": "Chinese Zodiac Years Chart",
+        "path": "/chinese-zodiac-years/",
+        "category": "Year Guides",
+        "description": "Check animals, elements, and start dates."
+      },
+      {
+        "title": "Chinese Zodiac Elements",
+        "path": "/chinese-zodiac-elements/",
+        "category": "Element Guides",
+        "description": "Understand Wood, Fire, Earth, Metal, and Water."
+      },
+      {
+        "title": "Chinese Zodiac Compatibility",
+        "path": "/chinese-zodiac-compatibility/",
+        "category": "Compatibility",
+        "description": "Compare animal pair symbolism."
+      }
+    ]
+  },
+  {
+    "title": "1986 Year of the Chinese Zodiac: Fire Tiger Meaning and Date Checks",
+    "path": "/guides/1986-year-of-the-chinese-zodiac/",
+    "description": "Check the 1986 year of the Chinese zodiac, Fire Tiger meaning, Lunar New Year boundary, traits, compatibility, and responsible use.",
+    "h1": "1986 Year of the Chinese Zodiac: Fire Tiger Meaning and Date Checks",
+    "intro": "Most people born after the 1986 Lunar New Year belong to the Fire Tiger year, but January and early February birthdays need a boundary check.",
+    "answer": "The 1986 year of the Chinese zodiac is Fire Tiger for people born from February 9, 1986 to January 28, 1987; people born before February 9, 1986 are usually counted in the previous Wood Ox year.",
+    "details": [
+      "A 1986 Chinese zodiac search usually asks for a quick animal answer, but the accurate answer starts with the lunar calendar. The Chinese zodiac year did not begin on January 1. It began on February 9, 1986, so early birthdays need a check.",
+      "For most later 1986 birthdays, the label is Fire Tiger. Tiger gives the animal symbolism, while Fire gives the element tone. Read together, Fire Tiger is often described with energy, visibility, courage, movement, and a stronger need to manage impulsive action.",
+      "The result is useful for cultural learning, birthday notes, compatibility curiosity, and zodiac-year reference. It should stay bounded. Chinese zodiac labels are symbolic language, not proof of personality or future outcome.",
+      "The practical standard is simple: confirm the date range, name the animal and element, explain the meaning, and warn against overuse. That gives readers a clear answer without turning the topic into exaggerated prediction."
+    ],
+    "sections": [
+      {
+        "title": "How the 1986 boundary works",
+        "paragraphs": [
+          "The Fire Tiger year starts on February 9, 1986. A birthday on February 10 belongs to the new zodiac year. A birthday on January 20 or February 1 still belongs to the previous Wood Ox year in the traditional count.",
+          "This is the most common source of wrong results. Many quick charts assign every Gregorian year to one animal. That works for many months, but it fails near Lunar New Year. Full birthday lookup is safer than year-only lookup for early-year birthdays."
+        ]
+      },
+      {
+        "title": "What Fire Tiger means",
+        "paragraphs": [
+          "Tiger symbolism is often connected with courage, movement, independence, visibility, and direct action. Fire adds energy, warmth, expression, and momentum. Together, Fire Tiger can sound bold and active in traditional descriptions.",
+          "These words are cultural associations. They can help explain zodiac vocabulary, but they should not be used as a fixed label for a person. Real people are shaped by family, education, choices, environment, and experience."
+        ]
+      },
+      {
+        "title": "Compatibility and social reading",
+        "paragraphs": [
+          "In simplified compatibility charts, Tiger is often compared with Horse, Dog, and Pig as smoother symbolic pairings, while Monkey can be shown as more challenging. Those patterns are part of traditional zodiac language, not a rule for relationships.",
+          "If the reader is checking compatibility, confirm both full birth dates first. A wrong early-year sign makes the pair reading unreliable. After that, use the match as a conversation topic rather than a decision tool."
+        ]
+      },
+      {
+        "title": "Gift, color, and cultural use",
+        "paragraphs": [
+          "Fire Tiger language can support birthday cards, zodiac decor, classroom notes, or symbolic gift descriptions. The safest wording says that the sign represents or is associated with certain ideas. It should not claim to bring guaranteed luck or success.",
+          "For personalized products, accuracy matters. If the person was born before February 9, 1986, the Fire Tiger label may be wrong. Check the birth date before engraving, printing, or publishing a custom zodiac note."
+        ]
+      },
+      {
+        "title": "Common 1986 zodiac mistakes",
+        "paragraphs": [
+          "The first mistake is assigning Tiger to all 1986 birthdays. The second is ignoring the Fire element. The third is treating a Tiger description as destiny. The fourth is mixing Chinese zodiac years with Western zodiac months.",
+          "Another mistake is using compatibility language too strongly. A symbolic pair reading can be fun and culturally interesting, but it cannot decide whether a friendship, marriage, workplace relationship, or family situation will succeed."
+        ]
+      },
+      {
+        "title": "Best next step",
+        "paragraphs": [
+          "If the birthday is close to February 9, use the calculator. If Fire Tiger is confirmed, read the Tiger animal guide and the elements guide separately. The animal explains the main zodiac sign; the Fire element explains the 60-year-cycle layer.",
+          "For writers and site owners, include the full date range when discussing 1986. It prevents the most common error and makes the page stronger for searchers who need an accurate answer."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Practical decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Birthday lookup",
+          "February 9, 1986 boundary",
+          "Early birthdays may be Wood Ox instead"
+        ],
+        [
+          "Culture reader",
+          "Tiger animal plus Fire element",
+          "The full label gives a better cultural reading"
+        ],
+        [
+          "Gift buyer",
+          "Verify sign before personalization",
+          "Wrong signs weaken custom products"
+        ],
+        [
+          "Compatibility reader",
+          "Confirm both signs before comparing",
+          "Pair readings depend on accurate birth data"
+        ]
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What Chinese zodiac animal is 1986?",
+        "a": "Most people born from February 9, 1986 to January 28, 1987 are Fire Tiger in the Chinese zodiac."
+      },
+      {
+        "q": "Is January 1986 Tiger or Ox?",
+        "a": "Most January 1986 birthdays are still Wood Ox because the Fire Tiger year began on February 9, 1986."
+      },
+      {
+        "q": "What does Fire Tiger mean?",
+        "a": "Fire Tiger combines Tiger symbolism such as courage and movement with Fire symbolism such as energy and expression."
+      },
+      {
+        "q": "Can 1986 Chinese zodiac decide compatibility?",
+        "a": "No. Compatibility readings are best used as cultural reference or entertainment, not as relationship proof."
+      }
+    ],
+    "related": [
+      {
+        "title": "Chinese Zodiac Years Chart",
+        "path": "/chinese-zodiac-years/",
+        "category": "Year Guides",
+        "description": "Check animals, elements, and start dates."
+      },
+      {
+        "title": "Chinese Zodiac Elements",
+        "path": "/chinese-zodiac-elements/",
+        "category": "Element Guides",
+        "description": "Read the Fire element layer."
+      },
+      {
+        "title": "Chinese Zodiac Compatibility",
+        "path": "/chinese-zodiac-compatibility/",
+        "category": "Compatibility",
+        "description": "Compare animal pair symbolism."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260708) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
+
 await writeStaticAssets();
 await writeSitemap();
 await writeRobots();
@@ -3114,8 +3373,11 @@ function findZodiac(date){const y=date.getUTCFullYear();let row=years.find(x=>x.
 function parseBirthDate(data){const y=String(data.get('birthYear')||'').trim();const m=String(data.get('birthMonth')||'').trim();const d=String(data.get('birthDay')||'').trim();if(!/^\\d{4}$/.test(y)||!/^\\d{1,2}$/.test(m)||!/^\\d{1,2}$/.test(d))return null;const year=Number(y);const month=Number(m);const day=Number(d);if(month<1||month>12||day<1||day>31)return null;const date=new Date(Date.UTC(year,month-1,day));if(date.getUTCFullYear()!==year||date.getUTCMonth()!==month-1||date.getUTCDate()!==day)return null;return date;}
 function animalMeta(row){return bySlug[row.animal];}
 function yearLink(year){return year>=2024&&year<=2030?'<a class="button-link secondary" href="/chinese-zodiac/'+year+'/">Open '+year+' guide</a>':''}
-function resultHtml(row){const a=animalMeta(row);return '<h3>Your Chinese zodiac sign is '+a.name+'</h3><div class="result-facts"><span><strong>Chinese</strong>'+a.chinese+' · '+a.pinyin+'</span><span><strong>Element</strong>'+row.element+'</span><span><strong>Yin/Yang</strong>'+a.yinYang+'</span><span><strong>Zodiac Year Starts</strong>'+row.lunarNewYear+'</span></div><p>'+a.summary+'</p><p>'+a.personality+'</p><p class="note">If your birthday is before Lunar New Year, the traditional zodiac year belongs to the previous Gregorian year. This calculator already applies that boundary.</p><div class="result-actions"><a class="button-link" href="/chinese-zodiac/'+a.animal+'/">Read the '+a.name+' guide</a>'+yearLink(row.year)+'</div>'}
-document.querySelectorAll('[data-zodiac-form]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();const box=form.parentElement.querySelector('[data-zodiac-result]');const date=parseBirthDate(new FormData(form));const row=date?findZodiac(date):null;box.hidden=false;box.innerHTML=row?resultHtml(row):'<h3>Date outside supported range</h3><p>Enter a valid Gregorian birth date from 1900-01-31 to 2100-12-31.</p>';box.scrollIntoView({block:'nearest',behavior:'smooth'});}));
+const MCC_BASE=window.MCC_BASE_URL||'http://localhost:4500';
+function premiumReportHtml(row,birth){const a=animalMeta(row);const payload=encodeURIComponent(JSON.stringify({birthYear:birth.birthYear,birthMonth:birth.birthMonth,birthDay:birth.birthDay,zodiacYear:row.year,animal:a.name,element:row.element,lunarNewYear:row.lunarNewYear}));return '<div class="premium-report-card"><p class="eyebrow">Premium report</p><h4>Unlock a complete Chinese zodiac report</h4><p>Get a structured report with birth-year boundary, animal and element notes, symbolic traits, compatibility context, lucky color notes, and practical reading limits.</p><button type="button" class="button-link" data-premium-zodiac="'+payload+'">Get full report - $6.90</button><small>Local test uses mock PayPal. Real checkout will verify payment on the server.</small></div>'}
+function resultHtml(row,birth){const a=animalMeta(row);return '<h3>Your Chinese zodiac sign is '+a.name+'</h3><div class="result-facts"><span><strong>Chinese</strong>'+a.chinese+' · '+a.pinyin+'</span><span><strong>Element</strong>'+row.element+'</span><span><strong>Yin/Yang</strong>'+a.yinYang+'</span><span><strong>Zodiac Year Starts</strong>'+row.lunarNewYear+'</span></div><p>'+a.summary+'</p><p>'+a.personality+'</p><p class="note">If your birthday is before Lunar New Year, the traditional zodiac year belongs to the previous Gregorian year. This calculator already applies that boundary.</p><div class="result-actions"><a class="button-link" href="/chinese-zodiac/'+a.animal+'/">Read the '+a.name+' guide</a>'+yearLink(row.year)+'</div>'+premiumReportHtml(row,birth)}
+document.querySelectorAll('[data-zodiac-form]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();const box=form.parentElement.querySelector('[data-zodiac-result]');const data=new FormData(form);const date=parseBirthDate(data);const row=date?findZodiac(date):null;const birth={birthYear:String(data.get('birthYear')||''),birthMonth:String(data.get('birthMonth')||''),birthDay:String(data.get('birthDay')||'')};box.hidden=false;box.innerHTML=row?resultHtml(row,birth):'<h3>Date outside supported range</h3><p>Enter a valid Gregorian birth date from 1900-01-31 to 2100-12-31.</p>';box.scrollIntoView({block:'nearest',behavior:'smooth'});})) ;
+document.addEventListener('click',async e=>{const btn=e.target.closest('[data-premium-zodiac]');if(!btn)return;const input=JSON.parse(decodeURIComponent(btn.getAttribute('data-premium-zodiac')));const email=window.prompt('Enter your email for the report link (test mode):','test@example.com');if(!email)return;btn.disabled=true;const old=btn.textContent;btn.textContent='Creating checkout...';try{const r=await fetch(MCC_BASE+'/api/checkout/create',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({site:'zodiac',product:'full-report',email,input})});const data=await r.json();if(!r.ok)throw new Error(data.error||'checkout failed');location.href=data.approvalUrl;}catch(err){btn.disabled=false;btn.textContent=old;alert('Checkout failed: '+err.message);}});
 function yearResultHtml(row){const a=animalMeta(row);return '<h3>'+row.year+' is the Year of the '+a.name+'</h3><div class="result-facts"><span><strong>Animal</strong>'+a.name+' · '+a.chinese+'</span><span><strong>Element</strong>'+row.element+'</span><span><strong>Starts</strong>'+row.lunarNewYear+'</span><span><strong>Order</strong>No. '+a.order+'</span></div><p>'+a.meaning+'</p><div class="result-actions"><a class="button-link" href="/chinese-zodiac/'+a.animal+'/">Read the '+a.name+' guide</a>'+yearLink(row.year)+'</div>'}
 document.querySelectorAll('[data-year-form]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();const year=String(new FormData(form).get('year')||'').trim();const box=form.parentElement.querySelector('[data-year-result]');const row=byYear[year];box.hidden=false;box.innerHTML=row?yearResultHtml(row):'<h3>Year outside supported range</h3><p>Enter a Gregorian year from 1900 to 2100.</p>';box.scrollIntoView({block:'nearest',behavior:'smooth'});}));
 function pairDetails(first,second){return byPair[[first,second].sort().join('|')]}
@@ -3338,7 +3600,7 @@ function css() {
 }
 
 function compactCss() {
-  return `:root{--ink:#24201b;--muted:#686159;--paper:#f8f5ee;--panel:#fffdf8;--line:#e3d9c9;--red:#b3343a;--red-dark:#84272d;--gold:#b99455;--jade:#2f7167;--blue:#31485f;--shadow:0 10px 28px rgba(47,37,23,.08)}*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--paper);font-size:16px;line-height:1.62}a{color:inherit}.site-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:13px clamp(18px,4vw,52px);background:rgba(248,245,238,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:17px;font-weight:850;white-space:nowrap}.brand-logo{display:block;width:34px;height:34px;border-radius:8px;box-shadow:0 8px 18px rgba(179,52,58,.18)}.nav{display:flex;align-items:center;justify-content:flex-end;gap:18px;flex-wrap:wrap}.nav a{text-decoration:none;color:#554d45;font-size:15px;font-weight:780;line-height:1.2;padding:4px 0}.nav a:hover{color:var(--red)}main{min-height:70vh}.page-hero{padding:28px clamp(18px,4vw,52px) 16px;max-width:1160px;margin:auto}.page-hero h1{font-family:Georgia,serif;font-size:clamp(31px,3.6vw,46px);line-height:1.1;margin:9px 0 10px;color:#211b17}.intro{font-size:16px;max-width:760px;color:var(--muted)}.eyebrow{display:inline-flex;align-items:center;min-height:28px;padding:0 11px;border-radius:999px;background:rgba(47,113,103,.08);border:1px solid rgba(47,113,103,.18);text-transform:uppercase;letter-spacing:.05em;color:var(--jade);font-size:12px;line-height:1;font-weight:850;margin:0}.hero-grid,.content-section{max-width:1160px;margin:0 auto 22px;padding:0 clamp(18px,4vw,52px)}.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr);gap:22px;align-items:stretch}.tool-page{max-width:820px;margin:0 auto 22px;padding:0 clamp(18px,4vw,40px)}.tool-page .tool-panel{max-width:720px;margin:0 auto;padding:20px 22px}.tool-strip{display:grid;grid-template-columns:1fr 1fr;gap:18px;background:transparent!important;border:0!important;box-shadow:none!important}.tool-panel,.visual-panel,.content-section:not(.split),.fact-card{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:8px}.tool-panel{padding:22px;border-top:4px solid var(--red)}.compact-tool{height:auto}.tool-copy h2,.section-heading h2,.content-section h2{font-family:Georgia,serif;font-size:clamp(22px,2.2vw,27px);line-height:1.18;margin:8px 0 10px;color:#241f1a}.tool-page .tool-copy h2{font-size:25px}.tool-copy p{max-width:640px}.content-section p{max-width:820px}.calculator-form{display:grid;grid-template-columns:minmax(220px,1fr) auto;gap:12px;align-items:end;margin-top:16px;max-width:560px}.tool-page .calculator-form{max-width:100%}.match-form{grid-template-columns:1fr 1fr;max-width:100%}.match-form button{grid-column:1/-1;width:100%}.calculator-form label{display:grid;gap:7px;font-size:14px;font-weight:750}.calculator-form input,.calculator-form select{height:43px;border:1px solid var(--line);border-radius:8px;padding:0 12px;font:inherit;background:#fff;width:100%;min-width:0}.calculator-form button,.button-link{min-height:43px;display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:8px;background:var(--red);color:#fff;font-size:14px;font-weight:800;text-decoration:none;padding:0 15px;cursor:pointer;white-space:nowrap}.button-link.secondary{background:#f2eadf;color:#3a3028;border:1px solid #dfd1bd}.calculator-form button:hover,.button-link:hover{background:var(--red-dark);color:#fff}.result-card{margin-top:16px;padding:16px;border-left:4px solid var(--jade);background:#eff7f3;border-radius:8px}.result-card h3{margin:0 0 10px;font-size:20px}.result-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0}.result-facts span{background:#fff;border:1px solid #d8e8df;border-radius:8px;padding:10px;color:#3f564f}.result-facts strong{display:block;color:#1f332e;font-size:12px;text-transform:uppercase;letter-spacing:.04em}.result-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.note{color:var(--muted);font-size:14px}.visual-panel{margin:0;display:grid;place-items:center;overflow:hidden;background:#f1eadc}.visual-panel img{width:100%;height:100%;object-fit:cover}.ad-slot{max-width:1056px;margin:0 auto 22px;border:1px dashed #d7c8b5;background:#fffaf1;color:#8a7257;border-radius:8px;min-height:70px;display:grid;place-items:center;font-size:13px;font-weight:750}.section-heading{margin-bottom:14px}.fact-grid,.animal-grid,.step-grid,.element-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.element-grid{grid-template-columns:repeat(5,minmax(0,1fr))}.fact-grid div,.animal-card,.step-grid div,.element-grid div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.step-grid span{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#edf5f2;color:var(--jade);font-weight:900;margin-bottom:8px}.step-grid strong,.element-grid strong{display:block;font-size:17px}.step-grid p,.element-grid p{margin:6px 0 0;color:var(--muted);font-size:15px}.fact-grid strong,.fact-grid span{display:block}.fact-grid span,.animal-card span,.animal-card p{color:var(--muted)}.animal-card{text-decoration:none;min-height:168px;display:grid;gap:7px;position:relative}.animal-card:hover{border-color:#d2ad73;box-shadow:0 10px 24px rgba(47,37,23,.08)}.animal-card strong{font-size:20px}.animal-card p{font-size:15px;margin:0}.animal-order{position:absolute;right:14px;top:12px;color:var(--gold);font-weight:900}.split{display:grid;grid-template-columns:1fr 1fr;gap:22px}.split>div{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:8px;padding:22px}.fact-card{display:grid;gap:8px}.fact-card strong{font-size:20px}.fact-card span{display:block;color:var(--muted)}.table-wrap{overflow:auto}.content-section table{width:100%;border-collapse:collapse;background:#fff;font-size:15px}.content-section th,.content-section td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left}.content-section th{background:#f1eadc;color:#352b22}.pair-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}.pair-card{display:grid;gap:5px;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px}.pair-card:hover{border-color:#d2ad73;box-shadow:0 10px 24px rgba(47,37,23,.08)}.pair-card strong{font-size:16px}.pair-card span{color:var(--jade);font-weight:800}.pair-card small{color:var(--muted)}.score-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.score-grid div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.score-grid strong,.score-grid span{display:block}.score-grid span{font-size:22px;font-weight:900;color:var(--red);margin:4px 0}.score-grid p{margin:0;color:var(--muted);font-size:15px}.faq-list details{border-bottom:1px solid var(--line);padding:12px 0}.faq-list summary{font-weight:800;cursor:pointer}.site-footer{margin-top:44px;padding:30px clamp(18px,4vw,52px);background:#24201b;color:#fffaf0;display:flex;justify-content:space-between;gap:28px}.site-footer p{color:#d7cbbd;max-width:680px;font-size:14px}.site-footer nav{display:flex;gap:16px;align-items:start;flex-wrap:wrap}.site-footer a{color:#fffaf0}@media(max-width:980px){.element-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tool-strip{grid-template-columns:1fr}.pair-grid,.score-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:820px){body{font-size:15px}.site-header{align-items:flex-start;flex-direction:column}.nav{justify-content:flex-start;gap:14px}.nav a{font-size:14px}.hero-grid,.split{grid-template-columns:1fr}.tool-page{max-width:100%;padding:0 16px}.tool-page .tool-panel{max-width:100%;padding:18px}.calculator-form,.match-form{grid-template-columns:1fr}.fact-grid,.animal-grid,.step-grid,.element-grid,.result-facts,.pair-grid,.score-grid{grid-template-columns:1fr}.page-hero{padding-top:24px}.page-hero h1{font-size:31px}.intro{font-size:16px}.site-footer{flex-direction:column}}`;
+  return `:root{--ink:#24201b;--muted:#686159;--paper:#f8f5ee;--panel:#fffdf8;--line:#e3d9c9;--red:#b3343a;--red-dark:#84272d;--gold:#b99455;--jade:#2f7167;--blue:#31485f;--shadow:0 10px 28px rgba(47,37,23,.08)}*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--paper);font-size:16px;line-height:1.62}a{color:inherit}.site-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:13px clamp(18px,4vw,52px);background:rgba(248,245,238,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:17px;font-weight:850;white-space:nowrap}.brand-logo{display:block;width:34px;height:34px;border-radius:8px;box-shadow:0 8px 18px rgba(179,52,58,.18)}.nav{display:flex;align-items:center;justify-content:flex-end;gap:18px;flex-wrap:wrap}.nav a{text-decoration:none;color:#554d45;font-size:15px;font-weight:780;line-height:1.2;padding:4px 0}.nav a:hover{color:var(--red)}main{min-height:70vh}.page-hero{padding:28px clamp(18px,4vw,52px) 16px;max-width:1160px;margin:auto}.page-hero h1{font-family:Georgia,serif;font-size:clamp(31px,3.6vw,46px);line-height:1.1;margin:9px 0 10px;color:#211b17}.intro{font-size:16px;max-width:760px;color:var(--muted)}.eyebrow{display:inline-flex;align-items:center;min-height:28px;padding:0 11px;border-radius:999px;background:rgba(47,113,103,.08);border:1px solid rgba(47,113,103,.18);text-transform:uppercase;letter-spacing:.05em;color:var(--jade);font-size:12px;line-height:1;font-weight:850;margin:0}.hero-grid,.content-section{max-width:1160px;margin:0 auto 22px;padding:0 clamp(18px,4vw,52px)}.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr);gap:22px;align-items:stretch}.tool-page{max-width:820px;margin:0 auto 22px;padding:0 clamp(18px,4vw,40px)}.tool-page .tool-panel{max-width:720px;margin:0 auto;padding:20px 22px}.tool-strip{display:grid;grid-template-columns:1fr 1fr;gap:18px;background:transparent!important;border:0!important;box-shadow:none!important}.tool-panel,.visual-panel,.content-section:not(.split),.fact-card{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:8px}.tool-panel{padding:22px;border-top:4px solid var(--red)}.compact-tool{height:auto}.tool-copy h2,.section-heading h2,.content-section h2{font-family:Georgia,serif;font-size:clamp(22px,2.2vw,27px);line-height:1.18;margin:8px 0 10px;color:#241f1a}.tool-page .tool-copy h2{font-size:25px}.tool-copy p{max-width:640px}.content-section p{max-width:820px}.calculator-form{display:grid;grid-template-columns:minmax(220px,1fr) auto;gap:12px;align-items:end;margin-top:16px;max-width:560px}.tool-page .calculator-form{max-width:100%}.match-form{grid-template-columns:1fr 1fr;max-width:100%}.match-form button{grid-column:1/-1;width:100%}.calculator-form label{display:grid;gap:7px;font-size:14px;font-weight:750}.calculator-form input,.calculator-form select{height:43px;border:1px solid var(--line);border-radius:8px;padding:0 12px;font:inherit;background:#fff;width:100%;min-width:0}.calculator-form button,.button-link{min-height:43px;display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:8px;background:var(--red);color:#fff;font-size:14px;font-weight:800;text-decoration:none;padding:0 15px;cursor:pointer;white-space:nowrap}.button-link.secondary{background:#f2eadf;color:#3a3028;border:1px solid #dfd1bd}.calculator-form button:hover,.button-link:hover{background:var(--red-dark);color:#fff}.result-card{margin-top:16px;padding:16px;border-left:4px solid var(--jade);background:#eff7f3;border-radius:8px}.result-card h3{margin:0 0 10px;font-size:20px}.result-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0}.result-facts span{background:#fff;border:1px solid #d8e8df;border-radius:8px;padding:10px;color:#3f564f}.result-facts strong{display:block;color:#1f332e;font-size:12px;text-transform:uppercase;letter-spacing:.04em}.result-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.premium-report-card{margin-top:16px;padding:16px;border:1px solid rgba(185,148,85,.36);border-left:4px solid var(--gold);border-radius:8px;background:linear-gradient(180deg,#fffdf8,#fff4e4);box-shadow:0 12px 26px rgba(60,45,26,.07)}.premium-report-card h4{margin:7px 0 7px;font-size:18px;line-height:1.25}.premium-report-card p{margin:0 0 10px;color:#4a4038}.premium-report-card small{display:block;margin-top:9px;color:var(--muted)}.premium-report-card .button-link{background:var(--gold);color:#25170e}.premium-report-card .button-link:hover{background:#d2aa61;color:#25170e}.note{color:var(--muted);font-size:14px}.visual-panel{margin:0;display:grid;place-items:center;overflow:hidden;background:#f1eadc}.visual-panel img{width:100%;height:100%;object-fit:cover}.ad-slot{max-width:1056px;margin:0 auto 22px;border:1px dashed #d7c8b5;background:#fffaf1;color:#8a7257;border-radius:8px;min-height:70px;display:grid;place-items:center;font-size:13px;font-weight:750}.section-heading{margin-bottom:14px}.fact-grid,.animal-grid,.step-grid,.element-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.element-grid{grid-template-columns:repeat(5,minmax(0,1fr))}.fact-grid div,.animal-card,.step-grid div,.element-grid div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.step-grid span{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#edf5f2;color:var(--jade);font-weight:900;margin-bottom:8px}.step-grid strong,.element-grid strong{display:block;font-size:17px}.step-grid p,.element-grid p{margin:6px 0 0;color:var(--muted);font-size:15px}.fact-grid strong,.fact-grid span{display:block}.fact-grid span,.animal-card span,.animal-card p{color:var(--muted)}.animal-card{text-decoration:none;min-height:168px;display:grid;gap:7px;position:relative}.animal-card:hover{border-color:#d2ad73;box-shadow:0 10px 24px rgba(47,37,23,.08)}.animal-card strong{font-size:20px}.animal-card p{font-size:15px;margin:0}.animal-order{position:absolute;right:14px;top:12px;color:var(--gold);font-weight:900}.split{display:grid;grid-template-columns:1fr 1fr;gap:22px}.split>div{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:8px;padding:22px}.fact-card{display:grid;gap:8px}.fact-card strong{font-size:20px}.fact-card span{display:block;color:var(--muted)}.table-wrap{overflow:auto}.content-section table{width:100%;border-collapse:collapse;background:#fff;font-size:15px}.content-section th,.content-section td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left}.content-section th{background:#f1eadc;color:#352b22}.pair-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}.pair-card{display:grid;gap:5px;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px}.pair-card:hover{border-color:#d2ad73;box-shadow:0 10px 24px rgba(47,37,23,.08)}.pair-card strong{font-size:16px}.pair-card span{color:var(--jade);font-weight:800}.pair-card small{color:var(--muted)}.score-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.score-grid div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.score-grid strong,.score-grid span{display:block}.score-grid span{font-size:22px;font-weight:900;color:var(--red);margin:4px 0}.score-grid p{margin:0;color:var(--muted);font-size:15px}.faq-list details{border-bottom:1px solid var(--line);padding:12px 0}.faq-list summary{font-weight:800;cursor:pointer}.site-footer{margin-top:44px;padding:30px clamp(18px,4vw,52px);background:#24201b;color:#fffaf0;display:flex;justify-content:space-between;gap:28px}.site-footer p{color:#d7cbbd;max-width:680px;font-size:14px}.site-footer nav{display:flex;gap:16px;align-items:start;flex-wrap:wrap}.site-footer a{color:#fffaf0}@media(max-width:980px){.element-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tool-strip{grid-template-columns:1fr}.pair-grid,.score-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:820px){body{font-size:15px}.site-header{align-items:flex-start;flex-direction:column}.nav{justify-content:flex-start;gap:14px}.nav a{font-size:14px}.hero-grid,.split{grid-template-columns:1fr}.tool-page{max-width:100%;padding:0 16px}.tool-page .tool-panel{max-width:100%;padding:18px}.calculator-form,.match-form{grid-template-columns:1fr}.fact-grid,.animal-grid,.step-grid,.element-grid,.result-facts,.pair-grid,.score-grid{grid-template-columns:1fr}.page-hero{padding-top:24px}.page-hero h1{font-size:31px}.intro{font-size:16px}.site-footer{flex-direction:column}}`;
 }
 
 function detailCss() {
