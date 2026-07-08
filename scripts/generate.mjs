@@ -3255,6 +3255,266 @@ for (const article of dailyArticles20260708) {
   await writePage(article.path, dailyArticlePage20260706(article));
 }
 
+
+const dailyArticles20260709 = [
+  {
+    "title": "2000 Year of the Chinese Zodiac: Metal Dragon Meaning and Date Checks",
+    "path": "/guides/2000-year-of-the-chinese-zodiac/",
+    "description": "Check the 2000 year of the Chinese zodiac, Metal Dragon dates, Lunar New Year boundary, meaning, and common mistakes.",
+    "h1": "2000 Year of the Chinese Zodiac: Metal Dragon Meaning and Date Checks",
+    "intro": "The 2000 Chinese zodiac year is usually remembered as Dragon, but the correct answer depends on the Lunar New Year boundary.",
+    "answer": "Most people born from February 5, 2000 to January 23, 2001 are Metal Dragon; people born before February 5, 2000 are usually Earth Rabbit.",
+    "details": [
+      "This guide focuses on 2000 year of the Chinese zodiac because readers usually arrive with a practical question, not a desire to read a generic overview. The page gives the direct answer first, then separates facts, buying or research checks, cultural context, and common mistakes. That structure helps a visitor make a better decision without treating tradition as a guarantee.",
+      "The main risk with 2000 year of the Chinese zodiac is oversimplification. A short answer can be useful, but it often hides the detail that changes the result: date boundaries, product material, spelling variants, cord thickness, use case, or source evidence. This page keeps those details visible.",
+      "For SEO and user trust, the topic should work as a standalone article and as part of the larger site cluster. That means it should answer the search query, link to broader guides, and give the reader a next step instead of ending with a vague conclusion.",
+      "Use this article as educational guidance. It can support cultural learning, product comparison, family-name research, or craft planning. It should not be used as legal, medical, financial, genealogy-certification, or guaranteed luck advice. The strongest content keeps useful tradition and real-world limits together."
+    ],
+    "sections": [
+      {
+        "title": "Start with the real question behind 2000 year of the Chinese zodiac",
+        "paragraphs": [
+          "Most visitors searching for 2000 year of the Chinese zodiac want a clear next step. They may be checking a birthday, choosing a product, researching a family name, or planning a craft project. The answer should therefore begin with the decision point rather than a long definition.",
+          "A useful page explains what can be known quickly and what still needs checking. That difference matters because zodiac year lookup can look simple from the outside while still depending on a few practical details."
+        ]
+      },
+      {
+        "title": "What to check first",
+        "paragraphs": [
+          "The first check is the full birth date. Gregorian year alone is risky for January and early February birthdays because the Chinese zodiac year begins at Lunar New Year, not January 1.",
+          "The second check is the element. Dragon gives the animal layer, while Metal gives the 60-year cycle layer. A complete reference should say Metal Dragon, not only Dragon."
+        ]
+      },
+      {
+        "title": "How to interpret the result",
+        "paragraphs": [
+          "After the first check, the result should be read in context. Cultural symbols, product claims, surname meanings, and tutorial labels are starting points. They become more reliable when the reader connects them with dates, materials, documents, measurements, or actual use conditions.",
+          "This is also where internal links matter. A visitor who needs the broader framework should move to the main guide, while a visitor with a specific buying or research question should continue to a focused related page."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "A common mistake is assigning Dragon to every person born in 2000. That fails for birthdays before February 5, 2000.",
+          "Another mistake is treating Metal Dragon as a fixed personality verdict. It is cultural symbolism and reference language, not evidence about a person."
+        ]
+      },
+      {
+        "title": "Best use cases",
+        "paragraphs": [
+          "The best use case for this page is a reader who needs a reliable reference before taking action. That action might be buying a set, writing a birthday note, comparing family records, selecting craft materials, or deciding whether a more detailed guide is needed.",
+          "A second use case is content planning. Because 2000 year of the Chinese zodiac connects to several related searches, the page can support topical authority without becoming a thin doorway page. The answer, table, FAQ, and related links all need to carry real information."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "If the reader only needed the short answer, the answer block and table are enough. If accuracy matters, continue with the related guides and verify the detail that affects the outcome. Do not rely on a single phrase or product photo when a date, material, character, or measurement changes the answer.",
+          "For future updates, this article can support product recommendations, printable checklists, paid reports, or comparison tools. The important rule is to keep the page useful before adding monetization."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Practical decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Quick answer",
+          "Direct definition and first condition",
+          "Prevents a vague or misleading answer"
+        ],
+        [
+          "Accuracy",
+          "Boundary detail, source, material, or measurement",
+          "Small details often change the result"
+        ],
+        [
+          "Buying or planning",
+          "Use case and quality signals",
+          "The best option depends on real use"
+        ],
+        [
+          "Further research",
+          "Related guide and evidence level",
+          "Keeps the reader in a useful topic cluster"
+        ]
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What is the short answer for 2000 year of the Chinese zodiac?",
+        "a": "Most people born from February 5, 2000 to January 23, 2001 are Metal Dragon; people born before February 5, 2000 are usually Earth Rabbit."
+      },
+      {
+        "q": "What should I check first for 2000 year of the Chinese zodiac?",
+        "a": "Check the detail that changes the answer: date boundary, use case, material, spelling, source, size, or product quality."
+      },
+      {
+        "q": "Is 2000 year of the Chinese zodiac enough for a final decision?",
+        "a": "It is enough for a starting point, but important decisions should use the related guides and the practical checks in the table."
+      },
+      {
+        "q": "How does this page fit the site?",
+        "a": "It supports the broader guide cluster by answering a focused search query and linking readers to more complete reference pages."
+      }
+    ],
+    "related": [
+      {
+        "title": "Chinese Zodiac Years Chart",
+        "path": "/chinese-zodiac-years/",
+        "category": "Year Guides",
+        "description": "Check animals, elements, and Lunar New Year dates."
+      },
+      {
+        "title": "Chinese Zodiac Elements",
+        "path": "/chinese-zodiac-elements/",
+        "category": "Element Guides",
+        "description": "Understand the 60-year animal and element cycle."
+      },
+      {
+        "title": "What Chinese Zodiac Sign Am I?",
+        "path": "/guides/what-chinese-zodiac-sign-am-i/",
+        "category": "Calculator",
+        "description": "Use birth date to confirm the correct sign."
+      }
+    ]
+  },
+  {
+    "title": "2001 Year of the Chinese Zodiac: Metal Snake Meaning and Date Checks",
+    "path": "/guides/2001-year-of-the-chinese-zodiac/",
+    "description": "Check the 2001 year of the Chinese zodiac, Metal Snake dates, Lunar New Year boundary, element meaning, and responsible use.",
+    "h1": "2001 Year of the Chinese Zodiac: Metal Snake Meaning and Date Checks",
+    "intro": "The 2001 Chinese zodiac answer is Metal Snake for most birthdays after Lunar New Year, but January birthdays need care.",
+    "answer": "Most people born from January 24, 2001 to February 11, 2002 are Metal Snake; people born before January 24, 2001 are usually Metal Dragon.",
+    "details": [
+      "This guide focuses on 2001 year of the Chinese zodiac because readers usually arrive with a practical question, not a desire to read a generic overview. The page gives the direct answer first, then separates facts, buying or research checks, cultural context, and common mistakes. That structure helps a visitor make a better decision without treating tradition as a guarantee.",
+      "The main risk with 2001 year of the Chinese zodiac is oversimplification. A short answer can be useful, but it often hides the detail that changes the result: date boundaries, product material, spelling variants, cord thickness, use case, or source evidence. This page keeps those details visible.",
+      "For SEO and user trust, the topic should work as a standalone article and as part of the larger site cluster. That means it should answer the search query, link to broader guides, and give the reader a next step instead of ending with a vague conclusion.",
+      "Use this article as educational guidance. It can support cultural learning, product comparison, family-name research, or craft planning. It should not be used as legal, medical, financial, genealogy-certification, or guaranteed luck advice. The strongest content keeps useful tradition and real-world limits together."
+    ],
+    "sections": [
+      {
+        "title": "Start with the real question behind 2001 year of the Chinese zodiac",
+        "paragraphs": [
+          "Most visitors searching for 2001 year of the Chinese zodiac want a clear next step. They may be checking a birthday, choosing a product, researching a family name, or planning a craft project. The answer should therefore begin with the decision point rather than a long definition.",
+          "A useful page explains what can be known quickly and what still needs checking. That difference matters because zodiac year lookup can look simple from the outside while still depending on a few practical details."
+        ]
+      },
+      {
+        "title": "What to check first",
+        "paragraphs": [
+          "Start with January 24, 2001. That is the date that separates late Metal Dragon birthdays from the Metal Snake year in standard zodiac year references.",
+          "Then read Snake and Metal as two layers. Snake is the animal symbol, and Metal is the element in the sexagenary cycle."
+        ]
+      },
+      {
+        "title": "How to interpret the result",
+        "paragraphs": [
+          "After the first check, the result should be read in context. Cultural symbols, product claims, surname meanings, and tutorial labels are starting points. They become more reliable when the reader connects them with dates, materials, documents, measurements, or actual use conditions.",
+          "This is also where internal links matter. A visitor who needs the broader framework should move to the main guide, while a visitor with a specific buying or research question should continue to a focused related page."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "The biggest mistake is using January 1 as the zodiac-year boundary. That gives the wrong answer for people born from January 1 to January 23, 2001.",
+          "A second mistake is using compatibility language as proof. Zodiac compatibility is cultural and symbolic, not relationship evidence."
+        ]
+      },
+      {
+        "title": "Best use cases",
+        "paragraphs": [
+          "The best use case for this page is a reader who needs a reliable reference before taking action. That action might be buying a set, writing a birthday note, comparing family records, selecting craft materials, or deciding whether a more detailed guide is needed.",
+          "A second use case is content planning. Because 2001 year of the Chinese zodiac connects to several related searches, the page can support topical authority without becoming a thin doorway page. The answer, table, FAQ, and related links all need to carry real information."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "If the reader only needed the short answer, the answer block and table are enough. If accuracy matters, continue with the related guides and verify the detail that affects the outcome. Do not rely on a single phrase or product photo when a date, material, character, or measurement changes the answer.",
+          "For future updates, this article can support product recommendations, printable checklists, paid reports, or comparison tools. The important rule is to keep the page useful before adding monetization."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Practical decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Quick answer",
+          "Direct definition and first condition",
+          "Prevents a vague or misleading answer"
+        ],
+        [
+          "Accuracy",
+          "Boundary detail, source, material, or measurement",
+          "Small details often change the result"
+        ],
+        [
+          "Buying or planning",
+          "Use case and quality signals",
+          "The best option depends on real use"
+        ],
+        [
+          "Further research",
+          "Related guide and evidence level",
+          "Keeps the reader in a useful topic cluster"
+        ]
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What is the short answer for 2001 year of the Chinese zodiac?",
+        "a": "Most people born from January 24, 2001 to February 11, 2002 are Metal Snake; people born before January 24, 2001 are usually Metal Dragon."
+      },
+      {
+        "q": "What should I check first for 2001 year of the Chinese zodiac?",
+        "a": "Check the detail that changes the answer: date boundary, use case, material, spelling, source, size, or product quality."
+      },
+      {
+        "q": "Is 2001 year of the Chinese zodiac enough for a final decision?",
+        "a": "It is enough for a starting point, but important decisions should use the related guides and the practical checks in the table."
+      },
+      {
+        "q": "How does this page fit the site?",
+        "a": "It supports the broader guide cluster by answering a focused search query and linking readers to more complete reference pages."
+      }
+    ],
+    "related": [
+      {
+        "title": "Chinese Zodiac Years Chart",
+        "path": "/chinese-zodiac-years/",
+        "category": "Year Guides",
+        "description": "Check animals, elements, and Lunar New Year dates."
+      },
+      {
+        "title": "Chinese Zodiac Elements",
+        "path": "/chinese-zodiac-elements/",
+        "category": "Element Guides",
+        "description": "Understand the 60-year animal and element cycle."
+      },
+      {
+        "title": "What Chinese Zodiac Sign Am I?",
+        "path": "/guides/what-chinese-zodiac-sign-am-i/",
+        "category": "Calculator",
+        "description": "Use birth date to confirm the correct sign."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260709) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
+
 await writeStaticAssets();
 await writeSitemap();
 await writeRobots();
@@ -3373,11 +3633,11 @@ function findZodiac(date){const y=date.getUTCFullYear();let row=years.find(x=>x.
 function parseBirthDate(data){const y=String(data.get('birthYear')||'').trim();const m=String(data.get('birthMonth')||'').trim();const d=String(data.get('birthDay')||'').trim();if(!/^\\d{4}$/.test(y)||!/^\\d{1,2}$/.test(m)||!/^\\d{1,2}$/.test(d))return null;const year=Number(y);const month=Number(m);const day=Number(d);if(month<1||month>12||day<1||day>31)return null;const date=new Date(Date.UTC(year,month-1,day));if(date.getUTCFullYear()!==year||date.getUTCMonth()!==month-1||date.getUTCDate()!==day)return null;return date;}
 function animalMeta(row){return bySlug[row.animal];}
 function yearLink(year){return year>=2024&&year<=2030?'<a class="button-link secondary" href="/chinese-zodiac/'+year+'/">Open '+year+' guide</a>':''}
-const MCC_BASE=window.MCC_BASE_URL||'http://localhost:4500';
-function premiumReportHtml(row,birth){const a=animalMeta(row);const payload=encodeURIComponent(JSON.stringify({birthYear:birth.birthYear,birthMonth:birth.birthMonth,birthDay:birth.birthDay,zodiacYear:row.year,animal:a.name,element:row.element,lunarNewYear:row.lunarNewYear}));return '<div class="premium-report-card"><p class="eyebrow">Premium report</p><h4>Unlock a complete Chinese zodiac report</h4><p>Get a structured report with birth-year boundary, animal and element notes, symbolic traits, compatibility context, lucky color notes, and practical reading limits.</p><button type="button" class="button-link" data-premium-zodiac="'+payload+'">Get full report - $6.90</button><small>Local test uses mock PayPal. Real checkout will verify payment on the server.</small></div>'}
+const MCC_BASE=window.MCC_BASE_URL||(location.hostname==='localhost'||location.hostname==='127.0.0.1'?'http://localhost:4500':'https://console.shanyuegroup.com');
+function premiumReportHtml(row,birth){const a=animalMeta(row);const payload=encodeURIComponent(JSON.stringify({birthYear:birth.birthYear,birthMonth:birth.birthMonth,birthDay:birth.birthDay,zodiacYear:row.year,animal:a.name,element:row.element,lunarNewYear:row.lunarNewYear}));return '<div class="premium-report-card"><p class="eyebrow">Premium report</p><h4>Unlock a complete Chinese zodiac report</h4><p>Get a structured report with birth-year boundary, animal and element notes, symbolic traits, compatibility context, lucky color notes, and practical reading limits.</p><label class="premium-report-form"><span>Email for the report link</span><input type="email" data-premium-email placeholder="you@example.com" autocomplete="email"></label><button type="button" class="button-link" data-premium-zodiac="'+payload+'">Get full report - $6.90</button><small>Local test uses mock PayPal. Real checkout will verify payment on the server.</small></div>'}
 function resultHtml(row,birth){const a=animalMeta(row);return '<h3>Your Chinese zodiac sign is '+a.name+'</h3><div class="result-facts"><span><strong>Chinese</strong>'+a.chinese+' · '+a.pinyin+'</span><span><strong>Element</strong>'+row.element+'</span><span><strong>Yin/Yang</strong>'+a.yinYang+'</span><span><strong>Zodiac Year Starts</strong>'+row.lunarNewYear+'</span></div><p>'+a.summary+'</p><p>'+a.personality+'</p><p class="note">If your birthday is before Lunar New Year, the traditional zodiac year belongs to the previous Gregorian year. This calculator already applies that boundary.</p><div class="result-actions"><a class="button-link" href="/chinese-zodiac/'+a.animal+'/">Read the '+a.name+' guide</a>'+yearLink(row.year)+'</div>'+premiumReportHtml(row,birth)}
 document.querySelectorAll('[data-zodiac-form]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();const box=form.parentElement.querySelector('[data-zodiac-result]');const data=new FormData(form);const date=parseBirthDate(data);const row=date?findZodiac(date):null;const birth={birthYear:String(data.get('birthYear')||''),birthMonth:String(data.get('birthMonth')||''),birthDay:String(data.get('birthDay')||'')};box.hidden=false;box.innerHTML=row?resultHtml(row,birth):'<h3>Date outside supported range</h3><p>Enter a valid Gregorian birth date from 1900-01-31 to 2100-12-31.</p>';box.scrollIntoView({block:'nearest',behavior:'smooth'});})) ;
-document.addEventListener('click',async e=>{const btn=e.target.closest('[data-premium-zodiac]');if(!btn)return;const input=JSON.parse(decodeURIComponent(btn.getAttribute('data-premium-zodiac')));const email=window.prompt('Enter your email for the report link (test mode):','test@example.com');if(!email)return;btn.disabled=true;const old=btn.textContent;btn.textContent='Creating checkout...';try{const r=await fetch(MCC_BASE+'/api/checkout/create',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({site:'zodiac',product:'full-report',email,input})});const data=await r.json();if(!r.ok)throw new Error(data.error||'checkout failed');location.href=data.approvalUrl;}catch(err){btn.disabled=false;btn.textContent=old;alert('Checkout failed: '+err.message);}});
+document.addEventListener('click',async e=>{const btn=e.target.closest('[data-premium-zodiac]');if(!btn)return;const input=JSON.parse(decodeURIComponent(btn.getAttribute('data-premium-zodiac')));const card=btn.closest('.premium-report-card');const emailInput=card?card.querySelector('[data-premium-email]'):null;const email=String(emailInput&&emailInput.value||'').trim();if(!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)){if(emailInput){emailInput.focus();emailInput.setAttribute('aria-invalid','true')}alert('Enter a valid email for the report link.');return}if(emailInput)emailInput.removeAttribute('aria-invalid');btn.disabled=true;const old=btn.textContent;btn.textContent='Creating checkout...';try{const r=await fetch(MCC_BASE+'/api/checkout/create',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({provider:'paypal',site:'zodiac',product:'full-report',email,input})});const data=await r.json();if(!r.ok)throw new Error(data.error||'checkout failed');location.href=data.checkoutUrl||data.approvalUrl;}catch(err){btn.disabled=false;btn.textContent=old;alert('Checkout failed: '+err.message);}});
 function yearResultHtml(row){const a=animalMeta(row);return '<h3>'+row.year+' is the Year of the '+a.name+'</h3><div class="result-facts"><span><strong>Animal</strong>'+a.name+' · '+a.chinese+'</span><span><strong>Element</strong>'+row.element+'</span><span><strong>Starts</strong>'+row.lunarNewYear+'</span><span><strong>Order</strong>No. '+a.order+'</span></div><p>'+a.meaning+'</p><div class="result-actions"><a class="button-link" href="/chinese-zodiac/'+a.animal+'/">Read the '+a.name+' guide</a>'+yearLink(row.year)+'</div>'}
 document.querySelectorAll('[data-year-form]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();const year=String(new FormData(form).get('year')||'').trim();const box=form.parentElement.querySelector('[data-year-result]');const row=byYear[year];box.hidden=false;box.innerHTML=row?yearResultHtml(row):'<h3>Year outside supported range</h3><p>Enter a Gregorian year from 1900 to 2100.</p>';box.scrollIntoView({block:'nearest',behavior:'smooth'});}));
 function pairDetails(first,second){return byPair[[first,second].sort().join('|')]}
@@ -3600,7 +3860,7 @@ function css() {
 }
 
 function compactCss() {
-  return `:root{--ink:#24201b;--muted:#686159;--paper:#f8f5ee;--panel:#fffdf8;--line:#e3d9c9;--red:#b3343a;--red-dark:#84272d;--gold:#b99455;--jade:#2f7167;--blue:#31485f;--shadow:0 10px 28px rgba(47,37,23,.08)}*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--paper);font-size:16px;line-height:1.62}a{color:inherit}.site-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:13px clamp(18px,4vw,52px);background:rgba(248,245,238,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:17px;font-weight:850;white-space:nowrap}.brand-logo{display:block;width:34px;height:34px;border-radius:8px;box-shadow:0 8px 18px rgba(179,52,58,.18)}.nav{display:flex;align-items:center;justify-content:flex-end;gap:18px;flex-wrap:wrap}.nav a{text-decoration:none;color:#554d45;font-size:15px;font-weight:780;line-height:1.2;padding:4px 0}.nav a:hover{color:var(--red)}main{min-height:70vh}.page-hero{padding:28px clamp(18px,4vw,52px) 16px;max-width:1160px;margin:auto}.page-hero h1{font-family:Georgia,serif;font-size:clamp(31px,3.6vw,46px);line-height:1.1;margin:9px 0 10px;color:#211b17}.intro{font-size:16px;max-width:760px;color:var(--muted)}.eyebrow{display:inline-flex;align-items:center;min-height:28px;padding:0 11px;border-radius:999px;background:rgba(47,113,103,.08);border:1px solid rgba(47,113,103,.18);text-transform:uppercase;letter-spacing:.05em;color:var(--jade);font-size:12px;line-height:1;font-weight:850;margin:0}.hero-grid,.content-section{max-width:1160px;margin:0 auto 22px;padding:0 clamp(18px,4vw,52px)}.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr);gap:22px;align-items:stretch}.tool-page{max-width:820px;margin:0 auto 22px;padding:0 clamp(18px,4vw,40px)}.tool-page .tool-panel{max-width:720px;margin:0 auto;padding:20px 22px}.tool-strip{display:grid;grid-template-columns:1fr 1fr;gap:18px;background:transparent!important;border:0!important;box-shadow:none!important}.tool-panel,.visual-panel,.content-section:not(.split),.fact-card{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:8px}.tool-panel{padding:22px;border-top:4px solid var(--red)}.compact-tool{height:auto}.tool-copy h2,.section-heading h2,.content-section h2{font-family:Georgia,serif;font-size:clamp(22px,2.2vw,27px);line-height:1.18;margin:8px 0 10px;color:#241f1a}.tool-page .tool-copy h2{font-size:25px}.tool-copy p{max-width:640px}.content-section p{max-width:820px}.calculator-form{display:grid;grid-template-columns:minmax(220px,1fr) auto;gap:12px;align-items:end;margin-top:16px;max-width:560px}.tool-page .calculator-form{max-width:100%}.match-form{grid-template-columns:1fr 1fr;max-width:100%}.match-form button{grid-column:1/-1;width:100%}.calculator-form label{display:grid;gap:7px;font-size:14px;font-weight:750}.calculator-form input,.calculator-form select{height:43px;border:1px solid var(--line);border-radius:8px;padding:0 12px;font:inherit;background:#fff;width:100%;min-width:0}.calculator-form button,.button-link{min-height:43px;display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:8px;background:var(--red);color:#fff;font-size:14px;font-weight:800;text-decoration:none;padding:0 15px;cursor:pointer;white-space:nowrap}.button-link.secondary{background:#f2eadf;color:#3a3028;border:1px solid #dfd1bd}.calculator-form button:hover,.button-link:hover{background:var(--red-dark);color:#fff}.result-card{margin-top:16px;padding:16px;border-left:4px solid var(--jade);background:#eff7f3;border-radius:8px}.result-card h3{margin:0 0 10px;font-size:20px}.result-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0}.result-facts span{background:#fff;border:1px solid #d8e8df;border-radius:8px;padding:10px;color:#3f564f}.result-facts strong{display:block;color:#1f332e;font-size:12px;text-transform:uppercase;letter-spacing:.04em}.result-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.premium-report-card{margin-top:16px;padding:16px;border:1px solid rgba(185,148,85,.36);border-left:4px solid var(--gold);border-radius:8px;background:linear-gradient(180deg,#fffdf8,#fff4e4);box-shadow:0 12px 26px rgba(60,45,26,.07)}.premium-report-card h4{margin:7px 0 7px;font-size:18px;line-height:1.25}.premium-report-card p{margin:0 0 10px;color:#4a4038}.premium-report-card small{display:block;margin-top:9px;color:var(--muted)}.premium-report-card .button-link{background:var(--gold);color:#25170e}.premium-report-card .button-link:hover{background:#d2aa61;color:#25170e}.note{color:var(--muted);font-size:14px}.visual-panel{margin:0;display:grid;place-items:center;overflow:hidden;background:#f1eadc}.visual-panel img{width:100%;height:100%;object-fit:cover}.ad-slot{max-width:1056px;margin:0 auto 22px;border:1px dashed #d7c8b5;background:#fffaf1;color:#8a7257;border-radius:8px;min-height:70px;display:grid;place-items:center;font-size:13px;font-weight:750}.section-heading{margin-bottom:14px}.fact-grid,.animal-grid,.step-grid,.element-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.element-grid{grid-template-columns:repeat(5,minmax(0,1fr))}.fact-grid div,.animal-card,.step-grid div,.element-grid div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.step-grid span{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#edf5f2;color:var(--jade);font-weight:900;margin-bottom:8px}.step-grid strong,.element-grid strong{display:block;font-size:17px}.step-grid p,.element-grid p{margin:6px 0 0;color:var(--muted);font-size:15px}.fact-grid strong,.fact-grid span{display:block}.fact-grid span,.animal-card span,.animal-card p{color:var(--muted)}.animal-card{text-decoration:none;min-height:168px;display:grid;gap:7px;position:relative}.animal-card:hover{border-color:#d2ad73;box-shadow:0 10px 24px rgba(47,37,23,.08)}.animal-card strong{font-size:20px}.animal-card p{font-size:15px;margin:0}.animal-order{position:absolute;right:14px;top:12px;color:var(--gold);font-weight:900}.split{display:grid;grid-template-columns:1fr 1fr;gap:22px}.split>div{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:8px;padding:22px}.fact-card{display:grid;gap:8px}.fact-card strong{font-size:20px}.fact-card span{display:block;color:var(--muted)}.table-wrap{overflow:auto}.content-section table{width:100%;border-collapse:collapse;background:#fff;font-size:15px}.content-section th,.content-section td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left}.content-section th{background:#f1eadc;color:#352b22}.pair-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}.pair-card{display:grid;gap:5px;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px}.pair-card:hover{border-color:#d2ad73;box-shadow:0 10px 24px rgba(47,37,23,.08)}.pair-card strong{font-size:16px}.pair-card span{color:var(--jade);font-weight:800}.pair-card small{color:var(--muted)}.score-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.score-grid div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.score-grid strong,.score-grid span{display:block}.score-grid span{font-size:22px;font-weight:900;color:var(--red);margin:4px 0}.score-grid p{margin:0;color:var(--muted);font-size:15px}.faq-list details{border-bottom:1px solid var(--line);padding:12px 0}.faq-list summary{font-weight:800;cursor:pointer}.site-footer{margin-top:44px;padding:30px clamp(18px,4vw,52px);background:#24201b;color:#fffaf0;display:flex;justify-content:space-between;gap:28px}.site-footer p{color:#d7cbbd;max-width:680px;font-size:14px}.site-footer nav{display:flex;gap:16px;align-items:start;flex-wrap:wrap}.site-footer a{color:#fffaf0}@media(max-width:980px){.element-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tool-strip{grid-template-columns:1fr}.pair-grid,.score-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:820px){body{font-size:15px}.site-header{align-items:flex-start;flex-direction:column}.nav{justify-content:flex-start;gap:14px}.nav a{font-size:14px}.hero-grid,.split{grid-template-columns:1fr}.tool-page{max-width:100%;padding:0 16px}.tool-page .tool-panel{max-width:100%;padding:18px}.calculator-form,.match-form{grid-template-columns:1fr}.fact-grid,.animal-grid,.step-grid,.element-grid,.result-facts,.pair-grid,.score-grid{grid-template-columns:1fr}.page-hero{padding-top:24px}.page-hero h1{font-size:31px}.intro{font-size:16px}.site-footer{flex-direction:column}}`;
+  return `:root{--ink:#24201b;--muted:#686159;--paper:#f8f5ee;--panel:#fffdf8;--line:#e3d9c9;--red:#b3343a;--red-dark:#84272d;--gold:#b99455;--jade:#2f7167;--blue:#31485f;--shadow:0 10px 28px rgba(47,37,23,.08)}*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--paper);font-size:16px;line-height:1.62}a{color:inherit}.site-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:13px clamp(18px,4vw,52px);background:rgba(248,245,238,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:17px;font-weight:850;white-space:nowrap}.brand-logo{display:block;width:34px;height:34px;border-radius:8px;box-shadow:0 8px 18px rgba(179,52,58,.18)}.nav{display:flex;align-items:center;justify-content:flex-end;gap:18px;flex-wrap:wrap}.nav a{text-decoration:none;color:#554d45;font-size:15px;font-weight:780;line-height:1.2;padding:4px 0}.nav a:hover{color:var(--red)}main{min-height:70vh}.page-hero{padding:28px clamp(18px,4vw,52px) 16px;max-width:1160px;margin:auto}.page-hero h1{font-family:Georgia,serif;font-size:clamp(31px,3.6vw,46px);line-height:1.1;margin:9px 0 10px;color:#211b17}.intro{font-size:16px;max-width:760px;color:var(--muted)}.eyebrow{display:inline-flex;align-items:center;min-height:28px;padding:0 11px;border-radius:999px;background:rgba(47,113,103,.08);border:1px solid rgba(47,113,103,.18);text-transform:uppercase;letter-spacing:.05em;color:var(--jade);font-size:12px;line-height:1;font-weight:850;margin:0}.hero-grid,.content-section{max-width:1160px;margin:0 auto 22px;padding:0 clamp(18px,4vw,52px)}.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr);gap:22px;align-items:stretch}.tool-page{max-width:820px;margin:0 auto 22px;padding:0 clamp(18px,4vw,40px)}.tool-page .tool-panel{max-width:720px;margin:0 auto;padding:20px 22px}.tool-strip{display:grid;grid-template-columns:1fr 1fr;gap:18px;background:transparent!important;border:0!important;box-shadow:none!important}.tool-panel,.visual-panel,.content-section:not(.split),.fact-card{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:8px}.tool-panel{padding:22px;border-top:4px solid var(--red)}.compact-tool{height:auto}.tool-copy h2,.section-heading h2,.content-section h2{font-family:Georgia,serif;font-size:clamp(22px,2.2vw,27px);line-height:1.18;margin:8px 0 10px;color:#241f1a}.tool-page .tool-copy h2{font-size:25px}.tool-copy p{max-width:640px}.content-section p{max-width:820px}.calculator-form{display:grid;grid-template-columns:minmax(220px,1fr) auto;gap:12px;align-items:end;margin-top:16px;max-width:560px}.tool-page .calculator-form{max-width:100%}.match-form{grid-template-columns:1fr 1fr;max-width:100%}.match-form button{grid-column:1/-1;width:100%}.calculator-form label{display:grid;gap:7px;font-size:14px;font-weight:750}.calculator-form input,.calculator-form select{height:43px;border:1px solid var(--line);border-radius:8px;padding:0 12px;font:inherit;background:#fff;width:100%;min-width:0}.calculator-form button,.button-link{min-height:43px;display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:8px;background:var(--red);color:#fff;font-size:14px;font-weight:800;text-decoration:none;padding:0 15px;cursor:pointer;white-space:nowrap}.button-link.secondary{background:#f2eadf;color:#3a3028;border:1px solid #dfd1bd}.calculator-form button:hover,.button-link:hover{background:var(--red-dark);color:#fff}.result-card{margin-top:16px;padding:16px;border-left:4px solid var(--jade);background:#eff7f3;border-radius:8px}.result-card h3{margin:0 0 10px;font-size:20px}.result-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0}.result-facts span{background:#fff;border:1px solid #d8e8df;border-radius:8px;padding:10px;color:#3f564f}.result-facts strong{display:block;color:#1f332e;font-size:12px;text-transform:uppercase;letter-spacing:.04em}.result-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.premium-report-card{margin-top:16px;padding:16px;border:1px solid rgba(185,148,85,.36);border-left:4px solid var(--gold);border-radius:8px;background:linear-gradient(180deg,#fffdf8,#fff4e4);box-shadow:0 12px 26px rgba(60,45,26,.07)}.premium-report-card h4{margin:7px 0 7px;font-size:18px;line-height:1.25}.premium-report-card p{margin:0 0 10px;color:#4a4038}.premium-report-card small{display:block;margin-top:9px;color:var(--muted)}.premium-report-form{display:grid;gap:7px;margin:12px 0 12px;font-size:13px;font-weight:720;color:#3f362e}.premium-report-form input{height:42px;border:1px solid rgba(185,148,85,.42);border-radius:8px;padding:0 12px;font:inherit;background:#fffdf8;min-width:0}.premium-report-form input[aria-invalid="true"]{border-color:var(--red);box-shadow:0 0 0 3px rgba(179,52,58,.12)}.premium-report-card .button-link{background:var(--gold);color:#25170e}.premium-report-card .button-link:hover{background:#d2aa61;color:#25170e}.note{color:var(--muted);font-size:14px}.visual-panel{margin:0;display:grid;place-items:center;overflow:hidden;background:#f1eadc}.visual-panel img{width:100%;height:100%;object-fit:cover}.ad-slot{max-width:1056px;margin:0 auto 22px;border:1px dashed #d7c8b5;background:#fffaf1;color:#8a7257;border-radius:8px;min-height:70px;display:grid;place-items:center;font-size:13px;font-weight:750}.section-heading{margin-bottom:14px}.fact-grid,.animal-grid,.step-grid,.element-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.element-grid{grid-template-columns:repeat(5,minmax(0,1fr))}.fact-grid div,.animal-card,.step-grid div,.element-grid div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.step-grid span{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#edf5f2;color:var(--jade);font-weight:900;margin-bottom:8px}.step-grid strong,.element-grid strong{display:block;font-size:17px}.step-grid p,.element-grid p{margin:6px 0 0;color:var(--muted);font-size:15px}.fact-grid strong,.fact-grid span{display:block}.fact-grid span,.animal-card span,.animal-card p{color:var(--muted)}.animal-card{text-decoration:none;min-height:168px;display:grid;gap:7px;position:relative}.animal-card:hover{border-color:#d2ad73;box-shadow:0 10px 24px rgba(47,37,23,.08)}.animal-card strong{font-size:20px}.animal-card p{font-size:15px;margin:0}.animal-order{position:absolute;right:14px;top:12px;color:var(--gold);font-weight:900}.split{display:grid;grid-template-columns:1fr 1fr;gap:22px}.split>div{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:8px;padding:22px}.fact-card{display:grid;gap:8px}.fact-card strong{font-size:20px}.fact-card span{display:block;color:var(--muted)}.table-wrap{overflow:auto}.content-section table{width:100%;border-collapse:collapse;background:#fff;font-size:15px}.content-section th,.content-section td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left}.content-section th{background:#f1eadc;color:#352b22}.pair-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}.pair-card{display:grid;gap:5px;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px}.pair-card:hover{border-color:#d2ad73;box-shadow:0 10px 24px rgba(47,37,23,.08)}.pair-card strong{font-size:16px}.pair-card span{color:var(--jade);font-weight:800}.pair-card small{color:var(--muted)}.score-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.score-grid div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.score-grid strong,.score-grid span{display:block}.score-grid span{font-size:22px;font-weight:900;color:var(--red);margin:4px 0}.score-grid p{margin:0;color:var(--muted);font-size:15px}.faq-list details{border-bottom:1px solid var(--line);padding:12px 0}.faq-list summary{font-weight:800;cursor:pointer}.site-footer{margin-top:44px;padding:30px clamp(18px,4vw,52px);background:#24201b;color:#fffaf0;display:flex;justify-content:space-between;gap:28px}.site-footer p{color:#d7cbbd;max-width:680px;font-size:14px}.site-footer nav{display:flex;gap:16px;align-items:start;flex-wrap:wrap}.site-footer a{color:#fffaf0}@media(max-width:980px){.element-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tool-strip{grid-template-columns:1fr}.pair-grid,.score-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:820px){body{font-size:15px}.site-header{align-items:flex-start;flex-direction:column}.nav{justify-content:flex-start;gap:14px}.nav a{font-size:14px}.hero-grid,.split{grid-template-columns:1fr}.tool-page{max-width:100%;padding:0 16px}.tool-page .tool-panel{max-width:100%;padding:18px}.calculator-form,.match-form{grid-template-columns:1fr}.fact-grid,.animal-grid,.step-grid,.element-grid,.result-facts,.pair-grid,.score-grid{grid-template-columns:1fr}.page-hero{padding-top:24px}.page-hero h1{font-size:31px}.intro{font-size:16px}.site-footer{flex-direction:column}}`;
 }
 
 function detailCss() {
@@ -3642,6 +3902,9 @@ function heroSpacingFixCss() {
 function contentWidthBalanceCss() {
   return `body:not(.page-home):not(.seo-report-page) .page-hero{max-width:1240px}body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search{max-width:1120px}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-shell{max-width:1220px}.page-guides .article-search,.page-guides .content-section{max-width:1120px}.page-guides .article-search{padding-left:34px!important;padding-right:34px!important}.tool-page .tool-panel{max-width:none}.content-section:not(.split){padding-left:clamp(22px,4vw,52px);padding-right:clamp(22px,4vw,52px)}@media(max-width:1180px){body:not(.page-home):not(.seo-report-page) .page-hero,body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search,.page-guides .article-search,.page-guides .content-section{max-width:calc(100% - 32px)}}@media(max-width:640px){body:not(.page-home):not(.seo-report-page) .page-hero,body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search,.page-guides .article-search,.page-guides .content-section{max-width:calc(100% - 20px)}.page-guides .article-search{padding-left:20px!important;padding-right:20px!important}}`;
 }
+
+
+
 
 
 
