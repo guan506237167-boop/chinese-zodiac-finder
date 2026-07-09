@@ -1056,19 +1056,23 @@ function yearSearchBlock() {
 
 function standardFaqs() {
   return [
-    {
-      q: "Does the Chinese zodiac year start on January 1?",
-      a: "No. Chinese zodiac years follow the Lunar New Year, so the start date changes each Gregorian year."
-    },
-    {
-      q: "Why can early-year birthdays have a different zodiac sign?",
-      a: "If a birthday falls before Lunar New Year, traditional zodiac calculation uses the previous zodiac year."
-    },
-    {
-      q: "Is Chinese zodiac compatibility scientific?",
-      a: "No. Compatibility explanations are traditional cultural interpretations for reference and entertainment."
-    }
+    { q: "Does the Chinese zodiac year start on January 1?", a: "No. Chinese zodiac years follow the Lunar New Year, so the start date changes each Gregorian year. This is the main reason a simple January 1 year chart can give the wrong answer for people born in January or early February." },
+    { q: "Why can early-year birthdays have a different zodiac sign?", a: "If a birthday falls before Lunar New Year, traditional zodiac calculation uses the previous zodiac year. For example, two people born in the same Gregorian year can have different zodiac animals if one birthday is before Lunar New Year and the other is after it." },
+    { q: "Is Chinese zodiac compatibility scientific?", a: "No. Compatibility explanations are traditional cultural interpretations for reference, learning, and entertainment. They can explain symbolic language, but they should not replace real communication, judgment, or professional advice." },
+    { q: "What information do I need to find my Chinese zodiac sign?", a: "Use the full birth date, not only the birth year. The year is useful for most birthdays, but the month and day are needed near Lunar New Year because the zodiac year does not begin on January 1." },
+    { q: "What is the difference between zodiac animal and element?", a: "The animal repeats every 12 years, while the five elements rotate with the cycle to create labels such as Fire Horse, Wood Dragon, Metal Snake, and Water Rabbit. The full animal-and-element pattern repeats every 60 years." },
+    { q: "How should I use lucky colors and lucky numbers?", a: "Treat lucky colors, numbers, flowers, and directions as cultural symbolism. They are useful for learning, gifts, decoration, and traditional vocabulary, but they should not be used as guaranteed decision rules." },
+    { q: "Why do different websites sometimes show different zodiac answers?", a: "Many mistakes come from ignoring Lunar New Year boundaries or using a simplified Gregorian-year chart. A reliable page should show the animal, element, and the Lunar New Year start date for the year being checked." },
+    { q: "Where should I start if I am new to Chinese zodiac?", a: "Start with the calculator, then read the year chart, animal guide, elements guide, and compatibility pages. That path moves from factual lookup to symbolic interpretation in the right order." }
   ];
+}
+
+function zodiacGuidesIntroBlock() {
+  return `<section class="content-section article-body"><h2>How to use the Chinese zodiac guide library</h2><p>The guide library is organized around the way most readers search for Chinese zodiac information. Some visitors need a fast birth-year answer, some need an animal meaning, some are checking Lunar New Year boundaries, and some are comparing element-animal combinations such as Fire Horse, Wood Dragon, or Metal Snake. The safest path is to begin with the calculator or year chart before reading symbolic meaning pages.</p><p>For birthday lookup, use a full date first. A page about 1988, 1990, 1996, or 2026 can explain the broad zodiac year, but it cannot assign a correct sign to every January or February birthday unless the Lunar New Year boundary is checked. That is why this library keeps the calculator, year chart, animal pages, and element guides connected.</p><p>For cultural learning, start with the 12 animals in order, then move into the five elements and compatibility guides. The animal pages explain traditional vocabulary, Chinese names, pinyin, recent years, and common meaning notes. The element pages add the 60-year-cycle layer. Compatibility pages should be read as symbolic cultural reference, not as relationship advice.</p><p>For content planning, classroom use, gift ideas, or printable reference material, the same rule applies: accuracy first, symbolism second. A zodiac chart or animal guide is more useful when it makes the Lunar New Year boundary visible and gives readers a clear next step instead of leaving them with a short label.</p></section>`;
+}
+
+function zodiacCalculatorGuideBlock() {
+  return `<section class="content-section article-body"><h2>When the calculator gives a different sign than a year chart</h2><p>The calculator may show a different animal than a simple Gregorian-year chart for birthdays near the beginning of the year. That is expected. Chinese zodiac years begin at Lunar New Year, which usually falls in late January or February. If a person was born before that date, the traditional zodiac year still belongs to the previous animal and element.</p><p>This is why the calculator asks for month and day. A birth year alone is enough for many people, but it is not reliable for every birthday. The safest workflow is to enter the full birth date, read the animal and element result, then open the matching animal or year guide for cultural meaning.</p><p>The result should be understood as a reference label, not a prediction. The animal and element can help explain traditional vocabulary, festival content, classroom materials, or family conversations about zodiac signs. They should not be treated as professional advice about health, money, relationships, or major life choices.</p><p>If you are checking another person's sign, use that person's full date separately. Do not assume that everyone born in the same Gregorian year has the same zodiac sign, especially when birthdays fall before Lunar New Year. For relationship or compatibility questions, confirm both signs first, then read compatibility as cultural symbolism.</p><p>For repeat use, write down the result in four parts: Gregorian birth date, Lunar New Year boundary, zodiac animal, and element. This makes the answer easier to verify later and prevents confusion when comparing siblings, partners, classmates, or historical figures. It also gives the reader a natural path into the deeper pages: animal meaning, element meaning, year chart, and compatibility.</p><p>The calculator page is intentionally more than a form. Searchers often arrive with one quick question, but the reliable answer depends on calendar context. Explaining that context on the same page reduces wrong lookups and makes the tool more useful for visitors, search engines, and AI answer systems.</p></section>`;
 }
 
 await writePage("/", pageLayout({
@@ -1165,6 +1169,7 @@ await writePage("/guides/", pageLayout({
   intro: "Browse the full guide library for Chinese zodiac years, animals, elements, and compatibility topics.",
   body: `
     ${articleSearchBlock()}
+    ${zodiacGuidesIntroBlock()}
     <section class="content-section latest-guides">
       <div class="section-heading">
         <p class="eyebrow">Latest Guides</p>
@@ -1945,9 +1950,11 @@ await writePage("/chinese-zodiac-calculator/", pageLayout({
   }),
   body: `
     <section class="tool-page">${zodiacCalculatorBlock()}</section>
+    ${zodiacCalculatorGuideBlock()}
+    <section class="content-section article-body"><h2>How to interpret the calculator result</h2><p>Read the calculator result in layers. The animal gives the familiar 12-year sign, the element gives the 60-year-cycle context, and the Lunar New Year note explains why the result may differ from a simple year list. These three details should stay together whenever the result is used in an article, classroom note, gift idea, or personal reference.</p><p>If the result is for a child, partner, friend, or historical figure, keep the exact date visible in your notes. A result without the date is easy to misread later, especially for birthdays near Lunar New Year. The calculator is designed to reduce that risk by putting the date boundary in the same workflow as the sign answer.</p><p>After the result, choose the next page by intent. Use the animal page for meaning, the year chart for calendar comparison, the elements guide for the 60-year cycle, and compatibility pages for symbolic relationship language. This makes the calculator a starting point for structured learning rather than a one-line answer.</p></section>
     <section class="content-section">
       <h2>How this calculator works</h2>
-      <p>The Chinese zodiac is tied to the Lunar New Year, not January 1. If your birthday is before Lunar New Year in your birth year, the calculator uses the previous zodiac year.</p>
+      <p>The Chinese zodiac is tied to the Lunar New Year, not January 1. If your birthday is before Lunar New Year in your birth year, the calculator uses the previous zodiac year. The recent-year table below is included as a quick reference, but the calculator remains the safer tool for individual birthdays close to Lunar New Year.</p>
       ${yearsTable(years.slice(-16))}
     </section>
     ${faqBlock([
@@ -2393,7 +2400,8 @@ await writePage("/chinese-zodiac-faq/", pageLayout({
       <p>The answers are written for quick reference. Chinese zodiac years do not always match January 1, so questions about January and February birthdays should always be checked against the Lunar New Year date for the birth year.</p>
       <p>Compatibility and personality descriptions on this site are cultural explanations, not scientific tests or fixed predictions. They are best used as learning material for Chinese zodiac symbolism.</p>
     </section>
-    ${faqBlock(standardFaqs())}`
+    ${faqBlock(standardFaqs())}
+    <section class="content-section article-body"><h2>What to read after the FAQ</h2><p>If the question is about a birthday, open the calculator and use the full birth date. If the question is about a year, open the year chart and compare the Lunar New Year start date. If the question is about meaning, open the animal and element pages after the sign is confirmed.</p><p>This order keeps the site useful for both quick answers and deeper learning. It also prevents the most common mistake: treating a short zodiac label as a complete explanation. The FAQ gives the summary, while the related guides explain the calendar boundary, animal symbolism, element cycle, and compatibility language in more detail.</p><p>When a question involves January or February birthdays, avoid using memory or a simplified year list. Open the calculator or year chart, confirm the Lunar New Year date, and then read the sign meaning. That small extra step is the difference between a quick answer and a reliable answer.</p></section>`
 }));
 
 await writePage("/about/", simpleInfoPage({
@@ -3621,6 +3629,298 @@ function simpleInfoPage({ path, h1, title, intro, sections }) {
 async function writeStaticAssets() {
   await writeFile("dist/calculator.js", clientScript(), "utf8");
   await writeFile("dist/styles.css", css(), "utf8");
+}
+
+
+const dailyArticles20260710 = [
+  {
+    "title": "2026 Chinese Zodiac Sign: Fire Horse Year Meaning and Date Boundary",
+    "path": "/guides/2026-chinese-zodiac-sign/",
+    "description": "Find the 2026 Chinese zodiac sign, Fire Horse meaning, Lunar New Year date boundary, and how to read the result responsibly.",
+    "h1": "2026 Chinese Zodiac Sign: Fire Horse Year Meaning and Date Boundary",
+    "intro": "The 2026 Chinese zodiac sign is Horse, with the Fire element, but the exact answer depends on the Lunar New Year date boundary.",
+    "answer": "The 2026 Chinese zodiac year is the Fire Horse year, beginning at Lunar New Year on February 17, 2026. Birthdays before that date still belong to the previous Chinese zodiac year.",
+    "details": [
+      "This article focuses on 2026 Chinese Zodiac Sign because the search intent is practical. The reader needs a direct answer, enough context to avoid a weak assumption, and a clear next step inside the site.",
+      "A short definition is not enough for this topic. Useful content has to separate the main answer from details such as date boundaries, material quality, spelling variants, product use case, or symbolic limits.",
+      "The page is written as both a standalone answer and a routing page. It gives the reader enough information to act, then points toward broader guides, tools, and related pages when the question needs more depth.",
+      "Use the information as educational guidance. It can support cultural learning, buying decisions, family-name research, craft planning, or content planning, but it should not be treated as legal, medical, financial, genealogy-certified, or guaranteed luck advice.",
+      "The first practical check is the date. Chinese zodiac years do not follow January 1, so a January or early-February birthday must be checked against Lunar New Year.",
+      "The second check is the element. 2026 combines Horse with Fire, so the symbolic reading should mention both the animal and the element instead of giving only a one-word result."
+    ],
+    "sections": [
+      {
+        "title": "Start with the real question behind 2026 Chinese Zodiac Sign",
+        "paragraphs": [
+          "Most visitors searching for 2026 Chinese Zodiac Sign are not looking for a decorative paragraph. They want to make a decision, confirm a fact, choose a product, understand a cultural symbol, or avoid a common mistake.",
+          "That means the useful answer should begin with what changes the outcome. A page can rank for a keyword and still disappoint the reader if it hides the practical decision behind vague background writing."
+        ]
+      },
+      {
+        "title": "What to check first",
+        "paragraphs": [
+          "Check the full birth date before using the result for a person. A year-only answer can be wrong for birthdays before Lunar New Year.",
+          "Check whether the reader needs a quick answer, a calculator result, or a deeper page about Horse meaning and Fire symbolism."
+        ]
+      },
+      {
+        "title": "How to read the answer responsibly",
+        "paragraphs": [
+          "After the first answer, keep the evidence layers separate. A zodiac phrase, surname spelling, product label, or craft name can be a useful clue, but the reliable conclusion depends on the supporting details around it.",
+          "This is where internal links matter. A visitor with a broad question should move to a main guide, while a visitor with a narrow buying, lookup, or tutorial question should continue to a focused page."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "The most common mistake is saying every person born in calendar year 2026 is a Horse. That is not accurate for birthdays before February 17, 2026.",
+          "Another mistake is treating Fire Horse symbolism as a prediction. It is cultural language, not proof of personality, luck, health, money, or relationship outcome."
+        ]
+      },
+      {
+        "title": "Best use cases",
+        "paragraphs": [
+          "The best use case for this page is a reader who needs a reliable reference before taking action. That action may be buying a lightweight product, checking a date, planning a gift, choosing craft supplies, or deciding whether a deeper guide is needed.",
+          "A second use case is topical authority. The page supports the larger site cluster by answering a focused query in enough detail, then linking the visitor toward more complete tools and reference pages."
+        ]
+      },
+      {
+        "title": "Decision framework",
+        "paragraphs": [
+          "Use a simple three-part framework: confirm the main fact, check the detail that can change the answer, then choose the next page or action. This keeps the article useful instead of turning it into a loose essay.",
+          "If the question involves a product, inspect construction, size, material, photos, and use case. If it involves culture, keep the wording bounded. If it involves family history, verify the character or source. If it involves a tool result, preserve the input date or context that produced the answer."
+        ]
+      },
+      {
+        "title": "When to use a broader guide",
+        "paragraphs": [
+          "Use this page when the question is specifically about 2026 Chinese Zodiac Sign. Use a broader guide when the reader needs comparison, background, or a complete step-by-step workflow.",
+          "The broader guide is especially useful when several similar terms overlap. A product buyer may need comparison pages, a learner may need tutorial order, and a researcher may need meaning, origin, pronunciation, and source notes together."
+        ]
+      },
+      {
+        "title": "Practical next step",
+        "paragraphs": [
+          "If you are checking a birthday, use the calculator first and keep the exact date with the result.",
+          "Next, read the Year of the Horse 2026 page, the Horse zodiac guide, and the Chinese zodiac elements page for the complete context."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for 2026 Chinese Zodiac Sign?",
+        "a": "The 2026 Chinese zodiac year is the Fire Horse year, beginning at Lunar New Year on February 17, 2026. Birthdays before that date still belong to the previous Chinese zodiac year."
+      },
+      {
+        "q": "Can 2026 Chinese Zodiac Sign be used for buying or paid products later?",
+        "a": "Yes, if the page keeps practical checks visible. Product or paid-report content should explain the decision path instead of relying on decorative wording."
+      },
+      {
+        "q": "Why is this page longer than a short definition?",
+        "a": "Because the reader usually needs tradeoffs, cautions, examples, and next steps. Thin pages are weak for SEO and weak for user trust."
+      },
+      {
+        "q": "What should I read next?",
+        "a": "Next, read the Year of the Horse 2026 page, the Horse zodiac guide, and the Chinese zodiac elements page for the complete context."
+      }
+    ],
+    "related": [
+      {
+        "title": "Chinese Zodiac Calculator",
+        "path": "/chinese-zodiac-calculator/",
+        "category": "Tools",
+        "description": "Find the correct sign by full birth date."
+      },
+      {
+        "title": "Chinese Zodiac Years Chart",
+        "path": "/chinese-zodiac-years/",
+        "category": "Year Guides",
+        "description": "Compare animals, elements, and Lunar New Year dates."
+      },
+      {
+        "title": "Chinese Zodiac Elements",
+        "path": "/chinese-zodiac-elements/",
+        "category": "Meaning Guides",
+        "description": "Understand the 60-year element cycle."
+      }
+    ],
+    "table": {
+      "title": "How to use 2026 Chinese Zodiac Sign as a decision page",
+      "headers": [
+        "Reader need",
+        "What to check",
+        "Next action"
+      ],
+      "rows": [
+        [
+          "Quick answer",
+          "Confirm the main fact or product use case",
+          "Read the lead answer and save the exact page"
+        ],
+        [
+          "Accuracy",
+          "Check date, character, material, or construction detail",
+          "Use the related guide before deciding"
+        ],
+        [
+          "Buying or planning",
+          "Compare practical fit instead of decorative wording",
+          "Move to product, tutorial, or lookup pages"
+        ],
+        [
+          "Deeper research",
+          "Keep evidence and interpretation separate",
+          "Record the source and continue through the guide cluster"
+        ]
+      ]
+    }
+  },
+  {
+    "title": "Chinese Zodiac by Year and Month: Why Lunar New Year Changes the Answer",
+    "path": "/guides/chinese-zodiac-by-year-and-month/",
+    "description": "Understand Chinese zodiac by year and month, why Lunar New Year matters, and how to avoid wrong signs for January and February birthdays.",
+    "h1": "Chinese Zodiac by Year and Month: Why Lunar New Year Changes the Answer",
+    "intro": "Chinese zodiac by year and month is useful because the month near Lunar New Year can change the animal sign for early-year birthdays.",
+    "answer": "Chinese zodiac lookup should use the full birth date, especially month and day, because the zodiac year begins at Lunar New Year rather than January 1.",
+    "details": [
+      "This article focuses on Chinese Zodiac by Year and Month because the search intent is practical. The reader needs a direct answer, enough context to avoid a weak assumption, and a clear next step inside the site.",
+      "A short definition is not enough for this topic. Useful content has to separate the main answer from details such as date boundaries, material quality, spelling variants, product use case, or symbolic limits.",
+      "The page is written as both a standalone answer and a routing page. It gives the reader enough information to act, then points toward broader guides, tools, and related pages when the question needs more depth.",
+      "Use the information as educational guidance. It can support cultural learning, buying decisions, family-name research, craft planning, or content planning, but it should not be treated as legal, medical, financial, genealogy-certified, or guaranteed luck advice.",
+      "The first practical check is whether the birthday falls in January or early February. Those dates often need more care than birthdays later in the year.",
+      "The second check is whether the reader wants the animal sign only or the full animal-and-element result from the 60-year cycle."
+    ],
+    "sections": [
+      {
+        "title": "Start with the real question behind Chinese Zodiac by Year and Month",
+        "paragraphs": [
+          "Most visitors searching for Chinese Zodiac by Year and Month are not looking for a decorative paragraph. They want to make a decision, confirm a fact, choose a product, understand a cultural symbol, or avoid a common mistake.",
+          "That means the useful answer should begin with what changes the outcome. A page can rank for a keyword and still disappoint the reader if it hides the practical decision behind vague background writing."
+        ]
+      },
+      {
+        "title": "What to check first",
+        "paragraphs": [
+          "Check the Lunar New Year date for the birth year before assigning the animal sign.",
+          "Check whether the month question is about accuracy, personality meaning, compatibility, or a year chart."
+        ]
+      },
+      {
+        "title": "How to read the answer responsibly",
+        "paragraphs": [
+          "After the first answer, keep the evidence layers separate. A zodiac phrase, surname spelling, product label, or craft name can be a useful clue, but the reliable conclusion depends on the supporting details around it.",
+          "This is where internal links matter. A visitor with a broad question should move to a main guide, while a visitor with a narrow buying, lookup, or tutorial question should continue to a focused page."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "The most common mistake is using only the Western calendar year. That can produce the wrong animal for early-year birthdays.",
+          "Another mistake is mixing monthly astrology with Chinese zodiac year lookup. The zodiac animal is tied to the zodiac year, while other systems may use different month-based rules."
+        ]
+      },
+      {
+        "title": "Best use cases",
+        "paragraphs": [
+          "The best use case for this page is a reader who needs a reliable reference before taking action. That action may be buying a lightweight product, checking a date, planning a gift, choosing craft supplies, or deciding whether a deeper guide is needed.",
+          "A second use case is topical authority. The page supports the larger site cluster by answering a focused query in enough detail, then linking the visitor toward more complete tools and reference pages."
+        ]
+      },
+      {
+        "title": "Decision framework",
+        "paragraphs": [
+          "Use a simple three-part framework: confirm the main fact, check the detail that can change the answer, then choose the next page or action. This keeps the article useful instead of turning it into a loose essay.",
+          "If the question involves a product, inspect construction, size, material, photos, and use case. If it involves culture, keep the wording bounded. If it involves family history, verify the character or source. If it involves a tool result, preserve the input date or context that produced the answer."
+        ]
+      },
+      {
+        "title": "When to use a broader guide",
+        "paragraphs": [
+          "Use this page when the question is specifically about Chinese Zodiac by Year and Month. Use a broader guide when the reader needs comparison, background, or a complete step-by-step workflow.",
+          "The broader guide is especially useful when several similar terms overlap. A product buyer may need comparison pages, a learner may need tutorial order, and a researcher may need meaning, origin, pronunciation, and source notes together."
+        ]
+      },
+      {
+        "title": "Practical next step",
+        "paragraphs": [
+          "If the birthday is near Lunar New Year, use the calculator instead of guessing from a simple chart.",
+          "Next, compare the year chart, zodiac calculator, and animal pages so the result stays accurate and useful."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese Zodiac by Year and Month?",
+        "a": "Chinese zodiac lookup should use the full birth date, especially month and day, because the zodiac year begins at Lunar New Year rather than January 1."
+      },
+      {
+        "q": "Can Chinese Zodiac by Year and Month be used for buying or paid products later?",
+        "a": "Yes, if the page keeps practical checks visible. Product or paid-report content should explain the decision path instead of relying on decorative wording."
+      },
+      {
+        "q": "Why is this page longer than a short definition?",
+        "a": "Because the reader usually needs tradeoffs, cautions, examples, and next steps. Thin pages are weak for SEO and weak for user trust."
+      },
+      {
+        "q": "What should I read next?",
+        "a": "Next, compare the year chart, zodiac calculator, and animal pages so the result stays accurate and useful."
+      }
+    ],
+    "related": [
+      {
+        "title": "Chinese Zodiac Calculator",
+        "path": "/chinese-zodiac-calculator/",
+        "category": "Tools",
+        "description": "Find the correct sign by full birth date."
+      },
+      {
+        "title": "Chinese Zodiac Years Chart",
+        "path": "/chinese-zodiac-years/",
+        "category": "Year Guides",
+        "description": "Compare animals, elements, and Lunar New Year dates."
+      },
+      {
+        "title": "Chinese Zodiac Elements",
+        "path": "/chinese-zodiac-elements/",
+        "category": "Meaning Guides",
+        "description": "Understand the 60-year element cycle."
+      }
+    ],
+    "table": {
+      "title": "How to use Chinese Zodiac by Year and Month as a decision page",
+      "headers": [
+        "Reader need",
+        "What to check",
+        "Next action"
+      ],
+      "rows": [
+        [
+          "Quick answer",
+          "Confirm the main fact or product use case",
+          "Read the lead answer and save the exact page"
+        ],
+        [
+          "Accuracy",
+          "Check date, character, material, or construction detail",
+          "Use the related guide before deciding"
+        ],
+        [
+          "Buying or planning",
+          "Compare practical fit instead of decorative wording",
+          "Move to product, tutorial, or lookup pages"
+        ],
+        [
+          "Deeper research",
+          "Keep evidence and interpretation separate",
+          "Record the source and continue through the guide cluster"
+        ]
+      ]
+    }
+  }
+];
+
+for (const article of dailyArticles20260710) {
+  await writePage(article.path, dailyArticlePage20260706(article));
 }
 
 function clientScript() {
