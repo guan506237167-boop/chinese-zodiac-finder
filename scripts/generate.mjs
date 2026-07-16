@@ -5,7 +5,7 @@ const SITE = {
   name: "Chinese Zodiac Guide",
   url: "https://www.chinesezodiacfinder.com",
   description: "Find your Chinese zodiac sign, zodiac year, animal meaning, and traditional compatibility with a fast cultural reference tool.",
-  assetVersion: "20260628-01"
+  assetVersion: "20260716-conversion-01"
 };
 const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || "G-VB9E7T2VCF";
 
@@ -59,10 +59,155 @@ for (const asset of await readdir("public/assets")) {
   await copyFile(join("public/assets", asset), join("dist/assets", asset));
 }
 await copyFile("public/google1c43509ea14adc51.html", "dist/google1c43509ea14adc51.html");
+await copyFile("public/BingSiteAuth.xml", "dist/BingSiteAuth.xml");
 await copyFile("public/_headers", "dist/_headers");
 
 const pages = [];
+
+const geoMicroPatches20260714 = new Map([
+  [
+    "/guides/2026-chinese-zodiac-sign/",
+    {
+      "path": "/guides/2026-chinese-zodiac-sign/",
+      "quick": "Quick answer: 2026 is a Fire Horse year in the Chinese zodiac, but the sign applies from the 2026 Lunar New Year boundary rather than January 1, so early-year birthdays still need a date check.",
+      "facts": [
+        [
+          "Main topic",
+          "2026 Chinese zodiac sign"
+        ],
+        [
+          "First check",
+          "Confirm the Lunar New Year boundary before assigning the sign"
+        ],
+        [
+          "Cultural layer",
+          "Fire Horse combines the Horse animal with the Fire element"
+        ],
+        [
+          "Use limit",
+          "Cultural reference, not a prediction about personality or outcomes"
+        ]
+      ],
+      "evidence": "Use the lunar year boundary, animal cycle, and five-element cycle as the evidence base before reading meaning notes.",
+      "examples": "birthday lookup, classroom references, 2026 planning pages, cultural cards, and zodiac product copy",
+      "mistakes": "Do not assign Fire Horse to every person born in Gregorian 2026, and do not describe the sign as fixed fate.",
+      "faq": [
+        [
+          "Is everyone born in 2026 a Fire Horse?",
+          "No. People born before the 2026 Lunar New Year boundary usually belong to the previous zodiac year."
+        ],
+        [
+          "Can I use this sign for a gift?",
+          "Yes, if the date is checked first and the wording stays symbolic and modest."
+        ]
+      ],
+      "dataAnchor": "2026 Chinese zodiac sign decision = Lunar New Year boundary + Horse animal + Fire element + responsible interpretation."
+    }
+  ],
+  [
+    "/guides/chinese-zodiac-lucky-colors/",
+    {
+      "path": "/guides/chinese-zodiac-lucky-colors/",
+      "quick": "Quick answer: Chinese zodiac lucky colors are best used as symbolic gift, decor, or cultural wording choices, not as guaranteed luck claims.",
+      "facts": [
+        [
+          "Main topic",
+          "Chinese zodiac lucky colors"
+        ],
+        [
+          "First check",
+          "Identify the animal or element context before choosing a color"
+        ],
+        [
+          "Practical use",
+          "Gifts, cards, classroom activities, decor, and product themes"
+        ],
+        [
+          "Safety note",
+          "Avoid promising wealth, health, romance, or success from a color"
+        ]
+      ],
+      "evidence": "Color meaning is a symbolic cultural layer, so it should be tied to the animal, element, occasion, and wording context.",
+      "examples": "birthday cards, festival decor, zodiac bracelets, classroom color charts, and product labels",
+      "mistakes": "Do not treat one color chart as universal evidence for every animal, element, or family custom.",
+      "faq": [
+        [
+          "Are zodiac lucky colors fixed rules?",
+          "No. They are symbolic references and may vary by source, element, occasion, and local custom."
+        ],
+        [
+          "How should I use lucky colors in product copy?",
+          "Use color as a design or blessing motif, and avoid guaranteed result claims."
+        ]
+      ],
+      "dataAnchor": "Chinese zodiac lucky color decision = animal or element context + occasion + symbolic wording + no guaranteed outcome."
+    }
+  ]
+]);
+
+function applyGeoMicroPatch20260714(path, html) {
+  const patch = geoMicroPatches20260714.get(path);
+  if (!patch || html.includes('data-geo-micro-patch="20260714"')) return html;
+  const block = blockForGeoMicroPatch20260714(patch);
+  return html.includes("</main>") ? html.replace("</main>", `${block}</main>`) : `${html}${block}`;
+}
+
+function blockForGeoMicroPatch20260714(patch) {
+  const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
+  const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
+  return `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260714">
+    <h2>Quick Answer and Evidence Check</h2>
+    <p>${escapeHtml(patch.quick)}</p>
+    <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
+    <p><strong>Source note:</strong> ${escapeHtml(patch.evidence)}</p>
+    <p><strong>Examples and use cases:</strong> ${escapeHtml(patch.examples)}.</p>
+    <p><strong>Common mistake:</strong> ${escapeHtml(patch.mistakes)}</p>
+    <h2>GEO FAQ</h2>
+    ${faq}
+    <p><strong>Data anchor:</strong> ${escapeHtml(patch.dataAnchor)}</p>
+  </section>`;
+}
+
+
 const guides = [
+  {
+  "title": "Chinese Zodiac Necklace Meaning: Animal Signs, Gifts, and Buying Checks",
+  "path": "/guides/chinese-zodiac-necklace/",
+  "category": "Gift Guides",
+  "description": "Choose a Chinese zodiac necklace by animal sign accuracy, material, pendant size, personalization, and safe gift wording."
+},
+  {
+  "title": "Chinese Zodiac Printable Chart: Animals, Years, Classrooms, and Gift Use",
+  "path": "/guides/chinese-zodiac-printable-chart/",
+  "category": "Education Guides",
+  "description": "Use a Chinese zodiac printable chart for animals, year lookup, classrooms, gifts, wall art, and accurate date-boundary notes."
+},
+  {
+  "title": "Chinese Zodiac Baby Gifts: Animal Signs, Dates, and Safe Personalization",
+  "path": "/guides/chinese-zodiac-baby-gifts/",
+  "category": "Gift Guides",
+  "description": "Choose Chinese zodiac baby gifts with the correct animal sign, Lunar New Year date check, safe wording, and personalization notes."
+},
+  {
+  "title": "Chinese Zodiac Wall Art: Animal Prints, Family Sets, and Buying Checks",
+  "path": "/guides/chinese-zodiac-wall-art/",
+  "category": "Gift Guides",
+  "description": "Choose Chinese zodiac wall art by animal sign accuracy, family sets, print style, nursery use, and safe cultural wording."
+},
+  {
+  "title": "Chinese Zodiac Birthday Gifts: Animal Signs and Safe Wording",
+  "path": "/guides/chinese-zodiac-birthday-gifts/",
+  "category": "Gift Guides",
+  "description": "Choose Chinese zodiac birthday gifts with animal signs, Lunar New Year checks, safe wording, and practical personalization ideas."
+},
+  {
+  "title": "Chinese Zodiac Classroom Activities: Animals, Years, and Culture",
+  "path": "/guides/chinese-zodiac-classroom-activities/",
+  "category": "Education Guides",
+  "description": "Plan Chinese zodiac classroom activities with animal years, culture notes, worksheets, discussion prompts, and respectful teaching limits."
+},
+  {"title": "1990 Chinese Zodiac Sign", "path": "/guides/1990-chinese-zodiac/", "category": "Year Guides", "description": "Check 1990 Metal Horse dates, meaning, compatibility notes, and Lunar New Year boundary."},
+  {"title": "2002 Chinese Zodiac Sign", "path": "/guides/2002-chinese-zodiac/", "category": "Year Guides", "description": "Check 2002 Water Horse dates, meaning, compatibility notes, and responsible zodiac use."},
   {
     title: "What Chinese Zodiac Sign Am I?",
     path: "/guides/what-chinese-zodiac-sign-am-i/",
@@ -130,6 +275,17 @@ const guides = [
     description: "Learn the 1988 Chinese zodiac sign, Earth Dragon meaning, Lunar New Year start date, and date-boundary checks."
   },
   {
+    title: "1985 Year of the Chinese Zodiac",
+    path: "/guides/1985-year-of-the-chinese-zodiac/",
+    category: "Year Guides",
+    description: "Check the 1985 Wood Ox year, Lunar New Year boundary, element meaning, and related zodiac notes."
+  },
+  {
+    title: "1986 Year of the Chinese Zodiac",
+    path: "/guides/1986-year-of-the-chinese-zodiac/",
+    category: "Year Guides",
+    description: "Check the 1986 Fire Tiger year, Lunar New Year boundary, element meaning, and related zodiac notes."
+  },{
     title: "1990 Year of the Chinese Zodiac",
     path: "/guides/1990-year-of-the-chinese-zodiac/",
     category: "Year Guides",
@@ -166,6 +322,17 @@ const guides = [
     description: "1999 Chinese zodiac sign, Earth Rabbit meaning, Lunar New Year boundary, and related lookup notes."
   },
   {
+    title: "2000 Year of the Chinese Zodiac",
+    path: "/guides/2000-year-of-the-chinese-zodiac/",
+    category: "Year Guides",
+    description: "Check the 2000 Metal Dragon year, Lunar New Year boundary, element meaning, and related zodiac notes."
+  },
+  {
+    title: "2001 Year of the Chinese Zodiac",
+    path: "/guides/2001-year-of-the-chinese-zodiac/",
+    category: "Year Guides",
+    description: "Check the 2001 Metal Snake year, Lunar New Year boundary, element meaning, and related zodiac notes."
+  },{
     title: "Chinese Birth Signs by Birthday",
     path: "/guides/chinese-birth-signs/",
     category: "Calculator Guides",
@@ -223,6 +390,10 @@ const guides = [
   { title: 'Chinese Zodiac Compatibility Chart', path: '/guides/chinese-zodiac-compatibility-chart/', category: 'Compatibility Guides', description: 'Read animal matches with responsible limits.' },
   { title: 'Chinese Zodiac Lucky Colors', path: '/guides/chinese-zodiac-lucky-colors/', category: 'Meaning Guides', description: 'Use zodiac colors for gifts and decor responsibly.' },
   { title: '2003 Year of the Chinese Zodiac', path: '/guides/2003-year-of-the-chinese-zodiac/', category: 'Year Guides', description: 'Understand the 2003 Goat year and date boundaries.' },
+  { title: '2026 Chinese Zodiac Sign', path: '/guides/2026-chinese-zodiac-sign/', category: 'Year Guides', description: 'Check the 2026 Chinese zodiac sign, Fire Horse meaning, and Lunar New Year boundary.' },
+  { title: 'Chinese Zodiac by Year and Month', path: '/guides/chinese-zodiac-by-year-and-month/', category: 'Calculator Guides', description: 'Use year and month together to avoid common Chinese zodiac date-boundary mistakes.' },
+  { title: '1944 Chinese Zodiac', path: '/guides/1944-chinese-zodiac/', category: 'Year Guides', description: 'Understand the 1944 Chinese zodiac sign, Wood Monkey context, and birth-date boundary.' },
+  { title: 'Earth Snake Chinese Zodiac', path: '/guides/chinese-zodiac-earth-snake/', category: 'Element Guides', description: 'Read Earth Snake years, element meaning, personality notes, and date-boundary checks.' },
 ];
 
 function buildZodiacYears(start, end, seed) {
@@ -570,6 +741,7 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(description)}">
+  <meta name="msvalidate.01" content="CD1EE06A487E34A5FCCDC69F25C516E7">
   <link rel="canonical" href="${canonical}">
   <meta property="og:title" content="${escapeHtml(title)}">
   <meta property="og:description" content="${escapeHtml(description)}">
@@ -578,6 +750,7 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
   <meta property="og:image" content="${SITE.url}/assets/zodiac-wheel.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="/styles.css?v=${SITE.assetVersion}">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1609779333813540" crossorigin="anonymous"></script>
   ${analyticsSnippet()}
   ${schema}
 </head>
@@ -620,7 +793,7 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
         <span>Guides</span>
         <a href="/chinese-zodiac-years/">Year Chart</a>
         <a href="/chinese-zodiac-animals/">Animals</a>
-        <a href="/chinese-zodiac-faq/">FAQ</a>
+        <a href="/faq/">FAQ</a>
       </div>
       <div>
         <span>Site</span>
@@ -634,6 +807,24 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
   <script src="/calculator.js?v=${SITE.assetVersion}" defer></script>
 </body>
 </html>`;
+}
+
+function conversionReportCtaBlock({ compact = false, context = "general" } = {}) {
+  const variants = {
+    calculator: { eyebrow: "Paid report", title: "Get the complete zodiac report after your free result", text: "The free calculator confirms the animal, element, and Lunar New Year boundary. The paid report adds a structured reading with practical context, compatibility limits, lucky-symbol notes, and responsible interpretation." },
+    article: { eyebrow: "Next step", title: "Need a personal Chinese zodiac report?", text: "If you are checking a birthday, confirm the full date with the calculator first. After the result appears, you can unlock a complete report for the exact animal, element, and year boundary." },
+    sidebar: { eyebrow: "Personal report", title: "Full zodiac report", text: "Use the calculator first, then unlock the complete report from your result." },
+    home: { eyebrow: "Paid report ready", title: "Free sign lookup, optional full report", text: "Start with the free calculator. If the result matters for a gift, family note, compatibility question, or personal reading, unlock the complete report after the result." },
+    general: { eyebrow: "Full report", title: "Turn a quick zodiac answer into a complete report", text: "Use the free calculator first, then unlock a structured report with animal, element, date-boundary, compatibility, and lucky-symbol context." }
+  };
+  const copy = variants[context] || variants.general;
+  return `<section class="${compact ? "sidebar-card compact conversion-report-card" : "content-section conversion-report-card"}">
+    <p class="eyebrow">${copy.eyebrow}</p>
+    <h2>${copy.title}</h2>
+    <p>${copy.text}</p>
+    <a class="button-link" href="/chinese-zodiac-calculator/#calculator">Open free calculator</a>
+    <small>Payment is optional and starts only after the free calculator result is generated.</small>
+  </section>`;
 }
 
 function analyticsSnippet() {
@@ -692,8 +883,9 @@ function zodiacHeroWheel() {
 }
 
 function guideCard(guide) {
-  return `<a class="guide-card" href="${guide.path}" data-guide-card data-guide-category="${slugify(guide.category)}">
-    <span>${escapeHtml(guide.category)}</span>
+  const category = guide.category || "Related";
+  return `<a class="guide-card" href="${guide.path}" data-guide-card data-guide-category="${slugify(category)}">
+    <span>${escapeHtml(category)}</span>
     <strong>${escapeHtml(guide.title)}</strong>
     <p>${escapeHtml(guide.description)}</p>
   </a>`;
@@ -756,6 +948,7 @@ function articleSidebarBlock() {
         <span>${escapeHtml(item.description)}</span>
       </a>`).join("")}</div>
     </section>
+    ${conversionReportCtaBlock({ compact: true, context: "sidebar" })}
     <section class="sidebar-card compact">
       <p class="eyebrow">Tools</p>
       <a class="button-link" href="/chinese-zodiac-calculator/">Calculator</a>
@@ -791,17 +984,232 @@ function relatedGuidesBlock(title, items) {
   </section>`;
 }
 
+
+
+
+const geoMicroPatches20260715 = new Map([
+  [
+    "/chinese-zodiac-calculator/",
+    {
+      "path": "/chinese-zodiac-calculator/",
+      "quick": "Quick answer: A Chinese zodiac calculator needs the full birth date, not only the Gregorian birth year, because the zodiac year changes at Lunar New Year rather than January 1.",
+      "facts": [
+        [
+          "Main task",
+          "Find a Chinese zodiac animal from a birth date"
+        ],
+        [
+          "Required input",
+          "Birth year plus month and day for boundary cases"
+        ],
+        [
+          "Key boundary",
+          "Lunar New Year, which changes date each year"
+        ],
+        [
+          "Use limit",
+          "Cultural calendar lookup, not a personality or fate diagnosis"
+        ]
+      ],
+      "evidence": "Check the dated Lunar New Year boundary for the birth year before mapping the date to the 12-animal cycle.",
+      "examples": "early-January birthdays, Lunar New Year birthdays, family sign comparisons, classroom lookups, and gift personalization",
+      "mistakes": "Do not assign the animal from the Gregorian year alone when the birthday falls before that year's Lunar New Year.",
+      "faq": [
+        [
+          "Why does a calculator ask for my full birth date?",
+          "It needs the date to handle January and February birthdays around Lunar New Year."
+        ],
+        [
+          "Does the result predict personality?",
+          "No. It identifies a traditional calendar sign; personality claims should be treated as cultural interpretation."
+        ]
+      ],
+      "dataAnchor": "Zodiac calculator result = full birth date + verified Lunar New Year boundary + 12-animal year cycle."
+    }
+  ],
+  [
+    "/chinese-zodiac-compatibility/",
+    {
+      "path": "/chinese-zodiac-compatibility/",
+      "quick": "Quick answer: Chinese zodiac compatibility is a traditional comparison of two animal signs, but it should be read as a cultural conversation guide rather than a score that predicts a relationship.",
+      "facts": [
+        [
+          "Main task",
+          "Compare two Chinese zodiac animal signs"
+        ],
+        [
+          "First check",
+          "Confirm both signs using full birth dates"
+        ],
+        [
+          "Useful output",
+          "Common strengths, friction points, and communication prompts"
+        ],
+        [
+          "Use limit",
+          "Not evidence of relationship success or failure"
+        ]
+      ],
+      "evidence": "Compatibility notes come from traditional symbolic relationships among the 12 animals; real relationships depend on people, context, and communication.",
+      "examples": "couples, friends, family members, work partners, and classroom cultural comparisons",
+      "mistakes": "Do not end or judge a relationship from one animal-pair label, and do not skip the Lunar New Year date check.",
+      "faq": [
+        [
+          "Are incompatible zodiac signs doomed?",
+          "No. The labels are traditional symbolism, not a reliable prediction of a real relationship."
+        ],
+        [
+          "Can two people with the same animal sign be compatible?",
+          "Yes. A shared sign may suggest familiar traits in tradition, but the actual relationship matters more."
+        ]
+      ],
+      "dataAnchor": "Compatibility reading = two date-verified animal signs + traditional pair symbolism + real-world communication context."
+    }
+  ]
+]);
+
+function applyGeoMicroPatch20260715(path, html) {
+  const patch = geoMicroPatches20260715.get(path);
+  if (!patch || html.includes('data-geo-micro-patch="20260715"')) return html;
+  const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
+  const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
+  const block = `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260715">
+    <h2>Quick Answer and Evidence Check</h2><p>${escapeHtml(patch.quick)}</p>
+    <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
+    <p><strong>Source note:</strong> ${escapeHtml(patch.evidence)}</p>
+    <p><strong>Examples and use cases:</strong> ${escapeHtml(patch.examples)}.</p>
+    <p><strong>Common mistake:</strong> ${escapeHtml(patch.mistakes)}</p>
+    <h2>GEO FAQ</h2>${faq}
+    <p><strong>Data anchor:</strong> ${escapeHtml(patch.dataAnchor)}</p>
+  </section>`;
+  return html.includes("</main>") ? html.replace("</main>", `${block}</main>`) : `${html}${block}`;
+}
+
+
+const geoMicroPatches20260716 = new Map([
+  [
+    "/chinese-zodiac-years/",
+    {
+      "path": "/chinese-zodiac-years/",
+      "quick": "Quick answer: Chinese zodiac years follow a repeating 12-animal cycle, but a birth sign should be checked against the dated Lunar New Year boundary rather than January 1.",
+      "facts": [
+        [
+          "Main task",
+          "Match a year or birth date to a zodiac animal"
+        ],
+        [
+          "Cycle length",
+          "12 animal years"
+        ],
+        [
+          "Date boundary",
+          "Lunar New Year, not January 1"
+        ],
+        [
+          "Use limit",
+          "Calendar and cultural reference, not a factual personality test"
+        ]
+      ],
+      "evidence": "Use a dated lunar calendar or an authoritative Lunar New Year table when checking January and February births.",
+      "examples": "birth-sign lookup, classroom timelines, family comparisons, festival planning, and personalized gifts",
+      "mistakes": "Do not label every person born in one Gregorian year with the same animal without checking the New Year date.",
+      "faq": [
+        [
+          "Do zodiac years begin on January 1?",
+          "No. The traditional zodiac year changes at Lunar New Year, whose Gregorian date varies."
+        ],
+        [
+          "When does the same animal return?",
+          "The animal repeats every 12 years, while the broader stem-branch cycle repeats every 60 years."
+        ]
+      ],
+      "dataAnchor": "Zodiac-year lookup = full date + verified Lunar New Year boundary + 12-animal cycle."
+    }
+  ],
+  [
+    "/chinese-zodiac-elements/",
+    {
+      "path": "/chinese-zodiac-elements/",
+      "quick": "Quick answer: Chinese zodiac element labels combine an animal year with one of five phases—Wood, Fire, Earth, Metal, or Water—within the traditional 60-year stem-branch cycle.",
+      "facts": [
+        [
+          "Main task",
+          "Identify the element paired with a zodiac year"
+        ],
+        [
+          "Five phases",
+          "Wood, Fire, Earth, Metal, and Water"
+        ],
+        [
+          "Pairing pattern",
+          "Each element is associated with two consecutive year stems"
+        ],
+        [
+          "Use limit",
+          "Traditional classification, not scientific personality evidence"
+        ]
+      ],
+      "evidence": "Verify the year's heavenly stem and the Lunar New Year boundary before assigning an element-animal combination.",
+      "examples": "Wood Dragon, Fire Horse, Earth Dog, Metal Rat, and Water Rabbit year labels",
+      "mistakes": "Do not infer the element from the animal alone; the same animal returns with different elements across the 60-year cycle.",
+      "faq": [
+        [
+          "Does each zodiac animal have only one element?",
+          "No. Every animal can pair with each of the five phases across the 60-year cycle."
+        ],
+        [
+          "Why can January birthdays have the previous year's element?",
+          "Because the traditional year may not have changed until Lunar New Year."
+        ]
+      ],
+      "dataAnchor": "Element-animal label = full date + heavenly stem + earthly branch + Lunar New Year boundary."
+    }
+  ]
+]);
+
+function applyGeoMicroPatch20260716(path, html) {
+  const patch = geoMicroPatches20260716.get(path);
+  if (!patch || html.includes('data-geo-micro-patch="20260716"')) return html;
+  const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
+  const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
+  const block = `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260716">
+    <h2>Quick Answer and Evidence Check</h2><p>${escapeHtml(patch.quick)}</p>
+    <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
+    <p><strong>Source note:</strong> ${escapeHtml(patch.evidence)}</p>
+    <p><strong>Examples and use cases:</strong> ${escapeHtml(patch.examples)}.</p>
+    <p><strong>Common mistake:</strong> ${escapeHtml(patch.mistakes)}</p>
+    <h2>GEO FAQ</h2>${faq}
+    <p><strong>Data anchor:</strong> ${escapeHtml(patch.dataAnchor)}</p>
+  </section>`;
+  return html.includes("</main>") ? html.replace("</main>", `${block}</main>`) : `${html}${block}`;
+}
+
+function enhanceThinContent(path, html) {
+  let extra = "";
+  if (["/chinese-zodiac-faq/", "/faq/"].includes(path)) {
+    extra = `<section class="content-section article-body"><h2>How to use these Chinese zodiac answers</h2><p>Use the FAQ as a starting point, not as the only page to read. A reader usually arrives with one of three questions: what is my animal sign, why does the Lunar New Year boundary matter, or how should I interpret animals, elements, and compatibility without treating them as fixed fate. The useful path is to answer the quick question first, then open the calculator, the year chart, or the elements guide for context.</p><p>For SEO quality, this page needs more than short answers. It should explain how zodiac year lookup, animal meaning, five-element notes, and compatibility pages connect to one another. If a birthday is close to Lunar New Year, the calculator is the safest next step. If the reader already knows the animal, the animal and element pages give better context than a one-line meaning. This keeps the FAQ practical for visitors and clearer for search engines.</p></section>`;
+  } else if (path === "/chinese-zodiac-calculator/") {
+    extra = `<section class="content-section article-body"><h2>Reading the calculator result correctly</h2><p>The calculator should be used when the birth date is near January or February, because the Chinese zodiac year follows the Lunar New Year rather than January 1. After the result appears, check the animal page, the matching year page, and the five-element note before drawing conclusions. This prevents the common mistake of using only the Western calendar year and assigning the wrong sign.</p><p>The result is a cultural reference, not a prediction. It helps readers understand zodiac animals, traditional year labels, and compatibility language in a structured way. For a fuller reading, combine the animal sign with the year boundary, element cycle, and practical context such as family customs, festival timing, or language used in gifts and celebrations.</p></section>`;
+  } else if (path === "/chinese-zodiac-elements/") {
+    extra = `<section class="content-section article-body"><h2>Why elements should be read with the animal sign</h2><p>The five elements add texture to a zodiac reading, but they should not replace the animal sign or the Lunar New Year boundary. A useful reading checks the animal first, then the element, then the year context. This order keeps the explanation clear and avoids turning one symbolic layer into an absolute rule.</p></section>`;
+  } else if (/^\/chinese-zodiac\/20\d{2}\/$/.test(path) || path === "/guides/dragon-chinese-zodiac/") {
+    extra = `<section class="content-section article-body"><h2>Use this page with the wider zodiac guide</h2><p>This page is strongest when it is read together with the calculator, animal guide, element guide, and compatibility pages. A single year or animal page can explain the main pattern, but the full context depends on Lunar New Year timing, the element cycle, and how the symbol is used in modern culture. Use the page as a reference point, then compare the linked guides before making a final interpretation.</p></section>`;
+  }
+  if (extra) extra = extra.replace("</section>", `<p>When reviewing the answer, check whether the page names the calendar boundary, explains the relevant animal or element, and links to a next page that can resolve uncertainty. That is the minimum standard for a zodiac reference page before it supports ads, AI citations, or paid report entry points.</p></section>`);
+  return extra && html.includes("</main>") ? html.replace("</main>", `${extra}</main>`) : html;
+}
+
 async function writePage(path, html) {
   const file = path === "/" ? join("dist", "index.html") : join("dist", path, "index.html");
   await mkdir(dirname(file), { recursive: true });
-  await writeFile(file, html, "utf8");
+  await writeFile(file, applyGeoMicroPatch20260716(path, applyGeoMicroPatch20260715(path, applyGeoMicroPatch20260714(path, enhanceThinContent(path, html)))), "utf8");
 }
 
 function yearsForAnimal(slug) {
   return years.filter((item) => item.animal === slug);
 }
 
-function zodiacCalculatorBlock() {
+function zodiacCalculatorBlock({ includeReportCta = false } = {}) {
   return `<section class="tool-panel" id="calculator">
     <div class="tool-copy">
       <p class="eyebrow">Free calculator</p>
@@ -821,7 +1229,8 @@ function zodiacCalculatorBlock() {
       <button type="submit">Calculate sign</button>
     </form>
     <div class="result-card" data-zodiac-result hidden></div>
-  </section>`;
+  </section>
+  ${includeReportCta ? conversionReportCtaBlock({ context: "calculator" }) : ""}`;
 }
 
 function compatibilityBlock() {
@@ -1108,6 +1517,7 @@ await writePage("/", pageLayout({
     <section class="zodiac-quick-tool">
       ${zodiacCalculatorBlock()}
     </section>
+    ${conversionReportCtaBlock({ context: "home" })}
     <section class="content-section tool-strip">
       ${yearSearchBlock()}
       ${compatibilityBlock()}
@@ -1556,6 +1966,25 @@ await yearGuideArticle({
   supportingKeywords: ["1999 chinese zodiac", "1999 chinese year", "1999 chinese sign", "1999 zodiac animal"]
 });
 
+await yearGuideArticle({
+  year: 2002,
+  title: "2002 Year of the Chinese Zodiac: Water Horse Meaning",
+  description: "Learn the 2002 Chinese zodiac sign, Water Horse meaning, Lunar New Year start date, personality associations, and compatibility context.",
+  path: "/guides/2002-year-of-the-chinese-zodiac/",
+  h1: "2002 Year of the Chinese Zodiac: Water Horse Meaning",
+  primaryKeyword: "2002 year of the Chinese zodiac",
+  supportingKeywords: ["2002 chinese zodiac", "2002 chinese year", "2002 chinese sign", "2002 zodiac animal"]
+});
+
+await yearGuideArticle({
+  year: 2004,
+  title: "2004 Year of the Chinese Zodiac: Wood Monkey Meaning",
+  description: "Learn the 2004 Chinese zodiac sign, Wood Monkey meaning, Lunar New Year start date, personality associations, and compatibility context.",
+  path: "/guides/2004-year-of-the-chinese-zodiac/",
+  h1: "2004 Year of the Chinese Zodiac: Wood Monkey Meaning",
+  primaryKeyword: "2004 year of the Chinese zodiac",
+  supportingKeywords: ["2004 chinese zodiac", "2004 chinese year", "2004 chinese sign", "2004 zodiac animal"]
+});
 await writePage("/guides/chinese-birth-signs/", pageLayout({
   title: "Chinese Birth Signs by Birthday: Find Your Zodiac Animal Correctly",
   description: "Learn how Chinese birth signs work by birthday, why Lunar New Year matters, and how to avoid the common January and February zodiac mistake.",
@@ -1949,7 +2378,7 @@ await writePage("/chinese-zodiac-calculator/", pageLayout({
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" }
   }),
   body: `
-    <section class="tool-page">${zodiacCalculatorBlock()}</section>
+    <section class="tool-page">${zodiacCalculatorBlock({ includeReportCta: true })}</section>
     ${zodiacCalculatorGuideBlock()}
     <section class="content-section article-body"><h2>How to interpret the calculator result</h2><p>Read the calculator result in layers. The animal gives the familiar 12-year sign, the element gives the 60-year-cycle context, and the Lunar New Year note explains why the result may differ from a simple year list. These three details should stay together whenever the result is used in an article, classroom note, gift idea, or personal reference.</p><p>If the result is for a child, partner, friend, or historical figure, keep the exact date visible in your notes. A result without the date is easy to misread later, especially for birthdays near Lunar New Year. The calculator is designed to reduce that risk by putting the date boundary in the same workflow as the sign answer.</p><p>After the result, choose the next page by intent. Use the animal page for meaning, the year chart for calendar comparison, the elements guide for the 60-year cycle, and compatibility pages for symbolic relationship language. This makes the calculator a starting point for structured learning rather than a one-line answer.</p></section>
     <section class="content-section">
@@ -2270,25 +2699,79 @@ for (const pair of allCompatibilityPairs()) {
   }));
 }
 
+const yearOpportunityEnhancements = new Map([
+  [2030, {
+    title: "2030 Chinese Zodiac: Year of the Metal Dog, Animal, Element, and Chinese New Year Date",
+    description: "2030 Chinese Zodiac is the Year of the Metal Dog. See the 2030 Chinese New Year animal, zodiac element, start date, and birthday boundary.",
+    searchIntentIntro: "Most 2030 searches ask one direct question first: what animal is 2030 in the Chinese zodiac? The answer is the Metal Dog, but the date boundary still matters for January and early February birthdays.",
+    faq: [
+      { q: "What animal is 2030 in the Chinese zodiac?", a: "2030 is the Year of the Dog in the Chinese zodiac. More specifically, it is a Metal Dog year." },
+      { q: "What is the 2030 Chinese New Year animal?", a: "The 2030 Chinese New Year animal is the Dog. The Dog year starts on February 3, 2030." },
+      { q: "What element is 2030 in Chinese zodiac?", a: "2030 is a Metal Dog year. The Metal element is the element paired with the Dog in the 60-year zodiac cycle." },
+      { q: "Does the 2030 Chinese zodiac year start on January 1?", a: "No. The 2030 Chinese zodiac year starts on February 3, 2030. Birthdays before that date still belong to the previous zodiac year." }
+    ],
+    relatedYears: [2028, 2029]
+  }]
+]);
+
 for (const item of years.filter((row) => row.year >= 2024 && row.year <= 2030)) {
   const animal = animalBySlug[item.animal];
+  const opportunity = yearOpportunityEnhancements.get(item.year);
+  const faqs = opportunity?.faq || [
+      { q: `What is the Chinese zodiac for ${item.year}?`, a: `${item.year} is the Year of the ${animal.name} in the Chinese zodiac.` },
+      { q: `When does the ${item.year} Chinese zodiac year start?`, a: `It starts on ${item.lunarNewYear}, the Lunar New Year date for ${item.year}.` }
+    ];
+  const opportunitySection = opportunity ? `
+      <!-- zodiac-gsc-opportunity:${item.year}:20260716 -->
+      <section class="content-section split">
+        <div>
+          <p class="eyebrow">Search answer</p>
+          <h2>What animal is ${item.year}?</h2>
+          <p>${item.year} is the Year of the ${animal.name} in the Chinese zodiac. The fuller traditional label is ${item.element} ${animal.name}, and the ${item.year} zodiac year begins on ${item.lunarNewYear}.</p>
+          <p>${opportunity.searchIntentIntro}</p>
+        </div>
+        <div class="fact-card">
+          <strong>${item.year} Chinese New Year animal</strong>
+          <span>Animal: ${animal.name}</span>
+          <span>Element: ${item.element}</span>
+          <span>Start date: ${item.lunarNewYear}</span>
+          <span>Boundary rule: not January 1</span>
+        </div>
+      </section>
+      <section class="content-section">
+        <h2>Check ${item.year} before using the animal sign</h2>
+        <p>If you are checking a birthday, use the full date. Someone born from January 1 to February 2, ${item.year} is still counted under the previous Chinese zodiac year. Someone born on or after ${item.lunarNewYear} belongs to the ${item.element} ${animal.name} year.</p>
+        <p>For a personal reading, start with the free calculator, then compare the ${animal.name} guide and the Chinese zodiac years table before using any symbolic meaning.</p>
+        <div class="button-row">
+          <a class="button-link" href="/chinese-zodiac-calculator/">Check a birth date</a>
+          <a class="button-link secondary" href="/chinese-zodiac/${animal.animal}/">Read the ${animal.name} guide</a>
+          <a class="button-link secondary" href="/chinese-zodiac-years/">View zodiac years</a>
+        </div>
+      </section>` : "";
+  const opportunityRelated = opportunity ? opportunity.relatedYears.map((year) => {
+    const related = years.find((row) => row.year === year);
+    const relatedAnimal = animalBySlug[related.animal];
+    return {
+      title: `${year} Chinese Zodiac`,
+      path: `/chinese-zodiac/${year}/`,
+      category: "Year Guides",
+      description: `${year} is the Year of the ${relatedAnimal.name}, starting on ${related.lunarNewYear}.`
+    };
+  }) : [];
   await writePage(`/chinese-zodiac/${item.year}/`, pageLayout({
-    title: `${item.year} Chinese Zodiac: Year of the ${animal.name}, Element, and Dates`,
-    description: `${item.year} is the Year of the ${animal.name}. Learn the Lunar New Year start date, element, and traditional zodiac meaning.`,
+    title: opportunity?.title || `${item.year} Chinese Zodiac: Year of the ${animal.name}, Element, and Dates`,
+    description: opportunity?.description || `${item.year} is the Year of the ${animal.name}. Learn the Lunar New Year start date, element, and traditional zodiac meaning.`,
     path: `/chinese-zodiac/${item.year}/`,
     h1: `${item.year} Chinese Zodiac`,
     intro: `${item.year} is traditionally the Year of the ${animal.name}, beginning on ${item.lunarNewYear}.`,
-  faqs: [
-      { q: `What is the Chinese zodiac for ${item.year}?`, a: `${item.year} is the Year of the ${animal.name} in the Chinese zodiac.` },
-      { q: `When does the ${item.year} Chinese zodiac year start?`, a: `It starts on ${item.lunarNewYear}, the Lunar New Year date for ${item.year}.` }
-    ],
+  faqs,
     articleSidebar: true,
     body: `
       ${articleSearchBlock()}
       <section class="content-section split">
         <div>
           <h2>Quick answer</h2>
-          <p>${item.year} is the Year of the ${animal.name}. The zodiac year begins on ${item.lunarNewYear}, not January 1.</p>
+          <p>${item.year} is the Year of the ${animal.name}. The fuller label is ${item.element} ${animal.name}. The zodiac year begins on ${item.lunarNewYear}, not January 1.</p>
           <a class="button-link" href="/chinese-zodiac/${animal.animal}/">Read the ${animal.name} guide</a>
         </div>
         <div class="fact-card">
@@ -2298,6 +2781,7 @@ for (const item of years.filter((row) => row.year >= 2024 && row.year <= 2030)) 
           <span>Starts: ${item.lunarNewYear}</span>
         </div>
       </section>
+      ${opportunitySection}
       <section class="content-section">
         <h2>Traditional meaning</h2>
         <p>${animal.meaning}</p>
@@ -2307,12 +2791,10 @@ for (const item of years.filter((row) => row.year >= 2024 && row.year <= 2030)) 
       ${relatedGuidesBlock("Related zodiac guides", [
         { title: `${animal.name} Chinese Zodiac`, path: `/chinese-zodiac/${animal.animal}/`, category: "Animal Guides", description: `${animal.name} years, meaning, and cultural associations.` },
         guides.find((guide) => guide.path === "/chinese-zodiac-years/"),
-        guides.find((guide) => guide.path === "/chinese-zodiac-elements/")
+        guides.find((guide) => guide.path === "/chinese-zodiac-elements/"),
+        ...opportunityRelated
       ].filter(Boolean))}
-      ${faqBlock([
-        { q: `What is the Chinese zodiac for ${item.year}?`, a: `${item.year} is the Year of the ${animal.name}.` },
-        { q: `Does ${item.year} start as a zodiac year on January 1?`, a: `No. It starts on ${item.lunarNewYear}, the Lunar New Year date.` }
-      ])}`
+      ${faqBlock(faqs)}`
   }));
 }
 
@@ -2404,6 +2886,38 @@ await writePage("/chinese-zodiac-faq/", pageLayout({
     <section class="content-section article-body"><h2>What to read after the FAQ</h2><p>If the question is about a birthday, open the calculator and use the full birth date. If the question is about a year, open the year chart and compare the Lunar New Year start date. If the question is about meaning, open the animal and element pages after the sign is confirmed.</p><p>This order keeps the site useful for both quick answers and deeper learning. It also prevents the most common mistake: treating a short zodiac label as a complete explanation. The FAQ gives the summary, while the related guides explain the calendar boundary, animal symbolism, element cycle, and compatibility language in more detail.</p><p>When a question involves January or February birthdays, avoid using memory or a simplified year list. Open the calculator or year chart, confirm the Lunar New Year date, and then read the sign meaning. That small extra step is the difference between a quick answer and a reliable answer.</p></section>`
 }));
 
+await writePage("/faq/", pageLayout({
+  title: "FAQ | Chinese Zodiac Finder",
+  description: "Quick access to Chinese zodiac questions about signs, years, animals, Lunar New Year boundaries, elements, and compatibility.",
+  path: "/faq/",
+  h1: "Chinese Zodiac FAQ",
+  intro: "Use this page as the general FAQ entry for Chinese Zodiac Finder.",
+  faqs: standardFaqs(),
+  body: `${articleSearchBlock()}
+    <section class="content-section article-body">
+      <h2>How this FAQ is organized</h2>
+      <p>This general FAQ keeps the simple /faq/ address available for visitors and search engines. The deeper reference version is also available at <a href="/chinese-zodiac-faq/">Chinese Zodiac FAQ</a>. Both routes help readers reach practical answers about Chinese zodiac signs, zodiac years, animal meanings, Lunar New Year boundaries, elements, and compatibility.</p>
+      <p>The most important rule is that Chinese zodiac years follow the lunisolar calendar, not a simple January to December year. A person born in January or February may belong to the previous zodiac animal if Lunar New Year had not arrived yet. That is why the calculator and year chart should be used before reading personality or compatibility notes.</p>
+    </section>
+    ${faqBlock(standardFaqs())}
+    <section class="content-section article-body">
+      <h2>Birth year questions</h2>
+      <p>For a quick answer, enter the full birth date in the Chinese zodiac calculator. For a careful answer, compare the birthday with the Lunar New Year date for that year, then open the matching animal page. This avoids the common error of assigning a zodiac sign from the Western calendar year alone.</p>
+      <p>If you only know the birth year, the year chart gives a useful starting point, but it should still be checked for early-year birthdays. The site separates quick lookup from full interpretation so a visitor can first confirm the sign, then read the cultural meaning with fewer mistakes.</p>
+      <h2>Animal and element meanings</h2>
+      <p>The twelve animals are cultural symbols used in calendars, festivals, family discussion, and popular personality language. They should be read as traditional reference material, not as scientific categories or fixed predictions. The five elements add another layer, but they should also be treated as symbolic language rather than guaranteed outcomes.</p>
+      <p>When reading an animal page, start with the confirmed sign, then compare the element, year context, and related guide pages. This gives the answer more structure than a short list of lucky colors or personality labels.</p>
+      <h2>Compatibility questions</h2>
+      <p>Compatibility pages explain traditional patterns and common pair language. They are useful for learning how the zodiac is discussed, but they should not be treated as relationship advice or a decision rule. A good compatibility answer should explain the cultural idea, the limitation, and the next page to read.</p>
+      <p>If the question is about a real relationship, use compatibility as cultural context only. The site avoids making promises about romance, marriage, business, or personal results because those claims would be misleading and weak for long-term trust.</p>
+      <h2>Best next page</h2>
+      <p>If you need your own sign, open the calculator. If you need a year list, open the zodiac years page. If you need meaning, open the animal and element pages. If you need a comparison, open compatibility after both signs are confirmed. This route keeps the FAQ useful without turning it into a dead end.</p>      <h2>FAQ quality note</h2>
+      <p>A strong zodiac FAQ should answer the immediate question and also explain what evidence the reader needs next. Short answers can be useful, but they often create mistakes when the question involves calendar boundaries, early-year birthdays, element cycles, or compatibility language. This page therefore repeats the practical route: confirm the date first, then read the meaning page, then compare related guides only after the sign is clear.</p>
+      <p>For long-term SEO and reader trust, the page should also show that the site is not built only from thin definitions. Each answer connects to a real reader task: finding a sign, checking a birth year, understanding an animal, comparing compatibility, or learning how Lunar New Year changes the result. This makes the FAQ a support page and a navigation page at the same time.</p>
+      <p>When new paid reports or downloadable products are added later, the same boundary should remain. A report can summarize zodiac symbolism, calendar context, and reading notes, but it should not promise luck, wealth, marriage, health, or fixed personal outcomes. Keeping that line clear protects trust and keeps the content suitable for a broad English-reading audience.</p>
+      <p>Use the calculator for exact lookup, the year chart for date boundaries, the animal pages for cultural meaning, the element page for cycle context, and the compatibility page only after both signs are confirmed. If a reader arrives from search with only one short question, the FAQ should still guide them toward that complete path.</p>
+    </section>`
+}));
 await writePage("/about/", simpleInfoPage({
   path: "/about/",
   h1: "About Chinese Zodiac Guide",
@@ -2979,6 +3493,7 @@ function dailyArticlePage20260706(article) {
     ${articleSearchBlock()}
     <section class="content-section article-body">
       <p class="lead-answer">${escapeHtml(article.answer)}</p>
+      ${geoPatchBlock(article)}
       ${article.details.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
     </section>
     ${article.sections.map((section) => `<section class="content-section article-body"><h2>${escapeHtml(section.title)}</h2>${section.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}</section>`).join("")}
@@ -2998,6 +3513,12 @@ function dailyArticlePage20260706(article) {
     heroLabel: "New guide",
     body
   });
+}
+
+function geoPatchBlock(article) {
+  if (!article.geoPatch) return "";
+  const facts = article.geoPatch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
+  return `<div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div><p><strong>${escapeHtml(article.geoPatch.noteLabel)}:</strong> ${escapeHtml(article.geoPatch.note)}</p><p><strong>Data anchor:</strong> ${escapeHtml(article.geoPatch.dataAnchor)}</p>`;
 }
 
 for (const article of dailyArticles20260706) {
@@ -3599,6 +4120,7 @@ function simpleLegalPage({ h1, intro, sections }) {
   const path = h1 === "Privacy Policy" ? "/privacy/" : "/terms/";
   const body = `<section class="content-section article-body">
     ${sections.map((section) => `<h2>${escapeHtml(section.title)}</h2><p>${escapeHtml(section.text)}</p>`).join("")}
+    ${h1 === "Privacy Policy" ? `<h2>Cookies, analytics, and advertising partners</h2><p>This site may use standard analytics and advertising technologies to understand traffic, measure page performance, prevent abuse, and support the cost of maintaining free cultural reference tools. Advertising partners may use cookies or similar signals according to their own privacy policies. Visitors can manage cookies through their browser settings or through available consent controls when they are shown.</p><h2>How user messages are handled</h2><p>If you email the site, the message may include your email address, page URL, correction notes, and any context you choose to provide. That information is used to respond, review the issue, improve the page, or keep a basic record of business communication. The site does not ask visitors to send sensitive identity documents or private personal records for zodiac lookup.</p><h2>International visitors</h2><p>The site is written for English-speaking readers in multiple countries. Data handling may involve service providers outside the visitor region, such as hosting, analytics, email, or advertising systems. The site keeps the public experience simple and avoids account registration unless a future paid report or subscription feature requires a separate policy update.</p>` : `<h2>Responsible use of the content</h2><p>Users should treat the tools, articles, compatibility notes, lucky symbol references, and zodiac meanings as cultural and educational material. The content can help with learning and comparison, but it should not be used as a substitute for professional advice, personal judgment, or verified calendar research when exact dates matter.</p><h2>Affiliate, advertising, and paid features</h2><p>The site may add advertising, affiliate links, digital reports, or paid tools in the future. Any commercial feature should keep the same editorial boundary: cultural interpretation can be explained, but no page should promise guaranteed luck, wealth, health, romance, or life outcomes.</p><h2>How editorial updates are handled</h2><p>Pages may be corrected, expanded, reorganized, or retired when better information is available or when a topic becomes clearer through reader feedback. Internal links, page titles, and tool explanations may also be updated to improve navigation and search visibility.</p>`}
     <p>Last updated: 2026-06-27.</p>
   </section>`;
   return pageLayout({
@@ -3614,6 +4136,7 @@ function simpleLegalPage({ h1, intro, sections }) {
 function simpleInfoPage({ path, h1, title, intro, sections }) {
   const body = `<section class="content-section article-body">
     ${sections.map((section) => `<h2>${escapeHtml(section.title)}</h2><p>${escapeHtml(section.text)}</p>`).join("")}
+    ${h1 === "Privacy Policy" ? `<h2>Cookies, analytics, and advertising partners</h2><p>This site may use standard analytics and advertising technologies to understand traffic, measure page performance, prevent abuse, and support the cost of maintaining free cultural reference tools. Advertising partners may use cookies or similar signals according to their own privacy policies. Visitors can manage cookies through their browser settings or through available consent controls when they are shown.</p><h2>How user messages are handled</h2><p>If you email the site, the message may include your email address, page URL, correction notes, and any context you choose to provide. That information is used to respond, review the issue, improve the page, or keep a basic record of business communication. The site does not ask visitors to send sensitive identity documents or private personal records for zodiac lookup.</p><h2>International visitors</h2><p>The site is written for English-speaking readers in multiple countries. Data handling may involve service providers outside the visitor region, such as hosting, analytics, email, or advertising systems. The site keeps the public experience simple and avoids account registration unless a future paid report or subscription feature requires a separate policy update.</p>` : `<h2>Responsible use of the content</h2><p>Users should treat the tools, articles, compatibility notes, lucky symbol references, and zodiac meanings as cultural and educational material. The content can help with learning and comparison, but it should not be used as a substitute for professional advice, personal judgment, or verified calendar research when exact dates matter.</p><h2>Affiliate, advertising, and paid features</h2><p>The site may add advertising, affiliate links, digital reports, or paid tools in the future. Any commercial feature should keep the same editorial boundary: cultural interpretation can be explained, but no page should promise guaranteed luck, wealth, health, romance, or life outcomes.</p><h2>How editorial updates are handled</h2><p>Pages may be corrected, expanded, reorganized, or retired when better information is available or when a topic becomes clearer through reader feedback. Internal links, page titles, and tool explanations may also be updated to improve navigation and search visibility.</p>`}
     <p>Last updated: 2026-06-27.</p>
   </section>`;
   return pageLayout({
@@ -3923,6 +4446,275 @@ for (const article of dailyArticles20260710) {
   await writePage(article.path, dailyArticlePage20260706(article));
 }
 
+
+
+const dailyArticles20260711 = [
+  {
+    "title": "1944 Chinese Zodiac Sign: Wood Monkey Year, Dates, and Meaning",
+    "path": "/guides/1944-chinese-zodiac/",
+    "description": "Learn the 1944 Chinese zodiac sign, Wood Monkey meaning, Lunar New Year boundary, personality wording, and responsible interpretation.",
+    "h1": "1944 Chinese Zodiac Sign: Wood Monkey Year, Dates, and Meaning",
+    "intro": "1944 is usually discussed as a Wood Monkey year, but early-year birthdays still need the Lunar New Year boundary check.",
+    "answer": "The 1944 Chinese zodiac sign is Wood Monkey for birthdays on or after the 1944 Lunar New Year; people born before that boundary belong to the previous zodiac year.",
+    "details": [
+      "1944 Chinese zodiac is a useful topic because the visitor usually wants a practical answer, not a decorative paragraph. The page should explain the main idea early, then show what changes the result, what should be checked, and which related guide should be opened next.",
+      "The search intent is year lookup with calendar boundary and element meaning. That means the article should be concrete enough for a reader to act on it, but careful enough to avoid claims that are stronger than the evidence. Cultural reference pages need this balance because they often mix tradition, modern search behavior, and possible commercial paths.",
+      "The first check is the 1944 Lunar New Year start date before assigning the Monkey sign. If this point is missing, the visitor may leave with an answer that looks complete but fails in the exact situation that brought them to the page. The strongest article makes that check visible near the beginning.",
+      "The second check is the Wood element layer before reading personality or lucky-symbol wording. This gives the page a practical decision layer and keeps it from becoming a thin definition. A strong page should help the reader compare options, identify risk, and move to a better next step.",
+      "The page should also support future monetization without becoming sales copy. Advertising, affiliate products, paid reports, printable guides, or direct products can be added later only if the free page already gives a useful answer on its own.",
+      "Use this article as part of the wider site cluster. It should answer one focused question, link naturally to broader guides, and avoid unsupported promises. That structure helps both visitors and search engines understand why the page exists."
+    ],
+    "sections": [
+      {
+        "title": "Start with the real question behind 1944 Chinese zodiac",
+        "paragraphs": [
+          "Most visitors searching for 1944 Chinese zodiac are trying to reduce uncertainty. They may need a year result, a buying path, a research clue, a craft decision, or a way to compare several similar pages. A useful opening should tell them what the topic means and what they should verify before trusting a simple answer.",
+          "The article should not hide the answer under broad background. Start with the direct answer, then explain the condition that can change it. This makes the page easier to read and more reliable when it is quoted by search snippets or answer engines."
+        ]
+      },
+      {
+        "title": "What to check first",
+        "paragraphs": [
+          "Check the 1944 Lunar New Year start date before assigning the Monkey sign before making a decision. This is the point most likely to change the answer, especially for visitors who arrive from a short keyword and do not yet know the full context.",
+          "Then check the Wood element layer before reading personality or lucky-symbol wording. The second check gives the reader a way to compare alternatives instead of treating the article as a one-line definition. It also creates a natural internal-link path to the next guide."
+        ]
+      },
+      {
+        "title": "How to read the answer responsibly",
+        "paragraphs": [
+          "Responsible wording matters. The page can explain symbolic meaning, product fit, family-name evidence, or calendar logic, but it should not promise guaranteed luck, confirmed ancestry, perfect results, or one universal choice for every reader.",
+          "This is also important for business use. A page that gives cautious, useful guidance can later support an ad, product card, report, or checklist. A page that exaggerates claims may create distrust and weaken the site even if it attracts clicks."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "A common mistake is assigning every 1944 birthday to Monkey from the Western calendar year alone. This mistake usually happens when the reader sees a familiar word and assumes the rest of the context is already known. The article should slow that step down and show what evidence or product detail is still needed.",
+          "Another mistake is treating Wood Monkey personality notes as fixed personal facts rather than cultural language. The better approach is to record the uncertain detail, compare the related guide, and make the next action explicit. That keeps the page useful instead of vague."
+        ]
+      },
+      {
+        "title": "Best use cases",
+        "paragraphs": [
+          "The best use case for this page is a reader who needs a focused answer before moving deeper into the site. It should work for quick reference, but it should also give enough context for people who care about accuracy, comparison, or buying decisions.",
+          "A second use case is topical authority. The page supports the site cluster by covering a specific long-tail question in depth and linking it to larger guides. That is stronger than publishing many short pages that repeat the same few sentences."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "Use the year chart and calculator if the birthday is in January or early February, then compare the Monkey and element guides. This next step should be visible before the article ends so the visitor does not have to return to search immediately.",
+          "If the topic later receives product blocks, report offers, or downloadable resources, keep the same decision logic. The commercial layer should support the reader's decision, not replace clear free guidance."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Practical decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Quick answer",
+          "Direct definition and first condition",
+          "Prevents a vague answer"
+        ],
+        [
+          "Accuracy",
+          "Date, character, material, source, or use case",
+          "Small details can change the result"
+        ],
+        [
+          "Buying or planning",
+          "Quality signals and practical fit",
+          "The best option depends on real use"
+        ],
+        [
+          "Further research",
+          "Related guide and evidence level",
+          "Keeps the next step clear"
+        ]
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What is the short answer for 1944 Chinese zodiac?",
+        "a": "The 1944 Chinese zodiac sign is Wood Monkey for birthdays on or after the 1944 Lunar New Year; people born before that boundary belong to the previous zodiac year."
+      },
+      {
+        "q": "What should I check first for 1944 Chinese zodiac?",
+        "a": "Check the 1944 Lunar New Year start date before assigning the Monkey sign first, then compare the Wood element layer before reading personality or lucky-symbol wording."
+      },
+      {
+        "q": "Is 1944 Chinese zodiac enough for a final decision?",
+        "a": "It is enough for a starting point, but important decisions should use the practical checks and related guides."
+      },
+      {
+        "q": "What should I read next?",
+        "a": "Use the year chart and calculator if the birthday is in January or early February, then compare the Monkey and element guides"
+      }
+    ],
+    "related": [
+      {
+        "title": "Chinese Zodiac Years Chart",
+        "path": "/chinese-zodiac-years/",
+        "category": "Year Guides",
+        "description": "Compare zodiac years, animals, elements, and Lunar New Year boundaries."
+      },
+      {
+        "title": "Chinese Zodiac Calculator",
+        "path": "/chinese-zodiac-calculator/",
+        "category": "Tools",
+        "description": "Check the sign by full birth date."
+      },
+      {
+        "title": "Chinese Zodiac Elements",
+        "path": "/chinese-zodiac-elements/",
+        "category": "Meaning",
+        "description": "Understand Wood, Fire, Earth, Metal, and Water."
+      }
+    ]
+  },
+  {
+    "title": "Chinese Zodiac Earth Snake: Years, Traits, and Calendar Checks",
+    "path": "/guides/chinese-zodiac-earth-snake/",
+    "description": "Understand Chinese zodiac Earth Snake years, symbolic traits, element meaning, Lunar New Year boundaries, and reading limits.",
+    "h1": "Chinese Zodiac Earth Snake: Years, Traits, and Calendar Checks",
+    "intro": "Earth Snake combines the Snake animal with the Earth element, but the exact sign still depends on Lunar New Year dates.",
+    "answer": "Chinese zodiac Earth Snake refers to Snake years paired with the Earth element in the 60-year cycle; read it as cultural symbolism and confirm the exact year boundary before applying it to a birth date.",
+    "details": [
+      "Chinese zodiac Earth Snake is a useful topic because the visitor usually wants a practical answer, not a decorative paragraph. The page should explain the main idea early, then show what changes the result, what should be checked, and which related guide should be opened next.",
+      "The search intent is element-and-animal explanation with practical birthday lookup. That means the article should be concrete enough for a reader to act on it, but careful enough to avoid claims that are stronger than the evidence. Cultural reference pages need this balance because they often mix tradition, modern search behavior, and possible commercial paths.",
+      "The first check is whether the birth date falls after Lunar New Year in the relevant Snake year. If this point is missing, the visitor may leave with an answer that looks complete but fails in the exact situation that brought them to the page. The strongest article makes that check visible near the beginning.",
+      "The second check is how the Earth element changes the traditional wording compared with other Snake years. This gives the page a practical decision layer and keeps it from becoming a thin definition. A strong page should help the reader compare options, identify risk, and move to a better next step.",
+      "The page should also support future monetization without becoming sales copy. Advertising, affiliate products, paid reports, printable guides, or direct products can be added later only if the free page already gives a useful answer on its own.",
+      "Use this article as part of the wider site cluster. It should answer one focused question, link naturally to broader guides, and avoid unsupported promises. That structure helps both visitors and search engines understand why the page exists."
+    ],
+    "sections": [
+      {
+        "title": "Start with the real question behind Chinese zodiac Earth Snake",
+        "paragraphs": [
+          "Most visitors searching for Chinese zodiac Earth Snake are trying to reduce uncertainty. They may need a year result, a buying path, a research clue, a craft decision, or a way to compare several similar pages. A useful opening should tell them what the topic means and what they should verify before trusting a simple answer.",
+          "The article should not hide the answer under broad background. Start with the direct answer, then explain the condition that can change it. This makes the page easier to read and more reliable when it is quoted by search snippets or answer engines."
+        ]
+      },
+      {
+        "title": "What to check first",
+        "paragraphs": [
+          "Check whether the birth date falls after Lunar New Year in the relevant Snake year before making a decision. This is the point most likely to change the answer, especially for visitors who arrive from a short keyword and do not yet know the full context.",
+          "Then check how the Earth element changes the traditional wording compared with other Snake years. The second check gives the reader a way to compare alternatives instead of treating the article as a one-line definition. It also creates a natural internal-link path to the next guide."
+        ]
+      },
+      {
+        "title": "How to read the answer responsibly",
+        "paragraphs": [
+          "Responsible wording matters. The page can explain symbolic meaning, product fit, family-name evidence, or calendar logic, but it should not promise guaranteed luck, confirmed ancestry, perfect results, or one universal choice for every reader.",
+          "This is also important for business use. A page that gives cautious, useful guidance can later support an ad, product card, report, or checklist. A page that exaggerates claims may create distrust and weaken the site even if it attracts clicks."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "A common mistake is reading every Snake year as identical and ignoring the element cycle. This mistake usually happens when the reader sees a familiar word and assumes the rest of the context is already known. The article should slow that step down and show what evidence or product detail is still needed.",
+          "Another mistake is turning symbolic trait notes into predictions about work, health, wealth, or relationships. The better approach is to record the uncertain detail, compare the related guide, and make the next action explicit. That keeps the page useful instead of vague."
+        ]
+      },
+      {
+        "title": "Best use cases",
+        "paragraphs": [
+          "The best use case for this page is a reader who needs a focused answer before moving deeper into the site. It should work for quick reference, but it should also give enough context for people who care about accuracy, comparison, or buying decisions.",
+          "A second use case is topical authority. The page supports the site cluster by covering a specific long-tail question in depth and linking it to larger guides. That is stronger than publishing many short pages that repeat the same few sentences."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "Confirm the sign with the calculator, then compare Snake, element, and compatibility pages only after the year is clear. This next step should be visible before the article ends so the visitor does not have to return to search immediately.",
+          "If the topic later receives product blocks, report offers, or downloadable resources, keep the same decision logic. The commercial layer should support the reader's decision, not replace clear free guidance."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Practical decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Quick answer",
+          "Direct definition and first condition",
+          "Prevents a vague answer"
+        ],
+        [
+          "Accuracy",
+          "Date, character, material, source, or use case",
+          "Small details can change the result"
+        ],
+        [
+          "Buying or planning",
+          "Quality signals and practical fit",
+          "The best option depends on real use"
+        ],
+        [
+          "Further research",
+          "Related guide and evidence level",
+          "Keeps the next step clear"
+        ]
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What is the short answer for Chinese zodiac Earth Snake?",
+        "a": "Chinese zodiac Earth Snake refers to Snake years paired with the Earth element in the 60-year cycle; read it as cultural symbolism and confirm the exact year boundary before applying it to a birth date."
+      },
+      {
+        "q": "What should I check first for Chinese zodiac Earth Snake?",
+        "a": "Check whether the birth date falls after Lunar New Year in the relevant Snake year first, then compare how the Earth element changes the traditional wording compared with other Snake years."
+      },
+      {
+        "q": "Is Chinese zodiac Earth Snake enough for a final decision?",
+        "a": "It is enough for a starting point, but important decisions should use the practical checks and related guides."
+      },
+      {
+        "q": "What should I read next?",
+        "a": "Confirm the sign with the calculator, then compare Snake, element, and compatibility pages only after the year is clear"
+      }
+    ],
+    "related": [
+      {
+        "title": "Chinese Zodiac Calculator",
+        "path": "/chinese-zodiac-calculator/",
+        "category": "Tools",
+        "description": "Find a sign by exact birth date."
+      },
+      {
+        "title": "Chinese Zodiac Elements",
+        "path": "/chinese-zodiac-elements/",
+        "category": "Meaning",
+        "description": "Read the element cycle."
+      },
+      {
+        "title": "Chinese Zodiac Animals",
+        "path": "/chinese-zodiac-animals/",
+        "category": "Animals",
+        "description": "Browse all twelve animal signs."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260711) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
+
+await writeSitemap();
+await writeRobots();
+await writeLlms();
+
 function clientScript() {
   return `const years=${JSON.stringify(years)};const animals=${JSON.stringify(animals)};const compatibilityPairs=${JSON.stringify(allCompatibilityPairs())};
 const bySlug=Object.fromEntries(animals.map(a=>[a.animal,a]));
@@ -3934,7 +4726,7 @@ function parseBirthDate(data){const y=String(data.get('birthYear')||'').trim();c
 function animalMeta(row){return bySlug[row.animal];}
 function yearLink(year){return year>=2024&&year<=2030?'<a class="button-link secondary" href="/chinese-zodiac/'+year+'/">Open '+year+' guide</a>':''}
 const MCC_BASE=window.MCC_BASE_URL||(location.hostname==='localhost'||location.hostname==='127.0.0.1'?'http://localhost:4500':'https://console.shanyuegroup.com');
-function premiumReportHtml(row,birth){const a=animalMeta(row);const payload=encodeURIComponent(JSON.stringify({birthYear:birth.birthYear,birthMonth:birth.birthMonth,birthDay:birth.birthDay,zodiacYear:row.year,animal:a.name,element:row.element,lunarNewYear:row.lunarNewYear}));return '<div class="premium-report-card"><p class="eyebrow">Premium report</p><h4>Unlock a complete Chinese zodiac report</h4><p>Get a structured report with birth-year boundary, animal and element notes, symbolic traits, compatibility context, lucky color notes, and practical reading limits.</p><label class="premium-report-form"><span>Email for the report link</span><input type="email" data-premium-email placeholder="you@example.com" autocomplete="email"></label><button type="button" class="button-link" data-premium-zodiac="'+payload+'">Get full report - $6.90</button><small>Local test uses mock PayPal. Real checkout will verify payment on the server.</small></div>'}
+function premiumReportHtml(row,birth){const a=animalMeta(row);const payload=encodeURIComponent(JSON.stringify({birthYear:birth.birthYear,birthMonth:birth.birthMonth,birthDay:birth.birthDay,zodiacYear:row.year,animal:a.name,element:row.element,lunarNewYear:row.lunarNewYear}));return '<div class="premium-report-card"><p class="eyebrow">Premium report</p><h4>Unlock a complete Chinese zodiac report</h4><p>Get a structured report with birth-year boundary, animal and element notes, symbolic traits, compatibility context, lucky color notes, and practical reading limits.</p><label class="premium-report-form"><span>Email for the report link</span><input type="email" data-premium-email placeholder="you@example.com" autocomplete="email"></label><button type="button" class="button-link" data-premium-zodiac="'+payload+'">Get full report - $6.90</button><small>Secure checkout opens on PayPal. The report is delivered after payment is confirmed.</small></div>'}
 function resultHtml(row,birth){const a=animalMeta(row);return '<h3>Your Chinese zodiac sign is '+a.name+'</h3><div class="result-facts"><span><strong>Chinese</strong>'+a.chinese+' · '+a.pinyin+'</span><span><strong>Element</strong>'+row.element+'</span><span><strong>Yin/Yang</strong>'+a.yinYang+'</span><span><strong>Zodiac Year Starts</strong>'+row.lunarNewYear+'</span></div><p>'+a.summary+'</p><p>'+a.personality+'</p><p class="note">If your birthday is before Lunar New Year, the traditional zodiac year belongs to the previous Gregorian year. This calculator already applies that boundary.</p><div class="result-actions"><a class="button-link" href="/chinese-zodiac/'+a.animal+'/">Read the '+a.name+' guide</a>'+yearLink(row.year)+'</div>'+premiumReportHtml(row,birth)}
 document.querySelectorAll('[data-zodiac-form]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();const box=form.parentElement.querySelector('[data-zodiac-result]');const data=new FormData(form);const date=parseBirthDate(data);const row=date?findZodiac(date):null;const birth={birthYear:String(data.get('birthYear')||''),birthMonth:String(data.get('birthMonth')||''),birthDay:String(data.get('birthDay')||'')};box.hidden=false;box.innerHTML=row?resultHtml(row,birth):'<h3>Date outside supported range</h3><p>Enter a valid Gregorian birth date from 1900-01-31 to 2100-12-31.</p>';box.scrollIntoView({block:'nearest',behavior:'smooth'});})) ;
 document.addEventListener('click',async e=>{const btn=e.target.closest('[data-premium-zodiac]');if(!btn)return;const input=JSON.parse(decodeURIComponent(btn.getAttribute('data-premium-zodiac')));const card=btn.closest('.premium-report-card');const emailInput=card?card.querySelector('[data-premium-email]'):null;const email=String(emailInput&&emailInput.value||'').trim();if(!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)){if(emailInput){emailInput.focus();emailInput.setAttribute('aria-invalid','true')}alert('Enter a valid email for the report link.');return}if(emailInput)emailInput.removeAttribute('aria-invalid');btn.disabled=true;const old=btn.textContent;btn.textContent='Creating checkout...';try{const r=await fetch(MCC_BASE+'/api/checkout/create',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({provider:'paypal',site:'zodiac',product:'full-report',email,input})});const data=await r.json();if(!r.ok)throw new Error(data.error||'checkout failed');location.href=data.checkoutUrl||data.approvalUrl;}catch(err){btn.disabled=false;btn.textContent=old;alert('Checkout failed: '+err.message);}});
@@ -4020,7 +4812,8 @@ async function writeLlms() {
     ""
   ];
 
-  await writeFile("dist/llms.txt", lines.join("\n"), "utf8");
+  await writeFile("dist/ads.txt", "google.com, pub-1609779333813540, DIRECT, f08c47fec0942fa0\n", "utf8");
+await writeFile("dist/llms.txt", lines.join("\n"), "utf8");
 }
 
 async function writeSeoReport() {
@@ -4108,7 +4901,7 @@ function auditPage(page, html, sitemap) {
 function requiresFullArticleDepth(path) {
   if (["/", "/about/", "/contact/", "/privacy/", "/terms/", "/guides/", "/chinese-zodiac-faq/"].includes(path)) return false;
   if (path.startsWith("/admin/")) return false;
-  if (path === "/chinese-zodiac-calculator/" || path === "/chinese-zodiac-compatibility-calculator/") return false;
+  if (path === "/chinese-zodiac-calculator/" || path === "/chinese-zodiac-compatibility/") return false;
   return true;
 }
 
@@ -4160,7 +4953,7 @@ function css() {
 }
 
 function compactCss() {
-  return `:root{--ink:#24201b;--muted:#686159;--paper:#f8f5ee;--panel:#fffdf8;--line:#e3d9c9;--red:#b3343a;--red-dark:#84272d;--gold:#b99455;--jade:#2f7167;--blue:#31485f;--shadow:0 10px 28px rgba(47,37,23,.08)}*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--paper);font-size:16px;line-height:1.62}a{color:inherit}.site-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:13px clamp(18px,4vw,52px);background:rgba(248,245,238,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:17px;font-weight:850;white-space:nowrap}.brand-logo{display:block;width:34px;height:34px;border-radius:8px;box-shadow:0 8px 18px rgba(179,52,58,.18)}.nav{display:flex;align-items:center;justify-content:flex-end;gap:18px;flex-wrap:wrap}.nav a{text-decoration:none;color:#554d45;font-size:15px;font-weight:780;line-height:1.2;padding:4px 0}.nav a:hover{color:var(--red)}main{min-height:70vh}.page-hero{padding:28px clamp(18px,4vw,52px) 16px;max-width:1160px;margin:auto}.page-hero h1{font-family:Georgia,serif;font-size:clamp(31px,3.6vw,46px);line-height:1.1;margin:9px 0 10px;color:#211b17}.intro{font-size:16px;max-width:760px;color:var(--muted)}.eyebrow{display:inline-flex;align-items:center;min-height:28px;padding:0 11px;border-radius:999px;background:rgba(47,113,103,.08);border:1px solid rgba(47,113,103,.18);text-transform:uppercase;letter-spacing:.05em;color:var(--jade);font-size:12px;line-height:1;font-weight:850;margin:0}.hero-grid,.content-section{max-width:1160px;margin:0 auto 22px;padding:0 clamp(18px,4vw,52px)}.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr);gap:22px;align-items:stretch}.tool-page{max-width:820px;margin:0 auto 22px;padding:0 clamp(18px,4vw,40px)}.tool-page .tool-panel{max-width:720px;margin:0 auto;padding:20px 22px}.tool-strip{display:grid;grid-template-columns:1fr 1fr;gap:18px;background:transparent!important;border:0!important;box-shadow:none!important}.tool-panel,.visual-panel,.content-section:not(.split),.fact-card{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:8px}.tool-panel{padding:22px;border-top:4px solid var(--red)}.compact-tool{height:auto}.tool-copy h2,.section-heading h2,.content-section h2{font-family:Georgia,serif;font-size:clamp(22px,2.2vw,27px);line-height:1.18;margin:8px 0 10px;color:#241f1a}.tool-page .tool-copy h2{font-size:25px}.tool-copy p{max-width:640px}.content-section p{max-width:820px}.calculator-form{display:grid;grid-template-columns:minmax(220px,1fr) auto;gap:12px;align-items:end;margin-top:16px;max-width:560px}.tool-page .calculator-form{max-width:100%}.match-form{grid-template-columns:1fr 1fr;max-width:100%}.match-form button{grid-column:1/-1;width:100%}.calculator-form label{display:grid;gap:7px;font-size:14px;font-weight:750}.calculator-form input,.calculator-form select{height:43px;border:1px solid var(--line);border-radius:8px;padding:0 12px;font:inherit;background:#fff;width:100%;min-width:0}.calculator-form button,.button-link{min-height:43px;display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:8px;background:var(--red);color:#fff;font-size:14px;font-weight:800;text-decoration:none;padding:0 15px;cursor:pointer;white-space:nowrap}.button-link.secondary{background:#f2eadf;color:#3a3028;border:1px solid #dfd1bd}.calculator-form button:hover,.button-link:hover{background:var(--red-dark);color:#fff}.result-card{margin-top:16px;padding:16px;border-left:4px solid var(--jade);background:#eff7f3;border-radius:8px}.result-card h3{margin:0 0 10px;font-size:20px}.result-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0}.result-facts span{background:#fff;border:1px solid #d8e8df;border-radius:8px;padding:10px;color:#3f564f}.result-facts strong{display:block;color:#1f332e;font-size:12px;text-transform:uppercase;letter-spacing:.04em}.result-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.premium-report-card{margin-top:16px;padding:16px;border:1px solid rgba(185,148,85,.36);border-left:4px solid var(--gold);border-radius:8px;background:linear-gradient(180deg,#fffdf8,#fff4e4);box-shadow:0 12px 26px rgba(60,45,26,.07)}.premium-report-card h4{margin:7px 0 7px;font-size:18px;line-height:1.25}.premium-report-card p{margin:0 0 10px;color:#4a4038}.premium-report-card small{display:block;margin-top:9px;color:var(--muted)}.premium-report-form{display:grid;gap:7px;margin:12px 0 12px;font-size:13px;font-weight:720;color:#3f362e}.premium-report-form input{height:42px;border:1px solid rgba(185,148,85,.42);border-radius:8px;padding:0 12px;font:inherit;background:#fffdf8;min-width:0}.premium-report-form input[aria-invalid="true"]{border-color:var(--red);box-shadow:0 0 0 3px rgba(179,52,58,.12)}.premium-report-card .button-link{background:var(--gold);color:#25170e}.premium-report-card .button-link:hover{background:#d2aa61;color:#25170e}.note{color:var(--muted);font-size:14px}.visual-panel{margin:0;display:grid;place-items:center;overflow:hidden;background:#f1eadc}.visual-panel img{width:100%;height:100%;object-fit:cover}.ad-slot{max-width:1056px;margin:0 auto 22px;border:1px dashed #d7c8b5;background:#fffaf1;color:#8a7257;border-radius:8px;min-height:70px;display:grid;place-items:center;font-size:13px;font-weight:750}.section-heading{margin-bottom:14px}.fact-grid,.animal-grid,.step-grid,.element-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.element-grid{grid-template-columns:repeat(5,minmax(0,1fr))}.fact-grid div,.animal-card,.step-grid div,.element-grid div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.step-grid span{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#edf5f2;color:var(--jade);font-weight:900;margin-bottom:8px}.step-grid strong,.element-grid strong{display:block;font-size:17px}.step-grid p,.element-grid p{margin:6px 0 0;color:var(--muted);font-size:15px}.fact-grid strong,.fact-grid span{display:block}.fact-grid span,.animal-card span,.animal-card p{color:var(--muted)}.animal-card{text-decoration:none;min-height:168px;display:grid;gap:7px;position:relative}.animal-card:hover{border-color:#d2ad73;box-shadow:0 10px 24px rgba(47,37,23,.08)}.animal-card strong{font-size:20px}.animal-card p{font-size:15px;margin:0}.animal-order{position:absolute;right:14px;top:12px;color:var(--gold);font-weight:900}.split{display:grid;grid-template-columns:1fr 1fr;gap:22px}.split>div{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:8px;padding:22px}.fact-card{display:grid;gap:8px}.fact-card strong{font-size:20px}.fact-card span{display:block;color:var(--muted)}.table-wrap{overflow:auto}.content-section table{width:100%;border-collapse:collapse;background:#fff;font-size:15px}.content-section th,.content-section td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left}.content-section th{background:#f1eadc;color:#352b22}.pair-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}.pair-card{display:grid;gap:5px;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px}.pair-card:hover{border-color:#d2ad73;box-shadow:0 10px 24px rgba(47,37,23,.08)}.pair-card strong{font-size:16px}.pair-card span{color:var(--jade);font-weight:800}.pair-card small{color:var(--muted)}.score-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.score-grid div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.score-grid strong,.score-grid span{display:block}.score-grid span{font-size:22px;font-weight:900;color:var(--red);margin:4px 0}.score-grid p{margin:0;color:var(--muted);font-size:15px}.faq-list details{border-bottom:1px solid var(--line);padding:12px 0}.faq-list summary{font-weight:800;cursor:pointer}.site-footer{margin-top:44px;padding:30px clamp(18px,4vw,52px);background:#24201b;color:#fffaf0;display:flex;justify-content:space-between;gap:28px}.site-footer p{color:#d7cbbd;max-width:680px;font-size:14px}.site-footer nav{display:flex;gap:16px;align-items:start;flex-wrap:wrap}.site-footer a{color:#fffaf0}@media(max-width:980px){.element-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tool-strip{grid-template-columns:1fr}.pair-grid,.score-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:820px){body{font-size:15px}.site-header{align-items:flex-start;flex-direction:column}.nav{justify-content:flex-start;gap:14px}.nav a{font-size:14px}.hero-grid,.split{grid-template-columns:1fr}.tool-page{max-width:100%;padding:0 16px}.tool-page .tool-panel{max-width:100%;padding:18px}.calculator-form,.match-form{grid-template-columns:1fr}.fact-grid,.animal-grid,.step-grid,.element-grid,.result-facts,.pair-grid,.score-grid{grid-template-columns:1fr}.page-hero{padding-top:24px}.page-hero h1{font-size:31px}.intro{font-size:16px}.site-footer{flex-direction:column}}`;
+  return `:root{--ink:#24201b;--muted:#686159;--paper:#f8f5ee;--panel:#fffdf8;--line:#e3d9c9;--red:#b3343a;--red-dark:#84272d;--gold:#b99455;--jade:#2f7167;--blue:#31485f;--shadow:0 10px 28px rgba(47,37,23,.08)}*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--paper);font-size:16px;line-height:1.62}a{color:inherit}.site-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:13px clamp(18px,4vw,52px);background:rgba(248,245,238,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:17px;font-weight:850;white-space:nowrap}.brand-logo{display:block;width:34px;height:34px;border-radius:8px;box-shadow:0 8px 18px rgba(179,52,58,.18)}.nav{display:flex;align-items:center;justify-content:flex-end;gap:18px;flex-wrap:wrap}.nav a{text-decoration:none;color:#554d45;font-size:15px;font-weight:780;line-height:1.2;padding:4px 0}.nav a:hover{color:var(--red)}main{min-height:70vh}.page-hero{padding:28px clamp(18px,4vw,52px) 16px;max-width:1160px;margin:auto}.page-hero h1{font-family:Georgia,serif;font-size:clamp(31px,3.6vw,46px);line-height:1.1;margin:9px 0 10px;color:#211b17}.intro{font-size:16px;max-width:760px;color:var(--muted)}.eyebrow{display:inline-flex;align-items:center;min-height:28px;padding:0 11px;border-radius:999px;background:rgba(47,113,103,.08);border:1px solid rgba(47,113,103,.18);text-transform:uppercase;letter-spacing:.05em;color:var(--jade);font-size:12px;line-height:1;font-weight:850;margin:0}.hero-grid,.content-section{max-width:1160px;margin:0 auto 22px;padding:0 clamp(18px,4vw,52px)}.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr);gap:22px;align-items:stretch}.tool-page{max-width:820px;margin:0 auto 22px;padding:0 clamp(18px,4vw,40px)}.tool-page .tool-panel{max-width:720px;margin:0 auto;padding:20px 22px}.tool-strip{display:grid;grid-template-columns:1fr 1fr;gap:18px;background:transparent!important;border:0!important;box-shadow:none!important}.tool-panel,.visual-panel,.content-section:not(.split),.fact-card{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:8px}.tool-panel{padding:22px;border-top:4px solid var(--red)}.compact-tool{height:auto}.tool-copy h2,.section-heading h2,.content-section h2{font-family:Georgia,serif;font-size:clamp(22px,2.2vw,27px);line-height:1.18;margin:8px 0 10px;color:#241f1a}.tool-page .tool-copy h2{font-size:25px}.tool-copy p{max-width:640px}.content-section p{max-width:820px}.calculator-form{display:grid;grid-template-columns:minmax(220px,1fr) auto;gap:12px;align-items:end;margin-top:16px;max-width:560px}.tool-page .calculator-form{max-width:100%}.match-form{grid-template-columns:1fr 1fr;max-width:100%}.match-form button{grid-column:1/-1;width:100%}.calculator-form label{display:grid;gap:7px;font-size:14px;font-weight:750}.calculator-form input,.calculator-form select{height:43px;border:1px solid var(--line);border-radius:8px;padding:0 12px;font:inherit;background:#fff;width:100%;min-width:0}.calculator-form button,.button-link{min-height:43px;display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:8px;background:var(--red);color:#fff;font-size:14px;font-weight:800;text-decoration:none;padding:0 15px;cursor:pointer;white-space:nowrap}.button-link.secondary{background:#f2eadf;color:#3a3028;border:1px solid #dfd1bd}.calculator-form button:hover,.button-link:hover{background:var(--red-dark);color:#fff}.result-card{margin-top:16px;padding:16px;border-left:4px solid var(--jade);background:#eff7f3;border-radius:8px}.result-card h3{margin:0 0 10px;font-size:20px}.result-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0}.result-facts span{background:#fff;border:1px solid #d8e8df;border-radius:8px;padding:10px;color:#3f564f}.result-facts strong{display:block;color:#1f332e;font-size:12px;text-transform:uppercase;letter-spacing:.04em}.result-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.premium-report-card{margin-top:16px;padding:16px;border:1px solid rgba(185,148,85,.36);border-left:4px solid var(--gold);border-radius:8px;background:linear-gradient(180deg,#fffdf8,#fff4e4);box-shadow:0 12px 26px rgba(60,45,26,.07)}.premium-report-card h4{margin:7px 0 7px;font-size:18px;line-height:1.25}.premium-report-card p{margin:0 0 10px;color:#4a4038}.premium-report-card small{display:block;margin-top:9px;color:var(--muted)}.premium-report-form{display:grid;gap:7px;margin:12px 0 12px;font-size:13px;font-weight:720;color:#3f362e}.premium-report-form input{height:42px;border:1px solid rgba(185,148,85,.42);border-radius:8px;padding:0 12px;font:inherit;background:#fffdf8;min-width:0}.premium-report-form input[aria-invalid="true"]{border-color:var(--red);box-shadow:0 0 0 3px rgba(179,52,58,.12)}.premium-report-card .button-link{background:var(--gold);color:#25170e}.premium-report-card .button-link:hover{background:#d2aa61;color:#25170e}.conversion-report-card{border-left:4px solid var(--gold)!important;background:linear-gradient(135deg,#fffdf8,#fff1dc)!important}.conversion-report-card h2{margin-top:8px}.conversion-report-card p{max-width:760px}.conversion-report-card small{display:block;margin-top:10px;color:var(--muted);font-size:13px}.article-sidebar .conversion-report-card{background:linear-gradient(180deg,#fffdf8,#fff1dc)!important}.article-sidebar .conversion-report-card h2{font-size:20px}.article-sidebar .conversion-report-card .button-link{width:100%;margin-top:8px}.note{color:var(--muted);font-size:14px}.visual-panel{margin:0;display:grid;place-items:center;overflow:hidden;background:#f1eadc}.visual-panel img{width:100%;height:100%;object-fit:cover}.ad-slot{max-width:1056px;margin:0 auto 22px;border:1px dashed #d7c8b5;background:#fffaf1;color:#8a7257;border-radius:8px;min-height:70px;display:grid;place-items:center;font-size:13px;font-weight:750}.section-heading{margin-bottom:14px}.fact-grid,.animal-grid,.step-grid,.element-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.element-grid{grid-template-columns:repeat(5,minmax(0,1fr))}.fact-grid div,.animal-card,.step-grid div,.element-grid div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.step-grid span{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#edf5f2;color:var(--jade);font-weight:900;margin-bottom:8px}.step-grid strong,.element-grid strong{display:block;font-size:17px}.step-grid p,.element-grid p{margin:6px 0 0;color:var(--muted);font-size:15px}.fact-grid strong,.fact-grid span{display:block}.fact-grid span,.animal-card span,.animal-card p{color:var(--muted)}.animal-card{text-decoration:none;min-height:168px;display:grid;gap:7px;position:relative}.animal-card:hover{border-color:#d2ad73;box-shadow:0 10px 24px rgba(47,37,23,.08)}.animal-card strong{font-size:20px}.animal-card p{font-size:15px;margin:0}.animal-order{position:absolute;right:14px;top:12px;color:var(--gold);font-weight:900}.split{display:grid;grid-template-columns:1fr 1fr;gap:22px}.split>div{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:8px;padding:22px}.fact-card{display:grid;gap:8px}.fact-card strong{font-size:20px}.fact-card span{display:block;color:var(--muted)}.table-wrap{overflow:auto}.content-section table{width:100%;border-collapse:collapse;background:#fff;font-size:15px}.content-section th,.content-section td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left}.content-section th{background:#f1eadc;color:#352b22}.pair-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}.pair-card{display:grid;gap:5px;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px}.pair-card:hover{border-color:#d2ad73;box-shadow:0 10px 24px rgba(47,37,23,.08)}.pair-card strong{font-size:16px}.pair-card span{color:var(--jade);font-weight:800}.pair-card small{color:var(--muted)}.score-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.score-grid div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.score-grid strong,.score-grid span{display:block}.score-grid span{font-size:22px;font-weight:900;color:var(--red);margin:4px 0}.score-grid p{margin:0;color:var(--muted);font-size:15px}.faq-list details{border-bottom:1px solid var(--line);padding:12px 0}.faq-list summary{font-weight:800;cursor:pointer}.site-footer{margin-top:44px;padding:30px clamp(18px,4vw,52px);background:#24201b;color:#fffaf0;display:flex;justify-content:space-between;gap:28px}.site-footer p{color:#d7cbbd;max-width:680px;font-size:14px}.site-footer nav{display:flex;gap:16px;align-items:start;flex-wrap:wrap}.site-footer a{color:#fffaf0}@media(max-width:980px){.element-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tool-strip{grid-template-columns:1fr}.pair-grid,.score-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:820px){body{font-size:15px}.site-header{align-items:flex-start;flex-direction:column}.nav{justify-content:flex-start;gap:14px}.nav a{font-size:14px}.hero-grid,.split{grid-template-columns:1fr}.tool-page{max-width:100%;padding:0 16px}.tool-page .tool-panel{max-width:100%;padding:18px}.calculator-form,.match-form{grid-template-columns:1fr}.fact-grid,.animal-grid,.step-grid,.element-grid,.result-facts,.pair-grid,.score-grid{grid-template-columns:1fr}.page-hero{padding-top:24px}.page-hero h1{font-size:31px}.intro{font-size:16px}.site-footer{flex-direction:column}}`;
 }
 
 function detailCss() {
@@ -4183,12 +4976,1274 @@ function culturalVisualCss() {
   return `body{background-color:#f7f2e8;background-image:radial-gradient(circle at 18px 18px,rgba(179,52,58,.035) 0 2px,transparent 2.5px),linear-gradient(135deg,rgba(185,148,85,.05) 25%,transparent 25%),linear-gradient(225deg,rgba(47,113,103,.04) 25%,transparent 25%);background-size:36px 36px,48px 48px,48px 48px}.site-header{background:rgba(33,19,18,.94);border-bottom-color:rgba(214,176,98,.2);box-shadow:0 12px 34px rgba(42,18,14,.18)}.brand{color:#fff8ec}.nav a{color:#e9d7bd}.nav a:hover{color:#f2c66d}.brand,.nav a,.calculator-form button,.button-link,.site-search-form button{font-weight:720}.eyebrow{font-weight:760}.page-hero h1{font-weight:700}.page-home .page-hero{display:none}.page-home main{padding-top:0}.zodiac-hero{position:relative;display:grid;grid-template-columns:minmax(0,.92fr) minmax(360px,1.08fr);gap:52px;align-items:center;min-height:620px;padding:58px clamp(24px,7vw,96px) 68px;color:#fff8ec;overflow:hidden;background:linear-gradient(135deg,#210f0f 0%,#4a1419 48%,#7d2226 100%)}.zodiac-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 16% 18%,rgba(242,198,109,.2),transparent 30%),radial-gradient(circle at 86% 72%,rgba(255,248,236,.08),transparent 28%),linear-gradient(90deg,rgba(255,248,236,.045) 1px,transparent 1px),linear-gradient(0deg,rgba(255,248,236,.035) 1px,transparent 1px);background-size:auto,auto,54px 54px,54px 54px;pointer-events:none}.zodiac-hero::after{content:"十二生肖";position:absolute;right:clamp(20px,6vw,90px);top:30px;color:rgba(255,248,236,.09);font-family:Georgia,serif;font-size:clamp(68px,10vw,132px);font-weight:900;letter-spacing:.12em;line-height:1;pointer-events:none}.zodiac-hero-copy{position:relative;z-index:1;max-width:680px}.zodiac-hero-copy h2{margin:16px 0 16px;color:#fff8ec;font-family:Georgia,serif;font-size:clamp(44px,5vw,72px);line-height:1.04;letter-spacing:0}.zodiac-hero-copy>p{max-width:640px;margin:0;color:#ead8bf;font-size:18px;line-height:1.72}.zodiac-hero .eyebrow{background:rgba(242,198,109,.12);border-color:rgba(242,198,109,.34);color:#f2c66d}.zodiac-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.zodiac-hero-actions .button-link{background:#d7a64e;color:#271411}.zodiac-hero-actions .button-link:hover{background:#f0c46c;color:#271411}.zodiac-hero-actions .button-link.secondary{background:rgba(255,248,236,.1);border-color:rgba(255,248,236,.24);color:#fff8ec}.zodiac-hero-visual{position:relative;z-index:1;min-height:470px;margin:0;display:grid;place-items:center;border:1px solid rgba(242,198,109,.34);border-radius:10px;background:radial-gradient(circle at 50% 44%,rgba(255,248,236,.12),rgba(0,0,0,.18) 62%,rgba(0,0,0,.3));box-shadow:0 38px 90px rgba(18,6,4,.36);overflow:hidden}.zodiac-hero-visual::before{content:"";position:absolute;inset:22px;border:1px solid rgba(242,198,109,.24);border-radius:50%;background:repeating-radial-gradient(circle at 50% 50%,rgba(242,198,109,.14) 0 1px,transparent 1px 30px);pointer-events:none}.zodiac-hero-visual img{position:relative;z-index:1;width:92%;height:92%;object-fit:contain;filter:drop-shadow(0 30px 42px rgba(0,0,0,.3))}.zodiac-hero-visual figcaption{position:absolute;z-index:2;left:28px;bottom:28px;display:grid;gap:3px;padding:14px 16px;border:1px solid rgba(255,248,236,.2);border-radius:8px;background:rgba(34,12,10,.68);backdrop-filter:blur(10px);box-shadow:0 18px 38px rgba(0,0,0,.24)}.zodiac-hero-visual strong{font-family:Georgia,serif;font-size:20px;color:#fff3d6}.zodiac-hero-visual span{font-size:13px;color:#ead8bf}.zodiac-quick-tool{position:relative;z-index:2;max-width:1160px;margin:-44px auto 28px;padding:0 clamp(18px,4vw,52px)}.zodiac-quick-tool .tool-panel{border:1px solid rgba(214,176,98,.42);border-left:5px solid #d7a64e;border-top:0;background:linear-gradient(180deg,#fffdf8,#f7ead7);box-shadow:0 24px 60px rgba(42,18,14,.18)}.zodiac-quick-tool .tool-copy h2{font-size:clamp(28px,2.8vw,38px)}.tool-copy h2,.section-heading h2,.content-section h2{font-weight:720}.tool-copy p,.content-section p,.pair-card small,.guide-card p,.animal-card p{color:#463f38}.visual-panel{position:relative;background:linear-gradient(145deg,#fffaf0,#f1eadb);padding:18px}.visual-panel::before{content:"";position:absolute;inset:14px;border:1px solid rgba(179,52,58,.14);border-radius:8px;background:repeating-radial-gradient(circle at 50% 50%,rgba(185,148,85,.12) 0 1px,transparent 1px 22px);pointer-events:none}.visual-panel img{position:relative;width:92%;height:92%;object-fit:contain;filter:drop-shadow(0 18px 28px rgba(80,50,25,.12))}.animal-grid{gap:16px}.animal-card{display:grid;grid-template-columns:48px minmax(0,1fr);grid-template-rows:auto auto 1fr;column-gap:16px;row-gap:6px;min-height:178px;padding:22px;overflow:hidden;isolation:isolate;background:linear-gradient(180deg,#fffefa,#fff7ec);box-shadow:0 14px 30px rgba(60,45,26,.065)}.animal-card::after{content:"";position:absolute;right:-46px;bottom:-50px;z-index:0;width:104px;height:104px;border-radius:50%;background:var(--animal-soft,#fff2e8);opacity:.28}.animal-card strong,.animal-card p,.animal-card>span{position:relative;z-index:1}.animal-seal{position:relative!important;left:auto;top:auto;grid-column:1;grid-row:1/3;align-self:start;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--animal-soft,#fff0e7);border:1px solid color-mix(in srgb,var(--animal-accent,#b3343a) 42%,#fff);color:var(--animal-accent,#b3343a);font-family:Georgia,serif;font-size:25px;font-weight:850;line-height:1;box-shadow:0 10px 18px rgba(60,40,20,.09)}.animal-card strong{grid-column:2;grid-row:1;padding-right:34px;margin-top:1px;color:#12100e;font-size:19px;font-weight:760}.animal-card>span:not(.animal-order):not(.animal-seal){grid-column:2;grid-row:2;color:#4d463f;font-size:14px}.animal-card p{grid-column:2;grid-row:3;margin-top:8px}.animal-order{position:absolute!important;right:18px;top:18px;z-index:2;color:#b99455;font-size:13px;font-weight:780}.fact-grid div,.step-grid div,.element-grid div,.guide-card,.pair-card,.score-grid div{background:linear-gradient(180deg,#fffefa,#fffaf2)}.fact-grid strong,.step-grid strong,.element-grid strong,.guide-card strong,.pair-card strong,.score-grid strong{font-weight:720}.pair-card{position:relative;grid-template-columns:auto 1fr auto;align-items:center;gap:8px 12px;padding:16px 16px 15px;min-height:122px;overflow:hidden;isolation:isolate}.pair-card::after{content:"";position:absolute;right:-40px;bottom:-46px;z-index:0;width:116px;height:116px;border-radius:50%;background:rgba(185,148,85,.06)}.pair-icons{grid-row:1/4;display:flex;flex-direction:column;gap:5px;z-index:1}.mini-seal{display:grid;place-items:center;width:29px;height:29px;border-radius:9px;background:var(--animal-soft,#fff0e7);border:1px solid color-mix(in srgb,var(--animal-accent,#b3343a) 34%,#fff);color:var(--animal-accent,#b3343a);font-family:Georgia,serif;font-size:17px;font-weight:800;line-height:1}.pair-card strong{z-index:1;font-size:16px}.pair-card .match-label{z-index:1;justify-self:start;display:inline-flex;align-items:center;min-height:27px;padding:0 10px;border-radius:999px;background:#edf5f2;color:#28665d;font-size:13px;font-weight:680}.pair-card small{z-index:1;grid-column:2/4;font-size:13px}.score-grid span{font-size:20px;font-weight:760}.result-card h3{font-weight:720}.result-facts strong{font-weight:720}.guide-card span{font-weight:760}.guide-card strong{font-size:17px}.content-section:not(.split),.tool-panel,.visual-panel,.fact-card{box-shadow:0 12px 30px rgba(60,45,26,.065)}body:not(.page-home):not(.page-guides):not(.seo-report-page) .page-hero{max-width:1180px;padding-top:42px;padding-bottom:24px}body:not(.page-home):not(.page-guides):not(.seo-report-page) .page-hero h1{max-width:920px;color:#2a1714;font-size:clamp(28px,2.25vw,34px);line-height:1.16}body:not(.page-home):not(.page-guides):not(.seo-report-page) .page-hero .intro{max-width:820px;color:#5b5145;font-size:17px;line-height:1.68}@media(max-width:980px){.zodiac-hero{grid-template-columns:1fr;min-height:auto;padding:52px 22px 86px}.zodiac-hero-visual{min-height:390px}.zodiac-quick-tool{margin-top:-54px}}@media(max-width:820px){.animal-card{grid-template-columns:42px minmax(0,1fr);padding:18px}.animal-seal{width:42px;height:42px}.pair-card{grid-template-columns:auto 1fr}.pair-card small{grid-column:2}.visual-panel img{width:100%;height:100%}}@media(max-width:640px){.zodiac-hero-copy h2{font-size:40px}.zodiac-hero-actions{display:grid}.zodiac-hero-actions .button-link{width:100%}.zodiac-hero-visual{min-height:300px}.zodiac-hero-visual figcaption{left:16px;right:16px;bottom:16px}}`;
 }
 
+
+const dailyArticles20260713 = [
+  {
+    "title": "1990 Chinese Zodiac Sign: Metal Horse Year, Dates, and Meaning",
+    "path": "/guides/1990-chinese-zodiac/",
+    "description": "Check the 1990 Chinese zodiac sign, Metal Horse date range, Lunar New Year boundary, meaning, compatibility notes, and responsible use.",
+    "h1": "1990 Chinese Zodiac Sign: Metal Horse Year, Dates, and Meaning",
+    "intro": "1990 is a Metal Horse year for birthdays from January 27, 1990, but early January birthdays still belong to the previous zodiac year.",
+    "answer": "The 1990 Chinese zodiac sign is Metal Horse for people born from January 27, 1990 to February 14, 1991; birthdays before January 27, 1990 are usually counted in the previous Earth Snake year.",
+    "geoPatch": {
+      "noteLabel": "Source note",
+      "note": "This page uses the traditional Chinese zodiac year boundary and the 60-year animal-element cycle as cultural reference. Lunar New Year dates are the key evidence point, so early-year birthdays should be checked by date rather than by Gregorian year alone.",
+      "dataAnchor": "1990 Chinese zodiac = Metal Horse; start date January 27, 1990; previous sign before that date = Earth Snake.",
+      "facts": [
+        ["Zodiac animal", "Horse"],
+        ["Element", "Metal"],
+        ["Zodiac year starts", "January 27, 1990"],
+        ["Use limit", "Cultural reference, not a fixed personality or relationship claim"]
+      ]
+    },
+    "details": [
+      "1990 Chinese zodiac sign should be read through the Lunar New Year boundary and the Metal Horse element layer, not as a loose label that can be copied from one chart to another. The practical value of the page is that it slows the decision down at the exact point where readers usually make mistakes: the January 27, 1990 Lunar New Year start date. A useful guide gives the quick answer first, then explains the condition, comparison, or buying check that can change the final choice. That structure helps a visitor act with confidence while still respecting the limits of cultural reference content.",
+      "Search intent for 1990 Chinese zodiac sign is usually practical. The reader may want a fast answer, a purchase decision, a family research clue, or a way to compare several similar pages. That is why the article should separate the stable reference point from the interpretation. For this topic, the stable point is the January 27, 1990 Lunar New Year start date; the interpretation comes after that, once the reader knows what is being compared.",
+      "The second layer is the Metal Horse reading before using personality, color, or compatibility notes. This is where thin articles often fail because they repeat a definition without showing how someone should use it. A better page names the tradeoff, gives a concrete example, and points to a related page that can answer the next question. That is also the safest way to prepare the page for ads, affiliate blocks, paid reports, or product cards later.",
+      "Commercial intent should be handled carefully. The free article must be useful before any paid product or recommendation appears. If the visitor can understand the decision without buying anything, the page earns trust. If a product or report is added later, it should extend the decision path instead of replacing the answer.",
+      "The language should stay specific and modest. Cultural symbols, names, materials, or calendar labels can be meaningful, but they should not be presented as guaranteed luck, verified ancestry, perfect compatibility, or one universal product choice. This makes the page stronger for readers and safer for long-term SEO.",
+      "Use this page as part of a cluster. It should connect 1990 Chinese zodiac sign to broader guides, tools, and comparison pages so the visitor does not have to return to search immediately. A focused long-tail page works best when it answers one question deeply and then offers a clear next step."
+    ],
+    "sections": [
+      {
+        "title": "Start with the real question behind 1990 Chinese zodiac sign",
+        "paragraphs": [
+          "Most visitors searching for 1990 Chinese zodiac sign are not looking for a decorative encyclopedia entry. They are trying to decide what something means, what to buy, what to check, or whether a quick answer is safe to trust. That is why this guide begins with the direct answer and then explains the January 27, 1990 Lunar New Year start date.",
+          "The best page experience is simple but not shallow. Give the reader the answer, show the condition that can change it, and avoid burying the practical guidance under a long history section. Background matters, but it should support the decision rather than delay it."
+        ]
+      },
+      {
+        "title": "What to check first",
+        "paragraphs": [
+          "Check the January 27, 1990 Lunar New Year start date before making the final decision. This is the detail most likely to change the answer, especially when the keyword looks simple but the real situation has a date, material, character, spelling, or use-case condition hidden inside it.",
+          "Then check the Metal Horse reading before using personality, color, or compatibility notes. The second check helps the reader compare alternatives and prevents the page from becoming a one-line definition. It also creates a natural path to internal links, tools, product categories, or a paid report entry if the visitor wants deeper help."
+        ]
+      },
+      {
+        "title": "How to avoid over-reading the answer",
+        "paragraphs": [
+          "A responsible guide should explain what the tradition, object, or name can reasonably say and what it cannot prove. A zodiac label does not prove character, a surname meaning does not prove a private family origin, and a craft symbol does not guarantee an outcome.",
+          "This boundary improves trust. Readers can still enjoy the cultural meaning, choose a gift, compare a material, or record a family clue, but they are not pushed into exaggerated claims. That tone is better for SEO quality, ad review, and future commercial pages."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "A common mistake is assigning Horse to every 1990 birthday from the Western calendar alone. This usually happens when a reader sees a familiar phrase and assumes the missing detail is not important. The page should slow down that moment and show exactly what still needs to be checked.",
+          "Another mistake is treating Metal Horse personality notes as fixed personal facts. The better approach is to record the uncertain detail, compare the related guide, and make the next action explicit. This keeps the article useful instead of vague and helps prevent duplicate thin pages."
+        ]
+      },
+      {
+        "title": "Where this topic becomes useful",
+        "paragraphs": [
+          "1990 Chinese zodiac sign is most useful when it helps someone move from uncertainty to a clear next step. That may mean checking a date, choosing a material, confirming a Chinese character, comparing spellings, or deciding whether a gift or product page is relevant.",
+          "The page should also support topical authority. A single focused article can strengthen a whole cluster when it links back to the main guide and forward to the next practical resource. This is stronger than publishing several short pages that repeat the same answer."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "The best next step is to use the calculator for January birthdays, then compare the Horse, element, and compatibility guides. This gives the reader a practical route after the quick answer and reduces the chance that they leave the site to repeat the same search elsewhere.",
+          "If this topic later receives product blocks, report offers, downloadable checklists, or affiliate recommendations, keep the same decision logic. The commercial layer should support the reader's decision, not replace clear free guidance."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Practical decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Quick answer",
+          "Direct definition and first condition",
+          "Prevents a vague answer"
+        ],
+        [
+          "Accuracy",
+          "the January 27, 1990 Lunar New Year start date",
+          "Small details can change the result"
+        ],
+        [
+          "Comparison",
+          "the Metal Horse reading before using personality, color, or compatibility notes",
+          "Helps readers choose between similar options"
+        ],
+        [
+          "Commercial next step",
+          "Product, report, or related guide fit",
+          "Keeps monetization aligned with user intent"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Chinese Zodiac Calculator",
+        "path": "/chinese-zodiac-calculator/",
+        "description": "Check the animal sign by full birth date."
+      },
+      {
+        "title": "Horse Chinese Zodiac",
+        "path": "/guides/horse-chinese-zodiac/",
+        "description": "Read Horse meaning, years, and symbolism."
+      },
+      {
+        "title": "Chinese Zodiac Compatibility",
+        "path": "/chinese-zodiac-compatibility/",
+        "description": "Compare zodiac relationship language responsibly."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is every 1990 birthday a Horse year birthday?",
+        "a": "No. Birthdays before January 27, 1990 usually belong to the previous Earth Snake year because the Chinese zodiac year follows Lunar New Year."
+      },
+      {
+        "q": "What element is the 1990 Horse?",
+        "a": "1990 is commonly read as a Metal Horse year for birthdays on or after the Lunar New Year boundary."
+      },
+      {
+        "q": "Can Metal Horse meaning predict personality?",
+        "a": "No. It is cultural symbolism and should not be used as a fixed judgment of a real person."
+      }
+    ]
+  },
+  {
+    "title": "2002 Chinese Zodiac Sign: Water Horse Year, Dates, and Compatibility Notes",
+    "path": "/guides/2002-chinese-zodiac/",
+    "description": "Check the 2002 Chinese zodiac sign, Water Horse dates, Lunar New Year boundary, meaning, compatibility notes, and common lookup mistakes.",
+    "h1": "2002 Chinese Zodiac Sign: Water Horse Year, Dates, and Compatibility Notes",
+    "intro": "2002 is usually discussed as a Water Horse year, but birthdays before February 12 need the previous zodiac year check.",
+    "answer": "The 2002 Chinese zodiac sign is Water Horse for people born from February 12, 2002 to January 31, 2003; birthdays before February 12, 2002 are usually counted in the previous Metal Snake year.",
+    "geoPatch": {
+      "noteLabel": "Source note",
+      "note": "This page follows the traditional Chinese zodiac year boundary and animal-element cycle. The most important evidence is the Lunar New Year start date, because the zodiac year does not begin on January 1.",
+      "dataAnchor": "2002 Chinese zodiac = Water Horse; start date February 12, 2002; previous sign before that date = Metal Snake.",
+      "facts": [
+        ["Zodiac animal", "Horse"],
+        ["Element", "Water"],
+        ["Zodiac year starts", "February 12, 2002"],
+        ["Use limit", "Cultural reference, not a scientific or deterministic claim"]
+      ]
+    },
+    "details": [
+      "2002 Chinese zodiac sign should be read through the Lunar New Year boundary, Water element, and Horse compatibility context, not as a loose label that can be copied from one chart to another. The practical value of the page is that it slows the decision down at the exact point where readers usually make mistakes: the February 12, 2002 Lunar New Year start date. A useful guide gives the quick answer first, then explains the condition, comparison, or buying check that can change the final choice. That structure helps a visitor act with confidence while still respecting the limits of cultural reference content.",
+      "Search intent for 2002 Chinese zodiac sign is usually practical. The reader may want a fast answer, a purchase decision, a family research clue, or a way to compare several similar pages. That is why the article should separate the stable reference point from the interpretation. For this topic, the stable point is the February 12, 2002 Lunar New Year start date; the interpretation comes after that, once the reader knows what is being compared.",
+      "The second layer is whether the reader needs a quick year answer, a compatibility note, or a full birth-date check. This is where thin articles often fail because they repeat a definition without showing how someone should use it. A better page names the tradeoff, gives a concrete example, and points to a related page that can answer the next question. That is also the safest way to prepare the page for ads, affiliate blocks, paid reports, or product cards later.",
+      "Commercial intent should be handled carefully. The free article must be useful before any paid product or recommendation appears. If the visitor can understand the decision without buying anything, the page earns trust. If a product or report is added later, it should extend the decision path instead of replacing the answer.",
+      "The language should stay specific and modest. Cultural symbols, names, materials, or calendar labels can be meaningful, but they should not be presented as guaranteed luck, verified ancestry, perfect compatibility, or one universal product choice. This makes the page stronger for readers and safer for long-term SEO.",
+      "Use this page as part of a cluster. It should connect 2002 Chinese zodiac sign to broader guides, tools, and comparison pages so the visitor does not have to return to search immediately. A focused long-tail page works best when it answers one question deeply and then offers a clear next step."
+    ],
+    "sections": [
+      {
+        "title": "Start with the real question behind 2002 Chinese zodiac sign",
+        "paragraphs": [
+          "Most visitors searching for 2002 Chinese zodiac sign are not looking for a decorative encyclopedia entry. They are trying to decide what something means, what to buy, what to check, or whether a quick answer is safe to trust. That is why this guide begins with the direct answer and then explains the February 12, 2002 Lunar New Year start date.",
+          "The best page experience is simple but not shallow. Give the reader the answer, show the condition that can change it, and avoid burying the practical guidance under a long history section. Background matters, but it should support the decision rather than delay it."
+        ]
+      },
+      {
+        "title": "What to check first",
+        "paragraphs": [
+          "Check the February 12, 2002 Lunar New Year start date before making the final decision. This is the detail most likely to change the answer, especially when the keyword looks simple but the real situation has a date, material, character, spelling, or use-case condition hidden inside it.",
+          "Then check whether the reader needs a quick year answer, a compatibility note, or a full birth-date check. The second check helps the reader compare alternatives and prevents the page from becoming a one-line definition. It also creates a natural path to internal links, tools, product categories, or a paid report entry if the visitor wants deeper help."
+        ]
+      },
+      {
+        "title": "How to avoid over-reading the answer",
+        "paragraphs": [
+          "A responsible guide should explain what the tradition, object, or name can reasonably say and what it cannot prove. A zodiac label does not prove character, a surname meaning does not prove a private family origin, and a craft symbol does not guarantee an outcome.",
+          "This boundary improves trust. Readers can still enjoy the cultural meaning, choose a gift, compare a material, or record a family clue, but they are not pushed into exaggerated claims. That tone is better for SEO quality, ad review, and future commercial pages."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "A common mistake is using January 1 as the zodiac boundary. This usually happens when a reader sees a familiar phrase and assumes the missing detail is not important. The page should slow down that moment and show exactly what still needs to be checked.",
+          "Another mistake is reading compatibility charts as relationship proof instead of symbolic tradition. The better approach is to record the uncertain detail, compare the related guide, and make the next action explicit. This keeps the article useful instead of vague and helps prevent duplicate thin pages."
+        ]
+      },
+      {
+        "title": "Where this topic becomes useful",
+        "paragraphs": [
+          "2002 Chinese zodiac sign is most useful when it helps someone move from uncertainty to a clear next step. That may mean checking a date, choosing a material, confirming a Chinese character, comparing spellings, or deciding whether a gift or product page is relevant.",
+          "The page should also support topical authority. A single focused article can strengthen a whole cluster when it links back to the main guide and forward to the next practical resource. This is stronger than publishing several short pages that repeat the same answer."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "The best next step is to confirm the birthday with the calculator, then open the Horse and compatibility guides for context. This gives the reader a practical route after the quick answer and reduces the chance that they leave the site to repeat the same search elsewhere.",
+          "If this topic later receives product blocks, report offers, downloadable checklists, or affiliate recommendations, keep the same decision logic. The commercial layer should support the reader's decision, not replace clear free guidance."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Practical decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Quick answer",
+          "Direct definition and first condition",
+          "Prevents a vague answer"
+        ],
+        [
+          "Accuracy",
+          "the February 12, 2002 Lunar New Year start date",
+          "Small details can change the result"
+        ],
+        [
+          "Comparison",
+          "whether the reader needs a quick year answer, a compatibility note, or a full birth-date check",
+          "Helps readers choose between similar options"
+        ],
+        [
+          "Commercial next step",
+          "Product, report, or related guide fit",
+          "Keeps monetization aligned with user intent"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Chinese Zodiac Years",
+        "path": "/chinese-zodiac-years/",
+        "description": "Compare zodiac years and date ranges."
+      },
+      {
+        "title": "Horse Chinese Zodiac",
+        "path": "/guides/horse-chinese-zodiac/",
+        "description": "Read Horse meaning and year patterns."
+      },
+      {
+        "title": "Chinese Zodiac Compatibility Calculator",
+        "path": "/chinese-zodiac-compatibility/",
+        "description": "Compare two animal signs as a cultural reference."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What Chinese zodiac animal is 2002?",
+        "a": "For birthdays from February 12, 2002 to January 31, 2003, the sign is Water Horse."
+      },
+      {
+        "q": "What if someone was born in January 2002?",
+        "a": "They should check the previous Metal Snake year because Lunar New Year had not started yet."
+      },
+      {
+        "q": "Is Water Horse compatibility exact?",
+        "a": "No. Compatibility language is symbolic and should be used as cultural context, not proof about a relationship."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260713) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
+
+const dailyArticles20260714 = [
+  {
+    "title": "Chinese Zodiac Birthday Gifts: Animal Signs and Safe Wording",
+    "path": "/guides/chinese-zodiac-birthday-gifts/",
+    "description": "Choose Chinese zodiac birthday gifts with animal signs, Lunar New Year checks, safe wording, and practical personalization ideas.",
+    "h1": "Chinese Zodiac Birthday Gifts: Animal Signs and Safe Wording",
+    "intro": "Chinese zodiac birthday gifts is a practical search because the reader usually wants a clear decision, not only a definition. The safest answer starts with the key check and then explains how to use the result responsibly.",
+    "answer": "Quick answer: Chinese zodiac birthday gifts work best when you confirm the birth date against the Lunar New Year boundary, choose the correct animal sign, and use modest wording such as birth-year symbol or cultural birthday note instead of promising luck, destiny, or perfect compatibility.",
+    "geoPatch": {
+      "noteLabel": "Source note",
+      "note": "The reliable evidence point is the lunar year date range, not the Gregorian birth year alone. This page treats tradition, product use, and family records as reference evidence. Meanings are explained as cultural or practical guidance, not as verified promises about luck, ancestry, personality, health, money, or relationships.",
+      "dataAnchor": "Chinese zodiac birthday gift decision = birth date check + zodiac animal + modest cultural wording + product quality check.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese zodiac birthday gifts"
+        ],
+        [
+          "First check",
+          "confirm the recipient's birth date against the Lunar New Year boundary"
+        ],
+        [
+          "Evidence point",
+          "The reliable evidence point is the lunar year date range, not the Gregorian birth year alone."
+        ],
+        [
+          "Use limit",
+          "Cultural, educational, product, or family-reference guidance; not a guaranteed outcome claim."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese zodiac birthday gifts should begin with the decision the visitor is trying to make. Some readers want to buy something, some want to teach a class, some want to check a family clue, and some want wording that feels respectful. The page is strongest when it gives the direct answer first, then names the detail that can change the result. For this topic, that detail is to confirm the recipient's birth date against the Lunar New Year boundary.",
+      "The second step is to choose a gift format that can carry the animal sign clearly without making exaggerated luck claims. This keeps the page from becoming a plain definition. It also gives the reader a clear way to compare similar options. A person can look at the same symbol, name, gift, or cultural object and still need different advice depending on the occasion, material, audience, price, or evidence available.",
+      "The strongest pages in this group separate stable facts from interpretation. Stable facts are things such as a date boundary, written character, product material, finished size, visible knot form, or teaching rule. Interpretation is the meaning, gift message, classroom discussion, or symbolic wording built on top of those facts. Mixing the two makes the content sound confident but less useful.",
+      "Readers also need a safe limit. Traditional culture can carry rich meaning, but a page should not claim that a symbol guarantees luck, a surname spelling proves ancestry, a birthday sign fixes personality, or a product automatically solves a personal problem. Modest wording is not weaker. It is more credible because it tells the reader what can be checked and what should stay symbolic.",
+      "Commercial use should be handled through decision support. If a product, paid report, checklist, or recommendation is added later, the free section should still answer the question on its own. A visitor should understand why one choice is better than another before seeing any buying prompt. That is also the best structure for long-term trust and repeat visits.",
+      "Good examples for this topic include cards, custom prints, small charms, desk decor, family birthday notes, and educational gifts. These examples make the advice concrete. They also create natural internal links to tools, product categories, tutorials, and related guides without forcing the reader through a sales page. The article should help first and only then offer the next step.",
+      "The most common mistake is printing the wrong animal for a January or early February birthday. A clear article prevents that mistake by showing the check before the conclusion. When the answer has uncertainty, the wording should say what is likely, what is confirmed, and what still needs evidence. That approach works better than a short answer that sounds complete but leaves the real decision unresolved."
+    ],
+    "sections": [
+      {
+        "title": "What Chinese zodiac birthday gifts really needs to answer",
+        "paragraphs": [
+          "The search phrase sounds simple, but the real need is usually practical. A reader may be choosing a gift, planning a lesson, checking a family record, comparing materials, or preparing wording for a product page. The article should not start by showing off background knowledge. It should first identify the decision and make the next action obvious.",
+          "For this page, the first action is to confirm the recipient's birth date against the Lunar New Year boundary. After that, the reader can use the rest of the guide with fewer mistakes. This order matters because many culture-related topics look familiar on the surface while hiding a detail that changes the final answer."
+        ]
+      },
+      {
+        "title": "Basic facts before interpretation",
+        "paragraphs": [
+          "A responsible explanation gives the facts before the meaning. The fact may be a date range, a character, a material, a knot form, a package size, a classroom rule, or a visible product feature. The meaning comes later and should be written as a careful reading of those facts.",
+          "This is also useful for AI answers and search snippets. If the page states the fact clearly, then repeats the decision rule in normal language, answer engines can summarize it without turning the page into a vague cultural claim. The reader also gets a better experience because the important condition is easy to find."
+        ]
+      },
+      {
+        "title": "Examples and use cases",
+        "paragraphs": [
+          "Chinese zodiac birthday gifts can appear in cards, custom prints, small charms, desk decor, family birthday notes, and educational gifts. Each case has a different risk. A gift needs safe wording and decent presentation. A product needs material and quality checks. A family clue needs evidence. A classroom activity needs respectful boundaries. The same cultural idea should be adapted to the situation instead of copied word for word.",
+          "When a page gives examples, it should explain why the example works. A short list alone is not enough. The better pattern is to name the example, show the check, then tell the reader what to avoid. That turns background information into something the visitor can use immediately."
+        ]
+      },
+      {
+        "title": "Buying, teaching, or research checks",
+        "paragraphs": [
+          "If the reader is buying something, ask for proof: material, size, finish, sample photos, package protection, care instructions, or personalization preview. If the reader is teaching, keep the activity inclusive and avoid ranking students by a cultural label. If the reader is researching family history, preserve the original spelling and look for written evidence before choosing a meaning.",
+          "These checks are simple, but they prevent most poor decisions. They also help the site connect informational pages with product pages, tools, or paid reports later. The connection should feel natural because the article has already explained the problem that the next page solves."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "The main mistake is printing the wrong animal for a January or early February birthday. Another mistake is treating a symbolic meaning as a fixed result. A third mistake is copying a phrase from another site without checking whether it fits the reader's situation. These errors create thin pages and weak user trust.",
+          "The fix is to write with conditions. Say when the answer applies, what evidence supports it, and when the reader should slow down. This creates a more natural article because it sounds like practical guidance rather than a list of claims."
+        ]
+      },
+      {
+        "title": "Best next step",
+        "paragraphs": [
+          "After reading this guide, the best next step is to compare the related guide or tool that answers the next practical question. A reader who needs a date check should use the calculator. A reader choosing a product should compare the buying guide. A reader checking a character should collect family evidence before finalizing a design.",
+          "This page should also be updated when new examples, products, or questions appear. The core answer can stay stable, while the examples and FAQ can grow from real article clusters. That gives the site a stronger topical structure without publishing many short pages that repeat the same point."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Practical decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Fast answer",
+          "confirm the recipient's birth date against the Lunar New Year boundary",
+          "Prevents the most common wrong conclusion"
+        ],
+        [
+          "Better choice",
+          "choose a gift format that can carry the animal sign clearly without making exaggerated luck claims",
+          "Turns a definition into a usable decision"
+        ],
+        [
+          "Evidence",
+          "The reliable evidence point is the lunar year date range, not the Gregorian birth year alone.",
+          "Keeps the page grounded in checkable details"
+        ],
+        [
+          "Safe wording",
+          "Use symbolic, educational, or practical language",
+          "Avoids exaggerated claims"
+        ],
+        [
+          "Next step",
+          "Open the related guide, tool, or product comparison",
+          "Keeps the visitor inside the topic cluster"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Related Guide",
+        "path": "/",
+        "category": "Related",
+        "description": "Continue with a related guide that supports this topic cluster."
+      },
+      {
+        "title": "Chinese Zodiac Compatibility",
+        "path": "/chinese-zodiac-compatibility/",
+        "category": "Related",
+        "description": "Continue with a related guide that supports this topic cluster."
+      },
+      {
+        "title": "What Chinese Zodiac Sign Am I",
+        "path": "/guides/what-chinese-zodiac-sign-am-i/",
+        "category": "Related",
+        "description": "Continue with a related guide that supports this topic cluster."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese zodiac birthday gifts?",
+        "a": "Chinese zodiac birthday gifts work best when you confirm the birth date against the Lunar New Year boundary, choose the correct animal sign, and use modest wording such as birth-year symbol or cultural birthday note instead of promising luck, destiny, or perfect compatibility."
+      },
+      {
+        "q": "What should I check first for Chinese zodiac birthday gifts?",
+        "a": "Check whether you need to confirm the recipient's birth date against the Lunar New Year boundary. This is the condition most likely to change the final answer or product choice."
+      },
+      {
+        "q": "Can I use Chinese zodiac birthday gifts for gifts, products, or teaching?",
+        "a": "Yes, but adapt the wording to the situation. Use cultural, practical, or educational language and avoid promising guaranteed luck, verified ancestry, fixed personality, or certain outcomes."
+      },
+      {
+        "q": "What is the biggest mistake with Chinese zodiac birthday gifts?",
+        "a": "The biggest mistake is printing the wrong animal for a January or early February birthday. A careful page prevents that mistake by showing the evidence and the decision rule before the conclusion."
+      },
+      {
+        "q": "Where should I go after reading this Chinese zodiac birthday gifts guide?",
+        "a": "Use the related guide, calculator, product comparison, or research checklist that answers the next practical question. That gives a clearer result than repeating the same broad search."
+      }
+    ]
+  },
+  {
+    "title": "Chinese Zodiac Classroom Activities: Animals, Years, and Culture",
+    "path": "/guides/chinese-zodiac-classroom-activities/",
+    "description": "Plan Chinese zodiac classroom activities with animal years, culture notes, worksheets, discussion prompts, and respectful teaching limits.",
+    "h1": "Chinese Zodiac Classroom Activities: Animals, Years, and Culture",
+    "intro": "Chinese zodiac classroom activities is a practical search because the reader usually wants a clear decision, not only a definition. The safest answer starts with the key check and then explains how to use the result responsibly.",
+    "answer": "Quick answer: Chinese zodiac classroom activities should teach the twelve animals, year-cycle logic, Lunar New Year boundary, and cultural symbolism while avoiding fixed personality labels or claims that a child's sign determines behavior, ability, or future outcomes.",
+    "geoPatch": {
+      "noteLabel": "Source note",
+      "note": "The stable classroom facts are the twelve-animal order, year cycle, and Lunar New Year boundary. This page treats tradition, product use, and family records as reference evidence. Meanings are explained as cultural or practical guidance, not as verified promises about luck, ancestry, personality, health, money, or relationships.",
+      "dataAnchor": "Chinese zodiac classroom activity decision = animal cycle + date boundary + cultural context + respectful discussion rule.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese zodiac classroom activities"
+        ],
+        [
+          "First check",
+          "separate calendar facts from symbolic interpretation before giving students a worksheet"
+        ],
+        [
+          "Evidence point",
+          "The stable classroom facts are the twelve-animal order, year cycle, and Lunar New Year boundary."
+        ],
+        [
+          "Use limit",
+          "Cultural, educational, product, or family-reference guidance; not a guaranteed outcome claim."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese zodiac classroom activities should begin with the decision the visitor is trying to make. Some readers want to buy something, some want to teach a class, some want to check a family clue, and some want wording that feels respectful. The page is strongest when it gives the direct answer first, then names the detail that can change the result. For this topic, that detail is to separate calendar facts from symbolic interpretation before giving students a worksheet.",
+      "The second step is to use activities that let students compare animals, years, and stories without ranking people. This keeps the page from becoming a plain definition. It also gives the reader a clear way to compare similar options. A person can look at the same symbol, name, gift, or cultural object and still need different advice depending on the occasion, material, audience, price, or evidence available.",
+      "The strongest pages in this group separate stable facts from interpretation. Stable facts are things such as a date boundary, written character, product material, finished size, visible knot form, or teaching rule. Interpretation is the meaning, gift message, classroom discussion, or symbolic wording built on top of those facts. Mixing the two makes the content sound confident but less useful.",
+      "Readers also need a safe limit. Traditional culture can carry rich meaning, but a page should not claim that a symbol guarantees luck, a surname spelling proves ancestry, a birthday sign fixes personality, or a product automatically solves a personal problem. Modest wording is not weaker. It is more credible because it tells the reader what can be checked and what should stay symbolic.",
+      "Commercial use should be handled through decision support. If a product, paid report, checklist, or recommendation is added later, the free section should still answer the question on its own. A visitor should understand why one choice is better than another before seeing any buying prompt. That is also the best structure for long-term trust and repeat visits.",
+      "Good examples for this topic include animal order games, year charts, birthday date checks, cultural comparison prompts, and simple art projects. These examples make the advice concrete. They also create natural internal links to tools, product categories, tutorials, and related guides without forcing the reader through a sales page. The article should help first and only then offer the next step.",
+      "The most common mistake is turning zodiac signs into classroom personality judgments. A clear article prevents that mistake by showing the check before the conclusion. When the answer has uncertainty, the wording should say what is likely, what is confirmed, and what still needs evidence. That approach works better than a short answer that sounds complete but leaves the real decision unresolved."
+    ],
+    "sections": [
+      {
+        "title": "What Chinese zodiac classroom activities really needs to answer",
+        "paragraphs": [
+          "The search phrase sounds simple, but the real need is usually practical. A reader may be choosing a gift, planning a lesson, checking a family record, comparing materials, or preparing wording for a product page. The article should not start by showing off background knowledge. It should first identify the decision and make the next action obvious.",
+          "For this page, the first action is to separate calendar facts from symbolic interpretation before giving students a worksheet. After that, the reader can use the rest of the guide with fewer mistakes. This order matters because many culture-related topics look familiar on the surface while hiding a detail that changes the final answer."
+        ]
+      },
+      {
+        "title": "Basic facts before interpretation",
+        "paragraphs": [
+          "A responsible explanation gives the facts before the meaning. The fact may be a date range, a character, a material, a knot form, a package size, a classroom rule, or a visible product feature. The meaning comes later and should be written as a careful reading of those facts.",
+          "This is also useful for AI answers and search snippets. If the page states the fact clearly, then repeats the decision rule in normal language, answer engines can summarize it without turning the page into a vague cultural claim. The reader also gets a better experience because the important condition is easy to find."
+        ]
+      },
+      {
+        "title": "Examples and use cases",
+        "paragraphs": [
+          "Chinese zodiac classroom activities can appear in animal order games, year charts, birthday date checks, cultural comparison prompts, and simple art projects. Each case has a different risk. A gift needs safe wording and decent presentation. A product needs material and quality checks. A family clue needs evidence. A classroom activity needs respectful boundaries. The same cultural idea should be adapted to the situation instead of copied word for word.",
+          "When a page gives examples, it should explain why the example works. A short list alone is not enough. The better pattern is to name the example, show the check, then tell the reader what to avoid. That turns background information into something the visitor can use immediately."
+        ]
+      },
+      {
+        "title": "Buying, teaching, or research checks",
+        "paragraphs": [
+          "If the reader is buying something, ask for proof: material, size, finish, sample photos, package protection, care instructions, or personalization preview. If the reader is teaching, keep the activity inclusive and avoid ranking students by a cultural label. If the reader is researching family history, preserve the original spelling and look for written evidence before choosing a meaning.",
+          "These checks are simple, but they prevent most poor decisions. They also help the site connect informational pages with product pages, tools, or paid reports later. The connection should feel natural because the article has already explained the problem that the next page solves."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "The main mistake is turning zodiac signs into classroom personality judgments. Another mistake is treating a symbolic meaning as a fixed result. A third mistake is copying a phrase from another site without checking whether it fits the reader's situation. These errors create thin pages and weak user trust.",
+          "The fix is to write with conditions. Say when the answer applies, what evidence supports it, and when the reader should slow down. This creates a more natural article because it sounds like practical guidance rather than a list of claims."
+        ]
+      },
+      {
+        "title": "Best next step",
+        "paragraphs": [
+          "After reading this guide, the best next step is to compare the related guide or tool that answers the next practical question. A reader who needs a date check should use the calculator. A reader choosing a product should compare the buying guide. A reader checking a character should collect family evidence before finalizing a design.",
+          "This page should also be updated when new examples, products, or questions appear. The core answer can stay stable, while the examples and FAQ can grow from real article clusters. That gives the site a stronger topical structure without publishing many short pages that repeat the same point."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Practical decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Fast answer",
+          "separate calendar facts from symbolic interpretation before giving students a worksheet",
+          "Prevents the most common wrong conclusion"
+        ],
+        [
+          "Better choice",
+          "use activities that let students compare animals, years, and stories without ranking people",
+          "Turns a definition into a usable decision"
+        ],
+        [
+          "Evidence",
+          "The stable classroom facts are the twelve-animal order, year cycle, and Lunar New Year boundary.",
+          "Keeps the page grounded in checkable details"
+        ],
+        [
+          "Safe wording",
+          "Use symbolic, educational, or practical language",
+          "Avoids exaggerated claims"
+        ],
+        [
+          "Next step",
+          "Open the related guide, tool, or product comparison",
+          "Keeps the visitor inside the topic cluster"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Related Guide",
+        "path": "/",
+        "category": "Related",
+        "description": "Continue with a related guide that supports this topic cluster."
+      },
+      {
+        "title": "What Chinese Zodiac Sign Am I",
+        "path": "/guides/what-chinese-zodiac-sign-am-i/",
+        "category": "Related",
+        "description": "Continue with a related guide that supports this topic cluster."
+      },
+      {
+        "title": "Chinese Zodiac Animals",
+        "path": "/chinese-zodiac-animals/",
+        "category": "Related",
+        "description": "Continue with a related guide that supports this topic cluster."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese zodiac classroom activities?",
+        "a": "Chinese zodiac classroom activities should teach the twelve animals, year-cycle logic, Lunar New Year boundary, and cultural symbolism while avoiding fixed personality labels or claims that a child's sign determines behavior, ability, or future outcomes."
+      },
+      {
+        "q": "What should I check first for Chinese zodiac classroom activities?",
+        "a": "Check whether you need to separate calendar facts from symbolic interpretation before giving students a worksheet. This is the condition most likely to change the final answer or product choice."
+      },
+      {
+        "q": "Can I use Chinese zodiac classroom activities for gifts, products, or teaching?",
+        "a": "Yes, but adapt the wording to the situation. Use cultural, practical, or educational language and avoid promising guaranteed luck, verified ancestry, fixed personality, or certain outcomes."
+      },
+      {
+        "q": "What is the biggest mistake with Chinese zodiac classroom activities?",
+        "a": "The biggest mistake is turning zodiac signs into classroom personality judgments. A careful page prevents that mistake by showing the evidence and the decision rule before the conclusion."
+      },
+      {
+        "q": "Where should I go after reading this Chinese zodiac classroom activities guide?",
+        "a": "Use the related guide, calculator, product comparison, or research checklist that answers the next practical question. That gives a clearer result than repeating the same broad search."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260714) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
+
+const dailyArticles20260715 = [
+  {
+    "title": "Chinese Zodiac Baby Gifts: Animal Signs, Dates, and Safe Personalization",
+    "path": "/guides/chinese-zodiac-baby-gifts/",
+    "description": "Choose Chinese zodiac baby gifts with the correct animal sign, Lunar New Year date check, safe wording, and personalization notes.",
+    "h1": "Chinese Zodiac Baby Gifts: Animal Signs, Dates, and Safe Personalization",
+    "intro": "Chinese zodiac baby gifts is a practical topic because readers usually want to make a decision: what to buy, what to customize, what to print, or what wording is safe to use.",
+    "answer": "Quick answer: Chinese zodiac baby gifts should use the baby's correct zodiac animal after checking the Lunar New Year boundary, then keep personalization modest with wording such as birth-year animal, cultural keepsake, or family celebration gift.",
+    "geoPatch": {
+      "noteLabel": "Source note",
+      "note": "The checkable evidence is the birth date, the Lunar New Year boundary for that year, and the animal assigned by the traditional twelve-year cycle. The page treats cultural meaning, product use, and family evidence as separate layers, so the reader can enjoy the tradition without turning it into an unsupported promise.",
+      "dataAnchor": "The checkable evidence is the birth date, the Lunar New Year boundary for that year, and the animal assigned by the traditional twelve-year cycle. Chinese zodiac baby gifts decision = confirm the baby's full birth date against the Lunar New Year boundary before choosing the animal sign + choose a gift format that can show the animal clearly without promising luck, destiny, health, or future success.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese zodiac baby gifts"
+        ],
+        [
+          "First check",
+          "confirm the baby's full birth date against the Lunar New Year boundary before choosing the animal sign"
+        ],
+        [
+          "Second check",
+          "choose a gift format that can show the animal clearly without promising luck, destiny, health, or future success"
+        ],
+        [
+          "Use limit",
+          "Use cultural, practical, or family-reference wording; do not promise guaranteed luck, ancestry, personality, health, wealth, or relationship outcomes."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese zodiac baby gifts should start with the real decision behind the search. The visitor may be choosing a product, preparing a personalized design, planning a gift, or trying to avoid a cultural mistake. The direct answer helps, but the useful part is the check that comes next: confirm the baby's full birth date against the Lunar New Year boundary before choosing the animal sign.",
+      "After that first check, the page needs a second practical step: choose a gift format that can show the animal clearly without promising luck, destiny, health, or future success. This is where many thin pages fail. They explain the symbol or product in a pleasant way, but they do not show the reader what can go wrong before money, time, or trust is spent.",
+      "The safest structure is to separate facts from interpretation. A fact might be a birth date, a written surname character, a product material, a finished size, a proof image, a cord type, or a package photo. Interpretation is the meaning, gift message, color choice, or design story built from those facts.",
+      "That separation also makes the page easier to expand later. If a product card, downloadable template, paid report, or comparison table is added, it should support the decision already explained on the page. The free answer still needs to stand on its own.",
+      "Good use cases include nursery prints, baby blankets, framed name cards, first-year keepsakes, red envelopes, small charms, family photo props, and classroom-style zodiac charts. These examples are not filler. They show where the advice changes. A keepsake gift needs different wording from a classroom chart. A personalized product needs a proof step. A wall item needs dimensions. A surname design needs evidence before style.",
+      "The main risk is simple: The easiest mistake is ordering a personalized gift from the Gregorian year alone, especially for babies born in January or early February. The best way to prevent that mistake is to make the check visible before the conclusion. Readers should know what is confirmed, what is symbolic, and what still needs evidence.",
+      "Use modest language. A zodiac animal can mark a birth year, a surname character can carry family meaning, a knot can express a wish, and a pair of chopsticks can make a gift feel thoughtful. None of those details should be written as a guarantee of luck, identity, success, or origin."
+    ],
+    "sections": [
+      {
+        "title": "What to check first",
+        "paragraphs": [
+          "Start by asking what the reader is trying to do. If the goal is a gift, the check is accuracy, wording, and presentation. If the goal is a product, the check is material, size, proof, and durability. If the goal is a family-name design, the check is evidence before style.",
+          "For this topic, the first check is to confirm the baby's full birth date against the Lunar New Year boundary before choosing the animal sign. That step should happen before buying, printing, engraving, framing, or publishing a design. It is easier to fix uncertainty before the item is made than after it has been shipped or shared."
+        ]
+      },
+      {
+        "title": "Source, origin, evidence, and practice notes",
+        "paragraphs": [
+          "The checkable evidence is the birth date, the Lunar New Year boundary for that year, and the animal assigned by the traditional twelve-year cycle. That evidence does not need to be complicated, but it needs to be visible. A date boundary, product proof, family record, package photo, or material listing can prevent a page from becoming a vague meaning article.",
+          "Practice also matters. For a gift, practice means checking the wording with a real recipient in mind. For a product, it means looking at how the object will be used, cleaned, worn, hung, or stored. For a name or surname, it means recording where the character or spelling came from."
+        ]
+      },
+      {
+        "title": "Examples and use cases",
+        "paragraphs": [
+          "Chinese zodiac baby gifts can appear in nursery prints, baby blankets, framed name cards, first-year keepsakes, red envelopes, small charms, family photo props, and classroom-style zodiac charts. Each case asks for a slightly different decision. A family gift needs warmth and evidence. A decor item needs size and placement. A personalized item needs proofing. A classroom or reference item needs clarity and limits.",
+          "When these use cases are mixed together, the advice becomes weak. The better route is to tell the reader which detail matters for the situation they actually have. That is what makes the page useful for search visitors and for later product or paid-report entry points."
+        ]
+      },
+      {
+        "title": "Buying and customization checks",
+        "paragraphs": [
+          "Before paying for a physical or custom item, check the proof. Names, years, characters, dates, dimensions, materials, and colors should be confirmed from the listing or preview. If the seller does not show the full item, close-up photos, or care details, the buyer is taking on more risk.",
+          "For personalized products, a small mistake becomes permanent. Check spelling, character shape, engraving size, print layout, and whether the design still reads clearly at the final scale. For simple products, check whether the item will survive normal handling, cleaning, shipping, or hanging."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "The easiest mistake is ordering a personalized gift from the Gregorian year alone, especially for babies born in January or early February. Another mistake is using wording that sounds stronger than the evidence. A cultural symbol can be meaningful without being written as a promise. A family character can be special without proving a complete genealogy.",
+          "A third mistake is buying by appearance alone. Beautiful photos can hide weak materials, poor sizing, unclear personalization, or unsupported claims. A stronger page teaches the reader to inspect the exact detail that changes the choice."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "The next step is to open the related guide that solves the next piece of uncertainty. If the issue is date accuracy, use a calculator or year guide. If the issue is a surname character, use the lookup or research page. If the issue is product quality, compare material, size, packaging, and proof details.",
+          "Keep a short decision note before buying or publishing: what is confirmed, what source supports it, what the item is for, and what wording will be used. That small note prevents most avoidable mistakes and makes future updates to the site easier."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Accuracy",
+          "confirm the baby's full birth date against the Lunar New Year boundary before choosing the animal sign",
+          "Prevents the most visible wrong answer"
+        ],
+        [
+          "Practical fit",
+          "choose a gift format that can show the animal clearly without promising luck, destiny, health, or future success",
+          "Connects meaning to real use"
+        ],
+        [
+          "Evidence",
+          "The checkable evidence is the birth date, the Lunar New Year boundary for that year, and the animal assigned by the traditional twelve-year cycle.",
+          "Keeps the page trustworthy"
+        ],
+        [
+          "Use case",
+          "nursery prints, baby blankets, framed name cards, first-year keepsakes, red envelopes, small charms, family photo props, and classroom-style zodiac charts",
+          "Shows where advice changes"
+        ],
+        [
+          "Risk",
+          "The easiest mistake is ordering a personalized gift from the Gregorian year alone, especially for babies born in January or early February.",
+          "Prevents common product or wording errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "What Chinese Zodiac Sign Am I?",
+        "path": "/guides/what-chinese-zodiac-sign-am-i/",
+        "category": "Calculator Guides",
+        "description": "Check the animal sign with the full birth date."
+      },
+      {
+        "title": "Chinese Zodiac Years",
+        "path": "/chinese-zodiac-years/",
+        "category": "Year Guides",
+        "description": "Compare zodiac year ranges and date boundaries."
+      },
+      {
+        "title": "Chinese Zodiac Lucky Colors",
+        "path": "/guides/chinese-zodiac-lucky-colors/",
+        "category": "Meaning Guides",
+        "description": "Use color symbolism carefully for gifts."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese zodiac baby gifts?",
+        "a": "Chinese zodiac baby gifts should use the baby's correct zodiac animal after checking the Lunar New Year boundary, then keep personalization modest with wording such as birth-year animal, cultural keepsake, or family celebration gift."
+      },
+      {
+        "q": "What should I check first for Chinese zodiac baby gifts?",
+        "a": "First, confirm the baby's full birth date against the Lunar New Year boundary before choosing the animal sign. This is the detail most likely to change the final answer or buying decision."
+      },
+      {
+        "q": "Can Chinese zodiac baby gifts be used for gifts or products?",
+        "a": "Yes, if the wording stays modest and the product or design is checked for accuracy, quality, size, and real use."
+      },
+      {
+        "q": "What is the common mistake with Chinese zodiac baby gifts?",
+        "a": "The easiest mistake is ordering a personalized gift from the Gregorian year alone, especially for babies born in January or early February."
+      },
+      {
+        "q": "What evidence matters most for Chinese zodiac baby gifts?",
+        "a": "The checkable evidence is the birth date, the Lunar New Year boundary for that year, and the animal assigned by the traditional twelve-year cycle."
+      }
+    ]
+  },
+  {
+    "title": "Chinese Zodiac Wall Art: Animal Prints, Family Sets, and Buying Checks",
+    "path": "/guides/chinese-zodiac-wall-art/",
+    "description": "Choose Chinese zodiac wall art by animal sign accuracy, family sets, print style, nursery use, and safe cultural wording.",
+    "h1": "Chinese Zodiac Wall Art: Animal Prints, Family Sets, and Buying Checks",
+    "intro": "Chinese zodiac wall art is a practical topic because readers usually want to make a decision: what to buy, what to customize, what to print, or what wording is safe to use.",
+    "answer": "Quick answer: Chinese zodiac wall art works best when the animal sign is accurate, the visual style fits the room, and the wording describes cultural symbolism rather than guaranteed luck or personality.",
+    "geoPatch": {
+      "noteLabel": "Source note",
+      "note": "The evidence is the confirmed animal sign, birth-year boundary, print dimensions, material, and proof preview before purchase. The page treats cultural meaning, product use, and family evidence as separate layers, so the reader can enjoy the tradition without turning it into an unsupported promise.",
+      "dataAnchor": "The evidence is the confirmed animal sign, birth-year boundary, print dimensions, material, and proof preview before purchase. Chinese zodiac wall art decision = check whether the wall art is for one person, a family set, a nursery, a classroom, or general decor + verify each animal sign before printing names, years, or birth dates on custom artwork.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese zodiac wall art"
+        ],
+        [
+          "First check",
+          "check whether the wall art is for one person, a family set, a nursery, a classroom, or general decor"
+        ],
+        [
+          "Second check",
+          "verify each animal sign before printing names, years, or birth dates on custom artwork"
+        ],
+        [
+          "Use limit",
+          "Use cultural, practical, or family-reference wording; do not promise guaranteed luck, ancestry, personality, health, wealth, or relationship outcomes."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese zodiac wall art should start with the real decision behind the search. The visitor may be choosing a product, preparing a personalized design, planning a gift, or trying to avoid a cultural mistake. The direct answer helps, but the useful part is the check that comes next: check whether the wall art is for one person, a family set, a nursery, a classroom, or general decor.",
+      "After that first check, the page needs a second practical step: verify each animal sign before printing names, years, or birth dates on custom artwork. This is where many thin pages fail. They explain the symbol or product in a pleasant way, but they do not show the reader what can go wrong before money, time, or trust is spent.",
+      "The safest structure is to separate facts from interpretation. A fact might be a birth date, a written surname character, a product material, a finished size, a proof image, a cord type, or a package photo. Interpretation is the meaning, gift message, color choice, or design story built from those facts.",
+      "That separation also makes the page easier to expand later. If a product card, downloadable template, paid report, or comparison table is added, it should support the decision already explained on the page. The free answer still needs to stand on its own.",
+      "Good use cases include nursery prints, family zodiac posters, classroom charts, office decor, festival displays, downloadable wall art, and custom birthday gifts. These examples are not filler. They show where the advice changes. A keepsake gift needs different wording from a classroom chart. A personalized product needs a proof step. A wall item needs dimensions. A surname design needs evidence before style.",
+      "The main risk is simple: A common mistake is making the artwork beautiful but inaccurate, then discovering the animal sign or year label is wrong after printing. The best way to prevent that mistake is to make the check visible before the conclusion. Readers should know what is confirmed, what is symbolic, and what still needs evidence.",
+      "Use modest language. A zodiac animal can mark a birth year, a surname character can carry family meaning, a knot can express a wish, and a pair of chopsticks can make a gift feel thoughtful. None of those details should be written as a guarantee of luck, identity, success, or origin."
+    ],
+    "sections": [
+      {
+        "title": "What to check first",
+        "paragraphs": [
+          "Start by asking what the reader is trying to do. If the goal is a gift, the check is accuracy, wording, and presentation. If the goal is a product, the check is material, size, proof, and durability. If the goal is a family-name design, the check is evidence before style.",
+          "For this topic, the first check is to check whether the wall art is for one person, a family set, a nursery, a classroom, or general decor. That step should happen before buying, printing, engraving, framing, or publishing a design. It is easier to fix uncertainty before the item is made than after it has been shipped or shared."
+        ]
+      },
+      {
+        "title": "Source, origin, evidence, and practice notes",
+        "paragraphs": [
+          "The evidence is the confirmed animal sign, birth-year boundary, print dimensions, material, and proof preview before purchase. That evidence does not need to be complicated, but it needs to be visible. A date boundary, product proof, family record, package photo, or material listing can prevent a page from becoming a vague meaning article.",
+          "Practice also matters. For a gift, practice means checking the wording with a real recipient in mind. For a product, it means looking at how the object will be used, cleaned, worn, hung, or stored. For a name or surname, it means recording where the character or spelling came from."
+        ]
+      },
+      {
+        "title": "Examples and use cases",
+        "paragraphs": [
+          "Chinese zodiac wall art can appear in nursery prints, family zodiac posters, classroom charts, office decor, festival displays, downloadable wall art, and custom birthday gifts. Each case asks for a slightly different decision. A family gift needs warmth and evidence. A decor item needs size and placement. A personalized item needs proofing. A classroom or reference item needs clarity and limits.",
+          "When these use cases are mixed together, the advice becomes weak. The better route is to tell the reader which detail matters for the situation they actually have. That is what makes the page useful for search visitors and for later product or paid-report entry points."
+        ]
+      },
+      {
+        "title": "Buying and customization checks",
+        "paragraphs": [
+          "Before paying for a physical or custom item, check the proof. Names, years, characters, dates, dimensions, materials, and colors should be confirmed from the listing or preview. If the seller does not show the full item, close-up photos, or care details, the buyer is taking on more risk.",
+          "For personalized products, a small mistake becomes permanent. Check spelling, character shape, engraving size, print layout, and whether the design still reads clearly at the final scale. For simple products, check whether the item will survive normal handling, cleaning, shipping, or hanging."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "A common mistake is making the artwork beautiful but inaccurate, then discovering the animal sign or year label is wrong after printing. Another mistake is using wording that sounds stronger than the evidence. A cultural symbol can be meaningful without being written as a promise. A family character can be special without proving a complete genealogy.",
+          "A third mistake is buying by appearance alone. Beautiful photos can hide weak materials, poor sizing, unclear personalization, or unsupported claims. A stronger page teaches the reader to inspect the exact detail that changes the choice."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "The next step is to open the related guide that solves the next piece of uncertainty. If the issue is date accuracy, use a calculator or year guide. If the issue is a surname character, use the lookup or research page. If the issue is product quality, compare material, size, packaging, and proof details.",
+          "Keep a short decision note before buying or publishing: what is confirmed, what source supports it, what the item is for, and what wording will be used. That small note prevents most avoidable mistakes and makes future updates to the site easier."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Accuracy",
+          "check whether the wall art is for one person, a family set, a nursery, a classroom, or general decor",
+          "Prevents the most visible wrong answer"
+        ],
+        [
+          "Practical fit",
+          "verify each animal sign before printing names, years, or birth dates on custom artwork",
+          "Connects meaning to real use"
+        ],
+        [
+          "Evidence",
+          "The evidence is the confirmed animal sign, birth-year boundary, print dimensions, material, and proof preview before purchase.",
+          "Keeps the page trustworthy"
+        ],
+        [
+          "Use case",
+          "nursery prints, family zodiac posters, classroom charts, office decor, festival displays, downloadable wall art, and custom birthday gifts",
+          "Shows where advice changes"
+        ],
+        [
+          "Risk",
+          "A common mistake is making the artwork beautiful but inaccurate, then discovering the animal sign or year label is wrong after printing.",
+          "Prevents common product or wording errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Chinese Zodiac Animals",
+        "path": "/chinese-zodiac-animals/",
+        "category": "Animal Guides",
+        "description": "Review the twelve animals and their order."
+      },
+      {
+        "title": "Chinese Zodiac Birthday Gifts",
+        "path": "/guides/chinese-zodiac-birthday-gifts/",
+        "category": "Gift Guides",
+        "description": "Use zodiac signs in birthday gifts responsibly."
+      },
+      {
+        "title": "Chinese Zodiac Lucky Colors",
+        "path": "/guides/chinese-zodiac-lucky-colors/",
+        "category": "Meaning Guides",
+        "description": "Choose colors without exaggerated claims."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese zodiac wall art?",
+        "a": "Chinese zodiac wall art works best when the animal sign is accurate, the visual style fits the room, and the wording describes cultural symbolism rather than guaranteed luck or personality."
+      },
+      {
+        "q": "What should I check first for Chinese zodiac wall art?",
+        "a": "First, check whether the wall art is for one person, a family set, a nursery, a classroom, or general decor. This is the detail most likely to change the final answer or buying decision."
+      },
+      {
+        "q": "Can Chinese zodiac wall art be used for gifts or products?",
+        "a": "Yes, if the wording stays modest and the product or design is checked for accuracy, quality, size, and real use."
+      },
+      {
+        "q": "What is the common mistake with Chinese zodiac wall art?",
+        "a": "A common mistake is making the artwork beautiful but inaccurate, then discovering the animal sign or year label is wrong after printing."
+      },
+      {
+        "q": "What evidence matters most for Chinese zodiac wall art?",
+        "a": "The evidence is the confirmed animal sign, birth-year boundary, print dimensions, material, and proof preview before purchase."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260715) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
+
+const dailyArticles20260716 = [
+  {
+    "title": "Chinese Zodiac Necklace Meaning: Animal Signs, Gifts, and Buying Checks",
+    "path": "/guides/chinese-zodiac-necklace/",
+    "description": "Choose a Chinese zodiac necklace by animal sign accuracy, material, pendant size, personalization, and safe gift wording.",
+    "h1": "Chinese Zodiac Necklace Meaning: Animal Signs, Gifts, and Buying Checks",
+    "intro": "Chinese zodiac necklace is a practical topic because the reader usually wants to buy, print, gift, customize, or verify something before taking action.",
+    "answer": "Quick answer: A Chinese zodiac necklace should use the correct animal sign, a readable pendant design, and modest wording that treats the animal as a cultural birth-year symbol rather than a promise of luck or personality.",
+    "geoPatch": {
+      "noteLabel": "Source note",
+      "note": "The reliable evidence is the confirmed birth date, Lunar New Year boundary, animal sign, product material, pendant dimensions, and proof image. The guidance separates evidence, product checks, and symbolic wording so the page stays useful without overclaiming what tradition or design can prove.",
+      "dataAnchor": "Chinese zodiac necklace decision = confirm the recipient's full birth date and zodiac animal before choosing or engraving the pendant + check pendant size, material, chain length, engraving proof, and whether the animal remains recognizable at jewelry scale.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese zodiac necklace"
+        ],
+        [
+          "First check",
+          "confirm the recipient's full birth date and zodiac animal before choosing or engraving the pendant"
+        ],
+        [
+          "Second check",
+          "check pendant size, material, chain length, engraving proof, and whether the animal remains recognizable at jewelry scale"
+        ],
+        [
+          "Use limit",
+          "Use cultural, educational, product, or family-reference wording; avoid guaranteed claims about luck, ancestry, personality, health, money, or relationships."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese zodiac necklace should begin with the action the reader is about to take. A visitor may be comparing a product, preparing a personalized gift, designing a printable, checking a family character, or deciding whether a symbolic phrase is safe to use. The page should answer that action before adding background.",
+      "The first decision point is to confirm the recipient's full birth date and zodiac animal before choosing or engraving the pendant. This check prevents the most visible mistake. It also makes the article more useful than a short definition because it gives the reader a concrete step before they buy, print, engrave, hang, carry, or share anything.",
+      "The second decision point is to check pendant size, material, chain length, engraving proof, and whether the animal remains recognizable at jewelry scale. This is where commercial and informational intent meet. A product page needs materials, size, proof, and care details. A family-name page needs records and uncertainty notes. A cultural page needs modest wording and a clear boundary between symbolism and fact.",
+      "The strongest content separates stable evidence from interpretation. Stable evidence can be a date boundary, a written character, a material listing, a finished size, a product proof, a package photo, or a family record. Interpretation is the meaning, gift message, design choice, or style note built on top of that evidence.",
+      "Useful examples include birthday necklaces, baby keepsakes, couple gifts, family animal sets, zodiac charms, graduation gifts, and personalized pendant listings. These use cases make the page practical because they show how the same cultural object can require different checks. A classroom chart is not the same as a necklace. A travel case is not the same as a table rest. A surname printable is not the same as a verified family tree.",
+      "The main mistake to prevent is this: The most common mistake is ordering an attractive necklace before checking whether a January or early February birthday belongs to the previous zodiac year. A good page puts that warning near the decision point, not only at the end. Readers should understand what to verify while they still have time to change the product, wording, or design.",
+      "Commercial additions can come later, but they should not replace the answer. Affiliate products, direct products, paid reports, printable downloads, or comparison cards should extend the decision path already explained here. That keeps the page useful for readers and safer for long-term SEO."
+    ],
+    "sections": [
+      {
+        "title": "Start with the decision, not the decoration",
+        "paragraphs": [
+          "Many pages about Chinese zodiac necklace become decorative too quickly. They talk about beauty, tradition, or meaning before helping the reader decide what to check. A stronger page begins with the practical action: choose the sign, confirm the character, inspect the product, compare the case, or review the design proof.",
+          "That order matters because mistakes usually happen before purchase or personalization. Once a necklace is engraved, a printable is shared, a case is ordered, or a seal is carved, a small uncertainty becomes harder to fix."
+        ]
+      },
+      {
+        "title": "Evidence and source anchor",
+        "paragraphs": [
+          "The reliable evidence is the confirmed birth date, Lunar New Year boundary, animal sign, product material, pendant dimensions, and proof image. This source layer is what keeps the page from becoming a vague cultural explanation. The reader should see which facts are stable and which parts are interpretation or personal choice.",
+          "For search and AI answer quality, the page should repeat the decision rule in plain language. The reader needs to know what to check first, what can change the answer, and where the evidence comes from. That is more useful than a long history section with no action step."
+        ]
+      },
+      {
+        "title": "Examples and use cases",
+        "paragraphs": [
+          "Chinese zodiac necklace can be used in birthday necklaces, baby keepsakes, couple gifts, family animal sets, zodiac charms, graduation gifts, and personalized pendant listings. The best page does not treat those situations as identical. Each use case changes the risk: wrong sign, unclear character, bad fit, weak material, poor packaging, or overconfident wording.",
+          "When the use case is clear, the next link becomes natural. A product shopper needs a buying guide. A family researcher needs a lookup or evidence page. A teacher needs a classroom-safe explanation. A gift buyer needs wording that feels warm without making unsupported promises."
+        ]
+      },
+      {
+        "title": "Buying, printing, and personalization checks",
+        "paragraphs": [
+          "Before buying or producing anything, review the proof. Check names, dates, character shapes, animal signs, material, size, dimensions, package photos, care instructions, and whether the item will be used, worn, hung, stored, or carried. A small proof step prevents most avoidable problems.",
+          "For personalized or printable items, keep a record of what was confirmed. The note can be simple: source, spelling, character, date, product size, and wording. This makes the decision easier to review later and helps the site add templates or product blocks without rewriting the page."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "The most common mistake is ordering an attractive necklace before checking whether a January or early February birthday belongs to the previous zodiac year. Another mistake is writing a symbolic phrase as though it guarantees a result. Cultural meaning can be valuable without being overstated. A gift can express a wish without promising luck, identity, or destiny.",
+          "A third mistake is judging from one attractive photo. Product photos can hide scale, attachment quality, engraving readability, cleaning limits, or weak packaging. The safer approach is to compare the exact detail that affects real use."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "After reading this page, open the related guide that resolves the next uncertainty. If the question is accuracy, use a calculator, lookup, or year guide. If the question is product quality, compare material, size, finish, case, packaging, and proof. If the question is family meaning, collect the source record first.",
+          "This topic can grow into product recommendations, printable downloads, paid checks, or bundle pages later. The foundation should stay the same: answer the practical question first, keep evidence visible, and use careful wording for cultural meaning."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "First check",
+          "confirm the recipient's full birth date and zodiac animal before choosing or engraving the pendant",
+          "Prevents the main wrong answer"
+        ],
+        [
+          "Practical fit",
+          "check pendant size, material, chain length, engraving proof, and whether the animal remains recognizable at jewelry scale",
+          "Connects meaning to real use"
+        ],
+        [
+          "Evidence",
+          "The reliable evidence is the confirmed birth date, Lunar New Year boundary, animal sign, product material, pendant dimensions, and proof image.",
+          "Keeps the page trustworthy"
+        ],
+        [
+          "Use cases",
+          "birthday necklaces, baby keepsakes, couple gifts, family animal sets, zodiac charms, graduation gifts, and personalized pendant listings",
+          "Shows where advice changes"
+        ],
+        [
+          "Common risk",
+          "The most common mistake is ordering an attractive necklace before checking whether a January or early February birthday belongs to the previous zodiac year.",
+          "Prevents preventable buying or wording errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "What Chinese Zodiac Sign Am I?",
+        "path": "/guides/what-chinese-zodiac-sign-am-i/",
+        "category": "Calculator Guides",
+        "description": "Check the animal sign before personalization."
+      },
+      {
+        "title": "Chinese Zodiac Baby Gifts",
+        "path": "/guides/chinese-zodiac-baby-gifts/",
+        "category": "Gift Guides",
+        "description": "Use animal signs safely in keepsakes."
+      },
+      {
+        "title": "Chinese Zodiac Lucky Colors",
+        "path": "/guides/chinese-zodiac-lucky-colors/",
+        "category": "Meaning Guides",
+        "description": "Use color symbolism carefully."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese zodiac necklace?",
+        "a": "A Chinese zodiac necklace should use the correct animal sign, a readable pendant design, and modest wording that treats the animal as a cultural birth-year symbol rather than a promise of luck or personality."
+      },
+      {
+        "q": "What should I check first for Chinese zodiac necklace?",
+        "a": "First, confirm the recipient's full birth date and zodiac animal before choosing or engraving the pendant. That is the detail most likely to change the final decision."
+      },
+      {
+        "q": "Can Chinese zodiac necklace be used for gifts, products, or downloads?",
+        "a": "Yes, if the evidence is checked, the product or file is practical, and the wording stays modest rather than promising a guaranteed outcome."
+      },
+      {
+        "q": "What is the biggest mistake with Chinese zodiac necklace?",
+        "a": "The most common mistake is ordering an attractive necklace before checking whether a January or early February birthday belongs to the previous zodiac year."
+      },
+      {
+        "q": "What evidence matters most for Chinese zodiac necklace?",
+        "a": "The reliable evidence is the confirmed birth date, Lunar New Year boundary, animal sign, product material, pendant dimensions, and proof image."
+      }
+    ]
+  },
+  {
+    "title": "Chinese Zodiac Printable Chart: Animals, Years, Classrooms, and Gift Use",
+    "path": "/guides/chinese-zodiac-printable-chart/",
+    "description": "Use a Chinese zodiac printable chart for animals, year lookup, classrooms, gifts, wall art, and accurate date-boundary notes.",
+    "h1": "Chinese Zodiac Printable Chart: Animals, Years, Classrooms, and Gift Use",
+    "intro": "Chinese zodiac printable chart is a practical topic because the reader usually wants to buy, print, gift, customize, or verify something before taking action.",
+    "answer": "Quick answer: A Chinese zodiac printable chart is useful when it shows the twelve animals clearly, explains Lunar New Year boundaries, and avoids assigning every January or early February birthday by Gregorian year alone.",
+    "geoPatch": {
+      "noteLabel": "Source note",
+      "note": "The evidence is the twelve-animal order, year ranges, date-boundary note, source year table, and clear printable layout. The guidance separates evidence, product checks, and symbolic wording so the page stays useful without overclaiming what tradition or design can prove.",
+      "dataAnchor": "Chinese zodiac printable chart decision = decide whether the chart is for classroom learning, wall decor, family reference, gift use, or a downloadable worksheet + include a visible note that early-year birthdays should be checked with the Lunar New Year boundary.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese zodiac printable chart"
+        ],
+        [
+          "First check",
+          "decide whether the chart is for classroom learning, wall decor, family reference, gift use, or a downloadable worksheet"
+        ],
+        [
+          "Second check",
+          "include a visible note that early-year birthdays should be checked with the Lunar New Year boundary"
+        ],
+        [
+          "Use limit",
+          "Use cultural, educational, product, or family-reference wording; avoid guaranteed claims about luck, ancestry, personality, health, money, or relationships."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese zodiac printable chart should begin with the action the reader is about to take. A visitor may be comparing a product, preparing a personalized gift, designing a printable, checking a family character, or deciding whether a symbolic phrase is safe to use. The page should answer that action before adding background.",
+      "The first decision point is to decide whether the chart is for classroom learning, wall decor, family reference, gift use, or a downloadable worksheet. This check prevents the most visible mistake. It also makes the article more useful than a short definition because it gives the reader a concrete step before they buy, print, engrave, hang, carry, or share anything.",
+      "The second decision point is to include a visible note that early-year birthdays should be checked with the Lunar New Year boundary. This is where commercial and informational intent meet. A product page needs materials, size, proof, and care details. A family-name page needs records and uncertainty notes. A cultural page needs modest wording and a clear boundary between symbolism and fact.",
+      "The strongest content separates stable evidence from interpretation. Stable evidence can be a date boundary, a written character, a material listing, a finished size, a product proof, a package photo, or a family record. Interpretation is the meaning, gift message, design choice, or style note built on top of that evidence.",
+      "Useful examples include classroom handouts, homeschool worksheets, nursery wall art, family reference posters, festival printables, planner inserts, and digital downloads. These use cases make the page practical because they show how the same cultural object can require different checks. A classroom chart is not the same as a necklace. A travel case is not the same as a table rest. A surname printable is not the same as a verified family tree.",
+      "The main mistake to prevent is this: A common mistake is making a beautiful printable chart that hides the date-boundary warning and causes wrong sign assignments. A good page puts that warning near the decision point, not only at the end. Readers should understand what to verify while they still have time to change the product, wording, or design.",
+      "Commercial additions can come later, but they should not replace the answer. Affiliate products, direct products, paid reports, printable downloads, or comparison cards should extend the decision path already explained here. That keeps the page useful for readers and safer for long-term SEO."
+    ],
+    "sections": [
+      {
+        "title": "Start with the decision, not the decoration",
+        "paragraphs": [
+          "Many pages about Chinese zodiac printable chart become decorative too quickly. They talk about beauty, tradition, or meaning before helping the reader decide what to check. A stronger page begins with the practical action: choose the sign, confirm the character, inspect the product, compare the case, or review the design proof.",
+          "That order matters because mistakes usually happen before purchase or personalization. Once a necklace is engraved, a printable is shared, a case is ordered, or a seal is carved, a small uncertainty becomes harder to fix."
+        ]
+      },
+      {
+        "title": "Evidence and source anchor",
+        "paragraphs": [
+          "The evidence is the twelve-animal order, year ranges, date-boundary note, source year table, and clear printable layout. This source layer is what keeps the page from becoming a vague cultural explanation. The reader should see which facts are stable and which parts are interpretation or personal choice.",
+          "For search and AI answer quality, the page should repeat the decision rule in plain language. The reader needs to know what to check first, what can change the answer, and where the evidence comes from. That is more useful than a long history section with no action step."
+        ]
+      },
+      {
+        "title": "Examples and use cases",
+        "paragraphs": [
+          "Chinese zodiac printable chart can be used in classroom handouts, homeschool worksheets, nursery wall art, family reference posters, festival printables, planner inserts, and digital downloads. The best page does not treat those situations as identical. Each use case changes the risk: wrong sign, unclear character, bad fit, weak material, poor packaging, or overconfident wording.",
+          "When the use case is clear, the next link becomes natural. A product shopper needs a buying guide. A family researcher needs a lookup or evidence page. A teacher needs a classroom-safe explanation. A gift buyer needs wording that feels warm without making unsupported promises."
+        ]
+      },
+      {
+        "title": "Buying, printing, and personalization checks",
+        "paragraphs": [
+          "Before buying or producing anything, review the proof. Check names, dates, character shapes, animal signs, material, size, dimensions, package photos, care instructions, and whether the item will be used, worn, hung, stored, or carried. A small proof step prevents most avoidable problems.",
+          "For personalized or printable items, keep a record of what was confirmed. The note can be simple: source, spelling, character, date, product size, and wording. This makes the decision easier to review later and helps the site add templates or product blocks without rewriting the page."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "A common mistake is making a beautiful printable chart that hides the date-boundary warning and causes wrong sign assignments. Another mistake is writing a symbolic phrase as though it guarantees a result. Cultural meaning can be valuable without being overstated. A gift can express a wish without promising luck, identity, or destiny.",
+          "A third mistake is judging from one attractive photo. Product photos can hide scale, attachment quality, engraving readability, cleaning limits, or weak packaging. The safer approach is to compare the exact detail that affects real use."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "After reading this page, open the related guide that resolves the next uncertainty. If the question is accuracy, use a calculator, lookup, or year guide. If the question is product quality, compare material, size, finish, case, packaging, and proof. If the question is family meaning, collect the source record first.",
+          "This topic can grow into product recommendations, printable downloads, paid checks, or bundle pages later. The foundation should stay the same: answer the practical question first, keep evidence visible, and use careful wording for cultural meaning."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "First check",
+          "decide whether the chart is for classroom learning, wall decor, family reference, gift use, or a downloadable worksheet",
+          "Prevents the main wrong answer"
+        ],
+        [
+          "Practical fit",
+          "include a visible note that early-year birthdays should be checked with the Lunar New Year boundary",
+          "Connects meaning to real use"
+        ],
+        [
+          "Evidence",
+          "The evidence is the twelve-animal order, year ranges, date-boundary note, source year table, and clear printable layout.",
+          "Keeps the page trustworthy"
+        ],
+        [
+          "Use cases",
+          "classroom handouts, homeschool worksheets, nursery wall art, family reference posters, festival printables, planner inserts, and digital downloads",
+          "Shows where advice changes"
+        ],
+        [
+          "Common risk",
+          "A common mistake is making a beautiful printable chart that hides the date-boundary warning and causes wrong sign assignments.",
+          "Prevents preventable buying or wording errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Chinese Zodiac Animals",
+        "path": "/chinese-zodiac-animals/",
+        "category": "Animal Guides",
+        "description": "Review the twelve animals and their order."
+      },
+      {
+        "title": "Chinese Zodiac Years",
+        "path": "/chinese-zodiac-years/",
+        "category": "Year Guides",
+        "description": "Compare year ranges and boundaries."
+      },
+      {
+        "title": "Chinese Zodiac Classroom Activities",
+        "path": "/guides/chinese-zodiac-classroom-activities/",
+        "category": "Education Guides",
+        "description": "Use charts in respectful activities."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese zodiac printable chart?",
+        "a": "A Chinese zodiac printable chart is useful when it shows the twelve animals clearly, explains Lunar New Year boundaries, and avoids assigning every January or early February birthday by Gregorian year alone."
+      },
+      {
+        "q": "What should I check first for Chinese zodiac printable chart?",
+        "a": "First, decide whether the chart is for classroom learning, wall decor, family reference, gift use, or a downloadable worksheet. That is the detail most likely to change the final decision."
+      },
+      {
+        "q": "Can Chinese zodiac printable chart be used for gifts, products, or downloads?",
+        "a": "Yes, if the evidence is checked, the product or file is practical, and the wording stays modest rather than promising a guaranteed outcome."
+      },
+      {
+        "q": "What is the biggest mistake with Chinese zodiac printable chart?",
+        "a": "A common mistake is making a beautiful printable chart that hides the date-boundary warning and causes wrong sign assignments."
+      },
+      {
+        "q": "What evidence matters most for Chinese zodiac printable chart?",
+        "a": "The evidence is the twelve-animal order, year ranges, date-boundary note, source year table, and clear printable layout."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260716) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
+
+
+
+
 function seoReportCss() {
   return `.seo-report-page{padding:36px 0}.report-hero h1{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:34px;line-height:1.12;margin:12px 0 10px}.report-summary{display:grid;grid-template-columns:repeat(5,minmax(120px,1fr));gap:12px;margin-top:22px}.report-summary div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.report-summary strong{display:block;font-size:28px;line-height:1;color:#1d1814}.report-summary span{display:block;margin-top:8px;color:var(--muted);font-size:13px;font-weight:720}.report-rules p{margin:0}.seo-table td:nth-child(2){white-space:nowrap}.seo-table td:nth-child(2) strong{display:block;font-size:18px}.seo-table td:nth-child(2) span{display:inline-flex;margin-top:4px;padding:2px 8px;border-radius:999px;background:#eee;color:#4a4038;font-size:12px;font-weight:760}.seo-table tr.pass td:nth-child(2) span{background:#e8f5ee;color:#236349}.seo-table tr.review td:nth-child(2) span{background:#fff3d8;color:#8a5a16}.seo-table tr.fix td:nth-child(2) span{background:#fde8e8;color:#a42b2b}.seo-table td:last-child span{display:block;margin:3px 0;font-size:13px;color:#5c534b}@media(max-width:820px){.report-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}`;
 }
 
 function zodiacUpgradeCss() {
-  return `.zodiac-hero{min-height:680px;padding-bottom:82px}.zodiac-hero-visual{min-height:540px;background:radial-gradient(circle at 50% 46%,rgba(242,198,109,.2),rgba(125,34,38,.18) 45%,rgba(0,0,0,.3) 78%)}.zodiac-hero-visual::before{inset:18px;border-radius:12px;background:linear-gradient(135deg,rgba(255,248,236,.06),transparent 38%),repeating-linear-gradient(90deg,rgba(242,198,109,.08) 0 1px,transparent 1px 44px),repeating-linear-gradient(0deg,rgba(242,198,109,.06) 0 1px,transparent 1px 44px)}.zodiac-wheel-stage{position:relative;width:min(500px,86vw);aspect-ratio:1;display:grid;place-items:center}.zodiac-wheel-stage::before,.zodiac-wheel-stage::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none}.zodiac-wheel-stage::before{border:2px solid rgba(242,198,109,.55);box-shadow:0 0 0 22px rgba(242,198,109,.06),0 0 0 44px rgba(255,248,236,.035),0 34px 70px rgba(0,0,0,.32)}.zodiac-wheel-stage::after{inset:50px;border:1px solid rgba(255,248,236,.24);background:radial-gradient(circle,rgba(255,248,236,.08),transparent 62%)}.zodiac-orbit{position:absolute;inset:0;border-radius:50%;animation:zodiacSpin 42s linear infinite}.zodiac-orbit::before{content:"";position:absolute;inset:96px;border-radius:50%;border:1px dashed rgba(242,198,109,.34);box-shadow:0 0 0 54px rgba(255,248,236,.025)}.zodiac-orbit-item{--angle:calc(var(--i) * 30deg);position:absolute;left:50%;top:50%;width:74px;height:74px;margin:-37px;display:grid;place-items:center;gap:2px;text-decoration:none;color:#fff8ec;transform:rotate(var(--angle)) translate(210px) rotate(calc(-1 * var(--angle)));z-index:2}.zodiac-orbit-item span{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--animal-soft,#fff0e7);border:1px solid color-mix(in srgb,var(--animal-accent,#b3343a) 48%,#fff);color:var(--animal-accent,#b3343a);font-family:Georgia,serif;font-size:24px;font-weight:850;box-shadow:0 12px 24px rgba(0,0,0,.2)}.zodiac-orbit-item small{padding:3px 8px;border-radius:999px;background:rgba(33,12,10,.58);font-size:12px;font-weight:760;color:#fff3d6;box-shadow:0 8px 16px rgba(0,0,0,.16)}.zodiac-wheel-core{position:relative;z-index:3;display:grid;align-content:center;justify-items:center;gap:4px;width:210px;height:210px;padding:18px 18px 20px;border-radius:50%;background:radial-gradient(circle at 36% 30%,#df5054,#a71f31 66%,#69131f);border:2px solid rgba(242,198,109,.72);box-shadow:0 20px 46px rgba(0,0,0,.32),0 0 0 24px rgba(242,198,109,.08),0 0 0 56px rgba(255,248,236,.045),inset 0 0 0 12px rgba(255,248,236,.06);color:#fff8ec;text-align:center}.zodiac-wheel-core::before{content:"";position:absolute;inset:-74px;border-radius:50%;border:1px solid rgba(242,198,109,.2);background:conic-gradient(from 0deg,rgba(242,198,109,.16) 0 2deg,transparent 2deg 30deg);pointer-events:none}.zodiac-wheel-core::after{content:"";position:absolute;inset:18px;border-radius:50%;border:1px solid rgba(255,248,236,.16);pointer-events:none}.zodiac-wheel-core strong{font-family:Georgia,serif;font-size:36px;line-height:.94;display:block;margin:0}.zodiac-wheel-core span{font-size:14px;line-height:1.02;letter-spacing:.08em;text-transform:uppercase;color:#f7d895;display:block;margin:0}.zodiac-hero-visual:hover .zodiac-orbit{animation-play-state:paused}.zodiac-hero-visual figcaption{left:24px;top:24px;bottom:auto;padding:10px 13px;background:rgba(34,12,10,.5)}.zodiac-hero-visual figcaption strong{font-size:16px}.zodiac-hero-visual figcaption span{font-size:12px}.zodiac-quick-tool{margin:34px auto 30px}.zodiac-quick-tool .tool-panel{box-shadow:0 18px 44px rgba(42,18,14,.12)}@keyframes zodiacSpin{to{transform:rotate(360deg)}}@media(max-width:980px){.zodiac-hero{min-height:auto;padding-bottom:54px}.zodiac-wheel-stage{width:min(440px,88vw)}.zodiac-orbit-item{transform:rotate(var(--angle)) translate(184px) rotate(calc(-1 * var(--angle)))}.zodiac-wheel-core{width:184px;height:184px;gap:4px;padding:16px 16px 18px}.zodiac-quick-tool{margin-top:28px}}@media(max-width:640px){.zodiac-hero-visual{min-height:390px}.zodiac-wheel-stage{width:min(320px,82vw)}.zodiac-orbit-item{width:58px;height:58px;margin:-29px;transform:rotate(var(--angle)) translate(136px) rotate(calc(-1 * var(--angle)))}.zodiac-orbit-item span{width:34px;height:34px;font-size:19px}.zodiac-orbit-item small{font-size:10px;padding:2px 6px}.zodiac-wheel-core{width:132px;height:132px;gap:3px;padding:12px 12px 14px}.zodiac-wheel-core::before{inset:-48px}.zodiac-wheel-core strong{font-size:25px}.zodiac-wheel-core span{font-size:11px}.zodiac-hero-visual figcaption{position:absolute;left:14px;top:14px;right:auto;bottom:auto}}`;
+  return `.zodiac-hero{min-height:680px;padding-bottom:82px}.zodiac-hero-visual{min-height:540px;background:radial-gradient(circle at 50% 46%,rgba(242,198,109,.2),rgba(125,34,38,.18) 45%,rgba(0,0,0,.3) 78%)}.zodiac-hero-visual::before{inset:18px;border-radius:12px;background:linear-gradient(135deg,rgba(255,248,236,.06),transparent 38%),repeating-linear-gradient(90deg,rgba(242,198,109,.08) 0 1px,transparent 1px 44px),repeating-linear-gradient(0deg,rgba(242,198,109,.06) 0 1px,transparent 1px 44px)}.zodiac-wheel-stage{position:relative;width:min(500px,86vw);aspect-ratio:1;display:grid;place-items:center}.zodiac-wheel-stage::before,.zodiac-wheel-stage::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none}.zodiac-wheel-stage::before{border:2px solid rgba(242,198,109,.55);box-shadow:0 0 0 22px rgba(242,198,109,.06),0 0 0 44px rgba(255,248,236,.035),0 34px 70px rgba(0,0,0,.32)}.zodiac-wheel-stage::after{inset:50px;border:1px solid rgba(255,248,236,.24);background:radial-gradient(circle,rgba(255,248,236,.08),transparent 62%)}.zodiac-orbit{position:absolute;inset:0;border-radius:50%;animation:zodiacSpin 42s linear infinite}.zodiac-orbit::before{content:"";position:absolute;inset:96px;border-radius:50%;border:1px dashed rgba(242,198,109,.34);box-shadow:0 0 0 54px rgba(255,248,236,.025)}.zodiac-orbit-item{--angle:calc(var(--i) * 30deg);position:absolute;left:50%;top:50%;width:74px;height:74px;margin:-37px;display:grid;place-items:center;gap:2px;text-decoration:none;color:#fff8ec;transform:rotate(var(--angle)) translate(210px) rotate(calc(-1 * var(--angle)));z-index:2}.zodiac-orbit-item span{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--animal-soft,#fff0e7);border:1px solid color-mix(in srgb,var(--animal-accent,#b3343a) 48%,#fff);color:var(--animal-accent,#b3343a);font-family:Georgia,serif;font-size:24px;font-weight:850;box-shadow:0 12px 24px rgba(0,0,0,.2)}.zodiac-orbit-item small{padding:3px 8px;border-radius:999px;background:rgba(33,12,10,.58);font-size:12px;font-weight:760;color:#fff3d6;box-shadow:0 8px 16px rgba(0,0,0,.16)}.zodiac-wheel-core{position:relative;z-index:3;display:grid;align-content:center;justify-items:center;gap:4px;width:210px;height:210px;padding:18px 18px 20px;border-radius:50%;background:radial-gradient(circle at 36% 30%,#df5054,#a71f31 66%,#69131f);border:2px solid rgba(242,198,109,.72);box-shadow:0 20px 46px rgba(0,0,0,.32),0 0 0 24px rgba(242,198,109,.08),0 0 0 56px rgba(255,248,236,.045),inset 0 0 0 12px rgba(255,248,236,.06);color:#fff8ec;text-align:center}.zodiac-wheel-core::before{content:"";position:absolute;inset:-74px;border-radius:50%;border:1px solid rgba(242,198,109,.2);background:conic-gradient(from 0deg,rgba(242,198,109,.16) 0 2deg,transparent 2deg 30deg);pointer-events:none}.zodiac-wheel-core::after{content:"";position:absolute;inset:18px;border-radius:50%;border:1px solid rgba(255,248,236,.16);pointer-events:none}.zodiac-wheel-core strong{font-family:Georgia,serif;font-size:36px;line-height:.94;display:block;margin:0}.zodiac-wheel-core span{font-size:14px;line-height:1.02;letter-spacing:.08em;text-transform:uppercase;color:#f7d895;display:block;margin:0}.zodiac-hero-visual:hover .zodiac-orbit{animation-play-state:paused}.zodiac-hero-visual figcaption{left:24px;top:24px;bottom:auto;padding:10px 13px;background:rgba(34,12,10,.5)}.zodiac-hero-visual figcaption strong{font-size:16px}.zodiac-hero-visual figcaption span{font-size:12px}.zodiac-quick-tool{width:min(1160px,calc(100% - 36px));margin:34px auto 30px;padding:0}.zodiac-quick-tool .tool-panel{box-shadow:0 18px 44px rgba(42,18,14,.12)}@keyframes zodiacSpin{to{transform:rotate(360deg)}}@media(max-width:980px){.zodiac-hero{min-height:auto;padding-bottom:54px}.zodiac-wheel-stage{width:min(440px,88vw)}.zodiac-orbit-item{transform:rotate(var(--angle)) translate(184px) rotate(calc(-1 * var(--angle)))}.zodiac-wheel-core{width:184px;height:184px;gap:4px;padding:16px 16px 18px}.zodiac-quick-tool{margin-top:28px}}@media(max-width:640px){.zodiac-hero-visual{min-height:390px}.zodiac-wheel-stage{width:min(320px,82vw)}.zodiac-orbit-item{width:58px;height:58px;margin:-29px;transform:rotate(var(--angle)) translate(136px) rotate(calc(-1 * var(--angle)))}.zodiac-orbit-item span{width:34px;height:34px;font-size:19px}.zodiac-orbit-item small{font-size:10px;padding:2px 6px}.zodiac-wheel-core{width:132px;height:132px;gap:3px;padding:12px 12px 14px}.zodiac-wheel-core::before{inset:-48px}.zodiac-wheel-core strong{font-size:25px}.zodiac-wheel-core span{font-size:11px}.zodiac-hero-visual figcaption{position:absolute;left:14px;top:14px;right:auto;bottom:auto}}`;
 }
 
 function siteWideStyleExtensionCss() {
@@ -4200,8 +6255,19 @@ function heroSpacingFixCss() {
 }
 
 function contentWidthBalanceCss() {
-  return `body:not(.page-home):not(.seo-report-page) .page-hero{max-width:1240px}body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search{max-width:1120px}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-shell{max-width:1220px}.page-guides .article-search,.page-guides .content-section{max-width:1120px}.page-guides .article-search{padding-left:34px!important;padding-right:34px!important}.tool-page .tool-panel{max-width:none}.content-section:not(.split){padding-left:clamp(22px,4vw,52px);padding-right:clamp(22px,4vw,52px)}@media(max-width:1180px){body:not(.page-home):not(.seo-report-page) .page-hero,body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search,.page-guides .article-search,.page-guides .content-section{max-width:calc(100% - 32px)}}@media(max-width:640px){body:not(.page-home):not(.seo-report-page) .page-hero,body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search,.page-guides .article-search,.page-guides .content-section{max-width:calc(100% - 20px)}.page-guides .article-search{padding-left:20px!important;padding-right:20px!important}}`;
+  return `.tool-page>.tool-panel+.conversion-report-card{margin-top:18px}.tool-page .calculator-form{justify-content:start}.tool-page .calculator-form:not(.birthdate-form):not(.match-form){max-width:760px!important;grid-template-columns:minmax(240px,520px) auto}.tool-page .birthdate-form{max-width:820px!important}.tool-page .match-form{max-width:780px!important}.page-home .tool-strip{width:min(1160px,calc(100% - 36px));max-width:none;padding-left:0!important;padding-right:0!important}.page-home .tool-strip .tool-panel{min-width:0}@media(max-width:820px){.tool-page .calculator-form:not(.birthdate-form):not(.match-form),.tool-page .birthdate-form,.tool-page .match-form{max-width:100%!important;grid-template-columns:1fr}}body:not(.page-home):not(.seo-report-page) .page-hero{max-width:1240px}body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search{max-width:1120px}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-shell{max-width:1220px}.page-guides .article-search,.page-guides .content-section{max-width:1120px}.page-guides .article-search{padding-left:34px!important;padding-right:34px!important}.tool-page .tool-panel{max-width:none}.content-section:not(.split){padding-left:clamp(22px,4vw,52px);padding-right:clamp(22px,4vw,52px)}@media(max-width:1180px){body:not(.page-home):not(.seo-report-page) .page-hero,body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search,.page-guides .article-search,.page-guides .content-section{max-width:calc(100% - 32px)}}@media(max-width:640px){body:not(.page-home):not(.seo-report-page) .page-hero,body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search,.page-guides .article-search,.page-guides .content-section{max-width:calc(100% - 20px)}.page-guides .article-search{padding-left:20px!important;padding-right:20px!important}}`;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
