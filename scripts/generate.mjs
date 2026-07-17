@@ -394,6 +394,8 @@ const guides = [
   { title: 'Chinese Zodiac by Year and Month', path: '/guides/chinese-zodiac-by-year-and-month/', category: 'Calculator Guides', description: 'Use year and month together to avoid common Chinese zodiac date-boundary mistakes.' },
   { title: '1944 Chinese Zodiac', path: '/guides/1944-chinese-zodiac/', category: 'Year Guides', description: 'Understand the 1944 Chinese zodiac sign, Wood Monkey context, and birth-date boundary.' },
   { title: 'Earth Snake Chinese Zodiac', path: '/guides/chinese-zodiac-earth-snake/', category: 'Element Guides', description: 'Read Earth Snake years, element meaning, personality notes, and date-boundary checks.' },
+  { title: "Chinese Zodiac Compatibility Report: Questions, Limits, and Better Use", path: "/guides/chinese-zodiac-compatibility-report/", category: "Compatibility Guides", description: "Use a Chinese zodiac compatibility report carefully by checking birth dates, animal signs, relationship context, and realistic limits." },
+  { title: "Chinese Zodiac Birth Date Calculator: Why the Full Birthday Matters", path: "/guides/chinese-zodiac-birth-date-calculator/", category: "Calculator Guides", description: "Use a Chinese zodiac birth date calculator correctly by checking Lunar New Year boundaries, animal signs, and early-year birthdays." },
 ];
 
 function buildZodiacYears(start, end, seed) {
@@ -6237,6 +6239,336 @@ for (const article of dailyArticles20260716) {
 
 
 
+
+
+const dailyArticles20260717 = [
+  {
+    "title": "Chinese Zodiac Compatibility Report: Questions, Limits, and Better Use",
+    "path": "/guides/chinese-zodiac-compatibility-report/",
+    "description": "Use a Chinese zodiac compatibility report carefully by checking birth dates, animal signs, relationship context, and realistic limits.",
+    "h1": "Chinese Zodiac Compatibility Report: Questions, Limits, and Better Use",
+    "intro": "If you are comparing Chinese zodiac compatibility report, start with the practical decision in front of you: what needs to be checked before a purchase, lookup, gift, report, or design becomes final.",
+    "answer": "Quick answer: A Chinese zodiac compatibility report is most useful when it confirms both animal signs first, explains the traditional pair meaning, and keeps the result as cultural reflection rather than relationship proof.",
+    "geoPatch": {
+      "noteLabel": "Evidence note",
+      "note": "The reliable evidence is the full birth date for each person, the Lunar New Year boundary, the two zodiac animals, and the traditional compatibility pattern used for the comparison.",
+      "dataAnchor": "Chinese zodiac compatibility report decision = confirm both full birth dates and the Lunar New Year boundary before comparing signs + read the pair result as a conversation guide, then compare communication style, expectations, and real relationship context.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese zodiac compatibility report"
+        ],
+        [
+          "First check",
+          "confirm both full birth dates and the Lunar New Year boundary before comparing signs"
+        ],
+        [
+          "Second check",
+          "read the pair result as a conversation guide, then compare communication style, expectations, and real relationship context"
+        ],
+        [
+          "Use limit",
+          "Use cultural, educational, product, or family-reference wording; avoid guaranteed claims about luck, ancestry, personality, health, money, or relationships."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese zodiac compatibility report is a practical search because the reader is usually close to an action. They may be choosing a product, checking a birth date, comparing a report, preparing a gift, confirming a written character, or deciding whether a symbolic phrase is safe to use. The page needs to answer the real decision first, then add cultural context.",
+      "The first decision is to confirm both full birth dates and the Lunar New Year boundary before comparing signs. This is the step most likely to change the final answer. If it is skipped, the reader may buy the wrong item, assign the wrong sign, choose the wrong character, or repeat a meaning that sounds neat but is not supported by evidence.",
+      "The second decision is to read the pair result as a conversation guide, then compare communication style, expectations, and real relationship context. This is where a short definition becomes useful. A real reader needs to know what to inspect, what to compare, and which detail should stop the decision until it is confirmed.",
+      "The evidence layer matters. The reliable evidence is the full birth date for each person, the Lunar New Year boundary, the two zodiac animals, and the traditional compatibility pattern used for the comparison. That evidence does not remove all uncertainty, but it gives the reader a stable base before interpretation, design, packaging, or purchase wording is added.",
+      "Common use cases include couple questions, dating curiosity, wedding notes, family discussions, gift messages, and paid personal reports. Those situations should not be treated as identical. A gift buyer, beginner, teacher, family researcher, and product shopper all need different checks even when they search the same keyword.",
+      "The main risk is simple: The common mistake is treating a compatibility score as a verdict on a real relationship before the two zodiac signs have even been checked correctly. Put that warning near the decision point, not after a long background section, because the reader still has time to change the product, wording, or next step.",
+      "Commercial offers can be added only when the free answer is already useful. A paid report, product card, printable, or gift bundle should support the decision path rather than replace clear guidance."
+    ],
+    "sections": [
+      {
+        "title": "Start with the reader's actual decision",
+        "paragraphs": [
+          "The best first step is not a history lesson. For Chinese zodiac compatibility report, the reader needs to know what to check before committing to a purchase, report, printable, gift, or interpretation. A direct answer saves time and prevents the kind of small error that becomes expensive after engraving, printing, shipping, or sharing.",
+          "That decision-first structure also makes the content easier to trust. Once the practical check is clear, cultural meaning can be added without making the page feel like a dictionary entry or a generic shopping paragraph."
+        ]
+      },
+      {
+        "title": "What to verify before you rely on it",
+        "paragraphs": [
+          "Start by asking whether the important fact has been confirmed. In this case, the first check is to confirm both full birth dates and the Lunar New Year boundary before comparing signs. If that evidence is missing, the safest answer is to slow down and gather it before treating the result as final.",
+          "Next, apply the practical check: read the pair result as a conversation guide, then compare communication style, expectations, and real relationship context. This turns the topic into a usable decision. It also helps separate a strong page, product, or report from one that looks attractive but does not give enough proof."
+        ]
+      },
+      {
+        "title": "Examples that change the answer",
+        "paragraphs": [
+          "Chinese zodiac compatibility report can appear in couple questions, dating curiosity, wedding notes, family discussions, gift messages, and paid personal reports. Each context changes the standard. A classroom or family-reference use needs clarity. A product use needs materials, size, and care details. A symbolic gift needs careful wording. A personal report needs correct input before interpretation.",
+          "This is why a single broad answer is rarely enough. The right next step depends on what the reader is trying to do and what evidence is already available."
+        ]
+      },
+      {
+        "title": "Quality checks and warning signs",
+        "paragraphs": [
+          "A reliable choice should make the key evidence visible. The reliable evidence is the full birth date for each person, the Lunar New Year boundary, the two zodiac animals, and the traditional compatibility pattern used for the comparison. If those details are hidden or vague, the reader should not treat the result as final.",
+          "The warning sign to remember is this: The common mistake is treating a compatibility score as a verdict on a real relationship before the two zodiac signs have even been checked correctly. A polished design, confident phrase, or attractive photo does not solve that problem by itself."
+        ]
+      },
+      {
+        "title": "How to use the result responsibly",
+        "paragraphs": [
+          "Use the result as a practical reference, not as an absolute promise. Cultural symbols, zodiac signs, surname characters, tableware choices, and craft gifts can all carry meaning, but the meaning should stay connected to evidence and real use.",
+          "After the first answer is clear, move to the most specific related page. That keeps the reader from getting stuck on a broad topic when the real question is about a material, date boundary, character source, compatibility pair, gift format, or tutorial step."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "If accuracy is the concern, open the calculator, lookup, year chart, surname profile, or material comparison before buying or sharing. If product quality is the concern, compare dimensions, material, care, photos, and packaging. If wording is the concern, keep the message warm but modest.",
+          "This approach gives the topic room to support products, paid reports, printables, or gift bundles later while still leaving the current page useful on its own."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "First check",
+          "confirm both full birth dates and the Lunar New Year boundary before comparing signs",
+          "Prevents the most visible wrong answer"
+        ],
+        [
+          "Practical fit",
+          "read the pair result as a conversation guide, then compare communication style, expectations, and real relationship context",
+          "Connects the topic to real use"
+        ],
+        [
+          "Evidence",
+          "The reliable evidence is the full birth date for each person, the Lunar New Year boundary, the two zodiac animals, and the traditional compatibility pattern used for the comparison.",
+          "Keeps the answer trustworthy"
+        ],
+        [
+          "Use cases",
+          "couple questions, dating curiosity, wedding notes, family discussions, gift messages, and paid personal reports",
+          "Shows where the advice changes"
+        ],
+        [
+          "Common risk",
+          "The common mistake is treating a compatibility score as a verdict on a real relationship before the two zodiac signs have even been checked correctly.",
+          "Prevents avoidable buying, wording, or lookup errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Chinese Zodiac Compatibility",
+        "path": "/chinese-zodiac-compatibility/",
+        "category": "Compatibility Guides",
+        "description": "Compare animal pairs with traditional context."
+      },
+      {
+        "title": "What Chinese Zodiac Sign Am I?",
+        "path": "/guides/what-chinese-zodiac-sign-am-i/",
+        "category": "Calculator Guides",
+        "description": "Confirm the sign before reading compatibility."
+      },
+      {
+        "title": "Chinese Zodiac Calculator",
+        "path": "/chinese-zodiac-calculator/",
+        "category": "Tools",
+        "description": "Use a full birth date for boundary cases."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese zodiac compatibility report?",
+        "a": "A Chinese zodiac compatibility report is most useful when it confirms both animal signs first, explains the traditional pair meaning, and keeps the result as cultural reflection rather than relationship proof."
+      },
+      {
+        "q": "What should I check first for Chinese zodiac compatibility report?",
+        "a": "First, confirm both full birth dates and the Lunar New Year boundary before comparing signs. That is the detail most likely to change the final answer."
+      },
+      {
+        "q": "What is the biggest mistake with Chinese zodiac compatibility report?",
+        "a": "The common mistake is treating a compatibility score as a verdict on a real relationship before the two zodiac signs have even been checked correctly."
+      },
+      {
+        "q": "What evidence matters most for Chinese zodiac compatibility report?",
+        "a": "The reliable evidence is the full birth date for each person, the Lunar New Year boundary, the two zodiac animals, and the traditional compatibility pattern used for the comparison."
+      },
+      {
+        "q": "Can Chinese zodiac compatibility report support products, gifts, or paid reports?",
+        "a": "Yes, but only when the free explanation gives a complete decision path and the offer does not replace the core answer."
+      }
+    ]
+  },
+  {
+    "title": "Chinese Zodiac Birth Date Calculator: Why the Full Birthday Matters",
+    "path": "/guides/chinese-zodiac-birth-date-calculator/",
+    "description": "Use a Chinese zodiac birth date calculator correctly by checking Lunar New Year boundaries, animal signs, and early-year birthdays.",
+    "h1": "Chinese Zodiac Birth Date Calculator: Why the Full Birthday Matters",
+    "intro": "If you are comparing Chinese zodiac birth date calculator, start with the practical decision in front of you: what needs to be checked before a purchase, lookup, gift, report, or design becomes final.",
+    "answer": "Quick answer: A Chinese zodiac birth date calculator needs the full birthday because the zodiac year begins at Lunar New Year, not on January 1.",
+    "geoPatch": {
+      "noteLabel": "Evidence note",
+      "note": "The reliable evidence is the full birth date, the Lunar New Year date for that Gregorian year, and the matching animal and element in the 60-year cycle.",
+      "dataAnchor": "Chinese zodiac birth date calculator decision = enter the year, month, and day instead of using the Gregorian birth year alone + check January and February birthdays against the Lunar New Year date for that specific year.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese zodiac birth date calculator"
+        ],
+        [
+          "First check",
+          "enter the year, month, and day instead of using the Gregorian birth year alone"
+        ],
+        [
+          "Second check",
+          "check January and February birthdays against the Lunar New Year date for that specific year"
+        ],
+        [
+          "Use limit",
+          "Use cultural, educational, product, or family-reference wording; avoid guaranteed claims about luck, ancestry, personality, health, money, or relationships."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese zodiac birth date calculator is a practical search because the reader is usually close to an action. They may be choosing a product, checking a birth date, comparing a report, preparing a gift, confirming a written character, or deciding whether a symbolic phrase is safe to use. The page needs to answer the real decision first, then add cultural context.",
+      "The first decision is to enter the year, month, and day instead of using the Gregorian birth year alone. This is the step most likely to change the final answer. If it is skipped, the reader may buy the wrong item, assign the wrong sign, choose the wrong character, or repeat a meaning that sounds neat but is not supported by evidence.",
+      "The second decision is to check January and February birthdays against the Lunar New Year date for that specific year. This is where a short definition becomes useful. A real reader needs to know what to inspect, what to compare, and which detail should stop the decision until it is confirmed.",
+      "The evidence layer matters. The reliable evidence is the full birth date, the Lunar New Year date for that Gregorian year, and the matching animal and element in the 60-year cycle. That evidence does not remove all uncertainty, but it gives the reader a stable base before interpretation, design, packaging, or purchase wording is added.",
+      "Common use cases include personal sign lookup, family birthday checks, baby gifts, compatibility reports, classroom examples, and cultural notes. Those situations should not be treated as identical. A gift buyer, beginner, teacher, family researcher, and product shopper all need different checks even when they search the same keyword.",
+      "The main risk is simple: The common mistake is assigning every person born in a Gregorian year to the same animal even when the birthday falls before Lunar New Year. Put that warning near the decision point, not after a long background section, because the reader still has time to change the product, wording, or next step.",
+      "Commercial offers can be added only when the free answer is already useful. A paid report, product card, printable, or gift bundle should support the decision path rather than replace clear guidance."
+    ],
+    "sections": [
+      {
+        "title": "Start with the reader's actual decision",
+        "paragraphs": [
+          "The best first step is not a history lesson. For Chinese zodiac birth date calculator, the reader needs to know what to check before committing to a purchase, report, printable, gift, or interpretation. A direct answer saves time and prevents the kind of small error that becomes expensive after engraving, printing, shipping, or sharing.",
+          "That decision-first structure also makes the content easier to trust. Once the practical check is clear, cultural meaning can be added without making the page feel like a dictionary entry or a generic shopping paragraph."
+        ]
+      },
+      {
+        "title": "What to verify before you rely on it",
+        "paragraphs": [
+          "Start by asking whether the important fact has been confirmed. In this case, the first check is to enter the year, month, and day instead of using the Gregorian birth year alone. If that evidence is missing, the safest answer is to slow down and gather it before treating the result as final.",
+          "Next, apply the practical check: check January and February birthdays against the Lunar New Year date for that specific year. This turns the topic into a usable decision. It also helps separate a strong page, product, or report from one that looks attractive but does not give enough proof."
+        ]
+      },
+      {
+        "title": "Examples that change the answer",
+        "paragraphs": [
+          "Chinese zodiac birth date calculator can appear in personal sign lookup, family birthday checks, baby gifts, compatibility reports, classroom examples, and cultural notes. Each context changes the standard. A classroom or family-reference use needs clarity. A product use needs materials, size, and care details. A symbolic gift needs careful wording. A personal report needs correct input before interpretation.",
+          "This is why a single broad answer is rarely enough. The right next step depends on what the reader is trying to do and what evidence is already available."
+        ]
+      },
+      {
+        "title": "Quality checks and warning signs",
+        "paragraphs": [
+          "A reliable choice should make the key evidence visible. The reliable evidence is the full birth date, the Lunar New Year date for that Gregorian year, and the matching animal and element in the 60-year cycle. If those details are hidden or vague, the reader should not treat the result as final.",
+          "The warning sign to remember is this: The common mistake is assigning every person born in a Gregorian year to the same animal even when the birthday falls before Lunar New Year. A polished design, confident phrase, or attractive photo does not solve that problem by itself."
+        ]
+      },
+      {
+        "title": "How to use the result responsibly",
+        "paragraphs": [
+          "Use the result as a practical reference, not as an absolute promise. Cultural symbols, zodiac signs, surname characters, tableware choices, and craft gifts can all carry meaning, but the meaning should stay connected to evidence and real use.",
+          "After the first answer is clear, move to the most specific related page. That keeps the reader from getting stuck on a broad topic when the real question is about a material, date boundary, character source, compatibility pair, gift format, or tutorial step."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "If accuracy is the concern, open the calculator, lookup, year chart, surname profile, or material comparison before buying or sharing. If product quality is the concern, compare dimensions, material, care, photos, and packaging. If wording is the concern, keep the message warm but modest.",
+          "This approach gives the topic room to support products, paid reports, printables, or gift bundles later while still leaving the current page useful on its own."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "First check",
+          "enter the year, month, and day instead of using the Gregorian birth year alone",
+          "Prevents the most visible wrong answer"
+        ],
+        [
+          "Practical fit",
+          "check January and February birthdays against the Lunar New Year date for that specific year",
+          "Connects the topic to real use"
+        ],
+        [
+          "Evidence",
+          "The reliable evidence is the full birth date, the Lunar New Year date for that Gregorian year, and the matching animal and element in the 60-year cycle.",
+          "Keeps the answer trustworthy"
+        ],
+        [
+          "Use cases",
+          "personal sign lookup, family birthday checks, baby gifts, compatibility reports, classroom examples, and cultural notes",
+          "Shows where the advice changes"
+        ],
+        [
+          "Common risk",
+          "The common mistake is assigning every person born in a Gregorian year to the same animal even when the birthday falls before Lunar New Year.",
+          "Prevents avoidable buying, wording, or lookup errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Chinese Zodiac Calculator",
+        "path": "/chinese-zodiac-calculator/",
+        "category": "Tools",
+        "description": "Find a sign by full birth date."
+      },
+      {
+        "title": "Chinese Birth Signs by Birthday",
+        "path": "/guides/chinese-birth-signs/",
+        "category": "Calculator Guides",
+        "description": "Understand birthday boundary checks."
+      },
+      {
+        "title": "Chinese Zodiac Years Chart",
+        "path": "/chinese-zodiac-years/",
+        "category": "Year Guides",
+        "description": "Compare years and start dates."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese zodiac birth date calculator?",
+        "a": "A Chinese zodiac birth date calculator needs the full birthday because the zodiac year begins at Lunar New Year, not on January 1."
+      },
+      {
+        "q": "What should I check first for Chinese zodiac birth date calculator?",
+        "a": "First, enter the year, month, and day instead of using the Gregorian birth year alone. That is the detail most likely to change the final answer."
+      },
+      {
+        "q": "What is the biggest mistake with Chinese zodiac birth date calculator?",
+        "a": "The common mistake is assigning every person born in a Gregorian year to the same animal even when the birthday falls before Lunar New Year."
+      },
+      {
+        "q": "What evidence matters most for Chinese zodiac birth date calculator?",
+        "a": "The reliable evidence is the full birth date, the Lunar New Year date for that Gregorian year, and the matching animal and element in the 60-year cycle."
+      },
+      {
+        "q": "Can Chinese zodiac birth date calculator support products, gifts, or paid reports?",
+        "a": "Yes, but only when the free explanation gives a complete decision path and the offer does not replace the core answer."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260717) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
 
 function seoReportCss() {
   return `.seo-report-page{padding:36px 0}.report-hero h1{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:34px;line-height:1.12;margin:12px 0 10px}.report-summary{display:grid;grid-template-columns:repeat(5,minmax(120px,1fr));gap:12px;margin-top:22px}.report-summary div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.report-summary strong{display:block;font-size:28px;line-height:1;color:#1d1814}.report-summary span{display:block;margin-top:8px;color:var(--muted);font-size:13px;font-weight:720}.report-rules p{margin:0}.seo-table td:nth-child(2){white-space:nowrap}.seo-table td:nth-child(2) strong{display:block;font-size:18px}.seo-table td:nth-child(2) span{display:inline-flex;margin-top:4px;padding:2px 8px;border-radius:999px;background:#eee;color:#4a4038;font-size:12px;font-weight:760}.seo-table tr.pass td:nth-child(2) span{background:#e8f5ee;color:#236349}.seo-table tr.review td:nth-child(2) span{background:#fff3d8;color:#8a5a16}.seo-table tr.fix td:nth-child(2) span{background:#fde8e8;color:#a42b2b}.seo-table td:last-child span{display:block;margin:3px 0;font-size:13px;color:#5c534b}@media(max-width:820px){.report-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}`;
