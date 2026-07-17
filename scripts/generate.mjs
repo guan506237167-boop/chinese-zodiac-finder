@@ -208,6 +208,8 @@ const guides = [
 },
   {"title": "1990 Chinese Zodiac Sign", "path": "/guides/1990-chinese-zodiac/", "category": "Year Guides", "description": "Check 1990 Metal Horse dates, meaning, compatibility notes, and Lunar New Year boundary."},
   {"title": "2002 Chinese Zodiac Sign", "path": "/guides/2002-chinese-zodiac/", "category": "Year Guides", "description": "Check 2002 Water Horse dates, meaning, compatibility notes, and responsible zodiac use."},
+  {"title": "2002 Year of the Chinese Zodiac", "path": "/guides/2002-year-of-the-chinese-zodiac/", "category": "Year Guides", "description": "Check the 2002 Water Horse year with Lunar New Year boundaries and interpretation notes."},
+  {"title": "2004 Year of the Chinese Zodiac", "path": "/guides/2004-year-of-the-chinese-zodiac/", "category": "Year Guides", "description": "Check the 2004 Wood Monkey year with Lunar New Year boundaries and interpretation notes."},
   {
     title: "What Chinese Zodiac Sign Am I?",
     path: "/guides/what-chinese-zodiac-sign-am-i/",
@@ -1186,6 +1188,105 @@ function applyGeoMicroPatch20260716(path, html) {
   return html.includes("</main>") ? html.replace("</main>", `${block}</main>`) : `${html}${block}`;
 }
 
+
+const geoMicroPatches20260717 = new Map([
+  [
+    "/guides/what-chinese-zodiac-sign-am-i/",
+    {
+      "path": "/guides/what-chinese-zodiac-sign-am-i/",
+      "quick": "Quick answer: To identify your Chinese zodiac sign, use your full birth date and check whether it falls before or after Lunar New Year in that Gregorian year.",
+      "facts": [
+        [
+          "Required input",
+          "Full birth date"
+        ],
+        [
+          "Cycle",
+          "12 zodiac animals"
+        ],
+        [
+          "Boundary",
+          "Lunar New Year, not January 1"
+        ],
+        [
+          "Use limit",
+          "Cultural calendar reference, not a scientific personality test"
+        ]
+      ],
+      "evidence": "Confirm the dated Lunar New Year boundary with a reliable calendar before assigning January or February births.",
+      "examples": "birth-sign checks, family comparisons, classroom activities, festival content, and personalized gifts",
+      "mistakes": "Do not assign the animal from the Gregorian year alone when the birthday is near Lunar New Year.",
+      "faq": [
+        [
+          "Why does a calculator need my full birthday?",
+          "Because Lunar New Year moves between late January and February, so the Gregorian year alone can give the wrong sign."
+        ],
+        [
+          "Does the zodiac sign change every January 1?",
+          "No. The traditional animal year changes at Lunar New Year."
+        ]
+      ],
+      "dataAnchor": "Zodiac-sign lookup = full birth date + verified Lunar New Year boundary + 12-animal cycle."
+    }
+  ],
+  [
+    "/guides/chinese-birth-signs/",
+    {
+      "path": "/guides/chinese-birth-signs/",
+      "quick": "Quick answer: Chinese birth signs usually refer to the zodiac animal attached to the traditional year of birth, with the correct sign determined by the Lunar New Year boundary.",
+      "facts": [
+        [
+          "Primary sign",
+          "Zodiac animal year"
+        ],
+        [
+          "Animals",
+          "Rat through Pig in a 12-year cycle"
+        ],
+        [
+          "Date check",
+          "Required for early-year birthdays"
+        ],
+        [
+          "Interpretation limit",
+          "Broad tradition, not evidence of fixed traits"
+        ]
+      ],
+      "evidence": "Use a dated lunar calendar and distinguish the year animal from more detailed traditional birth-chart systems.",
+      "examples": "year-animal identification, family sign charts, compatibility discussions, and cultural learning",
+      "mistakes": "Do not treat the year animal as a complete birth chart or a guaranteed description of character.",
+      "faq": [
+        [
+          "Is a Chinese birth sign the same as a Western sun sign?",
+          "No. The common Chinese zodiac sign is based on a traditional year cycle, while Western sun signs use the Sun's position by date."
+        ],
+        [
+          "Can two people born in the same Gregorian year have different signs?",
+          "Yes, when one birthday falls before Lunar New Year and the other after it."
+        ]
+      ],
+      "dataAnchor": "Birth-sign result = dated birthday + traditional year boundary + clearly stated interpretation scope."
+    }
+  ]
+]);
+
+function applyGeoMicroPatch20260717(path, html) {
+  const patch = geoMicroPatches20260717.get(path);
+  if (!patch || html.includes('data-geo-micro-patch="20260717"')) return html;
+  const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
+  const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
+  const block = `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260717">
+    <h2>Quick Answer and Evidence Check</h2><p>${escapeHtml(patch.quick)}</p>
+    <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
+    <p><strong>Source note:</strong> ${escapeHtml(patch.evidence)}</p>
+    <p><strong>Examples and use cases:</strong> ${escapeHtml(patch.examples)}.</p>
+    <p><strong>Common mistake:</strong> ${escapeHtml(patch.mistakes)}</p>
+    <h2>GEO FAQ</h2>${faq}
+    <p><strong>Data anchor:</strong> ${escapeHtml(patch.dataAnchor)}</p>
+  </section>`;
+  return html.includes("</main>") ? html.replace("</main>", `${block}</main>`) : `${html}${block}`;
+}
+
 function enhanceThinContent(path, html) {
   let extra = "";
   if (["/chinese-zodiac-faq/", "/faq/"].includes(path)) {
@@ -1204,9 +1305,46 @@ function enhanceThinContent(path, html) {
 async function writePage(path, html) {
   const file = path === "/" ? join("dist", "index.html") : join("dist", path, "index.html");
   await mkdir(dirname(file), { recursive: true });
-  await writeFile(file, applyGeoMicroPatch20260716(path, applyGeoMicroPatch20260715(path, applyGeoMicroPatch20260714(path, enhanceThinContent(path, html)))), "utf8");
+  await writeFile(file, sanitizePublicHtml(applyGeoMicroPatch20260717(path, applyGeoMicroPatch20260716(path, applyGeoMicroPatch20260715(path, applyGeoMicroPatch20260714(path, enhanceThinContent(path, html)))))), "utf8");
 }
 
+
+function sanitizePublicHtml(html) {
+  return html
+    .replace(/GEO FAQ/g, "FAQ")
+    .replace(/SEO quality/g, "content quality")
+    .replace(/For SEO and user trust/g, "For reader trust")
+    .replace(/For long-term SEO and reader trust/g, "For long-term reader trust")
+    .replace(/long-term SEO/g, "long-term reader trust")
+    .replace(/\bSEO\b/g, "search quality")
+    .replace(/For search quality/g, "For clear reader decisions")
+    .replace(/for search quality/g, "for clear reader decisions")
+    .replace(/\bGEO\b/g, "answer quality")
+    .replace(/AI citations/g, "reader references")
+    .replace(/paid report entry points/g, "downloadable guide entry points")
+    .replace(/paid reports/g, "downloadable guides")
+    .replace(/paid report/g, "downloadable guide")
+    .replace(/report offers/g, "downloadable guides")
+    .replace(/affiliate recommendations/g, "partner recommendations")
+    .replace(/affiliate products/g, "partner products")
+    .replace(/affiliate links/g, "partner links")
+    .replace(/affiliate blocks/g, "partner product blocks")
+    .replace(/\baffiliate\b/g, "partner")
+    .replace(/future monetization/g, "commercial planning")
+    .replace(/monetization/g, "commercial planning")
+    .replace(/Commercial additions can come later, but they should not replace the answer\./g, "Commercial sections should support the answer rather than replace it.")
+    .replace(/For future updates, this article can support/g, "This article can support")
+    .replace(/For future product recommendations/g, "For product recommendations")
+    .replace(/For future product pages/g, "For product pages")
+    .replace(/future product/g, "product")
+    .replace(/can be added later/g, "can be added")
+    .replace(/This page should/g, "This guide should")
+    .replace(/this page should/g, "this guide should")
+    .replace(/The page should/g, "The guide should")
+    .replace(/the page should/g, "the guide should")
+    .replace(/This page also supports/g, "This guide also supports")
+    .replace(/This page can later support/g, "This guide can support");
+}
 function yearsForAnimal(slug) {
   return years.filter((item) => item.animal === slug);
 }
@@ -4050,7 +4188,8 @@ await writeStaticAssets();
 await writeSitemap();
 await writeRobots();
 await writeLlms();
-await writeSeoReport();
+// Internal report stays out of the public site build.
+// await writeSeoReport();
 
 function faqBlock(faqs) {
   const groups = faqGroups(faqs);
@@ -6589,6 +6728,7 @@ function heroSpacingFixCss() {
 function contentWidthBalanceCss() {
   return `.tool-page>.tool-panel+.conversion-report-card{margin-top:18px}.tool-page .calculator-form{justify-content:start}.tool-page .calculator-form:not(.birthdate-form):not(.match-form){max-width:760px!important;grid-template-columns:minmax(240px,520px) auto}.tool-page .birthdate-form{max-width:820px!important}.tool-page .match-form{max-width:780px!important}.page-home .tool-strip{width:min(1160px,calc(100% - 36px));max-width:none;padding-left:0!important;padding-right:0!important}.page-home .tool-strip .tool-panel{min-width:0}@media(max-width:820px){.tool-page .calculator-form:not(.birthdate-form):not(.match-form),.tool-page .birthdate-form,.tool-page .match-form{max-width:100%!important;grid-template-columns:1fr}}body:not(.page-home):not(.seo-report-page) .page-hero{max-width:1240px}body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search{max-width:1120px}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-shell{max-width:1220px}.page-guides .article-search,.page-guides .content-section{max-width:1120px}.page-guides .article-search{padding-left:34px!important;padding-right:34px!important}.tool-page .tool-panel{max-width:none}.content-section:not(.split){padding-left:clamp(22px,4vw,52px);padding-right:clamp(22px,4vw,52px)}@media(max-width:1180px){body:not(.page-home):not(.seo-report-page) .page-hero,body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search,.page-guides .article-search,.page-guides .content-section{max-width:calc(100% - 32px)}}@media(max-width:640px){body:not(.page-home):not(.seo-report-page) .page-hero,body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search,.page-guides .article-search,.page-guides .content-section{max-width:calc(100% - 20px)}.page-guides .article-search{padding-left:20px!important;padding-right:20px!important}}`;
 }
+
 
 
 
