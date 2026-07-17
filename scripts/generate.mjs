@@ -754,7 +754,7 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
   <meta property="og:image" content="${SITE.url}/assets/zodiac-wheel.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="/styles.css?v=${SITE.assetVersion}">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1609779333813540" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6842801448671174" crossorigin="anonymous"></script>
   ${analyticsSnippet()}
   ${schema}
 </head>
@@ -4953,7 +4953,7 @@ async function writeLlms() {
     ""
   ];
 
-  await writeFile("dist/ads.txt", "google.com, pub-1609779333813540, DIRECT, f08c47fec0942fa0\n", "utf8");
+  await writeFile("dist/ads.txt", "google.com, pub-6842801448671174, DIRECT, f08c47fec0942fa0\n", "utf8");
 await writeFile("dist/llms.txt", lines.join("\n"), "utf8");
 }
 
@@ -6728,6 +6728,7 @@ function heroSpacingFixCss() {
 function contentWidthBalanceCss() {
   return `.tool-page>.tool-panel+.conversion-report-card{margin-top:18px}.tool-page .calculator-form{justify-content:start}.tool-page .calculator-form:not(.birthdate-form):not(.match-form){max-width:760px!important;grid-template-columns:minmax(240px,520px) auto}.tool-page .birthdate-form{max-width:820px!important}.tool-page .match-form{max-width:780px!important}.page-home .tool-strip{width:min(1160px,calc(100% - 36px));max-width:none;padding-left:0!important;padding-right:0!important}.page-home .tool-strip .tool-panel{min-width:0}@media(max-width:820px){.tool-page .calculator-form:not(.birthdate-form):not(.match-form),.tool-page .birthdate-form,.tool-page .match-form{max-width:100%!important;grid-template-columns:1fr}}body:not(.page-home):not(.seo-report-page) .page-hero{max-width:1240px}body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search{max-width:1120px}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-shell{max-width:1220px}.page-guides .article-search,.page-guides .content-section{max-width:1120px}.page-guides .article-search{padding-left:34px!important;padding-right:34px!important}.tool-page .tool-panel{max-width:none}.content-section:not(.split){padding-left:clamp(22px,4vw,52px);padding-right:clamp(22px,4vw,52px)}@media(max-width:1180px){body:not(.page-home):not(.seo-report-page) .page-hero,body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search,.page-guides .article-search,.page-guides .content-section{max-width:calc(100% - 32px)}}@media(max-width:640px){body:not(.page-home):not(.seo-report-page) .page-hero,body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search,.page-guides .article-search,.page-guides .content-section{max-width:calc(100% - 20px)}.page-guides .article-search{padding-left:20px!important;padding-right:20px!important}}`;
 }
+
 
 
 
