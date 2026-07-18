@@ -171,6 +171,12 @@ function blockForGeoMicroPatch20260714(patch) {
 
 const guides = [
   {
+  "title": "Chinese Zodiac Baby Name Ideas: Animal Signs, Meanings, and Safe Use",
+  "path": "/guides/chinese-zodiac-baby-name-ideas/",
+  "category": "Baby & Family Guides",
+  "description": "Use Chinese zodiac baby name ideas carefully with birth year signs, family meaning, pronunciation checks, and modest cultural wording."
+},
+  {
   "title": "Chinese Zodiac Necklace Meaning: Animal Signs, Gifts, and Buying Checks",
   "path": "/guides/chinese-zodiac-necklace/",
   "category": "Gift Guides",
@@ -6708,6 +6714,336 @@ const dailyArticles20260717 = [
 for (const article of dailyArticles20260717) {
   await writePage(article.path, dailyArticlePage20260706(article));
 }
+
+const dailyArticles20260718 = [
+  {
+    "title": "Chinese Zodiac Compatibility Chart: How to Compare Animal Pairs",
+    "path": "/guides/chinese-zodiac-compatibility-chart/",
+    "description": "Use a Chinese zodiac compatibility chart by checking animal pairs, birth dates, Lunar New Year boundaries, and relationship context.",
+    "h1": "Chinese Zodiac Compatibility Chart: How to Compare Animal Pairs",
+    "intro": "If you are comparing Chinese zodiac compatibility chart, start with the choice in front of you: what must be checked before a date, character, gift, product, printable, or symbolic meaning becomes final.",
+    "answer": "Quick answer: A Chinese zodiac compatibility chart is a starting point for comparing animal pairs, but it only works well after both signs are confirmed with full birth dates and Lunar New Year boundaries.",
+    "geoPatch": {
+      "noteLabel": "Evidence note",
+      "note": "The reliable evidence is the two full birth dates, the Lunar New Year boundary for each year, the confirmed animal signs, and the traditional pair relationship used by the chart. Keep symbolic or cultural wording modest, and separate confirmed facts from interpretation.",
+      "dataAnchor": "Chinese zodiac compatibility chart decision = confirm both people's full birth dates before choosing the animal pair + read the pair meaning as a conversation prompt, then compare real communication habits and expectations.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese zodiac compatibility chart"
+        ],
+        [
+          "First check",
+          "confirm both people's full birth dates before choosing the animal pair"
+        ],
+        [
+          "Second check",
+          "read the pair meaning as a conversation prompt, then compare real communication habits and expectations"
+        ],
+        [
+          "Use limit",
+          "Use cultural, educational, product, or family-reference wording; avoid guaranteed claims about luck, ancestry, personality, health, money, or relationships."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese zodiac compatibility chart is a practical search because the reader is usually close to an action. They may be buying a product, planning a gift, checking a birth date, confirming a surname character, comparing a chart, or deciding whether a symbolic phrase is safe to use. The useful answer comes before the background.",
+      "Begin by asking what would make the decision wrong. For this topic, the first check is to confirm both people's full birth dates before choosing the animal pair. If that step is skipped, the reader may choose the wrong sign, character, size, material, package, or wording before they notice the problem.",
+      "The second check is to read the pair meaning as a conversation prompt, then compare real communication habits and expectations. This is where a short answer becomes useful for a real visitor. It gives the reader something to compare, inspect, or confirm before money, time, personalization, or family meaning is involved.",
+      "The evidence layer matters. The reliable evidence is the two full birth dates, the Lunar New Year boundary for each year, the confirmed animal signs, and the traditional pair relationship used by the chart. That evidence does not remove every uncertainty, but it gives the reader a stable base before they add design, interpretation, packaging, or a paid report.",
+      "Common use cases include dating questions, marriage notes, family curiosity, wedding printables, paid compatibility reports, and simple cultural learning. Those situations need different levels of caution. A classroom note can stay simple. A gift needs careful wording. A product choice needs dimensions and material proof. A family record needs source notes.",
+      "The main risk is simple: The biggest mistake is treating one animal-pair label as a relationship verdict when the signs or the real relationship context have not been checked. Put that warning near the decision point. The reader should see the risk while there is still time to change the product, chart, character, print, or message.",
+      "A commercial offer can be added later when it supports the decision. Product cards, paid reports, printables, gift bundles, and affiliate links should extend the free answer rather than replace it. That keeps the page useful and easier to trust."
+    ],
+    "sections": [
+      {
+        "title": "Start with the exact decision",
+        "paragraphs": [
+          "The safest way to use Chinese zodiac compatibility chart is to name the decision first. Are you checking accuracy, choosing a gift, comparing a material, ordering a personalized item, planning a printable, or preparing a short explanation for someone else? Each purpose changes what matters.",
+          "For a beginner, the best first step is usually a simple check. For a buyer, the best first step is product fit. For a family researcher, the best first step is evidence. For a gift giver, the best first step is wording that feels warm without sounding like a guarantee."
+        ]
+      },
+      {
+        "title": "What to verify first",
+        "paragraphs": [
+          "The first verification step is to confirm both people's full birth dates before choosing the animal pair. This check is not busywork. It protects the reader from the most visible mistake and creates a clean starting point for the rest of the decision.",
+          "After that, read the pair meaning as a conversation prompt, then compare real communication habits and expectations. This second check turns the topic from a broad cultural idea into a practical choice. It also helps the reader compare two options without relying only on photos, short labels, or a confident one-sentence claim."
+        ]
+      },
+      {
+        "title": "Evidence and practical examples",
+        "paragraphs": [
+          "The reliable evidence is the two full birth dates, the Lunar New Year boundary for each year, the confirmed animal signs, and the traditional pair relationship used by the chart. Strong evidence is usually plain. It may be a date, character, measurement, product photo, material listing, care note, or family source. The answer becomes clearer when that evidence is visible.",
+          "Chinese zodiac compatibility chart often appears in dating questions, marriage notes, family curiosity, wedding printables, paid compatibility reports, and simple cultural learning. A small example shows why context matters. A zodiac chart for a classroom can be simple, but a paid compatibility report needs correct birth dates. A decorative knot can be symbolic, but a bracelet also needs wrist fit. A surname article can explain meaning, but a family gift needs the exact character."
+        ]
+      },
+      {
+        "title": "Quality signals and warning signs",
+        "paragraphs": [
+          "Look for details that can be checked before the decision is final. For products, that means measurements, material, finish, closure, cleaning, packaging, and scale photos. For names, signs, and surnames, that means source, spelling, date boundary, character, or pronunciation.",
+          "The biggest mistake is treating one animal-pair label as a relationship verdict when the signs or the real relationship context have not been checked. Another warning sign is language that sounds too absolute. Cultural symbols can carry good wishes and family meaning, but they should not be written as proof of personality, ancestry, fate, health, money, or relationship outcomes."
+        ]
+      },
+      {
+        "title": "Reader paths",
+        "paragraphs": [
+          "Beginners should start with the simplest lookup or comparison page. Buyers should compare concrete product details. Gift givers should confirm the detail that will be printed, engraved, worn, carried, or displayed. Researchers should save source notes before turning a clue into a family fact.",
+          "If the topic is still broad, move to the related guide that answers the next uncertainty. That may be a calculator, compatibility page, surname lookup, material guide, bracelet page, holder guide, or decoration page. A smaller next step is usually more useful than reading another broad overview."
+        ]
+      },
+      {
+        "title": "Responsible use",
+        "paragraphs": [
+          "Use Chinese zodiac compatibility chart as a practical reference, not as an absolute promise. The cultural layer can make a gift, chart, keepsake, or product more meaningful, but the decision still needs evidence, fit, and clear wording.",
+          "When a product, printable, or paid report is added, keep the free answer complete. A reader should understand the main choice before they see the offer. That approach is better for trust and better for long-term search value."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "First check",
+          "confirm both people's full birth dates before choosing the animal pair",
+          "Prevents the most visible wrong answer"
+        ],
+        [
+          "Practical fit",
+          "read the pair meaning as a conversation prompt, then compare real communication habits and expectations",
+          "Connects the topic to real use"
+        ],
+        [
+          "Evidence",
+          "The reliable evidence is the two full birth dates, the Lunar New Year boundary for each year, the confirmed animal signs, and the traditional pair relationship used by the chart.",
+          "Keeps the answer trustworthy"
+        ],
+        [
+          "Use cases",
+          "dating questions, marriage notes, family curiosity, wedding printables, paid compatibility reports, and simple cultural learning",
+          "Shows where advice changes"
+        ],
+        [
+          "Common risk",
+          "The biggest mistake is treating one animal-pair label as a relationship verdict when the signs or the real relationship context have not been checked.",
+          "Prevents avoidable buying, wording, or lookup errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Chinese Zodiac Compatibility",
+        "path": "/chinese-zodiac-compatibility/",
+        "category": "Compatibility Guides",
+        "description": "Compare zodiac animal pairs with context."
+      },
+      {
+        "title": "Chinese Zodiac Compatibility Report",
+        "path": "/guides/chinese-zodiac-compatibility-report/",
+        "category": "Compatibility Guides",
+        "description": "Use reports carefully and responsibly."
+      },
+      {
+        "title": "Chinese Zodiac Calculator",
+        "path": "/chinese-zodiac-calculator/",
+        "category": "Tools",
+        "description": "Confirm each sign by full birthday."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese zodiac compatibility chart?",
+        "a": "A Chinese zodiac compatibility chart is a starting point for comparing animal pairs, but it only works well after both signs are confirmed with full birth dates and Lunar New Year boundaries."
+      },
+      {
+        "q": "What should I check first for Chinese zodiac compatibility chart?",
+        "a": "First, confirm both people's full birth dates before choosing the animal pair. That detail is most likely to change the final decision."
+      },
+      {
+        "q": "What is the biggest mistake with Chinese zodiac compatibility chart?",
+        "a": "The biggest mistake is treating one animal-pair label as a relationship verdict when the signs or the real relationship context have not been checked."
+      },
+      {
+        "q": "What evidence matters most for Chinese zodiac compatibility chart?",
+        "a": "The reliable evidence is the two full birth dates, the Lunar New Year boundary for each year, the confirmed animal signs, and the traditional pair relationship used by the chart."
+      },
+      {
+        "q": "Can Chinese zodiac compatibility chart support products, gifts, printables, or paid reports?",
+        "a": "Yes, but the free answer should remain useful first. Any product, printable, or report should support the decision path instead of replacing it."
+      }
+    ]
+  },
+  {
+    "title": "Chinese Zodiac Baby Name Ideas: Animal Signs, Meanings, and Safe Use",
+    "path": "/guides/chinese-zodiac-baby-name-ideas/",
+    "description": "Use Chinese zodiac baby name ideas carefully with birth year signs, family meaning, pronunciation checks, and modest cultural wording.",
+    "h1": "Chinese Zodiac Baby Name Ideas: Animal Signs, Meanings, and Safe Use",
+    "intro": "If you are comparing Chinese zodiac baby name ideas, start with the choice in front of you: what must be checked before a date, character, gift, product, printable, or symbolic meaning becomes final.",
+    "answer": "Quick answer: Chinese zodiac baby name ideas can inspire themes, symbols, and keepsakes, but a name should still be checked for pronunciation, family meaning, and real cultural use.",
+    "geoPatch": {
+      "noteLabel": "Evidence note",
+      "note": "The useful evidence is the baby's birth date, the matching zodiac animal, family language preference, pronunciation check, and any name meaning source used by the family. Keep symbolic or cultural wording modest, and separate confirmed facts from interpretation.",
+      "dataAnchor": "Chinese zodiac baby name ideas decision = confirm the baby's expected or actual zodiac animal using the full birth date and Lunar New Year boundary + treat the animal sign as inspiration rather than the only reason to choose a name, gift, print, or keepsake.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese zodiac baby name ideas"
+        ],
+        [
+          "First check",
+          "confirm the baby's expected or actual zodiac animal using the full birth date and Lunar New Year boundary"
+        ],
+        [
+          "Second check",
+          "treat the animal sign as inspiration rather than the only reason to choose a name, gift, print, or keepsake"
+        ],
+        [
+          "Use limit",
+          "Use cultural, educational, product, or family-reference wording; avoid guaranteed claims about luck, ancestry, personality, health, money, or relationships."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese zodiac baby name ideas is a practical search because the reader is usually close to an action. They may be buying a product, planning a gift, checking a birth date, confirming a surname character, comparing a chart, or deciding whether a symbolic phrase is safe to use. The useful answer comes before the background.",
+      "Begin by asking what would make the decision wrong. For this topic, the first check is to confirm the baby's expected or actual zodiac animal using the full birth date and Lunar New Year boundary. If that step is skipped, the reader may choose the wrong sign, character, size, material, package, or wording before they notice the problem.",
+      "The second check is to treat the animal sign as inspiration rather than the only reason to choose a name, gift, print, or keepsake. This is where a short answer becomes useful for a real visitor. It gives the reader something to compare, inspect, or confirm before money, time, personalization, or family meaning is involved.",
+      "The evidence layer matters. The useful evidence is the baby's birth date, the matching zodiac animal, family language preference, pronunciation check, and any name meaning source used by the family. That evidence does not remove every uncertainty, but it gives the reader a stable base before they add design, interpretation, packaging, or a paid report.",
+      "Common use cases include baby gifts, nursery prints, birth-year keepsakes, family name discussions, baby shower notes, and parent-friendly cultural explanations. Those situations need different levels of caution. A classroom note can stay simple. A gift needs careful wording. A product choice needs dimensions and material proof. A family record needs source notes.",
+      "The main risk is simple: A common mistake is turning a zodiac animal into a fixed personality claim or choosing a name theme without checking pronunciation and family comfort. Put that warning near the decision point. The reader should see the risk while there is still time to change the product, chart, character, print, or message.",
+      "A commercial offer can be added later when it supports the decision. Product cards, paid reports, printables, gift bundles, and affiliate links should extend the free answer rather than replace it. That keeps the page useful and easier to trust."
+    ],
+    "sections": [
+      {
+        "title": "Start with the exact decision",
+        "paragraphs": [
+          "The safest way to use Chinese zodiac baby name ideas is to name the decision first. Are you checking accuracy, choosing a gift, comparing a material, ordering a personalized item, planning a printable, or preparing a short explanation for someone else? Each purpose changes what matters.",
+          "For a beginner, the best first step is usually a simple check. For a buyer, the best first step is product fit. For a family researcher, the best first step is evidence. For a gift giver, the best first step is wording that feels warm without sounding like a guarantee."
+        ]
+      },
+      {
+        "title": "What to verify first",
+        "paragraphs": [
+          "The first verification step is to confirm the baby's expected or actual zodiac animal using the full birth date and Lunar New Year boundary. This check is not busywork. It protects the reader from the most visible mistake and creates a clean starting point for the rest of the decision.",
+          "After that, treat the animal sign as inspiration rather than the only reason to choose a name, gift, print, or keepsake. This second check turns the topic from a broad cultural idea into a practical choice. It also helps the reader compare two options without relying only on photos, short labels, or a confident one-sentence claim."
+        ]
+      },
+      {
+        "title": "Evidence and practical examples",
+        "paragraphs": [
+          "The useful evidence is the baby's birth date, the matching zodiac animal, family language preference, pronunciation check, and any name meaning source used by the family. Strong evidence is usually plain. It may be a date, character, measurement, product photo, material listing, care note, or family source. The answer becomes clearer when that evidence is visible.",
+          "Chinese zodiac baby name ideas often appears in baby gifts, nursery prints, birth-year keepsakes, family name discussions, baby shower notes, and parent-friendly cultural explanations. A small example shows why context matters. A zodiac chart for a classroom can be simple, but a paid compatibility report needs correct birth dates. A decorative knot can be symbolic, but a bracelet also needs wrist fit. A surname article can explain meaning, but a family gift needs the exact character."
+        ]
+      },
+      {
+        "title": "Quality signals and warning signs",
+        "paragraphs": [
+          "Look for details that can be checked before the decision is final. For products, that means measurements, material, finish, closure, cleaning, packaging, and scale photos. For names, signs, and surnames, that means source, spelling, date boundary, character, or pronunciation.",
+          "A common mistake is turning a zodiac animal into a fixed personality claim or choosing a name theme without checking pronunciation and family comfort. Another warning sign is language that sounds too absolute. Cultural symbols can carry good wishes and family meaning, but they should not be written as proof of personality, ancestry, fate, health, money, or relationship outcomes."
+        ]
+      },
+      {
+        "title": "Reader paths",
+        "paragraphs": [
+          "Beginners should start with the simplest lookup or comparison page. Buyers should compare concrete product details. Gift givers should confirm the detail that will be printed, engraved, worn, carried, or displayed. Researchers should save source notes before turning a clue into a family fact.",
+          "If the topic is still broad, move to the related guide that answers the next uncertainty. That may be a calculator, compatibility page, surname lookup, material guide, bracelet page, holder guide, or decoration page. A smaller next step is usually more useful than reading another broad overview."
+        ]
+      },
+      {
+        "title": "Responsible use",
+        "paragraphs": [
+          "Use Chinese zodiac baby name ideas as a practical reference, not as an absolute promise. The cultural layer can make a gift, chart, keepsake, or product more meaningful, but the decision still needs evidence, fit, and clear wording.",
+          "When a product, printable, or paid report is added, keep the free answer complete. A reader should understand the main choice before they see the offer. That approach is better for trust and better for long-term search value."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "First check",
+          "confirm the baby's expected or actual zodiac animal using the full birth date and Lunar New Year boundary",
+          "Prevents the most visible wrong answer"
+        ],
+        [
+          "Practical fit",
+          "treat the animal sign as inspiration rather than the only reason to choose a name, gift, print, or keepsake",
+          "Connects the topic to real use"
+        ],
+        [
+          "Evidence",
+          "The useful evidence is the baby's birth date, the matching zodiac animal, family language preference, pronunciation check, and any name meaning source used by the family.",
+          "Keeps the answer trustworthy"
+        ],
+        [
+          "Use cases",
+          "baby gifts, nursery prints, birth-year keepsakes, family name discussions, baby shower notes, and parent-friendly cultural explanations",
+          "Shows where advice changes"
+        ],
+        [
+          "Common risk",
+          "A common mistake is turning a zodiac animal into a fixed personality claim or choosing a name theme without checking pronunciation and family comfort.",
+          "Prevents avoidable buying, wording, or lookup errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Chinese Zodiac Baby Gifts",
+        "path": "/guides/chinese-zodiac-baby-gifts/",
+        "category": "Gift Guides",
+        "description": "Choose animal-sign keepsakes carefully."
+      },
+      {
+        "title": "What Chinese Zodiac Sign Am I?",
+        "path": "/guides/what-chinese-zodiac-sign-am-i/",
+        "category": "Calculator Guides",
+        "description": "Check signs by full date."
+      },
+      {
+        "title": "Chinese Zodiac Printable Chart",
+        "path": "/guides/chinese-zodiac-printable-chart/",
+        "category": "Education Guides",
+        "description": "Use animal charts with boundary notes."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese zodiac baby name ideas?",
+        "a": "Chinese zodiac baby name ideas can inspire themes, symbols, and keepsakes, but a name should still be checked for pronunciation, family meaning, and real cultural use."
+      },
+      {
+        "q": "What should I check first for Chinese zodiac baby name ideas?",
+        "a": "First, confirm the baby's expected or actual zodiac animal using the full birth date and Lunar New Year boundary. That detail is most likely to change the final decision."
+      },
+      {
+        "q": "What is the biggest mistake with Chinese zodiac baby name ideas?",
+        "a": "A common mistake is turning a zodiac animal into a fixed personality claim or choosing a name theme without checking pronunciation and family comfort."
+      },
+      {
+        "q": "What evidence matters most for Chinese zodiac baby name ideas?",
+        "a": "The useful evidence is the baby's birth date, the matching zodiac animal, family language preference, pronunciation check, and any name meaning source used by the family."
+      },
+      {
+        "q": "Can Chinese zodiac baby name ideas support products, gifts, printables, or paid reports?",
+        "a": "Yes, but the free answer should remain useful first. Any product, printable, or report should support the decision path instead of replacing it."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260718) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
+
 
 function seoReportCss() {
   return `.seo-report-page{padding:36px 0}.report-hero h1{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:34px;line-height:1.12;margin:12px 0 10px}.report-summary{display:grid;grid-template-columns:repeat(5,minmax(120px,1fr));gap:12px;margin-top:22px}.report-summary div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.report-summary strong{display:block;font-size:28px;line-height:1;color:#1d1814}.report-summary span{display:block;margin-top:8px;color:var(--muted);font-size:13px;font-weight:720}.report-rules p{margin:0}.seo-table td:nth-child(2){white-space:nowrap}.seo-table td:nth-child(2) strong{display:block;font-size:18px}.seo-table td:nth-child(2) span{display:inline-flex;margin-top:4px;padding:2px 8px;border-radius:999px;background:#eee;color:#4a4038;font-size:12px;font-weight:760}.seo-table tr.pass td:nth-child(2) span{background:#e8f5ee;color:#236349}.seo-table tr.review td:nth-child(2) span{background:#fff3d8;color:#8a5a16}.seo-table tr.fix td:nth-child(2) span{background:#fde8e8;color:#a42b2b}.seo-table td:last-child span{display:block;margin:3px 0;font-size:13px;color:#5c534b}@media(max-width:820px){.report-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}`;
