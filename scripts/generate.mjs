@@ -1,4 +1,4 @@
-﻿import { mkdir, readFile, rm, writeFile, copyFile, readdir } from "node:fs/promises";
+import { mkdir, readFile, rm, writeFile, copyFile, readdir } from "node:fs/promises";
 import { dirname, join } from "node:path";
 
 const SITE = {
@@ -170,6 +170,7 @@ function blockForGeoMicroPatch20260714(patch) {
 
 
 const guides = [
+  { title: "Chinese Zodiac Compatibility by Birth Year: Chart, Limits, and Safer Checks", path: "/guides/chinese-zodiac-compatibility-by-birth-year/", category: "Compatibility Guides", description: "Compare Chinese zodiac compatibility by birth year with full dates, Lunar New Year boundaries, animal pairs, and realistic relationship context." },
   {
   "title": "Chinese Zodiac Baby Name Ideas: Animal Signs, Meanings, and Safe Use",
   "path": "/guides/chinese-zodiac-baby-name-ideas/",
@@ -6717,20 +6718,20 @@ for (const article of dailyArticles20260717) {
 
 const dailyArticles20260718 = [
   {
-    "title": "Chinese Zodiac Compatibility Chart: How to Compare Animal Pairs",
-    "path": "/guides/chinese-zodiac-compatibility-chart/",
-    "description": "Use a Chinese zodiac compatibility chart by checking animal pairs, birth dates, Lunar New Year boundaries, and relationship context.",
-    "h1": "Chinese Zodiac Compatibility Chart: How to Compare Animal Pairs",
-    "intro": "If you are comparing Chinese zodiac compatibility chart, start with the choice in front of you: what must be checked before a date, character, gift, product, printable, or symbolic meaning becomes final.",
-    "answer": "Quick answer: A Chinese zodiac compatibility chart is a starting point for comparing animal pairs, but it only works well after both signs are confirmed with full birth dates and Lunar New Year boundaries.",
+    "title": "Chinese Zodiac Compatibility by Birth Year: Chart, Limits, and Safer Checks",
+    "path": "/guides/chinese-zodiac-compatibility-by-birth-year/",
+    "description": "Compare Chinese zodiac compatibility by birth year with full dates, Lunar New Year boundaries, animal pairs, and realistic relationship context.",
+    "h1": "Chinese Zodiac Compatibility by Birth Year: Chart, Limits, and Safer Checks",
+    "intro": "If you are comparing Chinese zodiac compatibility by birth year, start with the choice in front of you: what must be checked before a date, character, gift, product, printable, or symbolic meaning becomes final.",
+    "answer": "Quick answer: A Chinese zodiac compatibility by birth year is a starting point for comparing animal pairs, but it only works well after both signs are confirmed with full birth dates and Lunar New Year boundaries.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "The reliable evidence is the two full birth dates, the Lunar New Year boundary for each year, the confirmed animal signs, and the traditional pair relationship used by the chart. Keep symbolic or cultural wording modest, and separate confirmed facts from interpretation.",
-      "dataAnchor": "Chinese zodiac compatibility chart decision = confirm both people's full birth dates before choosing the animal pair + read the pair meaning as a conversation prompt, then compare real communication habits and expectations.",
+      "dataAnchor": "Chinese zodiac compatibility by birth year decision = confirm both people's full birth dates before choosing the animal pair + read the pair meaning as a conversation prompt, then compare real communication habits and expectations.",
       "facts": [
         [
           "Main keyword",
-          "Chinese zodiac compatibility chart"
+          "Chinese zodiac compatibility by birth year"
         ],
         [
           "First check",
@@ -6747,7 +6748,7 @@ const dailyArticles20260718 = [
       ]
     },
     "details": [
-      "Chinese zodiac compatibility chart is a practical search because the reader is usually close to an action. They may be buying a product, planning a gift, checking a birth date, confirming a surname character, comparing a chart, or deciding whether a symbolic phrase is safe to use. The useful answer comes before the background.",
+      "Chinese zodiac compatibility by birth year is a practical search because the reader is usually close to an action. They may be buying a product, planning a gift, checking a birth date, confirming a surname character, comparing a chart, or deciding whether a symbolic phrase is safe to use. The useful answer comes before the background.",
       "Begin by asking what would make the decision wrong. For this topic, the first check is to confirm both people's full birth dates before choosing the animal pair. If that step is skipped, the reader may choose the wrong sign, character, size, material, package, or wording before they notice the problem.",
       "The second check is to read the pair meaning as a conversation prompt, then compare real communication habits and expectations. This is where a short answer becomes useful for a real visitor. It gives the reader something to compare, inspect, or confirm before money, time, personalization, or family meaning is involved.",
       "The evidence layer matters. The reliable evidence is the two full birth dates, the Lunar New Year boundary for each year, the confirmed animal signs, and the traditional pair relationship used by the chart. That evidence does not remove every uncertainty, but it gives the reader a stable base before they add design, interpretation, packaging, or a paid report.",
@@ -6759,7 +6760,7 @@ const dailyArticles20260718 = [
       {
         "title": "Start with the exact decision",
         "paragraphs": [
-          "The safest way to use Chinese zodiac compatibility chart is to name the decision first. Are you checking accuracy, choosing a gift, comparing a material, ordering a personalized item, planning a printable, or preparing a short explanation for someone else? Each purpose changes what matters.",
+          "The safest way to use Chinese zodiac compatibility by birth year is to name the decision first. Are you checking accuracy, choosing a gift, comparing a material, ordering a personalized item, planning a printable, or preparing a short explanation for someone else? Each purpose changes what matters.",
           "For a beginner, the best first step is usually a simple check. For a buyer, the best first step is product fit. For a family researcher, the best first step is evidence. For a gift giver, the best first step is wording that feels warm without sounding like a guarantee."
         ]
       },
@@ -6774,7 +6775,7 @@ const dailyArticles20260718 = [
         "title": "Evidence and practical examples",
         "paragraphs": [
           "The reliable evidence is the two full birth dates, the Lunar New Year boundary for each year, the confirmed animal signs, and the traditional pair relationship used by the chart. Strong evidence is usually plain. It may be a date, character, measurement, product photo, material listing, care note, or family source. The answer becomes clearer when that evidence is visible.",
-          "Chinese zodiac compatibility chart often appears in dating questions, marriage notes, family curiosity, wedding printables, paid compatibility reports, and simple cultural learning. A small example shows why context matters. A zodiac chart for a classroom can be simple, but a paid compatibility report needs correct birth dates. A decorative knot can be symbolic, but a bracelet also needs wrist fit. A surname article can explain meaning, but a family gift needs the exact character."
+          "Chinese zodiac compatibility by birth year often appears in dating questions, marriage notes, family curiosity, wedding printables, paid compatibility reports, and simple cultural learning. A small example shows why context matters. A zodiac chart for a classroom can be simple, but a paid compatibility report needs correct birth dates. A decorative knot can be symbolic, but a bracelet also needs wrist fit. A surname article can explain meaning, but a family gift needs the exact character."
         ]
       },
       {
@@ -6794,7 +6795,7 @@ const dailyArticles20260718 = [
       {
         "title": "Responsible use",
         "paragraphs": [
-          "Use Chinese zodiac compatibility chart as a practical reference, not as an absolute promise. The cultural layer can make a gift, chart, keepsake, or product more meaningful, but the decision still needs evidence, fit, and clear wording.",
+          "Use Chinese zodiac compatibility by birth year as a practical reference, not as an absolute promise. The cultural layer can make a gift, chart, keepsake, or product more meaningful, but the decision still needs evidence, fit, and clear wording.",
           "When a product, printable, or paid report is added, keep the free answer complete. A reader should understand the main choice before they see the offer. That approach is better for trust and better for long-term search value."
         ]
       }
@@ -6856,23 +6857,23 @@ const dailyArticles20260718 = [
     ],
     "faqs": [
       {
-        "q": "What is the quick answer for Chinese zodiac compatibility chart?",
-        "a": "A Chinese zodiac compatibility chart is a starting point for comparing animal pairs, but it only works well after both signs are confirmed with full birth dates and Lunar New Year boundaries."
+        "q": "What is the quick answer for Chinese zodiac compatibility by birth year?",
+        "a": "A Chinese zodiac compatibility by birth year is a starting point for comparing animal pairs, but it only works well after both signs are confirmed with full birth dates and Lunar New Year boundaries."
       },
       {
-        "q": "What should I check first for Chinese zodiac compatibility chart?",
+        "q": "What should I check first for Chinese zodiac compatibility by birth year?",
         "a": "First, confirm both people's full birth dates before choosing the animal pair. That detail is most likely to change the final decision."
       },
       {
-        "q": "What is the biggest mistake with Chinese zodiac compatibility chart?",
+        "q": "What is the biggest mistake with Chinese zodiac compatibility by birth year?",
         "a": "The biggest mistake is treating one animal-pair label as a relationship verdict when the signs or the real relationship context have not been checked."
       },
       {
-        "q": "What evidence matters most for Chinese zodiac compatibility chart?",
+        "q": "What evidence matters most for Chinese zodiac compatibility by birth year?",
         "a": "The reliable evidence is the two full birth dates, the Lunar New Year boundary for each year, the confirmed animal signs, and the traditional pair relationship used by the chart."
       },
       {
-        "q": "Can Chinese zodiac compatibility chart support products, gifts, printables, or paid reports?",
+        "q": "Can Chinese zodiac compatibility by birth year support products, gifts, printables, or paid reports?",
         "a": "Yes, but the free answer should remain useful first. Any product, printable, or report should support the decision path instead of replacing it."
       }
     ]
