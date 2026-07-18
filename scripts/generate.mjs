@@ -7045,6 +7045,9 @@ for (const article of dailyArticles20260718) {
   await writePage(article.path, dailyArticlePage20260706(article));
 }
 
+// dailyArticles20260718 sitemap refresh
+await writeSitemap();
+
 
 function seoReportCss() {
   return `.seo-report-page{padding:36px 0}.report-hero h1{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:34px;line-height:1.12;margin:12px 0 10px}.report-summary{display:grid;grid-template-columns:repeat(5,minmax(120px,1fr));gap:12px;margin-top:22px}.report-summary div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.report-summary strong{display:block;font-size:28px;line-height:1;color:#1d1814}.report-summary span{display:block;margin-top:8px;color:var(--muted);font-size:13px;font-weight:720}.report-rules p{margin:0}.seo-table td:nth-child(2){white-space:nowrap}.seo-table td:nth-child(2) strong{display:block;font-size:18px}.seo-table td:nth-child(2) span{display:inline-flex;margin-top:4px;padding:2px 8px;border-radius:999px;background:#eee;color:#4a4038;font-size:12px;font-weight:760}.seo-table tr.pass td:nth-child(2) span{background:#e8f5ee;color:#236349}.seo-table tr.review td:nth-child(2) span{background:#fff3d8;color:#8a5a16}.seo-table tr.fix td:nth-child(2) span{background:#fde8e8;color:#a42b2b}.seo-table td:last-child span{display:block;margin:3px 0;font-size:13px;color:#5c534b}@media(max-width:820px){.report-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}`;
