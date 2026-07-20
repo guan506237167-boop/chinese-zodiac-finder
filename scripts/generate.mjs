@@ -171,6 +171,18 @@ function blockForGeoMicroPatch20260714(patch) {
 
 const guides = [
   {
+  "title": "Chinese Zodiac Love Match by Year: Animals, Boundaries, and Responsible Reading",
+  "path": "/guides/chinese-zodiac-love-match-by-year/",
+  "category": "Compatibility Guides",
+  "description": "Read a Chinese zodiac love match by year with animal signs, Lunar New Year boundaries, relationship context, and safer wording."
+},
+  {
+  "title": "Chinese Zodiac Career Signs: Strengths, Limits, and Practical Use",
+  "path": "/guides/chinese-zodiac-career-signs/",
+  "category": "Meaning Guides",
+  "description": "Use Chinese zodiac career signs carefully with animal symbolism, personality limits, work examples, and practical self-reflection."
+},
+  {
   "title": "Chinese Zodiac Animal Meanings: Signs, Symbols, and Safe Interpretation",
   "path": "/guides/chinese-zodiac-animal-meanings/",
   "category": "Meaning Guides",
@@ -7416,6 +7428,336 @@ const dailyArticles20260719 = [
 for (const article of dailyArticles20260719) {
   await writePage(article.path, dailyArticlePage20260706(article));
 }
+
+const dailyArticles20260720 = [
+  {
+    "title": "Chinese Zodiac Love Match by Year: Animals, Boundaries, and Responsible Reading",
+    "path": "/guides/chinese-zodiac-love-match-by-year/",
+    "description": "Read a Chinese zodiac love match by year with animal signs, Lunar New Year boundaries, relationship context, and safer wording.",
+    "h1": "Chinese Zodiac Love Match by Year: Animals, Boundaries, and Responsible Reading",
+    "intro": "If you are searching for Chinese zodiac love match by year, start with the real decision in front of you. The useful answer depends on what should be checked before a product, reading, cultural note, gift, family detail, or report becomes final.",
+    "answer": "Quick answer: A Chinese zodiac love match by year can be a light cultural comparison, but it should only be read after both birth dates are checked against Lunar New Year boundaries and real relationship context is considered.",
+    "geoPatch": {
+      "noteLabel": "Evidence note",
+      "note": "Useful evidence includes both full birth dates, the Lunar New Year date for each birth year, the confirmed animal signs, and a clear note that compatibility is cultural interpretation rather than proof. Keep cultural, family, symbolic, and product wording modest, and separate confirmed details from interpretation.",
+      "dataAnchor": "Chinese zodiac love match by year decision = confirm both full birth dates before matching the two zodiac animals + treat the animal pair as a conversation starter, then compare communication, expectations, timing, and real-life fit.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese zodiac love match by year"
+        ],
+        [
+          "First check",
+          "confirm both full birth dates before matching the two zodiac animals"
+        ],
+        [
+          "Second check",
+          "treat the animal pair as a conversation starter, then compare communication, expectations, timing, and real-life fit"
+        ],
+        [
+          "Use limit",
+          "Use cultural, educational, product, or family-reference wording; avoid guaranteed claims about luck, ancestry, personality, health, money, or relationships."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese zodiac love match by year is a practical search because the reader is usually close to an action. They may be checking a date, choosing a product, comparing a material, confirming a family detail, preparing a gift, or writing a short explanation for someone else. A useful page should answer the decision first and then explain the background.",
+      "Begin by asking what would make the answer wrong. For this topic, the first check is to confirm both full birth dates before matching the two zodiac animals. If that step is skipped, the reader may choose the wrong sign, spelling, size, material, package, or wording before the mistake becomes obvious.",
+      "The second check is to treat the animal pair as a conversation starter, then compare communication, expectations, timing, and real-life fit. This turns a broad cultural, buying, or reference topic into a real decision path. It gives the reader something concrete to inspect, compare, or confirm before money, time, personalization, or family meaning is involved.",
+      "The evidence layer matters. Useful evidence includes both full birth dates, the Lunar New Year date for each birth year, the confirmed animal signs, and a clear note that compatibility is cultural interpretation rather than proof. Evidence does not remove every uncertainty, but it creates a stable base before adding design, interpretation, packaging, classroom language, or a final recommendation.",
+      "Common use cases include dating curiosity, wedding conversations, family questions, compatibility reports, printable charts, and Lunar New Year activities. These situations need different levels of caution. A classroom note can stay simple. A gift needs gentle wording. A product choice needs dimensions and material proof. A family record needs source notes and uncertainty markers.",
+      "The main risk is simple: The common mistake is turning one animal-pair label into a fixed verdict about love, marriage, money, health, or future happiness. Put that warning near the decision point. The reader should see the risk while there is still time to change the chart, character, product, gift text, report wording, or explanation.",
+      "A strong page keeps the free answer complete. Product cards, worksheets, paid reports, affiliate links, and related guides should support the reader's decision path instead of hiding the useful answer behind vague promises. That is the standard for these sites."
+    ],
+    "sections": [
+      {
+        "title": "Start with the exact decision",
+        "paragraphs": [
+          "The safest way to use Chinese zodiac love match by year is to name the decision first. Are you checking accuracy, choosing a gift, comparing a material, ordering a personalized item, planning a printable, preparing a classroom note, or building a family record? Each purpose changes what matters.",
+          "For a beginner, the best first step is usually a simple check. For a buyer, the best first step is product fit. For a family researcher, the best first step is evidence. For a gift giver, the best first step is wording that feels warm without sounding like a guarantee."
+        ]
+      },
+      {
+        "title": "What to verify first",
+        "paragraphs": [
+          "The first verification step is to confirm both full birth dates before matching the two zodiac animals. This check is not busywork. It protects the reader from the most visible mistake and creates a clean starting point for the rest of the decision.",
+          "After that, treat the animal pair as a conversation starter, then compare communication, expectations, timing, and real-life fit. This second check turns the topic from a broad idea into a practical choice. It also helps the reader compare two options without relying only on photos, short labels, simple charts, or a confident one-sentence claim."
+        ]
+      },
+      {
+        "title": "Evidence and practical examples",
+        "paragraphs": [
+          "Useful evidence includes both full birth dates, the Lunar New Year date for each birth year, the confirmed animal signs, and a clear note that compatibility is cultural interpretation rather than proof. Strong evidence is usually plain. It may be a date, character, measurement, product photo, material listing, care note, cord diameter, classroom source, or family record. The answer becomes clearer when that evidence is visible.",
+          "Chinese zodiac love match by year often appears in dating curiosity, wedding conversations, family questions, compatibility reports, printable charts, and Lunar New Year activities. A small example shows why context matters. A zodiac chart for a classroom can be simple, but a report needs correct dates. A decorative object can be symbolic, but a product page also needs size. A surname article can explain meaning, but a family gift needs the exact character."
+        ]
+      },
+      {
+        "title": "Quality signals and warning signs",
+        "paragraphs": [
+          "Look for details that can be checked before the decision is final. For products and supplies, that means measurements, material, finish, closure, cleaning, packaging, and scale photos. For names, signs, meanings, and surnames, that means source, spelling, date boundary, character, pronunciation, or family confirmation.",
+          "The common mistake is turning one animal-pair label into a fixed verdict about love, marriage, money, health, or future happiness. Another warning sign is language that sounds too absolute. Cultural symbols can carry good wishes and family meaning, but they should not be written as proof of personality, ancestry, fate, health, money, or relationship outcomes."
+        ]
+      },
+      {
+        "title": "Reader paths",
+        "paragraphs": [
+          "Beginners should start with the simplest lookup or comparison page. Buyers should compare concrete product details. Gift givers should confirm the detail that will be printed, engraved, worn, carried, or displayed. Researchers should save source notes before turning a clue into a family fact.",
+          "If the topic is still broad, move to the related guide that answers the next uncertainty. That may be a calculator, material guide, surname lookup, pronunciation page, cord guide, keychain guide, or beginner tutorial. A smaller next step is usually more useful than reading another broad overview."
+        ]
+      },
+      {
+        "title": "Responsible use",
+        "paragraphs": [
+          "Use Chinese zodiac love match by year as a practical reference, not as an absolute promise. The cultural layer can make a gift, chart, keepsake, product, or craft project more meaningful, but the decision still needs evidence, fit, and clear wording.",
+          "When a product, printable, report, or worksheet is added, keep the free answer complete. A reader should understand the main choice before seeing the next offer or related path. That approach is better for trust and better for long-term search value."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "First check",
+          "confirm both full birth dates before matching the two zodiac animals",
+          "Prevents the most visible wrong answer"
+        ],
+        [
+          "Practical fit",
+          "treat the animal pair as a conversation starter, then compare communication, expectations, timing, and real-life fit",
+          "Connects the topic to real use"
+        ],
+        [
+          "Evidence",
+          "Useful evidence includes both full birth dates, the Lunar New Year date for each birth year, the confirmed animal signs, and a clear note that compatibility is cultural interpretation rather than proof.",
+          "Keeps the answer trustworthy"
+        ],
+        [
+          "Use cases",
+          "dating curiosity, wedding conversations, family questions, compatibility reports, printable charts, and Lunar New Year activities",
+          "Shows where advice changes"
+        ],
+        [
+          "Common risk",
+          "The common mistake is turning one animal-pair label into a fixed verdict about love, marriage, money, health, or future happiness.",
+          "Prevents avoidable buying, wording, or lookup errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Chinese Zodiac Compatibility",
+        "path": "/chinese-zodiac-compatibility/",
+        "category": "Compatibility Guides",
+        "description": "Compare animal pairs with context."
+      },
+      {
+        "title": "Chinese Zodiac Calculator",
+        "path": "/chinese-zodiac-calculator/",
+        "category": "Tools",
+        "description": "Confirm each animal by full date."
+      },
+      {
+        "title": "Chinese Zodiac Compatibility by Birth Year",
+        "path": "/guides/chinese-zodiac-compatibility-by-birth-year/",
+        "category": "Compatibility Guides",
+        "description": "Read year-pair limits carefully."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese zodiac love match by year?",
+        "a": "A Chinese zodiac love match by year can be a light cultural comparison, but it should only be read after both birth dates are checked against Lunar New Year boundaries and real relationship context is considered."
+      },
+      {
+        "q": "What should I check first for Chinese zodiac love match by year?",
+        "a": "First, confirm both full birth dates before matching the two zodiac animals. That detail is most likely to change the final decision."
+      },
+      {
+        "q": "What is the biggest mistake with Chinese zodiac love match by year?",
+        "a": "The common mistake is turning one animal-pair label into a fixed verdict about love, marriage, money, health, or future happiness."
+      },
+      {
+        "q": "What evidence matters most for Chinese zodiac love match by year?",
+        "a": "Useful evidence includes both full birth dates, the Lunar New Year date for each birth year, the confirmed animal signs, and a clear note that compatibility is cultural interpretation rather than proof."
+      },
+      {
+        "q": "Is Chinese zodiac love match by year enough for a final decision?",
+        "a": "No. Use it as a starting point, then treat the animal pair as a conversation starter, then compare communication, expectations, timing, and real-life fit."
+      }
+    ]
+  },
+  {
+    "title": "Chinese Zodiac Career Signs: Strengths, Limits, and Practical Use",
+    "path": "/guides/chinese-zodiac-career-signs/",
+    "description": "Use Chinese zodiac career signs carefully with animal symbolism, personality limits, work examples, and practical self-reflection.",
+    "h1": "Chinese Zodiac Career Signs: Strengths, Limits, and Practical Use",
+    "intro": "If you are searching for Chinese zodiac career signs, start with the real decision in front of you. The useful answer depends on what should be checked before a product, reading, cultural note, gift, family detail, or report becomes final.",
+    "answer": "Quick answer: Chinese zodiac career signs are best used as cultural reflection notes, not career rules; they can suggest language for strengths and habits, but real skills, experience, and goals matter more.",
+    "geoPatch": {
+      "noteLabel": "Evidence note",
+      "note": "Useful evidence includes the full birth date, confirmed animal sign, a modest explanation of symbolic traits, and real work information such as skills, interests, and experience. Keep cultural, family, symbolic, and product wording modest, and separate confirmed details from interpretation.",
+      "dataAnchor": "Chinese zodiac career signs decision = confirm the animal sign with the full birth date and Lunar New Year boundary + translate the animal symbolism into gentle work-style prompts instead of fixed career advice.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese zodiac career signs"
+        ],
+        [
+          "First check",
+          "confirm the animal sign with the full birth date and Lunar New Year boundary"
+        ],
+        [
+          "Second check",
+          "translate the animal symbolism into gentle work-style prompts instead of fixed career advice"
+        ],
+        [
+          "Use limit",
+          "Use cultural, educational, product, or family-reference wording; avoid guaranteed claims about luck, ancestry, personality, health, money, or relationships."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese zodiac career signs is a practical search because the reader is usually close to an action. They may be checking a date, choosing a product, comparing a material, confirming a family detail, preparing a gift, or writing a short explanation for someone else. A useful page should answer the decision first and then explain the background.",
+      "Begin by asking what would make the answer wrong. For this topic, the first check is to confirm the animal sign with the full birth date and Lunar New Year boundary. If that step is skipped, the reader may choose the wrong sign, spelling, size, material, package, or wording before the mistake becomes obvious.",
+      "The second check is to translate the animal symbolism into gentle work-style prompts instead of fixed career advice. This turns a broad cultural, buying, or reference topic into a real decision path. It gives the reader something concrete to inspect, compare, or confirm before money, time, personalization, or family meaning is involved.",
+      "The evidence layer matters. Useful evidence includes the full birth date, confirmed animal sign, a modest explanation of symbolic traits, and real work information such as skills, interests, and experience. Evidence does not remove every uncertainty, but it creates a stable base before adding design, interpretation, packaging, classroom language, or a final recommendation.",
+      "Common use cases include career reflection, student worksheets, personal reports, team icebreakers, cultural learning, and light personality notes. These situations need different levels of caution. A classroom note can stay simple. A gift needs gentle wording. A product choice needs dimensions and material proof. A family record needs source notes and uncertainty markers.",
+      "The main risk is simple: A common mistake is saying one zodiac animal proves the right job, salary path, leadership style, or business outcome. Put that warning near the decision point. The reader should see the risk while there is still time to change the chart, character, product, gift text, report wording, or explanation.",
+      "A strong page keeps the free answer complete. Product cards, worksheets, paid reports, affiliate links, and related guides should support the reader's decision path instead of hiding the useful answer behind vague promises. That is the standard for these sites."
+    ],
+    "sections": [
+      {
+        "title": "Start with the exact decision",
+        "paragraphs": [
+          "The safest way to use Chinese zodiac career signs is to name the decision first. Are you checking accuracy, choosing a gift, comparing a material, ordering a personalized item, planning a printable, preparing a classroom note, or building a family record? Each purpose changes what matters.",
+          "For a beginner, the best first step is usually a simple check. For a buyer, the best first step is product fit. For a family researcher, the best first step is evidence. For a gift giver, the best first step is wording that feels warm without sounding like a guarantee."
+        ]
+      },
+      {
+        "title": "What to verify first",
+        "paragraphs": [
+          "The first verification step is to confirm the animal sign with the full birth date and Lunar New Year boundary. This check is not busywork. It protects the reader from the most visible mistake and creates a clean starting point for the rest of the decision.",
+          "After that, translate the animal symbolism into gentle work-style prompts instead of fixed career advice. This second check turns the topic from a broad idea into a practical choice. It also helps the reader compare two options without relying only on photos, short labels, simple charts, or a confident one-sentence claim."
+        ]
+      },
+      {
+        "title": "Evidence and practical examples",
+        "paragraphs": [
+          "Useful evidence includes the full birth date, confirmed animal sign, a modest explanation of symbolic traits, and real work information such as skills, interests, and experience. Strong evidence is usually plain. It may be a date, character, measurement, product photo, material listing, care note, cord diameter, classroom source, or family record. The answer becomes clearer when that evidence is visible.",
+          "Chinese zodiac career signs often appears in career reflection, student worksheets, personal reports, team icebreakers, cultural learning, and light personality notes. A small example shows why context matters. A zodiac chart for a classroom can be simple, but a report needs correct dates. A decorative object can be symbolic, but a product page also needs size. A surname article can explain meaning, but a family gift needs the exact character."
+        ]
+      },
+      {
+        "title": "Quality signals and warning signs",
+        "paragraphs": [
+          "Look for details that can be checked before the decision is final. For products and supplies, that means measurements, material, finish, closure, cleaning, packaging, and scale photos. For names, signs, meanings, and surnames, that means source, spelling, date boundary, character, pronunciation, or family confirmation.",
+          "A common mistake is saying one zodiac animal proves the right job, salary path, leadership style, or business outcome. Another warning sign is language that sounds too absolute. Cultural symbols can carry good wishes and family meaning, but they should not be written as proof of personality, ancestry, fate, health, money, or relationship outcomes."
+        ]
+      },
+      {
+        "title": "Reader paths",
+        "paragraphs": [
+          "Beginners should start with the simplest lookup or comparison page. Buyers should compare concrete product details. Gift givers should confirm the detail that will be printed, engraved, worn, carried, or displayed. Researchers should save source notes before turning a clue into a family fact.",
+          "If the topic is still broad, move to the related guide that answers the next uncertainty. That may be a calculator, material guide, surname lookup, pronunciation page, cord guide, keychain guide, or beginner tutorial. A smaller next step is usually more useful than reading another broad overview."
+        ]
+      },
+      {
+        "title": "Responsible use",
+        "paragraphs": [
+          "Use Chinese zodiac career signs as a practical reference, not as an absolute promise. The cultural layer can make a gift, chart, keepsake, product, or craft project more meaningful, but the decision still needs evidence, fit, and clear wording.",
+          "When a product, printable, report, or worksheet is added, keep the free answer complete. A reader should understand the main choice before seeing the next offer or related path. That approach is better for trust and better for long-term search value."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "First check",
+          "confirm the animal sign with the full birth date and Lunar New Year boundary",
+          "Prevents the most visible wrong answer"
+        ],
+        [
+          "Practical fit",
+          "translate the animal symbolism into gentle work-style prompts instead of fixed career advice",
+          "Connects the topic to real use"
+        ],
+        [
+          "Evidence",
+          "Useful evidence includes the full birth date, confirmed animal sign, a modest explanation of symbolic traits, and real work information such as skills, interests, and experience.",
+          "Keeps the answer trustworthy"
+        ],
+        [
+          "Use cases",
+          "career reflection, student worksheets, personal reports, team icebreakers, cultural learning, and light personality notes",
+          "Shows where advice changes"
+        ],
+        [
+          "Common risk",
+          "A common mistake is saying one zodiac animal proves the right job, salary path, leadership style, or business outcome.",
+          "Prevents avoidable buying, wording, or lookup errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Chinese Zodiac Animal Meanings",
+        "path": "/guides/chinese-zodiac-animal-meanings/",
+        "category": "Meaning Guides",
+        "description": "Read animal symbolism safely."
+      },
+      {
+        "title": "What Chinese Zodiac Sign Am I?",
+        "path": "/guides/what-chinese-zodiac-sign-am-i/",
+        "category": "Calculator Guides",
+        "description": "Check the sign first."
+      },
+      {
+        "title": "Chinese Zodiac Compatibility Report",
+        "path": "/guides/chinese-zodiac-compatibility-report/",
+        "category": "Report Guides",
+        "description": "Use reports as reflection."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese zodiac career signs?",
+        "a": "Chinese zodiac career signs are best used as cultural reflection notes, not career rules; they can suggest language for strengths and habits, but real skills, experience, and goals matter more."
+      },
+      {
+        "q": "What should I check first for Chinese zodiac career signs?",
+        "a": "First, confirm the animal sign with the full birth date and Lunar New Year boundary. That detail is most likely to change the final decision."
+      },
+      {
+        "q": "What is the biggest mistake with Chinese zodiac career signs?",
+        "a": "A common mistake is saying one zodiac animal proves the right job, salary path, leadership style, or business outcome."
+      },
+      {
+        "q": "What evidence matters most for Chinese zodiac career signs?",
+        "a": "Useful evidence includes the full birth date, confirmed animal sign, a modest explanation of symbolic traits, and real work information such as skills, interests, and experience."
+      },
+      {
+        "q": "Is Chinese zodiac career signs enough for a final decision?",
+        "a": "No. Use it as a starting point, then translate the animal symbolism into gentle work-style prompts instead of fixed career advice."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260720) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
+
 
 
 // dailyArticles20260718 sitemap refresh
