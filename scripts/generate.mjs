@@ -170,6 +170,8 @@ function blockForGeoMicroPatch20260714(patch) {
 
 
 const guides = [
+  { title: "Chinese Zodiac Love Compatibility Calculator: Use Cases and Limits", path: "/guides/chinese-zodiac-love-compatibility-calculator/", category: "Compatibility Guides", description: "Use a Chinese zodiac love compatibility calculator with full birth dates, Lunar New Year boundaries, pair context, and realistic relationship limits." },
+  { title: "2026 Chinese Zodiac Forecast: Fire Horse Year Reading Checks", path: "/2026-chinese-zodiac-forecast/", category: "Year Guides", description: "Read a 2026 Chinese zodiac forecast with Fire Horse year context, sign-by-sign caution, timing notes, and responsible planning limits." },
   {
   "title": "Chinese Zodiac Love Match by Year: Animals, Boundaries, and Responsible Reading",
   "path": "/guides/chinese-zodiac-love-match-by-year/",
@@ -7763,6 +7765,336 @@ for (const article of dailyArticles20260720) {
 // dailyArticles20260718 sitemap refresh
 await writeSitemap();
 
+
+
+const dailyArticles20260721 = [
+  {
+    "title": "Chinese Zodiac Love Compatibility Calculator: Use Cases and Limits",
+    "path": "/guides/chinese-zodiac-love-compatibility-calculator/",
+    "description": "Use a Chinese zodiac love compatibility calculator with full birth dates, Lunar New Year boundaries, pair context, and realistic relationship limits.",
+    "h1": "Chinese Zodiac Love Compatibility Calculator: Use Cases and Limits",
+    "intro": "If you are comparing Chinese zodiac love compatibility calculator, start with the real decision in front of you. The useful answer depends on what must be checked before a purchase, lookup, gift, design, report, or cultural note becomes final.",
+    "answer": "Quick answer: A Chinese zodiac love compatibility calculator is useful when it confirms both signs correctly, explains the traditional pair pattern, and keeps the result as relationship reflection rather than proof.",
+    "geoPatch": {
+      "noteLabel": "Evidence note",
+      "note": "The useful evidence is the two full birth dates, Lunar New Year boundary for each birthday, the two animal signs, and the traditional pair pattern being referenced.",
+      "dataAnchor": "Chinese zodiac love compatibility calculator decision = confirm both full birth dates before comparing animal signs + read the pair result alongside communication style, expectations, timing, and real relationship context.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese zodiac love compatibility calculator"
+        ],
+        [
+          "First check",
+          "confirm both full birth dates before comparing animal signs"
+        ],
+        [
+          "Second check",
+          "read the pair result alongside communication style, expectations, timing, and real relationship context"
+        ],
+        [
+          "Use limit",
+          "Use cultural, educational, product, or family-reference wording; avoid guaranteed claims about luck, ancestry, personality, health, money, or relationships."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese zodiac love compatibility calculator is a practical search because the reader is usually close to an action. They may be choosing a product, checking a date, preparing a gift, confirming a character, comparing a report, or deciding whether a symbolic phrase is safe to use.",
+      "The first decision is to confirm both full birth dates before comparing animal signs. If this step is skipped, the final result can look polished but still be wrong for the reader's situation.",
+      "The second decision is to read the pair result alongside communication style, expectations, timing, and real relationship context. This turns a broad cultural or product topic into a concrete checklist that can be used before buying, printing, sharing, or relying on the result.",
+      "The evidence layer matters. The useful evidence is the two full birth dates, Lunar New Year boundary for each birthday, the two animal signs, and the traditional pair pattern being referenced. That evidence does not remove every uncertainty, but it gives the reader a stable base before interpretation, design, packaging, or purchase wording is added.",
+      "Common use cases include dating questions, couple notes, wedding planning, family curiosity, gift messages, and paid compatibility reports. These use cases should not be treated as identical because each one changes the standard for accuracy, durability, wording, and visual proof.",
+      "The main risk is simple: The common mistake is treating a zodiac pair as a relationship verdict before the birth-date boundary and real situation have been checked. Put that warning near the decision point because the reader still has time to change the product, wording, input, or next step.",
+      "Commercial offers can be added only when the free answer is already useful. A paid report, product card, printable, gift bundle, or affiliate block should support the decision path rather than replace clear guidance."
+    ],
+    "sections": [
+      {
+        "title": "Start with the practical decision",
+        "paragraphs": [
+          "For Chinese zodiac love compatibility calculator, the reader normally needs a decision path more than a broad definition. The page should answer what to check, what can go wrong, and which detail should be verified before the next action.",
+          "This structure also protects cultural meaning. Once the practical check is clear, symbolism can be explained without turning the page into a vague promise or a generic shopping paragraph."
+        ]
+      },
+      {
+        "title": "What to verify first",
+        "paragraphs": [
+          "Start by asking whether the key fact has been confirmed. In this case, the first check is to confirm both full birth dates before comparing animal signs. If that evidence is missing, the safer answer is to pause and gather it before treating the result as final.",
+          "Then apply the second check: read the pair result alongside communication style, expectations, timing, and real relationship context. This separates a useful recommendation from a page or product that looks attractive but does not provide enough proof."
+        ]
+      },
+      {
+        "title": "Where the answer changes",
+        "paragraphs": [
+          "Chinese zodiac love compatibility calculator can appear in dating questions, couple notes, wedding planning, family curiosity, gift messages, and paid compatibility reports. A family-reference use needs source clarity. A product use needs material, size, and care details. A gift use needs careful wording. A report use needs correct input before interpretation.",
+          "That is why one short answer is not enough. The right next step depends on what the reader is trying to do and what evidence is already available."
+        ]
+      },
+      {
+        "title": "Quality checks and warning signs",
+        "paragraphs": [
+          "A reliable choice should make the key evidence visible. The useful evidence is the two full birth dates, Lunar New Year boundary for each birthday, the two animal signs, and the traditional pair pattern being referenced. If those details are hidden or vague, the reader should not treat the answer as final.",
+          "The warning sign to remember is this: The common mistake is treating a zodiac pair as a relationship verdict before the birth-date boundary and real situation have been checked. A confident phrase, attractive photo, or polished design does not solve that problem by itself."
+        ]
+      },
+      {
+        "title": "How to use the result responsibly",
+        "paragraphs": [
+          "Use the result as a practical reference, not as an absolute promise. Cultural symbols, zodiac signs, surname characters, tableware choices, and craft gifts can all carry meaning, but the meaning should stay connected to evidence and real use.",
+          "After the first answer is clear, move to the most specific related page. That keeps the reader from getting stuck on a broad topic when the real question is about a material, date boundary, character source, compatibility pair, gift format, or tutorial step."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "If accuracy is the concern, open the calculator, lookup, source guide, material comparison, or meaning page before buying or sharing. If product quality is the concern, compare dimensions, material, care, photos, and packaging. If wording is the concern, keep the message warm but modest.",
+          "This approach leaves room for products, paid reports, printables, or gift bundles later while keeping the current page useful on its own."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "First check",
+          "confirm both full birth dates before comparing animal signs",
+          "Prevents the most visible wrong answer"
+        ],
+        [
+          "Practical fit",
+          "read the pair result alongside communication style, expectations, timing, and real relationship context",
+          "Connects the topic to real use"
+        ],
+        [
+          "Evidence",
+          "The useful evidence is the two full birth dates, Lunar New Year boundary for each birthday, the two animal signs, and the traditional pair pattern being referenced.",
+          "Keeps the answer trustworthy"
+        ],
+        [
+          "Use cases",
+          "dating questions, couple notes, wedding planning, family curiosity, gift messages, and paid compatibility reports",
+          "Shows where the advice changes"
+        ],
+        [
+          "Common risk",
+          "The common mistake is treating a zodiac pair as a relationship verdict before the birth-date boundary and real situation have been checked.",
+          "Prevents avoidable buying, wording, or lookup errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Chinese Zodiac Compatibility",
+        "path": "/chinese-zodiac-compatibility/",
+        "category": "Compatibility Guides",
+        "description": "Compare animal pairs with traditional context."
+      },
+      {
+        "title": "Chinese Zodiac Calculator",
+        "path": "/chinese-zodiac-calculator/",
+        "category": "Tools",
+        "description": "Check signs by full birth date."
+      },
+      {
+        "title": "Chinese Zodiac Compatibility Report",
+        "path": "/guides/chinese-zodiac-compatibility-report/",
+        "category": "Compatibility Guides",
+        "description": "Read report inputs and limits."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese zodiac love compatibility calculator?",
+        "a": "A Chinese zodiac love compatibility calculator is useful when it confirms both signs correctly, explains the traditional pair pattern, and keeps the result as relationship reflection rather than proof."
+      },
+      {
+        "q": "What should I check first for Chinese zodiac love compatibility calculator?",
+        "a": "First, confirm both full birth dates before comparing animal signs. That detail is most likely to change the final answer."
+      },
+      {
+        "q": "What is the biggest mistake with Chinese zodiac love compatibility calculator?",
+        "a": "The common mistake is treating a zodiac pair as a relationship verdict before the birth-date boundary and real situation have been checked."
+      },
+      {
+        "q": "What evidence matters most for Chinese zodiac love compatibility calculator?",
+        "a": "The useful evidence is the two full birth dates, Lunar New Year boundary for each birthday, the two animal signs, and the traditional pair pattern being referenced."
+      },
+      {
+        "q": "Can Chinese zodiac love compatibility calculator support products, gifts, or paid reports?",
+        "a": "Yes, but only when the free explanation gives a complete decision path and the offer does not replace the core answer."
+      }
+    ]
+  },
+  {
+    "title": "2026 Chinese Zodiac Forecast: Fire Horse Year Reading Checks",
+    "path": "/2026-chinese-zodiac-forecast/",
+    "description": "Read a 2026 Chinese zodiac forecast with Fire Horse year context, sign-by-sign caution, timing notes, and responsible planning limits.",
+    "h1": "2026 Chinese Zodiac Forecast: Fire Horse Year Reading Checks",
+    "intro": "If you are comparing 2026 Chinese zodiac forecast, start with the real decision in front of you. The useful answer depends on what must be checked before a purchase, lookup, gift, design, report, or cultural note becomes final.",
+    "answer": "Quick answer: A 2026 Chinese zodiac forecast should be read as cultural planning context for the Fire Horse year, not as a guaranteed prediction for money, love, health, or career.",
+    "geoPatch": {
+      "noteLabel": "Evidence note",
+      "note": "The useful evidence is the 2026 Lunar New Year boundary, the Fire Horse year label, the reader's confirmed zodiac sign, and the specific life area being reviewed.",
+      "dataAnchor": "2026 Chinese zodiac forecast decision = confirm whether the forecast is based on the Lunar New Year start of the Fire Horse year + use sign notes as planning prompts, then compare them with real calendar, work, family, and financial constraints.",
+      "facts": [
+        [
+          "Main keyword",
+          "2026 Chinese zodiac forecast"
+        ],
+        [
+          "First check",
+          "confirm whether the forecast is based on the Lunar New Year start of the Fire Horse year"
+        ],
+        [
+          "Second check",
+          "use sign notes as planning prompts, then compare them with real calendar, work, family, and financial constraints"
+        ],
+        [
+          "Use limit",
+          "Use cultural, educational, product, or family-reference wording; avoid guaranteed claims about luck, ancestry, personality, health, money, or relationships."
+        ]
+      ]
+    },
+    "details": [
+      "2026 Chinese zodiac forecast is a practical search because the reader is usually close to an action. They may be choosing a product, checking a date, preparing a gift, confirming a character, comparing a report, or deciding whether a symbolic phrase is safe to use.",
+      "The first decision is to confirm whether the forecast is based on the Lunar New Year start of the Fire Horse year. If this step is skipped, the final result can look polished but still be wrong for the reader's situation.",
+      "The second decision is to use sign notes as planning prompts, then compare them with real calendar, work, family, and financial constraints. This turns a broad cultural or product topic into a concrete checklist that can be used before buying, printing, sharing, or relying on the result.",
+      "The evidence layer matters. The useful evidence is the 2026 Lunar New Year boundary, the Fire Horse year label, the reader's confirmed zodiac sign, and the specific life area being reviewed. That evidence does not remove every uncertainty, but it gives the reader a stable base before interpretation, design, packaging, or purchase wording is added.",
+      "Common use cases include annual planning, gift content, cultural explainers, family discussions, content calendars, and personal reflection notes. These use cases should not be treated as identical because each one changes the standard for accuracy, durability, wording, and visual proof.",
+      "The main risk is simple: The common mistake is reading a yearly forecast as certainty instead of using it to organize attention around timing, restraint, and practical decisions. Put that warning near the decision point because the reader still has time to change the product, wording, input, or next step.",
+      "Commercial offers can be added only when the free answer is already useful. A paid report, product card, printable, gift bundle, or affiliate block should support the decision path rather than replace clear guidance."
+    ],
+    "sections": [
+      {
+        "title": "Start with the practical decision",
+        "paragraphs": [
+          "For 2026 Chinese zodiac forecast, the reader normally needs a decision path more than a broad definition. The page should answer what to check, what can go wrong, and which detail should be verified before the next action.",
+          "This structure also protects cultural meaning. Once the practical check is clear, symbolism can be explained without turning the page into a vague promise or a generic shopping paragraph."
+        ]
+      },
+      {
+        "title": "What to verify first",
+        "paragraphs": [
+          "Start by asking whether the key fact has been confirmed. In this case, the first check is to confirm whether the forecast is based on the Lunar New Year start of the Fire Horse year. If that evidence is missing, the safer answer is to pause and gather it before treating the result as final.",
+          "Then apply the second check: use sign notes as planning prompts, then compare them with real calendar, work, family, and financial constraints. This separates a useful recommendation from a page or product that looks attractive but does not provide enough proof."
+        ]
+      },
+      {
+        "title": "Where the answer changes",
+        "paragraphs": [
+          "2026 Chinese zodiac forecast can appear in annual planning, gift content, cultural explainers, family discussions, content calendars, and personal reflection notes. A family-reference use needs source clarity. A product use needs material, size, and care details. A gift use needs careful wording. A report use needs correct input before interpretation.",
+          "That is why one short answer is not enough. The right next step depends on what the reader is trying to do and what evidence is already available."
+        ]
+      },
+      {
+        "title": "Quality checks and warning signs",
+        "paragraphs": [
+          "A reliable choice should make the key evidence visible. The useful evidence is the 2026 Lunar New Year boundary, the Fire Horse year label, the reader's confirmed zodiac sign, and the specific life area being reviewed. If those details are hidden or vague, the reader should not treat the answer as final.",
+          "The warning sign to remember is this: The common mistake is reading a yearly forecast as certainty instead of using it to organize attention around timing, restraint, and practical decisions. A confident phrase, attractive photo, or polished design does not solve that problem by itself."
+        ]
+      },
+      {
+        "title": "How to use the result responsibly",
+        "paragraphs": [
+          "Use the result as a practical reference, not as an absolute promise. Cultural symbols, zodiac signs, surname characters, tableware choices, and craft gifts can all carry meaning, but the meaning should stay connected to evidence and real use.",
+          "After the first answer is clear, move to the most specific related page. That keeps the reader from getting stuck on a broad topic when the real question is about a material, date boundary, character source, compatibility pair, gift format, or tutorial step."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "If accuracy is the concern, open the calculator, lookup, source guide, material comparison, or meaning page before buying or sharing. If product quality is the concern, compare dimensions, material, care, photos, and packaging. If wording is the concern, keep the message warm but modest.",
+          "This approach leaves room for products, paid reports, printables, or gift bundles later while keeping the current page useful on its own."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "First check",
+          "confirm whether the forecast is based on the Lunar New Year start of the Fire Horse year",
+          "Prevents the most visible wrong answer"
+        ],
+        [
+          "Practical fit",
+          "use sign notes as planning prompts, then compare them with real calendar, work, family, and financial constraints",
+          "Connects the topic to real use"
+        ],
+        [
+          "Evidence",
+          "The useful evidence is the 2026 Lunar New Year boundary, the Fire Horse year label, the reader's confirmed zodiac sign, and the specific life area being reviewed.",
+          "Keeps the answer trustworthy"
+        ],
+        [
+          "Use cases",
+          "annual planning, gift content, cultural explainers, family discussions, content calendars, and personal reflection notes",
+          "Shows where the advice changes"
+        ],
+        [
+          "Common risk",
+          "The common mistake is reading a yearly forecast as certainty instead of using it to organize attention around timing, restraint, and practical decisions.",
+          "Prevents avoidable buying, wording, or lookup errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Year of the Horse 2026",
+        "path": "/year-of-the-horse-2026/",
+        "category": "Year Guides",
+        "description": "Read the Fire Horse year context."
+      },
+      {
+        "title": "Chinese Zodiac Years Chart",
+        "path": "/chinese-zodiac-years/",
+        "category": "Year Guides",
+        "description": "Check zodiac years and boundaries."
+      },
+      {
+        "title": "Chinese Zodiac Elements",
+        "path": "/chinese-zodiac-elements/",
+        "category": "Element Guides",
+        "description": "Understand element cycles."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for 2026 Chinese zodiac forecast?",
+        "a": "A 2026 Chinese zodiac forecast should be read as cultural planning context for the Fire Horse year, not as a guaranteed prediction for money, love, health, or career."
+      },
+      {
+        "q": "What should I check first for 2026 Chinese zodiac forecast?",
+        "a": "First, confirm whether the forecast is based on the Lunar New Year start of the Fire Horse year. That detail is most likely to change the final answer."
+      },
+      {
+        "q": "What is the biggest mistake with 2026 Chinese zodiac forecast?",
+        "a": "The common mistake is reading a yearly forecast as certainty instead of using it to organize attention around timing, restraint, and practical decisions."
+      },
+      {
+        "q": "What evidence matters most for 2026 Chinese zodiac forecast?",
+        "a": "The useful evidence is the 2026 Lunar New Year boundary, the Fire Horse year label, the reader's confirmed zodiac sign, and the specific life area being reviewed."
+      },
+      {
+        "q": "Can 2026 Chinese zodiac forecast support products, gifts, or paid reports?",
+        "a": "Yes, but only when the free explanation gives a complete decision path and the offer does not replace the core answer."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260721) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
 
 function seoReportCss() {
   return `.seo-report-page{padding:36px 0}.report-hero h1{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:34px;line-height:1.12;margin:12px 0 10px}.report-summary{display:grid;grid-template-columns:repeat(5,minmax(120px,1fr));gap:12px;margin-top:22px}.report-summary div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.report-summary strong{display:block;font-size:28px;line-height:1;color:#1d1814}.report-summary span{display:block;margin-top:8px;color:var(--muted);font-size:13px;font-weight:720}.report-rules p{margin:0}.seo-table td:nth-child(2){white-space:nowrap}.seo-table td:nth-child(2) strong{display:block;font-size:18px}.seo-table td:nth-child(2) span{display:inline-flex;margin-top:4px;padding:2px 8px;border-radius:999px;background:#eee;color:#4a4038;font-size:12px;font-weight:760}.seo-table tr.pass td:nth-child(2) span{background:#e8f5ee;color:#236349}.seo-table tr.review td:nth-child(2) span{background:#fff3d8;color:#8a5a16}.seo-table tr.fix td:nth-child(2) span{background:#fde8e8;color:#a42b2b}.seo-table td:last-child span{display:block;margin:3px 0;font-size:13px;color:#5c534b}@media(max-width:820px){.report-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}`;
