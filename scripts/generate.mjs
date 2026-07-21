@@ -643,21 +643,21 @@ function yearReferenceNarrative(item, animal) {
   return `
       <section class="content-section article-body">
         <h2>How to read the ${item.year} ${animal.name} year</h2>
-        <p>The first rule is calendar accuracy. ${item.year} is a ${item.element} ${animal.name} year only after Lunar New Year begins on ${item.lunarNewYear}. A birthday before that date still belongs to the previous zodiac year. This is why a proper zodiac year page should always show the Lunar New Year boundary instead of using January 1 as the start.</p>
+        <p>The first rule is calendar accuracy. ${item.year} is the ${item.element} ${animal.name} year only after Lunar New Year begins on ${item.lunarNewYear}. A birthday before that date still belongs to the previous zodiac year. This is why a proper zodiac year page should always show the Lunar New Year boundary instead of using January 1 as the start.</p>
         <p>The second rule is interpretation. The ${animal.name} animal is traditionally associated with ${traits.strength}. The ${item.element} element adds themes of ${element.keywords}. Together, the page describes a cultural label in the 60-year cycle, not a scientific personality category or a prediction about what will happen in the year.</p>
         <p>For readers checking a birth year, the safest workflow is to confirm the exact birthday, compare it with the Lunar New Year date, then open the ${animal.name} animal guide and the elements guide for context. For readers checking annual meaning, the page can explain cultural language, seasonal content, and common search questions without turning symbolism into advice.</p>
       </section>
       <section class="content-section article-body">
         <h2>Common mistakes with ${item.year} zodiac lookup</h2>
-        <p>The most common mistake is assigning every person born in ${item.year} to the ${animal.name}. That is wrong for January and early February birthdays before ${item.lunarNewYear}. Another mistake is ignoring the element. A ${item.element} ${animal.name} year shares the same animal with other ${animal.name} years, but the element gives a second layer of traditional wording.</p>
+        <p>The most common mistake is assigning every person born in ${item.year} to the ${animal.name}. That is wrong for January and early February birthdays before ${item.lunarNewYear}. Another mistake is ignoring the element. The ${item.element} ${animal.name} year shares the same animal with other ${animal.name} years, but the element gives a second layer of traditional wording.</p>
         <p>A third mistake is treating lucky colors, numbers, personality notes, or compatibility comments as fixed rules. On this site, those details are presented as cultural references. They can help explain how Chinese zodiac language works, but they are not professional guidance for relationships, business, health, or money.</p>
         <p>Use the related links to move from broad year lookup into more specific pages. The animal page explains the recurring 12-year sign. The year chart compares nearby years. The compatibility page explains relationship symbolism. This internal path gives readers a complete answer instead of leaving them with a short label.</p>
         <p>If the reader is checking a child, family member, partner, or historical figure, the same method applies. Record the full date first, compare it with Lunar New Year, then read the animal and element. A year page is strongest when it answers both the quick question and the boundary question, because those are the two points that most often cause wrong zodiac answers.</p>
-        <p>For content planning or seasonal pages, ${item.year} can be described as a ${item.element} ${animal.name} year, but the article should still mention the actual start date. This keeps the page useful for searchers who want a short cultural answer and for readers who need an accurate birthday lookup.</p>
+        <p>For content planning or seasonal pages, ${item.year} can be described as the ${item.element} ${animal.name} year, but the article should still mention the actual start date. This keeps the page useful for searchers who want a short cultural answer and for readers who need an accurate birthday lookup.</p>
       </section>
       <section class="content-section article-body">
         <h2>${item.year} next steps and related checks</h2>
-        <p>After confirming that ${item.year} is a ${item.element} ${animal.name} year, the next useful step depends on the reader's intent. If the question is personal birth-year lookup, use the calculator with the full birth date. If the question is cultural meaning, open the ${animal.name} animal page and the elements guide. If the question is a relationship comparison, confirm both people's signs before using compatibility pages.</p>
+        <p>After confirming that ${item.year} is the ${item.element} ${animal.name} year, the next useful step depends on the reader's intent. If the question is personal birth-year lookup, use the calculator with the full birth date. If the question is cultural meaning, open the ${animal.name} animal page and the elements guide. If the question is a relationship comparison, confirm both people's signs before using compatibility pages.</p>
         <p>For quick reference, remember the order: date boundary first, animal second, element third, interpretation last. This prevents the page from becoming a thin answer and gives readers a reliable path through the site. It also makes the year guide useful for education, family questions, content planning, and cultural curiosity without presenting zodiac symbolism as professional advice.</p>
         <p>The ${item.element} ${animal.name} label is strongest when it is connected to verifiable details: the Gregorian year, the Lunar New Year start date, the animal order, and the five-element cycle. Those facts give the page a stable base, while personality, luck, and compatibility notes remain clearly marked as traditional symbolism.</p>
         <p>For quick sharing, cite the complete label as ${item.year} ${item.element} ${animal.name}, then add the start date, element, animal, and early-birthday exception. That small habit prevents the most common misunderstanding and makes the answer useful even outside this page for quick reference checks, classroom notes, family questions, and cultural planning.</p>
@@ -1336,10 +1336,42 @@ function enhanceThinContent(path, html) {
   return extra && html.includes("</main>") ? html.replace("</main>", `${extra}</main>`) : html;
 }
 
+const geoMicroPatches20260721 = new Map([
+  [
+    "/chinese-zodiac-years/",
+    `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260721">
+      <h2>How to use the Chinese zodiac years table</h2>
+      <p>Use the year table as a calendar reference first, not as a personality shortcut. The animal and element shown for a Gregorian year apply only after that year's Lunar New Year date. January and early February birthdays can still belong to the previous zodiac year, so the safest workflow is to check the full birth date in the <a href="/chinese-zodiac-calculator/">Chinese zodiac calculator</a> before reading animal meanings.</p>
+      <p>If you are comparing current and upcoming search years, start with the focused guides for <a href="/chinese-zodiac/2025/">2025 Chinese Zodiac</a>, <a href="/chinese-zodiac/2027/">2027 Chinese Zodiac</a>, <a href="/chinese-zodiac/2028/">2028 Chinese Zodiac</a>, and <a href="/chinese-zodiac/2030/">2030 Chinese Zodiac</a>. Each page names the animal, element, Lunar New Year date, and the not-January-1 birthday boundary.</p>
+    </section>`
+  ],
+  [
+    "/chinese-zodiac-calculator/",
+    `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260721">
+      <h2>Use the calculator before choosing a sign from a year list</h2>
+      <p>The Chinese zodiac sign calculator is built for the question "what Chinese zodiac sign am I?" because it uses the exact birth date instead of only the Gregorian birth year. This matters for Chinese astrology birth date lookup, especially when the birthday falls before Lunar New Year. A simple year chart can answer many searches, but the calculator is the better tool for personal sign checks.</p>
+      <p>After the calculator returns an animal and element, continue with the <a href="/chinese-zodiac-years/">Chinese zodiac years chart</a> to compare nearby boundaries or open the <a href="/chinese-zodiac-animals/">Chinese zodiac animals</a> guide for meaning and cultural context.</p>
+    </section>`
+  ],
+  [
+    "/chinese-zodiac-compatibility/dragon-and-snake-compatibility/",
+    `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260721">
+      <h2>Dragon and Snake compatibility context</h2>
+      <p>Dragon and Snake compatibility is often searched as a Chinese zodiac compatibility question for love, friendship, and work. This pair can be read as intense, perceptive, and strategic in traditional symbolism, but the page should still be used as cultural reference rather than relationship advice. Real communication, safety, and practical boundaries matter more than any zodiac score.</p>
+      <p>For a cleaner comparison, confirm both people's signs with the <a href="/chinese-zodiac-calculator/">Chinese zodiac calculator</a>, then return to the <a href="/chinese-zodiac-compatibility/">compatibility hub</a> to compare other animal pairs.</p>
+    </section>`
+  ]
+]);
+
+function applyGeoMicroPatch20260721(path, html) {
+  const block = geoMicroPatches20260721.get(path);
+  if (!block || html.includes('data-geo-micro-patch="20260721"')) return html;
+  return html.includes("</main>") ? html.replace("</main>", `${block}</main>`) : `${html}${block}`;
+}
 async function writePage(path, html) {
   const file = path === "/" ? join("dist", "index.html") : join("dist", path, "index.html");
   await mkdir(dirname(file), { recursive: true });
-  await writeFile(file, sanitizePublicHtml(applyGeoMicroPatch20260717(path, applyGeoMicroPatch20260716(path, applyGeoMicroPatch20260715(path, applyGeoMicroPatch20260714(path, enhanceThinContent(path, html)))))), "utf8");
+  await writeFile(file, sanitizePublicHtml(applyGeoMicroPatch20260721(path, applyGeoMicroPatch20260717(path, applyGeoMicroPatch20260716(path, applyGeoMicroPatch20260715(path, applyGeoMicroPatch20260714(path, enhanceThinContent(path, html))))))), "utf8");
 }
 
 
@@ -2528,11 +2560,11 @@ await writePage("/guides/what-chinese-zodiac-sign-am-i/", pageLayout({
 }));
 
 await writePage("/chinese-zodiac-calculator/", pageLayout({
-  title: "Chinese Zodiac Calculator: Find Your Zodiac Animal by Birth Date",
-  description: "Find your Chinese zodiac sign by birth date with a calculator that respects Lunar New Year boundaries.",
+  title: "Chinese Zodiac Calculator: Find Your Sign by Birth Date",
+  description: "Use a Chinese zodiac sign calculator to answer what Chinese zodiac sign am I by full birth date, Lunar New Year boundary, animal, and element.",
   path: "/chinese-zodiac-calculator/",
-  h1: "Chinese Zodiac Calculator",
-  intro: "Use your birth date to find your Chinese zodiac animal, element, and Lunar New Year boundary note.",
+  h1: "Chinese Zodiac Sign Calculator",
+  intro: "Use your full Chinese astrology birth date to find your Chinese zodiac animal, element, and Lunar New Year boundary note.",
     faqs: [
     {
       q: "Why does the calculator ask for a full birth date?",
@@ -2567,11 +2599,11 @@ await writePage("/chinese-zodiac-calculator/", pageLayout({
 }));
 
 await writePage("/chinese-zodiac-years/", pageLayout({
-  title: "Chinese Zodiac Years Chart with Lunar New Year Dates",
-  description: "Browse a Chinese zodiac years chart with animals, elements, and Lunar New Year start dates.",
+  title: "Chinese Zodiac Years Chart: Animals, Elements, and Lunar New Year Dates",
+  description: "Browse the Chinese zodiac years chart with animals, elements, Lunar New Year dates, and the not-January-1 birthday boundary.",
   path: "/chinese-zodiac-years/",
   h1: "Chinese Zodiac Years Chart",
-  intro: "Use this chart to compare Gregorian years with Chinese zodiac animals, elements, and Lunar New Year start dates.",
+  intro: "Use this chart to compare Gregorian years with Chinese zodiac animals, elements, Lunar New Year start dates, and the birthday boundary before using a year as a sign.",
   faqs: [
     {
       q: "Does each Chinese zodiac year start on January 1?",
@@ -2584,6 +2616,21 @@ await writePage("/chinese-zodiac-years/", pageLayout({
   ],
   body: `
     <section class="tool-page">${yearSearchBlock()}</section>
+    <section class="content-section split">
+      <div>
+        <p class="eyebrow">Year table method</p>
+        <h2>Check the Lunar New Year boundary first</h2>
+        <p>The table is useful for scanning animals and elements by year, but it should not be used as a January 1 sign chart. For any birthday in January or early February, compare the date with the Lunar New Year column or use the calculator for the exact sign.</p>
+        <a class="button-link" href="/chinese-zodiac-calculator/">Use the birth date calculator</a>
+      </div>
+      <div class="fact-card">
+        <strong>Fast path</strong>
+        <span>Step 1: Find the Gregorian year</span>
+        <span>Step 2: Check Lunar New Year date</span>
+        <span>Step 3: Confirm animal and element</span>
+        <span>Step 4: Open the focused year guide</span>
+      </div>
+    </section>
     <section class="content-section">
       <h2>Chinese zodiac years</h2>
       ${yearsTable()}
@@ -2810,16 +2857,24 @@ for (const pair of allCompatibilityPairs()) {
   const firstAnimal = animalBySlug[pair.first];
   const secondAnimal = animalBySlug[pair.second];
   const path = `/chinese-zodiac-compatibility/${pairSlug(pair.first, pair.second)}/`;
+  const pairOpportunity = path === "/chinese-zodiac-compatibility/dragon-and-snake-compatibility/";
+  const pairPageTitle = pairOpportunity ? "Dragon and Snake Compatibility: Chinese Zodiac Love, Friendship, and Work Match" : `${firstAnimal.name} and ${secondAnimal.name} Chinese Zodiac Compatibility`;
+  const pairPageDescription = pairOpportunity ? "Read Dragon and Snake compatibility in Chinese zodiac for love, friendship, and work, with cultural boundaries and a link back to the compatibility hub." : `Read the ${firstAnimal.name} and ${secondAnimal.name} Chinese zodiac compatibility match for love, friendship, work, and traditional meaning.`;
+  const pairPageIntro = pairOpportunity ? `${pair.summary} This Dragon and Snake compatibility guide explains love, friendship, and business/work symbolism as cultural reference, not as relationship advice.` : `${pair.summary} This guide explains the pair as a cultural reference, not as relationship advice.`;
+  const pairPageFaqs = pairOpportunity ? [
+    { q: "Are Dragon and Snake compatible in Chinese zodiac?", a: `${pair.summary} Read this as traditional Chinese zodiac compatibility symbolism, not as proof that a relationship will succeed or fail.` },
+    { q: "Is Dragon and Snake compatibility about love only?", a: "No. This page separates love, friendship, and work or business context, then links back to the compatibility hub for broader pair comparison." }
+  ] : [
+    { q: `Are ${firstAnimal.name} and ${secondAnimal.name} compatible in Chinese zodiac?`, a: pair.summary },
+    { q: `What is the match score for ${firstAnimal.name} and ${secondAnimal.name}?`, a: `This cultural reference gives the pair a ${pair.score}/100 symbolic match score.` }
+  ];
   await writePage(path, pageLayout({
-    title: `${firstAnimal.name} and ${secondAnimal.name} Chinese Zodiac Compatibility`,
-    description: `Read the ${firstAnimal.name} and ${secondAnimal.name} Chinese zodiac compatibility match for love, friendship, work, and traditional meaning.`,
+    title: pairPageTitle,
+    description: pairPageDescription,
     path,
     h1: `${firstAnimal.name} and ${secondAnimal.name} Compatibility`,
-    intro: `${pair.summary} This guide explains the pair as a cultural reference, not as relationship advice.`,
-    faqs: [
-      { q: `Are ${firstAnimal.name} and ${secondAnimal.name} compatible in Chinese zodiac?`, a: pair.summary },
-      { q: `What is the match score for ${firstAnimal.name} and ${secondAnimal.name}?`, a: `This cultural reference gives the pair a ${pair.score}/100 symbolic match score.` }
-    ],
+    intro: pairPageIntro,
+    faqs: pairPageFaqs,
     articleSidebar: true,
     body: `
       ${articleSearchBlock()}
@@ -2885,6 +2940,30 @@ const yearOpportunityEnhancements = new Map([
       { q: "Does the 2030 Chinese zodiac year start on January 1?", a: "No. The 2030 Chinese zodiac year starts on February 3, 2030. Birthdays before that date still belong to the previous zodiac year." }
     ],
     relatedYears: [2028, 2029]
+  }],
+  [2028, {
+    title: "2028 Chinese Zodiac: Earth Monkey Year and Lunar New Year Date",
+    description: "2028 Chinese Zodiac is the Year of the Earth Monkey. See the 2028 Lunar New Year date, animal, element, and birthday boundary.",
+    searchIntentIntro: "Searches for 2028 lunar new year usually need the date and the animal together. The 2028 Lunar New Year begins on January 26, 2028, so the 2028 Chinese zodiac animal is the Monkey after that date, with the Earth element.",
+    faq: [
+      { q: "What is the 2028 Chinese zodiac animal?", a: "2028 is the Year of the Monkey in the Chinese zodiac. More specifically, it is an Earth Monkey year." },
+      { q: "When is Lunar New Year 2028?", a: "Lunar New Year 2028 begins on January 26, 2028. That is when the Earth Monkey zodiac year starts." },
+      { q: "Does the 2028 Chinese zodiac year start on January 1?", a: "No. The 2028 Chinese zodiac year starts on Lunar New Year, January 26, 2028. Birthdays before that date still belong to the previous zodiac year." },
+      { q: "What element is 2028 in Chinese zodiac?", a: "2028 is an Earth Monkey year. Earth is the element paired with Monkey in the 60-year cycle for that zodiac year." }
+    ],
+    relatedYears: [2027, 2030]
+  }],
+  [2027, {
+    title: "2027 Chinese Zodiac: Fire Goat Year, Animal, Element, and Date Boundary",
+    description: "2027 Chinese Zodiac is the Year of the Fire Goat. Check the animal, element, Lunar New Year date, and birthday boundary.",
+    searchIntentIntro: "The 2027 Chinese zodiac answer depends on the Lunar New Year boundary. 2027 is the Fire Goat year after February 6, 2027, while birthdays before that date still belong to the previous zodiac year.",
+    faq: [
+      { q: "What animal is 2027 in the Chinese zodiac?", a: "2027 is the Year of the Goat in the Chinese zodiac. The full traditional label is Fire Goat." },
+      { q: "When does the 2027 Chinese zodiac year start?", a: "The 2027 Chinese zodiac year starts on February 6, 2027, the Lunar New Year date for that year." },
+      { q: "Does 2027 Chinese zodiac start on January 1?", a: "No. It starts on February 6, 2027. January and early February birthdays before that date still belong to the previous zodiac year." },
+      { q: "What element is 2027 in Chinese zodiac?", a: "2027 is a Fire Goat year in the Chinese zodiac's animal and element cycle." }
+    ],
+    relatedYears: [2026, 2028]
   }]
 ]);
 
@@ -2914,7 +2993,7 @@ for (const item of years.filter((row) => row.year >= 2024 && row.year <= 2030)) 
       </section>
       <section class="content-section">
         <h2>Check ${item.year} before using the animal sign</h2>
-        <p>If you are checking a birthday, use the full date. Someone born from January 1 to February 2, ${item.year} is still counted under the previous Chinese zodiac year. Someone born on or after ${item.lunarNewYear} belongs to the ${item.element} ${animal.name} year.</p>
+        <p>If you are checking a birthday, use the full date. Someone born before ${item.lunarNewYear} is still counted under the previous Chinese zodiac year. Someone born on or after ${item.lunarNewYear} belongs to the ${item.element} ${animal.name} year.</p>
         <p>For a personal reading, start with the free calculator, then compare the ${animal.name} guide and the Chinese zodiac years table before using any symbolic meaning.</p>
         <div class="button-row">
           <a class="button-link" href="/chinese-zodiac-calculator/">Check a birth date</a>
@@ -8116,25 +8195,3 @@ function heroSpacingFixCss() {
 function contentWidthBalanceCss() {
   return `.tool-page>.tool-panel+.conversion-report-card{margin-top:18px}.tool-page .calculator-form{justify-content:start}.tool-page .calculator-form:not(.birthdate-form):not(.match-form){max-width:760px!important;grid-template-columns:minmax(240px,520px) auto}.tool-page .birthdate-form{max-width:820px!important}.tool-page .match-form{max-width:780px!important}.page-home .tool-strip{width:min(1160px,calc(100% - 36px));max-width:none;padding-left:0!important;padding-right:0!important}.page-home .tool-strip .tool-panel{min-width:0}@media(max-width:820px){.tool-page .calculator-form:not(.birthdate-form):not(.match-form),.tool-page .birthdate-form,.tool-page .match-form{max-width:100%!important;grid-template-columns:1fr}}body:not(.page-home):not(.seo-report-page) .page-hero{max-width:1240px}body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search{max-width:1120px}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-shell{max-width:1220px}.page-guides .article-search,.page-guides .content-section{max-width:1120px}.page-guides .article-search{padding-left:34px!important;padding-right:34px!important}.tool-page .tool-panel{max-width:none}.content-section:not(.split){padding-left:clamp(22px,4vw,52px);padding-right:clamp(22px,4vw,52px)}@media(max-width:1180px){body:not(.page-home):not(.seo-report-page) .page-hero,body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search,.page-guides .article-search,.page-guides .content-section{max-width:calc(100% - 32px)}}@media(max-width:640px){body:not(.page-home):not(.seo-report-page) .page-hero,body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search,.page-guides .article-search,.page-guides .content-section{max-width:calc(100% - 20px)}.page-guides .article-search{padding-left:20px!important;padding-right:20px!important}}`;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
