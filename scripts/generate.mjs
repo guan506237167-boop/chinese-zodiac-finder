@@ -155,7 +155,7 @@ function applyGeoMicroPatch20260714(path, html) {
 function blockForGeoMicroPatch20260714(patch) {
   const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
   const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
-  return `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260714">
+  return `.daily-visual-block{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin:22px 0;padding:22px;border:1px solid #ead6b8;border-radius:10px;background:linear-gradient(135deg,#fff8ed,#eef7f1);box-shadow:0 12px 28px rgba(47,37,23,.06)}.daily-visual-block span{color:var(--jade);font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.05em}.daily-visual-block h2{margin:8px 0 8px}.daily-visual-block p{margin:0;color:var(--muted)}.daily-visual-steps{display:grid;gap:10px}.daily-visual-step{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px}.daily-visual-step strong{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#d6b06e;color:#231d18}.daily-visual-step span{font-size:14px;line-height:1.45;color:#2f2922;text-transform:none;letter-spacing:0;font-weight:650}@media(max-width:760px){.daily-visual-block{grid-template-columns:1fr}}<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260714">
     <h2>Quick Answer and Evidence Check</h2>
     <p>${escapeHtml(patch.quick)}</p>
     <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
@@ -170,6 +170,7 @@ function blockForGeoMicroPatch20260714(patch) {
 
 
 const guides = [
+  { title: "2029 Chinese Zodiac Guide: Earth Rooster Year and Birthday Boundary", path: "/guides/2029-chinese-zodiac-guide/", category: "Year Guides", description: "Check the 2029 Chinese zodiac animal, Earth Rooster element, Lunar New Year start date, and January birthday boundary." },
   { title: "Chinese Zodiac Love Compatibility Calculator: Use Cases and Limits", path: "/guides/chinese-zodiac-love-compatibility-calculator/", category: "Compatibility Guides", description: "Use a Chinese zodiac love compatibility calculator with full birth dates, Lunar New Year boundaries, pair context, and realistic relationship limits." },
   { title: "2026 Chinese Zodiac Forecast: Fire Horse Year Reading Checks", path: "/2026-chinese-zodiac-forecast/", category: "Year Guides", description: "Read a 2026 Chinese zodiac forecast with Fire Horse year context, sign-by-sign caution, timing notes, and responsible planning limits." },
   {
@@ -3770,12 +3771,18 @@ const dailyArticles20260706 = [
   }
 ];
 
+
+function dailyVisualBlock20260722(article) {
+  const points = (article.visual?.points || []).slice(0, 3).map((point, index) => `<div class="daily-visual-step"><strong>${index + 1}</strong><span>${escapeHtml(point)}</span></div>`).join("");
+  return `<div class="daily-visual-block"><div><span>${escapeHtml(article.visual?.label || "Guide visual")}</span><h2>${escapeHtml(article.keyword || article.title)}</h2><p>Use the visual checklist before acting on the article. It keeps the page scannable and prevents the answer from becoming a plain text block.</p></div><div class="daily-visual-steps">${points}</div></div>`;
+}
+
 function dailyArticlePage20260706(article) {
   const rows = article.table.rows.map((row) => `<tr>${row.map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}</tr>`).join("");
   const body = `
     ${articleSearchBlock()}
     <section class="content-section article-body">
-      <p class="lead-answer">${escapeHtml(article.answer)}</p>
+      <p class="lead-answer">${escapeHtml(article.answer)}</p>\n      ${dailyVisualBlock20260722(article)}
       ${geoPatchBlock(article)}
       ${article.details.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
     </section>
@@ -8175,6 +8182,330 @@ for (const article of dailyArticles20260721) {
   await writePage(article.path, dailyArticlePage20260706(article));
 }
 await writeSitemap();
+
+
+const dailyArticles20260722 = [
+  {
+    "title": "2029 Chinese Zodiac Guide: Earth Rooster Year and Birthday Boundary",
+    "path": "/guides/2029-chinese-zodiac-guide/",
+    "description": "Check the 2029 Chinese zodiac animal, Earth Rooster element, Lunar New Year start date, and January birthday boundary.",
+    "h1": "2029 Chinese Zodiac Guide: Earth Rooster Year and Birthday Boundary",
+    "intro": "If you are comparing 2029 Chinese zodiac, start with the decision the reader is actually trying to make. The best answer explains what to check first, what evidence matters, and what should not be overclaimed.",
+    "answer": "Quick Answer: 2029 is the Year of the Earth Rooster, but the Chinese zodiac year starts at Lunar New Year, not on January 1. Early-year birthdays must be checked against the 2029 Lunar New Year date.",
+    "visual": {
+      "label": "Year Guides",
+      "points": [
+        "confirm whether the birthday falls before or after the 2029 Lunar New Year",
+        "read Earth Rooster meaning only after the animal and element are confirmed",
+        "Use modest, practical wording"
+      ]
+    },
+    "geoPatch": {
+      "noteLabel": "Evidence note",
+      "note": "The reliable evidence is the full birth date, the Lunar New Year start date for 2029, the Rooster animal, and the Earth element in the 60-year cycle.",
+      "dataAnchor": "2029 Chinese zodiac decision = confirm whether the birthday falls before or after the 2029 Lunar New Year + read Earth Rooster meaning only after the animal and element are confirmed.",
+      "facts": [
+        [
+          "Main keyword",
+          "2029 Chinese zodiac"
+        ],
+        [
+          "First check",
+          "confirm whether the birthday falls before or after the 2029 Lunar New Year"
+        ],
+        [
+          "Second check",
+          "read Earth Rooster meaning only after the animal and element are confirmed"
+        ],
+        [
+          "Use limit",
+          "Use cultural, educational, product, family-reference, or practical wording; avoid guaranteed claims about luck, ancestry, health, money, or relationships."
+        ]
+      ]
+    },
+    "details": [
+      "2029 Chinese zodiac is a practical search because the reader usually needs more than a definition. They may be checking a date, choosing a product, preparing a gift, confirming a character, teaching a cultural topic, or deciding whether a symbolic phrase is safe to use.",
+      "The first decision is to confirm whether the birthday falls before or after the 2029 Lunar New Year. This is the step most likely to change the answer, so it should appear before any decorative meaning or product suggestion.",
+      "The second decision is to read Earth Rooster meaning only after the animal and element are confirmed. This turns a broad topic into a working checklist that can be used before buying, printing, teaching, sharing, or relying on the result.",
+      "The evidence layer matters. The reliable evidence is the full birth date, the Lunar New Year start date for 2029, the Rooster animal, and the Earth element in the 60-year cycle. That evidence does not remove every uncertainty, but it gives the reader a stable base before interpretation, packaging, design, or purchase wording is added.",
+      "Common use cases include birthday checks, baby gifts, year charts, classroom examples, family notes, and annual zodiac content planning. These situations should not be treated as identical because each one changes the standard for accuracy, durability, wording, and visual proof.",
+      "The main risk is simple: The common mistake is assigning every person born in 2029 to Rooster without checking January and early February birthdays. Put that warning near the decision point because the reader still has time to change the product, wording, input, or next step.",
+      "This guide uses a visual checklist, a fact table, examples, FAQ, and related links so the page does not become a plain block of text. The goal is a page that is easy to scan, useful to readers, and safer for SEO and GEO extraction."
+    ],
+    "sections": [
+      {
+        "title": "Start with the practical decision",
+        "paragraphs": [
+          "For 2029 Chinese zodiac, the page should answer what to check, what can go wrong, and which detail should be verified before the next action.",
+          "This structure protects cultural meaning because symbolism can be explained after the practical check is clear. The reader gets context without being pushed into a rigid rule."
+        ]
+      },
+      {
+        "title": "What to verify first",
+        "paragraphs": [
+          "Start by asking whether the key fact has been confirmed. In this case, the first check is to confirm whether the birthday falls before or after the 2029 Lunar New Year.",
+          "Then apply the second check: read Earth Rooster meaning only after the animal and element are confirmed. This separates a useful recommendation from a page or product that looks attractive but does not provide enough proof."
+        ]
+      },
+      {
+        "title": "Example scenario",
+        "paragraphs": [
+          "Imagine a reader using this page for birthday checks. The safest answer starts with the visible facts, then compares context, then chooses the next page or checklist.",
+          "If the answer still feels uncertain, the reader should treat the result as provisional. A modest next step is more useful than a confident claim that ignores missing evidence."
+        ]
+      },
+      {
+        "title": "Quality checks and warning signs",
+        "paragraphs": [
+          "A reliable choice should make the key evidence visible. The reliable evidence is the full birth date, the Lunar New Year start date for 2029, the Rooster animal, and the Earth element in the 60-year cycle.",
+          "The warning sign to remember is this: The common mistake is assigning every person born in 2029 to Rooster without checking January and early February birthdays. A confident phrase, attractive photo, or polished design does not solve that problem by itself."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "If accuracy is the concern, open the calculator, lookup, source guide, material comparison, or meaning page before buying or sharing. If product quality is the concern, compare dimensions, material, care, photos, and packaging.",
+          "After reading, save one sentence that explains what changed in your understanding. This keeps the page useful as a working guide rather than a passive article."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "First check",
+          "confirm whether the birthday falls before or after the 2029 Lunar New Year",
+          "Prevents the most visible wrong answer"
+        ],
+        [
+          "Practical fit",
+          "read Earth Rooster meaning only after the animal and element are confirmed",
+          "Connects the topic to real use"
+        ],
+        [
+          "Evidence",
+          "The reliable evidence is the full birth date, the Lunar New Year start date for 2029, the Rooster animal, and the Earth element in the 60-year cycle.",
+          "Keeps the answer trustworthy"
+        ],
+        [
+          "Use cases",
+          "birthday checks, baby gifts, year charts, classroom examples, family notes, and annual zodiac content planning",
+          "Shows where the advice changes"
+        ],
+        [
+          "Common risk",
+          "The common mistake is assigning every person born in 2029 to Rooster without checking January and early February birthdays.",
+          "Prevents avoidable buying, wording, or lookup errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Chinese Zodiac Calculator",
+        "path": "/chinese-zodiac-calculator/",
+        "category": "Tools",
+        "description": "Check signs by full birth date."
+      },
+      {
+        "title": "Chinese Zodiac Years Chart",
+        "path": "/chinese-zodiac-years/",
+        "category": "Year Guides",
+        "description": "Compare year boundaries."
+      },
+      {
+        "title": "Year of the Rooster",
+        "path": "/chinese-zodiac/rooster/",
+        "category": "Animal Guides",
+        "description": "Read Rooster meaning."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for 2029 Chinese zodiac?",
+        "a": "2029 is the Year of the Earth Rooster, but the Chinese zodiac year starts at Lunar New Year, not on January 1. Early-year birthdays must be checked against the 2029 Lunar New Year date."
+      },
+      {
+        "q": "What should I check first for 2029 Chinese zodiac?",
+        "a": "First, confirm whether the birthday falls before or after the 2029 Lunar New Year."
+      },
+      {
+        "q": "What is the biggest mistake with 2029 Chinese zodiac?",
+        "a": "The common mistake is assigning every person born in 2029 to Rooster without checking January and early February birthdays."
+      },
+      {
+        "q": "What evidence matters most for 2029 Chinese zodiac?",
+        "a": "The reliable evidence is the full birth date, the Lunar New Year start date for 2029, the Rooster animal, and the Earth element in the 60-year cycle."
+      }
+    ]
+  },
+  {
+    "title": "Chinese Zodiac for Kids: Animal Order, Years, and Safe Teaching Notes",
+    "path": "/guides/chinese-zodiac-for-kids/",
+    "description": "Teach Chinese zodiac for kids with animal order, year lookup, Lunar New Year boundaries, classroom examples, and careful cultural wording.",
+    "h1": "Chinese Zodiac for Kids: Animal Order, Years, and Safe Teaching Notes",
+    "intro": "If you are comparing Chinese zodiac for kids, start with the decision the reader is actually trying to make. The best answer explains what to check first, what evidence matters, and what should not be overclaimed.",
+    "answer": "Quick Answer: Chinese zodiac for kids is best taught as a cultural calendar system with 12 animals, year boundaries, and stories, not as fixed personality labels for children.",
+    "visual": {
+      "label": "Learning Guides",
+      "points": [
+        "separate animal-order learning from birth-date lookup",
+        "explain that Chinese zodiac years follow Lunar New Year rather than January 1",
+        "Use modest, practical wording"
+      ]
+    },
+    "geoPatch": {
+      "noteLabel": "Evidence note",
+      "note": "The useful evidence is the 12-animal order, a year chart, the Lunar New Year boundary, and examples that avoid judging a child by a sign.",
+      "dataAnchor": "Chinese zodiac for kids decision = separate animal-order learning from birth-date lookup + explain that Chinese zodiac years follow Lunar New Year rather than January 1.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese zodiac for kids"
+        ],
+        [
+          "First check",
+          "separate animal-order learning from birth-date lookup"
+        ],
+        [
+          "Second check",
+          "explain that Chinese zodiac years follow Lunar New Year rather than January 1"
+        ],
+        [
+          "Use limit",
+          "Use cultural, educational, product, family-reference, or practical wording; avoid guaranteed claims about luck, ancestry, health, money, or relationships."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese zodiac for kids is a practical search because the reader usually needs more than a definition. They may be checking a date, choosing a product, preparing a gift, confirming a character, teaching a cultural topic, or deciding whether a symbolic phrase is safe to use.",
+      "The first decision is to separate animal-order learning from birth-date lookup. This is the step most likely to change the answer, so it should appear before any decorative meaning or product suggestion.",
+      "The second decision is to explain that Chinese zodiac years follow Lunar New Year rather than January 1. This turns a broad topic into a working checklist that can be used before buying, printing, teaching, sharing, or relying on the result.",
+      "The evidence layer matters. The useful evidence is the 12-animal order, a year chart, the Lunar New Year boundary, and examples that avoid judging a child by a sign. That evidence does not remove every uncertainty, but it gives the reader a stable base before interpretation, packaging, design, or purchase wording is added.",
+      "Common use cases include classroom lessons, family activities, worksheets, birthday cards, cultural events, and beginner reading pages. These situations should not be treated as identical because each one changes the standard for accuracy, durability, wording, and visual proof.",
+      "The main risk is simple: The common mistake is teaching the zodiac as a personality test instead of a calendar tradition with stories and date boundaries. Put that warning near the decision point because the reader still has time to change the product, wording, input, or next step.",
+      "This guide uses a visual checklist, a fact table, examples, FAQ, and related links so the page does not become a plain block of text. The goal is a page that is easy to scan, useful to readers, and safer for SEO and GEO extraction."
+    ],
+    "sections": [
+      {
+        "title": "Start with the practical decision",
+        "paragraphs": [
+          "For Chinese zodiac for kids, the page should answer what to check, what can go wrong, and which detail should be verified before the next action.",
+          "This structure protects cultural meaning because symbolism can be explained after the practical check is clear. The reader gets context without being pushed into a rigid rule."
+        ]
+      },
+      {
+        "title": "What to verify first",
+        "paragraphs": [
+          "Start by asking whether the key fact has been confirmed. In this case, the first check is to separate animal-order learning from birth-date lookup.",
+          "Then apply the second check: explain that Chinese zodiac years follow Lunar New Year rather than January 1. This separates a useful recommendation from a page or product that looks attractive but does not provide enough proof."
+        ]
+      },
+      {
+        "title": "Example scenario",
+        "paragraphs": [
+          "Imagine a reader using this page for classroom lessons. The safest answer starts with the visible facts, then compares context, then chooses the next page or checklist.",
+          "If the answer still feels uncertain, the reader should treat the result as provisional. A modest next step is more useful than a confident claim that ignores missing evidence."
+        ]
+      },
+      {
+        "title": "Quality checks and warning signs",
+        "paragraphs": [
+          "A reliable choice should make the key evidence visible. The useful evidence is the 12-animal order, a year chart, the Lunar New Year boundary, and examples that avoid judging a child by a sign.",
+          "The warning sign to remember is this: The common mistake is teaching the zodiac as a personality test instead of a calendar tradition with stories and date boundaries. A confident phrase, attractive photo, or polished design does not solve that problem by itself."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "If accuracy is the concern, open the calculator, lookup, source guide, material comparison, or meaning page before buying or sharing. If product quality is the concern, compare dimensions, material, care, photos, and packaging.",
+          "After reading, save one sentence that explains what changed in your understanding. This keeps the page useful as a working guide rather than a passive article."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "First check",
+          "separate animal-order learning from birth-date lookup",
+          "Prevents the most visible wrong answer"
+        ],
+        [
+          "Practical fit",
+          "explain that Chinese zodiac years follow Lunar New Year rather than January 1",
+          "Connects the topic to real use"
+        ],
+        [
+          "Evidence",
+          "The useful evidence is the 12-animal order, a year chart, the Lunar New Year boundary, and examples that avoid judging a child by a sign.",
+          "Keeps the answer trustworthy"
+        ],
+        [
+          "Use cases",
+          "classroom lessons, family activities, worksheets, birthday cards, cultural events, and beginner reading pages",
+          "Shows where the advice changes"
+        ],
+        [
+          "Common risk",
+          "The common mistake is teaching the zodiac as a personality test instead of a calendar tradition with stories and date boundaries.",
+          "Prevents avoidable buying, wording, or lookup errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Chinese Zodiac Animals",
+        "path": "/chinese-zodiac-animals/",
+        "category": "Animal Guides",
+        "description": "Learn all 12 animals."
+      },
+      {
+        "title": "Chinese Zodiac Years Chart",
+        "path": "/chinese-zodiac-years/",
+        "category": "Year Guides",
+        "description": "Check dates by year."
+      },
+      {
+        "title": "Chinese Zodiac Calculator",
+        "path": "/chinese-zodiac-calculator/",
+        "category": "Tools",
+        "description": "Use full birth date."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese zodiac for kids?",
+        "a": "Chinese zodiac for kids is best taught as a cultural calendar system with 12 animals, year boundaries, and stories, not as fixed personality labels for children."
+      },
+      {
+        "q": "What should I check first for Chinese zodiac for kids?",
+        "a": "First, separate animal-order learning from birth-date lookup."
+      },
+      {
+        "q": "What is the biggest mistake with Chinese zodiac for kids?",
+        "a": "The common mistake is teaching the zodiac as a personality test instead of a calendar tradition with stories and date boundaries."
+      },
+      {
+        "q": "What evidence matters most for Chinese zodiac for kids?",
+        "a": "The useful evidence is the 12-animal order, a year chart, the Lunar New Year boundary, and examples that avoid judging a child by a sign."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260722) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
 
 function seoReportCss() {
   return `.seo-report-page{padding:36px 0}.report-hero h1{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:34px;line-height:1.12;margin:12px 0 10px}.report-summary{display:grid;grid-template-columns:repeat(5,minmax(120px,1fr));gap:12px;margin-top:22px}.report-summary div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.report-summary strong{display:block;font-size:28px;line-height:1;color:#1d1814}.report-summary span{display:block;margin-top:8px;color:var(--muted);font-size:13px;font-weight:720}.report-rules p{margin:0}.seo-table td:nth-child(2){white-space:nowrap}.seo-table td:nth-child(2) strong{display:block;font-size:18px}.seo-table td:nth-child(2) span{display:inline-flex;margin-top:4px;padding:2px 8px;border-radius:999px;background:#eee;color:#4a4038;font-size:12px;font-weight:760}.seo-table tr.pass td:nth-child(2) span{background:#e8f5ee;color:#236349}.seo-table tr.review td:nth-child(2) span{background:#fff3d8;color:#8a5a16}.seo-table tr.fix td:nth-child(2) span{background:#fde8e8;color:#a42b2b}.seo-table td:last-child span{display:block;margin:3px 0;font-size:13px;color:#5c534b}@media(max-width:820px){.report-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}`;
