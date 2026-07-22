@@ -8,6 +8,53 @@ const SITE = {
   assetVersion: "20260716-conversion-01"
 };
 const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || "G-VB9E7T2VCF";
+const INDEXABLE_PATHS_RESCUE_20260722 = new Set([
+  "/",
+  "/guides/",
+  "/chinese-zodiac-calculator/",
+  "/chinese-zodiac-years/",
+  "/chinese-zodiac-animals/",
+  "/chinese-zodiac-elements/",
+  "/year-of-the-horse-2026/",
+  "/chinese-zodiac-compatibility/",
+  "/chinese-zodiac/2025/",
+  "/chinese-zodiac/2026/",
+  "/chinese-zodiac/2027/",
+  "/chinese-zodiac/2028/",
+  "/chinese-zodiac/2030/",
+  "/chinese-zodiac/rat/",
+  "/chinese-zodiac/ox/",
+  "/chinese-zodiac/tiger/",
+  "/chinese-zodiac/rabbit/",
+  "/chinese-zodiac/dragon/",
+  "/chinese-zodiac/snake/",
+  "/chinese-zodiac/horse/",
+  "/chinese-zodiac/goat/",
+  "/chinese-zodiac/monkey/",
+  "/chinese-zodiac/rooster/",
+  "/chinese-zodiac/dog/",
+  "/chinese-zodiac/pig/",
+  "/guides/what-chinese-zodiac-sign-am-i/",
+  "/guides/chinese-zodiac-compatibility-chart/",
+  "/guides/chinese-zodiac-lucky-colors/",
+  "/guides/chinese-zodiac-for-kids/",
+  "/faq/",
+  "/about/",
+  "/contact/",
+  "/privacy/",
+  "/terms/",
+  "/disclaimer/"
+]);
+
+function isIndexablePath(path) {
+  return INDEXABLE_PATHS_RESCUE_20260722.has(path);
+}
+
+function sitemapPages() {
+  const seen = new Set();
+  return pages.filter((page) => isIndexablePath(page.path) && !seen.has(page.path) && seen.add(page.path));
+}
+
 
 const animals = JSON.parse(await readFile("data/zodiac-animals.json", "utf8"));
 const seedYears = JSON.parse(await readFile("data/zodiac-years.json", "utf8"));
@@ -69,7 +116,7 @@ const geoMicroPatches20260714 = new Map([
     "/guides/2026-chinese-zodiac-sign/",
     {
       "path": "/guides/2026-chinese-zodiac-sign/",
-      "quick": "Quick answer: 2026 is a Fire Horse year in the Chinese zodiac, but the sign applies from the 2026 Lunar New Year boundary rather than January 1, so early-year birthdays still need a date check.",
+      "quick": "Short answer: 2026 is a Fire Horse year in the Chinese zodiac, but the sign applies from the 2026 Lunar New Year boundary rather than January 1, so early-year birthdays still need a date check.",
       "facts": [
         [
           "Main topic",
@@ -108,7 +155,7 @@ const geoMicroPatches20260714 = new Map([
     "/guides/chinese-zodiac-lucky-colors/",
     {
       "path": "/guides/chinese-zodiac-lucky-colors/",
-      "quick": "Quick answer: Chinese zodiac lucky colors are best used as symbolic gift, decor, or cultural wording choices, not as guaranteed luck claims.",
+      "quick": "Short answer: Chinese zodiac lucky colors are best used as symbolic gift, decor, or cultural wording choices, not as guaranteed luck claims.",
       "facts": [
         [
           "Main topic",
@@ -156,15 +203,15 @@ function blockForGeoMicroPatch20260714(patch) {
   const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
   const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
   return `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260714">
-    <h2>Quick Answer and Evidence Check</h2>
+    <h2>What to Check First</h2>
     <p>${escapeHtml(patch.quick)}</p>
-    <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
+    <div class="table-wrap"><table><thead><tr><th>Key detail</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
     <p><strong>Source note:</strong> ${escapeHtml(patch.evidence)}</p>
     <p><strong>Examples and use cases:</strong> ${escapeHtml(patch.examples)}.</p>
     <p><strong>Common mistake:</strong> ${escapeHtml(patch.mistakes)}</p>
     <h2>GEO FAQ</h2>
     ${faq}
-    <p><strong>Data anchor:</strong> ${escapeHtml(patch.dataAnchor)}</p>
+    <p><strong>Reference note:</strong> ${escapeHtml(patch.dataAnchor)}</p>
   </section>`;
 }
 
@@ -753,6 +800,7 @@ function faqSchema(faqs) {
 
 function pageLayout({ title, description, path, h1, intro, body, faqs = [], pageType = "WebPage", extraSchema = "", articleSidebar = false }) {
   const canonical = absolute(path);
+  const robotsMeta = isIndexablePath(path) ? "" : `\n  <meta name="robots" content="noindex, follow">`;
   const schema = [
     jsonLd({
       "@context": "https://schema.org",
@@ -779,6 +827,7 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(description)}">
+  ${robotsMeta}
   <meta name="msvalidate.01" content="CD1EE06A487E34A5FCCDC69F25C516E7">
   <link rel="canonical" href="${canonical}">
   <meta property="og:title" content="${escapeHtml(title)}">
@@ -1031,7 +1080,7 @@ const geoMicroPatches20260715 = new Map([
     "/chinese-zodiac-calculator/",
     {
       "path": "/chinese-zodiac-calculator/",
-      "quick": "Quick answer: A Chinese zodiac calculator needs the full birth date, not only the Gregorian birth year, because the zodiac year changes at Lunar New Year rather than January 1.",
+      "quick": "Short answer: A Chinese zodiac calculator needs the full birth date, not only the Gregorian birth year, because the zodiac year changes at Lunar New Year rather than January 1.",
       "facts": [
         [
           "Main task",
@@ -1070,7 +1119,7 @@ const geoMicroPatches20260715 = new Map([
     "/chinese-zodiac-compatibility/",
     {
       "path": "/chinese-zodiac-compatibility/",
-      "quick": "Quick answer: Chinese zodiac compatibility is a traditional comparison of two animal signs, but it should be read as a cultural conversation guide rather than a score that predicts a relationship.",
+      "quick": "Short answer: Chinese zodiac compatibility is a traditional comparison of two animal signs, but it should be read as a cultural conversation guide rather than a score that predicts a relationship.",
       "facts": [
         [
           "Main task",
@@ -1113,13 +1162,13 @@ function applyGeoMicroPatch20260715(path, html) {
   const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
   const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
   const block = `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260715">
-    <h2>Quick Answer and Evidence Check</h2><p>${escapeHtml(patch.quick)}</p>
-    <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
+    <h2>What to Check First</h2><p>${escapeHtml(patch.quick)}</p>
+    <div class="table-wrap"><table><thead><tr><th>Key detail</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
     <p><strong>Source note:</strong> ${escapeHtml(patch.evidence)}</p>
     <p><strong>Examples and use cases:</strong> ${escapeHtml(patch.examples)}.</p>
     <p><strong>Common mistake:</strong> ${escapeHtml(patch.mistakes)}</p>
     <h2>GEO FAQ</h2>${faq}
-    <p><strong>Data anchor:</strong> ${escapeHtml(patch.dataAnchor)}</p>
+    <p><strong>Reference note:</strong> ${escapeHtml(patch.dataAnchor)}</p>
   </section>`;
   return html.includes("</main>") ? html.replace("</main>", `${block}</main>`) : `${html}${block}`;
 }
@@ -1130,7 +1179,7 @@ const geoMicroPatches20260716 = new Map([
     "/chinese-zodiac-years/",
     {
       "path": "/chinese-zodiac-years/",
-      "quick": "Quick answer: Chinese zodiac years follow a repeating 12-animal cycle, but a birth sign should be checked against the dated Lunar New Year boundary rather than January 1.",
+      "quick": "Short answer: Chinese zodiac years follow a repeating 12-animal cycle, but a birth sign should be checked against the dated Lunar New Year boundary rather than January 1.",
       "facts": [
         [
           "Main task",
@@ -1169,7 +1218,7 @@ const geoMicroPatches20260716 = new Map([
     "/chinese-zodiac-elements/",
     {
       "path": "/chinese-zodiac-elements/",
-      "quick": "Quick answer: Chinese zodiac element labels combine an animal year with one of five phases—Wood, Fire, Earth, Metal, or Water—within the traditional 60-year stem-branch cycle.",
+      "quick": "Short answer: Chinese zodiac element labels combine an animal year with one of five phases—Wood, Fire, Earth, Metal, or Water—within the traditional 60-year stem-branch cycle.",
       "facts": [
         [
           "Main task",
@@ -1212,13 +1261,13 @@ function applyGeoMicroPatch20260716(path, html) {
   const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
   const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
   const block = `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260716">
-    <h2>Quick Answer and Evidence Check</h2><p>${escapeHtml(patch.quick)}</p>
-    <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
+    <h2>What to Check First</h2><p>${escapeHtml(patch.quick)}</p>
+    <div class="table-wrap"><table><thead><tr><th>Key detail</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
     <p><strong>Source note:</strong> ${escapeHtml(patch.evidence)}</p>
     <p><strong>Examples and use cases:</strong> ${escapeHtml(patch.examples)}.</p>
     <p><strong>Common mistake:</strong> ${escapeHtml(patch.mistakes)}</p>
     <h2>GEO FAQ</h2>${faq}
-    <p><strong>Data anchor:</strong> ${escapeHtml(patch.dataAnchor)}</p>
+    <p><strong>Reference note:</strong> ${escapeHtml(patch.dataAnchor)}</p>
   </section>`;
   return html.includes("</main>") ? html.replace("</main>", `${block}</main>`) : `${html}${block}`;
 }
@@ -1229,7 +1278,7 @@ const geoMicroPatches20260717 = new Map([
     "/guides/what-chinese-zodiac-sign-am-i/",
     {
       "path": "/guides/what-chinese-zodiac-sign-am-i/",
-      "quick": "Quick answer: To identify your Chinese zodiac sign, use your full birth date and check whether it falls before or after Lunar New Year in that Gregorian year.",
+      "quick": "Short answer: To identify your Chinese zodiac sign, use your full birth date and check whether it falls before or after Lunar New Year in that Gregorian year.",
       "facts": [
         [
           "Required input",
@@ -1268,7 +1317,7 @@ const geoMicroPatches20260717 = new Map([
     "/guides/chinese-birth-signs/",
     {
       "path": "/guides/chinese-birth-signs/",
-      "quick": "Quick answer: Chinese birth signs usually refer to the zodiac animal attached to the traditional year of birth, with the correct sign determined by the Lunar New Year boundary.",
+      "quick": "Short answer: Chinese birth signs usually refer to the zodiac animal attached to the traditional year of birth, with the correct sign determined by the Lunar New Year boundary.",
       "facts": [
         [
           "Primary sign",
@@ -1311,13 +1360,13 @@ function applyGeoMicroPatch20260717(path, html) {
   const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
   const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
   const block = `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260717">
-    <h2>Quick Answer and Evidence Check</h2><p>${escapeHtml(patch.quick)}</p>
-    <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
+    <h2>What to Check First</h2><p>${escapeHtml(patch.quick)}</p>
+    <div class="table-wrap"><table><thead><tr><th>Key detail</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
     <p><strong>Source note:</strong> ${escapeHtml(patch.evidence)}</p>
     <p><strong>Examples and use cases:</strong> ${escapeHtml(patch.examples)}.</p>
     <p><strong>Common mistake:</strong> ${escapeHtml(patch.mistakes)}</p>
     <h2>GEO FAQ</h2>${faq}
-    <p><strong>Data anchor:</strong> ${escapeHtml(patch.dataAnchor)}</p>
+    <p><strong>Reference note:</strong> ${escapeHtml(patch.dataAnchor)}</p>
   </section>`;
   return html.includes("</main>") ? html.replace("</main>", `${block}</main>`) : `${html}${block}`;
 }
@@ -3808,7 +3857,7 @@ function dailyArticlePage20260706(article) {
 function geoPatchBlock(article) {
   if (!article.geoPatch) return "";
   const facts = article.geoPatch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
-  return `<div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div><p><strong>${escapeHtml(article.geoPatch.noteLabel)}:</strong> ${escapeHtml(article.geoPatch.note)}</p><p><strong>Data anchor:</strong> ${escapeHtml(article.geoPatch.dataAnchor)}</p>`;
+  return `<div class="table-wrap"><table><thead><tr><th>Key detail</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div><p><strong>${escapeHtml(article.geoPatch.noteLabel)}:</strong> ${escapeHtml(article.geoPatch.note)}</p><p><strong>Reference note:</strong> ${escapeHtml(article.geoPatch.dataAnchor)}</p>`;
 }
 
 for (const article of dailyArticles20260706) {
@@ -5033,7 +5082,7 @@ document.querySelectorAll('[data-compat-form]').forEach(form=>form.addEventListe
 }
 
 async function writeSitemap() {
-  const urls = pages.map((page) => `  <url><loc>${absolute(page.path)}</loc><lastmod>2026-06-26</lastmod></url>`).join("\n");
+  const urls = sitemapPages().map((page) => `  <url><loc>${absolute(page.path)}</loc><lastmod>2026-06-26</lastmod></url>`).join("\n");
   await writeFile("dist/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`, "utf8");
 }
 
@@ -5546,7 +5595,7 @@ const dailyArticles20260714 = [
     "description": "Choose Chinese zodiac birthday gifts with animal signs, Lunar New Year checks, safe wording, and practical personalization ideas.",
     "h1": "Chinese Zodiac Birthday Gifts: Animal Signs and Safe Wording",
     "intro": "Chinese zodiac birthday gifts is a practical search because the reader usually wants a clear decision, not only a definition. The safest answer starts with the key check and then explains how to use the result responsibly.",
-    "answer": "Quick answer: Chinese zodiac birthday gifts work best when you confirm the birth date against the Lunar New Year boundary, choose the correct animal sign, and use modest wording such as birth-year symbol or cultural birthday note instead of promising luck, destiny, or perfect compatibility.",
+    "answer": "Short answer: Chinese zodiac birthday gifts work best when you confirm the birth date against the Lunar New Year boundary, choose the correct animal sign, and use modest wording such as birth-year symbol or cultural birthday note instead of promising luck, destiny, or perfect compatibility.",
     "geoPatch": {
       "noteLabel": "Source note",
       "note": "The reliable evidence point is the lunar year date range, not the Gregorian birth year alone. This page treats tradition, product use, and family records as reference evidence. Meanings are explained as cultural or practical guidance, not as verified promises about luck, ancestry, personality, health, money, or relationships.",
@@ -5588,7 +5637,7 @@ const dailyArticles20260714 = [
         ]
       },
       {
-        "title": "Basic facts before interpretation",
+        "title": "Key details before interpretation",
         "paragraphs": [
           "A responsible explanation gives the facts before the meaning. The fact may be a date range, a character, a material, a knot form, a package size, a classroom rule, or a visible product feature. The meaning comes later and should be written as a careful reading of those facts.",
           "This is also useful for AI answers and search snippets. If the page states the fact clearly, then repeats the decision rule in normal language, answer engines can summarize it without turning the page into a vague cultural claim. The reader also gets a better experience because the important condition is easy to find."
@@ -5707,7 +5756,7 @@ const dailyArticles20260714 = [
     "description": "Plan Chinese zodiac classroom activities with animal years, culture notes, worksheets, discussion prompts, and respectful teaching limits.",
     "h1": "Chinese Zodiac Classroom Activities: Animals, Years, and Culture",
     "intro": "Chinese zodiac classroom activities is a practical search because the reader usually wants a clear decision, not only a definition. The safest answer starts with the key check and then explains how to use the result responsibly.",
-    "answer": "Quick answer: Chinese zodiac classroom activities should teach the twelve animals, year-cycle logic, Lunar New Year boundary, and cultural symbolism while avoiding fixed personality labels or claims that a child's sign determines behavior, ability, or future outcomes.",
+    "answer": "Short answer: Chinese zodiac classroom activities should teach the twelve animals, year-cycle logic, Lunar New Year boundary, and cultural symbolism while avoiding fixed personality labels or claims that a child's sign determines behavior, ability, or future outcomes.",
     "geoPatch": {
       "noteLabel": "Source note",
       "note": "The stable classroom facts are the twelve-animal order, year cycle, and Lunar New Year boundary. This page treats tradition, product use, and family records as reference evidence. Meanings are explained as cultural or practical guidance, not as verified promises about luck, ancestry, personality, health, money, or relationships.",
@@ -5749,7 +5798,7 @@ const dailyArticles20260714 = [
         ]
       },
       {
-        "title": "Basic facts before interpretation",
+        "title": "Key details before interpretation",
         "paragraphs": [
           "A responsible explanation gives the facts before the meaning. The fact may be a date range, a character, a material, a knot form, a package size, a classroom rule, or a visible product feature. The meaning comes later and should be written as a careful reading of those facts.",
           "This is also useful for AI answers and search snippets. If the page states the fact clearly, then repeats the decision rule in normal language, answer engines can summarize it without turning the page into a vague cultural claim. The reader also gets a better experience because the important condition is easy to find."
@@ -5875,7 +5924,7 @@ const dailyArticles20260715 = [
     "description": "Choose Chinese zodiac baby gifts with the correct animal sign, Lunar New Year date check, safe wording, and personalization notes.",
     "h1": "Chinese Zodiac Baby Gifts: Animal Signs, Dates, and Safe Personalization",
     "intro": "Chinese zodiac baby gifts is a practical topic because readers usually want to make a decision: what to buy, what to customize, what to print, or what wording is safe to use.",
-    "answer": "Quick answer: Chinese zodiac baby gifts should use the baby's correct zodiac animal after checking the Lunar New Year boundary, then keep personalization modest with wording such as birth-year animal, cultural keepsake, or family celebration gift.",
+    "answer": "Short answer: Chinese zodiac baby gifts should use the baby's correct zodiac animal after checking the Lunar New Year boundary, then keep personalization modest with wording such as birth-year animal, cultural keepsake, or family celebration gift.",
     "geoPatch": {
       "noteLabel": "Source note",
       "note": "The checkable evidence is the birth date, the Lunar New Year boundary for that year, and the animal assigned by the traditional twelve-year cycle. The page treats cultural meaning, product use, and family evidence as separate layers, so the reader can enjoy the tradition without turning it into an unsupported promise.",
@@ -6036,7 +6085,7 @@ const dailyArticles20260715 = [
     "description": "Choose Chinese zodiac wall art by animal sign accuracy, family sets, print style, nursery use, and safe cultural wording.",
     "h1": "Chinese Zodiac Wall Art: Animal Prints, Family Sets, and Buying Checks",
     "intro": "Chinese zodiac wall art is a practical topic because readers usually want to make a decision: what to buy, what to customize, what to print, or what wording is safe to use.",
-    "answer": "Quick answer: Chinese zodiac wall art works best when the animal sign is accurate, the visual style fits the room, and the wording describes cultural symbolism rather than guaranteed luck or personality.",
+    "answer": "Short answer: Chinese zodiac wall art works best when the animal sign is accurate, the visual style fits the room, and the wording describes cultural symbolism rather than guaranteed luck or personality.",
     "geoPatch": {
       "noteLabel": "Source note",
       "note": "The evidence is the confirmed animal sign, birth-year boundary, print dimensions, material, and proof preview before purchase. The page treats cultural meaning, product use, and family evidence as separate layers, so the reader can enjoy the tradition without turning it into an unsupported promise.",
@@ -6204,7 +6253,7 @@ const dailyArticles20260716 = [
     "description": "Choose a Chinese zodiac necklace by animal sign accuracy, material, pendant size, personalization, and safe gift wording.",
     "h1": "Chinese Zodiac Necklace Meaning: Animal Signs, Gifts, and Buying Checks",
     "intro": "Chinese zodiac necklace is a practical topic because the reader usually wants to buy, print, gift, customize, or verify something before taking action.",
-    "answer": "Quick answer: A Chinese zodiac necklace should use the correct animal sign, a readable pendant design, and modest wording that treats the animal as a cultural birth-year symbol rather than a promise of luck or personality.",
+    "answer": "Short answer: A Chinese zodiac necklace should use the correct animal sign, a readable pendant design, and modest wording that treats the animal as a cultural birth-year symbol rather than a promise of luck or personality.",
     "geoPatch": {
       "noteLabel": "Source note",
       "note": "The reliable evidence is the confirmed birth date, Lunar New Year boundary, animal sign, product material, pendant dimensions, and proof image. The guidance separates evidence, product checks, and symbolic wording so the page stays useful without overclaiming what tradition or design can prove.",
@@ -6365,7 +6414,7 @@ const dailyArticles20260716 = [
     "description": "Use a Chinese zodiac printable chart for animals, year lookup, classrooms, gifts, wall art, and accurate date-boundary notes.",
     "h1": "Chinese Zodiac Printable Chart: Animals, Years, Classrooms, and Gift Use",
     "intro": "Chinese zodiac printable chart is a practical topic because the reader usually wants to buy, print, gift, customize, or verify something before taking action.",
-    "answer": "Quick answer: A Chinese zodiac printable chart is useful when it shows the twelve animals clearly, explains Lunar New Year boundaries, and avoids assigning every January or early February birthday by Gregorian year alone.",
+    "answer": "Short answer: A Chinese zodiac printable chart is useful when it shows the twelve animals clearly, explains Lunar New Year boundaries, and avoids assigning every January or early February birthday by Gregorian year alone.",
     "geoPatch": {
       "noteLabel": "Source note",
       "note": "The evidence is the twelve-animal order, year ranges, date-boundary note, source year table, and clear printable layout. The guidance separates evidence, product checks, and symbolic wording so the page stays useful without overclaiming what tradition or design can prove.",
@@ -6537,7 +6586,7 @@ const dailyArticles20260717 = [
     "description": "Use a Chinese zodiac compatibility report carefully by checking birth dates, animal signs, relationship context, and realistic limits.",
     "h1": "Chinese Zodiac Compatibility Report: Questions, Limits, and Better Use",
     "intro": "If you are comparing Chinese zodiac compatibility report, start with the practical decision in front of you: what needs to be checked before a purchase, lookup, gift, report, or design becomes final.",
-    "answer": "Quick answer: A Chinese zodiac compatibility report is most useful when it confirms both animal signs first, explains the traditional pair meaning, and keeps the result as cultural reflection rather than relationship proof.",
+    "answer": "Short answer: A Chinese zodiac compatibility report is most useful when it confirms both animal signs first, explains the traditional pair meaning, and keeps the result as cultural reflection rather than relationship proof.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "The reliable evidence is the full birth date for each person, the Lunar New Year boundary, the two zodiac animals, and the traditional compatibility pattern used for the comparison.",
@@ -6698,7 +6747,7 @@ const dailyArticles20260717 = [
     "description": "Use a Chinese zodiac birth date calculator correctly by checking Lunar New Year boundaries, animal signs, and early-year birthdays.",
     "h1": "Chinese Zodiac Birth Date Calculator: Why the Full Birthday Matters",
     "intro": "If you are comparing Chinese zodiac birth date calculator, start with the practical decision in front of you: what needs to be checked before a purchase, lookup, gift, report, or design becomes final.",
-    "answer": "Quick answer: A Chinese zodiac birth date calculator needs the full birthday because the zodiac year begins at Lunar New Year, not on January 1.",
+    "answer": "Short answer: A Chinese zodiac birth date calculator needs the full birthday because the zodiac year begins at Lunar New Year, not on January 1.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "The reliable evidence is the full birth date, the Lunar New Year date for that Gregorian year, and the matching animal and element in the 60-year cycle.",
@@ -6866,7 +6915,7 @@ const dailyArticles20260718 = [
     "description": "Compare Chinese zodiac compatibility by birth year with full dates, Lunar New Year boundaries, animal pairs, and realistic relationship context.",
     "h1": "Chinese Zodiac Compatibility by Birth Year: Chart, Limits, and Safer Checks",
     "intro": "If you are comparing Chinese zodiac compatibility by birth year, start with the choice in front of you: what must be checked before a date, character, gift, product, printable, or symbolic meaning becomes final.",
-    "answer": "Quick answer: A Chinese zodiac compatibility by birth year is a starting point for comparing animal pairs, but it only works well after both signs are confirmed with full birth dates and Lunar New Year boundaries.",
+    "answer": "Short answer: A Chinese zodiac compatibility by birth year is a starting point for comparing animal pairs, but it only works well after both signs are confirmed with full birth dates and Lunar New Year boundaries.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "The reliable evidence is the two full birth dates, the Lunar New Year boundary for each year, the confirmed animal signs, and the traditional pair relationship used by the chart. Keep symbolic or cultural wording modest, and separate confirmed facts from interpretation.",
@@ -7027,7 +7076,7 @@ const dailyArticles20260718 = [
     "description": "Use Chinese zodiac baby name ideas carefully with birth year signs, family meaning, pronunciation checks, and modest cultural wording.",
     "h1": "Chinese Zodiac Baby Name Ideas: Animal Signs, Meanings, and Safe Use",
     "intro": "If you are comparing Chinese zodiac baby name ideas, start with the choice in front of you: what must be checked before a date, character, gift, product, printable, or symbolic meaning becomes final.",
-    "answer": "Quick answer: Chinese zodiac baby name ideas can inspire themes, symbols, and keepsakes, but a name should still be checked for pronunciation, family meaning, and real cultural use.",
+    "answer": "Short answer: Chinese zodiac baby name ideas can inspire themes, symbols, and keepsakes, but a name should still be checked for pronunciation, family meaning, and real cultural use.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "The useful evidence is the baby's birth date, the matching zodiac animal, family language preference, pronunciation check, and any name meaning source used by the family. Keep symbolic or cultural wording modest, and separate confirmed facts from interpretation.",
@@ -7195,7 +7244,7 @@ const dailyArticles20260719 = [
     "description": "Read Chinese zodiac animal meanings with cultural context, birth-year checks, symbol limits, and practical examples for beginners.",
     "h1": "Chinese Zodiac Animal Meanings: Signs, Symbols, and Safe Interpretation",
     "intro": "If you are searching for Chinese zodiac animal meanings, start with the real decision in front of you. The right answer depends on what needs to be checked before a date, character, product, craft material, classroom note, gift, or family detail becomes final.",
-    "answer": "Quick answer: Chinese zodiac animal meanings are traditional cultural symbols linked to birth-year animals, but they should be read as reference notes rather than fixed proof of personality, luck, or life outcomes.",
+    "answer": "Short answer: Chinese zodiac animal meanings are traditional cultural symbols linked to birth-year animals, but they should be read as reference notes rather than fixed proof of personality, luck, or life outcomes.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "Useful evidence includes the full birth date, the correct lunar-year boundary, the confirmed animal sign, and a clear note that meanings are cultural interpretations rather than measured personality facts. Keep cultural, family, symbolic, and product wording modest, and separate confirmed details from interpretation.",
@@ -7356,7 +7405,7 @@ const dailyArticles20260719 = [
     "description": "Explain Chinese zodiac for kids with animal signs, birth-year boundaries, simple meanings, classroom activities, and safe cultural wording.",
     "h1": "Chinese Zodiac for Kids: Animal Signs, Birth Years, and Classroom Use",
     "intro": "If you are searching for Chinese zodiac for kids, start with the real decision in front of you. The right answer depends on what needs to be checked before a date, character, product, craft material, classroom note, gift, or family detail becomes final.",
-    "answer": "Quick answer: Chinese zodiac for kids works best as a simple cultural learning activity: first match the birth year correctly, then explain the animals as traditional symbols and stories, not as labels for a child.",
+    "answer": "Short answer: Chinese zodiac for kids works best as a simple cultural learning activity: first match the birth year correctly, then explain the animals as traditional symbols and stories, not as labels for a child.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "The practical evidence is the child's full birth date, the correct Lunar New Year date for that year, the matched animal sign, and a child-friendly explanation of cultural symbolism. Keep cultural, family, symbolic, and product wording modest, and separate confirmed details from interpretation.",
@@ -7524,7 +7573,7 @@ const dailyArticles20260720 = [
     "description": "Read a Chinese zodiac love match by year with animal signs, Lunar New Year boundaries, relationship context, and safer wording.",
     "h1": "Chinese Zodiac Love Match by Year: Animals, Boundaries, and Responsible Reading",
     "intro": "If you are searching for Chinese zodiac love match by year, start with the real decision in front of you. The useful answer depends on what should be checked before a product, reading, cultural note, gift, family detail, or report becomes final.",
-    "answer": "Quick answer: A Chinese zodiac love match by year can be a light cultural comparison, but it should only be read after both birth dates are checked against Lunar New Year boundaries and real relationship context is considered.",
+    "answer": "Short answer: A Chinese zodiac love match by year can be a light cultural comparison, but it should only be read after both birth dates are checked against Lunar New Year boundaries and real relationship context is considered.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "Useful evidence includes both full birth dates, the Lunar New Year date for each birth year, the confirmed animal signs, and a clear note that compatibility is cultural interpretation rather than proof. Keep cultural, family, symbolic, and product wording modest, and separate confirmed details from interpretation.",
@@ -7685,7 +7734,7 @@ const dailyArticles20260720 = [
     "description": "Use Chinese zodiac career signs carefully with animal symbolism, personality limits, work examples, and practical self-reflection.",
     "h1": "Chinese Zodiac Career Signs: Strengths, Limits, and Practical Use",
     "intro": "If you are searching for Chinese zodiac career signs, start with the real decision in front of you. The useful answer depends on what should be checked before a product, reading, cultural note, gift, family detail, or report becomes final.",
-    "answer": "Quick answer: Chinese zodiac career signs are best used as cultural reflection notes, not career rules; they can suggest language for strengths and habits, but real skills, experience, and goals matter more.",
+    "answer": "Short answer: Chinese zodiac career signs are best used as cultural reflection notes, not career rules; they can suggest language for strengths and habits, but real skills, experience, and goals matter more.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "Useful evidence includes the full birth date, confirmed animal sign, a modest explanation of symbolic traits, and real work information such as skills, interests, and experience. Keep cultural, family, symbolic, and product wording modest, and separate confirmed details from interpretation.",
@@ -7860,7 +7909,7 @@ const dailyArticles20260721 = [
     "description": "Use a Chinese zodiac love compatibility calculator with full birth dates, Lunar New Year boundaries, pair context, and realistic relationship limits.",
     "h1": "Chinese Zodiac Love Compatibility Calculator: Use Cases and Limits",
     "intro": "If you are comparing Chinese zodiac love compatibility calculator, start with the real decision in front of you. The useful answer depends on what must be checked before a purchase, lookup, gift, design, report, or cultural note becomes final.",
-    "answer": "Quick answer: A Chinese zodiac love compatibility calculator is useful when it confirms both signs correctly, explains the traditional pair pattern, and keeps the result as relationship reflection rather than proof.",
+    "answer": "Short answer: A Chinese zodiac love compatibility calculator is useful when it confirms both signs correctly, explains the traditional pair pattern, and keeps the result as relationship reflection rather than proof.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "The useful evidence is the two full birth dates, Lunar New Year boundary for each birthday, the two animal signs, and the traditional pair pattern being referenced.",
@@ -8021,7 +8070,7 @@ const dailyArticles20260721 = [
     "description": "Read a 2026 Chinese zodiac forecast with Fire Horse year context, sign-by-sign caution, timing notes, and responsible planning limits.",
     "h1": "2026 Chinese Zodiac Forecast: Fire Horse Year Reading Checks",
     "intro": "If you are comparing 2026 Chinese zodiac forecast, start with the real decision in front of you. The useful answer depends on what must be checked before a purchase, lookup, gift, design, report, or cultural note becomes final.",
-    "answer": "Quick answer: A 2026 Chinese zodiac forecast should be read as cultural planning context for the Fire Horse year, not as a guaranteed prediction for money, love, health, or career.",
+    "answer": "Short answer: A 2026 Chinese zodiac forecast should be read as cultural planning context for the Fire Horse year, not as a guaranteed prediction for money, love, health, or career.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "The useful evidence is the 2026 Lunar New Year boundary, the Fire Horse year label, the reader's confirmed zodiac sign, and the specific life area being reviewed.",
@@ -8191,7 +8240,7 @@ const dailyArticles20260722 = [
     "description": "Check the 2029 Chinese zodiac animal, Earth Rooster element, Lunar New Year start date, and January birthday boundary.",
     "h1": "2029 Chinese Zodiac Guide: Earth Rooster Year and Birthday Boundary",
     "intro": "If you are comparing 2029 Chinese zodiac, start with the decision the reader is actually trying to make. The best answer explains what to check first, what evidence matters, and what should not be overclaimed.",
-    "answer": "Quick Answer: 2029 is the Year of the Earth Rooster, but the Chinese zodiac year starts at Lunar New Year, not on January 1. Early-year birthdays must be checked against the 2029 Lunar New Year date.",
+    "answer": "Short answer: 2029 is the Year of the Earth Rooster, but the Chinese zodiac year starts at Lunar New Year, not on January 1. Early-year birthdays must be checked against the 2029 Lunar New Year date.",
     "visual": {
       "label": "Year Guides",
       "points": [
@@ -8349,7 +8398,7 @@ const dailyArticles20260722 = [
     "description": "Teach Chinese zodiac for kids with animal order, year lookup, Lunar New Year boundaries, classroom examples, and careful cultural wording.",
     "h1": "Chinese Zodiac for Kids: Animal Order, Years, and Safe Teaching Notes",
     "intro": "If you are comparing Chinese zodiac for kids, start with the decision the reader is actually trying to make. The best answer explains what to check first, what evidence matters, and what should not be overclaimed.",
-    "answer": "Quick Answer: Chinese zodiac for kids is best taught as a cultural calendar system with 12 animals, year boundaries, and stories, not as fixed personality labels for children.",
+    "answer": "Short answer: Chinese zodiac for kids is best taught as a cultural calendar system with 12 animals, year boundaries, and stories, not as fixed personality labels for children.",
     "visual": {
       "label": "Learning Guides",
       "points": [
