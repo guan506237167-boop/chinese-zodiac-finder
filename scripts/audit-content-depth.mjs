@@ -12,7 +12,7 @@ const bannedPhrases = [
   "in conclusion",
   "for advertising review",
   "for publishing quality control",
-  "for search quality",
+  "for reader usefulness",
   "this page should help readers",
   "a useful guide should"
 ];

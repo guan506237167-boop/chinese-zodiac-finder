@@ -410,7 +410,7 @@ const rows = readRows()
     const publishedUrl = publishedUrlFor(item);
     if (publishedUrl) {
       item.urlAction = publishedUrl;
-      item.notes = "Published article; use for internal linking and future expansion.";
+      item.notes = "Published article; use for internal linking and planned expansion.";
     }
     return item;
   })
