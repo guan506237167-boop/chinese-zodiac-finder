@@ -763,7 +763,7 @@ function slugPath(path) {
 }
 
 function absolute(path) {
-  return `${SITE.url}${path === "/" ? "" : path}`;
+  return `${SITE.url}${path === "/" ? "/" : path}`;
 }
 
 function jsonLd(data) {
