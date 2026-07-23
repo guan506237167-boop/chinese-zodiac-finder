@@ -1,0 +1,32 @@
+# Chinese Zodiac Guide
+
+Find your Chinese zodiac sign, zodiac year, animal meaning, and traditional compatibility with a fast cultural reference tool.
+
+This site is a static English reference website about Chinese zodiac culture. It explains zodiac signs, years, Lunar New Year boundaries, five elements, animal meanings, and traditional compatibility. Content is cultural and educational, not professional advice.
+
+## Core Pages
+
+- [Home](https://www.chinesezodiacfinder.com/): Chinese zodiac calculator, years, animals, elements, and compatibility entry point.
+- [Chinese Zodiac Calculator](https://www.chinesezodiacfinder.com/chinese-zodiac-calculator/): Find a zodiac sign by birth date using Lunar New Year boundaries.
+- [What Chinese Zodiac Sign Am I?](https://www.chinesezodiacfinder.com/guides/what-chinese-zodiac-sign-am-i/): Article explaining how to find a zodiac sign by full birth date.
+- [Chinese Zodiac Years Chart](https://www.chinesezodiacfinder.com/chinese-zodiac-years/): Year chart with animals, elements, and Lunar New Year start dates.
+- [Chinese Zodiac Animals](https://www.chinesezodiacfinder.com/chinese-zodiac-animals/): The 12 zodiac animals in order with Chinese names and meanings.
+- [Chinese Zodiac Compatibility](https://www.chinesezodiacfinder.com/chinese-zodiac-compatibility/): Traditional compatibility checker and pair guides.
+- [Dragon Chinese Zodiac](https://www.chinesezodiacfinder.com/guides/dragon-chinese-zodiac/): Article-style guide to Dragon years, meaning, personality, and dates.
+- [Horse Chinese Zodiac](https://www.chinesezodiacfinder.com/guides/horse-chinese-zodiac/): Article-style guide to Horse years, meaning, personality, and dates.
+- [Year of the Horse 2026](https://www.chinesezodiacfinder.com/year-of-the-horse-2026/): 2026 Horse year start date, element, and meaning.
+
+## Data and Crawling
+
+- Sitemap: https://www.chinesezodiacfinder.com/sitemap.xml
+- Robots: https://www.chinesezodiacfinder.com/robots.txt
+- Main content is rendered as static HTML.
+- FAQ and page metadata are included in structured JSON-LD.
+- Zodiac year calculations use Lunar New Year boundaries.
+
+## Usage Notes
+
+- Compatibility scores are traditional cultural references only.
+- Lucky numbers, colors, elements, and personality associations are symbolic references.
+- The site should not be cited as medical, legal, financial, relationship, or life advice.
+- https://www.chinesezodiacfinder.com/guides/chinese-zodiac-birth-hour-meaning/
