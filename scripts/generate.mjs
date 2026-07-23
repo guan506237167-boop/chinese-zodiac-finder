@@ -55,6 +55,28 @@ function sitemapPages() {
   return pages.filter((page) => isIndexablePath(page.path) && !seen.has(page.path) && seen.add(page.path));
 }
 
+const DEFAULT_LASTMOD = "2026-06-26";
+const LASTMOD_BY_PATH = new Map([
+  ["/chinese-zodiac-calculator/", "2026-07-21"],
+  ["/chinese-zodiac-years/", "2026-07-21"],
+  ["/chinese-zodiac/2027/", "2026-07-21"],
+  ["/chinese-zodiac/2028/", "2026-07-21"],
+  ["/chinese-zodiac/2030/", "2026-07-21"],
+  ["/guides/chinese-zodiac-compatibility-chart/", "2026-07-22"],
+  ["/guides/chinese-zodiac-lucky-colors/", "2026-07-22"],
+  ["/guides/chinese-zodiac-for-kids/", "2026-07-22"],
+  ["/faq/", "2026-07-22"],
+  ["/about/", "2026-07-22"],
+  ["/contact/", "2026-07-22"],
+  ["/privacy/", "2026-07-22"],
+  ["/terms/", "2026-07-22"],
+  ["/disclaimer/", "2026-07-22"]
+]);
+
+function sitemapLastmod(path) {
+  return LASTMOD_BY_PATH.get(path) || DEFAULT_LASTMOD;
+}
+
 
 const animals = JSON.parse(await readFile("data/zodiac-animals.json", "utf8"));
 const seedYears = JSON.parse(await readFile("data/zodiac-years.json", "utf8"));
@@ -5082,7 +5104,7 @@ document.querySelectorAll('[data-compat-form]').forEach(form=>form.addEventListe
 }
 
 async function writeSitemap() {
-  const urls = sitemapPages().map((page) => `  <url><loc>${absolute(page.path)}</loc><lastmod>2026-06-26</lastmod></url>`).join("\n");
+  const urls = sitemapPages().map((page) => `  <url><loc>${absolute(page.path)}</loc><lastmod>${sitemapLastmod(page.path)}</lastmod></url>`).join("\n");
   await writeFile("dist/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`, "utf8");
 }
 
